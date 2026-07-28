@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 from base64 import b64decode
 from typing import Any, Dict, List, Optional
@@ -8,10 +9,10 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-from .models import AIAnalysis, RepoInsight, Repository
+from .models import Evidence, IndustryAnalysis, RepoInsight, Repository
 from .parser import parse_trending_html
 
-USER_AGENT = "github-trending-insights/0.1"
+USER_AGENT = "github-trending-insights/0.2"
 
 
 class HTTPClient:
@@ -77,13 +78,15 @@ class GitHubClient:
             repository.forks = int(metadata.get("forks_count") or repository.forks)
             repository.topics = [str(topic) for topic in metadata.get("topics", [])]
             license_data = metadata.get("license") or {}
-            repository.license = license_data.get("spdx_id") or license_data.get("name") or ""
+            repository.license = (
+                license_data.get("spdx_id") or license_data.get("name") or ""
+            )
             repository.created_at = metadata.get("created_at") or ""
             repository.updated_at = metadata.get("updated_at") or ""
             repository.open_issues = int(metadata.get("open_issues_count") or 0)
             repository.default_branch = metadata.get("default_branch") or ""
             repository.readme_excerpt = self._fetch_readme(slug)
-        except Exception as exc:  # one bad repository must not abort the daily report
+        except Exception as exc:
             repository.metadata_error = f"{type(exc).__name__}: metadata unavailable"
         return repository
 
@@ -103,15 +106,58 @@ class GitHubClient:
             return ""
 
 
-ANALYSIS_SCHEMA: Dict[str, Any] = {
+PROJECT_PROPERTIES: Dict[str, Any] = {
+    "full_name": {"type": "string"},
+    "one_line_summary": {"type": "string"},
+    "industry_direction": {"type": "string"},
+    "target_users": {"type": "array", "items": {"type": "string"}},
+    "problem_solved": {"type": "string"},
+    "solution": {"type": "string"},
+    "why_now": {"type": "string"},
+    "noteworthy_technology": {"type": "string"},
+    "technology_impact": {"type": "string"},
+    "product_form": {"type": "string"},
+    "commercialization_signal": {"type": "string"},
+    "maturity": {"type": "string"},
+    "risks": {"type": "string"},
+    "ai_relevance": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["高", "中", "低"]},
+    "priority_score": {"type": "integer", "minimum": 0, "maximum": 100},
+}
+
+CLASSIFICATION_SCHEMA: Dict[str, Any] = {
     "type": "object",
     "additionalProperties": False,
-    "required": ["daily_insights", "repositories"],
+    "required": [
+        "key_judgments",
+        "hot_characteristics",
+        "product_business_signals",
+        "watch_next",
+        "repositories",
+    ],
     "properties": {
-        "daily_insights": {
+        "key_judgments": {
             "type": "array",
             "minItems": 5,
-            "maxItems": 10,
+            "maxItems": 5,
+            "items": {"type": "string"},
+        },
+        "hot_characteristics": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {"type": "string"},
+        },
+        "product_business_signals": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
+            "items": {"type": "string"},
+        },
+        "watch_next": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 6,
             "items": {"type": "string"},
         },
         "repositories": {
@@ -119,32 +165,89 @@ ANALYSIS_SCHEMA: Dict[str, Any] = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
+                "required": list(PROJECT_PROPERTIES),
+                "properties": PROJECT_PROPERTIES,
+            },
+        },
+    },
+}
+
+RESEARCH_SCHEMA: Dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["repositories"],
+    "properties": {
+        "repositories": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
                 "required": [
                     "full_name",
-                    "technology_summary",
-                    "application_domains",
-                    "primary_use_cases",
-                    "novelty_reason",
-                    "adoption_signal",
-                    "risks_or_limits",
+                    "one_line_summary",
+                    "why_now",
+                    "noteworthy_technology",
+                    "technology_impact",
+                    "commercialization_signal",
+                    "maturity",
+                    "risks",
+                    "confidence",
+                    "evidence",
                 ],
                 "properties": {
                     "full_name": {"type": "string"},
-                    "technology_summary": {"type": "string"},
-                    "application_domains": {
+                    "one_line_summary": {"type": "string"},
+                    "why_now": {"type": "string"},
+                    "noteworthy_technology": {"type": "string"},
+                    "technology_impact": {"type": "string"},
+                    "commercialization_signal": {"type": "string"},
+                    "maturity": {"type": "string"},
+                    "risks": {"type": "string"},
+                    "confidence": {"type": "string", "enum": ["高", "中", "低"]},
+                    "evidence": {
                         "type": "array",
-                        "items": {"type": "string"},
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": False,
+                            "required": ["title", "url", "source_type"],
+                            "properties": {
+                                "title": {"type": "string"},
+                                "url": {"type": "string"},
+                                "source_type": {
+                                    "type": "string",
+                                    "enum": ["project", "official", "academic"],
+                                },
+                            },
+                        },
                     },
-                    "primary_use_cases": {
-                        "type": "array",
-                        "items": {"type": "string"},
-                    },
-                    "novelty_reason": {"type": "string"},
-                    "adoption_signal": {"type": "string"},
-                    "risks_or_limits": {"type": "string"},
                 },
             },
-        },
+        }
+    },
+}
+
+PERIODIC_SCHEMA: Dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": [
+        "executive_summary",
+        "direction_changes",
+        "customer_changes",
+        "product_opportunities",
+        "competition_changes",
+        "commercial_signals",
+        "risks",
+        "watch_next",
+    ],
+    "properties": {
+        "executive_summary": {"type": "array", "items": {"type": "string"}},
+        "direction_changes": {"type": "array", "items": {"type": "string"}},
+        "customer_changes": {"type": "array", "items": {"type": "string"}},
+        "product_opportunities": {"type": "array", "items": {"type": "string"}},
+        "competition_changes": {"type": "array", "items": {"type": "string"}},
+        "commercial_signals": {"type": "array", "items": {"type": "string"}},
+        "risks": {"type": "array", "items": {"type": "string"}},
+        "watch_next": {"type": "array", "items": {"type": "string"}},
     },
 }
 
@@ -154,36 +257,111 @@ class OpenAIClient:
         self,
         api_key: str,
         model: str = "gpt-5.6-terra",
+        research_model: str = "gpt-5.6-sol",
         http: Optional[HTTPClient] = None,
     ) -> None:
         self.api_key = api_key
         self.model = model
-        self.http = http or HTTPClient(retries=2, timeout=90)
+        self.research_model = research_model
+        self.http = http or HTTPClient(retries=2, timeout=120)
 
-    def analyze(self, repositories: List[Repository]) -> AIAnalysis:
+    def analyze(
+        self,
+        repositories: List[Repository],
+        *,
+        research_limit: int = 8,
+    ) -> IndustryAnalysis:
         if not self.api_key:
-            return AIAnalysis.unavailable("未配置 OPENAI_API_KEY")
+            return IndustryAnalysis.unavailable(
+                repositories,
+                "未配置 OPENAI_API_KEY，行业分析待生成",
+            )
         error = ""
         for _ in range(2):
             try:
-                result = self._request(repositories)
-                analysis = self._validate(result, repositories)
-                return analysis
+                analysis = self._classify(repositories)
+                break
             except Exception as exc:
                 error = f"{type(exc).__name__}: {exc}"
-        return AIAnalysis.unavailable(f"AI 分析重试后仍失败：{error}")
+        else:
+            return IndustryAnalysis.unavailable(
+                repositories,
+                f"行业分类重试后仍失败：{error}",
+            )
 
-    def _request(self, repositories: List[Repository]) -> Dict[str, Any]:
+        selected = sorted(
+            analysis.repositories,
+            key=lambda item: item.priority_score,
+            reverse=True,
+        )[: max(5, min(research_limit, len(analysis.repositories)))]
+        try:
+            researched = self._research(selected)
+            self._merge_research(analysis, researched)
+        except Exception as exc:
+            analysis.error = (
+                f"一手资料研究不可用，已保留 GitHub 内部分析："
+                f"{type(exc).__name__}: {exc}"
+            )
+        return analysis
+
+    def synthesize_period(
+        self,
+        period_label: str,
+        trend: Dict[str, Any],
+        snapshots: List[Dict[str, Any]],
+    ) -> Optional[Dict[str, List[str]]]:
+        """Turn accumulated daily evidence into a nontechnical period review."""
+        if not self.api_key or not snapshots:
+            return None
+        daily_evidence = []
+        for snapshot in snapshots:
+            analysis = snapshot.get("industry_analysis", {})
+            daily_evidence.append(
+                {
+                    "date": snapshot.get("date"),
+                    "key_judgments": analysis.get("key_judgments", []),
+                    "hot_characteristics": analysis.get("hot_characteristics", []),
+                    "product_business_signals": analysis.get(
+                        "product_business_signals", []
+                    ),
+                    "watch_next": analysis.get("watch_next", []),
+                    "repositories": analysis.get("repositories", []),
+                }
+            )
+        instructions = (
+            "你是面向 AI 行业从业者的周期情报分析师。根据多日标准化行业分析与确定性统计，"
+            "形成简体中文复盘。明确区分事实、开发者关注信号与推断；不得把 GitHub 热度"
+            "写成收入、融资或市场采用。重点说明研究方向变化、目标客户需求、产品机会、"
+            "竞争格局、商业化信号、风险和下一周期需要验证的问题。"
+            "若覆盖天数不足，应降低措辞强度并明确这是初步信号。不要讨论编程语言或实现细节。"
+        )
+        source = {
+            "period": period_label,
+            "trend_statistics": trend,
+            "daily_evidence": daily_evidence,
+        }
+        result = self._structured_request(
+            model=self.research_model,
+            instructions=instructions,
+            source=source,
+            schema=PERIODIC_SCHEMA,
+            schema_name="periodic_industry_synthesis",
+        )
+        return {
+            key: [str(value) for value in result.get(key, [])]
+            for key in PERIODIC_SCHEMA["required"]
+        }
+
+    def _classify(self, repositories: List[Repository]) -> IndustryAnalysis:
         source = [
             {
                 "rank": repo.rank,
                 "full_name": repo.full_name,
                 "description": repo.description,
-                "language": repo.language,
                 "topics": repo.topics,
                 "stars": repo.stars,
                 "stars_today": repo.stars_today,
-                "is_new_to_our_daily_report": repo.is_new,
+                "is_new_to_our_report": repo.is_new,
                 "rank_change": repo.rank_change,
                 "streak_days": repo.streak_days,
                 "license": repo.license,
@@ -194,28 +372,112 @@ class OpenAIClient:
             for repo in repositories
         ]
         instructions = (
-            "你是谨慎的技术趋势分析师。用简体中文分析给定 GitHub 仓库。"
-            "必须区分：仅仅首次出现在本报告、已有技术突然升温、"
-            "以及有证据支持的潜在新技术。"
-            "不要把首次上榜写成技术首创，不要补造仓库未提供的事实。"
-            "adoption_signal 必须引用输入里的排名、Star、"
-            "连续上榜或更新时间信号；"
-            "risks_or_limits 要覆盖成熟度、许可证或落地限制中最相关的一项。"
+            "你是面向 AI 行业从业者的产品与商业情报分析师，不是程序员资讯编辑。"
+            "用简体中文分析所有项目，即使项目并非 AI，也要说明它对 AI 行业是否相关。"
+            "重点回答：为谁、解决什么问题、产品形态、为何现在受关注、商业化信号、"
+            "值得注意的技术会改变什么。不要解释编程语言、代码或实现步骤。"
+            "GitHub 热度只能称为开发者关注信号，不能推断收入、融资或市场采用。"
+            "没有证据时明确写未知。industry_direction 使用稳定、可跨天聚合的短标签；"
+            "priority_score 综合 AI 相关性、产品商业影响、技术新颖性和关注度。"
         )
-        payload = {
-            "model": self.model,
+        result = self._structured_request(
+            model=self.model,
+            instructions=instructions,
+            source=source,
+            schema=CLASSIFICATION_SCHEMA,
+            schema_name="industry_classification",
+        )
+        repositories_result = [
+            RepoInsight.from_dict(item) for item in result["repositories"]
+        ]
+        expected = {repo.full_name for repo in repositories}
+        actual = {repo.full_name for repo in repositories_result}
+        if actual != expected or len(repositories_result) != len(repositories):
+            raise ValueError("行业分类返回的仓库集合与输入不一致")
+        return IndustryAnalysis(
+            key_judgments=[str(v) for v in result["key_judgments"]],
+            hot_characteristics=[str(v) for v in result["hot_characteristics"]],
+            product_business_signals=[
+                str(v) for v in result["product_business_signals"]
+            ],
+            watch_next=[str(v) for v in result["watch_next"]],
+            repositories=repositories_result,
+        )
+
+    def _research(self, selected: List[RepoInsight]) -> Dict[str, Any]:
+        source = [item.to_dict() for item in selected]
+        instructions = (
+            "你是严谨的 AI 行业研究员。对每个项目使用网页检索核实其官网、项目方正式资料、"
+            "论文或研究机构页面，只采用一手来源，不采用新闻、社交媒体、聚合站或搜索摘要。"
+            "用非技术读者能理解的中文更新关键判断。技术部分只解释：它是什么、过去为何难、"
+            "现在改变了什么、可能影响谁。不得把 GitHub 热度推断为商业成功。"
+            "每个项目尽量提供 1–3 个 HTTPS 一手来源；找不到时 evidence 为空并降低置信度。"
+        )
+        return self._structured_request(
+            model=self.research_model,
+            instructions=instructions,
+            source=source,
+            schema=RESEARCH_SCHEMA,
+            schema_name="official_source_research",
+            tools=[{"type": "web_search"}],
+        )
+
+    @staticmethod
+    def _merge_research(
+        analysis: IndustryAnalysis,
+        researched: Dict[str, Any],
+    ) -> None:
+        insight_map = {item.full_name: item for item in analysis.repositories}
+        for value in researched.get("repositories", []):
+            insight = insight_map.get(str(value.get("full_name", "")))
+            if not insight:
+                continue
+            evidence = [
+                Evidence.from_dict(item)
+                for item in value.get("evidence", [])
+                if re.match(r"^https://", str(item.get("url", "")))
+            ]
+            for field_name in [
+                "one_line_summary",
+                "why_now",
+                "noteworthy_technology",
+                "technology_impact",
+                "commercialization_signal",
+                "maturity",
+                "risks",
+                "confidence",
+            ]:
+                if value.get(field_name):
+                    setattr(insight, field_name, str(value[field_name]))
+            insight.evidence = evidence
+            insight.deep_researched = bool(evidence)
+
+    def _structured_request(
+        self,
+        *,
+        model: str,
+        instructions: str,
+        source: Any,
+        schema: Dict[str, Any],
+        schema_name: str,
+        tools: Optional[List[Dict[str, Any]]] = None,
+    ) -> Dict[str, Any]:
+        payload: Dict[str, Any] = {
+            "model": model,
             "reasoning": {"effort": "low"},
             "instructions": instructions,
             "input": json.dumps(source, ensure_ascii=False),
             "text": {
                 "format": {
                     "type": "json_schema",
-                    "name": "github_trending_analysis",
+                    "name": schema_name,
                     "strict": True,
-                    "schema": ANALYSIS_SCHEMA,
+                    "schema": schema,
                 }
             },
         }
+        if tools:
+            payload["tools"] = tools
         body = self.http.request(
             "https://api.openai.com/v1/responses",
             method="POST",
@@ -226,8 +488,7 @@ class OpenAIClient:
             data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
         )
         response = json.loads(body.decode("utf-8"))
-        text = self._extract_output_text(response)
-        return json.loads(text)
+        return json.loads(self._extract_output_text(response))
 
     @staticmethod
     def _extract_output_text(response: Dict[str, Any]) -> str:
@@ -236,23 +497,10 @@ class OpenAIClient:
         texts: List[str] = []
         for output in response.get("output", []):
             for content in output.get("content", []):
-                if content.get("type") == "output_text" and isinstance(content.get("text"), str):
+                if content.get("type") == "output_text" and isinstance(
+                    content.get("text"), str
+                ):
                     texts.append(content["text"])
         if not texts:
             raise ValueError("Responses API 没有返回 output_text")
         return "".join(texts)
-
-    @staticmethod
-    def _validate(payload: Dict[str, Any], repositories: List[Repository]) -> AIAnalysis:
-        daily = payload.get("daily_insights")
-        items = payload.get("repositories")
-        if not isinstance(daily, list) or not 5 <= len(daily) <= 10:
-            raise ValueError("daily_insights 数量必须为 5–10")
-        if not isinstance(items, list):
-            raise ValueError("repositories 必须是数组")
-        parsed = [RepoInsight.from_dict(item) for item in items]
-        expected = {repo.full_name for repo in repositories}
-        actual = {repo.full_name for repo in parsed}
-        if actual != expected or len(parsed) != len(repositories):
-            raise ValueError("AI 返回的仓库集合与输入不一致")
-        return AIAnalysis(daily_insights=[str(v) for v in daily], repositories=parsed)

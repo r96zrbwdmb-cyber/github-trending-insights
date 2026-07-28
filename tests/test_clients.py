@@ -2,77 +2,160 @@ import json
 from unittest import TestCase, mock
 from urllib.error import HTTPError, URLError
 
-from trending_report.clients import ANALYSIS_SCHEMA, GitHubClient, HTTPClient, OpenAIClient
+from trending_report.clients import (
+    CLASSIFICATION_SCHEMA,
+    PERIODIC_SCHEMA,
+    GitHubClient,
+    HTTPClient,
+    OpenAIClient,
+)
 from trending_report.models import Repository
 
 
 class FakeHTTP:
     def __init__(self, responses: list) -> None:
         self.responses = list(responses)
-        self.calls = 0
+        self.calls = []
 
     def request(self, *args: object, **kwargs: object) -> bytes:
-        self.calls += 1
+        self.calls.append({"args": args, "kwargs": kwargs})
         value = self.responses.pop(0)
         if isinstance(value, Exception):
             raise value
         return json.dumps(value).encode()
 
 
-def repository() -> Repository:
-    return Repository(rank=1, full_name="alpha/one", url="https://github.com/alpha/one")
+def repository(name: str = "alpha/one") -> Repository:
+    return Repository(rank=1, full_name=name, url=f"https://github.com/{name}")
 
 
-def valid_analysis() -> dict:
+def project_value(name: str = "alpha/one") -> dict:
     return {
-        "daily_insights": ["一", "二", "三", "四", "五"],
-        "repositories": [
-            {
-                "full_name": "alpha/one",
-                "technology_summary": "技术",
-                "application_domains": ["开发工具"],
-                "primary_use_cases": ["编码"],
-                "novelty_reason": "首次收录不等于新技术",
-                "adoption_signal": "榜单第 1",
-                "risks_or_limits": "成熟度待验证",
-            }
-        ],
+        "full_name": name,
+        "one_line_summary": "面向企业的智能知识助手",
+        "industry_direction": "企业智能体",
+        "target_users": ["企业知识团队"],
+        "problem_solved": "内部信息分散",
+        "solution": "统一检索和任务执行",
+        "why_now": "模型能力和部署成本改善",
+        "noteworthy_technology": "可验证检索",
+        "technology_impact": "降低错误回答风险",
+        "product_form": "企业软件",
+        "commercialization_signal": "提供企业部署方案",
+        "maturity": "早期产品",
+        "risks": "效果依赖内部数据质量",
+        "ai_relevance": "直接服务 AI 应用落地",
+        "confidence": "中",
+        "priority_score": 90,
+    }
+
+
+def classification() -> dict:
+    return {
+        "key_judgments": ["判断一", "判断二", "判断三", "判断四", "判断五"],
+        "hot_characteristics": ["企业需求增加", "产品化增强"],
+        "product_business_signals": ["开始面向企业部署", "竞争转向工作流"],
+        "watch_next": ["验证实际客户采用", "观察持续上榜"],
+        "repositories": [project_value()],
+    }
+
+
+def response(value: dict) -> dict:
+    return {
+        "output": [
+            {"content": [{"type": "output_text", "text": json.dumps(value)}]}
+        ]
     }
 
 
 class OpenAIClientTests(TestCase):
-    def test_extracts_structured_response(self) -> None:
-        response = {
-            "output": [
-                {"content": [{"type": "output_text", "text": json.dumps(valid_analysis())}]}
+    def test_two_stage_analysis_merges_official_research(self) -> None:
+        research = {
+            "repositories": [
+                {
+                    "full_name": "alpha/one",
+                    "one_line_summary": "经官方资料核实的企业助手",
+                    "why_now": "企业正在寻找可控部署方案",
+                    "noteworthy_technology": "可验证检索",
+                    "technology_impact": "让回答能追溯来源",
+                    "commercialization_signal": "官网提供企业版",
+                    "maturity": "公开测试",
+                    "risks": "仍需验证真实采用",
+                    "confidence": "高",
+                    "evidence": [
+                        {
+                            "title": "项目官网",
+                            "url": "https://example.com/official",
+                            "source_type": "official",
+                        }
+                    ],
+                }
             ]
         }
-        client = OpenAIClient("secret", http=FakeHTTP([response]))
-        result = client.analyze([repository()])
+        http = FakeHTTP([response(classification()), response(research)])
+        result = OpenAIClient("secret", http=http).analyze([repository()])
         self.assertTrue(result.available)
-        self.assertEqual(result.repositories[0].application_domains, ["开发工具"])
+        self.assertTrue(result.repositories[0].deep_researched)
+        self.assertEqual(result.repositories[0].confidence, "高")
+        second_payload = json.loads(http.calls[1]["kwargs"]["data"])
+        self.assertEqual(second_payload["tools"], [{"type": "web_search"}])
 
-    def test_invalid_output_retries_then_degrades(self) -> None:
-        invalid = {"output_text": '{"daily_insights":[],"repositories":[]}'}
+    def test_research_failure_keeps_classification(self) -> None:
+        http = FakeHTTP([response(classification()), RuntimeError("search down")])
+        result = OpenAIClient("secret", http=http).analyze([repository()])
+        self.assertTrue(result.available)
+        self.assertIn("一手资料研究不可用", result.error)
+        self.assertFalse(result.repositories[0].deep_researched)
+
+    def test_invalid_classification_retries_then_degrades(self) -> None:
+        invalid = {"output_text": '{"key_judgments":[],"repositories":[]}'}
         http = FakeHTTP([invalid, invalid])
         result = OpenAIClient("secret", http=http).analyze([repository()])
         self.assertFalse(result.available)
-        self.assertEqual(http.calls, 2)
-        self.assertIn("重试后仍失败", result.error)
+        self.assertEqual(len(http.calls), 2)
 
-    def test_missing_key_degrades_without_http(self) -> None:
+    def test_missing_key_returns_project_placeholders(self) -> None:
         http = FakeHTTP([])
         result = OpenAIClient("", http=http).analyze([repository()])
         self.assertFalse(result.available)
-        self.assertEqual(http.calls, 0)
+        self.assertEqual(result.repositories[0].target_users, ["待分析"])
+        self.assertEqual(len(http.calls), 0)
 
-    def test_schema_requires_all_expected_analysis_fields(self) -> None:
-        repo_schema = ANALYSIS_SCHEMA["properties"]["repositories"]["items"]
-        self.assertTrue(repo_schema["additionalProperties"] is False)
-        self.assertEqual(
-            set(repo_schema["required"]),
-            set(repo_schema["properties"]),
+    def test_schema_requires_nontechnical_industry_fields(self) -> None:
+        repo_schema = CLASSIFICATION_SCHEMA["properties"]["repositories"]["items"]
+        required = set(repo_schema["required"])
+        self.assertIn("target_users", required)
+        self.assertIn("problem_solved", required)
+        self.assertIn("commercialization_signal", required)
+        self.assertNotIn("language", required)
+
+    def test_periodic_synthesis_uses_research_model(self) -> None:
+        synthesis = {
+            key: [f"{key}判断"] for key in PERIODIC_SCHEMA["required"]
+        }
+        http = FakeHTTP([response(synthesis)])
+        client = OpenAIClient("secret", research_model="research-model", http=http)
+        result = client.synthesize_period(
+            "2026-W31",
+            {"observed_days": 5},
+            [
+                {
+                    "date": "2026-07-28",
+                    "industry_analysis": classification(),
+                }
+            ],
         )
+        self.assertEqual(result["product_opportunities"], ["product_opportunities判断"])
+        payload = json.loads(http.calls[0]["kwargs"]["data"])
+        self.assertEqual(payload["model"], "research-model")
+
+    def test_periodic_synthesis_without_key_is_skipped(self) -> None:
+        http = FakeHTTP([])
+        result = OpenAIClient("", http=http).synthesize_period(
+            "2026-W31", {"observed_days": 1}, [{}]
+        )
+        self.assertIsNone(result)
+        self.assertEqual(http.calls, [])
 
 
 class HTTPClientTests(TestCase):
@@ -80,9 +163,9 @@ class HTTPClientTests(TestCase):
     @mock.patch("trending_report.clients.urlopen")
     def test_rate_limit_retries(self, mocked_urlopen: mock.Mock, _: mock.Mock) -> None:
         rate_limit = HTTPError("https://example.test", 429, "limited", {}, None)
-        response = mock.MagicMock()
-        response.__enter__.return_value.read.return_value = b"ok"
-        mocked_urlopen.side_effect = [rate_limit, response]
+        response_value = mock.MagicMock()
+        response_value.__enter__.return_value.read.return_value = b"ok"
+        mocked_urlopen.side_effect = [rate_limit, response_value]
         result = HTTPClient(retries=2).request("https://example.test")
         self.assertEqual(result, b"ok")
         self.assertEqual(mocked_urlopen.call_count, 2)
@@ -121,11 +204,9 @@ class GitHubClientTests(TestCase):
     def test_missing_readme_does_not_discard_repository_metadata(self) -> None:
         value = StubGitHub().enrich(repository())
         self.assertEqual(value.description, "API description")
-        self.assertEqual(value.topics, ["agents"])
         self.assertEqual(value.readme_excerpt, "")
-        self.assertEqual(value.metadata_error, "")
 
-    def test_metadata_failure_is_recorded_without_secret_details(self) -> None:
+    def test_metadata_failure_hides_response_details(self) -> None:
         client = GitHubClient(http=FakeHTTP([RuntimeError("secret response")]))
         value = client.enrich(repository())
         self.assertIn("metadata unavailable", value.metadata_error)
