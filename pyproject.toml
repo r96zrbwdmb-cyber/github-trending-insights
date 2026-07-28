@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-trending-insights"
+version = "0.1.0"
+description = "Daily Chinese technology insights from GitHub Trending"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "GitHub Trending Insights"}]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8"]
+
+[tool.setuptools.packages.find]
+include = ["trending_report*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

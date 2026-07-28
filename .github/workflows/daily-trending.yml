@@ -1,0 +1,80 @@
+name: Daily GitHub Trending Insights
+
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Optional report date (YYYY-MM-DD)"
+        required: false
+        type: string
+      no_ai:
+        description: "Generate rule-only report"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-github-trending
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: gpt-5.6-terra
+      REPORT_TIMEZONE: Asia/Shanghai
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install project and test tools
+        run: python -m pip install --upgrade pip && python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Generate report
+        shell: bash
+        run: |
+          args=(run)
+          if [[ -n "${{ inputs.report_date }}" ]]; then
+            args+=(--date "${{ inputs.report_date }}")
+          fi
+          if [[ "${{ inputs.no_ai }}" == "true" ]]; then
+            args+=(--no-ai)
+          fi
+          python -m trending_report "${args[@]}"
+
+      - name: Commit valid report
+        shell: bash
+        run: |
+          git add README.md data reports
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "report: update GitHub Trending insights"
+          git push
+
