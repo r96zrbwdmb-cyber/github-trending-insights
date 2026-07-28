@@ -3,7 +3,6 @@ from unittest import TestCase
 
 from trending_report.parser import parse_count, parse_trending_html
 
-
 FIXTURE = Path(__file__).parent / "fixtures" / "trending.html"
 
 
@@ -33,4 +32,3 @@ class ParserTests(TestCase):
     def test_limit_is_applied(self) -> None:
         repositories = parse_trending_html(FIXTURE.read_text(encoding="utf-8"), limit=2)
         self.assertEqual(len(repositories), 2)
-
