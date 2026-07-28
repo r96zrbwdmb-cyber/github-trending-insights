@@ -9,8 +9,8 @@
       "url": "https://github.com/permissionlesstech/bitchat",
       "description": "bluetooth mesh chat, IRC vibes",
       "language": "Swift",
-      "stars": 32788,
-      "forks": 5141,
+      "stars": 32801,
+      "forks": 5143,
       "stars_today": 2346,
       "topics": [
         "bluetooth",
@@ -26,8 +26,8 @@
       ],
       "license": "Unlicense",
       "created_at": "2025-07-04T14:34:38Z",
-      "updated_at": "2026-07-28T09:09:09Z",
-      "open_issues": 80,
+      "updated_at": "2026-07-28T09:19:26Z",
+      "open_issues": 81,
       "default_branch": "main",
       "readme_excerpt": "<img width=\"256\" height=\"256\" alt=\"icon_128x128@2x\" src=\"https://github.com/user-attachments/assets/90133f83-b4f6-41c6-aab9-25d0859d2a47\" /> ## bitchat A decentralized peer-to-peer messaging app with dual transport architecture: local Bluetooth mesh networks for offline communication and internet-based Nostr protocol for global reach. No accounts, no phone numbers, no central servers. It's the side-groupchat. [bitchat.free](http://bitchat.free) 📲 [App Store](https://apps.apple.com/us/app/bitchat-mesh/id6748219622) ### Getting a copy you can trust Install from the App Store, or build from source you have verified. A compiled build from anywhere else cannot be verified — see [Verifying bitchat](docs/VERIFYING-A-BUILD.md) for how to check source against the per-release hash manifest, and for what to do if that is the only build you can get. This matters more than it usually would: this repository has been the target of takedown demands, and when a repository or releases page disappears, mirrors appear that nobody can check. ## License This project is released into the public domain. See the [LICENSE](LICENSE) file for details. ## Features - **Dual Transport Architecture**: Bluetooth mesh for offline + Nostr protocol for internet-based messaging - **Location-Based Channels**: Geographic chat rooms using geohash coordinates over global Nostr relays - **Intelligent Message Routing**: Automatically chooses best transport (Bluetooth → Nostr fallback) - **Decentralized Mesh Network**: Automatic peer discovery and multi-hop message relay over Bluetooth LE - **Privacy First**: No accounts, no phone numbers, no servers. Note that the mesh does use a persistent per-device identifier derived from your identity key — see [the whitepaper](WHITEPAPER.md) on identity and metadata for what a nearby radio can observe - **Private Message End-to-End Encryption**: [Noise Protocol](https://noiseprotocol.org) for mesh, BitChat private envelopes for Nostr fallback - **IRC-Style Commands**: Familiar `/slap`, `/msg`, `/who` style interface - **Universal App**: Native support for iOS and macOS - **Emergency Wipe**: Triple-tap to instantly clear all data - **Performance Optimizations**: LZ4 message compression, adaptive battery modes, and optimized networking ## [Technical Architecture](https://deepwiki.com/permissionlesstech/bitchat) BitChat uses a **hybrid messaging architecture** with two complementary transport layers: ### Bluetooth Mesh Network (Offline) - **Local Communication**: Direct peer-to-peer within Bluetooth range - **Multi-hop Relay**: Messages route through nearby devices (max 7 hops) - **No Internet Required**: Works completely offline in disaster scenarios - **Noise Protocol Encryption**: End-to-end encryption, with forward secrecy for live sessions (store-and-forward mail is sealed without it — see the whitepaper) - **Binary Protocol**: Compact packet format optimized for Bluetooth LE constraints - **Automatic Discovery**: Peer discovery and connection management - **Adaptive Power**: Battery-optimized duty cycling ### Nostr Protocol (Internet) - **Global Reach**: Connect with users worldwide via internet relays - **Location Channels**: Geographic chat rooms using geohash coordinates - **290+ Relay Network**: Distributed across the globe for reliability - **BitChat Private Envelopes**: App-specific encrypted private messages over Nostr relays - **Ephemeral Keys**: Fresh cryptographic identity per geohash area BitChat's private-envelope format is proprietary and is **not** NIP-17, NIP-44, or NIP-59 compatible. It uses Nostr as a relay transport but only interoperates with BitChat clients: private payloads travel inside kind-1059 events whose `v2:`-prefixed content is a BitChat-specific XChaCha20-Poly1305 construction, not NIP-44 encryption. ### Channel Types #### `mesh #bluetooth` - **Transport**: Bluetooth Low Energy mesh network - **Scope**: Local devices within multi-hop range - **Internet**: Not required - **Use Case**: Offline commun",
       "metadata_error": "",
@@ -42,7 +42,7 @@
       "url": "https://github.com/amnezia-vpn/amnezia-client",
       "description": "Amnezia VPN Client (Desktop+Mobile)",
       "language": "C++",
-      "stars": 14058,
+      "stars": 14064,
       "forks": 1042,
       "stars_today": 515,
       "topics": [
@@ -58,7 +58,7 @@
       ],
       "license": "GPL-3.0",
       "created_at": "2020-11-22T12:44:43Z",
-      "updated_at": "2026-07-28T09:10:09Z",
+      "updated_at": "2026-07-28T09:17:27Z",
       "open_issues": 951,
       "default_branch": "dev",
       "readme_excerpt": "# Amnezia VPN ### _The best client for self-hosted VPN_ [![Build Status](https://github.com/amnezia-vpn/amnezia-client/actions/workflows/deploy.yml/badge.svg?branch=dev)](https://github.com/amnezia-vpn/amnezia-client/actions/workflows/deploy.yml?query=branch:dev) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/amnezia-vpn/amnezia-client) ### [English]([https://github.com/amnezia-vpn/amnezia-client/blob/dev/README_RU.md](https://github.com/amnezia-vpn/amnezia-client/tree/dev?tab=readme-ov-file#)) | [Русский](https://github.com/amnezia-vpn/amnezia-client/blob/dev/README_RU.md) [Amnezia](https://amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en) is an open-source VPN client, with a key feature that enables you to deploy your own VPN server on your server. [![Image](https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/uipic4.png)](https://amnezia.org) ### [Website](https://amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en) | [Alt website link](https://storage.googleapis.com/amnezia/amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en-mirror) | [Documentation](https://docs.amnezia.org) | [Troubleshooting](https://docs.amnezia.org/troubleshooting) > [!TIP] > If the [Amnezia website](https://amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en) is blocked in your region, you can use an [Alternative website link](https://storage.googleapis.com/amnezia/amnezia.org?utm_source=github&utm_campaign=amnezia_website-readme-en-mirror). <a href=\"https://amnezia.org/en/downloads?utm_source=github&utm_campaign=amnezia_button-readme-en\"><img src=\"https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/download-website.svg\" width=\"150\" style=\"max-width: 100%; margin-right: 10px\"></a> <a href=\"https://storage.googleapis.com/amnezia/amnezia.org?m-path=/en/downloads&utm_source=github&utm_campaign=amnezia_button-readme-en-mirrow\"><img src=\"https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/download-alt.svg\" width=\"150\" style=\"max-width: 100%;\"></a> [All releases](https://github.com/amnezia-vpn/amnezia-client/releases) <br/> <a href=\"https://www.testiny.io\"><img src=\"https://github.com/amnezia-vpn/amnezia-client/blob/dev/metadata/img-readme/testiny.png\" height=\"28px\"></a> ## Features - Very easy to use - enter your IP address, SSH login, password and Amnezia will automatically install VPN docker containers to your server and connect to the VPN. - Classic VPN-protocols: OpenVPN, WireGuard and IKEv2 protocols. - Protocols with traffic Masking (Obfuscation): OpenVPN over [Cloak](https://github.com/cbeuw/Cloak) plugin, Shadowsocks (OpenVPN over Shadowsocks), [AmneziaWG](https://docs.amnezia.org/documentation/amnezia-wg/) and XRay. - Split tunneling support - add any sites to the client to enable VPN only for them or add Apps (only for Android and Desktop). - Windows, MacOS, Linux, Android, iOS releases. - Support for AmneziaWG protocol configuration on [Keenetic beta firmware](https://docs.keenetic.com/ua/air/kn-1611/en/6319-latest-development-release.html#UUID-186c4108-5afd-c10b-f38a-cdff6c17fab3_section-idm33192196168192-improved). ## Links - [https://amnezia.org](https://amnezia.org/?utm_source=github&utm_campaign=amnezia_website-read) - Project website | [Alternative link (mirror)](https://storage.googleapis.com/amnezia/amnezia.org?utm_source=github&utm_campaign=amnezia_website-read) - [https://docs.amnezia.org](https://docs.amnezia.org/?utm_source=github&utm_campaign=amnezia_website-read) - Documentation | [Alternative link (mirror)](https://storage.googleapis.com/amnezia/docs?utm_source=github&utm_campaign=amnezia_website-read) - [https://www.reddit.com/r/AmneziaVPN](https://www.reddit.com/r/AmneziaVPN) - Reddit - [https://telegram.me/amnezia_vpn_en](https://telegram.me/amnezia_vpn_en) - Telegram support channel (English) - [https://",
@@ -74,7 +74,7 @@
       "url": "https://github.com/moeru-ai/airi",
       "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
       "language": "TypeScript",
-      "stars": 44380,
+      "stars": 44387,
       "forks": 4417,
       "stars_today": 572,
       "topics": [
@@ -92,8 +92,8 @@
       ],
       "license": "MIT",
       "created_at": "2024-12-01T16:33:36Z",
-      "updated_at": "2026-07-28T09:09:50Z",
-      "open_issues": 182,
+      "updated_at": "2026-07-28T09:18:34Z",
+      "open_issues": 181,
       "default_branch": "main",
       "readme_excerpt": "<picture> <source width=\"100%\" srcset=\"./docs/content/public/banner-dark-1280x640.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"100%\" srcset=\"./docs/content/public/banner-light-1280x640.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"250\" src=\"./docs/content/public/banner-light-1280x640.avif\" /> </picture> <h1 align=\"center\">Project AIRI</h1> <p align=\"center\">Re-creating Neuro-sama, a soul container of AI waifu / virtual characters to bring them into our world.</p> <p align=\"center\"> [<a href=\"https://discord.gg/TgQ3Cu2F7A\">Join Discord Server</a>] [<a href=\"https://airi.moeru.ai\">Try it</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.zh-CN.md\">简体中文</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ja-JP.md\">日本語</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ru-RU.md\">Русский</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.vi.md\">Tiếng Việt</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.fr.md\">Français</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ko-KR.md\">한국어</a>] </p> <p align=\"center\"> <a href=\"https://deepwiki.com/moeru-ai/airi\"><img src=\"https://deepwiki.com/badge.svg\"></a> <a href=\"https://github.com/moeru-ai/airi/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/moeru-ai/airi.svg?style=flat&colorA=080f12&colorB=1fa669\"></a> <a href=\"https://discord.gg/TgQ3Cu2F7A\"><img src=\"https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FTgQ3Cu2F7A%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&logo=discord&logoColor=white&label=%20&color=7389D8&labelColor=6A7EC2\"></a> <a href=\"https://x.com/proj_airi\"><img src=\"https://img.shields.io/badge/%40proj__airi-black?style=flat&logo=x&labelColor=%23101419&color=%232d2e30\"></a> <a href=\"https://t.me/+7M_ZKO3zUHFlOThh\"><img src=\"https://img.shields.io/badge/Telegram-%235AA9E6?logo=telegram&labelColor=FFFFFF\"></a> <a href=\"./docs/wechat.md\"><img src=\"https://img.shields.io/badge/WeChat-%2307C160?logo=wechat&logoColor=%2307C160&labelColor=FFFFFF\"></a> <a href=\"https://qun.qq.com/universal-share/share?ac=1&authKey=9g00d%2BZS7nORzcJugNNddJ7rCghZTIR7fhXabGwch2S%2BG%2BKGIKwlN1N2nIqkh2jg&busi_data=eyJncm91cENvZGUiOiIxMDU4MTU2Njk3IiwidG9rZW4iOiJmcnkra1hWNFIxNytEcG0zcHRUdVJIaldlRDFxN0dzK080QWtvTEdOQjJkNEY2eUFta1g1clNpbkxSMS9FQWFYIiwidWluIjoiMTI2MDkwNzMzNSJ9&data=b1eJrwn3GVOUh7YIxZ7l9vHQo99HPmRxKPpMKlDCmfzx8Y57IXb2EZCMaOC9rVTd2U558qpNjwUYUWlPHxVHvg&svctype=4&tempid=h5_group_info\"><img src=\"https://img.shields.io/badge/QQ-%2312B7F5?logo=qq&labelColor=FFFFFF\"></a> </p> <p float=\"left\" align=\"center\"> <!-- readme-section:release-binary-windows --> <a href=\"https://github.com/moeru-ai/airi/releases/download/v0.10.2/AIRI-0.10.2-windows-x64-setup.exe\"> <picture> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.windows.dark.en-US.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.windows.light.en-US.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"33%\" src=\"./docs/content/public/assets/download-buttons/download-buttons.windows.light.en-US.avif\" /> </picture> </a> <!-- readme-section:release-binary-macos --> <a href=\"https://github.com/moeru-ai/airi/releases/download/v0.10.2/AIRI-0.10.2-darwin-arm64.dmg\"> <picture> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.macos.dark.en-US.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.macos.light.en-US.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"33%\" src=\"./docs/content/public/assets/download-buttons/download-buttons.macos.light.en-US.",
       "metadata_error": "",
@@ -108,7 +108,7 @@
       "url": "https://github.com/opengeos/GeoLibre",
       "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
       "language": "TypeScript",
-      "stars": 2986,
+      "stars": 2989,
       "forks": 369,
       "stars_today": 420,
       "topics": [
@@ -121,7 +121,7 @@
       ],
       "license": "MIT",
       "created_at": "2026-05-27T19:34:31Z",
-      "updated_at": "2026-07-28T09:10:14Z",
+      "updated_at": "2026-07-28T09:18:16Z",
       "open_issues": 10,
       "default_branch": "main",
       "readme_excerpt": "# GeoLibre [![Launch GeoLibre Web](https://img.shields.io/badge/Launch-GeoLibre%20Web-green.svg)](https://web.geolibre.app/) [![GeoLibre shared project](https://img.shields.io/badge/GeoLibre-share-green.svg)](https://share.geolibre.app) [![GeoLibre plugins](https://img.shields.io/badge/GeoLibre-plugins-green.svg)](https://plugins.geolibre.app) [![image](https://img.shields.io/pypi/v/geolibre.svg)](https://pypi.python.org/pypi/geolibre) [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/opengeos/GeoLibre/blob/main/python/examples/getting-started.ipynb) [![image](https://img.shields.io/conda/vn/conda-forge/geolibre.svg)](https://anaconda.org/conda-forge/geolibre) [![Conda Recipe](https://img.shields.io/badge/recipe-geolibre-green.svg)](https://github.com/conda-forge/geolibre-feedstock) [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/p/github/opengeos/geolibre) [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-GeoLibre-0078D4?logo=windows)](https://apps.microsoft.com/detail/9nwt67rv531x) [![AUR version](https://img.shields.io/aur/version/geolibre-bin?logo=archlinux&label=AUR)](https://aur.archlinux.org/packages/geolibre-bin) [![FlatPark](https://img.shields.io/badge/FlatPark-GeoLibre-4A90D9?logo=flatpak)](https://flatpark.org/apps/app.geolibre.GeoLibre/) [![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20785400.svg)](https://doi.org/10.5281/zenodo.20785400) A free and open-source, lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs everywhere you do, in the web browser, on the desktop, on mobile, and inside Jupyter notebooks, all while keeping your data local and private. GeoLibre is built with **Tauri v2**, **React**, **TypeScript**, **MapLibre GL JS**, **DuckDB-WASM Spatial**, and **deck.gl**. The same workspace runs as a native desktop app, a native Android app, in any modern web browser, and adapts responsively to mobile and small screens. - **[Launch GeoLibre Web](https://web.geolibre.app/)** — the full app in your browser, nothing to install - **[Download the desktop app](https://geolibre.app/downloads/)** — Windows, macOS, and Linux installers - **[Get started](https://geolibre.app/getting-started/)** — install, run from source, and configure - **[Features](https://geolibre.app/features/)** — the complete feature list ## Demos **Click any screenshot to open it at full resolution, or any animation to play the full-quality video.** ### 3D Tiles [![GeoLibre demo showing 3D Tiles rendered on a MapLibre map](https://files.opengeos.org/GeoLibre-demo.webp)](https://files.opengeos.org/GeoLibre-demo.webp) [Open the live project](https://share.geolibre.app/giswqs/3d-tiles) ### NYC buildings and subways Manhattan building footprints extruded in 3D and colored by construction era, with the MTA subway lines and stations on top and a legend generated automatically from the layers' symbology. [![Manhattan buildings extruded in 3D and colored by construction era, with MTA subway lines and stations and an auto-generated legend](https://files.opengeos.org/nyc-buildings.webp)](https://files.opengeos.org/nyc-buildings.webp) The animation below runs the Time Slider along the buildings' construction year, from 1850 to 2025, so Manhattan fills in era by era. Click it to play the full-quality video. [![Animation of Manhattan buildings appearing by construction year as the Time Slider advances from 1850 to 2025](https://files.opengeos.org/nyc-buildings-gif.gif)](https://files.opengeos.org/nyc-buildings.webm) [Open the live project](https://share.geolibre.app/giswqs/nyc-buildings-and-subways) ### Planetary basemaps GeoLibre is not limited to Earth. Planetary basemaps from OpenPlanetaryMap and USGS Astrogeology cover the Moon, Mars, Mercury, Venus",
@@ -137,8 +137,8 @@
       "url": "https://github.com/yorukot/superfile",
       "description": "Pretty fancy and modern terminal file manager",
       "language": "Go",
-      "stars": 21117,
-      "forks": 675,
+      "stars": 21121,
+      "forks": 676,
       "stars_today": 600,
       "topics": [
         "bubbletea",
@@ -155,7 +155,7 @@
       ],
       "license": "MIT",
       "created_at": "2024-03-19T15:49:52Z",
-      "updated_at": "2026-07-28T09:08:00Z",
+      "updated_at": "2026-07-28T09:18:53Z",
       "open_issues": 210,
       "default_branch": "main",
       "readme_excerpt": "<div align=\"center\"> <h4>superfile is supported by the community.</h4> <a href=\"https://ko-fi.com/yorukot\"> <img alt=\"Donate to superfile on Ko-fi\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\"> </a> <hr> </div> <div align=\"center\"> <br> <picture> <source width=\"300\" media=\"(prefers-color-scheme: dark)\" srcset=\"website/src/assets/superfile-night.svg\" /> <source width=\"300\" media=\"(prefers-color-scheme: light)\" srcset=\"website/src/assets/superfile-day.svg\" /> <img alt=\"superfile LOGO\" src=\"website/src/assets/superfile-day.svg\" /> </picture> <br><br> [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/yorukot/superfile/refs/heads/main/LICENSE) [![Discord Link](https://img.shields.io/discord/1338415256875307110?label=discord&logo=discord&logoColor=white)](https://discord.gg/YYtJ23Du7B) [![Release](https://img.shields.io/github/v/release/yorukot/superfile.svg?style=flat-square)](https://github.com/yorukot/superfile/releases/latest) ![Homebrew downloads](https://img.shields.io/homebrew/installs/dy/superfile?label=Homebrew) ![GitHub downloads](https://img.shields.io/github/downloads/yorukot/superfile/total?label=GitHub%20downloads%20assets%2Freleases) [![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/yorukot/superfile?utm_source=oss&utm_medium=github&utm_campaign=yorukot%2Fsuperfile&labelColor=171717&color=FF570A&&label=CodeRabbit+Reviews)](https://www.coderabbit.ai/) ![](website/src/assets/demo.png) </div> ## Demo | Perform common operations | | -------------------------- | | ![](asset/readme/demo.gif) | ## Content - [Demo](#demo) - [Content](#content) - [Installation](#installation) - [macOS and Linux](#macos-and-linux) - [Windows](#windows) - [Powershell](#powershell) - [Winget](#winget) - [Scoop](#scoop) - [More installation methods](#more-installation-methods) - [Build](#build) - [For macOS/Linux](#for-macoslinux) - [For Windows](#for-windows) - [Start superfile](#start-superfile) - [Supported Systems](#supported-systems) - [Tutorial](#tutorial) - [Plugins](#plugins) - [Themes](#themes) - [Hotkeys](#hotkeys) - [Notes](#notes) - [Troubleshooting](#troubleshooting) - [Uninstalling](#uninstalling) - [macOS and Linux](#macos-and-linux-1) - [Windows](#windows) - [Contributing](#contributing) - [Thanks](#thanks) - [Support](#support) - [Core maintainer](#core-maintainer) - [Contributors](#contributors) - [Powered by](#powered-by) - [Star History](#star-history) - [༼ つ ◕\\_◕ ༽つ Please share.](#-つ-_-つ-please-share) ## Installation ### macOS and Linux ```bash bash -c \"$(curl -sLo- https://superfile.dev/install.sh)\" ``` If you want to inspect the script, see : [install.sh](./website/public/install.sh) ### Windows #### Powershell ```powershell powershell -ExecutionPolicy Bypass -Command \"Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://superfile.dev/install.ps1'))\" ``` If you want to inspect the script, see : [install.ps1](./website/public/install.ps1) #### [Winget](https://winget.run/) ```powershell winget install --id yorukot.superfile ``` #### [Scoop](https://scoop.sh/) ``` scoop install superfile ``` ### More installation methods [Click me to check on how to install](https://superfile.dev/getting-started/installation/) ## Build You can build the source code yourself by using these steps: **Requirements** - [golang](https://go.dev/doc/install) **Build Steps** Clone this repository using the following command: ``` git clone https://github.com/yorukot/superfile.git --depth=1 ``` Enter the downloaded directory: ```bash cd superfile ``` ### For macOS/Linux Run the `build.sh` file: ```bash ./build.sh ``` Add the binary file to your $PATH, e.g., in `/usr/local/bin`: ```bash sudo mv ./bin/spf /usr/local/bin ``` ### For Windows ```bash go build -o bin/spf.exe ``` Edit System Environment Variables and add superfile repo's `bin` directory to your PATH ## Start superfile ```bash spf ``` ## Supported Systems - \\[x\\] Linux - \\[x\\] macOS - \\",
@@ -171,13 +171,13 @@
       "url": "https://github.com/NanmiCoder/MediaCrawler",
       "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
       "language": "Python",
-      "stars": 58710,
-      "forks": 11639,
+      "stars": 58717,
+      "forks": 11640,
       "stars_today": 362,
       "topics": [],
       "license": "NOASSERTION",
       "created_at": "2023-06-09T12:14:34Z",
-      "updated_at": "2026-07-28T09:09:48Z",
+      "updated_at": "2026-07-28T09:18:37Z",
       "open_issues": 183,
       "default_branch": "main",
       "readme_excerpt": "# 🔥 MediaCrawler - 自媒体平台爬虫 🕷️ <div align=\"center\"> ### 🤝 特别感谢白金赞助商 <a href=\"https://www.browseract.ai/mediacrawler\" target=\"_blank\"> <img src=\"docs/static/images/browseract_ad.jpg\" alt=\"BrowserAct\" width=\"600\"> </a> <br> <a href=\"https://www.browseract.ai/mediacrawler\" target=\"_blank\"> <small>BrowserAct 支持从任意网站提取数据。只需描述所需数据，BrowserAct 就会在真实浏览器中探索并测试网页，生成可靠、可复用的数据采集 Bot，并返回结构化结果。内置隐身浏览和验证码处理，并提供高质量住宅代理。无需代码，立即免费试用。</small> </a> </div> --- <div align=\"center\"> <a href=\"https://trendshift.io/repositories/8291\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/8291\" alt=\"NanmiCoder%2FMediaCrawler | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/> </a> [![GitHub Stars](https://img.shields.io/github/stars/NanmiCoder/MediaCrawler?style=social)](https://github.com/NanmiCoder/MediaCrawler/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/NanmiCoder/MediaCrawler?style=social)](https://github.com/NanmiCoder/MediaCrawler/network/members) [![GitHub Issues](https://img.shields.io/github/issues/NanmiCoder/MediaCrawler)](https://github.com/NanmiCoder/MediaCrawler/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/NanmiCoder/MediaCrawler)](https://github.com/NanmiCoder/MediaCrawler/pulls) [![License](https://img.shields.io/github/license/NanmiCoder/MediaCrawler)](https://github.com/NanmiCoder/MediaCrawler/blob/main/LICENSE) [![中文](https://img.shields.io/badge/🇨🇳_中文-当前-blue)](README.md) [![English](https://img.shields.io/badge/🇺🇸_English-Available-green)](README_en.md) [![Español](https://img.shields.io/badge/🇪🇸_Español-Available-green)](README_es.md) </div> > **免责声明：** > > 大家请以学习为目的使用本仓库⚠️⚠️⚠️⚠️，[爬虫违法违规的案件](https://github.com/HiddenStrawberry/Crawler_Illegal_Cases_In_China) <br> > >本仓库的所有内容仅供学习和参考之用，禁止用于商业用途。任何人或组织不得将本仓库的内容用于非法用途或侵犯他人合法权益。本仓库所涉及的爬虫技术仅用于学习和研究，不得用于对其他平台进行大规模爬虫或其他非法行为。对于因使用本仓库内容而引起的任何法律责任，本仓库不承担任何责任。使用本仓库的内容即表示您同意本免责声明的所有条款和条件。 > > 点击查看更为详细的免责声明。[点击跳转](#disclaimer) ## 📖 项目简介 一个功能强大的**多平台自媒体数据采集工具**，支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取。 ### 🔧 技术原理 - **核心技术**：基于 [Playwright](https://playwright.dev/) 浏览器自动化框架登录保存登录态 - **无需JS逆向**：利用保留登录态的浏览器上下文环境，通过 JS 表达式获取签名参数 - **优势特点**：无需逆向复杂的加密算法，大幅降低技术门槛 ## ✨ 功能特性 | 平台 | 关键词搜索 | 指定帖子ID爬取 | 二级评论 | 指定创作者主页 | 登录态缓存 | IP代理池 | 生成评论词云图 | | ------ | ---------- | -------------- | -------- | -------------- | ---------- | -------- | -------------- | | 小红书 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | 抖音 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | 快手 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | B 站 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | 微博 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | 贴吧 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | 知乎 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | <strong>MediaCrawlerPro 重磅发布！开源不易，欢迎订阅支持</strong> > 专注于学习成熟项目的架构设计，不仅仅是爬虫技术，Pro 版本的代码设计思路同样值得深入学习！ [MediaCrawlerPro](https://github.com/MediaCrawlerPro) 相较于开源版本的核心优势： #### 🎯 核心功能升级 - ✅ **自媒体内容拆解Agent**（新增功能） - ✅ **断点续爬功能**（重点特性） - ✅ **多账号 + IP代理池支持**（重点特性） - ✅ **去除 Playwright 依赖**，使用更简单 - ✅ **完整 Linux 环境支持** #### 🏗️ 架构设计优化 - ✅ **代码重构优化**，更易读易维护（解耦 JS 签名逻辑） - ✅ **企业级代码质量**，适合构建大型爬虫项目 - ✅ **完美架构设计**，高扩展性，源码学习价值更大 #### 🎁 额外功能 - ✅ **自媒体视频下载器桌面端**（适合学习全栈开发） - ✅ **多平台首页信息流推荐**（HomeFeed） - ✅ **AI Agent Skill 支持**（[OpenClaw](https://openclaw.ai/) 🦞 / Claude Code / Cursor 一键安装，让 Agent 自动爬取数据） - [ ] **基于评论分析AI Agent正在开发中 🚀🚀** 点击查看：[MediaCrawlerPro 项目主页](https://github.com/MediaCrawlerPro) 更多介绍 ## 🚀 快速开始 > 💡 **如果这个项目对您有帮助，请给个 ⭐ Star 支持一下！** ## 📋 前置依赖 ### 🚀 uv 安装（推荐） 在进行下一步操作之前，请确保电脑上已经安装了 uv： - **安装地址**：[uv 官方安装指南](https://docs.astral.sh/uv/getting-started/installation) - **验证安装**：终端输入命令 `uv --version`，如果正常显示版本号，证明已经安装成功 - **推荐理由**：uv 是目前最强的 Python 包管理工具，速度快、依赖解析准确 ### 🟢 Node.js 安装 项目依赖 Node.js，请前往官网下载安装： - **下载地址**：https://nodejs.org/en/download/ - **版本要求**：>= 16.0.0 ### 📦 Python 包安装 ```shell # 进入项目目录 cd MediaCrawler # 使用 uv sync 命令来保证 python 版本和相关依赖包的一致性 uv sync ``` ### 🌐 浏览器驱动安装（可选） > 如果使用默认的 CDP 模式（连接已有 Chrome 浏览器），**无需安装浏览器驱动**。仅在使用标准 Playwright 模式时需要安装。 ```shell # 仅在标准 Playwright 模式下需要安装浏览器驱动 uv run playwright install ``` ### 🌍 Chrome 浏览器配置",
@@ -193,13 +193,13 @@
       "url": "https://github.com/pbakaus/impeccable",
       "description": "The design language that makes your AI harness better at design.",
       "language": "JavaScript",
-      "stars": 51930,
-      "forks": 3050,
+      "stars": 51937,
+      "forks": 3051,
       "stars_today": 847,
       "topics": [],
       "license": "Apache-2.0",
       "created_at": "2025-11-16T01:52:04Z",
-      "updated_at": "2026-07-28T09:09:16Z",
+      "updated_at": "2026-07-28T09:18:59Z",
       "open_issues": 41,
       "default_branch": "main",
       "readme_excerpt": "# Impeccable Design guidance for AI coding agents. 1 skill, 23 commands, live browser iteration, and 60 deterministic detector rules for AI-generated frontend design. > **Quick start:** From your project root, run `npx impeccable install`, then run `/impeccable init` inside your AI coding tool. Full docs: [impeccable.style](https://impeccable.style). ## Why Impeccable? Anthropic's [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) was the first widely-used design skill for Claude. Impeccable started from there. Every model trained on the same SaaS templates. Skip the guidance and you get the same handful of tells on every project: Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, the rounded-square icon tile above every heading. Impeccable adds: - **One setup flow.** `/impeccable init` writes `PRODUCT.md` and offers `DESIGN.md`, so later commands know the audience, brand/product lane, voice, anti-references, colors, type, and components. - **23 commands.** A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more. - **60 deterministic detector rules** plus LLM-only critique checks. The CLI and browser extension run the deterministic rules with no LLM and no API key. ## What's Included ### The Skill: impeccable The skill installs as one command: ```bash /impeccable <command> <target> ``` Start every new project with: ```bash /impeccable init ``` `init` asks whether the surface is brand (marketing, landing, portfolio) or product (app UI, dashboard, tool), then writes design context that every later command reads. ### 23 Commands All commands are accessed through `/impeccable`: | Command | What it does | |---------|--------------| | `/impeccable craft` | Full shape-then-build flow with visual iteration | | `/impeccable init` | One-time setup: gather design context, write PRODUCT.md and DESIGN.md, configure live mode, recommend next steps | | `/impeccable document` | Generate root DESIGN.md from existing project code | | `/impeccable extract` | Pull reusable components and tokens into the design system | | `/impeccable shape` | Plan UX/UI before writing code | | `/impeccable critique` | UX design review: hierarchy, clarity, emotional resonance | | `/impeccable audit` | Run technical quality checks (a11y, performance, responsive) | | `/impeccable polish` | Final pass, design system alignment, and shipping readiness | | `/impeccable bolder` | Amplify boring designs | | `/impeccable quieter` | Tone down overly bold designs | | `/impeccable distill` | Strip to essence | | `/impeccable harden` | Error handling, i18n, text overflow, edge cases | | `/impeccable onboard` | First-run flows, empty states, activation paths | | `/impeccable animate` | Add purposeful motion | | `/impeccable colorize` | Introduce strategic color | | `/impeccable typeset` | Fix font choices, hierarchy, sizing | | `/impeccable layout` | Fix layout, spacing, visual rhythm | | `/impeccable delight` | Add moments of joy | | `/impeccable overdrive` | Add technically extraordinary effects | | `/impeccable clarify` | Improve unclear UX copy | | `/impeccable adapt` | Adapt for different devices | | `/impeccable optimize` | Performance improvements | | `/impeccable live` | Visual variant mode: iterate on elements in the browser | Use `/impeccable pin <command>` to create standalone shortcuts (e.g., `pin audit` creates `/audit`). #### Usage Examples ``` /impeccable audit blog # Audit blog hub + post pages /impeccable critique landing # UX design review /impeccable polish settings # Final pass before shipping /impeccable harden checkout # Add error handling + edge cases ``` Or use `/impeccable` directly with a description: ``` /impeccable redo this hero section ``` ### Anti-Patterns The skill includes explicit guidance on what to avoid: - Don't use overused fonts (Arial, Inter, system defaults) - Don't use gray text ",
@@ -215,13 +215,13 @@
       "url": "https://github.com/shiyu-coder/Kronos",
       "description": "Kronos: A Foundation Model for the Language of Financial Markets",
       "language": "Python",
-      "stars": 34710,
+      "stars": 34716,
       "forks": 5809,
       "stars_today": 441,
       "topics": [],
       "license": "MIT",
       "created_at": "2025-07-01T02:54:32Z",
-      "updated_at": "2026-07-28T09:04:21Z",
+      "updated_at": "2026-07-28T09:18:40Z",
       "open_issues": 248,
       "default_branch": "master",
       "readme_excerpt": "<div align=\"center\"> <h2><b>Kronos: A Foundation Model for the Language of Financial Markets </b></h2> </div> <div align=\"center\"> </a> <a href=\"https://huggingface.co/NeoQuasar\"> <img src=\"https://img.shields.io/badge/🤗-Hugging_Face-yellow\" alt=\"Hugging Face\"> </a> <a href=\"https://shiyu-coder.github.io/Kronos-demo/\"> <img src=\"https://img.shields.io/badge/🚀-Live_Demo-brightgreen\" alt=\"Live Demo\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/graphs/commit-activity\"> <img src=\"https://img.shields.io/github/last-commit/shiyu-coder/Kronos?color=blue\" alt=\"Last Commit\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/stargazers\"> <img src=\"https://img.shields.io/github/stars/shiyu-coder/Kronos?color=lightblue\" alt=\"GitHub Stars\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/network/members\"> <img src=\"https://img.shields.io/github/forks/shiyu-coder/Kronos?color=yellow\" alt=\"GitHub Forks\"> </a> <a href=\"./LICENSE\"> <img src=\"https://img.shields.io/github/license/shiyu-coder/Kronos?color=green\" alt=\"License\"> </a> </div> <div align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://zdoc.app/de/shiyu-coder/Kronos\">Deutsch</a> | <a href=\"https://zdoc.app/es/shiyu-coder/Kronos\">Español</a> | <a href=\"https://zdoc.app/fr/shiyu-coder/Kronos\">Français</a> | <a href=\"https://zdoc.app/ja/shiyu-coder/Kronos\">日本語</a> | <a href=\"https://zdoc.app/ko/shiyu-coder/Kronos\">한국어</a> | <a href=\"https://zdoc.app/pt/shiyu-coder/Kronos\">Português</a> | <a href=\"https://zdoc.app/ru/shiyu-coder/Kronos\">Русский</a> | <a href=\"https://zdoc.app/zh/shiyu-coder/Kronos\">中文</a> </div> <p align=\"center\"> <img src=\"./figures/logo.png\" width=\"100\"> </p> > Kronos is the **first open-source foundation model** for financial candlesticks (K-lines), > trained on data from over **45 global exchanges**. </div> ## 📰 News * 🚩 **[2025.11.10]** Kronos has been accpeted by AAAI 2026. * 🚩 **[2025.08.17]** We have released the scripts for fine-tuning! Check them out to adapt Kronos to your own tasks. * 🚩 **[2025.08.02]** Our paper is now available on [arXiv](https://arxiv.org/abs/2508.02739)! <p align=\"center\"> ## 📜 Introduction **Kronos** is a family of decoder-only foundation models, pre-trained specifically for the \"language\" of financial markets—K-line sequences. Unlike general-purpose TSFMs, Kronos is designed to handle the unique, high-noise characteristics of financial data. It leverages a novel two-stage framework: 1. A specialized tokenizer first quantizes continuous, multi-dimensional K-line data (OHLCV) into **hierarchical discrete tokens**. 2. A large, autoregressive Transformer is then pre-trained on these tokens, enabling it to serve as a unified model for diverse quantitative tasks. <p align=\"center\"> <img src=\"figures/overview.png\" alt=\"\" align=\"center\" width=\"700px\" /> </p> ## ✨ Live Demo We have set up a live demo to visualize Kronos's forecasting results. The webpage showcases a forecast for the **BTC/USDT** trading pair over the next 24 hours. **👉 [Access the Live Demo Here](https://shiyu-coder.github.io/Kronos-demo/)** ## 📦 Model Zoo We release a family of pre-trained models with varying capacities to suit different computational and application needs. All models are readily accessible from the Hugging Face Hub. | Model | Tokenizer | Context length | Params | Open-source | |--------------|---------------------------------------------------------------------------------| -------------- | ------ |---------------------------------------------------------------------------| | Kronos-mini | [Kronos-Tokenizer-2k](https://huggingface.co/NeoQuasar/Kronos-Tokenizer-2k) | 2048 | 4.1M | ✅ [NeoQuasar/Kronos-mini](https://huggingface.co/NeoQuasar/Kronos-mini) | | Kronos-small | [Kronos-Tokenizer-base](https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base) | 512 | 24.7M | ✅ [NeoQuasar/Kronos-small](https://huggingface.co/NeoQuasar/Kronos-small) | | Kronos-base | [Kronos-Tokenizer-base](https://h",
@@ -237,7 +237,7 @@
       "url": "https://github.com/alibaba/open-code-review",
       "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
       "language": "Go",
-      "stars": 15252,
+      "stars": 15263,
       "forks": 1025,
       "stars_today": 979,
       "topics": [
@@ -250,7 +250,7 @@
       ],
       "license": "Apache-2.0",
       "created_at": "2026-05-18T02:16:36Z",
-      "updated_at": "2026-07-28T09:08:53Z",
+      "updated_at": "2026-07-28T09:18:39Z",
       "open_issues": 63,
       "default_branch": "main",
       "readme_excerpt": "<div align=\"center\"> <a href=\"https://open-codereview.ai\"> <img src=\"imgs/logo-core.svg\" alt=\"OpenCodeReview logo\" width=\"180\" /> </a> <h1>OpenCodeReview</h1> </div> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/41087?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-41087\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"https://trendshift.io/api/badge/repositories/41087\" alt=\"alibaba%2Fopen-code-review | Trendshift\" style=\"width: 280px; height: 60px;\" width=\"280\" height=\"60\" /> </a> <a href=\"https://trendshift.io/repositories/41087\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/trendshift/repositories/41087/weekly?language=Go\" alt=\"alibaba%2Fopen-code-review | Trendshift\" style=\"width: 280px; height: 60px;\" width=\"280\" height=\"60\" /> </a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/@alibaba-group/open-code-review\"><img alt=\"npm\" src=\"https://img.shields.io/npm/v/@alibaba-group/open-code-review?style=flat-square\" /></a> <a href=\"https://github.com/alibaba/open-code-review/actions/workflows/release.yml\"><img alt=\"Build status\" src=\"https://img.shields.io/github/actions/workflow/status/alibaba/open-code-review/release.yml?style=flat-square\" /></a> <a href=\"https://github.com/alibaba/open-code-review/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/github/license/alibaba/open-code-review?style=flat-square\" /></a> <a href=\"https://deepwiki.com/alibaba/open-code-review\"><img alt=\"Ask DeepWiki\" src=\"https://deepwiki.com/badge.svg\" /></a> <a href=\"https://www.bestpractices.dev/projects/13328\"><img alt=\"OpenSSF Best Practices\" src=\"https://img.shields.io/badge/OpenSSF-Silver-4C566A?style=flat-square\" /></a> </p> <p align=\"center\"> <a href=\"#supported-platforms\"><img alt=\"Windows\" src=\"https://img.shields.io/badge/Windows-supported-blue.svg\" /></a> <a href=\"#supported-platforms\"><img alt=\"macOS\" src=\"https://img.shields.io/badge/macOS-supported-blue.svg\" /></a> <a href=\"#supported-platforms\"><img alt=\"Linux\" src=\"https://img.shields.io/badge/Linux-supported-blue.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Claude Code\" src=\"https://img.shields.io/badge/Claude_Code-supported-blueviolet.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Codex\" src=\"https://img.shields.io/badge/Codex-supported-blueviolet.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Cursor\" src=\"https://img.shields.io/badge/Cursor-supported-blueviolet.svg\" /></a> </p> <p align=\"center\"> English | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"README.ja-JP.md\">日本語</a> | <a href=\"README.ko-KR.md\">한국어</a> | <a href=\"README.ru-RU.md\">Русский</a> </p> --- ## What is Open Code Review? Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, `ocr scan` reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the [official website](https://open-codereview.ai) for more details. ![Highlights](imgs/highlights-en.png) ## Benchmark > Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the tokens** and completing reviews faster. Note that its Recall is lower than general-purpose agents — a deliberate trade-of",
@@ -266,7 +266,7 @@
       "url": "https://github.com/jenkinsci/jenkins",
       "description": "Jenkins automation server",
       "language": "Java",
-      "stars": 25954,
+      "stars": 25956,
       "forks": 9679,
       "stars_today": 180,
       "topics": [
@@ -283,7 +283,7 @@
       ],
       "license": "MIT",
       "created_at": "2010-11-22T21:21:23Z",
-      "updated_at": "2026-07-28T09:09:41Z",
+      "updated_at": "2026-07-28T09:15:34Z",
       "open_issues": 3592,
       "default_branch": "master",
       "readme_excerpt": "<a href=\"https://jenkins.io\"> <img width=\"400\" src=\"https://www.jenkins.io/images/jenkins-logo-title-dark.svg\" alt=\"Jenkins logo\"> </a> [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) [![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3538/badge)](https://bestpractices.coreinfrastructure.org/projects/3538) [![Reproducible Builds](https://img.shields.io/badge/Reproducible_Builds-ok-green)](https://maven.apache.org/guides/mini/guide-reproducible-builds.html) [![Gitter](https://img.shields.io/gitter/room/jenkinsci/jenkins)](https://matrix.to/#/#jenkinsci_jenkins:gitter.im) --- # Table of Contents - [About](#about) - [What to Use Jenkins for and When to Use It](#what-to-use-jenkins-for-and-when-to-use-it) - [Downloads](#downloads) - [Getting Started (Development)](#getting-started-development) - [Source](#source) - [Contributing to Jenkins](#contributing-to-jenkins) - [News and Website](#news-and-website) - [Governance](#governance) - [Adopters](#adopters) - [License](#license) --- # About In a nutshell, Jenkins is the leading open-source automation server. Built with Java, it provides over 2,000 [plugins](https://plugins.jenkins.io/) to support automating virtually anything, so that humans can spend their time doing things machines cannot. # What to Use Jenkins for and When to Use It Use Jenkins to automate your development workflow, so you can focus on work that matters most. Jenkins is commonly used for: - Building projects - Running tests to detect bugs and other issues as soon as they are introduced - Static code analysis - Deployment Execute repetitive tasks, save time, and optimize your development process with Jenkins. # Downloads The Jenkins project provides official distributions as WAR files, Docker images, native packages and installers for platforms including several Linux distributions and Windows. See the [Downloads](https://www.jenkins.io/download) page for references. For all distributions Jenkins offers two release lines: - [Weekly](https://www.jenkins.io/download/weekly/) - Frequent releases which include all new features, improvements, and bug fixes. - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - Older release line which gets periodically updated via bug fix backports. Latest releases: [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) # Getting Started (Development) For more information on setting up your development environment, contributing, and working with Jenkins internals, check the [contributing guide](CONTRIBUTING.md) and the [Jenkins Developer Documentation](https://www.jenkins.io/doc/developer/). # Source Our latest and greatest source of Jenkins can be found on [GitHub](https://github.com/jenkinsci/jenkins). Fork us! # Contributing to Jenkins New to open source or Jenkins? Here’s how to get started: - Read the [Contribution Guidelines](CONTRIBUTING.md) - Check our [good first issues](https://github.com/jenkinsci/jenkins/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22) - Join our [Gitter chat](https://matrix.to/#/#jenkinsci_newcomer-contributors:gitter.im) for questions and help For more information about participating in the community and contributing to the Jenkins project, see [this page](https://www.jenkins.io/participate/). Documentation for Jenkins core maintainers is in the [maintaine",
@@ -299,13 +299,13 @@
       "url": "https://github.com/bradautomates/claude-video",
       "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
       "language": "Python",
-      "stars": 11497,
-      "forks": 1164,
+      "stars": 11507,
+      "forks": 1165,
       "stars_today": 434,
       "topics": [],
       "license": "MIT",
       "created_at": "2026-04-24T04:40:43Z",
-      "updated_at": "2026-07-28T09:10:31Z",
+      "updated_at": "2026-07-28T09:19:27Z",
       "open_issues": 76,
       "default_branch": "main",
       "readme_excerpt": "# /watch **Give Claude the ability to watch any video.** Claude Code (recommended — auto-updates via marketplace): ``` /plugin marketplace add bradautomates/claude-video /plugin install watch@claude-video ``` Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts: ```bash npx skills add bradautomates/claude-video -g ``` (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, manual) in the [Install](#install) section below. Zero config to start — `yt-dlp` and `ffmpeg` install on first run via `brew` on macOS (Linux/Windows print exact commands). Captions cover most public videos for free. Whisper API key is only needed when a video has no captions. --- Claude can read a webpage, run a script, browse a repo. What it can't do, out of the box, is *watch a video*. You paste a YouTube link and it has to either guess from the title or pull a transcript that's missing 90% of what's on screen. With Claude Video `/watch` you can paste a URL or a local path, ask a question, and Claude fetches captions first, downloads only what it needs, extracts frames (scene-aware, or fast keyframes at `efficient` detail), pulls a timestamped transcript (free captions when available, Whisper API as fallback), and `Read`s every frame as an image. By the time it answers, it has *seen* the video and *heard* the audio. ``` /watch https://youtu.be/dQw4w9WgXcQ what happens at the 30 second mark? ``` ## What people actually use it for **Analyze someone else's content.** `/watch https://youtu.be/<viral-video> what hook did they open with?` Claude looks at the first frames, reads the opening transcript, breaks down the structure. Same for ad creative, competitor launches, podcast intros, anything where the *how* matters as much as the *what*. **Diagnose a bug from a video.** Someone sends you a screen recording of something broken. `/watch bug-repro.mov what's going wrong?` Claude watches the recording, finds the frame where the issue appears, describes what's on screen, often catches the cause without you ever opening the file. **Summarize a video.** `/watch https://youtu.be/<long-thing> summarize this` does the obvious thing — pulls the structure, the key moments, what was actually said and shown. Faster than watching at 2x. **Cut the hype out of an update video.** `/watch https://youtu.be/<launch-video> what's actually new — skip the hype` Strip a \"game-changer\" feature drop down to the few things that matter, so you get the substance without ten minutes of intro and overselling. **Turn a playlist into notes.** `/watch https://youtu.be/<video> summarize this to a note` Run it across a series and file a per-video summary, so a channel or course becomes a searchable set of notes instead of hours you have to sit through. ## How it works 1. **You paste a video and a question.** URL (anything yt-dlp supports — YouTube, Loom, TikTok, X, Instagram, plus a few hundred more) or a local path (`.mp4`, `.mov`, `.mkv`, `.webm`). 2. **`yt-dlp` checks captions first.** At `transcript` detail, captioned URLs return without downloading video. Otherwise, or when Whisper needs audio, it downloads only what the run needs. 3. **`ffmpeg` extracts frames at the chosen detail.** `efficient` decodes keyframes only (near-instant); `balanced`/`token-burner` prefer scene-change frames and fall back to the duration-aware uniform sampler when they under-produce. JPEGs are 512px wide by default and clamped to 1998px tall for Claude Read compatibility. 4. **The transcript comes from one of two places.** First try: `yt-dlp` pulls native captions (manual or auto-generated) from the source. Free, instant, accurate-ish. Fallback: extract a mono 16 kHz 64 kbps mp3 audio clip (~480 kB/min) and ship it to Whisper — Groq's `whisper-large-v3` (preferred — cheaper and faster) or OpenAI's `whisper-1`. 5. **Frames + transcript are handed to Claude.** The script prints frame paths ",
@@ -321,13 +321,13 @@
       "url": "https://github.com/vudovn/ag-kit",
       "description": "",
       "language": "TypeScript",
-      "stars": 8041,
+      "stars": 8043,
       "forks": 1514,
       "stars_today": 14,
       "topics": [],
       "license": "MIT",
       "created_at": "2026-01-14T09:06:28Z",
-      "updated_at": "2026-07-28T09:10:05Z",
+      "updated_at": "2026-07-28T09:15:21Z",
       "open_issues": 54,
       "default_branch": "main",
       "readme_excerpt": "<p align=\"center\"> <img src=\"https://raw.githubusercontent.com/vudovn/ag-kit/main/web/public/images/logo.png\" width=\"128\" height=\"128\" alt=\"AG Kit\"> </p> <h1 align=\"center\">AG KIT</h1> <p align=\"center\"> Antigravity-first agent engineering kit with rules, skills, specialist agents, workflows, persistent memory, MCP guidance, orchestration, and a native safety hook. </p> <div align=\"center\"> <a href=\"https://unikorn.vn/p/antigravity-kit?ref=unikorn\" target=\"_blank\"><img src=\"https://unikorn.vn/api/widgets/badge/antigravity-kit?theme=dark\" alt=\"AG Kit on Unikorn.vn\" width=\"210\" height=\"54\" /></a> <a href=\"https://trendshift.io/repositories/21490\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/21490\" alt=\"AG Kit on Trendshift\" width=\"250\" height=\"55\" /></a> <a href=\"https://launch.j2team.dev/products/antigravity-kit\" target=\"_blank\"><img src=\"https://launch.j2team.dev/badge/antigravity-kit/dark\" alt=\"AG Kit on J2TEAM Launch\" width=\"250\" height=\"54\" /></a> </div> <p align=\"center\"> <strong>Primary runtime: Google Antigravity</strong><br/> <a href=\"./README-VI.md\">Tiếng Việt</a> · <a href=\"./MIGRATION.md\">Migration guide</a> · <a href=\"./PRODUCTION_CHECKLIST.md\">Production checklist</a> · <a href=\"./SECURITY.md\">Security</a> </p> --- ## Production profile AG Kit installs a complete `.agents/` workspace contract. Antigravity is the supported production runtime for this release. Other tools may read the Markdown components, but runtime behavior outside Antigravity is not part of the production compatibility guarantee. | Capability | Production implementation | | --- | --- | | Rules and skill discovery | `.agents/rules/`, `.agents/skills/`, `.agents/workflows/` | | Specialist routing | 20 role definitions and intelligent-routing skills | | Persistent context | `.agents/memory/` and context-compression guidance | | Orchestration | `/coordinate`, `/orchestrate`, Antigravity `/agents` and `/tasks` | | MCP | Workspace config plus explicit, backup-aware sync helper | | Tool safety | Native `PreToolUse` gate for high-confidence destructive commands | | Packaging | Local Antigravity plugin bundle with a SHA-256 content inventory | | Validation | Toolkit CI, Antigravity Doctor, regression tests, Dependency Review, CLI and web checks | The native hook is deliberately narrow. It blocks root-filesystem deletion, drive formatting, and raw-disk overwrite patterns while allowing normal project cleanup such as deleting `dist/` or `node_modules/`. It does not replace Antigravity permissions, workspace trust, sandboxing, or human approval. ## Requirements - Node.js 22 or newer for repository-level Antigravity tooling. - Python 3.10 or newer for AG Kit validators and utility scripts. - A trusted Google Antigravity workspace. - Git for safe update, review, and rollback workflows. The published CLI currently supports Node.js 18 or newer; the Antigravity integration checks run on Node.js 22. ## Quick start ### Install into a project ```bash npx @vudovn/ag-kit init ``` Or install the CLI globally: ```bash npm install -g @vudovn/ag-kit ag-kit init ``` Do not add `.agents/` to the project `.gitignore` when Antigravity needs to index rules, skills, or workflows. To keep it local without disabling discovery, add `.agents/` to `.git/info/exclude` instead. ### Verify the workspace ```bash npm run check:agents npm run check:antigravity npm run test:antigravity ``` `check:antigravity` is read-only. The default MCP example contains `YOUR_API_KEY`, so the normal doctor reports a warning until the example is configured. Use strict mode only after all placeholders have been resolved: ```bash node .agents/hooks/antigravity-doctor.mjs --strict ``` ### Open in Antigravity After opening the repository as a trusted workspace: 1. Confirm slash commands such as `/plan`, `/coordinate`, and `/orchestrate` are discovered. 2. Confirm relevant skills are selected from `.agents/skills/`. 3. Run a normal command such as `npm test` and confirm it is allowed. ",
@@ -343,7 +343,7 @@
       "url": "https://github.com/apache/cassandra",
       "description": "Open source transactional distributed database. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.",
       "language": "Java",
-      "stars": 10015,
+      "stars": 10016,
       "forks": 4005,
       "stars_today": 11,
       "topics": [
@@ -353,7 +353,7 @@
       ],
       "license": "Apache-2.0",
       "created_at": "2009-05-21T02:10:09Z",
-      "updated_at": "2026-07-28T08:35:58Z",
+      "updated_at": "2026-07-28T09:12:09Z",
       "open_issues": 452,
       "default_branch": "trunk",
       "readme_excerpt": "image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[License, link=https://github.com/apache/cassandra/blob/trunk/LICENSE.txt] image:https://ci-cassandra.apache.org/job/Cassandra-trunk/badge/icon[Build Status, link=https://ci-cassandra.apache.org/job/Cassandra-trunk/] image:https://img.shields.io/badge/Official-Downloads-brightgreen[Official Downloads, link=https://cassandra.apache.org/$$_$$/download.html] image:https://img.shields.io/docker/pulls/$$_$$/cassandra[Docker Pulls, link=https://hub.docker.com/r/$$_$$/cassandra] image:https://img.shields.io/badge/Slack-4A154B?style=flat&logo=slack&logoColor=white[Slack, link=https://infra.apache.org/slack.html] image:https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&color=0285FF[Bluesky, link=https://bsky.app/profile/cassandra.apache.org] image:https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/company/apache-cassandra/[LinkedIn, link=https://www.linkedin.com/company/apache-cassandra/] image:https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white[Youtube, link=https://www.youtube.com/c/PlanetCassandra] Apache Cassandra ----------------- Apache Cassandra is a highly-scalable partitioned row store. Rows are organized into tables with a required primary key. https://cwiki.apache.org/confluence/display/CASSANDRA2/Partitioners[Partitioning] means that Cassandra can distribute your data across multiple machines in an application-transparent matter. Cassandra will automatically repartition as machines are added and removed from the cluster. https://cwiki.apache.org/confluence/display/CASSANDRA2/DataModel[Row store] means that like relational databases, Cassandra organizes data by rows and columns. The Cassandra Query Language (CQL) is a close relative of SQL. For more information, see https://cassandra.apache.org/[the Apache Cassandra web site]. Issues should be reported on https://issues.apache.org/jira/projects/CASSANDRA/issues/[The Cassandra Jira]. Requirements ------------ - Java: see supported versions in build.xml (search for property \"java.supported\"). - Python: for `cqlsh`, see `bin/cqlsh` (search for function \"is_supported_version\"). Getting started --------------- This short guide will walk you through getting a basic one node cluster up and running, and demonstrate some simple reads and writes. For a more-complete guide, please see the Apache Cassandra website's https://cassandra.apache.org/doc/latest/cassandra/getting-started/index.html[Getting Started Guide]. First, we'll unpack our archive: $ tar -zxvf apache-cassandra-$VERSION.tar.gz $ cd apache-cassandra-$VERSION After that we start the server. Running the startup script with the -f argument will cause Cassandra to remain in the foreground and log to standard out; it can be stopped with ctrl-C. $ bin/cassandra -f Now let's try to read and write some data using the Cassandra Query Language: $ bin/cqlsh The command line client is interactive so if everything worked you should be sitting in front of a prompt: ---- Connected to Test Cluster at localhost:9160. [cqlsh 6.3.0 | Cassandra 7.0-SNAPSHOT | CQL spec 3.4.8 | Native protocol v5] Use HELP for help. cqlsh> ---- As the banner says, you can use 'help;' or '?' to see what CQL has to offer, and 'quit;' or 'exit;' when you've had enough fun. But lets try something slightly more interesting: ---- cqlsh> CREATE KEYSPACE schema1 WITH replication = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }; cqlsh> USE schema1; cqlsh:Schema1> CREATE TABLE users ( user_id varchar PRIMARY KEY, first varchar, last varchar, age int ); cqlsh:Schema1> INSERT INTO users (user_id, first, last, age) VALUES ('jsmith', 'John', 'Smith', 42); cqlsh:Schema1> SELECT * FROM users; user_id | age | first | last ---------+-----+-------+------- jsmith | 42 | john | smith cqlsh:Schema1> ---- If your session looks similar to what's above, congrats, your single node cluster is o",
@@ -369,7 +369,7 @@
       "url": "https://github.com/mvanhorn/last30days-skill",
       "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
       "language": "Python",
-      "stars": 54421,
+      "stars": 54424,
       "forks": 4705,
       "stars_today": 240,
       "topics": [
@@ -396,7 +396,7 @@
       ],
       "license": "MIT",
       "created_at": "2026-01-23T20:37:37Z",
-      "updated_at": "2026-07-28T09:03:57Z",
+      "updated_at": "2026-07-28T09:17:08Z",
       "open_issues": 76,
       "default_branch": "main",
       "readme_excerpt": "# /last30days <p align=\"center\"> <img src=\"media/pr-assets/last30days-ad.gif\" width=\"720\" alt=\"last30days - an AI agent-led search engine that searches people, not editors\" /> </p> <p align=\"center\"> <a href=\"https://github.com/mvanhorn/last30days-skill\"> <img src=\"https://img.shields.io/badge/%231-Repository%20Of%20The%20Day-6f42c1?style=for-the-badge&logo=github&label=GITHUB%20TRENDING\" alt=\"GitHub Trending #1 Repository Of The Day\" /> </a> <br/> <a href=\"https://trendshift.io/repositories/21997\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/21997\" alt=\"mvanhorn/last30days-skill | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/> </a> </p> **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v3 pipeline. The runtime skill spec lives in [skills/last30days/SKILL.md](skills/last30days/SKILL.md), which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** ``` /plugin marketplace add mvanhorn/last30days-skill /plugin install last30days ``` **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts:** ``` npx skills add mvanhorn/last30days-skill -g ``` (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the [Install](#install) section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. --- Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Reddit but can't search X or TikTok. Gemini has YouTube but not Reddit. Claude has none of them natively. Each platform is a walled garden with its own API, its own tokens, its own auth. But you can bring your own keys and browser sessions, and suddenly an AI agent can search all of them at once, score them against each other, and tell you what actually matters. That's the unlock. Not one better search engine. A dozen disconnected platforms, bridged by an agent. ``` /last30days Peter Steinberger ``` You have a meeting tomorrow. You Google them. You get their LinkedIn from 2023. /last30days gives you what they're actually doing this month: joined OpenAI to work on Codex, fighting Anthropic's ban on third-party agents, shipping 23 PRs at 85% merge rate, building \"LobsterOS\" for cross-device agent control, and r/ClaudeCode hit 569 upvotes debating whether he's a hero or \"insufferable.\" Scattered across X posts, Reddit threads, YouTube transcripts, and GitHub commits. None of it was on Google. ## Why this exists I built it to keep up in AI. Everything changes every day and the Reddit and X nerds are always on top of it first. I needed better prompts, and the training data was always months behind what the community had already figured out. But it turned into something bigger. Now I run it before a sales call to know the last 30 days truth about a business. Before a meeting to read someone's recent tweets and podcast transcripts. Before a Disney World trip to know which rides are closed and what the community says about Genie+. Before I build anything to know what problems people are actually hitting. If you're meeting with a CEO, have you read all their tweets and YouTube transcripts from the last 30 days? I have. ## Sources, sc",
@@ -412,7 +412,7 @@
       "url": "https://github.com/ocornut/imgui",
       "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
       "language": "C++",
-      "stars": 75285,
+      "stars": 75286,
       "forks": 11973,
       "stars_today": 51,
       "topics": [
@@ -434,7 +434,7 @@
       ],
       "license": "MIT",
       "created_at": "2014-07-21T14:29:47Z",
-      "updated_at": "2026-07-28T08:57:25Z",
+      "updated_at": "2026-07-28T09:10:52Z",
       "open_issues": 1226,
       "default_branch": "master",
       "readme_excerpt": "Dear ImGui ===== <center><b><i>\"Give someone state and they'll have a bug one day, but teach them how to represent state in two separate locations that have to be kept in sync and they'll have bugs for a lifetime.\"</i></b></center> <a href=\"https://twitter.com/rygorous/status/1507178315886444544\">-ryg</a> ---- [![Build Status](https://github.com/ocornut/imgui/workflows/build/badge.svg)](https://github.com/ocornut/imgui/actions?workflow=build) [![Static Analysis Status](https://github.com/ocornut/imgui/workflows/static-analysis/badge.svg)](https://github.com/ocornut/imgui/actions?workflow=static-analysis) [![Tests Status](https://github.com/ocornut/imgui_test_engine/workflows/tests/badge.svg)](https://github.com/ocornut/imgui_test_engine/actions?workflow=tests) <sub>(This library is available under a free and permissive license, but needs financial support to sustain its continued improvements. In addition to maintenance and stability there are many desirable features yet to be added. If your company is using Dear ImGui, please consider reaching out.)</sub> Businesses: support continued development and maintenance via invoiced sponsoring/support contracts: <br>&nbsp;&nbsp;_E-mail: contact @ dearimgui dot com_ <br>Individuals: support continued development and maintenance [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WGHNC6MBFLZ2S). Also see [Funding](https://github.com/ocornut/imgui/wiki/Funding) page. | [The Pitch](#the-pitch) - [Usage](#usage) - [How it works](#how-it-works) - [Releases & Changelogs](#releases--changelogs) - [Demo](#demo) - [Getting Started & Integration](#getting-started--integration) | :----------------------------------------------------------: | | [Gallery](#gallery) - [Support, FAQ](#support-frequently-asked-questions-faq) - [How to help](#how-to-help) - **[Funding & Sponsors](https://github.com/ocornut/imgui/wiki/Funding)** - [Credits](#credits) - [License](#license) | | [Wiki](https://github.com/ocornut/imgui/wiki) - [Extensions](https://github.com/ocornut/imgui/wiki/Useful-Extensions) - [Language bindings & framework backends](https://github.com/ocornut/imgui/wiki/Bindings) - [Software using Dear ImGui](https://github.com/ocornut/imgui/wiki/Software-using-dear-imgui) - [User quotes](https://github.com/ocornut/imgui/wiki/Quotes) | ### The Pitch Dear ImGui is a **bloat-free graphical user interface library for C++**. It outputs optimized vertex buffers that you can render anytime in your 3D-pipeline-enabled application. It is fast, portable, renderer agnostic, and self-contained (no external dependencies). Dear ImGui is designed to **enable fast iterations** and to **empower programmers** to create **content creation tools and visualization / debug tools** (as opposed to UI for the average end-user). It favors simplicity and productivity toward this goal and lacks certain features commonly found in more high-level libraries. Among other things, full internationalization (right-to-left text, bidirectional text, text shaping etc.) and accessibility features are not supported. Dear ImGui is particularly suited to integration in game engines (for tooling), real-time 3D applications, fullscreen applications, embedded applications, or any applications on console platforms where operating system features are non-standard. - Minimize state synchronization. - Minimize UI-related state storage on user side. - Minimize setup and maintenance. - Easy to use to create dynamic UI which are the reflection of a dynamic data set. - Easy to use to create code-driven and data-driven tools. - Easy to use to create ad hoc short-lived tools and long-lived, more elaborate tools. - Easy to hack and improve. - Portable, minimize dependencies, run on target (consoles, phones, etc.). - Efficient runtime and memory consumption. - Battle-tested, used by [many major actors in the game industry](https://github.com/ocornut/imgui/wiki/Software-using-dear-imgui). ### Usage **The core of Dear ImGui is self-co",
@@ -446,60 +446,78 @@
     }
   ],
   "industry_analysis": {
-    "analysis_version": 2,
+    "analysis_version": 3,
     "available": true,
     "error": "免费模式仅使用 GitHub 项目资料与历史数据，未执行外部官网和论文网页检索",
     "key_judgments": [
-      "bitchat通过蓝牙mesh和Nostr协议实现离线及全球消息传递，适合无网络环境下的安全通信",
-      "Amnezia VPN简化自建VPN部署，支持多协议及流量混淆，提升网络隐私和访问自由",
-      "AIRi打造自托管AI虚拟伴侣，支持实时语音和游戏互动，推动数字生命和AI社交发展",
-      "GeoLibre提供跨平台云原生GIS工具，支持本地数据隐私，适合地理空间数据分析",
-      "superfile是现代终端文件管理器，提升命令行文件操作效率，非AI核心相关"
+      "bitchat通过蓝牙mesh和Nostr协议实现离线与在线的去中心化聊天，适合隐私和灾难场景",
+      "Amnezia VPN提供自托管VPN客户端，支持多协议和流量混淆，适合隐私安全需求",
+      "AIRi是自托管的AI虚拟伴侣平台，支持实时语音和游戏互动，面向数字生活和虚拟角色领域",
+      "bitchat和Amnezia VPN虽非AI项目，但对AI行业的隐私安全和边缘计算有间接影响",
+      "AIRi直接关联AI虚拟角色和交互，具备较高的AI行业相关性"
     ],
     "hot_characteristics": [
       "去中心化通信",
-      "混合传输架构",
-      "隐私优先设计",
-      "多平台支持",
-      "开源免费",
-      "实时AI伴侣"
+      "隐私保护",
+      "多协议融合",
+      "自托管AI伴侣",
+      "实时交互",
+      "跨平台支持"
     ],
     "product_business_signals": [
-      "bitchat已上架App Store，用户量大，具备实际应用场景",
-      "Amnezia VPN支持多平台，文档完善，社区活跃，具备商业推广潜力",
-      "AIRi发布多平台安装包，活跃社区，关注度高，具备AI虚拟伴侣市场潜力",
-      "GeoLibre支持多平台及Jupyter集成，适合科研及企业GIS应用",
-      "superfile支持多平台安装，社区支持良好，适合开发者和终端用户",
-      "MediaCrawlerPro付费订阅版本，具备企业级功能和AI Agent集成。"
+      "bitchat已上架App Store，用户量和活跃度高，显示商业潜力",
+      "Amnezia VPN支持多平台，文档完善，社区活跃，具备商业化基础",
+      "AIRi拥有多语言文档和活跃社区，发布多平台安装包，显示产品成熟度和用户需求",
+      "GeoLibre提供多平台安装包和在线Web版本，显示产品成熟度和用户基础。",
+      "superfile拥有多渠道安装方式和活跃社区，表明用户需求和持续迭代。",
+      "MediaCrawler拥有高星数和多平台支持，且推出Pro版本，显示商业化潜力和用户付费意愿。"
     ],
     "watch_next": [
-      "去中心化通信",
-      "AI虚拟伴侣",
-      "网络安全",
-      "地理信息系统",
-      "终端工具",
-      "多平台数据采集工具"
+      "去中心化通信技术",
+      "自托管隐私保护工具",
+      "AI虚拟伴侣与数字生活",
+      "边缘计算与隐私安全",
+      "多协议网络安全解决方案",
+      "跨平台云原生GIS"
     ],
     "repositories": [
       {
         "full_name": "permissionlesstech/bitchat",
-        "one_line_summary": "去中心化蓝牙mesh与互联网混合传输的安全消息应用",
-        "industry_direction": "去中心化通信",
+        "one_line_summary": "基于蓝牙mesh和Nostr协议的去中心化端到端加密聊天应用",
+        "industry_direction": "去中心化通信;隐私保护;边缘计算",
         "target_users": [
-          "灾难应急通信用户",
-          "隐私保护重视者",
-          "去中心化社交爱好者"
+          "隐私保护用户",
+          "户外及灾难应急团队",
+          "去中心化通信爱好者"
         ],
-        "problem_solved": "解决无网络环境下的即时安全通信及全球消息传递",
-        "solution": "结合蓝牙mesh和Nostr协议实现离线及在线消息自动路由",
-        "why_now": "隐私需求提升及去中心化通信技术成熟期",
-        "noteworthy_technology": "蓝牙mesh网络，Nostr协议，端到端加密",
-        "technology_impact": "推动无中心服务器的安全通信技术发展",
+        "problem_solved": "解决无网络或隐私泄露风险的即时通信问题",
+        "solution": "结合蓝牙mesh和Nostr协议实现离线与在线的去中心化聊天，端到端加密保障隐私",
+        "why_now": "隐私保护需求提升，中心化通信风险暴露，蓝牙mesh技术成熟",
+        "noteworthy_technology": "蓝牙mesh网络与Nostr协议双传输架构，端到端加密，智能路由",
+        "technology_impact": "推动边缘计算和去中心化通信技术发展，增强隐私保护",
         "product_form": "移动及桌面应用",
         "commercialization_signal": "中",
-        "maturity": "中等成熟",
-        "risks": "蓝牙mesh覆盖范围限制，隐私泄露风险需持续评估",
+        "maturity": "成熟",
+        "risks": "蓝牙mesh覆盖范围有限，用户规模受限，隐私保护仍需持续验证",
         "ai_relevance": "中",
+        "plain_language_explanation": "bitchat像是一个无需网络的局域网聊天工具，平时用蓝牙连接附近朋友聊天，网络不好时自动切换到互联网聊天，保护隐私且不依赖中心服务器。",
+        "scenario_examples": [
+          "户外活动中无网络环境下团队沟通",
+          "灾难现场救援人员即时信息交流",
+          "隐私敏感用户的匿名聊天"
+        ],
+        "practical_benefits": [
+          "灾难或无网络环境下依然能聊天",
+          "无需注册账号，保护用户隐私",
+          "自动选择最佳通信方式，提升体验"
+        ],
+        "industry_implications": "如果bitchat的去中心化通信模式广泛应用，将改变灾难应急通信和隐私聊天的行业环节，减少对中心化服务器依赖",
+        "who_should_care": "通信产品经理，隐私安全专家，灾难应急组织",
+        "validation_signals": [
+          "App Store下载量和活跃用户增长",
+          "社区反馈和安全审计报告",
+          "蓝牙mesh网络稳定性和覆盖测试"
+        ],
         "confidence": "高",
         "priority_score": 85,
         "evidence": [
@@ -513,25 +531,43 @@
       },
       {
         "full_name": "amnezia-vpn/amnezia-client",
-        "one_line_summary": "支持自建服务器的多协议VPN客户端",
-        "industry_direction": "网络安全",
+        "one_line_summary": "支持自托管的多协议VPN客户端，简化VPN服务器搭建与连接",
+        "industry_direction": "网络安全;隐私保护;自托管",
         "target_users": [
-          "网络隐私用户",
-          "技术爱好者",
-          "受限网络环境用户"
+          "网络安全从业者",
+          "远程办公企业",
+          "隐私保护用户"
         ],
-        "problem_solved": "简化VPN服务器部署，提升网络访问自由和隐私",
-        "solution": "自动化安装VPN容器，支持多协议及流量混淆",
-        "why_now": "网络审查加剧，用户对隐私工具需求增长",
-        "noteworthy_technology": "多协议支持，流量混淆技术，自动化VPN部署",
-        "technology_impact": "提升个人网络隐私保护和访问自由度",
-        "product_form": "跨平台客户端软件",
+        "problem_solved": "解决用户对网络隐私和安全的需求，简化VPN自托管部署",
+        "solution": "提供易用的自托管VPN客户端，支持多协议和流量混淆，保障网络隐私",
+        "why_now": "网络审查和隐私泄露风险加剧，自托管需求增长",
+        "noteworthy_technology": "多协议支持（OpenVPN, WireGuard, Cloak等），自动化服务器部署",
+        "technology_impact": "推动自托管网络安全解决方案普及，增强用户隐私控制",
+        "product_form": "桌面和移动端VPN客户端",
         "commercialization_signal": "中",
         "maturity": "成熟",
-        "risks": "VPN被封锁风险，用户技术门槛",
+        "risks": "VPN使用合规风险，服务器维护门槛，用户教育成本",
         "ai_relevance": "低",
+        "plain_language_explanation": "Amnezia VPN就像给你的网络加了一层隐形的保护伞，自己搭建VPN服务器，保证上网安全和隐私，不用担心被第三方监控。",
+        "scenario_examples": [
+          "企业员工远程安全访问内网",
+          "用户绕过网络审查访问被屏蔽内容",
+          "个人用户保护公共WiFi上网安全"
+        ],
+        "practical_benefits": [
+          "提升网络访问隐私和安全",
+          "支持多平台，方便远程办公",
+          "流量混淆技术绕过网络封锁"
+        ],
+        "industry_implications": "自托管VPN的普及将增强用户对网络隐私的控制，影响网络安全服务市场和企业远程办公安全策略",
+        "who_should_care": "网络安全工程师，IT管理员，隐私保护倡导者",
+        "validation_signals": [
+          "用户安装量和活跃度",
+          "社区反馈和安全事件报告",
+          "协议兼容性和性能测试"
+        ],
         "confidence": "高",
-        "priority_score": 60,
+        "priority_score": 70,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -543,25 +579,43 @@
       },
       {
         "full_name": "moeru-ai/airi",
-        "one_line_summary": "自托管AI虚拟伴侣，支持实时互动和游戏",
-        "industry_direction": "AI虚拟伴侣",
+        "one_line_summary": "自托管AI虚拟伴侣平台，支持实时语音和游戏互动",
+        "industry_direction": "AI虚拟伴侣;数字生活;实时交互",
         "target_users": [
-          "AI爱好者",
-          "虚拟社交用户",
-          "游戏玩家"
+          "数字生活爱好者",
+          "游戏玩家",
+          "内容创作者"
         ],
-        "problem_solved": "提供个性化AI伴侣，丰富数字社交体验",
-        "solution": "基于AI模型构建数字生命，支持多场景互动",
-        "why_now": "AI技术成熟，用户对虚拟伴侣需求增长",
-        "noteworthy_technology": "实时语音交互，AI数字生命容器，跨平台支持",
-        "technology_impact": "推动AI数字生命和虚拟社交技术发展",
-        "product_form": "桌面及网页应用",
+        "problem_solved": "提供可自托管的AI虚拟伴侣，丰富数字生活和社交体验",
+        "solution": "构建自托管AI虚拟伴侣，支持多场景实时交互",
+        "why_now": "AI技术成熟，用户对数字陪伴需求增长，隐私保护意识提升",
+        "noteworthy_technology": "实时语音聊天，游戏互动，AI角色容器技术",
+        "technology_impact": "推动AI虚拟人和数字社交产业发展，促进人机交互创新",
+        "product_form": "桌面和Web应用",
         "commercialization_signal": "中",
-        "maturity": "早期",
-        "risks": "AI模型质量及伦理风险，用户隐私保护",
+        "maturity": "中等成熟",
+        "risks": "AI模型质量和交互自然度，用户隐私保护，技术门槛",
         "ai_relevance": "高",
-        "confidence": "高",
-        "priority_score": 90,
+        "plain_language_explanation": "AIRi就像你自己的数字宠物或朋友，可以实时聊天、一起玩游戏，陪伴你生活，且所有数据都自己掌控。",
+        "scenario_examples": [
+          "孤独用户的数字陪伴",
+          "游戏玩家的虚拟队友",
+          "内容创作者的虚拟助手"
+        ],
+        "practical_benefits": [
+          "增强数字生活互动体验",
+          "保护用户数据隐私",
+          "支持多平台使用，方便接入"
+        ],
+        "industry_implications": "AI虚拟伴侣的普及将推动数字娱乐、社交和虚拟人产业发展，改变用户互动和内容创造方式",
+        "who_should_care": "AI产品经理，数字娱乐企业，虚拟人开发者",
+        "validation_signals": [
+          "用户活跃度和社区反馈",
+          "AI交互质量提升",
+          "多平台支持和集成案例"
+        ],
+        "confidence": "中",
+        "priority_score": 80,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -573,25 +627,44 @@
       },
       {
         "full_name": "opengeos/GeoLibre",
-        "one_line_summary": "轻量级跨平台云原生GIS平台",
-        "industry_direction": "地理信息系统",
+        "one_line_summary": "轻量级云原生GIS平台，支持多终端数据可视化与分析。",
+        "industry_direction": "地理信息系统;云原生;跨平台",
         "target_users": [
-          "地理信息分析师",
-          "科研人员",
-          "企业GIS用户"
+          "GIS分析师",
+          "数据科学家",
+          "城市规划师",
+          "环境科学家"
         ],
-        "problem_solved": "简化地理空间数据可视化与分析，保护数据隐私",
-        "solution": "集成多技术栈实现本地数据处理和多端运行",
-        "why_now": "地理数据需求增长，云原生技术成熟",
-        "noteworthy_technology": "云原生GIS，跨平台，DuckDB-WASM空间数据库",
-        "technology_impact": "推动GIS工具云原生化和本地隐私保护",
-        "product_form": "Web及桌面应用",
-        "commercialization_signal": "低",
-        "maturity": "中等成熟",
-        "risks": "GIS专业门槛，数据兼容性",
+        "problem_solved": "解决传统GIS软件安装复杂、跨平台支持差、数据隐私难保障的问题。",
+        "solution": "提供轻量级、云原生、跨平台的GIS数据可视化与分析工具，支持本地数据处理和多终端使用。",
+        "why_now": "云原生技术成熟，跨平台需求增长，地理空间数据量激增。",
+        "noteworthy_technology": "云原生架构，DuckDB-WASM空间数据库，跨平台响应式设计",
+        "technology_impact": "提升GIS数据处理便捷性，促进地理空间数据与AI模型结合。",
+        "product_form": "桌面应用、Web应用、移动应用、Jupyter笔记本插件",
+        "commercialization_signal": "中",
+        "maturity": "成熟",
+        "risks": "依赖浏览器和本地环境性能，复杂大数据处理能力有限。",
         "ai_relevance": "中",
+        "plain_language_explanation": "GeoLibre就像一个随时随地都能用的地图分析工具，无论是在办公室电脑、手机还是浏览器里，都能快速查看和分析地理数据。比如城市规划师可以用它查看建筑分布，环境科学家可以分析污染扩散路径。",
+        "scenario_examples": [
+          "城市规划师在会议中实时展示3D建筑模型",
+          "环境研究员用手机查看污染扩散地图",
+          "数据科学家在Jupyter中集成地理空间分析"
+        ],
+        "practical_benefits": [
+          "节省安装和配置时间，随时访问GIS工具",
+          "支持多设备同步工作，提升协作效率",
+          "本地数据处理保障隐私安全"
+        ],
+        "industry_implications": "如果GeoLibre方向成立，将推动GIS数据分析和可视化的便捷化，促进地理空间数据在城市规划、环境监测等行业的应用效率提升。",
+        "who_should_care": "GIS行业从业者，数据科学团队，城市规划和环境监测机构。",
+        "validation_signals": [
+          "用户活跃度和下载量增长",
+          "多行业案例展示",
+          "社区插件和扩展数量增加"
+        ],
         "confidence": "中",
-        "priority_score": 70,
+        "priority_score": 75,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -603,49 +676,86 @@
       },
       {
         "full_name": "yorukot/superfile",
-        "one_line_summary": "现代终端文件管理器",
-        "industry_direction": "终端工具",
+        "one_line_summary": "现代终端文件管理器，提升命令行文件操作效率。",
+        "industry_direction": "终端工具;文件管理;命令行",
         "target_users": [
           "开发者",
-          "终端用户"
+          "系统管理员",
+          "运维工程师"
         ],
-        "problem_solved": "提升终端文件管理效率和用户体验",
-        "solution": "基于现代UI框架优化终端文件操作",
-        "why_now": "终端工具需求持续稳定增长",
-        "noteworthy_technology": "现代终端UI设计，插件和主题支持",
-        "technology_impact": "提升终端工具用户体验",
-        "product_form": "命令行工具",
+        "problem_solved": "解决传统命令行文件管理操作繁琐、效率低的问题。",
+        "solution": "提供现代化、易用的终端文件管理工具，提升命令行环境下的文件操作效率。",
+        "why_now": "命令行工具需求持续，现代终端UI设计流行。",
+        "noteworthy_technology": "现代终端UI设计，跨平台支持，插件和主题系统",
+        "technology_impact": "提升终端文件管理效率，间接支持AI项目数据管理。",
+        "product_form": "命令行应用",
         "commercialization_signal": "低",
         "maturity": "成熟",
-        "risks": "非AI核心，市场竞争激烈",
+        "risks": "对非命令行用户门槛较高，功能与图形界面文件管理器重叠。",
         "ai_relevance": "低",
+        "plain_language_explanation": "superfile就像命令行里的文件浏览器，让你用键盘快速找到、打开、移动文件，比传统命令行操作更直观和高效。比如程序员快速切换项目文件，系统管理员管理服务器文件。",
+        "scenario_examples": [
+          "开发者快速浏览和编辑项目文件",
+          "系统管理员远程管理服务器文件",
+          "运维人员批量处理日志文件"
+        ],
+        "practical_benefits": [
+          "提高文件操作速度，减少命令输入错误",
+          "支持多平台，统一使用体验",
+          "可定制插件和主题，满足个性化需求"
+        ],
+        "industry_implications": "提升开发者和系统管理员的文件管理效率，间接支持AI项目中数据和代码的管理。",
+        "who_should_care": "开发者、系统管理员、运维团队。",
+        "validation_signals": [
+          "下载量和安装量增长",
+          "社区活跃度和插件数量增加",
+          "用户反馈和案例分享"
+        ],
         "confidence": "中",
-        "priority_score": 50,
+        "priority_score": 40,
         "evidence": [],
         "deep_researched": false
       },
       {
         "full_name": "NanmiCoder/MediaCrawler",
-        "one_line_summary": "多平台自媒体数据爬虫，支持评论、视频、帖子等内容采集。",
-        "industry_direction": "数据采集",
+        "one_line_summary": "多平台自媒体数据采集工具，支持主流社交媒体，降低爬虫技术门槛。",
+        "industry_direction": "数据采集;自媒体;自动化爬虫;AI辅助",
         "target_users": [
+          "市场分析师",
+          "内容创作者",
           "数据分析师",
-          "内容运营",
-          "舆情监控",
-          "AI训练数据准备"
+          "研究人员"
         ],
-        "problem_solved": "解决多平台自媒体公开数据采集难题，降低技术门槛。",
-        "solution": "利用浏览器登录态和JS表达式获取参数，避免复杂逆向",
-        "why_now": "自媒体数据价值提升，AI对多源数据需求增长，技术门槛降低。",
-        "noteworthy_technology": "基于Playwright浏览器自动化，登录态保持，无需JS逆向",
-        "technology_impact": "简化多平台数据采集流程，促进数据驱动的内容分析和AI训练。",
-        "product_form": "开源工具+付费Pro版本",
-        "commercialization_signal": "有订阅付费版本",
+        "problem_solved": "解决多平台自媒体数据采集复杂、技术门槛高、维护成本大的问题。",
+        "solution": "提供一站式多平台自媒体数据采集解决方案，支持自动化和AI辅助，降低技术门槛。",
+        "why_now": "社交媒体数据爆炸增长，AI分析需求提升，自动化采集技术成熟。",
+        "noteworthy_technology": "基于Playwright浏览器自动化，无需JS逆向，登录态缓存，多账号和IP代理池支持，AI Agent集成",
+        "technology_impact": "推动自媒体数据采集自动化，促进AI驱动的内容分析和舆情监控。",
+        "product_form": "命令行工具，桌面应用，AI Agent插件",
+        "commercialization_signal": "高",
         "maturity": "成熟",
-        "risks": "爬虫法律合规风险，禁止商业非法用途",
-        "ai_relevance": "中",
+        "risks": "法律合规风险，平台反爬机制升级可能影响稳定性。",
+        "ai_relevance": "高",
+        "plain_language_explanation": "MediaCrawler就像一个自动帮你收集各大社交平台公开内容的机器人，无需复杂技术就能抓取评论、帖子和视频，方便市场分析师和内容创作者了解热点和用户反馈。",
+        "scenario_examples": [
+          "市场分析师自动收集竞品评论数据",
+          "内容创作者监控用户反馈和热点话题",
+          "研究人员分析社交媒体舆情趋势"
+        ],
+        "practical_benefits": [
+          "节省手动数据收集时间和人力成本",
+          "支持多平台，数据覆盖全面",
+          "集成AI Agent实现自动化数据采集和分析"
+        ],
+        "industry_implications": "如果MediaCrawler方向成立，将极大提升自媒体数据采集效率，促进内容分析、舆情监控和市场研究的自动化和智能化。",
+        "who_should_care": "市场研究机构，自媒体运营团队，数据分析公司，AI内容分析企业。",
+        "validation_signals": [
+          "Pro版本用户增长和付费转化",
+          "多平台数据采集成功率和稳定性提升",
+          "AI Agent功能上线和用户反馈"
+        ],
         "confidence": "高",
-        "priority_score": 85,
+        "priority_score": 90,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -657,115 +767,169 @@
       },
       {
         "full_name": "pbakaus/impeccable",
-        "one_line_summary": "为AI编码代理提供设计语言指导，提升前端设计质量。",
+        "one_line_summary": "为AI编码代理提供统一设计语言和命令，提升前端设计质量和一致性。",
         "industry_direction": "AI辅助设计",
         "target_users": [
-          "AI开发者",
-          "前端设计师",
-          "产品经理"
+          "AI前端开发者",
+          "产品经理",
+          "UI/UX设计师"
         ],
-        "problem_solved": "解决AI生成界面设计单一、重复、缺乏美感的问题。",
-        "solution": "通过设计上下文初始化和多命令行操作，指导AI设计迭代。",
-        "why_now": "AI生成内容兴起，界面设计自动化需求增加，设计一致性难题突出。",
-        "noteworthy_technology": "23条命令行设计指令，60条确定性检测规则，AI与CLI结合",
-        "technology_impact": "提升AI生成界面设计的多样性和专业度，促进人机协作设计。",
-        "product_form": "命令行工具+浏览器扩展",
-        "commercialization_signal": "未知",
-        "maturity": "早期",
-        "risks": "设计风格主观性，依赖AI模型表现",
+        "problem_solved": "解决AI生成前端设计缺乏统一标准和质量不稳定的问题。",
+        "solution": "通过统一设计语言和多命令集，结合确定性检测规则和LLM辅助，实现设计质量自动化提升。",
+        "why_now": "AI生成代码和设计需求爆发，设计质量和一致性成为瓶颈，亟需标准化工具。",
+        "noteworthy_technology": "设计语言标准化，结合确定性规则与LLM辅助设计",
+        "technology_impact": "推动AI设计工具标准化，提升设计自动化水平。",
+        "product_form": "命令行工具和浏览器扩展，集成于AI编码代理中。",
+        "commercialization_signal": "中",
+        "maturity": "中等成熟，已有明确命令集和文档支持",
+        "risks": "依赖预设规则和模型，可能无法覆盖所有设计风格和需求。",
         "ai_relevance": "高",
-        "confidence": "中",
-        "priority_score": 80,
-        "evidence": [
-          {
-            "title": "GitHub 项目资料",
-            "url": "https://github.com/pbakaus/impeccable",
-            "source_type": "project"
-          }
+        "plain_language_explanation": "想象你是产品经理或设计师，使用Impeccable可以让AI帮你自动检查和优化网页或App界面设计，比如调整颜色、布局、字体等，避免常见设计错误，节省反复沟通和修改时间。",
+        "scenario_examples": [
+          "产品经理用/impeccable critique快速审查新页面设计",
+          "前端开发用/impeccable polish优化界面细节",
+          "设计师用/impeccable animate为界面添加动效"
         ],
-        "deep_researched": true
+        "practical_benefits": [
+          "节省设计与开发沟通时间",
+          "提升设计一致性和用户体验",
+          "减少设计缺陷和返工"
+        ],
+        "industry_implications": "将改变AI前端设计环节，提高设计一致性和效率，降低设计师与开发者沟通成本",
+        "who_should_care": "AI产品经理、设计师、前端开发团队、AI辅助设计工具厂商",
+        "validation_signals": [
+          "更多AI编码工具集成Impeccable",
+          "社区设计案例和反馈增长",
+          "企业采用案例增加"
+        ],
+        "confidence": "高",
+        "priority_score": 8,
+        "evidence": [],
+        "deep_researched": false
       },
       {
         "full_name": "shiyu-coder/Kronos",
-        "one_line_summary": "首个开源金融市场基础模型，专注K线序列语言建模。",
-        "industry_direction": "金融AI",
+        "one_line_summary": "面向金融市场K线数据的开源基础模型，支持多任务量化分析。",
+        "industry_direction": "金融AI模型",
         "target_users": [
           "量化交易员",
           "金融数据科学家",
-          "AI研究者"
+          "金融AI研究者"
         ],
-        "problem_solved": "解决金融市场高噪声时间序列建模难题，统一多任务量化分析。",
-        "solution": "两阶段框架：量化编码+大规模自回归预训练",
-        "why_now": "金融数据爆炸，AI量化需求增长，基础模型技术成熟。",
-        "noteworthy_technology": "专用K线数据分层离散化编码，解码器Transformer架构",
-        "technology_impact": "推动金融AI基础模型发展，提升市场预测和策略生成能力。",
-        "product_form": "开源预训练模型",
-        "commercialization_signal": "未知",
-        "maturity": "早期",
-        "risks": "金融市场复杂性高，模型泛化能力待验证",
+        "problem_solved": "解决金融市场高噪声、多维连续数据难以直接建模的问题。",
+        "solution": "通过层级离散化编码将连续金融数据转为离散token，结合Transformer实现统一建模。",
+        "why_now": "金融市场数据爆炸，传统模型难以应对高噪声和多维度，AI模型需求激增。",
+        "noteworthy_technology": "针对金融K线数据的层级离散化编码与大规模自回归Transformer模型结合。",
+        "technology_impact": "推动金融AI模型专业化，提升市场分析和交易自动化水平。",
+        "product_form": "开源预训练模型及Tokenizer，支持fine-tune和多任务应用。",
+        "commercialization_signal": "中",
+        "maturity": "初步成熟，已发布多模型版本和演示，获得学术认可。",
+        "risks": "金融市场复杂多变，模型泛化能力和稳定性需长期验证。",
         "ai_relevance": "高",
-        "confidence": "中",
-        "priority_score": 90,
-        "evidence": [
-          {
-            "title": "GitHub 项目资料",
-            "url": "https://github.com/shiyu-coder/Kronos",
-            "source_type": "project"
-          }
+        "plain_language_explanation": "金融分析师或量化交易员可以用Kronos模型自动理解和预测股票或数字货币价格走势，类似于给市场数据装上了‘语言理解’能力，帮助做出更精准的投资决策。",
+        "scenario_examples": [
+          "量化团队用Kronos预测短期价格走势",
+          "金融机构用模型辅助风险评估",
+          "研究人员基于Kronos开发新金融AI应用"
         ],
-        "deep_researched": true
+        "practical_benefits": [
+          "提升金融数据预测准确性",
+          "加速量化策略开发",
+          "降低金融数据处理复杂度"
+        ],
+        "industry_implications": "推动金融市场数据建模和预测环节的智能化，提升量化交易和风险管理能力。",
+        "who_should_care": "金融科技公司、量化团队、金融研究机构、AI模型开发者",
+        "validation_signals": [
+          "AAAI 2026会议反馈",
+          "社区fine-tune脚本使用情况",
+          "金融机构试点应用案例"
+        ],
+        "confidence": "中",
+        "priority_score": 7,
+        "evidence": [],
+        "deep_researched": false
       },
       {
         "full_name": "alibaba/open-code-review",
-        "one_line_summary": "阿里巴巴开源的AI代码审查工具，支持多模型和深度代码理解。",
-        "industry_direction": "AI辅助开发",
+        "one_line_summary": "阿里巴巴开源的AI驱动代码审查工具，结合规则引擎和大语言模型，提升代码质量和安全。",
+        "industry_direction": "AI辅助代码审查",
         "target_users": [
           "软件开发团队",
-          "代码审查工程师",
-          "DevOps"
+          "安全审计团队",
+          "DevOps工程师"
         ],
-        "problem_solved": "提升代码审查效率和质量，自动发现安全和性能缺陷。",
-        "solution": "结合规则引擎和大模型，支持全文件和差异审查",
-        "why_now": "代码量激增，人工审查成本高，AI辅助开发需求强烈。",
-        "noteworthy_technology": "混合架构：确定性流水线+LLM Agent，精准行级代码评论",
-        "technology_impact": "加速代码质量保障流程，推动AI在软件工程的深度应用。",
-        "product_form": "开源CLI工具",
-        "commercialization_signal": "企业内部大规模应用，开源社区活跃",
-        "maturity": "成熟",
-        "risks": "依赖LLM质量，代码审查误报漏报风险",
+        "problem_solved": "解决传统代码审查耗时长、覆盖不全、人工成本高的问题。",
+        "solution": "结合确定性规则和LLM Agent，利用代码上下文和多文件信息，实现深度自动化代码审查。",
+        "why_now": "软件复杂度提升，安全和质量要求严格，AI辅助审查成为必然趋势。",
+        "noteworthy_technology": "混合架构结合确定性规则和LLM Agent，实现精准行级代码审查。",
+        "technology_impact": "推动代码审查自动化和智能化，提升软件开发生命周期质量管理。",
+        "product_form": "命令行工具，集成LLM和确定性规则引擎，支持多模型接入。",
+        "commercialization_signal": "高",
+        "maturity": "成熟，经过阿里巴巴大规模内部验证并开源。",
+        "risks": "依赖模型质量和规则更新，可能存在误报或漏报。",
         "ai_relevance": "高",
-        "confidence": "高",
-        "priority_score": 88,
-        "evidence": [
-          {
-            "title": "GitHub 项目资料",
-            "url": "https://github.com/alibaba/open-code-review",
-            "source_type": "project"
-          }
+        "plain_language_explanation": "软件开发团队可以用Open Code Review自动检查代码中的潜在错误和安全漏洞，就像有个资深工程师实时帮你把关代码质量，节省人工审查时间，减少上线风险。",
+        "scenario_examples": [
+          "开发者提交代码后自动触发审查",
+          "安全团队用ocr scan审计遗留代码库",
+          "项目经理监控代码质量趋势"
         ],
-        "deep_researched": true
+        "practical_benefits": [
+          "提高代码审查效率和准确性",
+          "降低安全和性能缺陷风险",
+          "支持多语言和多平台，易于集成"
+        ],
+        "industry_implications": "将显著提升软件开发质量和效率，尤其在大规模企业级项目中减少安全和性能缺陷。",
+        "who_should_care": "软件开发企业、DevOps团队、安全审计部门、AI辅助开发工具厂商",
+        "validation_signals": [
+          "企业用户采纳案例",
+          "社区贡献和反馈活跃度",
+          "与主流LLM集成效果提升"
+        ],
+        "confidence": "高",
+        "priority_score": 9,
+        "evidence": [],
+        "deep_researched": false
       },
       {
         "full_name": "jenkinsci/jenkins",
-        "one_line_summary": "领先的开源自动化服务器，支持持续集成和交付。",
-        "industry_direction": "自动化运维",
+        "one_line_summary": "领先的开源自动化服务器，支持构建、测试、部署等软件开发流程自动化。",
+        "industry_direction": "自动化运维;软件开发;CI/CD",
         "target_users": [
-          "开发团队",
-          "运维工程师",
-          "DevOps"
+          "软件开发团队",
+          "DevOps工程师",
+          "自动化测试工程师"
         ],
-        "problem_solved": "自动化构建、测试和部署流程，提升开发效率。",
-        "solution": "插件扩展架构，支持多种自动化任务",
-        "why_now": "软件开发自动化需求持续增长，成熟工具稳定可靠。",
-        "noteworthy_technology": "丰富插件生态，支持多平台和多语言CI/CD",
-        "technology_impact": "优化软件交付流程，间接支持AI项目开发。",
-        "product_form": "开源服务器软件",
-        "commercialization_signal": "广泛商业采用",
-        "maturity": "非常成熟",
-        "risks": "与AI直接关联度低，技术更新缓慢",
-        "ai_relevance": "低",
+        "problem_solved": "解决软件开发中重复构建、测试和部署的自动化需求，提升开发效率和质量。",
+        "solution": "提供一个可扩展的自动化服务器，通过插件支持各种开发流程自动化任务。",
+        "why_now": "软件开发复杂度提升，自动化需求强烈，支持快速迭代和交付。",
+        "noteworthy_technology": "丰富插件生态，支持流水线即代码",
+        "technology_impact": "推动软件开发自动化，间接促进AI产品快速迭代和交付。",
+        "product_form": "开源软件，支持插件扩展",
+        "commercialization_signal": "高",
+        "maturity": "成熟",
+        "risks": "需要维护服务器和插件兼容性，配置复杂度较高",
+        "ai_relevance": "中",
+        "plain_language_explanation": "Jenkins就像一个自动化的流水线工厂，帮你自动完成代码编译、测试和部署，节省了大量重复手工操作时间。",
+        "scenario_examples": [
+          "开发团队自动构建和测试代码，快速发现问题",
+          "持续集成环境中自动部署应用到测试或生产环境",
+          "通过插件实现代码质量检测和安全扫描"
+        ],
+        "practical_benefits": [
+          "自动化构建和测试，减少人为错误",
+          "快速反馈代码质量，提升开发效率",
+          "支持多平台和多语言，适用范围广"
+        ],
+        "industry_implications": "推动软件开发流程自动化，提升开发效率和质量，间接支持AI产品快速迭代",
+        "who_should_care": "软件开发团队、DevOps工程师、AI产品开发团队",
+        "validation_signals": [
+          "持续增长的GitHub星标和贡献者",
+          "企业CI/CD采用率和案例",
+          "插件生态活跃度和更新频率"
+        ],
         "confidence": "高",
-        "priority_score": 60,
+        "priority_score": 85,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -777,26 +941,44 @@
       },
       {
         "full_name": "bradautomates/claude-video",
-        "one_line_summary": "赋予Claude AI观看视频并理解内容的能力",
-        "industry_direction": "多模态理解",
+        "one_line_summary": "让Claude AI能够观看并理解视频内容，支持视频问答、摘要和分析。",
+        "industry_direction": "多模态AI;视频理解;智能助理",
         "target_users": [
-          "AI研究者",
-          "内容分析师",
-          "产品经理",
-          "开发者"
+          "内容创作者",
+          "市场分析师",
+          "技术支持人员",
+          "教育工作者"
         ],
-        "problem_solved": "解决AI无法直接‘观看’视频内容，提升视频理解能力",
-        "solution": "自动下载视频、提取关键帧、转录音频，结合多模态信息回答问题",
-        "why_now": "视频内容爆炸增长，传统文本转录不足以满足深度理解需求，AI多模态能力提升使此类产品可行",
-        "noteworthy_technology": "结合视频帧图像和音频转录的多模态输入",
-        "technology_impact": "推动AI多模态理解技术进步，提升视频内容自动分析效率",
-        "product_form": "AI插件/技能，支持多平台集成",
+        "problem_solved": "解决AI无法直接理解视频内容的问题，实现视频内容的自动分析和问答。",
+        "solution": "自动下载视频，提取关键帧和字幕，结合大语言模型实现视频内容理解和问答。",
+        "why_now": "视频内容爆炸增长，AI多模态理解技术成熟，需求强烈。",
+        "noteworthy_technology": "结合视频帧提取、字幕识别和大语言模型理解，实现视频“观看”能力",
+        "technology_impact": "推动多模态AI发展，提升视频内容智能分析和应用能力。",
+        "product_form": "开源工具，集成插件和命令行工具",
         "commercialization_signal": "中",
-        "maturity": "中等成熟",
-        "risks": "依赖外部API（Whisper），视频版权和隐私风险",
+        "maturity": "成长中",
+        "risks": "视频版权和隐私问题，转录准确率依赖字幕质量和语音识别",
         "ai_relevance": "高",
-        "confidence": "高",
-        "priority_score": 95,
+        "plain_language_explanation": "就像给AI装上了眼睛和耳朵，它能看视频、听声音，帮你快速找到视频重点，节省看完整视频的时间。",
+        "scenario_examples": [
+          "市场人员快速分析竞争对手广告视频结构",
+          "技术支持通过视频诊断客户问题",
+          "学习者自动生成课程视频笔记"
+        ],
+        "practical_benefits": [
+          "快速获取视频关键信息，节省观看时间",
+          "自动生成视频摘要和笔记，方便知识管理",
+          "辅助诊断视频中展示的问题，提升远程协作效率"
+        ],
+        "industry_implications": "赋能AI理解视频内容，提升视频信息提取和分析效率，推动内容创作、广告、教育等行业智能化升级。",
+        "who_should_care": "AI研发人员、内容分析师、市场和教育行业从业者",
+        "validation_signals": [
+          "GitHub星标和使用者增长",
+          "集成到主流AI平台和工具",
+          "用户反馈和案例展示效果"
+        ],
+        "confidence": "中",
+        "priority_score": 90,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -808,25 +990,43 @@
       },
       {
         "full_name": "vudovn/ag-kit",
-        "one_line_summary": "基于Antigravity的智能代理工程套件，支持复杂任务编排和安全控制",
-        "industry_direction": "智能代理",
+        "one_line_summary": "面向Google Antigravity的AI代理工程套件，支持规则、技能、工作流和安全机制。",
+        "industry_direction": "AI代理;智能自动化;任务编排",
         "target_users": [
-          "AI代理开发者",
-          "企业自动化团队",
-          "研究人员"
+          "AI开发者",
+          "自动化工程师",
+          "企业数字化转型团队"
         ],
-        "problem_solved": "解决智能代理开发复杂度高，缺乏统一框架和安全机制",
-        "solution": "提供规则发现、技能路由、持久上下文和安全钩子，支持生产环境",
-        "why_now": "智能代理需求增长，复杂任务自动化和安全性要求提升",
-        "noteworthy_technology": "Antigravity运行时支持规则、技能、工作流和持久记忆",
-        "technology_impact": "促进智能代理系统标准化和安全性提升",
-        "product_form": "开发工具包和运行时环境",
+        "problem_solved": "解决AI代理开发复杂、缺乏安全控制和任务编排能力的问题。",
+        "solution": "提供完整的代理开发框架和工具，支持规则、技能管理和安全控制。",
+        "why_now": "AI代理需求增长，复杂任务自动化和安全性要求提升。",
+        "noteworthy_technology": "基于Google Antigravity运行时，支持规则引擎、技能发现、持久记忆和安全钩子",
+        "technology_impact": "推动AI代理技术成熟，促进智能自动化和服务化转型。",
+        "product_form": "开源开发套件，集成CLI和运行时支持",
         "commercialization_signal": "中",
-        "maturity": "初期",
-        "risks": "依赖特定运行时，生态尚不完善",
+        "maturity": "成长中",
+        "risks": "依赖特定运行时生态，社区和生态尚在发展",
         "ai_relevance": "高",
+        "plain_language_explanation": "像给AI搭建一个智能助理的工厂，帮你设计规则和技能，让它能安全高效地完成复杂任务。",
+        "scenario_examples": [
+          "企业构建智能客服代理，自动处理客户请求",
+          "开发自动化办公助理，协调多系统任务",
+          "实现安全敏感操作的AI自动化流程"
+        ],
+        "practical_benefits": [
+          "快速开发和部署智能代理",
+          "支持复杂任务编排和持久记忆",
+          "内置安全机制防止误操作"
+        ],
+        "industry_implications": "支持构建复杂智能代理系统，实现多任务协同和安全控制，推动智能自动化和AI服务化。",
+        "who_should_care": "AI产品经理、开发者、企业数字化转型负责人",
+        "validation_signals": [
+          "社区活跃度和贡献增长",
+          "企业试点和案例发布",
+          "与Google Antigravity生态整合进展"
+        ],
         "confidence": "中",
-        "priority_score": 85,
+        "priority_score": 88,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -838,25 +1038,43 @@
       },
       {
         "full_name": "apache/cassandra",
-        "one_line_summary": "开源分布式数据库，支持大规模数据存储和高可用",
-        "industry_direction": "分布式数据库",
+        "one_line_summary": "一个高可扩展性、分布式事务数据库，适合大规模数据存储和高可用性需求。",
+        "industry_direction": "数据库;分布式系统",
         "target_users": [
           "大数据工程师",
-          "企业IT",
-          "云服务提供商"
+          "AI平台开发者",
+          "企业级应用架构师"
         ],
-        "problem_solved": "解决大规模数据存储和访问的性能与容错问题",
-        "solution": "分布式架构保证数据一致性和扩展性",
-        "why_now": "数据量激增，分布式数据库需求持续增长",
-        "noteworthy_technology": "线性扩展的分布式事务存储",
-        "technology_impact": "为AI大数据存储提供基础设施支持",
-        "product_form": "数据库系统",
+        "problem_solved": "解决了大规模数据存储的扩展性和高可用性问题，支持分布式事务。",
+        "solution": "提供一个分布式、可扩展且容错的数据库系统，支持事务和高性能读写。",
+        "why_now": "随着AI模型和数据规模爆炸式增长，传统数据库难以满足需求，分布式数据库成为必然选择。",
+        "noteworthy_technology": "线性可扩展的分布式架构，事务支持，故障容忍机制",
+        "technology_impact": "提升AI系统数据存储的可靠性和扩展能力，支持更大规模模型训练和推理。",
+        "product_form": "开源数据库软件",
         "commercialization_signal": "高",
-        "maturity": "高度成熟",
-        "risks": "非AI核心技术，需结合AI应用场景",
-        "ai_relevance": "低",
+        "maturity": "成熟",
+        "risks": "部署和维护复杂度较高，需要专业运维支持。",
+        "ai_relevance": "中",
+        "plain_language_explanation": "想象你在管理一个超大型的客户数据库，数据量巨大且不断增长。Apache Cassandra能帮你把数据分散存储在多台服务器上，即使某台服务器坏了，数据依然安全且访问速度快。",
+        "scenario_examples": [
+          "AI训练平台存储和管理海量训练数据。",
+          "金融行业实时交易数据存储和分析。",
+          "电商平台用户行为数据实时处理。"
+        ],
+        "practical_benefits": [
+          "支持海量数据存储，适合AI训练数据管理。",
+          "高可用性保障业务连续性。",
+          "自动数据分区和负载均衡，减少运维复杂度。"
+        ],
+        "industry_implications": "如果Apache Cassandra持续优化其性能和易用性，将进一步推动大规模AI训练数据和模型存储的基础设施建设，提升AI系统的稳定性和扩展性。",
+        "who_should_care": "AI基础设施工程师，数据工程师，企业级应用开发者。",
+        "validation_signals": [
+          "大型云服务商和AI平台集成案例增加。",
+          "社区活跃度和贡献持续增长。",
+          "企业级客户案例和成功故事发布。"
+        ],
         "confidence": "高",
-        "priority_score": 60,
+        "priority_score": 85,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -868,25 +1086,43 @@
       },
       {
         "full_name": "mvanhorn/last30days-skill",
-        "one_line_summary": "AI代理驱动的多平台实时趋势搜索与总结工具",
-        "industry_direction": "智能搜索",
+        "one_line_summary": "一个AI驱动的多平台信息搜索和总结工具，帮助用户快速获取最新趋势和动态。",
+        "industry_direction": "AI信息聚合;智能搜索",
         "target_users": [
           "市场分析师",
           "产品经理",
-          "研究人员",
-          "投资者"
+          "销售人员",
+          "投资分析师"
         ],
-        "problem_solved": "解决信息碎片化，难以实时获取多平台动态",
-        "solution": "并行搜索多平台，基于用户互动评分排序，AI综合总结",
-        "why_now": "社交媒体信息爆炸，传统搜索无法覆盖多平台实时动态",
-        "noteworthy_technology": "多平台数据聚合与AI综合分析",
-        "technology_impact": "提升跨平台信息整合和实时洞察能力",
-        "product_form": "AI代理技能",
+        "problem_solved": "解决了信息分散、更新快且难以全面掌握的问题，通过AI聚合和智能评分提供高价值内容。",
+        "solution": "通过AI代理同时搜索多个社交和信息平台，基于用户互动数据评分，生成高质量摘要。",
+        "why_now": "信息爆炸时代，传统搜索难以满足实时和多源信息需求，AI聚合工具应运而生。",
+        "noteworthy_technology": "多平台数据并行搜索，基于用户互动和真实货币投票的内容评分，AI智能摘要生成",
+        "technology_impact": "提升信息检索效率，促进AI行业知识更新和快速响应市场变化。",
+        "product_form": "AI代理技能/插件",
         "commercialization_signal": "中",
-        "maturity": "中等成熟",
-        "risks": "依赖多平台API和认证，数据隐私风险",
+        "maturity": "成长中",
+        "risks": "依赖各平台API和授权，数据隐私和合规风险。",
         "ai_relevance": "高",
-        "confidence": "高",
+        "plain_language_explanation": "就像你有一个超级助理，能同时帮你浏览Reddit、Twitter、YouTube等多个平台，筛选出最重要的信息，并用简短的总结告诉你。",
+        "scenario_examples": [
+          "销售人员会前快速了解客户最新动态。",
+          "产品经理跟踪行业趋势和用户反馈。",
+          "投资分析师获取市场热点和舆情变化。"
+        ],
+        "practical_benefits": [
+          "节省大量时间，不用逐个平台查找信息。",
+          "获取更全面和实时的行业动态。",
+          "辅助决策，提升会议和业务谈判准备效率。"
+        ],
+        "industry_implications": "如果该方向成熟，将改变AI行业信息获取方式，提升决策效率和市场敏感度，促进AI产品快速迭代。",
+        "who_should_care": "AI行业从业者，市场和产品分析师，销售和投资人员。",
+        "validation_signals": [
+          "用户活跃度和反馈质量提升。",
+          "新增支持平台和数据源。",
+          "商业合作和付费用户增长。"
+        ],
+        "confidence": "中",
         "priority_score": 90,
         "evidence": [
           {
@@ -899,23 +1135,41 @@
       },
       {
         "full_name": "ocornut/imgui",
-        "one_line_summary": "轻量级即时图形用户界面库，适合工具和游戏开发",
-        "industry_direction": "开发工具",
+        "one_line_summary": "一个轻量级、无臃肿的C++图形用户界面库，适合快速开发工具和调试界面。",
+        "industry_direction": "图形界面;开发工具",
         "target_users": [
           "游戏开发者",
-          "工具开发者",
-          "图形程序员"
+          "AI工具开发者",
+          "嵌入式系统开发者"
         ],
-        "problem_solved": "解决复杂UI开发成本高，状态同步难题",
-        "solution": "简化UI状态管理，快速迭代开发",
-        "why_now": "游戏和实时应用需求增长，轻量级UI库受欢迎",
-        "noteworthy_technology": "即时模式GUI，极简依赖，跨平台",
-        "technology_impact": "提升开发效率，支持实时交互工具开发",
+        "problem_solved": "解决了开发者在工具和调试界面快速构建中的效率和复杂度问题。",
+        "solution": "提供一个轻量、快速、易用的GUI库，专注于开发者工具和调试界面。",
+        "why_now": "快速迭代和调试需求增加，轻量级GUI库成为开发者首选。",
+        "noteworthy_technology": "即时模式GUI，极简依赖，跨平台支持",
+        "technology_impact": "提升AI和游戏开发中工具构建效率，促进快速迭代和调试。",
         "product_form": "开源GUI库",
         "commercialization_signal": "中",
-        "maturity": "高度成熟",
-        "risks": "非AI核心技术，主要面向开发者工具",
-        "ai_relevance": "中",
+        "maturity": "成熟",
+        "risks": "功能相对基础，不适合复杂终端用户界面。",
+        "ai_relevance": "低",
+        "plain_language_explanation": "就像给程序员提供一套快速搭建工具界面的积木，能让他们更快地看到程序运行状态和调试信息。",
+        "scenario_examples": [
+          "游戏开发中调试工具界面。",
+          "AI模型训练过程的实时监控界面。",
+          "嵌入式设备的配置工具。"
+        ],
+        "practical_benefits": [
+          "加快开发周期，快速迭代工具界面。",
+          "减少依赖和复杂度，易于集成。",
+          "支持多平台，方便跨设备开发。"
+        ],
+        "industry_implications": "如果持续发展，将提升AI工具和应用的开发效率，尤其是在调试和可视化环节。",
+        "who_should_care": "AI工具开发者，游戏开发者，嵌入式系统开发者。",
+        "validation_signals": [
+          "持续社区贡献和企业赞助。",
+          "新版本功能更新和性能优化。",
+          "在AI工具中的集成案例增加。"
+        ],
         "confidence": "高",
         "priority_score": 70,
         "evidence": [
