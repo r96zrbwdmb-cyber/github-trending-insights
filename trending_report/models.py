@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
-ANALYSIS_VERSION = 3
+ANALYSIS_VERSION = 4
 
 
 @dataclass
@@ -54,6 +54,27 @@ class Evidence:
 
 
 @dataclass
+class ClaimCheck:
+    claim: str
+    claim_type: str
+    source_kind: str
+    source_excerpt: str
+    source_url: str = ""
+    verification_status: str = "待核实"
+
+    @classmethod
+    def from_dict(cls, value: Dict[str, Any]) -> "ClaimCheck":
+        return cls(
+            claim=str(value.get("claim", "")),
+            claim_type=str(value.get("claim_type", "证据不足")),
+            source_kind=str(value.get("source_kind", "analysis")),
+            source_excerpt=str(value.get("source_excerpt", "")),
+            source_url=str(value.get("source_url", "")),
+            verification_status=str(value.get("verification_status", "待核实")),
+        )
+
+
+@dataclass
 class RepoInsight:
     full_name: str
     one_line_summary: str
@@ -75,6 +96,7 @@ class RepoInsight:
     industry_implications: str
     who_should_care: str
     validation_signals: List[str]
+    claim_checks: List[ClaimCheck]
     confidence: str
     priority_score: int
     evidence: List[Evidence] = field(default_factory=list)
@@ -112,6 +134,10 @@ class RepoInsight:
             who_should_care=str(value.get("who_should_care", "相关行业从业者")),
             validation_signals=[
                 str(v) for v in value.get("validation_signals", [])
+            ],
+            claim_checks=[
+                ClaimCheck.from_dict(item)
+                for item in value.get("claim_checks", [])
             ],
             confidence=str(value["confidence"]),
             priority_score=max(0, min(100, int(value["priority_score"]))),
@@ -164,6 +190,7 @@ class IndustryAnalysis:
                 industry_implications="待分析",
                 who_should_care="待分析",
                 validation_signals=["待分析"],
+                claim_checks=[],
                 confidence="低",
                 priority_score=0,
             )

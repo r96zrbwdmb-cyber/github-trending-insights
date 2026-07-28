@@ -1,7 +1,13 @@
 from datetime import date
 from unittest import TestCase
 
-from trending_report.models import Evidence, IndustryAnalysis, RepoInsight, Repository
+from trending_report.models import (
+    ClaimCheck,
+    Evidence,
+    IndustryAnalysis,
+    RepoInsight,
+    Repository,
+)
 from trending_report.report import render_daily_report, update_readme
 
 
@@ -33,6 +39,24 @@ def analysis() -> IndustryAnalysis:
                 industry_implications="推动企业知识从搜索走向任务执行",
                 who_should_care="企业产品负责人",
                 validation_signals=["观察客户案例", "观察持续使用"],
+                claim_checks=[
+                    ClaimCheck(
+                        claim="项目进入日榜",
+                        claim_type="已验证事实",
+                        source_kind="github_metadata",
+                        source_excerpt="",
+                        source_url="https://github.com/a/b",
+                        verification_status="结构化数据核对",
+                    ),
+                    ClaimCheck(
+                        claim="可能改变企业知识工作流",
+                        claim_type="分析判断",
+                        source_kind="analysis",
+                        source_excerpt="",
+                        source_url="https://github.com/a/b",
+                        verification_status="分析推断，需后续验证",
+                    ),
+                ],
                 confidence="高",
                 priority_score=90,
                 evidence=[
@@ -96,6 +120,9 @@ class ReportTests(TestCase):
         self.assertIn("可以用在哪里", text)
         self.assertIn("直接好处", text)
         self.assertIn("对行业意味着什么", text)
+        self.assertIn("证据卡片", text)
+        self.assertIn("校对与人工核实清单", text)
+        self.assertIn("分析推断，需后续验证", text)
         self.assertNotIn("Python", text)
         self.assertNotIn("| 语言 |", text)
 

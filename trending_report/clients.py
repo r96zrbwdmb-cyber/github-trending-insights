@@ -9,7 +9,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
-from .models import Evidence, IndustryAnalysis, RepoInsight, Repository
+from .models import ClaimCheck, Evidence, IndustryAnalysis, RepoInsight, Repository
 from .parser import parse_trending_html
 
 USER_AGENT = "github-trending-insights/0.2"
@@ -127,6 +127,38 @@ PROJECT_PROPERTIES: Dict[str, Any] = {
     "industry_implications": {"type": "string"},
     "who_should_care": {"type": "string"},
     "validation_signals": {"type": "array", "items": {"type": "string"}},
+    "claim_checks": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 5,
+        "items": {
+            "type": "object",
+            "additionalProperties": False,
+            "required": [
+                "claim",
+                "claim_type",
+                "source_kind",
+                "source_excerpt",
+            ],
+            "properties": {
+                "claim": {"type": "string"},
+                "claim_type": {
+                    "type": "string",
+                    "enum": [
+                        "已验证事实",
+                        "项目方说法",
+                        "分析判断",
+                        "证据不足",
+                    ],
+                },
+                "source_kind": {
+                    "type": "string",
+                    "enum": ["github_metadata", "readme", "analysis"],
+                },
+                "source_excerpt": {"type": "string"},
+            },
+        },
+    },
     "confidence": {"type": "string", "enum": ["高", "中", "低"]},
     "priority_score": {"type": "integer", "minimum": 0, "maximum": 100},
 }
@@ -304,6 +336,8 @@ class OpenAIClient:
             repository_map = {repo.full_name: repo for repo in repositories}
             for insight in analysis.repositories:
                 repo = repository_map.get(insight.full_name)
+                if repo:
+                    self._verify_claim_checks(insight, repo)
                 if repo and insight.priority_score >= 60:
                     insight.evidence = [
                         Evidence(
@@ -407,8 +441,8 @@ class OpenAIClient:
         if self.provider != "github":
             return self._classify_batch(repositories)
         analyses = [
-            self._classify_batch(repositories[index : index + 3])
-            for index in range(0, len(repositories), 3)
+            self._classify_batch(repositories[index : index + 2])
+            for index in range(0, len(repositories), 2)
         ]
         return IndustryAnalysis(
             key_judgments=_unique(
@@ -462,6 +496,13 @@ class OpenAIClient:
             "industry_implications 说明如果方向成立会改变哪个行业环节；"
             "who_should_care 明确哪些岗位或企业应该关注；validation_signals 给出"
             "未来几周可验证其价值的具体信号。"
+            "claim_checks 必须列出 3–5 条最重要主张并严格分类。"
+            "GitHub 排名、Star、创建或更新时间等输入数据可标为“已验证事实”，"
+            "source_kind=github_metadata 且 source_excerpt 留空。"
+            "README 明确写出的能力只能标为“项目方说法”，source_kind=readme，"
+            "source_excerpt 必须逐字复制输入中的短句，不得翻译、改写或补造。"
+            "行业影响、使用场景和商业判断应标为“分析判断”，source_kind=analysis，"
+            "source_excerpt 留空。无法支持的内容标为“证据不足”。"
             "GitHub 热度只能称为开发者关注信号，不能推断收入、融资或市场采用。"
             "没有证据时明确写未知。industry_direction 使用稳定、可跨天聚合的短标签；"
             "priority_score 综合 AI 相关性、产品商业影响、技术新颖性和关注度。"
@@ -489,6 +530,36 @@ class OpenAIClient:
             watch_next=[str(v) for v in result["watch_next"]],
             repositories=repositories_result,
         )
+
+    @staticmethod
+    def _verify_claim_checks(insight: RepoInsight, repo: Repository) -> None:
+        verified: List[ClaimCheck] = []
+        readme = " ".join(repo.readme_excerpt.split())
+        for check in insight.claim_checks:
+            check.source_url = repo.url
+            excerpt = " ".join(check.source_excerpt.split())
+            if check.source_kind == "readme":
+                if excerpt and excerpt in readme:
+                    check.claim_type = "项目方说法"
+                    check.verification_status = "原文匹配"
+                    check.source_excerpt = excerpt
+                else:
+                    check.claim_type = "证据不足"
+                    check.verification_status = "README 未找到对应原文"
+                    check.source_excerpt = ""
+            elif check.source_kind == "github_metadata":
+                check.claim_type = "已验证事实"
+                check.verification_status = "结构化数据核对"
+                check.source_excerpt = ""
+            elif check.claim_type == "分析判断":
+                check.verification_status = "分析推断，需后续验证"
+                check.source_excerpt = ""
+            else:
+                check.claim_type = "证据不足"
+                check.verification_status = "缺少可核对来源"
+                check.source_excerpt = ""
+            verified.append(check)
+        insight.claim_checks = verified
 
     def _research(self, selected: List[RepoInsight]) -> Dict[str, Any]:
         source = [item.to_dict() for item in selected]

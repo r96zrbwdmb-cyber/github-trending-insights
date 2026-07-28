@@ -89,9 +89,13 @@ def render_daily_report(
             "",
             "## 重点项目深度解读",
             "",
-            "> 阅读方法：先看“通俗理解”和“使用场景”，再看行业影响与风险。"
-            "这里讨论的是项目可能带来的价值，不是代码实现。",
-            "",
+        "> 阅读方法：先看“通俗理解”和“使用场景”，再看行业影响与风险。"
+        "这里讨论的是项目可能带来的价值，不是代码实现。",
+        "",
+        "**校对标签：** `已验证事实` 来自结构化 GitHub 数据；"
+        "`项目方说法` 已在 README 找到对应原文；"
+        "`分析判断` 是基于资料的推断；`证据不足` 不应作为事实引用。",
+        "",
         ]
     )
     if analysis.available:
@@ -133,6 +137,26 @@ def render_daily_report(
                     f"[{item.title}]({item.url})" for item in insight.evidence
                 )
                 lines.append(f"- **一手资料：** {sources}")
+            lines.extend(["", "**证据卡片：**", ""])
+            if insight.claim_checks:
+                lines.extend(
+                    [
+                        "| 类型 | 重要主张 | 核对结果 | 来源摘录 |",
+                        "|---|---|---|---|",
+                    ]
+                )
+                for check in insight.claim_checks:
+                    excerpt = check.source_excerpt or "—"
+                    claim = _escape_cell(check.claim)
+                    status = _escape_cell(check.verification_status)
+                    source = _escape_cell(excerpt)
+                    if check.source_url:
+                        source = f"[{source}]({check.source_url})"
+                    lines.append(
+                        f"| {check.claim_type} | {claim} | {status} | {source} |"
+                    )
+            else:
+                lines.append("- 尚无逐条证据记录，本项目的重要判断均需人工核实。")
             lines.append("")
     else:
         lines.append("- 免费 AI 分析尚未生成。")
@@ -197,6 +221,41 @@ def render_daily_report(
     else:
         lines.append("- 等待更多有效日报后形成可验证的观察清单。")
 
+    all_checks = [
+        check for insight in analysis.repositories for check in insight.claim_checks
+    ]
+    check_counts = {
+        label: sum(check.claim_type == label for check in all_checks)
+        for label in ["已验证事实", "项目方说法", "分析判断", "证据不足"]
+    }
+    lines.extend(
+        [
+            "",
+            "## 校对与人工核实清单",
+            "",
+            f"- **已验证事实：** {check_counts['已验证事实']} 条。",
+            f"- **已匹配 README 的项目方说法：** {check_counts['项目方说法']} 条。",
+            f"- **分析判断：** {check_counts['分析判断']} 条，不能直接当作事实引用。",
+            f"- **证据不足：** {check_counts['证据不足']} 条，应优先人工核实。",
+            "",
+            "### 建议优先核实",
+            "",
+        ]
+    )
+    manual_checks = [
+        (insight.full_name, check)
+        for insight in priority
+        for check in insight.claim_checks
+        if check.claim_type in {"证据不足", "分析判断"}
+    ][:10]
+    if manual_checks:
+        lines.extend(
+            f"- **{name}｜{check.claim_type}：** {check.claim}"
+            for name, check in manual_checks
+        )
+    else:
+        lines.append("- 当前没有被标记为证据不足或分析判断的重要主张。")
+
     lines.extend(
         [
             "",
@@ -232,6 +291,7 @@ def render_daily_report(
             f"{researched_count} 个项目完成一手资料补充研究。",
             "- “首次出现”只指首次进入本报告历史，不代表项目或技术首次发布。",
             "- 项目方资料可能带有宣传倾向；商业化、成熟度和风险判断均需持续验证。",
+            "- README 原文匹配只能证明项目方确实这样描述，不能证明该能力已经达到宣传效果。",
             f"- 本次有 {metadata_failures} 个项目未完整取得 GitHub 补充资料。",
         ]
     )

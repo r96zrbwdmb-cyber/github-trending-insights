@@ -51,6 +51,26 @@ def project_value(name: str = "alpha/one") -> dict:
         "industry_implications": "企业 AI 从问答转向可执行工作流",
         "who_should_care": "企业产品负责人和知识管理团队",
         "validation_signals": ["是否出现真实客户案例", "是否持续活跃"],
+        "claim_checks": [
+            {
+                "claim": "项目进入日榜",
+                "claim_type": "已验证事实",
+                "source_kind": "github_metadata",
+                "source_excerpt": "",
+            },
+            {
+                "claim": "提供企业知识助手",
+                "claim_type": "项目方说法",
+                "source_kind": "readme",
+                "source_excerpt": "",
+            },
+            {
+                "claim": "可能推动企业工作流自动化",
+                "claim_type": "分析判断",
+                "source_kind": "analysis",
+                "source_excerpt": "",
+            },
+        ],
         "confidence": "中",
         "priority_score": 90,
     }
@@ -141,6 +161,7 @@ class OpenAIClientTests(TestCase):
         self.assertIn("scenario_examples", required)
         self.assertIn("practical_benefits", required)
         self.assertIn("industry_implications", required)
+        self.assertIn("claim_checks", required)
         self.assertNotIn("language", required)
 
     def test_periodic_synthesis_uses_research_model(self) -> None:
@@ -184,6 +205,9 @@ class OpenAIClientTests(TestCase):
         self.assertTrue(result.available)
         self.assertTrue(result.repositories[0].deep_researched)
         self.assertIn("免费模式", result.error)
+        checks = result.repositories[0].claim_checks
+        self.assertEqual(checks[0].verification_status, "结构化数据核对")
+        self.assertEqual(checks[1].claim_type, "证据不足")
         self.assertIn("models.github.ai", http.calls[0]["args"][0])
         payload = json.loads(http.calls[0]["kwargs"]["data"])
         self.assertEqual(payload["model"], "openai/gpt-4.1-mini")
