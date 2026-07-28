@@ -441,8 +441,7 @@ class OpenAIClient:
         if self.provider != "github":
             return self._classify_batch(repositories)
         analyses = [
-            self._classify_batch(repositories[index : index + 2])
-            for index in range(0, len(repositories), 2)
+            self._classify_batch([repository]) for repository in repositories
         ]
         return IndustryAnalysis(
             key_judgments=_unique(
@@ -514,8 +513,11 @@ class OpenAIClient:
             schema=CLASSIFICATION_SCHEMA,
             schema_name="industry_classification",
         )
+        result_repositories = result["repositories"]
+        if len(repositories) == 1 and len(result_repositories) == 1:
+            result_repositories[0]["full_name"] = repositories[0].full_name
         repositories_result = [
-            RepoInsight.from_dict(item) for item in result["repositories"]
+            RepoInsight.from_dict(item) for item in result_repositories
         ]
         expected = {repo.full_name for repo in repositories}
         actual = {repo.full_name for repo in repositories_result}
