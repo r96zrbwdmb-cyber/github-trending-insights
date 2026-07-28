@@ -121,6 +121,12 @@ PROJECT_PROPERTIES: Dict[str, Any] = {
     "maturity": {"type": "string"},
     "risks": {"type": "string"},
     "ai_relevance": {"type": "string"},
+    "plain_language_explanation": {"type": "string"},
+    "scenario_examples": {"type": "array", "items": {"type": "string"}},
+    "practical_benefits": {"type": "array", "items": {"type": "string"}},
+    "industry_implications": {"type": "string"},
+    "who_should_care": {"type": "string"},
+    "validation_signals": {"type": "array", "items": {"type": "string"}},
     "confidence": {"type": "string", "enum": ["高", "中", "低"]},
     "priority_score": {"type": "integer", "minimum": 0, "maximum": 100},
 }
@@ -401,8 +407,8 @@ class OpenAIClient:
         if self.provider != "github":
             return self._classify_batch(repositories)
         analyses = [
-            self._classify_batch(repositories[index : index + 5])
-            for index in range(0, len(repositories), 5)
+            self._classify_batch(repositories[index : index + 3])
+            for index in range(0, len(repositories), 3)
         ]
         return IndustryAnalysis(
             key_judgments=_unique(
@@ -450,6 +456,12 @@ class OpenAIClient:
             "用简体中文分析所有项目，即使项目并非 AI，也要说明它对 AI 行业是否相关。"
             "重点回答：为谁、解决什么问题、产品形态、为何现在受关注、商业化信号、"
             "值得注意的技术会改变什么。不要解释编程语言、代码或实现步骤。"
+            "同时为非程序员提供准确但通俗的解释：用日常工作场景说明它如何被使用、"
+            "能节省什么或改善什么；给出 2–3 个具体场景和 2–3 个实际好处。"
+            "plain_language_explanation 可以使用克制的类比，但不能牺牲准确性。"
+            "industry_implications 说明如果方向成立会改变哪个行业环节；"
+            "who_should_care 明确哪些岗位或企业应该关注；validation_signals 给出"
+            "未来几周可验证其价值的具体信号。"
             "GitHub 热度只能称为开发者关注信号，不能推断收入、融资或市场采用。"
             "没有证据时明确写未知。industry_direction 使用稳定、可跨天聚合的短标签；"
             "priority_score 综合 AI 相关性、产品商业影响、技术新颖性和关注度。"

@@ -45,6 +45,12 @@ def project_value(name: str = "alpha/one") -> dict:
         "maturity": "早期产品",
         "risks": "效果依赖内部数据质量",
         "ai_relevance": "直接服务 AI 应用落地",
+        "plain_language_explanation": "像给企业资料配一个会查证的智能助理",
+        "scenario_examples": ["客服查找政策", "销售准备客户资料"],
+        "practical_benefits": ["减少查找时间", "降低错误回答"],
+        "industry_implications": "企业 AI 从问答转向可执行工作流",
+        "who_should_care": "企业产品负责人和知识管理团队",
+        "validation_signals": ["是否出现真实客户案例", "是否持续活跃"],
         "confidence": "中",
         "priority_score": 90,
     }
@@ -131,6 +137,10 @@ class OpenAIClientTests(TestCase):
         self.assertIn("target_users", required)
         self.assertIn("problem_solved", required)
         self.assertIn("commercialization_signal", required)
+        self.assertIn("plain_language_explanation", required)
+        self.assertIn("scenario_examples", required)
+        self.assertIn("practical_benefits", required)
+        self.assertIn("industry_implications", required)
         self.assertNotIn("language", required)
 
     def test_periodic_synthesis_uses_research_model(self) -> None:

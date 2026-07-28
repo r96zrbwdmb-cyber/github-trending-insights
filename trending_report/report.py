@@ -57,7 +57,8 @@ def render_daily_report(
     lines = [
         f"# AI 行业情报简报 · {report_date.isoformat()}",
         "",
-        "> 约 5 分钟阅读。数据来自 GitHub Trending 全语言日榜；"
+        "> 约 15 分钟阅读。先看结论，再通过通俗场景理解重点项目，最后查看行业与商业影响。"
+        "数据来自 GitHub Trending 全语言日榜；"
         "它代表开发者关注度，不等同于市场采用、收入、融资或研究突破。",
         "",
         "## 今天最重要的 5 个判断",
@@ -83,30 +84,77 @@ def render_daily_report(
     else:
         lines.append("- 行业分析待生成，暂不从项目名称或技术标签推断行业特点。")
 
-    lines.extend(["", "## 重点方向与项目", ""])
+    lines.extend(
+        [
+            "",
+            "## 重点项目深度解读",
+            "",
+            "> 阅读方法：先看“通俗理解”和“使用场景”，再看行业影响与风险。"
+            "这里讨论的是项目可能带来的价值，不是代码实现。",
+            "",
+        ]
+    )
     if analysis.available:
-        for direction, insights in list(grouped.items())[:6]:
+        for index, insight in enumerate(priority[:6], 1):
+            repo = repo_map.get(insight.full_name)
+            url = repo.url if repo else f"https://github.com/{insight.full_name}"
+            users = "、".join(insight.target_users) or "尚不明确"
+            scenarios = "；".join(insight.scenario_examples) or "尚待验证"
+            benefits = "；".join(insight.practical_benefits) or "尚待验证"
+            validation = "；".join(insight.validation_signals) or "持续关注实际采用"
+            lines.extend(
+                [
+                    f"### {index}. [{insight.full_name}]({url})",
+                    "",
+                    f"**一句话：** {insight.one_line_summary}",
+                    "",
+                    f"**通俗理解：** {insight.plain_language_explanation}",
+                    "",
+                    f"- **它为谁服务：** {users}",
+                    f"- **解决的问题：** {insight.problem_solved}",
+                    f"- **它提供的办法：** {insight.solution}",
+                    f"- **可以用在哪里：** {scenarios}",
+                    f"- **直接好处：** {benefits}",
+                    f"- **为什么现在值得看：** {insight.why_now}",
+                    f"- **特别技术：** {insight.noteworthy_technology}。"
+                    f"{insight.technology_impact}",
+                    f"- **对行业意味着什么：** {insight.industry_implications}",
+                    f"- **谁尤其应该关注：** {insight.who_should_care}",
+                    f"- **产品与商业信号：** {insight.product_form}；"
+                    f"{insight.commercialization_signal}",
+                    f"- **成熟度：** {insight.maturity}",
+                    f"- **风险与限制：** {insight.risks}",
+                    f"- **下一步验证：** {validation}",
+                    f"- **判断置信度：** {insight.confidence}",
+                ]
+            )
+            if insight.evidence:
+                sources = "、".join(
+                    f"[{item.title}]({item.url})" for item in insight.evidence
+                )
+                lines.append(f"- **一手资料：** {sources}")
+            lines.append("")
+    else:
+        lines.append("- 免费 AI 分析尚未生成。")
+
+    lines.extend(["", "## 其他方向速览", ""])
+    priority_names = {item.full_name for item in priority[:6]}
+    remaining = [item for item in priority if item.full_name not in priority_names]
+    if remaining:
+        remaining_grouped: Dict[str, List[RepoInsight]] = defaultdict(list)
+        for insight in remaining:
+            remaining_grouped[insight.industry_direction].append(insight)
+        for direction, insights in list(remaining_grouped.items())[:8]:
             lines.extend([f"### {direction}", ""])
-            for insight in insights[:3]:
+            for insight in insights:
                 repo = repo_map.get(insight.full_name)
                 url = repo.url if repo else f"https://github.com/{insight.full_name}"
-                users = "、".join(insight.target_users) or "尚不明确"
-                lines.extend(
-                    [
-                        f"- **[{insight.full_name}]({url})**："
-                        f"{insight.one_line_summary}",
-                        f"  - **面向谁：** {users}",
-                        f"  - **解决什么：** {insight.problem_solved}",
-                        f"  - **为什么重要：** {insight.why_now}",
-                    ]
+                lines.append(
+                    f"- **[{insight.full_name}]({url})**：{insight.one_line_summary} "
+                    f"适合关注者：{insight.who_should_care}。"
                 )
-                if insight.evidence:
-                    sources = "、".join(
-                        f"[{item.title}]({item.url})" for item in insight.evidence
-                    )
-                    lines.append(f"  - **一手资料：** {sources}")
     else:
-        lines.append("- 待配置 OpenAI API 后生成。")
+        lines.append("- 其余项目已包含在全榜附录。")
 
     technologies = [
         item

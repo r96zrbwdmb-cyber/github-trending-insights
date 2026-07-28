@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
-ANALYSIS_VERSION = 2
+ANALYSIS_VERSION = 3
 
 
 @dataclass
@@ -69,6 +69,12 @@ class RepoInsight:
     maturity: str
     risks: str
     ai_relevance: str
+    plain_language_explanation: str
+    scenario_examples: List[str]
+    practical_benefits: List[str]
+    industry_implications: str
+    who_should_care: str
+    validation_signals: List[str]
     confidence: str
     priority_score: int
     evidence: List[Evidence] = field(default_factory=list)
@@ -91,6 +97,22 @@ class RepoInsight:
             maturity=str(value["maturity"]),
             risks=str(value["risks"]),
             ai_relevance=str(value["ai_relevance"]),
+            plain_language_explanation=str(
+                value.get("plain_language_explanation", value["one_line_summary"])
+            ),
+            scenario_examples=[
+                str(v) for v in value.get("scenario_examples", [])
+            ],
+            practical_benefits=[
+                str(v) for v in value.get("practical_benefits", [])
+            ],
+            industry_implications=str(
+                value.get("industry_implications", value["ai_relevance"])
+            ),
+            who_should_care=str(value.get("who_should_care", "相关行业从业者")),
+            validation_signals=[
+                str(v) for v in value.get("validation_signals", [])
+            ],
             confidence=str(value["confidence"]),
             priority_score=max(0, min(100, int(value["priority_score"]))),
             evidence=[
@@ -136,6 +158,12 @@ class IndustryAnalysis:
                 maturity="待分析",
                 risks="缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
                 ai_relevance="待分析",
+                plain_language_explanation="待分析",
+                scenario_examples=["待分析"],
+                practical_benefits=["待分析"],
+                industry_implications="待分析",
+                who_should_care="待分析",
+                validation_signals=["待分析"],
                 confidence="低",
                 priority_score=0,
             )
@@ -182,4 +210,3 @@ class IndustryAnalysis:
             "watch_next": self.watch_next,
             "repositories": [repo.to_dict() for repo in self.repositories],
         }
-

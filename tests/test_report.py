@@ -27,6 +27,12 @@ def analysis() -> IndustryAnalysis:
                 maturity="公开测试",
                 risks="真实采用待验证",
                 ai_relevance="直接相关",
+                plain_language_explanation="像一个能够引用公司资料的智能同事",
+                scenario_examples=["客服查询制度", "销售准备方案"],
+                practical_benefits=["节省查找时间", "减少错误回答"],
+                industry_implications="推动企业知识从搜索走向任务执行",
+                who_should_care="企业产品负责人",
+                validation_signals=["观察客户案例", "观察持续使用"],
                 confidence="高",
                 priority_score=90,
                 evidence=[
@@ -75,7 +81,8 @@ class ReportTests(TestCase):
         for heading in [
             "## 今天最重要的 5 个判断",
             "## 今天的热门有什么特点",
-            "## 重点方向与项目",
+            "## 重点项目深度解读",
+            "## 其他方向速览",
             "## 特别值得注意的技术",
             "## 产品与商业动态",
             "## 过去 7 天 / 30 天发生了什么变化",
@@ -85,6 +92,10 @@ class ReportTests(TestCase):
             self.assertIn(heading, text)
         self.assertIn("面向谁", text)
         self.assertIn("解决什么问题", text)
+        self.assertIn("通俗理解", text)
+        self.assertIn("可以用在哪里", text)
+        self.assertIn("直接好处", text)
+        self.assertIn("对行业意味着什么", text)
         self.assertNotIn("Python", text)
         self.assertNotIn("| 语言 |", text)
 
@@ -111,4 +122,3 @@ class ReportTests(TestCase):
         self.assertIn("最新日报", result)
         self.assertIn("最新周报", result)
         self.assertIn("最新月报", result)
-
