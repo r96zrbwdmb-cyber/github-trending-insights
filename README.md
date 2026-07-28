@@ -11,7 +11,7 @@ README 摘要和历史排名信号生成中文技术趋势报告。
 - 哪些是可能的新技术，哪些只是已有技术再次升温？
 
 <!-- latest-report:start -->
-最新日报：尚未生成 · [查看全部历史](reports/index.md)
+最新日报：[2026-07-28](reports/2026-07-28.md) · [查看全部历史](reports/index.md)
 <!-- latest-report:end -->
 
 ## 快速开始
