@@ -47,10 +47,23 @@ def _load_json(path: Path) -> Dict[str, Any]:
 
 
 def _openai_client() -> OpenAIClient:
+    provider = os.environ.get("AI_PROVIDER", "github").lower()
+    api_key = (
+        os.environ.get("GITHUB_TOKEN", "")
+        if provider == "github"
+        else os.environ.get("OPENAI_API_KEY", "")
+    )
     return OpenAIClient(
-        api_key=os.environ.get("OPENAI_API_KEY", ""),
-        model=os.environ.get("OPENAI_MODEL", "gpt-5.6-terra"),
-        research_model=os.environ.get("OPENAI_RESEARCH_MODEL", "gpt-5.6-sol"),
+        api_key=api_key,
+        model=os.environ.get(
+            "AI_MODEL",
+            "openai/gpt-4.1-mini" if provider == "github" else "gpt-5.6-terra",
+        ),
+        research_model=os.environ.get(
+            "AI_RESEARCH_MODEL",
+            "openai/gpt-4.1-mini" if provider == "github" else "gpt-5.6-sol",
+        ),
+        provider=provider,
     )
 
 
@@ -238,7 +251,7 @@ def reanalyze(
 ) -> List[Path]:
     client = openai or _openai_client()
     if not client.api_key:
-        raise RuntimeError("reanalyze 需要配置 OPENAI_API_KEY")
+        raise RuntimeError("reanalyze 需要可用的 GitHub Models 或 OpenAI 凭证")
     data_dir = root / "data"
     paths = sorted(data_dir.glob("????-??-??.json"))[-days:]
     updated: List[Path] = []

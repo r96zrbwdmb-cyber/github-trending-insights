@@ -68,6 +68,10 @@ def response(value: dict) -> dict:
     }
 
 
+def github_response(value: dict) -> dict:
+    return {"choices": [{"message": {"content": json.dumps(value)}}]}
+
+
 class OpenAIClientTests(TestCase):
     def test_two_stage_analysis_merges_official_research(self) -> None:
         research = {
@@ -156,6 +160,24 @@ class OpenAIClientTests(TestCase):
         )
         self.assertIsNone(result)
         self.assertEqual(http.calls, [])
+
+    def test_github_models_uses_free_chat_completions_api(self) -> None:
+        http = FakeHTTP([github_response(classification())])
+        result = OpenAIClient(
+            "github-token",
+            model="openai/gpt-4.1-mini",
+            research_model="openai/gpt-4.1-mini",
+            provider="github",
+            http=http,
+        ).analyze([repository()])
+
+        self.assertTrue(result.available)
+        self.assertTrue(result.repositories[0].deep_researched)
+        self.assertIn("免费模式", result.error)
+        self.assertIn("models.github.ai", http.calls[0]["args"][0])
+        payload = json.loads(http.calls[0]["kwargs"]["data"])
+        self.assertEqual(payload["model"], "openai/gpt-4.1-mini")
+        self.assertEqual(payload["response_format"]["type"], "json_schema")
 
 
 class HTTPClientTests(TestCase):

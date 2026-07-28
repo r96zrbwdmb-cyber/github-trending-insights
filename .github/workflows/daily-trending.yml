@@ -17,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  models: read
 
 concurrency:
   group: daily-github-trending
@@ -28,9 +29,9 @@ jobs:
     timeout-minutes: 20
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      OPENAI_MODEL: gpt-5.6-terra
-      OPENAI_RESEARCH_MODEL: gpt-5.6-sol
+      AI_PROVIDER: github
+      AI_MODEL: openai/gpt-4.1-mini
+      AI_RESEARCH_MODEL: openai/gpt-4.1-mini
       REPORT_TIMEZONE: Asia/Shanghai
 
     steps:

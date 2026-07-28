@@ -258,11 +258,13 @@ class OpenAIClient:
         api_key: str,
         model: str = "gpt-5.6-terra",
         research_model: str = "gpt-5.6-sol",
+        provider: str = "openai",
         http: Optional[HTTPClient] = None,
     ) -> None:
         self.api_key = api_key
         self.model = model
         self.research_model = research_model
+        self.provider = provider
         self.http = http or HTTPClient(retries=2, timeout=120)
 
     def analyze(
@@ -272,9 +274,12 @@ class OpenAIClient:
         research_limit: int = 8,
     ) -> IndustryAnalysis:
         if not self.api_key:
+            credential = (
+                "GITHUB_TOKEN" if self.provider == "github" else "OPENAI_API_KEY"
+            )
             return IndustryAnalysis.unavailable(
                 repositories,
-                "未配置 OPENAI_API_KEY，行业分析待生成",
+                f"未配置 {credential}，行业分析待生成",
             )
         error = ""
         for _ in range(2):
@@ -288,6 +293,25 @@ class OpenAIClient:
                 repositories,
                 f"行业分类重试后仍失败：{error}",
             )
+
+        if self.provider == "github":
+            repository_map = {repo.full_name: repo for repo in repositories}
+            for insight in analysis.repositories:
+                repo = repository_map.get(insight.full_name)
+                if repo and insight.priority_score >= 60:
+                    insight.evidence = [
+                        Evidence(
+                            title="GitHub 项目资料",
+                            url=repo.url,
+                            source_type="project",
+                        )
+                    ]
+                    insight.deep_researched = True
+            analysis.error = (
+                "免费模式仅使用 GitHub 项目资料与历史数据，"
+                "未执行外部官网和论文网页检索"
+            )
+            return analysis
 
         selected = sorted(
             analysis.repositories,
@@ -314,8 +338,29 @@ class OpenAIClient:
         if not self.api_key or not snapshots:
             return None
         daily_evidence = []
-        for snapshot in snapshots:
+        selected_snapshots = snapshots[-10:] if self.provider == "github" else snapshots
+        for snapshot in selected_snapshots:
             analysis = snapshot.get("industry_analysis", {})
+            repositories = analysis.get("repositories", [])
+            if self.provider == "github":
+                repositories = sorted(
+                    repositories,
+                    key=lambda item: int(item.get("priority_score", 0)),
+                    reverse=True,
+                )[:2]
+                repositories = [
+                    {
+                        "full_name": item.get("full_name"),
+                        "industry_direction": item.get("industry_direction"),
+                        "target_users": item.get("target_users"),
+                        "problem_solved": item.get("problem_solved"),
+                        "product_form": item.get("product_form"),
+                        "commercialization_signal": item.get(
+                            "commercialization_signal"
+                        ),
+                    }
+                    for item in repositories
+                ]
             daily_evidence.append(
                 {
                     "date": snapshot.get("date"),
@@ -325,7 +370,7 @@ class OpenAIClient:
                         "product_business_signals", []
                     ),
                     "watch_next": analysis.get("watch_next", []),
-                    "repositories": analysis.get("repositories", []),
+                    "repositories": repositories,
                 }
             )
         instructions = (
@@ -353,6 +398,35 @@ class OpenAIClient:
         }
 
     def _classify(self, repositories: List[Repository]) -> IndustryAnalysis:
+        if self.provider != "github":
+            return self._classify_batch(repositories)
+        analyses = [
+            self._classify_batch(repositories[index : index + 5])
+            for index in range(0, len(repositories), 5)
+        ]
+        return IndustryAnalysis(
+            key_judgments=_unique(
+                value for analysis in analyses for value in analysis.key_judgments
+            )[:5],
+            hot_characteristics=_unique(
+                value
+                for analysis in analyses
+                for value in analysis.hot_characteristics
+            )[:6],
+            product_business_signals=_unique(
+                value
+                for analysis in analyses
+                for value in analysis.product_business_signals
+            )[:6],
+            watch_next=_unique(
+                value for analysis in analyses for value in analysis.watch_next
+            )[:6],
+            repositories=[
+                item for analysis in analyses for item in analysis.repositories
+            ],
+        )
+
+    def _classify_batch(self, repositories: List[Repository]) -> IndustryAnalysis:
         source = [
             {
                 "rank": repo.rank,
@@ -462,6 +536,41 @@ class OpenAIClient:
         schema_name: str,
         tools: Optional[List[Dict[str, Any]]] = None,
     ) -> Dict[str, Any]:
+        if self.provider == "github":
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": instructions},
+                    {
+                        "role": "user",
+                        "content": json.dumps(source, ensure_ascii=False),
+                    },
+                ],
+                "temperature": 0.1,
+                "max_tokens": 4_000,
+                "response_format": {
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": schema_name,
+                        "strict": True,
+                        "schema": schema,
+                    },
+                },
+            }
+            body = self.http.request(
+                "https://models.github.ai/inference/chat/completions",
+                method="POST",
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Accept": "application/vnd.github+json",
+                    "X-GitHub-Api-Version": "2026-03-10",
+                    "Content-Type": "application/json",
+                },
+                data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+            )
+            response = json.loads(body.decode("utf-8"))
+            return json.loads(response["choices"][0]["message"]["content"])
+
         payload: Dict[str, Any] = {
             "model": model,
             "reasoning": {"effort": "low"},
@@ -504,3 +613,12 @@ class OpenAIClient:
         if not texts:
             raise ValueError("Responses API 没有返回 output_text")
         return "".join(texts)
+
+
+def _unique(values: Any) -> List[str]:
+    result: List[str] = []
+    for value in values:
+        text = str(value)
+        if text and text not in result:
+            result.append(text)
+    return result

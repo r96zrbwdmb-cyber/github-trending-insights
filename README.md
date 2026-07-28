@@ -26,18 +26,19 @@ GitHub 热度只被当作开发者关注度信号，不等同于市场采用、�
 
 1. 使用仓库简介、README 和历史表现分析全榜项目，统一回答目标用户、问题、产品方案、
    AI 行业意义、商业信号、成熟度和风险。
-2. 选出最值得关注的 5–8 个项目，检索官网、论文或项目方正式资料，补充一手证据。
+2. 免费模式使用仓库页面、README 和项目历史作为一手资料，不执行收费网页检索。
 3. 从带版本的行业分类中计算滚动 7 天和 30 天变化，而不是统计编程语言或代码标签。
 
-默认使用 `gpt-5.6-terra` 完成全榜分类，使用 `gpt-5.6-sol` 完成重点项目研究。
+默认通过 GitHub Models 免费额度调用 `openai/gpt-4.1-mini`。为满足免费额度的
+单次 Token 限制，全榜会分成 5 个项目一批进行分析。免费额度耗尽时分析自动停止，
+不会自动转为付费。
 
 ## 自动运行
 
-GitHub Actions 每天 UTC 01:00（北京时间 09:00）运行。需要在仓库
-**Settings → Secrets and variables → Actions** 中配置 `OPENAI_API_KEY`。
+GitHub Actions 每天 UTC 01:00（北京时间 09:00）运行。工作流使用 GitHub 自动提供的
+`GITHUB_TOKEN` 和 GitHub Models 免费额度，不需要配置第三方 API Key。
 
-没有 API Key 时仍会采集和保存榜单，但报告会明确显示“行业分析待生成”，不会用技术标签
-冒充行业洞察。
+公开仓库使用标准 GitHub 托管运行器不收取 Actions 分钟费用。
 
 ## 命令
 
@@ -60,9 +61,10 @@ python -m trending_report reanalyze --days 30
 
 | 变量 | 默认值 | 用途 |
 |---|---|---|
-| `OPENAI_API_KEY` | 无 | OpenAI API 密钥 |
-| `OPENAI_MODEL` | `gpt-5.6-terra` | 全榜行业分类模型 |
-| `OPENAI_RESEARCH_MODEL` | `gpt-5.6-sol` | 一手资料研究模型 |
+| `AI_PROVIDER` | `github` | `github` 使用免费 GitHub Models；也可设为 `openai` |
+| `AI_MODEL` | `openai/gpt-4.1-mini` | 全榜行业分类模型 |
+| `AI_RESEARCH_MODEL` | `openai/gpt-4.1-mini` | 周期综合模型 |
+| `OPENAI_API_KEY` | 无 | 仅在主动改用 `openai` 提供商时需要 |
 | `GITHUB_TOKEN` | 无 | GitHub API 令牌；Actions 自动提供 |
 | `REPORT_TIMEZONE` | `Asia/Shanghai` | 日报日期使用的时区 |
 
@@ -72,4 +74,3 @@ python -m trending_report reanalyze --days 30
 python -m unittest discover -s tests -v
 python -m ruff check .
 ```
-
