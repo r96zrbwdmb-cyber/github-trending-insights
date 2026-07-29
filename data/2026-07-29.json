@@ -1,0 +1,868 @@
+{
+  "date": "2026-07-29",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 13,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "pascalorg/editor",
+      "url": "https://github.com/pascalorg/editor",
+      "description": "Create and share 3D architectural projects.",
+      "language": "TypeScript",
+      "stars": 18769,
+      "forks": 2528,
+      "stars_today": 341,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-10-16T19:35:06Z",
+      "updated_at": "2026-07-29T01:56:04Z",
+      "open_issues": 31,
+      "default_branch": "main",
+      "readme_excerpt": "# Pascal Editor A 3D building editor built with React Three Fiber and WebGPU. [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore)](https://www.npmjs.com/package/@pascal-app/core) [![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer) [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/SaBRA9t2) [![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app) https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b ## Using Published Packages The viewer runtime and built-in node definitions are separate packages. Install the full built-in viewer set, then load the built-in plugin once before mounting `<Viewer>`: ```bash npm install @pascal-app/core @pascal-app/viewer @pascal-app/editor @pascal-app/nodes ``` ```typescript import { loadPlugin } from '@pascal-app/core' import { builtinPlugin } from '@pascal-app/nodes' await loadPlugin(builtinPlugin) ``` See the [`@pascal-app/viewer` quick start](packages/viewer/README.md#usage) for a React example. ## Repository Architecture This is a Turborepo monorepo with four main runtime packages: ``` editor/ ├── apps/ │ └── editor/ # Next.js application ├── packages/ │ ├── core/ # Schemas, scene state, and registry contracts │ ├── viewer/ # 3D rendering runtime and shared systems │ ├── editor/ # Editing tools and UI components │ ├── nodes/ # Built-in node definitions, renderers, and systems │ └── ui/ # Shared UI components ``` ### Separation of Concerns | Package | Responsibility | |---------|---------------| | **@pascal-app/core** | Node schemas, scene state (Zustand), registry contracts, spatial queries, and event bus | | **@pascal-app/viewer** | 3D rendering via React Three Fiber, shared render systems, default camera/controls, and post-processing | | **@pascal-app/editor** | Editing tools, panels, selection, and direct-manipulation UI | | **@pascal-app/nodes** | Built-in registry plugin with node definitions, renderers, geometry, and systems | | **apps/editor** | Standalone Next.js host for the editor packages | The **viewer** renders the scene with sensible defaults. The **editor** extends it with interactive tools, selection management, and editing capabilities. ### Stores Each package has its own Zustand store for managing state: | Store | Package | Responsibility | |-------|---------|----------------| | `useScene` | `@pascal-app/core` | Scene data: nodes, root IDs, dirty nodes, CRUD operations. Persisted to IndexedDB with undo/redo via Zundo. | | `useViewer` | `@pascal-app/viewer` | Viewer state: current selection (building/level/zone IDs), level display mode (stacked/exploded/solo), camera mode. | | `useEditor` | `apps/editor` | Editor state: active tool, structure layer visibility, panel states, editor-specific preferences. | **Access patterns:** ```typescript // Subscribe to state changes (React component) const nodes = useScene((state) => state.nodes) const levelId = useViewer((state) => state.selection.levelId) const activeTool = useEditor((state) => state.tool) // Access state outside React (callbacks, systems) const node = useScene.getState().nodes[id] useViewer.getState().setSelection({ levelId: 'level_123' }) ``` --- ## Core Concepts ### Nodes Nodes are the data primitives that describe the 3D scene. All nodes extend `BaseNode`: ```typescript BaseNode { id: string // Auto-generated with type prefix (e.g., \"wall_abc123\") type: string // Discriminator for type-safe handling parentId: string | null // Parent node reference visible: boolean camera?: Camera // Optional saved camera position metadata?: JSON // Arbitrary metadata (e.g., { isTransient: true }) } ``` **Node Hierarchy:** ``` Site └── Building └── Lev",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 2,
+      "full_name": "jenkinsci/jenkins",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "description": "Jenkins automation server",
+      "language": "Java",
+      "stars": 26081,
+      "forks": 9687,
+      "stars_today": 180,
+      "topics": [
+        "cicd",
+        "continuous-delivery",
+        "continuous-deployment",
+        "continuous-integration",
+        "devops",
+        "groovy",
+        "hacktoberfest",
+        "java",
+        "jenkins",
+        "pipelines-as-code"
+      ],
+      "license": "MIT",
+      "created_at": "2010-11-22T21:21:23Z",
+      "updated_at": "2026-07-29T01:56:03Z",
+      "open_issues": 3598,
+      "default_branch": "master",
+      "readme_excerpt": "<a href=\"https://jenkins.io\"> <img width=\"400\" src=\"https://www.jenkins.io/images/jenkins-logo-title-dark.svg\" alt=\"Jenkins logo\"> </a> [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) [![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3538/badge)](https://bestpractices.coreinfrastructure.org/projects/3538) [![Reproducible Builds](https://img.shields.io/badge/Reproducible_Builds-ok-green)](https://maven.apache.org/guides/mini/guide-reproducible-builds.html) [![Gitter](https://img.shields.io/gitter/room/jenkinsci/jenkins)](https://matrix.to/#/#jenkinsci_jenkins:gitter.im) --- # Table of Contents - [About](#about) - [What to Use Jenkins for and When to Use It](#what-to-use-jenkins-for-and-when-to-use-it) - [Downloads](#downloads) - [Getting Started (Development)](#getting-started-development) - [Source](#source) - [Contributing to Jenkins](#contributing-to-jenkins) - [News and Website](#news-and-website) - [Governance](#governance) - [Adopters](#adopters) - [License](#license) --- # About In a nutshell, Jenkins is the leading open-source automation server. Built with Java, it provides over 2,000 [plugins](https://plugins.jenkins.io/) to support automating virtually anything, so that humans can spend their time doing things machines cannot. # What to Use Jenkins for and When to Use It Use Jenkins to automate your development workflow, so you can focus on work that matters most. Jenkins is commonly used for: - Building projects - Running tests to detect bugs and other issues as soon as they are introduced - Static code analysis - Deployment Execute repetitive tasks, save time, and optimize your development process with Jenkins. # Downloads The Jenkins project provides official distributions as WAR files, Docker images, native packages and installers for platforms including several Linux distributions and Windows. See the [Downloads](https://www.jenkins.io/download) page for references. For all distributions Jenkins offers two release lines: - [Weekly](https://www.jenkins.io/download/weekly/) - Frequent releases which include all new features, improvements, and bug fixes. - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - Older release line which gets periodically updated via bug fix backports. Latest releases: [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) # Getting Started (Development) For more information on setting up your development environment, contributing, and working with Jenkins internals, check the [contributing guide](CONTRIBUTING.md) and the [Jenkins Developer Documentation](https://www.jenkins.io/doc/developer/). # Source Our latest and greatest source of Jenkins can be found on [GitHub](https://github.com/jenkinsci/jenkins). Fork us! # Contributing to Jenkins New to open source or Jenkins? Here’s how to get started: - Read the [Contribution Guidelines](CONTRIBUTING.md) - Check our [good first issues](https://github.com/jenkinsci/jenkins/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22) - Join our [Gitter chat](https://matrix.to/#/#jenkinsci_newcomer-contributors:gitter.im) for questions and help For more information about participating in the community and contributing to the Jenkins project, see [this page](https://www.jenkins.io/participate/). Documentation for Jenkins core maintainers is in the [maintaine",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 8,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "moeru-ai/airi",
+      "url": "https://github.com/moeru-ai/airi",
+      "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+      "language": "TypeScript",
+      "stars": 44796,
+      "forks": 4451,
+      "stars_today": 797,
+      "topics": [
+        "ai-companion",
+        "ai-vtuber",
+        "airi",
+        "digital-life",
+        "grok-companion",
+        "live2d",
+        "neuro-sama",
+        "neurosama",
+        "openclaw",
+        "vrm",
+        "vtuber"
+      ],
+      "license": "MIT",
+      "created_at": "2024-12-01T16:33:36Z",
+      "updated_at": "2026-07-29T01:53:09Z",
+      "open_issues": 178,
+      "default_branch": "main",
+      "readme_excerpt": "<picture> <source width=\"100%\" srcset=\"./docs/content/public/banner-dark-1280x640.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"100%\" srcset=\"./docs/content/public/banner-light-1280x640.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"250\" src=\"./docs/content/public/banner-light-1280x640.avif\" /> </picture> <h1 align=\"center\">Project AIRI</h1> <p align=\"center\">Re-creating Neuro-sama, a soul container of AI waifu / virtual characters to bring them into our world.</p> <p align=\"center\"> [<a href=\"https://discord.gg/TgQ3Cu2F7A\">Join Discord Server</a>] [<a href=\"https://airi.moeru.ai\">Try it</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.zh-CN.md\">简体中文</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ja-JP.md\">日本語</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ru-RU.md\">Русский</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.vi.md\">Tiếng Việt</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.fr.md\">Français</a>] [<a href=\"https://github.com/moeru-ai/airi/blob/main/docs/README.ko-KR.md\">한국어</a>] </p> <p align=\"center\"> <a href=\"https://deepwiki.com/moeru-ai/airi\"><img src=\"https://deepwiki.com/badge.svg\"></a> <a href=\"https://github.com/moeru-ai/airi/blob/main/LICENSE\"><img src=\"https://img.shields.io/github/license/moeru-ai/airi.svg?style=flat&colorA=080f12&colorB=1fa669\"></a> <a href=\"https://discord.gg/TgQ3Cu2F7A\"><img src=\"https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FTgQ3Cu2F7A%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&logo=discord&logoColor=white&label=%20&color=7389D8&labelColor=6A7EC2\"></a> <a href=\"https://x.com/proj_airi\"><img src=\"https://img.shields.io/badge/%40proj__airi-black?style=flat&logo=x&labelColor=%23101419&color=%232d2e30\"></a> <a href=\"https://t.me/+7M_ZKO3zUHFlOThh\"><img src=\"https://img.shields.io/badge/Telegram-%235AA9E6?logo=telegram&labelColor=FFFFFF\"></a> <a href=\"./docs/wechat.md\"><img src=\"https://img.shields.io/badge/WeChat-%2307C160?logo=wechat&logoColor=%2307C160&labelColor=FFFFFF\"></a> <a href=\"https://qun.qq.com/universal-share/share?ac=1&authKey=9g00d%2BZS7nORzcJugNNddJ7rCghZTIR7fhXabGwch2S%2BG%2BKGIKwlN1N2nIqkh2jg&busi_data=eyJncm91cENvZGUiOiIxMDU4MTU2Njk3IiwidG9rZW4iOiJmcnkra1hWNFIxNytEcG0zcHRUdVJIaldlRDFxN0dzK080QWtvTEdOQjJkNEY2eUFta1g1clNpbkxSMS9FQWFYIiwidWluIjoiMTI2MDkwNzMzNSJ9&data=b1eJrwn3GVOUh7YIxZ7l9vHQo99HPmRxKPpMKlDCmfzx8Y57IXb2EZCMaOC9rVTd2U558qpNjwUYUWlPHxVHvg&svctype=4&tempid=h5_group_info\"><img src=\"https://img.shields.io/badge/QQ-%2312B7F5?logo=qq&labelColor=FFFFFF\"></a> </p> <p float=\"left\" align=\"center\"> <!-- readme-section:release-binary-windows --> <a href=\"https://github.com/moeru-ai/airi/releases/download/v0.10.2/AIRI-0.10.2-windows-x64-setup.exe\"> <picture> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.windows.dark.en-US.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.windows.light.en-US.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"33%\" src=\"./docs/content/public/assets/download-buttons/download-buttons.windows.light.en-US.avif\" /> </picture> </a> <!-- readme-section:release-binary-macos --> <a href=\"https://github.com/moeru-ai/airi/releases/download/v0.10.2/AIRI-0.10.2-darwin-arm64.dmg\"> <picture> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.macos.dark.en-US.avif\" media=\"(prefers-color-scheme: dark)\" /> <source width=\"33%\" srcset=\"./docs/content/public/assets/download-buttons/download-buttons.macos.light.en-US.avif\" media=\"(prefers-color-scheme: light), (prefers-color-scheme: no-preference)\" /> <img width=\"33%\" src=\"./docs/content/public/assets/download-buttons/download-buttons.macos.light.en-US.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": 0,
+      "streak_days": 2
+    },
+    {
+      "rank": 4,
+      "full_name": "andrewyng/aisuite",
+      "url": "https://github.com/andrewyng/aisuite",
+      "description": "Simple, unified interface to multiple Generative AI providers ",
+      "language": "Python",
+      "stars": 15696,
+      "forks": 1657,
+      "stars_today": 62,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2024-06-30T20:07:46Z",
+      "updated_at": "2026-07-29T01:48:32Z",
+      "open_issues": 140,
+      "default_branch": "main",
+      "readme_excerpt": "> ![OpenWorker](https://img.shields.io/badge/%E2%9C%A8-OpenWorker-8250df?style=for-the-badge) > ## OpenWorker > **A desktop AI coworker, built on aisuite — now in its own repository: [andrewyng/openworker](https://github.com/andrewyng/openworker).** > > OpenWorker chats, does deep research, and carries out real tasks on your computer — reading files with > permission, connecting to Slack/email, producing PDFs, documents, and spreadsheets, and running scheduled > automations. Bring your own API key (OpenAI, Anthropic, Google) or run fully local with Ollama; your data > stays on your machine. > > [**⬇ Download for macOS**](https://github.com/andrewyng/openworker/releases/latest/download/OpenWorker-macos-arm64.dmg) <sub>macOS 13+ (Apple Silicon)</sub> &nbsp;·&nbsp; [**⬇ Download for Windows**](https://github.com/andrewyng/openworker/releases/latest/download/OpenWorker-windows-setup.exe) <sub>Windows 10/11 (x64)</sub> &nbsp;·&nbsp; [**Quickstart**](https://github.com/andrewyng/openworker#readme) > > *OpenWorker development has moved to the new repo. A snapshot of its source remains here under `platform/` for now and will be removed in a future release.* <br> # aisuite [![PyPI](https://img.shields.io/pypi/v/aisuite)](https://pypi.org/project/aisuite/) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) `aisuite` is a lightweight Python library for building with LLMs, in two layers: a unified **Chat Completions API** across providers, and an **Agents API** with tools and toolkits on top. aisuite also powers **OpenWorker**, a desktop AI coworker developed in [its own repository](https://github.com/andrewyng/openworker): ```text ┌───────────────────────────────────────────────┐ │ OpenWorker (separate repo) │ agent harness for doing everyday tasks ├───────────────────────────────────────────────┤ │ Agents API · Toolkits · MCP │ build agents across multiple LLMs ├───────────────────────────────────────────────┤ │ Chat Completions API │ one API across multiple LLM providers ├────────┬───────────┬────────┬────────┬────────┤ │ OpenAI │ Anthropic │ Google │ Ollama │ Others │ └────────┴───────────┴────────┴────────┴────────┘ ``` * **[Chat Completions API](#chat-completions)** — a unified, OpenAI-style interface for *OpenAI, Anthropic, Google, Mistral, Hugging Face, AWS, Cohere, Ollama, OpenRouter, Requesty*, and more. Swap providers by changing one string. * **[Agents API · Toolkits · MCP](#agents)** — give models real Python functions as tools, run multi-turn loops, attach ready-made toolkits (files, git, shell) or any MCP server, and govern it all with tool policies. * **[OpenWorker](https://github.com/andrewyng/openworker)** — a desktop AI coworker built using aisuite, shipped as an app for everyday tasks. Developed in its own repository. --- ## Installation Install the base package, or include the SDKs of the providers you plan to use: ```shell pip install aisuite # base package, no provider SDKs pip install 'aisuite[anthropic]' # with a specific provider's SDK pip install 'aisuite[all]' # with all provider SDKs ``` You'll also need API keys for the providers you call — the [Chat Completions quickstart](docs/chat-completions-quickstart.md) covers key setup and your first calls. Looking for the OpenWorker desktop app? Downloads are on [its releases page](https://github.com/andrewyng/openworker/releases/latest). --- <a id=\"chat-completions\"></a> ## Chat Completions — one API across providers The chat API provides a high-level abstraction for model interactions. It supports all core parameters (`temperature`, `max_tokens`, `tools`, etc.) in a provider-agnostic way, and standardizes request and response structures so you can focus on logic rather than SDK differences. Model names use the format `<provider>:<model-name>`; aisuite routes the call to the right provider with the right parameters: ```python import aisuite as ai client = ai.Client() models = [\"openai:gpt-4o\", \"anthropic:",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 234848,
+      "forks": 35785,
+      "stars_today": 636,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-07-29T01:56:56Z",
+      "open_issues": 89,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/hero.png\" alt=\"ECC - the agent harness operating system\" width=\"100%\" /> </p> <p align=\"center\"> <strong>Language:</strong> <a href=\"README.md\">English</a> | <a href=\"docs/pt-BR/README.md\">Português (Brasil)</a> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"docs/zh-TW/README.md\">繁體中文</a> | <a href=\"docs/ja-JP/README.md\">日本語</a> | <a href=\"docs/ko-KR/README.md\">한국어</a> | <a href=\"docs/tr/README.md\">Türkçe</a> | <a href=\"docs/ru/README.md\">Русский</a> | <a href=\"docs/vi-VN/README.md\">Tiếng Việt</a> | <a href=\"docs/th/README.md\">ไทย</a> | <a href=\"docs/de-DE/README.md\">Deutsch</a> | <a href=\"docs/es/README.md\">Español</a> </p> <p align=\"center\"> <a href=\"https://discord.gg/36yGMHGFbR\"><img src=\"https://img.shields.io/discord/1496644400590094540?logo=discord&logoColor=white&label=Discord&color=5865F2\" alt=\"Discord\" /></a> <a href=\"https://ecc.tools\"><img src=\"https://img.shields.io/badge/Website-ecc.tools-E07856?logo=googlechrome&logoColor=white\" alt=\"Website\" /></a> <a href=\"https://github.com/apps/ecc-tools\"><img src=\"https://img.shields.io/badge/GitHub%20App-ECC%20Tools-181717?logo=github&logoColor=white\" alt=\"GitHub App\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT license\" /></a> </p> <p align=\"center\"> <a href=\"https://github.com/affaan-m/ECC/stargazers\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fstars&style=flat\" alt=\"Stars\" /></a> <a href=\"https://github.com/affaan-m/ECC/network/members\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fforks&style=flat\" alt=\"Forks\" /></a> <a href=\"https://github.com/affaan-m/ECC/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/affaan-m/ECC?style=flat\" alt=\"Contributors\" /></a> <a href=\"https://github.com/marketplace/ecc-tools\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Finstalls&logo=github\" alt=\"GitHub App installs\" /></a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/ecc-universal\"><img src=\"https://img.shields.io/npm/dw/ecc-universal?label=ecc-universal&logo=npm\" alt=\"ecc-universal npm downloads\" /></a> <a href=\"https://www.npmjs.com/package/ecc-agentshield\"><img src=\"https://img.shields.io/npm/dw/ecc-agentshield?label=ecc-agentshield&logo=npm\" alt=\"ecc-agentshield npm downloads\" /></a> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white\" alt=\"Shell\" /> <img src=\"https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white\" alt=\"TypeScript\" /> <img src=\"https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" /> <img src=\"https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white\" alt=\"Go\" /> <img src=\"https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white\" alt=\"Java\" /> <img src=\"https://img.shields.io/badge/-Perl-39457E?logo=perl&logoColor=white\" alt=\"Perl\" /> <img src=\"https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white\" alt=\"Markdown\" /> </p> > [!WARNING] > **Official sources only.** Install ECC only from verified channels: the GitHub repository [github.com/affaan-m/ECC](https://github.com/affaan-m/ECC), the npm packages [`ecc-universal`](https://www.npmjs.com/package/ecc-universal) and [`ecc-agentshield`](https://www.npmjs.com/package/ecc-agentshield), the [GitHub App](https://github.com/apps/ecc-tools), the plugin slug `ecc@ecc`, and the project website [ecc.tools](https://ecc.tools). Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. <div align=\"center\"> <table aria-label=\"ECC primary links\"> <tr> <td width=\"33%\" align=\"center\"> <a href=\"https://ecc.tools/pricing\"> <img src=\"assets/images/community/ecc-tools-mark.svg\" height=\"42\" alt=\"ECC Tools\" /><br /> <strong>ECC Pro + GitHub App</strong> </a><br /> <sub><a href=\"https://gith",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "hello245m/free-stockdb",
+      "url": "https://github.com/hello245m/free-stockdb",
+      "description": "面向 A 股日K、分钟K与ETF分钟数据的本地量化引擎，集成增量同步、本地缓存、复权、批量查询、回测与指标计算。",
+      "language": "HTML",
+      "stars": 1322,
+      "forks": 213,
+      "stars_today": 50,
+      "topics": [
+        "a-share",
+        "algorithmic-trading",
+        "backtesting",
+        "china-stock-market",
+        "kline",
+        "local-first",
+        "market-data",
+        "mcp",
+        "quant-research",
+        "quantitative-finance",
+        "stock-data",
+        "stock-market",
+        "technical-analysis",
+        "time-series-database"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-08T13:34:17Z",
+      "updated_at": "2026-07-29T01:56:43Z",
+      "open_issues": 5,
+      "default_branch": "main",
+      "readme_excerpt": "[07-27]经过众多用户几个月测试，bug已基本消除，即将提供mac和linux版本！ # free-stockdb ## 本地量化数据引擎 面向 A 股日K、分钟K与 ETF 分钟、tick级数据的本地量化引擎。free-stockdb 将数据同步、清洗、复权、组织为可直接用于批量查询、批量计算研究的数据底座。 **❤️双击更新 -> 双击启动 -> 直接调用。** [下载地址1](https://github.com/hello245m/free-stockdb/releases/download/%E6%B5%8B%E8%AF%95%E7%89%88%E6%9C%AC0.2.1/free-stockdb-windows-v0.2.1-more-power.zip) 数据本地落盘，研究不再依赖远程接口。 | 本地优先 | 增量同步 | 数据支持(按需) | 本地指标计算 | 五种调用方式 | |---|---|---|---|---| | 数据在用户磁盘 | 只处理变化数据 | 日/周/月/1/5/15/30分钟/tick | 39 种指标、5 种指数 | Python / HTTP / Excel / HTML / MCP | ```mermaid flowchart TB A[\"数据更新：同步、清洗、复权、增量\"] --> B[\"free-stockdb 本地数据与计算引擎\"] B --> C[\"Python SDK\"] B --> D[\"HTTP API\"] B --> E[\"Excel / WPS\"] B --> F[\"HTML 网页\"] B --> G[\"AI MCP\"] ``` 同步后的查询、计算、回测和接口都使用本机数据，不与远程请求链路耦合。 ## 为什么需要本地数据引擎 全市场批量回测的瓶颈不是策略代码，而是数据工程。以全市场 7000+ 股票分钟线回测为例，远程 API 方案的真实工作量： | 环节 | 在线 API 方案的真实耗时 | free-stockdb | |---|---|---| | 数据下载 | 全市场分钟数据逐股请求，受限频/积分/IP 风控约束，实测需要**3-5 天**；爬虫方案批量拉取封号/限频 | 通过 `sync_url.txt` 配置数据源，Zstd 压缩传输，增量同步，断点续传 | | 数据清洗 | 处理停牌、退市、代码变更、缺失补拉、时间排序，**1-2 天** | 同步流程自动完成 | | 复权处理 | 获取分红送转数据、推算复权因子、历史回刷，**1-2 天** | 内置完整复权因子，查询时写时计算 | | 存储设计 | 选型数据库、设计表结构、建索引、批量入库、优化查询，**1-3 天** | 定制 C++ 时序引擎，开箱即用 | | 指标计算 | 编写 MA/MACD/KDJ 等公式、pandas 全市场遍历极慢（单次数小时），**2-3 天** | 内置 39 指标 + 5 指数，Rust 计算核心比 pandas 快 3 倍，**数秒完成** | | 板块映射 | 爬取概念/行业数据、构建双向索引、持续维护，**1-2 天** | 内置申万一二三级 + 1200 概念板块，`bk.get()` 毫秒查询 | | 接口对接 | Python/HTTP/Excel/AI 各自对接维护，**1-2 天** | 五种调用方式统一内置 | | **合计** | **最少 10-15 个工作日才能跑通第一个全市场策略** | **30 分钟内从零到可运行** | 远程 API 方案在全市场回测场景下不是慢，是跑不通。free-stockdb 将数据工程与策略研究完整解耦：数据更新在同步层完成，策略只读本地数据集，数据源可替换，研究接口不变。 ## 已集成的数据工程 | 使用者原本需要维护 | 启动后直接获得 | |---|---| | 接口 Token、限频、封ip、断点恢复和全市场数据调度 | 数据源增量同步、文件校验和本地存量数据 | | 新股、停牌、退市、代码变更、时间排序与历史修正 | 统一的数据组织、复权因子与查询协议 | | 数据库选型、表结构、索引、批量入库和查询优化 | 本地 C++ 时序数据服务，按代码和时间范围批量读取 | | pandas/DataFrame 拼接、指标滚动计算与中间缓存 | `zb.get()` 批量指标和指数计算接口 | | Python、HTTP、Excel、网页、AI 工具的多套对接 | 一套本地协议对应 Python SDK、HTTP API、Excel/WPS、HTML、MCP | 数据完成同步后，查询、计算和回测只依赖本地数据集；更新与研究彼此独立。 ## 两分钟开始 Windows 使用者可从 [Releases](https://github.com/hello245m/free-stockdb/releases) 下载发行包。首次运行： ```text 1. 运行数据更新工具 2. 数据同步到 ./data 3. 启动 stockdb (仅2.2mb) 4. 直接使用 Python、HTTP、Excel/WPS、网页或 MCP 查询本机数据 ``` 已有数据完整落盘在 `./data`；后续更新只处理变化数据，离线时仍可继续查询、回测和计算。 ## 数据存储与数据源 历史数据采用 Zstd 压缩，不按未压缩记录体积占用磁盘，比csv/mysql小3倍以上。首次同步从配置的数据源获取历史数据，后续只更新增量，不走逐股、逐页的远程 API 拉取流程。 默认数据集聚焦高频行情与复权，底层数据库支持任意自定义数据存储，低频率数据：财报、宏观、资金流等可按需要接入同一套本地查询与计算引擎。 ## 核心能力 ### 本地全市场数据运行时 - 日线、周线、月线，以及 1/5/15/30 分钟 K 线，tick级数据(按需) - 价格、成交量、成交额、换手率、估值、市值、ST 等常用字段 - 前复权、后复权、不复权和原始复权因子查询 - 股票、ETF、行业和概念板块的组织与双向查询 - 本地存储、无远程查询延迟，研究和回测不受远程 API 并发配额影响 - 可配置局域网服务，多人协作、分布式回测。 ### 批量查询与计算 ```python result = get_data( code=7000_codes, # 7000+ 股票 / ETF start=any_start, # 任意时间周期 end=any_end, frequency=any_frequency,# 分钟 / 日 / 周 / 月 fq=any_fq, # 前复权 / 后复权 / 不复权 fields=any_fields, # 任意单多字段筛选 as_df=False/True # 返回list、dict、 DataFrame ) ``` ```python result = zb.get( name=\"ma,kdj,macd,....\", # 39指标 / 5种指数计算 codes=7000_codes, # 单股 / 批量 / 全市场 start=any_start, # 任意时间范围 end=any_end, frequency=any_frequency, # 分钟 / 日 / 周 / 月 fq=any_fq, # 前复权 / 后复权 / 不复权 n=[\"5,10,20\", None, \"12,26,9\"], # 每个指标独立参数 cross=\"with_value\" # 原始指标 / 金叉信号 / 二者同时返回 ) ``` ```python result = bk.get( x=code_or_board_or_codes, # 股票代码 / 板块名称或代码 / 批量股票 category=0-3, # 概念板块 / 申万一级 / 申万二级 / 申万三级 fields=\"code,name,symbols\" # 任意单多字段筛选 ) ``` `get_data()` 面向全市场、长周期和字段筛选；`zb.get()` 面向 39 种技术指标和 5 种指数计算；`bk.get()` 用于股票与行业/概念板块的双向映射。数据和计算始终在本机服务侧完成，避免研究代码反复把全市场数据搬运到远程 API 或临时 DataFrame 中。股票优化查询器rd.get/keys/vals()支持区间a>b，正则*，排序，截取[:num]，遍历，类SQL查询。 **内置 39 种技术指标：** | 类别 | 指标 | |---|---| | 趋势类 | MA、EMA、SMA、WMA、DMA、EXPMA、TRIX、DMI、DFMA、BBI | | 震荡类 | MACD、KDJ、RSI、WR、CCI、PSY、BIAS、ROC、MTM、DPO | | 通道类 | BOLL、KTN、TAQ | | 量价类 | OBV、VR、EMV、MFI、CR、MASS | | 综合类 | ATR、ASI、BRAR、XSII、STD、SUM、HHV、LLV、REF | **5 种指数计算方法（zhishu）：** 等权、流通市值加权、成交额加权、成交量加权、总市值加权 ### 五种调用方式 | 调用方式 | 适用场景 | |---|---| | Python SDK | 回测、研究和策略开发（同步 `get_data()` / 异步 `get_data_async()`） | | HTTP API | 任意语言与本地系统集成（`http://127.0.0.1:7899/?cmd=get&t=...`） ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "huggingface/speech-to-speech",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "description": "Build local voice agents with open-source models",
+      "language": "Python",
+      "stars": 7293,
+      "forks": 957,
+      "stars_today": 227,
+      "topics": [
+        "ai",
+        "assistant",
+        "language-model",
+        "machine-learning",
+        "python",
+        "speech",
+        "speech-synthesis",
+        "speech-to-text",
+        "speech-translation"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-08-07T15:32:09Z",
+      "updated_at": "2026-07-29T01:54:35Z",
+      "open_issues": 115,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <div>&nbsp;</div> <img src=\"https://raw.githubusercontent.com/huggingface/speech-to-speech/main/logo.png\" width=\"600\"/> # Speech To Speech: Build voice agents with open-source models [![PyPI](https://img.shields.io/pypi/v/speech-to-speech)](https://pypi.org/project/speech-to-speech/) [![Python](https://img.shields.io/pypi/pyversions/speech-to-speech)](https://pypi.org/project/speech-to-speech/) [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](./LICENSE) </div> A low-latency, fully modular voice-agent pipeline: **VAD -> STT -> LLM -> TTS**, exposed through an **OpenAI Realtime-compatible WebSocket API**. Every component is swappable. The LLM slot speaks OpenAI-compatible protocols, so you can point it at a hosted provider, at [HF Inference Providers](https://huggingface.co/inference-providers), or at a vLLM or llama.cpp server on your own hardware for a fully local, fully open stack. This pipeline runs in production as the conversation backend for thousands of [Reachy Mini](https://huggingface.co/blog/reachy-mini) robots. <p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"./docs/assets/endpoint-swap-dark.gif\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"./docs/assets/endpoint-swap-light.gif\"> <img src=\"./docs/assets/endpoint-swap-light.gif\" alt=\"Switching an OpenAI Realtime client endpoint from hosted OpenAI to a self-hosted speech-to-speech server\" width=\"640\"> </picture> </p> ## Quickstart ```bash pip install speech-to-speech export OPENAI_API_KEY=... speech-to-speech ``` This starts an OpenAI Realtime-compatible server at `ws://localhost:8765/v1/realtime` using Parakeet TDT for local STT, an OpenAI-compatible LLM, and Qwen3-TTS for local speech output. From a source checkout, talk to it from a second terminal: ```bash python scripts/listen_and_play_realtime.py --host 127.0.0.1 --port 8765 ``` Prefer to keep the LLM on your own machine? Serve Gemma 4 with llama.cpp: ```bash llama-server -hf ggml-org/gemma-4-E4B-it-GGUF -np 2 -c 65536 -fa on --swa-full ``` Then point the OpenAI-compatible LLM backend at it: ```bash speech-to-speech \\ --model_name \"ggml-org/gemma-4-E4B-it-GGUF\" \\ --responses_api_base_url \"http://127.0.0.1:8080/v1\" \\ --responses_api_api_key \"\" ``` Any OpenAI Realtime-compatible client can connect. See [Realtime API](#realtime-api) for the protocol and [LLM backends](#llm-backends) for provider and local-server options. ## Index * [How it works](#how-it-works) * [Installation](#installation) * [Supported components](#supported-components) * [Run modes](#run-modes) * [Realtime API](#realtime-api) * [LLM backends](#llm-backends) * [Multi-language support](#multi-language-support) * [Pocket TTS](#pocket-tts) * [CLI reference](#cli-reference) * [Contributing](#contributing) * [Star history](#star-history) * [Citations](#citations) ## How it works The pipeline is a cascade of four components, each running in its own thread and connected by queues: 1. **Voice Activity Detection (VAD)**: [Silero VAD v5](https://github.com/snakers4/silero-vad) detects speech boundaries and turn-taking. 2. **Speech to Text (STT)**: transcribes the user's turn, with optional live partial transcripts. 3. **Language Model (LLM)**: generates the response, streaming text and tool calls. 4. **Text to Speech (TTS)**: synthesizes audio and streams it back to the client. Every stage has multiple interchangeable backends, selected via CLI flags. The code is designed for easy modification, with a focus on models available through Transformers and the Hugging Face Hub. ## Installation Requires Python 3.10+. ```bash pip install speech-to-speech ``` The default install covers the standard realtime path: - Parakeet TDT for STT - OpenAI-compatible API for the language model - Qwen3-TTS for speech output, using the GGML backend by default on non-macOS platforms and `mlx-audio` on Apple Silicon - local audio and realtime server modes macOS and non-macOS dependencies are resol",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "virgiliojr94/book-to-skill",
+      "url": "https://github.com/virgiliojr94/book-to-skill",
+      "description": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+      "language": "Python",
+      "stars": 11478,
+      "forks": 1344,
+      "stars_today": 423,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-01T02:09:39Z",
+      "updated_at": "2026-07-29T01:57:34Z",
+      "open_issues": 14,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"docs/assets/logo.png\" alt=\"book-to-skill logo\" width=\"120\"> </p> <h1 align=\"center\">book-to-skill</h1> <p align=\"center\"> <strong>Turn any technical book, document folder, or collection of sources into a unified agent skill — ready to study, reference, and use while you work in GitHub Copilot CLI, Amp, or Claude Code.</strong> </p> <p align=\"center\"> <a href=\"https://github.com/virgiliojr94/book-to-skill/releases\"><img src=\"https://img.shields.io/github/v/release/virgiliojr94/book-to-skill?style=for-the-badge&color=blueviolet\" alt=\"Latest release\"></a> <img src=\"https://img.shields.io/badge/Agent_Skills-Open_Standard-blueviolet?style=for-the-badge\" alt=\"Agent Skills standard\"> <img src=\"https://img.shields.io/badge/PDF%20%E2%80%A2%20EPUB%20%E2%80%A2%20DOCX%20%E2%80%A2%20MD%20%E2%80%A2%20HTML%20%E2%80%A2%20RTF%20%E2%80%A2%20MOBI-supported-green?style=for-the-badge\" alt=\"Formats supported\"> <img src=\"https://img.shields.io/badge/License-MIT-blue?style=for-the-badge\" alt=\"MIT License\"> <a href=\"https://github.com/sponsors/virgiliojr94\"><img src=\"https://img.shields.io/github/sponsors/virgiliojr94?style=for-the-badge&color=ea4aaa&logo=githubsponsors&logoColor=white\" alt=\"Sponsor\"></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/27038?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-27038\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/27038\" alt=\"virgiliojr94%2Fbook-to-skill | Trendshift\" width=\"250\" height=\"55\"/></a> </p> <p align=\"center\"> 🏆 <strong>#10 Python Repository of the Day</strong> and <strong>#25 Repository of the Day</strong> on Trendshift (May 23, 2026) </p> <p align=\"center\"> <a href=\"#-why\">Why</a> · <a href=\"#-what-it-generates\">What it generates</a> · <a href=\"#-beyond-books\">Beyond books</a> · <a href=\"#-usage\">Usage</a> · <a href=\"#-requirements\">Requirements</a> · <a href=\"#-how-it-works\">How it works</a> · <a href=\"#-the-discovery-loop-tax\">Discovery Loop Tax</a> · <a href=\"#-faq\">FAQ</a> · <a href=\"#-install\">Install</a> · <a href=\"CHANGELOG.md\">Changelog</a> · <a href=\"docs/PERFORMANCE.md\">Performance</a> · <a href=\"docs/ARCHITECTURE.md\">Architecture</a> </p> <p align=\"center\"> <strong>24×–51× fewer tokens than dumping the book into context</strong> to answer one question, measured on real books (<a href=\"#-the-discovery-loop-tax\">how it's measured</a>). </p> **How it works, in 3 steps:** 1. **Point** it at a file, folder, or glob — `/book-to-skill ./my-book.pdf` 2. **It distills** the book into a skill — frameworks, decision rules, anti-patterns, and per-chapter files. Structure, not a summary. 3. **Your agent loads it on demand** — ask `/my-book replication` and it reads the right chapter and answers from the real content, no hallucination. --- ## 🤔 Why You buy a great technical book. You read it once. Three months later you can't remember chapter 7 existed. The usual workarounds don't help: - 📄 \"Let me just search the PDF\" → you get a list of pages, not answers - 🧠 \"I'll ask the agent about this book\" → it either hallucinates or says it doesn't have the content - 📝 \"I'll take notes as I read\" → you end up with a 200-line doc you never open again **book-to-skill solves this by turning the book into a structured skill your agent loads on demand.** Once installed, you just type `/your-book-slug replication` and the agent reads the right chapter and answers from the actual content. No hallucination. No digging through PDFs. The book becomes part of your workflow. Works with any host that supports the open [Agent Skills](https://github.com/agentskills/agentskills) standard — GitHub Copilot CLI, Amp, and Claude Code all read the same `SKILL.md` format. --- ## 📦 What it generates Running `/book-to-skill your-book.pdf` (or a folder, glob, or list of files) creates a full skill in your agent's skills directory (`~/.copilot/skills/<slug>/` for Copilot CLI, `~/.agents/skills/<slug",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "opengeos/GeoLibre",
+      "url": "https://github.com/opengeos/GeoLibre",
+      "description": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+      "language": "TypeScript",
+      "stars": 3427,
+      "forks": 392,
+      "stars_today": 607,
+      "topics": [
+        "data-science",
+        "duckdb",
+        "geospatial",
+        "maplibre",
+        "maplibre-gl-js",
+        "tauri-app"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-27T19:34:31Z",
+      "updated_at": "2026-07-29T01:56:38Z",
+      "open_issues": 11,
+      "default_branch": "main",
+      "readme_excerpt": "# GeoLibre [![Launch GeoLibre Web](https://img.shields.io/badge/Launch-GeoLibre%20Web-green.svg)](https://web.geolibre.app/) [![GeoLibre shared project](https://img.shields.io/badge/GeoLibre-share-green.svg)](https://share.geolibre.app) [![GeoLibre plugins](https://img.shields.io/badge/GeoLibre-plugins-green.svg)](https://plugins.geolibre.app) [![image](https://img.shields.io/pypi/v/geolibre.svg)](https://pypi.python.org/pypi/geolibre) [![image](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/opengeos/GeoLibre/blob/main/python/examples/getting-started.ipynb) [![image](https://img.shields.io/conda/vn/conda-forge/geolibre.svg)](https://anaconda.org/conda-forge/geolibre) [![Conda Recipe](https://img.shields.io/badge/recipe-geolibre-green.svg)](https://github.com/conda-forge/geolibre-feedstock) [![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?logo=codesandbox)](https://codesandbox.io/p/github/opengeos/geolibre) [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-GeoLibre-0078D4?logo=windows)](https://apps.microsoft.com/detail/9nwt67rv531x) [![AUR version](https://img.shields.io/aur/version/geolibre-bin?logo=archlinux&label=AUR)](https://aur.archlinux.org/packages/geolibre-bin) [![FlatPark](https://img.shields.io/badge/FlatPark-GeoLibre-4A90D9?logo=flatpak)](https://flatpark.org/apps/app.geolibre.GeoLibre/) [![image](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20785400.svg)](https://doi.org/10.5281/zenodo.20785400) A free and open-source, lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs everywhere you do, in the web browser, on the desktop, on mobile, and inside Jupyter notebooks, all while keeping your data local and private. GeoLibre is built with **Tauri v2**, **React**, **TypeScript**, **MapLibre GL JS**, **DuckDB-WASM Spatial**, and **deck.gl**. The same workspace runs as a native desktop app, a native Android app, in any modern web browser, and adapts responsively to mobile and small screens. - **[Launch GeoLibre Web](https://web.geolibre.app/)** — the full app in your browser, nothing to install - **[Download the desktop app](https://geolibre.app/downloads/)** — Windows, macOS, and Linux installers - **[Get started](https://geolibre.app/getting-started/)** — install, run from source, and configure - **[Features](https://geolibre.app/features/)** — the complete feature list ## Demos **Click any screenshot to open it at full resolution, or any animation to play the full-quality video.** ### 3D Tiles [![GeoLibre demo showing 3D Tiles rendered on a MapLibre map](https://files.opengeos.org/GeoLibre-demo.webp)](https://files.opengeos.org/GeoLibre-demo.webp) [Open the live project](https://share.geolibre.app/giswqs/3d-tiles) ### NYC buildings and subways Manhattan building footprints extruded in 3D and colored by construction era, with the MTA subway lines and stations on top and a legend generated automatically from the layers' symbology. [![Manhattan buildings extruded in 3D and colored by construction era, with MTA subway lines and stations and an auto-generated legend](https://files.opengeos.org/nyc-buildings.webp)](https://files.opengeos.org/nyc-buildings.webp) The animation below runs the Time Slider along the buildings' construction year, from 1850 to 2025, so Manhattan fills in era by era. Click it to play the full-quality video. [![Animation of Manhattan buildings appearing by construction year as the Time Slider advances from 1850 to 2025](https://files.opengeos.org/nyc-buildings-gif.gif)](https://files.opengeos.org/nyc-buildings.webm) [Open the live project](https://share.geolibre.app/giswqs/nyc-buildings-and-subways) ### Planetary basemaps GeoLibre is not limited to Earth. Planetary basemaps from OpenPlanetaryMap and USGS Astrogeology cover the Moon, Mars, Mercury, Venus",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -5,
+      "streak_days": 2
+    },
+    {
+      "rank": 10,
+      "full_name": "paperswithbacktest/awesome-systematic-trading",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "language": "Python",
+      "stars": 9657,
+      "forks": 1297,
+      "stars_today": 309,
+      "topics": [
+        "algorithmic-trading",
+        "algotrading",
+        "alpha",
+        "arbitrage-bot",
+        "awesome",
+        "awesome-list",
+        "book",
+        "finance",
+        "futures",
+        "futures-historical-data",
+        "futures-market",
+        "futuresmarkets",
+        "paper",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading",
+        "trading-algorithms",
+        "trading-bot",
+        "trading-strategies"
+      ],
+      "license": "",
+      "created_at": "2022-02-05T20:48:52Z",
+      "updated_at": "2026-07-29T01:56:52Z",
+      "open_issues": 45,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"static/images/awesome-systematic-trading.jpeg\" height=200 alt=\"\"/> <h1>Awesome Systematic Trading</h1> </div> <div align=center><img src=\"https://awesome.re/badge.svg\" /></div> [希望阅读中文版？点我](./README_zh.md) We are collecting a list of resources papers, softwares, books, articles for finding, developing, and running systematic trading (quantitative trading) strategies. <!-- omit in toc --> ### What will you find here? - [97 libraries and packages](#libraries-and-packages) for research and live trading - [40+ strategies](#strategies) described by institutionals and academics - [55 books](#books) for beginners and professionals - [23 videos](#videos) and interviews - And also some [blogs](#blogs) and [courses](#courses) <div align=\"center\" style=\"margin-bottom: 50px; margin-top: 50px;\"> <div style=\"border: 2px solid #007bff; border-radius: 10px; padding: 20px; margin-bottom: 20px;\"> <h2>📈 Interested in trading strategies implemented in Python?</h2> <p>Visit our comprehensive collection at <a href=\"https://paperswithbacktest.com\" target=\"_blank\">paperswithbacktest.com</a> for exclusive content!</p> </div> </div> <details> <summary>Click here to see the full table of content</summary> - [Libraries and packages](#libraries-and-packages) - [Backtesting and Live Trading](#backtesting-and-live-trading) - [General - Event Driven Frameworks](#general---event-driven-frameworks) - [General - Vector Based Frameworks](#general---vector-based-frameworks) - [Cryptocurrencies](#cryptocurrencies) - [Trading bots](#trading-bots) - [Analytics](#analytics) - [Indicators](#indicators) - [Metrics computation](#metrics-computation) - [Optimization](#optimization) - [Pricing](#pricing) - [Risk](#risk) - [Broker APIs](#broker-apis) - [Data Sources](#data-sources) - [General](#general) - [Cryptocurrencies](#cryptocurrencies-1) - [Data Science](#data-science) - [Databases](#databases) - [Graph Computation](#graph-computation) - [Machine Learning](#machine-learning) - [TimeSeries Analysis](#timeseries-analysis) - [Visualization](#visualization) - [Strategies](#strategies) - [Bonds, commodities, currencies, equities](#bonds-commodities-currencies-equities) - [Bonds, commodities, equities, REITs](#bonds-commodities-equities-reits) - [Bonds, equities](#bonds-equities) - [Bonds, equities, REITs](#bonds-equities-reits) - [Commodities](#commodities) - [Cryptos](#cryptos) - [Currencies](#currencies) - [Equities](#equities) - [Books](#books) - [Beginner](#beginner) - [Biography](#biography) - [Coding](#coding) - [Crypto](#crypto) - [General](#general-1) - [High Frequency Trading](#high-frequency-trading) - [Machine Learning](#machine-learning-1) - [Videos](#videos) - [Blogs](#blogs) - [Courses](#courses) </details> <!-- omit in toc --> > ### How can I help? > You can help by submitting an issue with suggestions and by sharing on Twitter: > > [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20free%20and%20comprehensive%20list%20of%20papers%2C%20libraries%2C%20books%2C%20blogs%2C%20tutorials%20for%20quantitative%20traders.&url=https://github.com/paperswithbacktest/awesome-systematic-trading) # Libraries and packages *List of **97 libraries and packages** implementing trading bots, backtesters, indicators, pricers, etc. Each library is categorized by its programming language and ordered by descending populatrity (number of stars).* ## Backtesting and Live Trading ### General - Event Driven Frameworks | Repository | Description | Stars | Made with | |------------|-------------|-------|-----------| | [vnpy](https://github.com/vnpy/vnpy) | Python-based open source quantitative trading system development framework, officially released in January 2015, has grown step by step into a full-featured quantitative trading platform | ![GitHub stars](https://badgen.net/github/stars/vnpy/vnpy) | ![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg) | | [zi",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "microsoft/agent-governance-toolkit",
+      "url": "https://github.com/microsoft/agent-governance-toolkit",
+      "description": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+      "language": "Python",
+      "stars": 5225,
+      "forks": 835,
+      "stars_today": 46,
+      "topics": [
+        "agent-framework",
+        "ai-agents",
+        "ai-safety",
+        "compliance",
+        "governance",
+        "microsoft",
+        "owasp",
+        "policy-engine",
+        "python",
+        "security",
+        "trust",
+        "zero-trust"
+      ],
+      "license": "MIT",
+      "created_at": "2026-03-02T22:11:47Z",
+      "updated_at": "2026-07-29T01:52:29Z",
+      "open_issues": 161,
+      "default_branch": "main",
+      "readme_excerpt": "🌍 [English](/README.md) | [日本語](./docs/i18n/README.ja.md) | [简体中文](./docs/i18n/README.zh-CN.md) | [한국어](./docs/i18n/README.ko.md) ![Agent Governance Toolkit](docs/assets/readme-banner.svg) # Agent Governance Toolkit ### Ship agents to production without losing sleep <p align=\"center\"> <a href=\"https://microsoft.github.io/agent-governance-toolkit\"> <img src=\"https://img.shields.io/badge/%F0%9F%93%96_Full_Documentation-microsoft.github.io%2Fagent--governance--toolkit-0078D4?style=for-the-badge&logoColor=white\" alt=\"Full Documentation\" height=\"40\"> </a> </p> <p align=\"center\"> <strong> 🚀 <a href=\"#quick-start\">Quick Start</a> · 📋 <a href=\"#specifications\">Specifications</a> · 📦 <a href=\"https://pypi.org/project/agent-governance-toolkit/\">PyPI</a> · 📝 <a href=\"CHANGELOG.md\">Changelog</a> </strong> </p> [![CI](https://github.com/microsoft/agent-governance-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/microsoft/agent-governance-toolkit/actions/workflows/ci.yml) [![Discord](https://dcbadge.limes.pink/api/server/7aVPCcVh?style=flat)](https://discord.gg/7aVPCcVh) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![PyPI version](https://img.shields.io/pypi/v/agent-governance-toolkit?label=PyPI)](https://pypi.org/project/agent-governance-toolkit/) [![npm](https://img.shields.io/npm/v/%40microsoft/agent-governance-sdk?label=npm)](https://www.npmjs.com/package/@microsoft/agent-governance-sdk) [![NuGet](https://img.shields.io/nuget/v/Microsoft.AgentGovernance?label=NuGet)](https://www.nuget.org/packages/Microsoft.AgentGovernance) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/microsoft/agent-governance-toolkit/badge)](https://scorecard.dev/viewer/?uri=github.com/microsoft/agent-governance-toolkit) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/12085/badge)](https://www.bestpractices.dev/projects/12085) [![OWASP Agentic Top 10](https://img.shields.io/badge/OWASP_Agentic_Top_10-10%2F10_Covered-blue)](docs/compliance/owasp-agentic-top10-architecture.md) [![AARM Extended](https://img.shields.io/badge/AARM-Extended_(R1–R9)-brightgreen)](https://aarm.dev/builders/agent-governance-toolkit-microsoft) [![ATF](https://img.shields.io/badge/ATF-All_5_Elements-brightgreen)](https://agentictrustframework.ai/ecosystem) > [!IMPORTANT] > **Public Preview** -- production-quality public preview releases. May have breaking changes before GA. Policy enforcement, identity, sandboxing, and SRE for autonomous AI agents. One `pip install`, any framework. --- ## The Problem Your AI agents call tools, browse the web, query databases, and delegate to other agents. Once deployed, they make decisions autonomously. You need answers to three questions: **1. Is this action allowed?** An agent with access to `send_email` and `query_database` should not be able to `drop_table`. OAuth scopes and IAM roles control which services an agent can reach, not what it does once connected. **2. Which agent did this?** In a multi-agent system, five agents might share a single API key. When something goes wrong, \"an agent did it\" is not an incident response. **3. Can you prove what happened?** Auditors and regulators need tamper-evident records of every decision: what policy was active, what the agent requested, and why it was allowed or denied. Prompt-level safety (\"please follow the rules\") is not a control surface. It is a polite request to a stochastic system. [OWASP LLM01:2025](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) states this explicitly: *\"it is unclear if there are fool-proof methods of prevention for prompt injection.\"* The published numbers back this up. [Andriushchenko et al. (ICLR 2025)](https://arxiv.org/abs/2404.02151) report **100% attack success rate** on GPT-4o, GPT-3.5, Claude 3, and Llama-3 using adaptive attacks with logprob access and suffix optimization, evaluated against the [JailbreakBench](https://arxiv.org/abs/2404.01318) benchmark (Chao et al., NeurIPS 202",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "yorukot/superfile",
+      "url": "https://github.com/yorukot/superfile",
+      "description": "Pretty fancy and modern terminal file manager",
+      "language": "Go",
+      "stars": 21503,
+      "forks": 698,
+      "stars_today": 662,
+      "topics": [
+        "bubbletea",
+        "cli",
+        "file-manager",
+        "filemanager",
+        "filesystem",
+        "golang",
+        "hacktoberfest",
+        "linux-app",
+        "terminal-app",
+        "terminal-based",
+        "tui"
+      ],
+      "license": "MIT",
+      "created_at": "2024-03-19T15:49:52Z",
+      "updated_at": "2026-07-29T01:52:41Z",
+      "open_issues": 220,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h4>superfile is supported by the community.</h4> <a href=\"https://ko-fi.com/yorukot\"> <img alt=\"Donate to superfile on Ko-fi\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\"> </a> <hr> </div> <div align=\"center\"> <br> <picture> <source width=\"300\" media=\"(prefers-color-scheme: dark)\" srcset=\"website/src/assets/superfile-night.svg\" /> <source width=\"300\" media=\"(prefers-color-scheme: light)\" srcset=\"website/src/assets/superfile-day.svg\" /> <img alt=\"superfile LOGO\" src=\"website/src/assets/superfile-day.svg\" /> </picture> <br><br> [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/yorukot/superfile/refs/heads/main/LICENSE) [![Discord Link](https://img.shields.io/discord/1338415256875307110?label=discord&logo=discord&logoColor=white)](https://discord.gg/YYtJ23Du7B) [![Release](https://img.shields.io/github/v/release/yorukot/superfile.svg?style=flat-square)](https://github.com/yorukot/superfile/releases/latest) ![Homebrew downloads](https://img.shields.io/homebrew/installs/dy/superfile?label=Homebrew) ![GitHub downloads](https://img.shields.io/github/downloads/yorukot/superfile/total?label=GitHub%20downloads%20assets%2Freleases) [![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/yorukot/superfile?utm_source=oss&utm_medium=github&utm_campaign=yorukot%2Fsuperfile&labelColor=171717&color=FF570A&&label=CodeRabbit+Reviews)](https://www.coderabbit.ai/) ![](website/src/assets/demo.png) </div> ## Demo | Perform common operations | | -------------------------- | | ![](asset/readme/demo.gif) | ## Content - [Demo](#demo) - [Content](#content) - [Installation](#installation) - [macOS and Linux](#macos-and-linux) - [Windows](#windows) - [Powershell](#powershell) - [Winget](#winget) - [Scoop](#scoop) - [More installation methods](#more-installation-methods) - [Build](#build) - [For macOS/Linux](#for-macoslinux) - [For Windows](#for-windows) - [Start superfile](#start-superfile) - [Supported Systems](#supported-systems) - [Tutorial](#tutorial) - [Plugins](#plugins) - [Themes](#themes) - [Hotkeys](#hotkeys) - [Notes](#notes) - [Troubleshooting](#troubleshooting) - [Uninstalling](#uninstalling) - [macOS and Linux](#macos-and-linux-1) - [Windows](#windows) - [Contributing](#contributing) - [Thanks](#thanks) - [Support](#support) - [Core maintainer](#core-maintainer) - [Contributors](#contributors) - [Powered by](#powered-by) - [Star History](#star-history) - [༼ つ ◕\\_◕ ༽つ Please share.](#-つ-_-つ-please-share) ## Installation ### macOS and Linux ```bash bash -c \"$(curl -sLo- https://superfile.dev/install.sh)\" ``` If you want to inspect the script, see : [install.sh](./website/public/install.sh) ### Windows #### Powershell ```powershell powershell -ExecutionPolicy Bypass -Command \"Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://superfile.dev/install.ps1'))\" ``` If you want to inspect the script, see : [install.ps1](./website/public/install.ps1) #### [Winget](https://winget.run/) ```powershell winget install --id yorukot.superfile ``` #### [Scoop](https://scoop.sh/) ``` scoop install superfile ``` ### More installation methods [Click me to check on how to install](https://superfile.dev/getting-started/installation/) ## Build You can build the source code yourself by using these steps: **Requirements** - [golang](https://go.dev/doc/install) **Build Steps** Clone this repository using the following command: ``` git clone https://github.com/yorukot/superfile.git --depth=1 ``` Enter the downloaded directory: ```bash cd superfile ``` ### For macOS/Linux Run the `build.sh` file: ```bash ./build.sh ``` Add the binary file to your $PATH, e.g., in `/usr/local/bin`: ```bash sudo mv ./bin/spf /usr/local/bin ``` ### For Windows ```bash go build -o bin/spf.exe ``` Edit System Environment Variables and add superfile repo's `bin` directory to your PATH ## Start superfile ```bash spf ``` ## Supported Systems - \\[x\\] Linux - \\[x\\] macOS - \\",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -7,
+      "streak_days": 2
+    },
+    {
+      "rank": 13,
+      "full_name": "bradautomates/claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+      "language": "Python",
+      "stars": 12131,
+      "forks": 1219,
+      "stars_today": 988,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-04-24T04:40:43Z",
+      "updated_at": "2026-07-29T01:57:08Z",
+      "open_issues": 78,
+      "default_branch": "main",
+      "readme_excerpt": "# /watch **Give Claude the ability to watch any video.** Claude Code (recommended — auto-updates via marketplace): ``` /plugin marketplace add bradautomates/claude-video /plugin install watch@claude-video ``` Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts: ```bash npx skills add bradautomates/claude-video -g ``` (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, manual) in the [Install](#install) section below. Zero config to start — `yt-dlp` and `ffmpeg` install on first run via `brew` on macOS (Linux/Windows print exact commands). Captions cover most public videos for free. Whisper API key is only needed when a video has no captions. --- Claude can read a webpage, run a script, browse a repo. What it can't do, out of the box, is *watch a video*. You paste a YouTube link and it has to either guess from the title or pull a transcript that's missing 90% of what's on screen. With Claude Video `/watch` you can paste a URL or a local path, ask a question, and Claude fetches captions first, downloads only what it needs, extracts frames (scene-aware, or fast keyframes at `efficient` detail), pulls a timestamped transcript (free captions when available, Whisper API as fallback), and `Read`s every frame as an image. By the time it answers, it has *seen* the video and *heard* the audio. ``` /watch https://youtu.be/dQw4w9WgXcQ what happens at the 30 second mark? ``` ## What people actually use it for **Analyze someone else's content.** `/watch https://youtu.be/<viral-video> what hook did they open with?` Claude looks at the first frames, reads the opening transcript, breaks down the structure. Same for ad creative, competitor launches, podcast intros, anything where the *how* matters as much as the *what*. **Diagnose a bug from a video.** Someone sends you a screen recording of something broken. `/watch bug-repro.mov what's going wrong?` Claude watches the recording, finds the frame where the issue appears, describes what's on screen, often catches the cause without you ever opening the file. **Summarize a video.** `/watch https://youtu.be/<long-thing> summarize this` does the obvious thing — pulls the structure, the key moments, what was actually said and shown. Faster than watching at 2x. **Cut the hype out of an update video.** `/watch https://youtu.be/<launch-video> what's actually new — skip the hype` Strip a \"game-changer\" feature drop down to the few things that matter, so you get the substance without ten minutes of intro and overselling. **Turn a playlist into notes.** `/watch https://youtu.be/<video> summarize this to a note` Run it across a series and file a per-video summary, so a channel or course becomes a searchable set of notes instead of hours you have to sit through. ## How it works 1. **You paste a video and a question.** URL (anything yt-dlp supports — YouTube, Loom, TikTok, X, Instagram, plus a few hundred more) or a local path (`.mp4`, `.mov`, `.mkv`, `.webm`). 2. **`yt-dlp` checks captions first.** At `transcript` detail, captioned URLs return without downloading video. Otherwise, or when Whisper needs audio, it downloads only what the run needs. 3. **`ffmpeg` extracts frames at the chosen detail.** `efficient` decodes keyframes only (near-instant); `balanced`/`token-burner` prefer scene-change frames and fall back to the duration-aware uniform sampler when they under-produce. JPEGs are 512px wide by default and clamped to 1998px tall for Claude Read compatibility. 4. **The transcript comes from one of two places.** First try: `yt-dlp` pulls native captions (manual or auto-generated) from the source. Free, instant, accurate-ish. Fallback: extract a mono 16 kHz 64 kbps mp3 audio clip (~480 kB/min) and ship it to Whisper — Groq's `whisper-large-v3` (preferred — cheaper and faster) or OpenAI's `whisper-1`. 5. **Frames + transcript are handed to Claude.** The script prints frame paths ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 11,
+      "rank_change": -2,
+      "streak_days": 2
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": false,
+    "error": "行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [],
+    "hot_characteristics": [],
+    "product_business_signals": [],
+    "watch_next": [],
+    "repositories": [
+      {
+        "full_name": "pascalorg/editor",
+        "one_line_summary": "Create and share 3D architectural projects.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Create and share 3D architectural projects.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jenkinsci/jenkins",
+        "one_line_summary": "Jenkins automation server",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Jenkins automation server",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "moeru-ai/airi",
+        "one_line_summary": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "andrewyng/aisuite",
+        "one_line_summary": "Simple, unified interface to multiple Generative AI providers ",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Simple, unified interface to multiple Generative AI providers ",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "one_line_summary": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "hello245m/free-stockdb",
+        "one_line_summary": "面向 A 股日K、分钟K与ETF分钟数据的本地量化引擎，集成增量同步、本地缓存、复权、批量查询、回测与指标计算。",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "面向 A 股日K、分钟K与ETF分钟数据的本地量化引擎，集成增量同步、本地缓存、复权、批量查询、回测与指标计算。",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "huggingface/speech-to-speech",
+        "one_line_summary": "Build local voice agents with open-source models",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Build local voice agents with open-source models",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "virgiliojr94/book-to-skill",
+        "one_line_summary": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Turn any technical book PDF into a Claude Code skill — ready to study, reference, and use while you work.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "opengeos/GeoLibre",
+        "one_line_summary": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "paperswithbacktest/awesome-systematic-trading",
+        "one_line_summary": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/agent-governance-toolkit",
+        "one_line_summary": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "AI Agent Governance Toolkit — Policy enforcement, zero-trust identity, execution sandboxing, and reliability engineering for autonomous AI agents. Covers 10/10 OWASP Agentic Top 10.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "yorukot/superfile",
+        "one_line_summary": "Pretty fancy and modern terminal file manager",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Pretty fancy and modern terminal file manager",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      },
+      {
+        "full_name": "bradautomates/claude-video",
+        "one_line_summary": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "industry_direction": "行业分析待生成",
+        "target_users": [
+          "待分析"
+        ],
+        "problem_solved": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "solution": "待分析",
+        "why_now": "仅确认该项目进入 GitHub Trending，尚未完成行业判断。",
+        "noteworthy_technology": "待分析",
+        "technology_impact": "待分析",
+        "product_form": "待分析",
+        "commercialization_signal": "待分析",
+        "maturity": "待分析",
+        "risks": "缺少 AI 行业分析，不能据此判断市场采用或商业价值。",
+        "ai_relevance": "待分析",
+        "plain_language_explanation": "待分析",
+        "scenario_examples": [
+          "待分析"
+        ],
+        "practical_benefits": [
+          "待分析"
+        ],
+        "industry_implications": "待分析",
+        "who_should_care": "待分析",
+        "validation_signals": [
+          "待分析"
+        ],
+        "claim_checks": [],
+        "confidence": "低",
+        "priority_score": 0,
+        "evidence": [],
+        "deep_researched": false
+      }
+    ]
+  }
+}
