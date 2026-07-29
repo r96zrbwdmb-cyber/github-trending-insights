@@ -43,6 +43,7 @@ def render_daily_report(
     analysis: IndustryAnalysis,
     trend_7d: Dict[str, object],
     trend_30d: Dict[str, object],
+    day_over_day: Optional[Dict[str, object]] = None,
 ) -> str:
     repo_map = {repo.full_name: repo for repo in repositories}
     priority = sorted(
@@ -211,6 +212,50 @@ def render_daily_report(
         lines.extend(f"- **{item.full_name}：** {item.risks}" for item in notable_risks)
 
     lines.extend(["", "## 过去 7 天 / 30 天发生了什么变化", ""])
+    comparison = day_over_day or {"available": False}
+    lines.extend(["### 相比昨天", ""])
+    if comparison.get("available"):
+        new_names = comparison.get("new", [])
+        retained = comparison.get("retained", [])
+        exited = comparison.get("exited", [])
+        risers = [
+            item for item in comparison.get("risers", []) if item["change"] > 0
+        ][:5]
+        attention = comparison.get("attention_changes", [])[:5]
+        lines.extend(
+            [
+                f"- **榜单更替：** {len(new_names)} 个新进入、"
+                f"{len(retained)} 个继续留榜、{len(exited)} 个退出。",
+                "- **新进入：** "
+                + ("、".join(new_names) if new_names else "没有")
+                + "。",
+                "- **排名上升：** "
+                + (
+                    "；".join(
+                        f"{item['full_name']} 从第 {item['previous_rank']} "
+                        f"升至第 {item['rank']}"
+                        for item in risers
+                    )
+                    if risers
+                    else "没有明显上升项目"
+                )
+                + "。",
+                "- **开发者关注增量变化：** "
+                + "；".join(
+                    f"{item['full_name']} 今日新增 Star "
+                    f"{item['stars_today']}（较昨日"
+                    f"{item['change']:+d}）"
+                    for item in attention
+                )
+                + "。",
+                "- **退出榜单：** "
+                + ("、".join(exited) if exited else "没有")
+                + "。",
+            ]
+        )
+    else:
+        lines.append("- 没有上一自然日的原始快照，无法进行逐日比较。")
+    lines.append("")
     lines.extend(_render_window("过去 7 天", trend_7d))
     lines.extend([""])
     lines.extend(_render_window("过去 30 天", trend_30d))

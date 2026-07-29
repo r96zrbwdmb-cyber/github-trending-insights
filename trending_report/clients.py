@@ -440,8 +440,12 @@ class OpenAIClient:
     def _classify(self, repositories: List[Repository]) -> IndustryAnalysis:
         if self.provider != "github":
             return self._classify_batch(repositories)
+        # GitHub Models has tight free-tier request limits. Small batches keep
+        # the structured response manageable without making one call per repo.
+        batch_size = 4
         analyses = [
-            self._classify_batch([repository]) for repository in repositories
+            self._classify_batch(repositories[index : index + batch_size])
+            for index in range(0, len(repositories), batch_size)
         ]
         return IndustryAnalysis(
             key_judgments=_unique(

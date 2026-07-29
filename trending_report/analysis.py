@@ -209,6 +209,77 @@ def summarize_window(
     }
 
 
+def summarize_day_over_day(
+    repositories: List[Repository],
+    snapshots: List[Dict[str, Any]],
+    report_date: date,
+) -> Dict[str, Any]:
+    """Compare raw snapshots; this remains available when AI analysis fails."""
+    previous_date = report_date - timedelta(days=1)
+    previous = next(
+        (item for item in snapshots if item.get("date") == previous_date.isoformat()),
+        None,
+    )
+    empty = {
+        "available": False,
+        "previous_date": previous_date.isoformat(),
+        "new": [],
+        "retained": [],
+        "exited": [],
+        "risers": [],
+        "attention_changes": [],
+    }
+    if not previous:
+        return empty
+
+    current_map = {item.full_name: item for item in repositories}
+    previous_map = {
+        str(item.get("full_name")): item
+        for item in previous.get("repositories", [])
+        if item.get("full_name")
+    }
+    shared = set(current_map) & set(previous_map)
+    risers = sorted(
+        (
+            {
+                "full_name": name,
+                "previous_rank": int(previous_map[name].get("rank", 0)),
+                "rank": current_map[name].rank,
+                "change": int(previous_map[name].get("rank", 0))
+                - current_map[name].rank,
+            }
+            for name in shared
+        ),
+        key=lambda item: item["change"],
+        reverse=True,
+    )
+    attention_changes = sorted(
+        (
+            {
+                "full_name": name,
+                "previous_stars_today": int(
+                    previous_map[name].get("stars_today", 0) or 0
+                ),
+                "stars_today": current_map[name].stars_today,
+                "change": current_map[name].stars_today
+                - int(previous_map[name].get("stars_today", 0) or 0),
+            }
+            for name in shared
+        ),
+        key=lambda item: item["change"],
+        reverse=True,
+    )
+    return {
+        **empty,
+        "available": True,
+        "new": sorted(set(current_map) - set(previous_map)),
+        "retained": sorted(shared),
+        "exited": sorted(set(previous_map) - set(current_map)),
+        "risers": risers,
+        "attention_changes": attention_changes,
+    }
+
+
 def build_index(
     repositories: List[Repository],
     existing: Dict[str, Any],

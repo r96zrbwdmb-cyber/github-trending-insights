@@ -1,7 +1,12 @@
 from datetime import date, timedelta
 from unittest import TestCase
 
-from trending_report.analysis import apply_history, build_index, summarize_window
+from trending_report.analysis import (
+    apply_history,
+    build_index,
+    summarize_day_over_day,
+    summarize_window,
+)
 from trending_report.models import ANALYSIS_VERSION, Repository
 
 
@@ -31,6 +36,28 @@ def industry_snapshot(value_date: date, themes: list) -> dict:
 
 
 class AnalysisTests(TestCase):
+    def test_day_over_day_uses_raw_snapshots_when_ai_is_unavailable(self) -> None:
+        previous = {
+            "date": "2026-07-28",
+            "repositories": [
+                {"full_name": "owner/kept", "rank": 8, "stars_today": 10},
+                {"full_name": "owner/exited", "rank": 2, "stars_today": 20},
+            ],
+            "industry_analysis": {"available": False},
+        }
+        current = [
+            Repository(
+                rank=3, full_name="owner/kept", url="", stars_today=30
+            ),
+            Repository(rank=4, full_name="owner/new", url="", stars_today=5),
+        ]
+        result = summarize_day_over_day(
+            current, [previous], date(2026, 7, 29)
+        )
+        self.assertTrue(result["available"])
+        self.assertEqual(result["new"], ["owner/new"])
+        self.assertEqual(result["exited"], ["owner/exited"])
+        self.assertEqual(result["risers"][0]["change"], 5)
     def test_history_rank_first_seen_and_streak(self) -> None:
         snapshots = [
             {

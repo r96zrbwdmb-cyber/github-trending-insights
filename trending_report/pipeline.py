@@ -12,6 +12,7 @@ from .analysis import (
     apply_history,
     build_index,
     load_snapshots,
+    summarize_day_over_day,
     summarize_window,
     valid_industry_snapshots,
 )
@@ -151,12 +152,16 @@ def run(
     ]
     trend_7d = summarize_window(all_snapshots, report_date, 7)
     trend_30d = summarize_window(all_snapshots, report_date, 30)
+    day_over_day = summarize_day_over_day(
+        repositories, prior_snapshots, report_date
+    )
     report_content = render_daily_report(
         report_date,
         repositories,
         industry_analysis,
         trend_7d,
         trend_30d,
+        day_over_day,
     )
     index_path = data_dir / "index.json"
     index = build_index(repositories, _load_json(index_path), report_date)
@@ -282,6 +287,15 @@ def reanalyze(
                 analysis,
                 summarize_window(all_snapshots, report_date, 7),
                 summarize_window(all_snapshots, report_date, 30),
+                summarize_day_over_day(
+                    repositories,
+                    [
+                        item
+                        for item in all_snapshots
+                        if item.get("date", "") < snapshot["date"]
+                    ],
+                    report_date,
+                ),
             ),
         )
         updated.append(report_path)
