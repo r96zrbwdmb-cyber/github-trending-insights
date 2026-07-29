@@ -45,7 +45,8 @@ README 原文匹配只能证明项目方确实做出该表述，不代表能力�
 
 ## 自动运行
 
-GitHub Actions 每天 UTC 01:00（北京时间 09:00）运行。工作流使用 GitHub 自动提供的
+GitHub Actions 每天 UTC 01:17（北京时间 09:17）运行，以避开整点调度拥堵。
+工作流使用 GitHub 自动提供的
 `GITHUB_TOKEN` 和 GitHub Models 免费额度，不需要配置第三方 API Key。
 
 公开仓库使用标准 GitHub 托管运行器不收取 Actions 分钟费用。

@@ -2,7 +2,8 @@ name: Daily GitHub Trending Insights
 
 on:
   schedule:
-    - cron: "0 1 * * *"
+    # 09:17 Asia/Shanghai; avoiding the top of the hour reduces scheduler delays.
+    - cron: "17 1 * * *"
   workflow_dispatch:
     inputs:
       report_date:
