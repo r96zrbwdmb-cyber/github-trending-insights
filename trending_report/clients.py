@@ -9,6 +9,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
+from .fallback import build_fallback_analysis
 from .models import ClaimCheck, Evidence, IndustryAnalysis, RepoInsight, Repository
 from .parser import parse_trending_html
 
@@ -327,7 +328,7 @@ class OpenAIClient:
             except Exception as exc:
                 error = f"{type(exc).__name__}: {exc}"
         else:
-            return IndustryAnalysis.unavailable(
+            return build_fallback_analysis(
                 repositories,
                 f"行业分类重试后仍失败：{error}",
             )

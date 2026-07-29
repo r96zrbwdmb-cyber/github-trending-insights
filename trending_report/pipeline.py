@@ -17,6 +17,7 @@ from .analysis import (
     valid_industry_snapshots,
 )
 from .clients import GitHubClient, OpenAIClient
+from .fallback import build_fallback_analysis
 from .models import IndustryAnalysis, Repository
 from .report import (
     render_daily_report,
@@ -253,9 +254,10 @@ def reanalyze(
     days: int,
     *,
     openai: Optional[OpenAIClient] = None,
+    fallback: bool = False,
 ) -> List[Path]:
     client = openai or _openai_client()
-    if not client.api_key:
+    if not fallback and not client.api_key:
         raise RuntimeError("reanalyze 需要可用的 GitHub Models 或 OpenAI 凭证")
     data_dir = root / "data"
     paths = sorted(data_dir.glob("????-??-??.json"))[-days:]
@@ -267,7 +269,14 @@ def reanalyze(
         repositories = [
             Repository.from_dict(item) for item in snapshot["repositories"]
         ]
-        analysis = client.analyze(repositories)
+        analysis = (
+            build_fallback_analysis(
+                repositories,
+                "手动选择基于 GitHub 项目资料的免费规则分析",
+            )
+            if fallback
+            else client.analyze(repositories)
+        )
         snapshot["industry_analysis"] = analysis.to_dict()
         snapshot.pop("ai_analysis", None)
         snapshot.pop("rule_analysis", None)

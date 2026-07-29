@@ -50,6 +50,11 @@ def build_parser() -> argparse.ArgumentParser:
         default=30,
         help="重新分析最近多少天，默认 30",
     )
+    reanalyze_parser.add_argument(
+        "--fallback",
+        action="store_true",
+        help="使用免费规则分析重建，不调用外部 AI 模型",
+    )
     return parser
 
 
@@ -76,7 +81,7 @@ def main(argv: object = None) -> int:
         else:
             if args.days < 1:
                 raise ValueError("--days 必须大于 0")
-            outputs = reanalyze(root, args.days)
+            outputs = reanalyze(root, args.days, fallback=args.fallback)
             print(f"已重新分析 {len(outputs)} 份日报")
     except (ValueError, RuntimeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)

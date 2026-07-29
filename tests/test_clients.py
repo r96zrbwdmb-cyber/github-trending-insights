@@ -141,7 +141,9 @@ class OpenAIClientTests(TestCase):
         invalid = {"output_text": '{"key_judgments":[],"repositories":[]}'}
         http = FakeHTTP([invalid, invalid])
         result = OpenAIClient("secret", http=http).analyze([repository()])
-        self.assertFalse(result.available)
+        self.assertTrue(result.available)
+        self.assertIn("模型不可用", result.error)
+        self.assertEqual(result.repositories[0].confidence, "低")
         self.assertEqual(len(http.calls), 2)
 
     def test_missing_key_returns_project_placeholders(self) -> None:
