@@ -7,6 +7,7 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
+from .email_report import send_daily_email
 from .pipeline import (
     build_site,
     generate_monthly,
@@ -70,6 +71,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--date", help="Product Hunt 日期（YYYY-MM-DD），默认上一完整日"
     )
     subparsers.add_parser("build-site", help="构建 GitHub 与 Product Hunt 统一网页")
+    subparsers.add_parser("send-email", help="发送 GitHub 与 Product Hunt 合并日报")
     run_all_parser = subparsers.add_parser(
         "run-all", help="运行全部采集、分析并构建网页"
     )
@@ -111,6 +113,9 @@ def main(argv: object = None) -> int:
         elif args.command == "build-site":
             output = build_site(root)
             print(f"统一网页已生成：{output}")
+        elif args.command == "send-email":
+            send_daily_email(root)
+            print("每日合并情报邮件已发送")
         else:
             outputs = run_all(
                 root,
