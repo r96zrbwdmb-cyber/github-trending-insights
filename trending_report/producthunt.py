@@ -156,7 +156,9 @@ def day_bounds(report_date: date) -> tuple[str, str]:
 
 class ProductHuntClient:
     def __init__(self, token: str, http: Optional[HTTPClient] = None) -> None:
-        self.token = token
+        # Secrets copied from dashboards can include a trailing newline.
+        # Strip surrounding whitespace before constructing an HTTP header.
+        self.token = token.strip()
         self.http = http or HTTPClient(retries=3, timeout=30)
 
     def fetch_daily(self, report_date: date, limit: int = 15) -> List[Product]:
@@ -534,4 +536,4 @@ def render_product_report(snapshot: Dict[str, Any]) -> str:
 
 
 def producthunt_token() -> str:
-    return os.environ.get("PRODUCT_HUNT_TOKEN", "")
+    return os.environ.get("PRODUCT_HUNT_TOKEN", "").strip()

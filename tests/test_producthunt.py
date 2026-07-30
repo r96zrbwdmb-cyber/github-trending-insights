@@ -64,6 +64,16 @@ class ProductHuntClientTests(TestCase):
         with self.assertRaisesRegex(RuntimeError, "PRODUCT_HUNT_TOKEN"):
             ProductHuntClient("").fetch_daily(date(2026, 7, 29))
 
+    def test_token_whitespace_is_removed_before_header(self) -> None:
+        http = FakeHTTP({"data": {"posts": {"nodes": [node(1)]}}})
+        ProductHuntClient("  secret-token\n", http=http).fetch_daily(
+            date(2026, 7, 29)
+        )
+        self.assertEqual(
+            http.calls[0][1]["headers"]["Authorization"],
+            "Bearer secret-token",
+        )
+
     def test_pacific_day_handles_daylight_saving(self) -> None:
         after, before = day_bounds(date(2026, 7, 29))
         self.assertIn("-07:00", after)
