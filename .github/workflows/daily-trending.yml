@@ -21,7 +21,7 @@ permissions:
   models: read
 
 concurrency:
-  group: daily-industry-intelligence-write
+  group: daily-github-trending
   cancel-in-progress: false
 
 jobs:
@@ -79,5 +79,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "report: update GitHub Trending insights"
-          git pull --rebase
           git push
