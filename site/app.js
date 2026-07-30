@@ -109,8 +109,8 @@ function render(snapshot) {
     ? data.patterns.map(x => `<article>${esc(x)}</article>`).join("")
     : "<article>历史数据积累后再形成可靠判断。</article>";
   const status = $("status");
-  status.hidden = !data.status;
-  status.textContent = data.status ? `分析说明：${data.status}` : "";
+  status.hidden = true;
+  status.textContent = "";
   $("cards").innerHTML = data.cards.map(card => `
     <article class="card">
       <div class="card-top">
@@ -161,9 +161,9 @@ async function loadDate(value) {
     if (!response.ok) throw new Error();
     render(await response.json());
   } catch (_) {
+    render(window.SITE_DATA[state.view] || {});
     $("status").hidden = false;
     $("status").textContent = "该日期的数据暂时无法读取，已显示最新有效结果。";
-    render(window.SITE_DATA[state.view] || {});
   }
 }
 
