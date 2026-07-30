@@ -66,7 +66,7 @@ class ProductHuntClientTests(TestCase):
 
     def test_token_whitespace_is_removed_before_header(self) -> None:
         http = FakeHTTP({"data": {"posts": {"nodes": [node(1)]}}})
-        ProductHuntClient("  secret-token\n", http=http).fetch_daily(
+        ProductHuntClient("  secret-\n token\t", http=http).fetch_daily(
             date(2026, 7, 29)
         )
         self.assertEqual(
