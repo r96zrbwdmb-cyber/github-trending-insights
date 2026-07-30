@@ -13,7 +13,7 @@ function githubData(snapshot) {
   const insightMap = Object.fromEntries((analysis.repositories || []).map(x => [x.full_name, x]));
   return {
     date: snapshot.date || "",
-    title: "开发者正在关注什么？",
+    title: "今天，AI 在关注什么？",
     intro: "从开源项目热度中理解研究方向、产品机会与行业影响。",
     judgmentsTitle: "今天最重要的 5 个判断",
     judgments: analysis.key_judgments || [],
@@ -51,7 +51,7 @@ function productData(snapshot) {
   const trend30 = snapshot.trend_30d || {};
   return {
     date: snapshot.date || "",
-    title: "今天的新产品，究竟在卖什么？",
+    title: "今天，什么产品最热门？",
     intro: "看懂产品卖给谁、解决什么、怎样收费，以及它为什么现在值得关注。",
     judgmentsTitle: "今日最重要的产品与商业判断",
     judgments: analysis.key_judgments || [],
