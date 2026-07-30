@@ -64,3 +64,9 @@ jobs:
           git commit -m "report: update Product Hunt business insights"
           git pull --rebase
           git push
+      - name: Send combined daily email
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+          REPORT_EMAIL_TO: ${{ secrets.REPORT_EMAIL_TO }}
+        run: python -m trending_report send-email
