@@ -1,0 +1,66 @@
+name: Daily Product Hunt Business Insights
+
+on:
+  schedule:
+    - cron: "15 9 * * *" # 17:15 Asia/Shanghai
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Optional Product Hunt date (YYYY-MM-DD)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: daily-industry-intelligence-write
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PRODUCT_HUNT_TOKEN: ${{ secrets.PRODUCT_HUNT_TOKEN }}
+      AI_PROVIDER: github
+      AI_MODEL: openai/gpt-4.1-mini
+      AI_RESEARCH_MODEL: openai/gpt-4.1-mini
+      REPORT_TIMEZONE: Asia/Shanghai
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install and validate
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+          python -m ruff check .
+          python -m unittest discover -s tests -v
+      - name: Generate Product Hunt report
+        shell: bash
+        run: |
+          args=(producthunt)
+          if [[ -n "${{ inputs.report_date }}" ]]; then
+            args+=(--date "${{ inputs.report_date }}")
+          fi
+          python -m trending_report "${args[@]}"
+      - name: Commit valid report
+        shell: bash
+        run: |
+          git add data/producthunt reports/producthunt
+          if git diff --cached --quiet; then
+            echo "No Product Hunt changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "report: update Product Hunt business insights"
+          git pull --rebase
+          git push
