@@ -11,7 +11,6 @@ from .models import (
     Repository,
 )
 
-
 # Human-maintained industry framing for recurring categories. It only interprets
 # capabilities explicitly present in GitHub project metadata; it does not claim
 # customer adoption, revenue, funding, or research novelty.
