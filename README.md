@@ -1,5 +1,9 @@
 # GitHub Trending AI 行业情报
 
+**统一网页：<https://r96zrbwdmb-cyber.github.io/github-trending-insights/>**
+
+网页顶部可在 GitHub Trending 与 Product Hunt 每日商业情报之间切换。
+
 每天北京时间 09:00 自动观察 GitHub Trending 全榜，并生成面向 AI 行业从业者的中文简报。
 它不讲编程语言或代码实现，而是回答：
 
@@ -16,6 +20,7 @@
 ## 报告体系
 
 - `reports/YYYY-MM-DD.md`：约 15 分钟阅读的深度行业情报。
+- `reports/producthunt/YYYY-MM-DD.md`：Product Hunt Top 15 商业解读。
 - `reports/weekly/YYYY-Www.md`：每周一生成的周度复盘。
 - `reports/monthly/YYYY-MM.md`：每月 1 日生成的上月复盘。
 - `data/YYYY-MM-DD.json`：可供滚动趋势计算的结构化快照。
@@ -51,6 +56,9 @@ GitHub Actions 每天 UTC 01:17（北京时间 09:17）运行，以避开整点�
 
 公开仓库使用标准 GitHub 托管运行器不收取 Actions 分钟费用。
 
+Product Hunt 使用官方 API，每天北京时间约 17:15 生成上一完整太平洋日榜单。
+需要一次性在仓库 Actions Secret 中配置 `PRODUCT_HUNT_TOKEN`。
+
 ## 命令
 
 ```bash
@@ -66,6 +74,12 @@ python -m trending_report monthly --month 2026-07
 
 # 升级最近 30 天的旧快照
 python -m trending_report reanalyze --days 30
+
+# Product Hunt 与统一网页
+python -m trending_report producthunt
+python -m trending_report producthunt --date 2026-07-29
+python -m trending_report build-site
+python -m trending_report run-all
 ```
 
 环境变量：
@@ -77,6 +91,7 @@ python -m trending_report reanalyze --days 30
 | `AI_RESEARCH_MODEL` | `openai/gpt-4.1-mini` | 周期综合模型 |
 | `OPENAI_API_KEY` | 无 | 仅在主动改用 `openai` 提供商时需要 |
 | `GITHUB_TOKEN` | 无 | GitHub API 令牌；Actions 自动提供 |
+| `PRODUCT_HUNT_TOKEN` | 无 | Product Hunt 官方 Developer Token |
 | `REPORT_TIMEZONE` | `Asia/Shanghai` | 日报日期使用的时区 |
 
 ## 验证

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GitHub Trending 与 Product Hunt 每日 AI、产品和商业情报">
+  <title>前沿产品与技术情报</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#github" aria-label="前沿情报首页">
+      <span class="brand-mark">前</span>
+      <span>前沿情报</span>
+    </a>
+    <nav aria-label="内容栏目">
+      <button class="nav-tab active" data-view="github">GitHub Trending</button>
+      <button class="nav-tab" data-view="producthunt">Product Hunt</button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow" id="eyebrow">每日 AI 行业信号</p>
+      <h1 id="page-title">开发者正在关注什么？</h1>
+      <p id="page-intro" class="intro">从开源项目热度中理解研究方向、产品机会与行业影响。</p>
+      <div class="meta-row">
+        <span id="date-label">正在读取最新数据</span>
+        <span id="coverage-label"></span>
+        <select id="date-select" aria-label="选择历史日期"></select>
+      </div>
+    </section>
+    <section id="status" class="status" hidden></section>
+    <section>
+      <div class="section-heading">
+        <p class="eyebrow">先看结论</p>
+        <h2 id="judgments-title">今天最重要的 5 个判断</h2>
+      </div>
+      <ol id="judgments" class="judgments"></ol>
+    </section>
+    <section>
+      <div class="section-heading">
+        <p class="eyebrow">共同变化</p>
+        <h2 id="patterns-title">今天的热门有什么特点</h2>
+      </div>
+      <div id="patterns" class="pattern-grid"></div>
+    </section>
+    <section>
+      <div class="section-heading product-heading">
+        <div>
+          <p class="eyebrow" id="cards-eyebrow">逐项理解</p>
+          <h2 id="cards-title">重点方向与项目</h2>
+        </div>
+        <p class="legend"><span>事实</span> 可核实来源　<span class="judgment">判断</span> 分析推断</p>
+      </div>
+      <div id="cards" class="cards"></div>
+    </section>
+    <section class="limits">
+      <h2>如何理解这些数据</h2>
+      <p id="limits-copy">榜单热度代表关注信号，不等于收入、融资、用户留存或市场采用。重要决策请打开原始来源核实。</p>
+    </section>
+  </main>
+  <footer>
+    <p>每日自动更新 · 保留证据与历史观察 · 仅用于个人或内部行业研究</p>
+    <a id="source-link" href="https://github.com/trending" target="_blank" rel="noopener">查看原始来源 ↗</a>
+  </footer>
+  <script>window.SITE_DATA = __SITE_DATA__;</script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -7,7 +7,15 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from .pipeline import generate_monthly, generate_weekly, reanalyze, run
+from .pipeline import (
+    build_site,
+    generate_monthly,
+    generate_weekly,
+    reanalyze,
+    run,
+    run_all,
+    run_producthunt,
+)
 
 
 def current_report_date(timezone_name: str) -> date:
@@ -55,6 +63,18 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="使用免费规则分析重建，不调用外部 AI 模型",
     )
+    producthunt_parser = subparsers.add_parser(
+        "producthunt", help="生成 Product Hunt 每日商业情报"
+    )
+    producthunt_parser.add_argument(
+        "--date", help="Product Hunt 日期（YYYY-MM-DD），默认上一完整日"
+    )
+    subparsers.add_parser("build-site", help="构建 GitHub 与 Product Hunt 统一网页")
+    run_all_parser = subparsers.add_parser(
+        "run-all", help="运行全部采集、分析并构建网页"
+    )
+    run_all_parser.add_argument("--date", help="补跑日期（YYYY-MM-DD）")
+    run_all_parser.add_argument("--no-ai", action="store_true")
     return parser
 
 
@@ -78,11 +98,26 @@ def main(argv: object = None) -> int:
         elif args.command == "monthly":
             output = generate_monthly(root, args.month)
             print(f"月报已生成：{output}")
-        else:
+        elif args.command == "reanalyze":
             if args.days < 1:
                 raise ValueError("--days 必须大于 0")
             outputs = reanalyze(root, args.days, fallback=args.fallback)
             print(f"已重新分析 {len(outputs)} 份日报")
+        elif args.command == "producthunt":
+            output = run_producthunt(
+                root, date.fromisoformat(args.date) if args.date else None
+            )
+            print(f"Product Hunt 日报已生成：{output}")
+        elif args.command == "build-site":
+            output = build_site(root)
+            print(f"统一网页已生成：{output}")
+        else:
+            outputs = run_all(
+                root,
+                date.fromisoformat(args.date) if args.date else None,
+                no_ai=args.no_ai,
+            )
+            print(f"全部内容已生成：{len(outputs)} 项")
     except (ValueError, RuntimeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)
         return 1

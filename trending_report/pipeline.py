@@ -4,9 +4,10 @@ import calendar
 import json
 import os
 import tempfile
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from zoneinfo import ZoneInfo
 
 from .analysis import (
     apply_history,
@@ -18,13 +19,23 @@ from .analysis import (
 )
 from .clients import GitHubClient, OpenAIClient
 from .fallback import build_fallback_analysis
-from .models import IndustryAnalysis, Repository
+from .models import Repository
+from .producthunt import (
+    OfficialSiteReader,
+    ProductHuntClient,
+    analyze_products,
+    latest_complete_day,
+    producthunt_token,
+    render_product_report,
+    summarize_product_history,
+)
 from .report import (
     render_daily_report,
     render_periodic_report,
     render_reports_index,
     update_readme,
 )
+from .site import build_site
 
 
 def atomic_write(path: Path, content: str) -> None:
@@ -184,6 +195,72 @@ def run(
         )
     _refresh_navigation(root)
     return report_path
+
+
+def run_producthunt(
+    root: Path,
+    report_date: Optional[date] = None,
+    *,
+    producthunt: Optional[ProductHuntClient] = None,
+    reader: Optional[OfficialSiteReader] = None,
+    openai: Optional[OpenAIClient] = None,
+    minimum_products: int = 10,
+) -> Path:
+    report_date = report_date or latest_complete_day()
+    client = producthunt or ProductHuntClient(producthunt_token())
+    products = client.fetch_daily(report_date, limit=15)
+    if len(products) < minimum_products:
+        raise RuntimeError(
+            f"仅获取到 {len(products)} 个 Product Hunt 产品"
+            f"（最低要求 {minimum_products}），为避免覆盖有效结果，本次停止写入"
+        )
+    site_reader = reader or OfficialSiteReader()
+    for product in products:
+        site_reader.enrich(product)
+    analysis = analyze_products(products, openai or _openai_client())
+    data_dir = root / "data" / "producthunt"
+    snapshot: Dict[str, Any] = {
+        "date": report_date.isoformat(),
+        "timezone": "America/Los_Angeles",
+        "source": "https://api.producthunt.com/v2/api/graphql",
+        "product_count": len(products),
+        "products": [item.to_dict() for item in products],
+        "analysis": analysis,
+    }
+    # Include the current snapshot when calculating rolling coverage without
+    # writing it first, so a failed analysis can never replace prior data.
+    existing = data_dir / f"{report_date.isoformat()}.json"
+    previous = existing.read_text(encoding="utf-8") if existing.exists() else None
+    atomic_write(existing, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
+    try:
+        snapshot["trend_7d"] = summarize_product_history(data_dir, report_date, 7)
+        snapshot["trend_30d"] = summarize_product_history(data_dir, report_date, 30)
+        atomic_write(existing, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
+        report_path = root / "reports" / "producthunt" / f"{report_date}.md"
+        atomic_write(report_path, render_product_report(snapshot))
+    except Exception:
+        if previous is None:
+            existing.unlink(missing_ok=True)
+        else:
+            atomic_write(existing, previous)
+        raise
+    return report_path
+
+
+def run_all(
+    root: Path,
+    report_date: Optional[date] = None,
+    *,
+    no_ai: bool = False,
+) -> List[Path]:
+    outputs: List[Path] = []
+    github_date = report_date or datetime.now(
+        ZoneInfo(os.environ.get("REPORT_TIMEZONE", "Asia/Shanghai"))
+    ).date()
+    outputs.append(run(root, github_date, no_ai=no_ai))
+    outputs.append(run_producthunt(root, report_date))
+    outputs.append(build_site(root))
+    return outputs
 
 
 def generate_weekly(
