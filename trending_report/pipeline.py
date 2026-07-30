@@ -19,7 +19,7 @@ from .analysis import (
 )
 from .clients import GitHubClient, OpenAIClient
 from .fallback import build_fallback_analysis
-from .models import Repository
+from .models import IndustryAnalysis, Repository
 from .producthunt import (
     OfficialSiteReader,
     ProductHuntClient,
