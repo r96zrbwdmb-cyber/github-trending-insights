@@ -26,7 +26,14 @@
       <div class="meta-row">
         <span id="date-label">正在读取最新数据</span>
         <span id="coverage-label"></span>
-        <select id="date-select" aria-label="选择历史日期"></select>
+        <div class="date-nav" aria-label="历史日期导航">
+          <button id="date-prev" class="date-step" type="button" aria-label="查看前一天">← 前一天</button>
+          <label class="date-picker">
+            <span class="sr-only">选择历史日期</span>
+            <select id="date-select" aria-label="选择历史日期"></select>
+          </label>
+          <button id="date-next" class="date-step" type="button" aria-label="查看后一天">后一天 →</button>
+        </div>
       </div>
     </section>
     <section id="status" class="status" hidden></section>

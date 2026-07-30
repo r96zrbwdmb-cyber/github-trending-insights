@@ -1,4 +1,7 @@
-const state = { view: location.hash === "#producthunt" ? "producthunt" : "github" };
+const state = {
+  view: location.hash === "#producthunt" ? "producthunt" : "github",
+  date: ""
+};
 const $ = (id) => document.getElementById(id);
 const esc = (value = "") => String(value).replace(/[&<>"']/g, c => (
   {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]
@@ -125,10 +128,36 @@ function render(snapshot) {
     </article>`).join("") || `<div class="empty">尚无 ${state.view === "github" ? "GitHub" : "Product Hunt"} 有效数据。</div>`;
 }
 
+function formatDate(value) {
+  if (!value) return "选择日期";
+  const [year, month, day] = value.split("-").map(Number);
+  return `${year}年${month}月${day}日`;
+}
+
+function availableDates() {
+  return (window.SITE_DATA.dates || {})[state.view] || [];
+}
+
+function updateDateNavigation() {
+  const dates = availableDates();
+  const selected = state.date || dates[dates.length - 1] || "";
+  const index = dates.indexOf(selected);
+  $("date-select").value = selected;
+  $("date-prev").disabled = index <= 0;
+  $("date-next").disabled = index < 0 || index >= dates.length - 1;
+  document.querySelector(".date-nav").hidden = !dates.length;
+}
+
 async function loadDate(value) {
-  if (!value) return render(window.SITE_DATA[state.view] || {});
+  const dates = availableDates();
+  state.date = value || dates[dates.length - 1] || "";
+  updateDateNavigation();
+  const latest = dates[dates.length - 1] || "";
+  if (!state.date || state.date === latest) {
+    return render(window.SITE_DATA[state.view] || {});
+  }
   try {
-    const response = await fetch(`data/${state.view}/${value}.json`);
+    const response = await fetch(`data/${state.view}/${state.date}.json`);
     if (!response.ok) throw new Error();
     render(await response.json());
   } catch (_) {
@@ -140,15 +169,27 @@ async function loadDate(value) {
 
 function switchView(view) {
   state.view = view;
+  state.date = "";
   location.hash = view;
   document.querySelectorAll(".nav-tab").forEach(x => x.classList.toggle("active", x.dataset.view === view));
-  const dates = (window.SITE_DATA.dates || {})[view] || [];
-  $("date-select").innerHTML = [...dates].reverse().map(x => `<option value="${x}">${x}</option>`).join("");
-  $("date-select").hidden = !dates.length;
+  const dates = availableDates();
+  $("date-select").innerHTML = [...dates].reverse()
+    .map((x, index) => `<option value="${x}">${formatDate(x)}${index === 0 ? "（最新）" : ""}</option>`)
+    .join("");
   loadDate("");
 }
 
 document.querySelectorAll(".nav-tab").forEach(x => x.addEventListener("click", () => switchView(x.dataset.view)));
 $("date-select").addEventListener("change", e => loadDate(e.target.value));
+$("date-prev").addEventListener("click", () => {
+  const dates = availableDates();
+  const index = dates.indexOf(state.date);
+  if (index > 0) loadDate(dates[index - 1]);
+});
+$("date-next").addEventListener("click", () => {
+  const dates = availableDates();
+  const index = dates.indexOf(state.date);
+  if (index >= 0 && index < dates.length - 1) loadDate(dates[index + 1]);
+});
 window.addEventListener("hashchange", () => switchView(location.hash === "#producthunt" ? "producthunt" : "github"));
 switchView(state.view);
