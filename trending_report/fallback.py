@@ -3,7 +3,13 @@ from __future__ import annotations
 from collections import Counter
 from typing import Dict, List
 
-from .models import ClaimCheck, Evidence, IndustryAnalysis, RepoInsight, Repository
+from .models import (
+    ClaimCheck,
+    Evidence,
+    IndustryAnalysis,
+    RepoInsight,
+    Repository,
+)
 
 
 # Human-maintained industry framing for recurring categories. It only interprets
@@ -196,7 +202,8 @@ def build_fallback_analysis(
             f"未进行外部网页研究。原始错误：{model_error}"
         ),
         key_judgments=[
-            f"至少 {ai_count}/{len(insights)} 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+            f"至少 {ai_count}/{len(insights)} 个项目直接涉及智能体、语音、"
+            "多模态或 AI 应用基础设施。",
             "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
             "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
             "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
