@@ -1,0 +1,1348 @@
+{
+  "date": "2026-07-31",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 14,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "huggingface/speech-to-speech",
+      "url": "https://github.com/huggingface/speech-to-speech",
+      "description": "Build local voice agents with open-source models",
+      "language": "Python",
+      "stars": 9139,
+      "forks": 1120,
+      "stars_today": 628,
+      "topics": [
+        "ai",
+        "assistant",
+        "language-model",
+        "machine-learning",
+        "python",
+        "speech",
+        "speech-synthesis",
+        "speech-to-text",
+        "speech-translation"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-08-07T15:32:09Z",
+      "updated_at": "2026-07-31T04:43:26Z",
+      "open_issues": 125,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <div>&nbsp;</div> <img src=\"https://raw.githubusercontent.com/huggingface/speech-to-speech/main/logo.png\" width=\"600\"/> # Speech To Speech: Build voice agents with open-source models [![PyPI](https://img.shields.io/pypi/v/speech-to-speech)](https://pypi.org/project/speech-to-speech/) [![Python](https://img.shields.io/pypi/pyversions/speech-to-speech)](https://pypi.org/project/speech-to-speech/) [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](./LICENSE) </div> A low-latency, fully modular voice-agent pipeline: **VAD -> STT -> LLM -> TTS**, exposed through an **OpenAI Realtime-compatible WebSocket API**. Every component is swappable. The LLM slot speaks OpenAI-compatible protocols, so you can point it at a hosted provider, at [HF Inference Providers](https://huggingface.co/inference-providers), or at a vLLM or llama.cpp server on your own hardware for a fully local, fully open stack. This pipeline runs in production as the conversation backend for thousands of [Reachy Mini](https://huggingface.co/blog/reachy-mini) robots. <p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"./docs/assets/endpoint-swap-dark.gif\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"./docs/assets/endpoint-swap-light.gif\"> <img src=\"./docs/assets/endpoint-swap-light.gif\" alt=\"Switching an OpenAI Realtime client endpoint from hosted OpenAI to a self-hosted speech-to-speech server\" width=\"640\"> </picture> </p> ## Quickstart ```bash pip install speech-to-speech export OPENAI_API_KEY=... speech-to-speech ``` This starts an OpenAI Realtime-compatible server at `ws://localhost:8765/v1/realtime` using Parakeet TDT for local STT, an OpenAI-compatible LLM, and Qwen3-TTS for local speech output. From a source checkout, talk to it from a second terminal: ```bash python scripts/listen_and_play_realtime.py --host 127.0.0.1 --port 8765 ``` Prefer to keep the LLM on your own machine? Serve Gemma 4 with llama.cpp: ```bash llama-server -hf ggml-org/gemma-4-E4B-it-GGUF -np 2 -c 65536 -fa on --swa-full ``` Then point the OpenAI-compatible LLM backend at it: ```bash speech-to-speech \\ --model_name \"ggml-org/gemma-4-E4B-it-GGUF\" \\ --responses_api_base_url \"http://127.0.0.1:8080/v1\" \\ --responses_api_api_key \"\" ``` Any OpenAI Realtime-compatible client can connect. See [Realtime API](#realtime-api) for the protocol and [LLM backends](#llm-backends) for provider and local-server options. ## Index * [How it works](#how-it-works) * [Installation](#installation) * [Supported components](#supported-components) * [Run modes](#run-modes) * [Realtime API](#realtime-api) * [LLM backends](#llm-backends) * [Multi-language support](#multi-language-support) * [Pocket TTS](#pocket-tts) * [CLI reference](#cli-reference) * [Contributing](#contributing) * [Star history](#star-history) * [Citations](#citations) ## How it works The pipeline is a cascade of four components, each running in its own thread and connected by queues: 1. **Voice Activity Detection (VAD)**: [Silero VAD v5](https://github.com/snakers4/silero-vad) detects speech boundaries and turn-taking. 2. **Speech to Text (STT)**: transcribes the user's turn, with optional live partial transcripts. 3. **Language Model (LLM)**: generates the response, streaming text and tool calls. 4. **Text to Speech (TTS)**: synthesizes audio and streams it back to the client. Every stage has multiple interchangeable backends, selected via CLI flags. The code is designed for easy modification, with a focus on models available through Transformers and the Hugging Face Hub. ## Installation Requires Python 3.10+. ```bash pip install speech-to-speech ``` The default install covers the standard realtime path: - Parakeet TDT for STT - OpenAI-compatible API for the language model - Qwen3-TTS for speech output, using the GGML backend by default on non-macOS platforms and `mlx-audio` on Apple Silicon - local audio and realtime server modes macOS and non-macOS dependencies are resol",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": 3,
+      "streak_days": 3
+    },
+    {
+      "rank": 2,
+      "full_name": "microsoft/AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "language": "Jupyter Notebook",
+      "stars": 54302,
+      "forks": 10998,
+      "stars_today": 155,
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "cnn",
+        "computer-vision",
+        "deep-learning",
+        "gan",
+        "machine-learning",
+        "microsoft-for-beginners",
+        "nlp",
+        "rnn"
+      ],
+      "license": "MIT",
+      "created_at": "2021-03-03T16:27:36Z",
+      "updated_at": "2026-07-31T04:43:10Z",
+      "open_issues": 7,
+      "default_branch": "main",
+      "readme_excerpt": "[![GitHub license](https://img.shields.io/github/license/microsoft/AI-For-Beginners.svg)](https://github.com/microsoft/AI-For-Beginners/blob/main/LICENSE) [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/graphs/contributors/) [![GitHub issues](https://img.shields.io/github/issues/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/issues/) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/pulls/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub watchers](https://img.shields.io/github/watchers/microsoft/AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/AI-For-Beginners/watchers/) [![GitHub forks](https://img.shields.io/github/forks/microsoft/AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/AI-For-Beginners/network/) [![GitHub stars](https://img.shields.io/github/stars/microsoft/AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/AI-For-Beginners/stargazers/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/microsoft/ai-for-beginners/HEAD) [![Gitter](https://badges.gitter.im/Microsoft/ai-for-beginners.svg)](https://gitter.im/Microsoft/ai-for-beginners?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG) # Artificial Intelligence for Beginners - A Curriculum |![Sketchnote by @girlie_mac https://twitter.com/girlie_mac](https://github.com/microsoft/AI-For-Beginners/raw/main/lessons/sketchnotes/ai-overview.png)| |:---:| | AI For Beginners - _Sketchnote by [@girlie_mac](https://twitter.com/girlie_mac)_ | Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesson curriculum! It includes practical lessons, quizzes, and labs. The curriculum is beginner-friendly and covers tools like TensorFlow and PyTorch, as well as ethics in AI ### 🌐 Multi-Language Support #### Supported via GitHub Action (Automated & Always Up-to-Date) <!-- CO-OP TRANSLATOR LANGUAGES TABLE START --> [Arabic](./translations/ar/README.md) | [Bengali](./translations/bn/README.md) | [Bulgarian](./translations/bg/README.md) | [Burmese (Myanmar)](./translations/my/README.md) | [Chinese (Simplified)](./translations/zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](./translations/zh-HK/README.md) | [Chinese (Traditional, Macau)](./translations/zh-MO/README.md) | [Chinese (Traditional, Taiwan)](./translations/zh-TW/README.md) | [Croatian](./translations/hr/README.md) | [Czech](./translations/cs/README.md) | [Danish](./translations/da/README.md) | [Dutch](./translations/nl/README.md) | [Estonian](./translations/et/README.md) | [Finnish](./translations/fi/README.md) | [French](./translations/fr/README.md) | [German](./translations/de/README.md) | [Greek](./translations/el/README.md) | [Hebrew](./translations/he/README.md) | [Hindi](./translations/hi/README.md) | [Hungarian](./translations/hu/README.md) | [Indonesian](./translations/id/README.md) | [Italian](./translations/it/README.md) | [Japanese](./translations/ja/README.md) | [Kannada](./translations/kn/README.md) | [Khmer](./translations/km/README.md) | [Korean](./translations/ko/README.md) | [Lithuanian](./translations/lt/README.md) | [Malay](./translations/ms/README.md) | [Malayalam](./translations/ml/README.md) | [Marathi](./translations/mr/README.md) | [Nepali](./translations/ne/README.md) | [Nigerian Pidgin](./translations/pcm/README.md) | [Norwegian](./translations/no/README.md) | [Persian (Farsi)](./translations/fa/README.md) | [Polish](./translations/pl/README.md) | [Portuguese (Brazil)](./translations/pt-BR/README.md) | [Portuguese (Portugal)](./translations/pt-PT/README.md) |",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 3,
+      "full_name": "paperswithbacktest/awesome-systematic-trading",
+      "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+      "description": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+      "language": "Python",
+      "stars": 11190,
+      "forks": 1429,
+      "stars_today": 621,
+      "topics": [
+        "algorithmic-trading",
+        "algotrading",
+        "alpha",
+        "arbitrage-bot",
+        "awesome",
+        "awesome-list",
+        "book",
+        "finance",
+        "futures",
+        "futures-historical-data",
+        "futures-market",
+        "futuresmarkets",
+        "paper",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading",
+        "trading-algorithms",
+        "trading-bot",
+        "trading-strategies"
+      ],
+      "license": "",
+      "created_at": "2022-02-05T20:48:52Z",
+      "updated_at": "2026-07-31T04:39:17Z",
+      "open_issues": 47,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"static/images/awesome-systematic-trading.jpeg\" height=200 alt=\"\"/> <h1>Awesome Systematic Trading</h1> </div> <div align=center><img src=\"https://awesome.re/badge.svg\" /></div> [希望阅读中文版？点我](./README_zh.md) We are collecting a list of resources papers, softwares, books, articles for finding, developing, and running systematic trading (quantitative trading) strategies. <!-- omit in toc --> ### What will you find here? - [97 libraries and packages](#libraries-and-packages) for research and live trading - [40+ strategies](#strategies) described by institutionals and academics - [55 books](#books) for beginners and professionals - [23 videos](#videos) and interviews - And also some [blogs](#blogs) and [courses](#courses) <div align=\"center\" style=\"margin-bottom: 50px; margin-top: 50px;\"> <div style=\"border: 2px solid #007bff; border-radius: 10px; padding: 20px; margin-bottom: 20px;\"> <h2>📈 Interested in trading strategies implemented in Python?</h2> <p>Visit our comprehensive collection at <a href=\"https://paperswithbacktest.com\" target=\"_blank\">paperswithbacktest.com</a> for exclusive content!</p> </div> </div> <details> <summary>Click here to see the full table of content</summary> - [Libraries and packages](#libraries-and-packages) - [Backtesting and Live Trading](#backtesting-and-live-trading) - [General - Event Driven Frameworks](#general---event-driven-frameworks) - [General - Vector Based Frameworks](#general---vector-based-frameworks) - [Cryptocurrencies](#cryptocurrencies) - [Trading bots](#trading-bots) - [Analytics](#analytics) - [Indicators](#indicators) - [Metrics computation](#metrics-computation) - [Optimization](#optimization) - [Pricing](#pricing) - [Risk](#risk) - [Broker APIs](#broker-apis) - [Data Sources](#data-sources) - [General](#general) - [Cryptocurrencies](#cryptocurrencies-1) - [Data Science](#data-science) - [Databases](#databases) - [Graph Computation](#graph-computation) - [Machine Learning](#machine-learning) - [TimeSeries Analysis](#timeseries-analysis) - [Visualization](#visualization) - [Strategies](#strategies) - [Bonds, commodities, currencies, equities](#bonds-commodities-currencies-equities) - [Bonds, commodities, equities, REITs](#bonds-commodities-equities-reits) - [Bonds, equities](#bonds-equities) - [Bonds, equities, REITs](#bonds-equities-reits) - [Commodities](#commodities) - [Cryptos](#cryptos) - [Currencies](#currencies) - [Equities](#equities) - [Books](#books) - [Beginner](#beginner) - [Biography](#biography) - [Coding](#coding) - [Crypto](#crypto) - [General](#general-1) - [High Frequency Trading](#high-frequency-trading) - [Machine Learning](#machine-learning-1) - [Videos](#videos) - [Blogs](#blogs) - [Courses](#courses) </details> <!-- omit in toc --> > ### How can I help? > You can help by submitting an issue with suggestions and by sharing on Twitter: > > [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20free%20and%20comprehensive%20list%20of%20papers%2C%20libraries%2C%20books%2C%20blogs%2C%20tutorials%20for%20quantitative%20traders.&url=https://github.com/paperswithbacktest/awesome-systematic-trading) # Libraries and packages *List of **97 libraries and packages** implementing trading bots, backtesters, indicators, pricers, etc. Each library is categorized by its programming language and ordered by descending populatrity (number of stars).* ## Backtesting and Live Trading ### General - Event Driven Frameworks | Repository | Description | Stars | Made with | |------------|-------------|-------|-----------| | [vnpy](https://github.com/vnpy/vnpy) | Python-based open source quantitative trading system development framework, officially released in January 2015, has grown step by step into a full-featured quantitative trading platform | ![GitHub stars](https://badgen.net/github/stars/vnpy/vnpy) | ![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg) | | [zi",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 11,
+      "streak_days": 3
+    },
+    {
+      "rank": 4,
+      "full_name": "different-ai/openwork",
+      "url": "https://github.com/different-ai/openwork",
+      "description": "The open-source alternative to Claude Cowork (powered by opencode)",
+      "language": "TypeScript",
+      "stars": 18880,
+      "forks": 1919,
+      "stars_today": 915,
+      "topics": [],
+      "license": "NOASSERTION",
+      "created_at": "2026-01-14T01:39:31Z",
+      "updated_at": "2026-07-31T04:43:17Z",
+      "open_issues": 413,
+      "default_branch": "dev",
+      "readme_excerpt": "# OpenWork OpenWork is a free, open-source desktop app made for sharing AI workflows. It is an open-source alternative to Claude Cowork and Codex for macOS, Windows, and Linux. Add one OpenWork MCP to Codex, Claude Code, Cursor, or another compatible agent and reuse the same skills, MCPs, and connected services across your tools, teammates, and machines. Create something once, share it with coworkers or friends, or keep it for yourself. The desktop app is there when you want a dedicated workspace, but it is not required. You can use OpenWork from the agent you already have. For larger organizations, the admin interface lets you publish capabilities, manage access, and configure shared or per-user connections. [**Download OpenWork**](https://openworklabs.com/download) <img width=\"1481\" height=\"842\" alt=\"OpenWork desktop app\" src=\"https://github.com/user-attachments/assets/66a8dd9b-5260-488c-957d-e54331e78c1c\" /> ## Install with your AI agent Already use an AI agent? Copy this prompt and paste it into Claude Code, Cursor, Codex, ChatGPT, or any agent that can run commands on your computer. ```text Install OpenWork on my computer, set up my first workspace, and open it ready to use. Follow the steps in https://openworklabs.com/start.md?v=hero ``` 1. Installs OpenWork 2. Creates your workspace 3. Opens it ready to run ## Use OpenWork from any agent The OpenWork MCP brings your assigned skills, plugins, MCP connections, Google Workspace, and Microsoft 365 capabilities into any compatible agent. It exposes two tools: `search_capabilities` finds what you can use, and `execute_capability` runs it. After adding the MCP, your client opens a browser so you can sign in and choose your OpenWork organization. ### Codex ```bash codex mcp add openwork --url https://api.openworklabs.com/mcp/agent ``` ### Claude Code ```bash claude mcp add --transport http openwork https://api.openworklabs.com/mcp/agent ``` ### OpenCode Add this to `opencode.json`: ```json { \"mcp\": { \"openwork\": { \"type\": \"remote\", \"enabled\": true, \"url\": \"https://api.openworklabs.com/mcp/agent\", \"oauth\": {} } } } ``` ### Any MCP client Use this remote MCP server URL: ```text https://api.openworklabs.com/mcp/agent ``` ## OpenWork Den OpenWork Den is the control plane for managing OpenWork across a team or organization. - Provision inference at scale and control which members and teams can use each model provider. - Invite teammates, create teams, and manage access from one place. - Set desktop policies, restrict local model access, and control which app versions your organization can use. - Publish skills and plugins through marketplaces, then assign them to the organization, a team, or specific people. - Import Anthropic-compatible plugins and make their supported skills and remote MCPs available through the OpenWork MCP. <img width=\"1546\" height=\"915\" alt=\"OpenWork Den organization control plane\" src=\"https://github.com/user-attachments/assets/033dbbfe-5661-4f7c-869c-46278406d6cc\" /> ## Documentation [Read the OpenWork docs.](https://openworklabs.com/docs) ## Local development For one checkout, keep using `pnpm dev`; with no extra environment variables it reuses the existing shared dev profile. To run multiple git worktrees at once, use: ```bash pnpm dev:worktree ``` That sets `OPENWORK_DEV_PROFILE=auto`, derives a stable profile name from the worktree path, lets Electron choose a free CDP port, and asks Vite for a free dev-server port. You can also choose a named profile, for example `OPENWORK_DEV_PROFILE=my-feature OPENWORK_ELECTRON_REMOTE_DEBUG_PORT=0 PORT=0 pnpm dev`. `dev:worktree` also defaults `OPENWORK_ELECTRON_USE_MOCK_KEYCHAIN=1`. A brand-new profile has no stored credentials, so on macOS the real keychain prompts as soon as Chromium persists an authenticated cookie, and that modal blocks Electron's main loop until it is dismissed. Set `OPENWORK_ELECTRON_USE_MOCK_KEYCHAIN=0` if you specifically want the system keychain in an isolated profile. Dev startup prints a ba",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "WhiskeySockets/Baileys",
+      "url": "https://github.com/WhiskeySockets/Baileys",
+      "description": "Socket-based TS/JavaScript API for WhatsApp Web",
+      "language": "JavaScript",
+      "stars": 10469,
+      "forks": 3255,
+      "stars_today": 19,
+      "topics": [
+        "bun",
+        "deno",
+        "nodejs",
+        "reverse-engineering",
+        "typescript",
+        "websockets",
+        "whatsapp-web",
+        "ws"
+      ],
+      "license": "MIT",
+      "created_at": "2022-01-12T20:38:14Z",
+      "updated_at": "2026-07-31T04:21:27Z",
+      "open_issues": 337,
+      "default_branch": "master",
+      "readme_excerpt": "<h1><img alt=\"Baileys logo\" src=\"https://raw.githubusercontent.com/WhiskeySockets/Baileys/refs/heads/master/Media/logo.png\" height=\"75\"/></h1> > [!CAUTION] > NOTICE OF BREAKING CHANGE. > > As of 7.0.0, multiple breaking changes were introduced into the library. > > Please check out https://whiskey.so/migrate-latest for more information. Baileys is a WebSockets-based TypeScript library for interacting with the WhatsApp Web API. Join the WhiskeySockets community via the link: https://whiskey.so/discord # Usage & Guide > [!IMPORTANT] > The new guide is a work in progress. Expect missing pages/content. [Report missing or incorrect content.](https://github.com/WhiskeySockets/baileys.wiki-site/issues/new) > > **You can still access the old guide here:** [README.md](https://github.com/WhiskeySockets/Baileys/tree/master/README.md), or the [NPM homepage](https://npmjs.com/package/baileys). The new guide is posted at https://baileys.wiki . # Get Support If you'd like business to enterprise-level support from Rajeh, the current maintainer of Baileys, you can book a video chat. Book a 1 hour time slot by contacting him on Discord or pre-ordering [here](https://purpshell.dev/book). The earlier you pre-order the better, as his time slots usually fill up very quickly. He offers immense value per hour and will answer all your questions before the time runs out. If you are a business, we encourage you to contribute back to the high development costs of the project and to feed the maintainers who dump tens of hours a week on this. You can do so by booking meetings or sponsoring below. All support, even in bona fide / contribution hours, is welcome by businesses of all sizes. This is not condoning or endorsing businesses to use the library. See the Disclaimer below. # Sponsor If you'd like to financially support this project, you can do so by supporting the current maintainer [here](https://purpshell.dev/sponsor). # Disclaimer > [!CAUTION] > This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with WhatsApp or any of its subsidiaries or its affiliates. > The official WhatsApp website can be found at whatsapp.com. \"WhatsApp\" as well as related names, marks, emblems and images are registered trademarks of their respective owners. > > The maintainers of Baileys do not in any way condone the use of this application in practices that violate the Terms of Service of WhatsApp. The maintainers of this application call upon the personal responsibility of its users to use this application in a fair way, as it is intended to be used. > Use at your own discretion. Do not spam people with this. We discourage any stalkerware, bulk or automated messaging usage. # License Copyright (c) 2025 Rajeh Taher/WhiskeySockets Licensed under the MIT License: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. Thus, the maintainers of the project can't be held liable for any potential misuse of this project.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "pascalorg/editor",
+      "url": "https://github.com/pascalorg/editor",
+      "description": "Create and share 3D architectural projects.",
+      "language": "TypeScript",
+      "stars": 20201,
+      "forks": 2623,
+      "stars_today": 625,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-10-16T19:35:06Z",
+      "updated_at": "2026-07-31T04:35:20Z",
+      "open_issues": 35,
+      "default_branch": "main",
+      "readme_excerpt": "# Pascal Editor A 3D building editor built with React Three Fiber and WebGPU. [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore)](https://www.npmjs.com/package/@pascal-app/core) [![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer) [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/SaBRA9t2) [![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app) https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b ## Using Published Packages The viewer runtime and built-in node definitions are separate packages. Install the full built-in viewer set, then load the built-in plugin once before mounting `<Viewer>`: ```bash npm install @pascal-app/core @pascal-app/viewer @pascal-app/editor @pascal-app/nodes ``` ```typescript import { loadPlugin } from '@pascal-app/core' import { builtinPlugin } from '@pascal-app/nodes' await loadPlugin(builtinPlugin) ``` See the [`@pascal-app/viewer` quick start](packages/viewer/README.md#usage) for a React example. ## Repository Architecture This is a Turborepo monorepo with four main runtime packages: ``` editor/ ├── apps/ │ └── editor/ # Next.js application ├── packages/ │ ├── core/ # Schemas, scene state, and registry contracts │ ├── viewer/ # 3D rendering runtime and shared systems │ ├── editor/ # Editing tools and UI components │ ├── nodes/ # Built-in node definitions, renderers, and systems │ └── ui/ # Shared UI components ``` ### Separation of Concerns | Package | Responsibility | |---------|---------------| | **@pascal-app/core** | Node schemas, scene state (Zustand), registry contracts, spatial queries, and event bus | | **@pascal-app/viewer** | 3D rendering via React Three Fiber, shared render systems, default camera/controls, and post-processing | | **@pascal-app/editor** | Editing tools, panels, selection, and direct-manipulation UI | | **@pascal-app/nodes** | Built-in registry plugin with node definitions, renderers, geometry, and systems | | **apps/editor** | Standalone Next.js host for the editor packages | The **viewer** renders the scene with sensible defaults. The **editor** extends it with interactive tools, selection management, and editing capabilities. ### Stores Each package has its own Zustand store for managing state: | Store | Package | Responsibility | |-------|---------|----------------| | `useScene` | `@pascal-app/core` | Scene data: nodes, root IDs, dirty nodes, CRUD operations. Persisted to IndexedDB with undo/redo via Zundo. | | `useViewer` | `@pascal-app/viewer` | Viewer state: current selection (building/level/zone IDs), level display mode (stacked/exploded/solo), camera mode. | | `useEditor` | `apps/editor` | Editor state: active tool, structure layer visibility, panel states, editor-specific preferences. | **Access patterns:** ```typescript // Subscribe to state changes (React component) const nodes = useScene((state) => state.nodes) const levelId = useViewer((state) => state.selection.levelId) const activeTool = useEditor((state) => state.tool) // Access state outside React (callbacks, systems) const node = useScene.getState().nodes[id] useViewer.getState().setSelection({ levelId: 'level_123' }) ``` --- ## Core Concepts ### Nodes Nodes are the data primitives that describe the 3D scene. All nodes extend `BaseNode`: ```typescript BaseNode { id: string // Auto-generated with type prefix (e.g., \"wall_abc123\") type: string // Discriminator for type-safe handling parentId: string | null // Parent node reference visible: boolean camera?: Camera // Optional saved camera position metadata?: JSON // Arbitrary metadata (e.g., { isTransient: true }) } ``` **Node Hierarchy:** ``` Site └── Building └── Lev",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 16,
+      "rank_change": 10,
+      "streak_days": 3
+    },
+    {
+      "rank": 7,
+      "full_name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": 55658,
+      "forks": 4792,
+      "stars_today": 378,
+      "topics": [
+        "ai-prompts",
+        "ai-skill",
+        "bluesky",
+        "claude",
+        "claude-code",
+        "clawhub",
+        "deep-research",
+        "hackernews",
+        "instagram",
+        "openclaw",
+        "polymarket",
+        "recency",
+        "reddit",
+        "research",
+        "social-media",
+        "tiktok",
+        "trends",
+        "twitter",
+        "web-search",
+        "youtube"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-23T20:37:37Z",
+      "updated_at": "2026-07-31T04:43:05Z",
+      "open_issues": 76,
+      "default_branch": "main",
+      "readme_excerpt": "# /last30days English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) <p align=\"center\"> <img src=\"media/pr-assets/last30days-ad.gif\" width=\"720\" alt=\"last30days - an AI agent-led search engine that searches people, not editors\" /> </p> <p align=\"center\"> <a href=\"https://github.com/mvanhorn/last30days-skill\"> <img src=\"https://img.shields.io/badge/%231-Repository%20Of%20The%20Day-6f42c1?style=for-the-badge&logo=github&label=GITHUB%20TRENDING\" alt=\"GitHub Trending #1 Repository Of The Day\" /> </a> <br/> <a href=\"https://trendshift.io/repositories/21997\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/21997\" alt=\"mvanhorn/last30days-skill | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/> </a> </p> **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v3 pipeline. The runtime skill spec lives in [skills/last30days/SKILL.md](skills/last30days/SKILL.md), which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** ``` /plugin marketplace add mvanhorn/last30days-skill /plugin install last30days ``` **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts:** ``` npx skills add mvanhorn/last30days-skill -g ``` (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the [Install](#install) section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. --- Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Reddit but can't search X or TikTok. Gemini has YouTube but not Reddit. Claude has none of them natively. Each platform is a walled garden with its own API, its own tokens, its own auth. But you can bring your own keys and browser sessions, and suddenly an AI agent can search all of them at once, score them against each other, and tell you what actually matters. That's the unlock. Not one better search engine. A dozen disconnected platforms, bridged by an agent. ``` /last30days Peter Steinberger ``` You have a meeting tomorrow. You Google them. You get their LinkedIn from 2023. /last30days gives you what they're actually doing this month: joined OpenAI to work on Codex, fighting Anthropic's ban on third-party agents, shipping 23 PRs at 85% merge rate, building \"LobsterOS\" for cross-device agent control, and r/ClaudeCode hit 569 upvotes debating whether he's a hero or \"insufferable.\" Scattered across X posts, Reddit threads, YouTube transcripts, and GitHub commits. None of it was on Google. ## Why this exists I built it to keep up in AI. Everything changes every day and the Reddit and X nerds are always on top of it first. I needed better prompts, and the training data was always months behind what the community had already figured out. But it turned into something bigger. Now I run it before a sales call to know the last 30 days truth about a business. Before a meeting to read someone's recent tweets and podcast transcripts. Before a Disney World trip to know which rides are closed and what the community says about Genie+. Before I build anything to kno",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "dotnet/aspnetcore",
+      "url": "https://github.com/dotnet/aspnetcore",
+      "description": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+      "language": "C#",
+      "stars": 38308,
+      "forks": 10859,
+      "stars_today": 7,
+      "topics": [
+        "aspnetcore",
+        "dotnet",
+        "hacktoberfest",
+        "help-wanted"
+      ],
+      "license": "MIT",
+      "created_at": "2014-03-11T06:09:42Z",
+      "updated_at": "2026-07-31T04:43:31Z",
+      "open_issues": 3995,
+      "default_branch": "main",
+      "readme_excerpt": "ASP.NET Core ============ [![.NET Foundation](https://img.shields.io/badge/.NET%20Foundation-blueviolet.svg)](https://www.dotnetfoundation.org/) [![MIT License](https://img.shields.io/github/license/dotnet/aspnetcore?color=%230b0&style=flat-square)](https://github.com/dotnet/aspnetcore/blob/main/LICENSE.txt) [![Help Wanted](https://img.shields.io/github/issues/dotnet/aspnetcore/help%20wanted?color=%232EA043&label=help%20wanted&style=flat-square)](https://github.com/dotnet/aspnetcore/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![Good First Issues](https://img.shields.io/github/issues/dotnet/aspnetcore/good%20first%20issue?color=%23512BD4&label=good%20first%20issue&style=flat-square)](https://github.com/dotnet/aspnetcore/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) [![Discord](https://img.shields.io/discord/732297728826277939?style=flat-square&label=Discord&logo=discord&logoColor=white&color=7289DA)](https://aka.ms/dotnet-discord) ASP.NET Core is an open-source and cross-platform framework for building modern cloud-based internet-connected applications, such as web apps, IoT apps, and mobile backends. ASP.NET Core apps run on [.NET](https://dot.net), a free, cross-platform, and open-source application runtime. It was architected to provide an optimized development framework for apps that are deployed to the cloud or run on-premises. It consists of modular components with minimal overhead, so you retain flexibility while constructing your solutions. You can develop and run your ASP.NET Core apps cross-platform on Windows, Mac, and Linux. [Learn more about ASP.NET Core](https://learn.microsoft.com/aspnet/core/). ## Get started Follow the [Getting Started](https://learn.microsoft.com/aspnet/core/getting-started) instructions. Also check out the [.NET Homepage](https://www.microsoft.com/net) for released versions of .NET, getting started guides, and learning resources. See the [Triage Process](https://github.com/dotnet/aspnetcore/blob/main/docs/TriageProcess.md) document for more information on how we handle incoming issues. ## How to engage, contribute, and give feedback Some of the best ways to contribute are to try things out, file issues, join in design conversations, and make pull-requests. * [Download our latest daily builds](./docs/DailyBuilds.md) * Follow along with the development of ASP.NET Core: * [Community Standup](https://live.asp.net): The community standup is held every week and streamed live on YouTube. You can view past standups in the linked playlist. * [Roadmap](https://aka.ms/aspnet/roadmap): The schedule and milestone themes for ASP.NET Core. * [Build ASP.NET Core source code](./docs/BuildFromSource.md) * Check out the [contributing](CONTRIBUTING.md) page to see the best places to log issues and start discussions. ## Reporting security issues and bugs Security issues and bugs should be reported privately to the Microsoft Security Response Center (MSRC) via the [MSRC Researcher Portal](https://msrc.microsoft.com/report/vulnerability/new). You should receive a response within 24 hours. Further information can be found in the [MSRC Report an Issue FAQ](https://www.microsoft.com/msrc/faqs-report-an-issue). You can also find these instructions in this repo's [Security doc](SECURITY.md). Also see info about related [Microsoft .NET Bounty Program](https://www.microsoft.com/msrc/bounty-dot-net-core). ## Related projects These are some other repos for related projects: * [Documentation](https://github.com/aspnet/Docs) - documentation sources for https://learn.microsoft.com/aspnet/core/ * [Entity Framework Core](https://github.com/dotnet/efcore) - data access technology * [Runtime](https://github.com/dotnet/runtime) - cross-platform runtime for cloud, mobile, desktop, and IoT apps * [Razor](https://github.com/dotnet/razor) - the Razor compiler and tooling for working with Razor syntax (.cshtml, .razor) ## Code of conduct See [CODE-OF-CONDUCT](./CODE-OF-CONDUCT.md) ## Nightly builds This tab",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "microsoft/PowerToys",
+      "url": "https://github.com/microsoft/PowerToys",
+      "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+      "language": "C",
+      "stars": 137197,
+      "forks": 8366,
+      "stars_today": 70,
+      "topics": [
+        "advanced-paste",
+        "color-picker",
+        "command-palette",
+        "desktop",
+        "fancyzones",
+        "keyboard-manager",
+        "microsoft-powertoys",
+        "powerrename",
+        "powertoys",
+        "windows",
+        "windows-10",
+        "windows-11"
+      ],
+      "license": "MIT",
+      "created_at": "2019-05-01T17:44:02Z",
+      "updated_at": "2026-07-31T04:39:20Z",
+      "open_issues": 7472,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"./doc/images/readme/pt-hero.light.png\" /> <img src=\"./doc/images/readme/pt-hero.dark.png\" /> </picture> </p> <h1 align=\"center\"> <span>Microsoft PowerToys</span> </h1> <p align=\"center\"> <span align=\"center\">Microsoft PowerToys is a collection of utilities that help you customize Windows and streamline everyday tasks.</span> </p> <h3 align=\"center\"> <a href=\"#-installation\">Installation</a> <span> · </span> <a href=\"https://aka.ms/powertoys-docs\">Documentation</a> <span> · </span> <a href=\"https://aka.ms/powertoys-releaseblog\">Blog</a> <span> · </span> <a href=\"#-whats-new\">Release notes</a> </h3> ## 🔨 Utilities PowerToys includes over 30 utilities to help you customize and optimize your Windows experience: | | | | | --- | --- | --- | | [<img src=\"doc/images/icons/AdvancedPaste.png\" alt=\"Advanced Paste icon\" height=\"16\"> Advanced Paste](https://aka.ms/PowerToysOverview_AdvancedPaste) | [<img src=\"doc/images/icons/Always%20On%20Top.png\" alt=\"Always on Top icon\" height=\"16\"> Always on Top](https://aka.ms/PowerToysOverview_AoT) | [<img src=\"doc/images/icons/Awake.png\" alt=\"Awake icon\" height=\"16\"> Awake](https://aka.ms/PowerToysOverview_Awake) | | [<img src=\"doc/images/icons/Color%20Picker.png\" alt=\"Color Picker icon\" height=\"16\"> Color Picker](https://aka.ms/PowerToysOverview_ColorPicker) | [<img src=\"doc/images/icons/Command%20Not%20Found.png\" alt=\"Command Not Found icon\" height=\"16\"> Command Not Found](https://aka.ms/PowerToysOverview_CmdNotFound) | [<img src=\"doc/images/icons/Command Palette.png\" alt=\"Command Palette icon\" height=\"16\"> Command Palette](https://aka.ms/PowerToysOverview_CmdPal) | | [<img src=\"doc/images/icons/Crop%20And%20Lock.png\" alt=\"Crop and Lock icon\" height=\"16\"> Crop And Lock](https://aka.ms/PowerToysOverview_CropAndLock) | [<img src=\"doc/images/icons/Environment%20Manager.png\" alt=\"Environment Variables icon\" height=\"16\"> Environment Variables](https://aka.ms/PowerToysOverview_EnvironmentVariables) | [<img src=\"doc/images/icons/FancyZones.png\" alt=\"FancyZones icon\" height=\"16\"> FancyZones](https://aka.ms/PowerToysOverview_FancyZones) | | [<img src=\"doc/images/icons/File%20Explorer%20Preview.png\" alt=\"File Explorer Add-ons icon\" height=\"16\"> File Explorer Add-ons](https://aka.ms/PowerToysOverview_FileExplorerAddOns) | [<img src=\"doc/images/icons/File%20Locksmith.png\" alt=\"File Locksmith icon\" height=\"16\"> File Locksmith](https://aka.ms/PowerToysOverview_FileLocksmith) | [<img src=\"doc/images/icons/GrabAndMove.png\" alt=\"Grab And Move icon\" height=\"16\"> Grab And Move](https://aka.ms/PowerToysOverview_GrabAndMove) | | [<img src=\"doc/images/icons/Host%20File%20Editor.png\" alt=\"Hosts File Editor icon\" height=\"16\"> Hosts File Editor](https://aka.ms/PowerToysOverview_HostsFileEditor) | [<img src=\"doc/images/icons/Image%20Resizer.png\" alt=\"Image Resizer icon\" height=\"16\"> Image Resizer](https://aka.ms/PowerToysOverview_ImageResizer) | [<img src=\"doc/images/icons/Keyboard%20Manager.png\" alt=\"Keyboard Manager icon\" height=\"16\"> Keyboard Manager](https://aka.ms/PowerToysOverview_KeyboardManager) | | [<img src=\"doc/images/icons/Light Switch.png\" alt=\"Light Switch icon\" height=\"16\"> Light Switch](https://aka.ms/PowerToysOverview_LightSwitch) | [<img src=\"doc/images/icons/Find My Mouse.png\" alt=\"Mouse Utilities icon\" height=\"16\"> Mouse Utilities](https://aka.ms/PowerToysOverview_MouseUtilities) | [<img src=\"doc/images/icons/MouseWithoutBorders.png\" alt=\"Mouse Without Borders icon\" height=\"16\"> Mouse Without Borders](https://aka.ms/PowerToysOverview_MouseWithoutBorders) | | [<img src=\"doc/images/icons/NewPlus.png\" alt=\"New+ icon\" height=\"16\"> New+](https://aka.ms/PowerToysOverview_NewPlus) | [<img src=\"doc/images/icons/Peek.png\" alt=\"Peek icon\" height=\"16\"> Peek](https://aka.ms/PowerToysOverview_Peek) | [<img src=\"doc/images/icons/PowerDisplay.png\" alt=\"PowerDisplay icon\" height=\"16\"> PowerDisplay](https://aka.ms/PowerToysOverview_PowerD",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "ansible/ansible",
+      "url": "https://github.com/ansible/ansible",
+      "description": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+      "language": "Python",
+      "stars": 69931,
+      "forks": 24255,
+      "stars_today": 29,
+      "topics": [
+        "ansible",
+        "python"
+      ],
+      "license": "GPL-3.0",
+      "created_at": "2012-03-06T14:58:02Z",
+      "updated_at": "2026-07-31T04:39:02Z",
+      "open_issues": 827,
+      "default_branch": "devel",
+      "readme_excerpt": "[![PyPI version](https://img.shields.io/pypi/v/ansible-core.svg)](https://pypi.org/project/ansible-core) [![Docs badge](https://img.shields.io/badge/docs-latest-brightgreen.svg)](https://docs.ansible.com/ansible/latest/) [![Chat badge](https://img.shields.io/badge/chat-Matrix-brightgreen.svg)](https://docs.ansible.com/ansible/devel/community/communication.html#real-time-chat) [![Ansible forum](https://img.shields.io/badge/forum-Ansible-orange.svg)](https://docs.ansible.com/ansible/devel/community/communication.html#forum) [![Build Status](https://dev.azure.com/ansible/ansible/_apis/build/status/CI?branchName=devel)](https://dev.azure.com/ansible/ansible/_build/latest?definitionId=20&branchName=devel) [![Ansible Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Ansible-silver.svg)](https://docs.ansible.com/ansible/devel/community/code_of_conduct.html) [![Repository License](https://img.shields.io/badge/license-GPL%20v3.0-brightgreen.svg)][copying] [![Ansible CII Best Practices certification](https://bestpractices.coreinfrastructure.org/projects/2372/badge)](https://bestpractices.coreinfrastructure.org/projects/2372) # Ansible Ansible is a radically simple IT automation system. It handles configuration management, application deployment, cloud provisioning, ad-hoc task execution, network automation, and multi-node orchestration. Ansible makes complex changes like zero-downtime rolling updates with load balancers easy. More information on the Ansible [website](https://ansible.com/). ## Design Principles * Have an extremely simple setup process with a minimal learning curve. * Manage machines quickly and in parallel. * Avoid custom-agents and additional open ports, be agentless by leveraging the existing SSH daemon. * Describe infrastructure in a language that is both machine and human friendly. * Focus on security and easy auditability/review/rewriting of content. * Manage new remote machines instantly, without bootstrapping any software. * Allow module development in any dynamic language, not just Python. * Be usable as non-root. * Be the easiest IT automation system to use, ever. ## Use Ansible You can install a released version of Ansible with `pip` or a package manager. See our [installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) for details on installing Ansible on a variety of platforms. Power users and developers can run the `devel` branch, which has the latest features and fixes, directly. Although it is reasonably stable, you are more likely to encounter breaking changes when running the `devel` branch. We recommend getting involved in the Ansible community if you want to run the `devel` branch. ## Communication Join the Ansible forum to ask questions, get help, and interact with the community. * [Get Help](https://forum.ansible.com/c/help/6): Find help or share your Ansible knowledge to help others. Use tags to filter and subscribe to posts, such as the following: * Posts tagged with [ansible](https://forum.ansible.com/tag/ansible) * Posts tagged with [ansible-core](https://forum.ansible.com/tag/ansible-core) * Posts tagged with [playbook](https://forum.ansible.com/tag/playbook) * [Social Spaces](https://forum.ansible.com/c/chat/4): Meet and interact with fellow enthusiasts. * [News & Announcements](https://forum.ansible.com/c/news/5): Track project-wide announcements including social events. * [Bullhorn newsletter](https://docs.ansible.com/ansible/devel/community/communication.html#the-bullhorn): Get release announcements and important changes. For more ways to get in touch, see [Communicating with the Ansible community](https://docs.ansible.com/ansible/devel/community/communication.html). ## Contribute to Ansible * Check out the [Contributor's Guide](https://github.com/ansible/ansible/blob/devel/.github/CONTRIBUTING.md). * Read [Community Information](https://docs.ansible.com/ansible/devel/community) for all kinds of ways to contribute to and interact",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "stars": 48136,
+      "forks": 3266,
+      "stars_today": 80,
+      "topics": [
+        "browser",
+        "chrome",
+        "chrome-devtools",
+        "debugging",
+        "devtools",
+        "mcp",
+        "mcp-server",
+        "puppeteer"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-09-11T10:39:55Z",
+      "updated_at": "2026-07-31T04:43:17Z",
+      "open_issues": 114,
+      "default_branch": "main",
+      "readme_excerpt": "# Chrome DevTools for agents [![npm chrome-devtools-mcp package](https://img.shields.io/npm/v/chrome-devtools-mcp.svg)](https://npmjs.org/package/chrome-devtools-mcp) Chrome DevTools for agents (`chrome-devtools-mcp`) lets your coding agent (such as Antigravity, Claude, Cursor or Copilot) control and inspect a live Chrome browser. It acts as a Model-Context-Protocol (MCP) server, giving your AI coding assistant access to the full power of Chrome DevTools for reliable automation, in-depth debugging, and performance analysis. A [CLI](docs/cli.md) is also provided for use without MCP. ## [Tool reference](./docs/tool-reference.md) | [Changelog](./CHANGELOG.md) | [Contributing](./CONTRIBUTING.md) | [Troubleshooting](./docs/troubleshooting.md) | [Design Principles](./docs/design-principles.md) ## Key features - **Get performance insights**: Uses [Chrome DevTools](https://github.com/ChromeDevTools/devtools-frontend) to record traces and extract actionable performance insights. - **Advanced browser debugging**: Analyze network requests, take screenshots and check browser console messages (with source-mapped stack traces). - **Reliable automation**. Uses [puppeteer](https://github.com/puppeteer/puppeteer) to automate actions in Chrome and automatically wait for action results. ## Disclaimers `chrome-devtools-mcp` exposes content of the browser instance to the MCP clients allowing them to inspect, debug, and modify any data in the browser or DevTools. Avoid sharing sensitive or personal information that you don't want to share with MCP clients. `chrome-devtools-mcp` officially supports Google Chrome and [Chrome for Testing](https://developer.chrome.com/blog/chrome-for-testing/) only. Other Chromium-based browsers may work, but this is not guaranteed, and you may encounter unexpected behavior. Use at your own discretion. We are committed to providing fixes and support for the latest version of [Extended Stable Chrome](https://chromiumdash.appspot.com/schedule). Performance tools may send trace URLs to the Google CrUX API to fetch real-user experience data. This helps provide a holistic performance picture by presenting field data alongside lab data. This data is collected by the [Chrome User Experience Report (CrUX)](https://developer.chrome.com/docs/crux). To disable this, run with the `--no-performance-crux` flag. ## **Usage statistics** Google collects usage statistics (such as tool invocation success rates, latency, and environment information) to improve the reliability and performance of Chrome DevTools MCP. Data collection is **enabled by default**. You can opt-out by passing the `--no-usage-statistics` flag when starting the server: ```json \"args\": [\"-y\", \"chrome-devtools-mcp@latest\", \"--no-usage-statistics\"] ``` Google handles this data in accordance with the [Google Privacy Policy](https://policies.google.com/privacy). Google's collection of usage statistics for Chrome DevTools MCP is independent from the Chrome browser's usage statistics. Opting out of Chrome metrics does not automatically opt you out of this tool, and vice-versa. Collection is disabled if `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS` or `CI` env variables are set. ## Update checks By default, the server periodically checks the npm registry for updates and logs a notification when a newer version is available. You can disable these update checks by setting the `CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS` environment variable. ## Requirements - [Node.js](https://nodejs.org/) [LTS](https://github.com/nodejs/Release#release-schedule) version. - [Chrome](https://www.google.com/chrome/) current stable version or newer. - [npm](https://www.npmjs.com/) ## Getting started Add the following config to your MCP client: ```json { \"mcpServers\": { \"chrome-devtools\": { \"command\": \"npx\", \"args\": [\"-y\", \"chrome-devtools-mcp@latest\"] } } } ``` > [!NOTE] > Using `chrome-devtools-mcp@latest` ensures that your MCP client will always use the latest version of the Chrome DevTools MCP server. ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "jenkinsci/jenkins",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "description": "Jenkins automation server",
+      "language": "Java",
+      "stars": 26325,
+      "forks": 9720,
+      "stars_today": 25,
+      "topics": [
+        "cicd",
+        "continuous-delivery",
+        "continuous-deployment",
+        "continuous-integration",
+        "devops",
+        "groovy",
+        "hacktoberfest",
+        "java",
+        "jenkins",
+        "pipelines-as-code"
+      ],
+      "license": "MIT",
+      "created_at": "2010-11-22T21:21:23Z",
+      "updated_at": "2026-07-31T04:39:05Z",
+      "open_issues": 3606,
+      "default_branch": "master",
+      "readme_excerpt": "<a href=\"https://jenkins.io\"> <img width=\"400\" src=\"https://www.jenkins.io/images/jenkins-logo-title-dark.svg\" alt=\"Jenkins logo\"> </a> [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) [![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3538/badge)](https://bestpractices.coreinfrastructure.org/projects/3538) [![Reproducible Builds](https://img.shields.io/badge/Reproducible_Builds-ok-green)](https://maven.apache.org/guides/mini/guide-reproducible-builds.html) [![Gitter](https://img.shields.io/gitter/room/jenkinsci/jenkins)](https://matrix.to/#/#jenkinsci_jenkins:gitter.im) --- # Table of Contents - [About](#about) - [What to Use Jenkins for and When to Use It](#what-to-use-jenkins-for-and-when-to-use-it) - [Downloads](#downloads) - [Getting Started (Development)](#getting-started-development) - [Source](#source) - [Contributing to Jenkins](#contributing-to-jenkins) - [News and Website](#news-and-website) - [Governance](#governance) - [Adopters](#adopters) - [License](#license) --- # About In a nutshell, Jenkins is the leading open-source automation server. Built with Java, it provides over 2,000 [plugins](https://plugins.jenkins.io/) to support automating virtually anything, so that humans can spend their time doing things machines cannot. # What to Use Jenkins for and When to Use It Use Jenkins to automate your development workflow, so you can focus on work that matters most. Jenkins is commonly used for: - Building projects - Running tests to detect bugs and other issues as soon as they are introduced - Static code analysis - Deployment Execute repetitive tasks, save time, and optimize your development process with Jenkins. # Downloads The Jenkins project provides official distributions as WAR files, Docker images, native packages and installers for platforms including several Linux distributions and Windows. See the [Downloads](https://www.jenkins.io/download) page for references. For all distributions Jenkins offers two release lines: - [Weekly](https://www.jenkins.io/download/weekly/) - Frequent releases which include all new features, improvements, and bug fixes. - [Long-Term Support (LTS)](https://www.jenkins.io/download/lts/) - Older release line which gets periodically updated via bug fix backports. Latest releases: [![Jenkins Regular Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog%2Fbadge.json)](https://www.jenkins.io/changelog) [![Jenkins LTS Release](https://img.shields.io/endpoint?url=https%3A%2F%2Fwww.jenkins.io%2Fchangelog-stable%2Fbadge.json)](https://www.jenkins.io/changelog-stable) # Getting Started (Development) For more information on setting up your development environment, contributing, and working with Jenkins internals, check the [contributing guide](CONTRIBUTING.md) and the [Jenkins Developer Documentation](https://www.jenkins.io/doc/developer/). # Source Our latest and greatest source of Jenkins can be found on [GitHub](https://github.com/jenkinsci/jenkins). Fork us! # Contributing to Jenkins New to open source or Jenkins? Here’s how to get started: - Read the [Contribution Guidelines](CONTRIBUTING.md) - Check our [good first issues](https://github.com/jenkinsci/jenkins/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22) - Join our [Gitter chat](https://matrix.to/#/#jenkinsci_newcomer-contributors:gitter.im) for questions and help For more information about participating in the community and contributing to the Jenkins project, see [this page](https://www.jenkins.io/participate/). Documentation for Jenkins core maintainers is in the [maintaine",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "agavra/tuicr",
+      "url": "https://github.com/agavra/tuicr",
+      "description": "a code review TUI with vim keybindings",
+      "language": "Rust",
+      "stars": 1907,
+      "forks": 163,
+      "stars_today": 190,
+      "topics": [
+        "ai-tools",
+        "code-review",
+        "rust",
+        "tui"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-08T04:55:34Z",
+      "updated_at": "2026-07-31T04:40:03Z",
+      "open_issues": 92,
+      "default_branch": "main",
+      "readme_excerpt": "# tuicr **A code review TUI with vim keybindings. Export to GitHub, GitLab, or clipboard.** [![Crates.io](https://img.shields.io/crates/v/tuicr)](https://crates.io/crates/tuicr) [![License](https://img.shields.io/crates/l/tuicr)](./LICENSE) [![Website](https://img.shields.io/badge/website-tuicr.dev-green)](https://tuicr.dev) ![demo](./public/tuicr-demo.gif) > [!TIP] > Pronounced \"tweaker\". ## What it does - GitHub-style continuous diff in the terminal. Scroll through every changed file in one stream. - PR-style comments at the line, range, file, and review level. - Review tracking at file or hunk granularity, persisted across sessions. - Three export targets: push a real review to GitHub or GitLab, copy structured markdown to your clipboard, or pipe to stdout. - Works with git, jj, and mercurial. Reviews uncommitted changes, commit ranges, or any GitHub PR or GitLab MR. ## Install ```bash curl -fsSL tuicr.dev/install.sh | sh # or brew install agavra/tap/tuicr ``` <details> <summary>Other install methods (cargo, mise, nix, binaries, source)</summary> ```bash # Cargo cargo install tuicr # Mise mise use github:agavra/tuicr # Nix nix run github:agavra/tuicr ``` Pre-built binaries: [GitHub Releases](https://github.com/agavra/tuicr/releases) From source: ```bash git clone https://github.com/agavra/tuicr.git cd tuicr cargo install --path . ``` </details> Update the active installation with one command: ```bash tuicr update tuicr update 0.18.0 # Install a known-good version ``` `tuicr update` uses Homebrew, Cargo, Mise, or a Nix profile when that manager owns the executable. Install-script and manually downloaded binaries update in place from the matching GitHub release asset after SHA-256 verification. Exact-version installs support Cargo and direct binaries; use the package manager's pinning workflow for Homebrew, Mise, or Nix. A `nix run` invocation is temporary rather than installed; rerun it to use the current flake, or use `nix profile install github:agavra/tuicr` for an installation that `tuicr update` can upgrade. ## Quick start ```bash tuicr # Pick from a commit selector tuicr tui # Same TUI, explicit subcommand tuicr -w # Uncommitted changes (skip selector) tuicr -r main..HEAD # Commit range tuicr pr 125 # GitHub PR tuicr mr 125 # GitLab MR tuicr tui pr 125 # GitHub PR via explicit TUI subcommand tuicr tui mr 125 # GitLab MR via explicit TUI subcommand tuicr --stdout # Pipe the review to stdout tuicr review list # List saved local review sessions tuicr update # Update the active installation tuicr update 0.18.0 # Install a known-good version ``` Inside tuicr, navigate with `j`/`k`, press `c` to comment, then `y` to copy the review or `:submit` to push it to GitHub or GitLab. When opening a GitHub PR or GitLab MR you've reviewed before, tuicr preselects commits newer than your latest submitted review when that metadata is available; commits already covered by that review are marked with `✓` in the inline selector. Auto-detects git, jj, or mercurial. ## How it compares | | tuicr | [hunk](https://github.com/modem-dev/hunk) | [lumen](https://github.com/jnsahaj/lumen) | `gh pr review` | `git diff` | |---|:---:|:---:|:---:|:---:|:---:| | TUI diff viewer | ✅ | ✅ | ✅ | ❌ | ❌ | | Write comments in the TUI | ✅ | ✅ | ✅ | ❌ | ❌ | | Vim keybindings | ✅ | ❌ | partial¹ | ❌ | ❌ | | Push inline review to GitHub | ✅ | ❌ | ❌ | partial² | ❌ | | Push inline review to GitLab | ✅ | ❌ | ❌ | ❌ | ❌ | | Agent-ready markdown export | ✅ | via CLI skill | ❌ | ❌ | ❌ | | git | ✅ | ✅ | ✅ | ❌ | ✅ | | jj | ✅ | ✅ | ✅ | ❌ | ❌ | | Mercurial (hg) | ✅ | ❌ | ❌ | ❌ | ❌ | | Single static binary | ✅ | (needs Node) | ✅ | ✅ | ✅ | ¹ Lumen has `j`/`k` navigation but no broader vim model (visual mode, `{N}G`, `Ctrl-d`/`Ctrl-u`, etc.). ² `gh pr review` posts approve/comment/request-changes at the review level only. No inline line comments. ## Export your review When you're done reviewing, send your comments wherever the work continues. ### To GitHub `:submit` opens a picker",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 236314,
+      "forks": 35936,
+      "stars_today": 804,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-07-31T04:43:06Z",
+      "open_issues": 107,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/hero.png\" alt=\"ECC - the agent harness operating system\" width=\"100%\" /> </p> <p align=\"center\"> <strong>Language:</strong> <a href=\"README.md\">English</a> | <a href=\"docs/pt-BR/README.md\">Português (Brasil)</a> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"docs/zh-TW/README.md\">繁體中文</a> | <a href=\"docs/ja-JP/README.md\">日本語</a> | <a href=\"docs/ko-KR/README.md\">한국어</a> | <a href=\"docs/tr/README.md\">Türkçe</a> | <a href=\"docs/ru/README.md\">Русский</a> | <a href=\"docs/vi-VN/README.md\">Tiếng Việt</a> | <a href=\"docs/th/README.md\">ไทย</a> | <a href=\"docs/de-DE/README.md\">Deutsch</a> | <a href=\"docs/es/README.md\">Español</a> </p> <p align=\"center\"> <a href=\"https://discord.gg/36yGMHGFbR\"><img src=\"https://img.shields.io/discord/1496644400590094540?logo=discord&logoColor=white&label=Discord&color=5865F2\" alt=\"Discord\" /></a> <a href=\"https://ecc.tools\"><img src=\"https://img.shields.io/badge/Website-ecc.tools-E07856?logo=googlechrome&logoColor=white\" alt=\"Website\" /></a> <a href=\"https://github.com/apps/ecc-tools\"><img src=\"https://img.shields.io/badge/GitHub%20App-ECC%20Tools-181717?logo=github&logoColor=white\" alt=\"GitHub App\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT license\" /></a> </p> <p align=\"center\"> <a href=\"https://github.com/affaan-m/ECC/stargazers\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fstars&style=flat\" alt=\"Stars\" /></a> <a href=\"https://github.com/affaan-m/ECC/network/members\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fforks&style=flat\" alt=\"Forks\" /></a> <a href=\"https://github.com/affaan-m/ECC/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/affaan-m/ECC?style=flat\" alt=\"Contributors\" /></a> <a href=\"https://github.com/marketplace/ecc-tools\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Finstalls&logo=github\" alt=\"GitHub App installs\" /></a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/ecc-universal\"><img src=\"https://img.shields.io/npm/dw/ecc-universal?label=ecc-universal&logo=npm\" alt=\"ecc-universal npm downloads\" /></a> <a href=\"https://www.npmjs.com/package/ecc-agentshield\"><img src=\"https://img.shields.io/npm/dw/ecc-agentshield?label=ecc-agentshield&logo=npm\" alt=\"ecc-agentshield npm downloads\" /></a> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white\" alt=\"Shell\" /> <img src=\"https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white\" alt=\"TypeScript\" /> <img src=\"https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" /> <img src=\"https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white\" alt=\"Go\" /> <img src=\"https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white\" alt=\"Java\" /> <img src=\"https://img.shields.io/badge/-Perl-39457E?logo=perl&logoColor=white\" alt=\"Perl\" /> <img src=\"https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white\" alt=\"Markdown\" /> </p> > [!WARNING] > **Official sources only.** Install ECC only from verified channels: the GitHub repository [github.com/affaan-m/ECC](https://github.com/affaan-m/ECC), the npm packages [`ecc-universal`](https://www.npmjs.com/package/ecc-universal) and [`ecc-agentshield`](https://www.npmjs.com/package/ecc-agentshield), the [GitHub App](https://github.com/apps/ecc-tools), the plugin slug `ecc@ecc`, and the project website [ecc.tools](https://ecc.tools). Third-party re-uploads and unofficial mirrors are not maintained or reviewed by the project and may contain malware. <div align=\"center\"> <table aria-label=\"ECC primary links\"> <tr> <td width=\"33%\" align=\"center\"> <a href=\"https://ecc.tools/pricing\"> <img src=\"assets/images/community/ecc-tools-mark.svg\" height=\"42\" alt=\"ECC Tools\" /><br /> <strong>ECC Pro + GitHub App</strong> </a><br /> <sub><a href=\"https://gith",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": -11,
+      "streak_days": 3
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "至少 2/14 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
+      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
+      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
+      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+    ],
+    "hot_characteristics": [
+      "其他开发者关注方向（9 个项目）",
+      "实时语音智能体（1 个项目）",
+      "金融研究知识生态（1 个项目）",
+      "空间设计与创作工具（1 个项目）",
+      "企业自动化基础设施（1 个项目）",
+      "AI 智能体工作系统（1 个项目）"
+    ],
+    "product_business_signals": [
+      "企业智能体机会正向治理、安全和多模型管理迁移。",
+      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
+      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
+      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+    ],
+    "watch_next": [
+      "观察智能体治理项目是否出现企业集成案例。",
+      "观察实时语音智能体在普通设备上的延迟和中文体验。",
+      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
+      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "huggingface/speech-to-speech",
+        "one_line_summary": "使用开源模型构建可本地运行的语音智能体。",
+        "industry_direction": "实时语音智能体",
+        "target_users": [
+          "语音产品团队",
+          "客服与助理产品"
+        ],
+        "problem_solved": "自然语音交互常受延迟、云服务成本和隐私限制影响。",
+        "solution": "使用开源模型构建可本地运行的语音智能体。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 628 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "本地端到端语音智能体",
+        "technology_impact": "语音 AI 可成为设备侧、可定制的交互入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "设备性能、噪声、语言覆盖和对话稳定性决定实际体验。",
+        "ai_relevance": "语音 AI 可成为设备侧、可定制的交互入口。",
+        "plain_language_explanation": "通俗地说：自然语音交互常受延迟、云服务成本和隐私限制影响。 这个项目尝试用“使用开源模型构建可本地运行的语音智能体。”来降低门槛。",
+        "scenario_examples": [
+          "语音产品团队在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "语音 AI 可成为设备侧、可定制的交互入口。",
+        "who_should_care": "语音产品团队、客服与助理产品",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huggingface/speech-to-speech",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Build local voice agents with open-source models",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huggingface/speech-to-speech",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/huggingface/speech-to-speech",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/AI-For-Beginners",
+        "one_line_summary": "12 Weeks, 24 Lessons, AI for All!",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "12 Weeks, 24 Lessons, AI for All!",
+        "solution": "12 Weeks, 24 Lessons, AI for All!",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 155 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：12 Weeks, 24 Lessons, AI for All! 这个项目尝试用“12 Weeks, 24 Lessons, AI for All!”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/AI-For-Beginners",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "12 Weeks, 24 Lessons, AI for All!",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/AI-For-Beginners",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/AI-For-Beginners",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "paperswithbacktest/awesome-systematic-trading",
+        "one_line_summary": "整理交易策略、工具、书籍和教程的资源目录。",
+        "industry_direction": "金融研究知识生态",
+        "target_users": [
+          "量化研究者",
+          "金融学习者"
+        ],
+        "problem_solved": "系统化交易资料分散，筛选学习路径和工具成本高。",
+        "solution": "整理交易策略、工具、书籍和教程的资源目录。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 621 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "知识资源聚合",
+        "technology_impact": "反映金融研究与自动化交易仍受持续关注。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资源收录和历史回测都不代表未来收益。",
+        "ai_relevance": "反映金融研究与自动化交易仍受持续关注。",
+        "plain_language_explanation": "通俗地说：系统化交易资料分散，筛选学习路径和工具成本高。 这个项目尝试用“整理交易策略、工具、书籍和教程的资源目录。”来降低门槛。",
+        "scenario_examples": [
+          "量化研究者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "反映金融研究与自动化交易仍受持续关注。",
+        "who_should_care": "量化研究者、金融学习者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/paperswithbacktest/awesome-systematic-trading",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "different-ai/openwork",
+        "one_line_summary": "The open-source alternative to Claude Cowork (powered by opencode)",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The open-source alternative to Claude Cowork (powered by opencode)",
+        "solution": "The open-source alternative to Claude Cowork (powered by opencode)",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 915 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The open-source alternative to Claude Cowork (powered by opencode) 这个项目尝试用“The open-source alternative to Claude Cowork (powered by opencode)”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/different-ai/openwork",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The open-source alternative to Claude Cowork (powered by opencode)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/different-ai/openwork",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/different-ai/openwork",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "WhiskeySockets/Baileys",
+        "one_line_summary": "Socket-based TS/JavaScript API for WhatsApp Web",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Socket-based TS/JavaScript API for WhatsApp Web",
+        "solution": "Socket-based TS/JavaScript API for WhatsApp Web",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 19 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Socket-based TS/JavaScript API for WhatsApp Web 这个项目尝试用“Socket-based TS/JavaScript API for WhatsApp Web”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/WhiskeySockets/Baileys",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Socket-based TS/JavaScript API for WhatsApp Web",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/WhiskeySockets/Baileys",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/WhiskeySockets/Baileys",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pascalorg/editor",
+        "one_line_summary": "提供可创建和分享三维建筑项目的产品。",
+        "industry_direction": "空间设计与创作工具",
+        "target_users": [
+          "建筑设计师",
+          "空间方案沟通者"
+        ],
+        "problem_solved": "三维建筑方案制作和分享门槛高，客户难以直观参与讨论。",
+        "solution": "提供可创建和分享三维建筑项目的产品。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 625 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "浏览器中的三维空间协作",
+        "technology_impact": "让非专业参与者也能查看和讨论空间方案。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "专业能力、格式兼容性和商业模式尚待核实。",
+        "ai_relevance": "让非专业参与者也能查看和讨论空间方案。",
+        "plain_language_explanation": "通俗地说：三维建筑方案制作和分享门槛高，客户难以直观参与讨论。 这个项目尝试用“提供可创建和分享三维建筑项目的产品。”来降低门槛。",
+        "scenario_examples": [
+          "建筑设计师在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "让非专业参与者也能查看和讨论空间方案。",
+        "who_should_care": "建筑设计师、空间方案沟通者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pascalorg/editor",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Create and share 3D architectural projects.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pascalorg/editor",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pascalorg/editor",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "one_line_summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "solution": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 378 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary 这个项目尝试用“AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvanhorn/last30days-skill",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvanhorn/last30days-skill",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mvanhorn/last30days-skill",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "dotnet/aspnetcore",
+        "one_line_summary": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "solution": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 7 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux. 这个项目尝试用“ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/dotnet/aspnetcore",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "ASP.NET Core is a cross-platform .NET framework for building modern cloud-based web applications on Windows, Mac, or Linux.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/dotnet/aspnetcore",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/dotnet/aspnetcore",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/PowerToys",
+        "one_line_summary": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "solution": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 70 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows 这个项目尝试用“Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/PowerToys",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/PowerToys",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/PowerToys",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ansible/ansible",
+        "one_line_summary": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+        "solution": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 29 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com. 这个项目尝试用“Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ansible/ansible",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy and maintain. Automate everything from code deployment to network configuration to cloud management, in a language that approaches plain English, using SSH, with no agents to install on remote systems. https://docs.ansible.com.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ansible/ansible",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ansible/ansible",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ChromeDevTools/chrome-devtools-mcp",
+        "one_line_summary": "Chrome DevTools for coding agents",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Chrome DevTools for coding agents",
+        "solution": "Chrome DevTools for coding agents",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 80 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Chrome DevTools for coding agents 这个项目尝试用“Chrome DevTools for coding agents”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Chrome DevTools for coding agents",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jenkinsci/jenkins",
+        "one_line_summary": "自动执行产品构建、测试和发布流程。",
+        "industry_direction": "企业自动化基础设施",
+        "target_users": [
+          "数字产品团队",
+          "企业 IT 部门"
+        ],
+        "problem_solved": "产品更新包含大量重复检查和发布步骤，人工操作容易出错。",
+        "solution": "自动执行产品构建、测试和发布流程。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 25 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "成熟的自动化流水线",
+        "technology_impact": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "成熟系统可能伴随维护复杂度和历史配置负担。",
+        "ai_relevance": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "plain_language_explanation": "通俗地说：产品更新包含大量重复检查和发布步骤，人工操作容易出错。 这个项目尝试用“自动执行产品构建、测试和发布流程。”来降低门槛。",
+        "scenario_examples": [
+          "数字产品团队在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "who_should_care": "数字产品团队、企业 IT 部门",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jenkinsci/jenkins",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Jenkins automation server",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jenkinsci/jenkins",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jenkinsci/jenkins",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "agavra/tuicr",
+        "one_line_summary": "a code review TUI with vim keybindings",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "a code review TUI with vim keybindings",
+        "solution": "a code review TUI with vim keybindings",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 190 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：a code review TUI with vim keybindings 这个项目尝试用“a code review TUI with vim keybindings”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/agavra/tuicr",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "a code review TUI with vim keybindings",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/agavra/tuicr",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/agavra/tuicr",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "one_line_summary": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "industry_direction": "AI 智能体工作系统",
+        "target_users": [
+          "使用 AI 助手的团队",
+          "AI 工具产品团队"
+        ],
+        "problem_solved": "智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。",
+        "solution": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 804 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可积累经验的智能体框架",
+        "technology_impact": "关注点从模型能力转向长期工作与受控执行。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "效果主张仍需独立基准和真实团队案例验证。",
+        "ai_relevance": "关注点从模型能力转向长期工作与受控执行。",
+        "plain_language_explanation": "通俗地说：智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。 这个项目尝试用“把技能、记忆、安全规则和研究流程组合为智能体工作框架。”来降低门槛。",
+        "scenario_examples": [
+          "使用 AI 助手的团队在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "关注点从模型能力转向长期工作与受控执行。",
+        "who_should_care": "使用 AI 助手的团队、AI 工具产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/affaan-m/ECC",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
