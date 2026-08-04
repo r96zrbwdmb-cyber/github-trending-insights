@@ -1,0 +1,1527 @@
+{
+  "date": "2026-08-04",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 16,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "lyogavin/airllm",
+      "url": "https://github.com/lyogavin/airllm",
+      "description": "AirLLM 70B inference with single 4GB GPU",
+      "language": "Jupyter Notebook",
+      "stars": 27392,
+      "forks": 2989,
+      "stars_today": 1085,
+      "topics": [
+        "chinese-llm",
+        "chinese-nlp",
+        "finetune",
+        "generative-ai",
+        "instruct-gpt",
+        "instruction-set",
+        "llama",
+        "llm",
+        "lora",
+        "open-models",
+        "open-source",
+        "open-source-models",
+        "qlora"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2023-06-12T16:28:41Z",
+      "updated_at": "2026-08-04T04:30:43Z",
+      "open_issues": 123,
+      "default_branch": "main",
+      "readme_excerpt": "![airllm_logo](https://github.com/lyogavin/airllm/blob/main/assets/airllm_logo_sm.png?v=3&raw=true) [**Quickstart**](#quickstart) | [**Configurations**](#configurations) | [**MacOS**](#macos) | [**Example notebooks**](#example-python-notebook) | [**FAQ**](#faq) **AirLLM** dramatically reduces inference memory usage, letting 70B large language models run on a single 4GB GPU card — without quantization, distillation, or pruning. You can even run **405B Llama 3.1** on **8GB**, **DeepSeek-V3 (671B)** on **~12GB**, and **Kimi K3 (2.8T)** — the largest open-source model released to date — on **under 4GB**, because sparse MoE models stream one expert at a time rather than a whole layer. <a href=\"https://github.com/lyogavin/airllm/stargazers\">![GitHub Repo stars](https://img.shields.io/github/stars/lyogavin/airllm?style=social)</a> [![Downloads](https://static.pepy.tech/personalized-badge/airllm?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads)](https://pepy.tech/project/airllm) [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/LianjiaTech/BELLE/blob/main/LICENSE) [![Generic badge](https://img.shields.io/badge/wechat-Anima-brightgreen?logo=wechat)](https://static.aicompose.cn/static/wecom_barcode.png?t=1671918938) [![Discord](https://img.shields.io/discord/1175437549783760896?logo=discord&color=7289da )](https://discord.gg/2xffU5sn) [![PyPI - AirLLM](https://img.shields.io/pypi/format/airllm?logo=pypi&color=3571a3) ](https://pypi.org/project/airllm/) [![Website](https://img.shields.io/website?up_message=blog&url=https%3A%2F%2Fmedium.com%2F%40lyo.gavin&logo=medium&color=black)](https://medium.com/@lyo.gavin) [![Website](https://img.shields.io/badge/Gavin_Li-Blog-blue)](https://gavinliblog.com) [![Support me on Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Dgavinli%26type%3Dpatrons&style=flat)](https://patreon.com/gavinli) [![GitHub Sponsors](https://img.shields.io/github/sponsors/lyogavin?logo=GitHub&color=lightgray)](https://github.com/sponsors/lyogavin) ## AI Agents Recommendation: * [Best AI Game Sprite Generator](https://godmodeai.co) * [Best AI Facial Expression Editor](https://crazyfaceai.com) * [Bloome — build & run AI agent teams in the cloud, zero setup](https://bloome.im/app?ref=G6BYnov0&utm_medium=github&utm_source=lyogavin-airllm-ivor-202606) ## Updates [2026/07] **Kimi K3 (2.8T)** support: the largest open-source model runs on a single card in **3.72GB** of VRAM, measured end to end on one RTX 6000 Ada. Per-expert streaming loads only the experts a token actually routes to. K3 brings three requirements of its own: `pip install compressed-tensors flash-attn` (its model code mandates flash attention regardless of what you request), a CUDA 12 build of torch, since no prebuilt flash-attn wheel exists for CUDA 13 yet, and `transformers` 4.56.x, as its remote code does not load on 5.x. [2026/06] **v3.0**: FP8 model support + the latest models. Run **DeepSeek-V3 (671B) on ~12GB** and **Qwen3-235B on ~3GB**, plus Qwen3, Llama 3.x/4, DeepSeek V2/V3, Phi-4, Gemma and more — all through a single `AutoModel`. [2024/08/20] v2.11.0: Support Qwen2.5 [2024/08/18] v2.10.1 Support CPU inference. Support non sharded models. Thanks @NavodPeiris for the great work! [2024/07/30] Support Llama3.1 **405B** ([example notebook](https://colab.research.google.com/github/lyogavin/airllm/blob/main/air_llm/examples/run_llama3.1_405B.ipynb)). Support **8bit/4bit quantization**. [2024/04/20] AirLLM supports Llama3 natively already. Run Llama3 70B on 4GB single GPU. [2023/12/25] v2.8.2: Support MacOS running 70B large language models. [2023/12/20] v2.7: Support AirLLMMixtral. [2023/12/20] v2.6: Added AutoModel, automatically detect model type, no need to provide model class to initialize model. [2023/12/18] v2.5: added prefetching to overlap the model loading and compute. 10% speed improvement. [20",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "zhaoxuya520/reverse-skill",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "language": "PowerShell",
+      "stars": 16211,
+      "forks": 2275,
+      "stars_today": 2446,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-13T14:37:57Z",
+      "updated_at": "2026-08-04T04:32:32Z",
+      "open_issues": 13,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"reverse-skill.png\" alt=\"reverse-skill\" width=\"140\" /> </p> <h1 align=\"center\">reverse-skill</h1> <h3 align=\"center\">Cybersecurity Skills Router · 逆向技能路由包</h3> <p align=\"center\"><em style=\"font-family: Georgia, serif; font-size: 1.2em; color: #777;\">Navigate the dark waters, sail against the stream.</em></p> <p align=\"center\"> <a href=\"https://github.com/zhaoxuya520/reverse-skill/releases/tag/v1.0.0\"><img src=\"https://img.shields.io/badge/release-v1.0.0-blue\" alt=\"release\"></a> <a href=\"https://github.com/zhaoxuya520/reverse-skill/stargazers\"><img src=\"https://img.shields.io/github/stars/zhaoxuya520/reverse-skill?style=flat&logo=github\" alt=\"stars\"></a> <a href=\"https://github.com/zhaoxuya520/reverse-skill/forks\"><img src=\"https://img.shields.io/github/forks/zhaoxuya520/reverse-skill?style=flat&logo=github\" alt=\"forks\"></a> <a href=\"https://github.com/zhaoxuya520/reverse-skill/issues\"><img src=\"https://img.shields.io/github/issues/zhaoxuya520/reverse-skill?style=flat&logo=github\" alt=\"issues\"></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"license\"></a> <a href=\"CHANGELOG.md\"><img src=\"https://img.shields.io/badge/changelog-Keep%20a%20Changelog-orange\" alt=\"changelog\"></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/43969?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-43969\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/43969\" alt=\"zhaoxuya520%2Freverse-skill | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/43969?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-43969\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/43969/daily\" alt=\"zhaoxuya520%2Freverse-skill | Trendshift\" width=\"250\" height=\"55\"/></a> </p> <br/> <p align=\"center\"> <a href=\"#about\">About</a> · <a href=\"#getting-started\">Getting Started</a> · <a href=\"#usage\">Usage</a> · <a href=\"skills/MASTER-ROUTING.md\">Fast route</a> · <a href=\"skills/routing.md\">Routing</a> · <a href=\"skills/ops/\">Ops contracts</a> · <a href=\"README_AI.md\">AI Bootstrap</a> · <a href=\"#sponsors\">Sponsors</a> · <a href=\"#contributing\">Contributing</a> </p> <p align=\"center\"> 🌐 <a href=\"README_zh.md\">中文</a> </p> <br/> <a id=\"about\"></a> ## About > **If you are an AI Agent, jump to [README_AI.md](README_AI.md) and follow the instructions strictly.** When an AI agent (Claude Code, Codex CLI, Cursor, etc.) encounters an APK, a binary, frontend JS encryption, a CTF challenge, or a pentesting target, this package routes it to the right methodology, checks available tools, and executes a repeatable workflow instead of guessing commands. ``` User task → RULES.md → MASTER-ROUTING / master-route.ps1 (PRIMARY) → case-init / scope.md (auth + network_profile; no target ACT until ready) → Scenario skill → tools / MCP / scripts → timeline + Evidence→Finding→Path → report + field-journal ``` **Why this exists:** - AI agents don't know whether to use jadx, apktool, Frida, IDA, or BurpSuite for a given task - APK, ELF, JS, PCAP, and CTF tasks each need different playbooks - Tools, MCP servers, and scripts are scattered across machines - The same mistakes get repeated because experience isn't reused PRIMARY ladder: [skills/MASTER-ROUTING.md](skills/MASTER-ROUTING.md) · Full matrix: [skills/routing.md](skills/routing.md) · Ops: [skills/ops/](skills/ops/) <br/> <div align=\"center\"> <a href=\"https://star-history.com/#zhaoxuya520/reverse-skill&Date\"> <img src=\"docs/assets/star-history.svg\" alt=\"Star History\" width=\"650\" /> </a> </div> <br/> <p align=\"right\">(<a href=\"#about\">back to top</a>)</p> ### Built With <p align=\"left\"> <img src=\"https://skillicons.dev/icons?i=py,nodejs,powershell,bash,java,docker,git&theme=light\" /><br/> <code>IDA Pro</code> · <code>radare2</code> · <code>Ghidra</code> </p> <p align=\"r",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": 4,
+      "streak_days": 4
+    },
+    {
+      "rank": 3,
+      "full_name": "firecrawl/pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "language": "Rust",
+      "stars": 8616,
+      "forks": 569,
+      "stars_today": 1699,
+      "topics": [
+        "markdown",
+        "nodejs",
+        "ocr-routing",
+        "pdf",
+        "pdf-classification",
+        "pdf-extraction",
+        "pdf-parser",
+        "python",
+        "rust",
+        "text-extraction"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-06T19:44:47Z",
+      "updated_at": "2026-08-04T04:32:04Z",
+      "open_issues": 61,
+      "default_branch": "main",
+      "readme_excerpt": "# pdf-inspector [![Crates.io](https://img.shields.io/crates/v/pdf-inspector.svg)](https://crates.io/crates/pdf-inspector) [![npm](https://img.shields.io/npm/v/@firecrawl/pdf-inspector.svg)](https://www.npmjs.com/package/@firecrawl/pdf-inspector) [![PyPI](https://img.shields.io/pypi/v/pdf-inspector.svg)](https://pypi.org/project/pdf-inspector/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) Fast Rust library for PDF classification and text extraction. Detects whether a PDF is text-based or scanned, extracts text with position awareness, and converts to clean Markdown — all without OCR. Includes bindings for [Python](docs/python.md), [Node.js](napi/README.md), and [browser WebAssembly](wasm/README.md). Built by [Firecrawl](https://firecrawl.dev) to handle text-based PDFs locally in under 200ms, skipping expensive OCR services for the ~54% of PDFs that don't need them. ## Features - **Smart classification** — Detect TextBased, Scanned, ImageBased, or Mixed PDFs in ~10-50ms by sampling content streams. Returns a confidence score (0.0-1.0) and per-page OCR routing. - **Text extraction** — Position-aware extraction with font info, X/Y coordinates, and automatic multi-column reading order. - **Markdown conversion** — Headings (H1-H4 via font size ratios), bullet/numbered/letter lists, code blocks (monospace font detection), tables (rectangle-based and heuristic), bold/italic formatting, URL linking, and page breaks. - **Table detection** — Dual-mode: rectangle-based detection from PDF drawing ops, plus heuristic detection from text alignment. Handles financial tables, footnotes, and continuation tables across pages. - **CID font support** — ToUnicode CMap decoding for Type0/Identity-H fonts, UTF-16BE, UTF-8, and Latin-1 encodings. - **Multi-column layout** — Automatic detection of newspaper-style columns, sequential reading order, and RTL text support. - **Encoding issue detection** — Automatically flags broken font encodings so callers can fall back to OCR. - **Single document load** — The document is parsed once and shared between detection and extraction, avoiding redundant I/O. - **Browser WebAssembly** — Run the same Rust parser locally in browsers and Web Workers, with embedded CMaps and no server round trip. - **Lightweight** — Pure Rust, no ML models, no external services. Single dependency on `lopdf` for PDF parsing. ## Benchmark Evaluated on the [opendataloader-bench](https://github.com/opendataloader-project/opendataloader-bench) corpus (200 PDFs). Only local engines without model-based PDF parsing are shown; OCR was disabled. Scores are 0-1, higher is better. | Engine | Overall | Reading Order (NID) | Tables (TEDS) | Headings (MHS) | Speed (200 docs) | |---|---|---|---|---|---| | pdf-inspector | **0.875** | **0.915** | **0.814** | 0.788 | **0.470s** | | liteparse | 0.873 | 0.913 | 0.693 | **0.811** | 0.750s | | opendataloader | 0.831 | 0.902 | 0.489 | 0.739 | 2.569s | | pymupdf4llm | 0.735 | 0.886 | 0.401 | 0.424 | 17.117s | | markitdown | 0.589 | 0.844 | 0.273 | 0.000 | 16.165s | Results were refreshed on July 31, 2026, on an Apple M4 Pro. Engine versions were pdf-inspector 0.2.6, LiteParse 2.10.1, OpenDataLoader 2.2.1, PyMuPDF4LLM 0.2.0, and MarkItDown 0.1.5. Speed is the median of five alternating or rotating complete corpus runs after an excluded warm-up run, with each parser processing documents sequentially in a single process. The complete parser configuration, per-document predictions, evaluator output, and generated charts are available in the [reproducible results branch](https://github.com/firecrawl/opendataloader-bench/tree/abi/pdf-parser-benchmark-results). **Best fit:** Native-text PDFs where speed, reading order, and table structure matter. In this comparison, pdf-inspector delivered the higher overall, reading-order, and table scores, along with the fastest complete run. That makes it a strong local default for reports, research papers, financial documents, invoices, and lega",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "esengine/DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+      "language": "Go",
+      "stars": 30129,
+      "forks": 1939,
+      "stars_today": 883,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "deepseek",
+        "developer-tools",
+        "ink",
+        "llm",
+        "prompt-caching",
+        "r1",
+        "terminal",
+        "tool-use",
+        "tui",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-21T08:27:02Z",
+      "updated_at": "2026-08-04T04:32:35Z",
+      "open_issues": 1097,
+      "default_branch": "main-v2",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"docs/logo.svg\" alt=\"Reasonix\" width=\"640\"/> </p> <p align=\"center\"> <strong>English</strong> &nbsp;·&nbsp; <a href=\"./README.zh-CN.md\">简体中文</a> &nbsp;·&nbsp; <a href=\"./docs/GUIDE.md\">Guide</a> &nbsp;·&nbsp; <a href=\"./docs/ACP.md\">ACP</a> &nbsp;·&nbsp; <a href=\"./docs/SPEC.md\">Spec</a> &nbsp;·&nbsp; <a href=\"https://esengine.github.io/DeepSeek-Reasonix/\">Website</a> &nbsp;·&nbsp; <strong><a href=\"https://discord.gg/XF78rEME2D\">Discord</a></strong> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/v/reasonix.svg?style=flat-square&color=cb3837&labelColor=161b22&logo=npm&logoColor=white\" alt=\"npm version\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/esengine/DeepSeek-Reasonix/ci.yml?style=flat-square&label=ci&labelColor=161b22&logo=githubactions&logoColor=white\" alt=\"CI\"/></a> <a href=\"./LICENSE\"><img src=\"https://img.shields.io/npm/l/reasonix.svg?style=flat-square&color=8b949e&labelColor=161b22\" alt=\"license\"/></a> <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/dm/reasonix.svg?style=flat-square&color=3fb950&labelColor=161b22&label=downloads\" alt=\"downloads\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/stargazers\"><img src=\"https://img.shields.io/github/stars/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=dbab09&labelColor=161b22&logo=github&logoColor=white\" alt=\"GitHub stars\"/></a> <a href=\"https://atomgit.com/esengine/DeepSeek-Reasonix\"><img src=\"https://atomgit.com/esengine/DeepSeek-Reasonix/star/badge.svg\" alt=\"AtomGit stars\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=bc8cff&labelColor=161b22&logo=github&logoColor=white\" alt=\"contributors\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/discussions\"><img src=\"https://img.shields.io/github/discussions/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=58a6ff&labelColor=161b22&logo=github&logoColor=white\" alt=\"Discussions\"/></a> <a href=\"https://discord.gg/XF78rEME2D\"><img src=\"https://img.shields.io/badge/discord-join-5865F2.svg?style=flat-square&labelColor=161b22&logo=discord&logoColor=white\" alt=\"Discord\"/></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/27020?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-27020\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/27020/monthly?language=Go\" alt=\"esengine/DeepSeek-Reasonix | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/27020?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-27020\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/27020\" alt=\"esengine/DeepSeek-Reasonix | Trendshift\" width=\"250\" height=\"55\"/></a> </p> <br/> <h3 align=\"center\">A DeepSeek-native AI coding agent for your terminal.</h3> <p align=\"center\">A config- and plugin-driven harness — a single static Go binary, tuned around DeepSeek's prefix cache so token costs stay low across long sessions.</p> <br/> > [!IMPORTANT] > **Community · 加入社区** — bilingual Discord for setup help (`#help` / `#求助`), workflow showcases, and feature ideas. → **<https://discord.gg/XF78rEME2D>** <br/> ## Features - **Config-driven.** Providers, the agent, enabled tools, and plugins are all declared in `reasonix.toml`. No hardcoded models. - **Multi-model & composable.** DeepSeek ships as a preset; any OpenAI-compatible endpoint is a config entry, not new code. Optionally run two models together (executor + planner) in separate, cache-stable sessions. - **Plugin-driven.** External tools run as subprocesses over stdio JSON-RPC (MCP-compatib",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 15,
+      "rank_change": 11,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "TencentCloud/TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "language": "TypeScript",
+      "stars": 12349,
+      "forks": 1166,
+      "stars_today": 1090,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "embedding",
+        "llm",
+        "local-first",
+        "long-term-memory",
+        "memory",
+        "openclaw-plugin",
+        "vector-search"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-04-07T06:34:26Z",
+      "updated_at": "2026-08-04T04:32:26Z",
+      "open_issues": 479,
+      "default_branch": "feat/server_team",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"./assets/images/logo.png\" alt=\"TencentDB Agent Memory\" width=\"880\" /> ### Agents remember. Humans innovate. <a href=\"https://trendshift.io/repositories/29310?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-29310\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/29310\" alt=\"TencentCloud%2FTencentDB-Agent-Memory | Trendshift\" width=\"250\" height=\"55\"/></a> [![npm](https://img.shields.io/npm/v/@tencentdb-agent-memory/memory-tencentdb?color=blue)](https://www.npmjs.com/package/@tencentdb-agent-memory/memory-tencentdb) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE) [![Node](https://img.shields.io/badge/node-%3E=22.16-brightgreen)](https://nodejs.org/) [![OpenClaw](https://img.shields.io/badge/OpenClaw-%3E=2026.3.13-orange)](https://github.com/openclaw/openclaw) [![Hermes](https://img.shields.io/badge/Hermes-Gateway-7B61FF)](https://hermes-agent.nousresearch.com/docs/) [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/dJQM6mKMF) [Installation](#installation) · [What is it?](#what-is-tencentdb-agent-memory) · [Team Play](#one-play-style-build-a-growing-agent-team-for-a-one-person-company) · [Technical Implementation](#technical-implementation) · [Benchmark](#benchmark) [**English**](./README.md) · [简体中文](./README_CN.md) </div> --- > **Latest:** Team Memory Beta is evolving quickly — install it and start exploring in minutes. <td> <video src=\"https://github.com/user-attachments/assets/efb1a808-1f86-4cfe-802c-f7453f7ca938\" width=\"100%\" controls autoplay loop muted playsinline></video> </td> # Installation Start all three services in one go (`memory-core` + `memory-hub` + `proxy`): ```bash git clone https://github.com/Tencent/TencentDB-Agent-Memory.git cd TencentDB-Agent-Memory/deploy/global-images cp .env.example .env $EDITOR .env # Fill in two sets of LLM parameters (memory group + proxy group) ./start-all.sh # Launch everything with one command; when finished, it prints a one-liner you can paste directly into Claude ``` Open the panel: [http://localhost:8125](http://localhost:8125). Complete installation documentation (standalone Memory Hub deployment, Proxy + Claude Code / CodeBuddy usage, stop and cleanup, port reference, etc.) is available in [**INSTALL.md**](./INSTALL.md) (中文: [INSTALL_CN.md](./INSTALL_CN.md)). ### Migrating data from an older version If you're already on an older release (v1.x / v0.x) and want to bring your existing data over to v2.0.0+, we provide a migration tool: See [**Data Migration Tool (v2 → v3)**](./MemoryCore/scripts/migrate-v2-to-v3/README.md) for full usage and flags. New installations can skip this. # What is TencentDB Agent Memory? We started from a practical question: **How do you reduce repetitive work when using Agents?** If project context has already been explained, it shouldn't need to be repeated in a new session. If documents have already been read, every Agent shouldn't have to start again from page one. A workflow that already works shouldn't have to be rediscovered next time. Memory here means more than just \"remembering conversations.\" **Any information that helps the next Agent avoid reinventing the wheel should be saved, organized, and reused.** ```text Existing information → Reusable memory assets → Fewer turns → Less rework → More stable results and higher efficiency ``` ### Let experience accumulate, flow, and pass on to the next Agent **Memory Hub** for Agent teams closes the loop across the entire experience lifecycle: work produces assets, assets circulate through the team, and new members can load the team's save file on day one. 1. **Automatic asset extraction**: Extract Chat Memory and Skills from conversations and tasks; convert documents and code into Wiki and CodeGraph; then manage, review, and route them consistently. 2. **Portable & multi-Agent compatible**: Memory as",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 5,
+      "streak_days": 3
+    },
+    {
+      "rank": 6,
+      "full_name": "microsoft/AI-For-Beginners",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "description": "12 Weeks, 24 Lessons, AI for All!",
+      "language": "Jupyter Notebook",
+      "stars": 61005,
+      "forks": 11865,
+      "stars_today": 1902,
+      "topics": [
+        "ai",
+        "artificial-intelligence",
+        "cnn",
+        "computer-vision",
+        "deep-learning",
+        "gan",
+        "machine-learning",
+        "microsoft-for-beginners",
+        "nlp",
+        "rnn"
+      ],
+      "license": "MIT",
+      "created_at": "2021-03-03T16:27:36Z",
+      "updated_at": "2026-08-04T04:31:56Z",
+      "open_issues": 17,
+      "default_branch": "main",
+      "readme_excerpt": "[![GitHub license](https://img.shields.io/github/license/microsoft/AI-For-Beginners.svg)](https://github.com/microsoft/AI-For-Beginners/blob/main/LICENSE) [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/graphs/contributors/) [![GitHub issues](https://img.shields.io/github/issues/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/issues/) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/AI-For-Beginners.svg)](https://GitHub.com/microsoft/AI-For-Beginners/pulls/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub watchers](https://img.shields.io/github/watchers/microsoft/AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/AI-For-Beginners/watchers/) [![GitHub forks](https://img.shields.io/github/forks/microsoft/AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/AI-For-Beginners/network/) [![GitHub stars](https://img.shields.io/github/stars/microsoft/AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/AI-For-Beginners/stargazers/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/microsoft/ai-for-beginners/HEAD) [![Gitter](https://badges.gitter.im/Microsoft/ai-for-beginners.svg)](https://gitter.im/Microsoft/ai-for-beginners?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG) # Artificial Intelligence for Beginners - A Curriculum |![Sketchnote by @girlie_mac https://twitter.com/girlie_mac](https://github.com/microsoft/AI-For-Beginners/raw/main/lessons/sketchnotes/ai-overview.png)| |:---:| | AI For Beginners - _Sketchnote by [@girlie_mac](https://twitter.com/girlie_mac)_ | Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesson curriculum! It includes practical lessons, quizzes, and labs. The curriculum is beginner-friendly and covers tools like TensorFlow and PyTorch, as well as ethics in AI ### 🌐 Multi-Language Support #### Supported via GitHub Action (Automated & Always Up-to-Date) <!-- CO-OP TRANSLATOR LANGUAGES TABLE START --> [Arabic](./translations/ar/README.md) | [Bengali](./translations/bn/README.md) | [Bulgarian](./translations/bg/README.md) | [Burmese (Myanmar)](./translations/my/README.md) | [Chinese (Simplified)](./translations/zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](./translations/zh-HK/README.md) | [Chinese (Traditional, Macau)](./translations/zh-MO/README.md) | [Chinese (Traditional, Taiwan)](./translations/zh-TW/README.md) | [Croatian](./translations/hr/README.md) | [Czech](./translations/cs/README.md) | [Danish](./translations/da/README.md) | [Dutch](./translations/nl/README.md) | [Estonian](./translations/et/README.md) | [Finnish](./translations/fi/README.md) | [French](./translations/fr/README.md) | [German](./translations/de/README.md) | [Greek](./translations/el/README.md) | [Hebrew](./translations/he/README.md) | [Hindi](./translations/hi/README.md) | [Hungarian](./translations/hu/README.md) | [Indonesian](./translations/id/README.md) | [Italian](./translations/it/README.md) | [Japanese](./translations/ja/README.md) | [Kannada](./translations/kn/README.md) | [Khmer](./translations/km/README.md) | [Korean](./translations/ko/README.md) | [Lithuanian](./translations/lt/README.md) | [Malay](./translations/ms/README.md) | [Malayalam](./translations/ml/README.md) | [Marathi](./translations/mr/README.md) | [Nepali](./translations/ne/README.md) | [Nigerian Pidgin](./translations/pcm/README.md) | [Norwegian](./translations/no/README.md) | [Persian (Farsi)](./translations/fa/README.md) | [Polish](./translations/pl/README.md) | [Portuguese (Brazil)](./translations/pt-BR/README.md) | [Portuguese (Portugal)](./translations/pt-PT/README.md) |",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -5,
+      "streak_days": 5
+    },
+    {
+      "rank": 7,
+      "full_name": "microsoft/generative-ai-for-beginners",
+      "url": "https://github.com/microsoft/generative-ai-for-beginners",
+      "description": "21 Lessons, Get Started Building with Generative AI ",
+      "language": "Jupyter Notebook",
+      "stars": 115735,
+      "forks": 61462,
+      "stars_today": 775,
+      "topics": [
+        "ai",
+        "azure",
+        "chatgpt",
+        "dall-e",
+        "generative-ai",
+        "generativeai",
+        "gpt",
+        "language-model",
+        "llms",
+        "microsoft-for-beginners",
+        "openai",
+        "prompt-engineering",
+        "semantic-search",
+        "transformers"
+      ],
+      "license": "MIT",
+      "created_at": "2023-06-19T16:28:59Z",
+      "updated_at": "2026-08-04T04:29:35Z",
+      "open_issues": 15,
+      "default_branch": "main",
+      "readme_excerpt": "![Generative AI For Beginners](./images/repo-thumbnailv4-fixed.png?WT.mc_id=academic-105485-koreyst) ### 21 Lessons teaching everything you need to know to start building Generative AI applications [![GitHub license](https://img.shields.io/github/license/microsoft/Generative-AI-For-Beginners.svg)](https://github.com/microsoft/Generative-AI-For-Beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst) [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst) [![GitHub issues](https://img.shields.io/github/issues/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/issues/?WT.mc_id=academic-105485-koreyst) [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/Generative-AI-For-Beginners.svg)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/pulls/?WT.mc_id=academic-105485-koreyst) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst) [![GitHub watchers](https://img.shields.io/github/watchers/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Watch)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/watchers/?WT.mc_id=academic-105485-koreyst) [![GitHub forks](https://img.shields.io/github/forks/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Fork)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/network/?WT.mc_id=academic-105485-koreyst) [![GitHub stars](https://img.shields.io/github/stars/microsoft/Generative-AI-For-Beginners.svg?style=social&label=Star)](https://GitHub.com/microsoft/Generative-AI-For-Beginners/stargazers/?WT.mc_id=academic-105485-koreyst) [![Microsoft Foundry Discord](https://dcbadge.limes.pink/api/server/nTYy5BXMWG)](https://discord.gg/nTYy5BXMWG) ### 🌐 Multi-Language Support #### Supported via GitHub Action (Automated & Always Up-to-Date) <!-- CO-OP TRANSLATOR LANGUAGES TABLE START --> [Arabic](./translations/ar/README.md) | [Bengali](./translations/bn/README.md) | [Bulgarian](./translations/bg/README.md) | [Burmese (Myanmar)](./translations/my/README.md) | [Chinese (Simplified)](./translations/zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](./translations/zh-HK/README.md) | [Chinese (Traditional, Macau)](./translations/zh-MO/README.md) | [Chinese (Traditional, Taiwan)](./translations/zh-TW/README.md) | [Croatian](./translations/hr/README.md) | [Czech](./translations/cs/README.md) | [Danish](./translations/da/README.md) | [Dutch](./translations/nl/README.md) | [Estonian](./translations/et/README.md) | [Finnish](./translations/fi/README.md) | [French](./translations/fr/README.md) | [German](./translations/de/README.md) | [Greek](./translations/el/README.md) | [Hebrew](./translations/he/README.md) | [Hindi](./translations/hi/README.md) | [Hungarian](./translations/hu/README.md) | [Indonesian](./translations/id/README.md) | [Italian](./translations/it/README.md) | [Japanese](./translations/ja/README.md) | [Kannada](./translations/kn/README.md) | [Khmer](./translations/km/README.md) | [Korean](./translations/ko/README.md) | [Lithuanian](./translations/lt/README.md) | [Malay](./translations/ms/README.md) | [Malayalam](./translations/ml/README.md) | [Marathi](./translations/mr/README.md) | [Nepali](./translations/ne/README.md) | [Nigerian Pidgin](./translations/pcm/README.md) | [Norwegian](./translations/no/README.md) | [Persian (Farsi)](./translations/fa/README.md) | [Polish](./translations/pl/README.md) | [Portuguese (Brazil)](./translations/pt-BR/README.md) | [Portuguese (Portugal)](./translations/pt-PT/README.md) | [Punjabi (Gurmukhi)](./translations/pa/README.md) | [Romanian](./translations/ro/README.md) | [Russian](./translations/ru/README.md) | [Serbian (Cyrillic)](./translations/sr/README.md) | [Slovak](./translations/sk",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": 1,
+      "streak_days": 3
+    },
+    {
+      "rank": 8,
+      "full_name": "donnemartin/system-design-primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+      "language": "Python",
+      "stars": 360651,
+      "forks": 57529,
+      "stars_today": 237,
+      "topics": [
+        "design",
+        "design-patterns",
+        "design-system",
+        "development",
+        "interview",
+        "interview-practice",
+        "interview-questions",
+        "programming",
+        "python",
+        "system",
+        "web",
+        "web-application",
+        "webapp"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2017-02-26T16:15:28Z",
+      "updated_at": "2026-08-04T04:31:40Z",
+      "open_issues": 579,
+      "default_branch": "master",
+      "readme_excerpt": "*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)* **Help [translate](TRANSLATIONS.md) this guide!** # The System Design Primer <p align=\"center\"> <img src=\"images/jj3A5N8.png\"> <br/> </p> ## Motivation > Learn how to design large-scale systems. > > Prep for the system design interview. ### Learn how to design large-scale systems Learning how to design scalable systems will help you become a better engineer. System design is a broad topic. There are a **vast number of resources scattered throughout the web** on system design principles. This repo is an **organized collection** of resources to help you learn how to build systems at scale. ### Learn from the open source community This is a continually updated, open source project. [Contributions](#contributing) are welcome! ### Prep for the system design interview In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies. **Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams. Additional topics for interview prep: * [Study guide](#study-guide) * [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) * [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions) * [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions) * [Additional system design interview questions](#additional-system-design-interview-questions) ## Anki flashcards <p align=\"center\"> <img src=\"images/zdCAkB3.png\"> <br/> </p> The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts. * [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg) * [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg) * [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg) Great for use while on-the-go. ### Coding Resource: Interactive Coding Challenges Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)? <p align=\"center\"> <img src=\"images/b4YtAEN.png\"> <br/> </p> Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-cod",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "antirez/ds4",
+      "url": "https://github.com/antirez/ds4",
+      "description": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+      "language": "C",
+      "stars": 20421,
+      "forks": 1805,
+      "stars_today": 384,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-06T17:17:05Z",
+      "updated_at": "2026-08-04T04:30:40Z",
+      "open_issues": 394,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"logo.svg\" alt=\"DwarfStar logo\" width=\"220\"> </p> **DwarfStar** is a small native inference engine optimized first for **DeepSeek V4 Flash**. It also supports **GLM 5.2** and, on very high-memory machines, **DeepSeek V4 PRO**. It is self-contained and deliberately narrow, not a general GGUF runner. Model loading, prompt rendering, tool calls, KV state, the HTTP server, and the coding agent are built and tested together. The repository also includes tools and data for GGUF, imatrix, quality, and speed. Supported backends: * **Metal**, the primary target, on Macs with 96 GB or more. Smaller machines can use SSD streaming. * **NVIDIA CUDA**, including multi-GPU systems and DGX Spark. * **ROCm** on Strix Halo systems such as the Framework Desktop. This project would not exist without **llama.cpp and GGML**, make sure to read the acknowledgements section, a big thank you to Georgi Gerganov and all the other contributors. Model support is intentionally opportunistic. The project follows the best open weights for useful local machine sizes, especially 128 GB laptops and 512 GB workstations. A model may be removed when a better replacement arrives. # So, what can I do with this software? * You can run a very capable models in your consumer hardware, a MacBook, a DGX Spark, or a Strix Halo for example. Even if you have not enough RAM, with SSD streaming, you can run it at a decent speed. * Using the CUDA multi-GPU support and with ds4-server micro batching of decoding and generation, you can turn a server with old-ish CUDA cards (Ada Lovelace architecture), no longer supported for new models by vLLM, into a multi-user LLM server for your company. We tested this setup with 8xL40S NVIDIA cards and multiple sessions with very good results. 120 t/s aggreated generation, 2000 t/s prefill. * Using two MacBook M5 Max / M3 Ultra RDMA, you can run 4 bit DeepSeek Flash or GLM 5.2 with tensor parallelism. * You can also use pipeline paralellism to glue together multiple systems to sum their RAM and run larger models. ## Motivations * Capable open-weight models now fit on high-end personal machines. * DeepSeek V4 Flash and PRO, GLM 5.2, tolerate aggressive routed-expert quantization. * Compressed KV caches and fast local SSDs make long contexts practical. * The idea of an inference system specialized for a few models. # AI full disclosure * This software is developed with **strong assistance from GPT 5.5, 5.6, Claude Fable** and with humans leading the ideas, testing, and debugging. We say this openly because it shaped how the project was built. If you are not happy with AI-developed code, this software is not for you. The acknowledgement below is equally important: this would not exist without `llama.cpp` and GGML, largely written by hand. ## Acknowledgements to llama.cpp and GGML `ds4.c` does not link against GGML, but it **exists thanks to the path opened by the llama.cpp project and the kernels, quantization formats, GGUF ecosystem, and hard-won engineering knowledge developed there**. We are thankful and indebted to [`llama.cpp`](https://github.com/ggml-org/llama.cpp) and its contributors. Their implementation, kernels, tests, and design choices were an essential reference while building this DeepSeek V4 specific inference path. Some source-level pieces are retained or adapted here under the MIT license: GGUF quant layouts and tables, CPU quant/dot logic, and certain kernels. For this reason, and because we are genuinely grateful, we keep the GGML authors copyright notice in our `LICENSE` file. ## Status The software is currently very fast changing. Consider it beta quality. Before each release, a big QA run is executed, however instabilities are definitely possible. ## More Documentation If you are looking for very specific things, we have other sub-README files. Otherwise for normal usage keep reading the next sections. - [CONTRIBUTING.md](CONTRIBUTING.md): correctness and speed regression testing guide for contr",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 10,
+      "full_name": "shiyu-coder/Kronos",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "description": "Kronos: A Foundation Model for the Language of Financial Markets",
+      "language": "Python",
+      "stars": 35866,
+      "forks": 5968,
+      "stars_today": 200,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-07-01T02:54:32Z",
+      "updated_at": "2026-08-04T04:27:04Z",
+      "open_issues": 252,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> <h2><b>Kronos: A Foundation Model for the Language of Financial Markets </b></h2> </div> <div align=\"center\"> </a> <a href=\"https://huggingface.co/NeoQuasar\"> <img src=\"https://img.shields.io/badge/🤗-Hugging_Face-yellow\" alt=\"Hugging Face\"> </a> <a href=\"https://shiyu-coder.github.io/Kronos-demo/\"> <img src=\"https://img.shields.io/badge/🚀-Live_Demo-brightgreen\" alt=\"Live Demo\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/graphs/commit-activity\"> <img src=\"https://img.shields.io/github/last-commit/shiyu-coder/Kronos?color=blue\" alt=\"Last Commit\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/stargazers\"> <img src=\"https://img.shields.io/github/stars/shiyu-coder/Kronos?color=lightblue\" alt=\"GitHub Stars\"> </a> <a href=\"https://github.com/shiyu-coder/Kronos/network/members\"> <img src=\"https://img.shields.io/github/forks/shiyu-coder/Kronos?color=yellow\" alt=\"GitHub Forks\"> </a> <a href=\"./LICENSE\"> <img src=\"https://img.shields.io/github/license/shiyu-coder/Kronos?color=green\" alt=\"License\"> </a> </div> <div align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://zdoc.app/de/shiyu-coder/Kronos\">Deutsch</a> | <a href=\"https://zdoc.app/es/shiyu-coder/Kronos\">Español</a> | <a href=\"https://zdoc.app/fr/shiyu-coder/Kronos\">Français</a> | <a href=\"https://zdoc.app/ja/shiyu-coder/Kronos\">日本語</a> | <a href=\"https://zdoc.app/ko/shiyu-coder/Kronos\">한국어</a> | <a href=\"https://zdoc.app/pt/shiyu-coder/Kronos\">Português</a> | <a href=\"https://zdoc.app/ru/shiyu-coder/Kronos\">Русский</a> | <a href=\"https://zdoc.app/zh/shiyu-coder/Kronos\">中文</a> </div> <p align=\"center\"> <img src=\"./figures/logo.png\" width=\"100\"> </p> > Kronos is the **first open-source foundation model** for financial candlesticks (K-lines), > trained on data from over **45 global exchanges**. </div> ## 📰 News * 🚩 **[2025.11.10]** Kronos has been accpeted by AAAI 2026. * 🚩 **[2025.08.17]** We have released the scripts for fine-tuning! Check them out to adapt Kronos to your own tasks. * 🚩 **[2025.08.02]** Our paper is now available on [arXiv](https://arxiv.org/abs/2508.02739)! <p align=\"center\"> ## 📜 Introduction **Kronos** is a family of decoder-only foundation models, pre-trained specifically for the \"language\" of financial markets—K-line sequences. Unlike general-purpose TSFMs, Kronos is designed to handle the unique, high-noise characteristics of financial data. It leverages a novel two-stage framework: 1. A specialized tokenizer first quantizes continuous, multi-dimensional K-line data (OHLCV) into **hierarchical discrete tokens**. 2. A large, autoregressive Transformer is then pre-trained on these tokens, enabling it to serve as a unified model for diverse quantitative tasks. <p align=\"center\"> <img src=\"figures/overview.png\" alt=\"\" align=\"center\" width=\"700px\" /> </p> ## ✨ Live Demo We have set up a live demo to visualize Kronos's forecasting results. The webpage showcases a forecast for the **BTC/USDT** trading pair over the next 24 hours. **👉 [Access the Live Demo Here](https://shiyu-coder.github.io/Kronos-demo/)** ## 📦 Model Zoo We release a family of pre-trained models with varying capacities to suit different computational and application needs. All models are readily accessible from the Hugging Face Hub. | Model | Tokenizer | Context length | Params | Open-source | |--------------|---------------------------------------------------------------------------------| -------------- | ------ |---------------------------------------------------------------------------| | Kronos-mini | [Kronos-Tokenizer-2k](https://huggingface.co/NeoQuasar/Kronos-Tokenizer-2k) | 2048 | 4.1M | ✅ [NeoQuasar/Kronos-mini](https://huggingface.co/NeoQuasar/Kronos-mini) | | Kronos-small | [Kronos-Tokenizer-base](https://huggingface.co/NeoQuasar/Kronos-Tokenizer-base) | 512 | 24.7M | ✅ [NeoQuasar/Kronos-small](https://huggingface.co/NeoQuasar/Kronos-small) | | Kronos-base | [Kronos-Tokenizer-base](https://h",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": 65889,
+      "forks": 5468,
+      "stars_today": 1057,
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-24T02:10:24Z",
+      "updated_at": "2026-08-04T04:32:45Z",
+      "open_issues": 191,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\">👁️ Agent Reach</h1> <p align=\"center\"> <strong>给你的 AI Agent 一键装上互联网能力</strong> </p> <p align=\"center\"> 当下最稳的接入方式，替你选好、装好、体检好——接入方式会换代，你不用操心 </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/24387\"><img src=\"https://trendshift.io/api/badge/repositories/24387\" alt=\"Trendshift GitHub Trending #1 Repository of the Day\"></a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge\" alt=\"MIT License\"></a> <a href=\"https://www.python.org/\"><img src=\"https://img.shields.io/badge/Python-3.10+-green.svg?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python 3.10+\"></a> <a href=\"https://github.com/Panniantong/agent-reach/stargazers\"><img src=\"https://img.shields.io/github/stars/Panniantong/agent-reach?style=for-the-badge\" alt=\"GitHub Stars\"></a> </p> <p align=\"center\"> <a href=\"#快速上手\">快速开始</a> · <a href=\"docs/README_en.md\">English</a> · <a href=\"docs/README_ja.md\">日本語</a> · <a href=\"docs/README_ko.md\">한국어</a> · <a href=\"#支持的平台\">支持平台</a> · <a href=\"#设计理念\">设计理念</a> </p> --- ## 为什么需要 Agent Reach？ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去网上找点东西，它就抓瞎了： - 📺 \"帮我看看这个 YouTube 教程讲了什么\" → **看不了**，拿不到字幕 - 🐦 \"帮我搜一下推特上大家怎么评价这个产品\" → **搜不了**，Twitter API 要付费 - 📖 \"去 Reddit 上看看有没有人遇到过同样的 bug\" → **403 被封**，服务器 IP 被拒 - 📕 \"帮我看看小红书上这个品的口碑\" → **打不开**，必须登录才能看 - 📺 \"B站上有个技术视频，帮我总结一下\" → **拿不到**，通用下载工具被 B站风控全面拦截 - 🔍 \"帮我在网上搜一下最新的 LLM 框架对比\" → **没有好用的搜索**，要么付费要么质量差 - 🌐 \"帮我看看这个网页写了啥\" → **抓回来一堆 HTML 标签**，根本没法读 - 📦 \"这个 GitHub 仓库是干嘛的？Issue 里说了什么？\" → 能用，但认证配置很麻烦 - 📡 \"帮我订阅这几个 RSS 源，有更新告诉我\" → 要自己装库写代码 **这些不难实现，但是需要自己折腾配置** 每个平台都有自己的门槛——要付费的 API、要绕过的封锁、要登录的账号、要清洗的数据。你要一个一个去踩坑、装工具、调配置，光是让 Agent 能读个推特就得折腾半天。 **Agent Reach 把这件事变成一句话：** ``` 帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md ``` 复制给你的 Agent，几分钟后它就能读推特、搜 Reddit、看 YouTube、刷小红书了。 **已经装过了？更新也是一句话：** ``` 帮我更新 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/update.md ``` > ⭐ **Star 这个项目**，我们会持续追踪各平台的变化、接入新的渠道。你不用自己盯——平台封了我们修，有新渠道我们加。 ### ✅ 在你用之前，你可能想知道 | | | |---|---| | 💰 **完全免费** | 所有工具开源、所有 API 免费。唯一可能花钱的是服务器代理（$1/月），本地电脑不需要 | | 🔒 **隐私安全** | Cookie 只存在你本地，不上传不外传。代码完全开源，随时可审查 | | 🔄 **持续换代** | 每个平台都是「首选 + 备选」多后端路由。某个接入方式失效了，我们换下一个，你无感（2026-06 实例：yt-dlp 被 B站风控封死 → 已切换 bili-cli，用户零操作） | | 🤖 **兼容所有 Agent** | Claude Code、OpenClaw、Cursor、Windsurf……任何能跑命令行的 Agent 都能用 | | 🩺 **自带诊断** | `agent-reach doctor` 一条命令告诉你哪个通、哪个不通、怎么修 | --- ## 支持的平台 | 平台 | 装好即用 | 配置后解锁 | 怎么配 | |------|---------|-----------|-------| | 🌐 **网页** | 阅读任意网页 | — | 无需配置 | | 📺 **YouTube** | 字幕提取 + 视频搜索 | — | 无需配置 | | 📡 **RSS** | 阅读任意 RSS/Atom 源 | — | 无需配置 | | 🔍 **全网搜索** | — | 全网语义搜索 | 自动配置（MCP 接入，免费无需 Key） | | 📦 **GitHub** | 读公开仓库 + 搜索 | 私有仓库、提 Issue/PR、Fork | 告诉 Agent「帮我登录 GitHub」 | | 🐦 **Twitter/X** | 读单条推文 | 搜索推文、浏览时间线、读长文 | 告诉 Agent「帮我配 Twitter」 | | 📺 **B站** | 搜索 + 视频详情（bili-cli，无需登录） | 字幕（OpenCLI） | 告诉 Agent「帮我配 B站」 | | 📖 **Reddit** | —（没有零配置路径：匿名接口已被封） | 搜索 + 读帖子和评论 | 桌面装 OpenCLI 用浏览器登录态；或 rdt-cli + Cookie | | 📘 **Facebook** | — | 搜索、主页、Feed、群组列表 | 桌面装 OpenCLI（复用 Chrome 登录态） | | 📷 **Instagram** | — | 用户搜索、Profile、用户最近帖子、Explore | 桌面装 OpenCLI（复用 Chrome 登录态） | | 📕 **小红书** | — | 搜索、阅读、评论 | OpenCLI 只用用户已有 Chrome 会话；MCP/存量工具用 Cookie-Editor | | 💼 **LinkedIn** | Jina Reader 读公开页面 | Profile 详情、公司页面、职位搜索 | 告诉 Agent「帮我配 LinkedIn」 | | 💻 **V2EX** | 热门帖子、节点帖子、帖子详情+回复、用户信息 | — | 无需配置 | | 📈 **雪球** | 股票行情、搜索股票、热门帖子、热门股票排行 | — | 告诉 Agent「帮我配雪球」 | | 🎙️ **小宇宙播客** | — | 播客音频转文字（Whisper 转录，免费 Key） | 告诉 Agent「帮我配小宇宙播客」 | > **不知道怎么配？不用查文档。** 直接告诉 Agent「帮我配 XXX」，它知道需要什么、会一步一步引导你。 > > 🍪 Twitter 只接受用户通过 Cookie-Editor 手工导出的内容。Agent Reach 不替用户执行小红书登录，也不读取小红书浏览器 Cookie；OpenCLI 只使用用户已经存在且明确控制的 Chrome 会话。`agent-reach configure xhs-cookies` 不会把 Cookie 注入 OpenCLI / Chrome；没有现成会话时，改用 Cookie-Editor 导出后配置 xiaohongshu-mcp / 存量工具。 > > Twitter Cookie 保存后仅供 `agent-reach doctor` 检查配置是否齐全；直接运行上游 `twitter` 命令前，仍需在当前进程环境中显式设置 `TWITTER_AUTH_TOKEN` 和 `TWITTER_CT0`。 > > 🔒 Cookie 只存在你本地，不上传不外传。代码完全开源，随时可审查。 > 💻 本地电脑不需要代理。代理只有部署在服务器上",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": -2,
+      "streak_days": 2
+    },
+    {
+      "rank": 12,
+      "full_name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+      "language": "Python",
+      "stars": 44118,
+      "forks": 7276,
+      "stars_today": 278,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-01-28T19:02:30Z",
+      "updated_at": "2026-08-04T04:30:24Z",
+      "open_issues": 342,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h1> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"assets/free-claude-code-wordmark-light.svg\"> <img src=\"assets/free-claude-code-wordmark-dark.svg\" alt=\"Free Claude Code\" width=\"610\"> </picture> </h1> Use Claude Code, Codex, Pi, or their IDE extensions through your own provider-backed proxy. [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT) [![Python 3.14](https://img.shields.io/badge/python-3.14-3776ab.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json&style=for-the-badge)](https://github.com/astral-sh/uv) [![Tested with Pytest](https://img.shields.io/badge/testing-Pytest-00c0ff.svg?style=for-the-badge)](https://github.com/Alishahryar1/free-claude-code/actions/workflows/tests.yml) [![Type checking: Ty](https://img.shields.io/badge/type%20checking-ty-ffcc00.svg?style=for-the-badge)](https://pypi.org/project/ty/) [![Code style: Ruff](https://img.shields.io/badge/code%20formatting-ruff-f5a623.svg?style=for-the-badge)](https://github.com/astral-sh/ruff) [![Logging: Loguru](https://img.shields.io/badge/logging-loguru-4ecdc4.svg?style=for-the-badge)](https://github.com/Delgan/loguru) Run your coding agents with free, paid, or local models. Choose and validate providers from one local Admin UI. [Quick Start](#quick-start) · [Providers](#choose-a-provider) · [Clients](#connect-your-client) · [Integrations](#optional-integrations) · [Manage](#manage-your-installation) </div> <div align=\"center\"> <img src=\"assets/pic.png\" alt=\"Free Claude Code in action\" width=\"700\"> <p><em>Claude Code running through the Free Claude Code proxy.</em></p> </div> <div align=\"center\"> <img src=\"assets/codex.png\" alt=\"Codex CLI in action through Free Claude Code\" width=\"700\"> <p><em>Codex CLI using the local FCC Responses provider.</em></p> </div> <a id=\"model-picker\"></a> <div align=\"center\"> <img src=\"assets/cc-model-picker.png\" alt=\"Claude Code model picker showing gateway models\" width=\"700\"> <p><em>Claude Code native <code>/model</code> picker with FCC gateway models.</em></p> </div> <div align=\"center\"> <img src=\"assets/codex-model-picker.png\" alt=\"Codex model picker showing generated FCC model catalog\" width=\"700\"> <p><em>Codex native <code>/model</code> picker with the generated FCC catalog.</em></p> </div> ## What You Get - Launch Claude Code with `fcc-claude`, Codex with `fcc-codex`, or Pi with `fcc-pi`. - Run FCC in the background from a desktop launcher on Windows or macOS. - Switch among 31 cloud and local providers from the Admin UI. - Use each coding agent's native model picker. - Route Fable, Opus, Sonnet, Haiku, and fallback traffic to different models. - Keep streaming, tool use, reasoning, and image input across compatible models. - Connect Claude Code and Codex in VS Code or Claude Code through JetBrains ACP. - Optionally run Claude Code sessions through Discord or Telegram with voice-note transcription. - Protect the local proxy with optional token authentication. ## Quick Start <a id=\"install\"></a> ### 1. Install Or Update macOS/Linux: ```bash curl -fsSL \"https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.sh\" | sh ``` Windows PowerShell: ```powershell & ([scriptblock]::Create((irm \"https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1\"))) ``` Re-run the same command whenever you want to update. You can review the installers before running them: [install.sh](scripts/install.sh) and [install.ps1](scripts/install.ps1). The installer asks which coding agents to install or verify. Choose at least one; skipped agents are left unchanged. ### 2. Start FCC #### Windows Open **Free Claude Code** from your desktop or Start menu. #### macOS Open **Free Claude Code** from your desktop or Applications folder. ####",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "iv-org/invidious",
+      "url": "https://github.com/iv-org/invidious",
+      "description": "Invidious is an alternative front-end to YouTube",
+      "language": "Crystal",
+      "stars": 22301,
+      "forks": 2482,
+      "stars_today": 402,
+      "topics": [
+        "agplv3",
+        "hacktoberfest",
+        "invidious",
+        "libre",
+        "video",
+        "watch",
+        "youtube",
+        "youtube-video"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2018-02-07T00:43:42Z",
+      "updated_at": "2026-08-04T04:26:12Z",
+      "open_issues": 465,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"assets/invidious-colored-vector.svg\" width=\"192\" height=\"192\" alt=\"Invidious logo\"> <h1>Invidious</h1> <a href=\"https://www.gnu.org/licenses/agpl-3.0.en.html\"> <img alt=\"License: AGPLv3\" src=\"https://shields.io/badge/License-AGPL%20v3-blue.svg\"> </a> <a href=\"https://github.com/iv-org/invidious/actions\"> <img alt=\"Build Status\" src=\"https://github.com/iv-org/invidious/workflows/Invidious%20CI/badge.svg\"> </a> <a href=\"https://github.com/iv-org/invidious/commits/master\"> <img alt=\"GitHub commits\" src=\"https://img.shields.io/github/commit-activity/y/iv-org/invidious?color=red&label=commits\"> </a> <a href=\"https://github.com/iv-org/invidious/issues\"> <img alt=\"GitHub issues\" src=\"https://img.shields.io/github/issues/iv-org/invidious?color=important\"> </a> <a href=\"https://github.com/iv-org/invidious/pulls\"> <img alt=\"GitHub pull requests\" src=\"https://img.shields.io/github/issues-pr/iv-org/invidious?color=blueviolet\"> </a> <a href=\"https://hosted.weblate.org/engage/invidious/\"> <img alt=\"Translation Status\" src=\"https://hosted.weblate.org/widgets/invidious/-/translations/svg-badge.svg\"> </a> <h3>An open source alternative front-end to YouTube</h3> <a href=\"https://invidious.io/\">Website</a> &nbsp;•&nbsp; <a href=\"https://instances.invidious.io/\">Instances list</a> &nbsp;•&nbsp; <a href=\"https://docs.invidious.io/faq/\">FAQ</a> &nbsp;•&nbsp; <a href=\"https://docs.invidious.io/\">Documentation</a> &nbsp;•&nbsp; <a href=\"#contribute\">Contribute</a> &nbsp;•&nbsp; <a href=\"https://invidious.io/donate/\">Donate</a> <h5>Chat with us:</h5> <a href=\"https://matrix.to/#/#invidious:matrix.org\"> <img alt=\"Matrix\" src=\"https://img.shields.io/matrix/invidious:matrix.org?label=Matrix&color=darkgreen\"> </a> <a href=\"https://web.libera.chat/?channel=#invidious\"> <img alt=\"Libera.chat (IRC)\" src=\"https://img.shields.io/badge/IRC%20%28Libera.chat%29-%23invidious-darkgreen\"> </a> <br> <a rel=\"me\" href=\"https://social.tchncs.de/@invidious\"> <img alt=\"Fediverse: @invidious@social.tchncs.de\" src=\"https://img.shields.io/badge/Fediverse-%40invidious%40social.tchncs.de-darkgreen\"> </a> <br> <a href=\"https://invidious.io/contact/\"> <img alt=\"E-mail\" src=\"https://img.shields.io/badge/E%2d%2dmail-darkgreen\"> </a> </div> ## Screenshots | Player | Preferences | Subscriptions | |-------------------------------------|-------------------------------------|---------------------------------------| | ![](screenshots/01_player.png) | ![](screenshots/02_preferences.png) | ![](screenshots/03_subscriptions.png) | | ![](screenshots/04_description.png) | ![](screenshots/05_preferences.png) | ![](screenshots/06_subscriptions.png) | ## Features **User features** - Lightweight - No ads - No tracking - No JavaScript required - Light/Dark themes - Customizable homepage - Subscriptions independent from Google - Notifications for all subscribed channels - Audio-only mode (with background play on mobile) - Support for Reddit comments - [Available in many languages](locales/), thanks to [our translators](#contribute) **Data import/export** - Import subscriptions from YouTube, NewPipe and FreeTube - Import watch history from YouTube and NewPipe - Export subscriptions to NewPipe and FreeTube - Import/Export Invidious user data **Technical features** - Embedded video support - [Developer API](https://docs.invidious.io/api/) - Does not use official YouTube APIs - No Contributor License Agreement (CLA) ## Quick start **Using Invidious:** - [Select a public instance from the list](https://instances.invidious.io) and start watching videos right now! **Hosting Invidious:** - [Follow the installation instructions](https://docs.invidious.io/installation/) ## Documentation The full documentation can be accessed online at https://docs.invidious.io/ The documentation's source code is available in this repository: https://github.com/iv-org/documentation ### Extensions We highly recommend the use of [Privacy Redirect](https://github.com/SimonBrazell/privacy-redirect#g",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -9,
+      "streak_days": 3
+    },
+    {
+      "rank": 14,
+      "full_name": "livekit/agents",
+      "url": "https://github.com/livekit/agents",
+      "description": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+      "language": "Python",
+      "stars": 12082,
+      "forks": 3462,
+      "stars_today": 148,
+      "topics": [
+        "agents",
+        "ai",
+        "openai",
+        "real-time",
+        "video",
+        "voice"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2023-10-19T23:00:55Z",
+      "updated_at": "2026-08-04T04:31:59Z",
+      "open_issues": 734,
+      "default_branch": "main",
+      "readme_excerpt": "<!--BEGIN_BANNER_IMAGE--> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"/.github/banner_dark.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"/.github/banner_light.png\"> <img style=\"width:100%;\" alt=\"The LiveKit icon, the name of the repository and some sample code in the background.\" src=\"https://raw.githubusercontent.com/livekit/agents/main/.github/banner_light.png\"> </picture> <!--END_BANNER_IMAGE--> <br /> ![PyPI - Version](https://img.shields.io/pypi/v/livekit-agents) [![PyPI Downloads](https://static.pepy.tech/badge/livekit-agents/month)](https://pepy.tech/projects/livekit-agents) [![Slack community](https://img.shields.io/endpoint?url=https%3A%2F%2Flivekit.io%2Fbadges%2Fslack)](https://livekit.io/join-slack) [![Twitter Follow](https://img.shields.io/twitter/follow/livekit)](https://twitter.com/livekit) [![Ask DeepWiki for understanding the codebase](https://deepwiki.com/badge.svg)](https://deepwiki.com/livekit/agents) [![License](https://img.shields.io/github/license/livekit/livekit)](https://github.com/livekit/livekit/blob/master/LICENSE) <br /> Looking for the JS/TS library? Check out [AgentsJS](https://github.com/livekit/agents-js) ## What is Agents? <!--BEGIN_DESCRIPTION--> The Agent Framework is designed for building realtime, programmable participants that run on servers. Use it to create conversational, multi-modal voice agents that can see, hear, and understand. <!--END_DESCRIPTION--> ## Features - **Flexible integrations**: A comprehensive ecosystem to mix and match the right STT, LLM, TTS, and Realtime API to suit your use case. - **Integrated job scheduling**: Built-in task scheduling and distribution with [dispatch APIs](https://docs.livekit.io/agents/build/dispatch/) to connect end users to agents. - **Extensive WebRTC clients**: Build client applications using LiveKit's open-source SDK ecosystem, supporting all major platforms. - **Telephony integration**: Works seamlessly with LiveKit's [telephony stack](https://docs.livekit.io/sip/), allowing your agent to make calls to or receive calls from phones. - **Exchange data with clients**: Use [RPCs](https://docs.livekit.io/home/client/data/rpc/) and other [Data APIs](https://docs.livekit.io/home/client/data/) to seamlessly exchange data with clients. - **Semantic turn detection**: Uses a transformer model to detect when a user is done with their turn, helps to reduce interruptions. - **MCP support**: Native support for MCP. Integrate tools provided by MCP servers with one line of code. - **Builtin test framework**: Write tests and use judges to ensure your agent is performing as expected. - **Open-source**: Fully open-source, allowing you to run the entire stack on your own servers, including [LiveKit server](https://github.com/livekit/livekit), one of the most widely used WebRTC media servers. ## Installation To install the core Agents library, along with plugins for popular model providers: ```bash pip install \"livekit-agents[openai,deepgram,cartesia]\" ``` ## Docs and guides Documentation on the framework and how to use it can be found [here](https://docs.livekit.io/agents/) ### Building with AI coding agents If you're using an AI coding assistant to build with LiveKit Agents, we recommend the following setup for the best results: 1. **Install the [LiveKit Docs MCP server](https://docs.livekit.io/mcp)** — Gives your coding agent access to up-to-date LiveKit documentation, code search across LiveKit repositories, and working examples. 2. **Install the [LiveKit Agent Skill](https://github.com/livekit/agent-skills)** — Provides your coding agent with architectural guidance and best practices for building voice AI applications, including workflow design, handoffs, tasks, and testing patterns. ```shell npx skills add livekit/agent-skills --skill livekit-agents ``` The Agent Skill works best alongside the MCP server: the skill teaches your agent *how to approach* building with LiveKit, while the MCP server provides the *current API deta",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 15,
+      "full_name": "usekaneo/kaneo",
+      "url": "https://github.com/usekaneo/kaneo",
+      "description": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+      "language": "TypeScript",
+      "stars": 6943,
+      "forks": 562,
+      "stars_today": 665,
+      "topics": [
+        "hacktoberfest",
+        "hono",
+        "issue-management",
+        "issue-tracker",
+        "jira-alternative",
+        "kanban",
+        "linear-alternative",
+        "project-management",
+        "react",
+        "self-hosted",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2024-12-31T08:25:09Z",
+      "updated_at": "2026-08-04T04:31:02Z",
+      "open_issues": 93,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://kaneo.app\"> <img src=\"https://assets.kaneo.app/logo-text.png\" alt=\"Kaneo's logo\" width=\"450\" /> </a> </p> <div align=\"center\"> [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/usekaneo/kaneo/ci.yml?branch=main)](https://github.com/usekaneo/kaneo/actions) [![Discord](https://img.shields.io/discord/1326250681530843178?color=7389D8&label=&logo=discord&logoColor=ffffff)](https://discord.gg/rU4tSyhXXU) [![Sponsors](https://img.shields.io/github/sponsors/andrejsshell)](https://github.com/sponsors/andrejsshell) </div> <div align=\"center\"> <h3> <a href=\"https://kaneo.app/docs/core\">Quick Start</a> <span> | </span> <a href=\"https://kaneo.app\">Website</a> <span> | </span> <a href=\"https://cloud.kaneo.app\">Cloud</a> <span> | </span> <a href=\"https://discord.gg/rU4tSyhXXU\">Discord</a> </h3> </div> <p align=\"center\"> <img src=\"https://assets.kaneo.app/readme.png\" alt=\"Kaneo Dashboard\" /> </p> ## Why Kaneo? After years of using bloated, overcomplicated project management platforms that distracted from actual work, we built Kaneo to be different. The problem with most tools isn't that they lack features—it's that they have **too many**. Every notification, every unnecessary button, every complex workflow pulls your team away from what matters: **building great products**. We believe the best tools are **invisible**. They should amplify your team's natural workflow, not force you to adapt to theirs. Kaneo is built on the principle that **less is more**—every feature exists because it solves a real problem, not because it looks impressive in a demo. **What makes it different:** - **Clean interface** that focuses on your work, not the tool - **Self-hosted** so your data stays yours - **Actually fast** because we care about performance - **Open source** with a permissive MIT license Learn more about Kaneo's features and capabilities in our [documentation](https://kaneo.app/docs/core). ## Sponsors Kaneo is open source. If you find it useful, consider [sponsoring the project](https://github.com/sponsors/andrejsshell) to help support ongoing development. <!-- sponsors --><a href=\"https://github.com/danielsada\"><img src=\"https:&#x2F;&#x2F;github.com&#x2F;danielsada.png\" width=\"60px\" alt=\"User avatar: Daniel Sada\" /></a><a href=\"https://github.com/randoneering\"><img src=\"https:&#x2F;&#x2F;github.com&#x2F;randoneering.png\" width=\"60px\" alt=\"User avatar: (justin)randoneering\" /></a><!-- sponsors --> ## Getting Started ### One-Click Deployment with drim For straightforward deployments, use [drim](https://github.com/usekaneo/drim) - a CLI tool that handles everything for you: ```bash curl -fsSL https://assets.kaneo.app/install.sh | sh drim setup ``` That's it. Your Kaneo instance will be running with automatic HTTPS, database setup, and all services configured. Perfect for quick deployments and production setups where you want things to just work. ### Quick Start with Docker Compose The fastest way to try Kaneo is with Docker Compose. This sets up Kaneo and PostgreSQL with a single Kaneo container: ```yaml services: postgres: image: postgres:16-alpine env_file: - .env ports: - \"5432:5432\" volumes: - postgres_data:/var/lib/postgresql/data restart: unless-stopped healthcheck: test: [\"CMD-SHELL\", \"pg_isready -U kaneo -d kaneo\"] interval: 10s timeout: 5s retries: 5 kaneo: image: ghcr.io/usekaneo/kaneo:latest ports: - \"5173:5173\" env_file: - .env depends_on: postgres: condition: service_healthy restart: unless-stopped volumes: postgres_data: ``` Save this as `compose.yml`, copy `.env.sample` to `.env`, uncomment `KANEO_CLIENT_URL=http://localhost:5173`, and set `POSTGRES_PASSWORD=<password>` and `AUTH_SECRET=<output of openssl rand -hex 32>`, run `docker compose up -d`, and open [http://localhost:5173](http://localhost:5173). In Docker Compose, the bundled Kaneo container reaches PostgreSQL at the service hostname `postg",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -13,
+      "streak_days": 4
+    },
+    {
+      "rank": 16,
+      "full_name": "jamiepine/voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "description": "The open-source AI voice studio. Clone, dictate, create.",
+      "language": "TypeScript",
+      "stars": 48814,
+      "forks": 5999,
+      "stars_today": 412,
+      "topics": [
+        "ai",
+        "cuda",
+        "mlx",
+        "qwen3-tts",
+        "qwen3-tts-ui",
+        "voice-ai",
+        "voice-clone",
+        "whisper"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-25T12:27:03Z",
+      "updated_at": "2026-08-04T04:29:10Z",
+      "open_issues": 578,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\".github/assets/icon-dark.webp\" alt=\"Voicebox\" width=\"120\" height=\"120\" /> </p> <h1 align=\"center\">Voicebox</h1> <p align=\"center\"> <strong>The open-source AI voice studio.</strong><br/> Clone any voice. Generate speech. Dictate into any app. Talk to agents in voices you own.<br/> The full voice I/O stack, running locally on your machine. </p> <p align=\"center\"> <a href=\"https://github.com/jamiepine/voicebox/releases\"> <img src=\"https://img.shields.io/github/downloads/jamiepine/voicebox/total?style=flat&color=blue\" alt=\"Downloads\" /> </a> <a href=\"https://github.com/jamiepine/voicebox/releases/latest\"> <img src=\"https://img.shields.io/github/v/release/jamiepine/voicebox?style=flat\" alt=\"Release\" /> </a> <a href=\"https://github.com/jamiepine/voicebox/stargazers\"> <img src=\"https://img.shields.io/github/stars/jamiepine/voicebox?style=flat\" alt=\"Stars\" /> </a> <a href=\"https://github.com/jamiepine/voicebox/blob/main/LICENSE\"> <img src=\"https://img.shields.io/github/license/jamiepine/voicebox?style=flat\" alt=\"License\" /> </a> <a href=\"https://deepwiki.com/jamiepine/voicebox\"> <img src=\"https://img.shields.io/static/v1?label=Ask&message=DeepWiki&color=5B6EF7\" alt=\"Ask DeepWiki\" /> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/21213\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/21213\" alt=\"jamiepine%2Fvoicebox | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> </p> <p align=\"center\"> <a href=\"https://voicebox.sh\">voicebox.sh</a> • <a href=\"https://docs.voicebox.sh\">Docs</a> • <a href=\"#download\">Download</a> • <a href=\"#features\">Features</a> • <a href=\"#api\">API</a> • <a href=\"docs/content/docs/overview/troubleshooting.mdx\">Troubleshooting</a> </p> <br/> <p align=\"center\"> <a href=\"https://voicebox.sh\"> <img src=\"landing/public/assets/app-screenshot-1.webp\" alt=\"Voicebox App Screenshot\" width=\"800\" /> </a> </p> <p align=\"center\"> <em>Click the image above to watch the demo video on <a href=\"https://voicebox.sh\">voicebox.sh</a></em> </p> <br/> <p align=\"center\"> <img src=\"landing/public/assets/app-screenshot-2.webp\" alt=\"Voicebox Screenshot 2\" width=\"800\" /> </p> <p align=\"center\"> <img src=\"landing/public/assets/app-screenshot-3.webp\" alt=\"Voicebox Screenshot 3\" width=\"800\" /> </p> <br/> ## What is Voicebox? Voicebox is a **local-first AI voice studio** — a free and open-source alternative to **ElevenLabs** and **WisprFlow** in one app. Clone voices from a few seconds of audio, generate speech in 23 languages across 7 TTS engines, dictate into any text field with a global hotkey, and give any MCP-aware AI agent a voice of your choosing. The two cloud incumbents sit on opposite halves of the voice I/O loop — ElevenLabs on output, WisprFlow on input. Voicebox does both, bridges them with a bundled local LLM for refinement and per-profile personas, and runs the whole thing on your machine. - **Complete privacy** — models, voice data, and captures never leave your machine - **7 TTS engines** — Qwen3-TTS, Qwen CustomVoice, LuxTTS, Chatterbox Multilingual, Chatterbox Turbo, HumeAI TADA, and Kokoro - **Voice cloning and preset voices** — zero-shot cloning from a reference sample, or 50+ curated preset voices via Kokoro and Qwen CustomVoice - **23 languages** — from English to Arabic, Japanese, Hindi, Swahili, and more - **Post-processing effects** — pitch shift, reverb, delay, chorus, compression, and filters - **Expressive speech** — paralinguistic tags like `[laugh]`, `[sigh]`, `[gasp]` via Chatterbox Turbo; natural-language delivery control via Qwen CustomVoice - **Unlimited length** — auto-chunking with crossfade for scripts, articles, and chapters - **Stories editor** — multi-track timeline for conversations, podcasts, and narratives - **Voice input** — global dictation hotkey with push-to-talk and toggle modes, accessibility-verified auto-paste on macOS, in-app mic on every text field, Whisper-based STT - **Agent voice outpu",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "至少 0/16 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
+      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
+      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
+      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+    ],
+    "hot_characteristics": [
+      "其他开发者关注方向（16 个项目）"
+    ],
+    "product_business_signals": [
+      "企业智能体机会正向治理、安全和多模型管理迁移。",
+      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
+      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
+      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+    ],
+    "watch_next": [
+      "观察智能体治理项目是否出现企业集成案例。",
+      "观察实时语音智能体在普通设备上的延迟和中文体验。",
+      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
+      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "lyogavin/airllm",
+        "one_line_summary": "AirLLM 70B inference with single 4GB GPU",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "AirLLM 70B inference with single 4GB GPU",
+        "solution": "AirLLM 70B inference with single 4GB GPU",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1085 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：AirLLM 70B inference with single 4GB GPU 这个项目尝试用“AirLLM 70B inference with single 4GB GPU”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lyogavin/airllm",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AirLLM 70B inference with single 4GB GPU",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lyogavin/airllm",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/lyogavin/airllm",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "zhaoxuya520/reverse-skill",
+        "one_line_summary": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "solution": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 2446 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端 这个项目尝试用“Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhaoxuya520/reverse-skill",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhaoxuya520/reverse-skill",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/zhaoxuya520/reverse-skill",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "firecrawl/pdf-inspector",
+        "one_line_summary": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "solution": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 1699 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions. 这个项目尝试用“Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/pdf-inspector",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/pdf-inspector",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/firecrawl/pdf-inspector",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "esengine/DeepSeek-Reasonix",
+        "one_line_summary": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "solution": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 883 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running. 这个项目尝试用“DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "one_line_summary": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "solution": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 1090 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks. 这个项目尝试用“TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/AI-For-Beginners",
+        "one_line_summary": "12 Weeks, 24 Lessons, AI for All!",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "12 Weeks, 24 Lessons, AI for All!",
+        "solution": "12 Weeks, 24 Lessons, AI for All!",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 1902 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：12 Weeks, 24 Lessons, AI for All! 这个项目尝试用“12 Weeks, 24 Lessons, AI for All!”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/AI-For-Beginners",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "12 Weeks, 24 Lessons, AI for All!",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/AI-For-Beginners",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/AI-For-Beginners",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/generative-ai-for-beginners",
+        "one_line_summary": "21 Lessons, Get Started Building with Generative AI ",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "21 Lessons, Get Started Building with Generative AI ",
+        "solution": "21 Lessons, Get Started Building with Generative AI ",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 775 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：21 Lessons, Get Started Building with Generative AI  这个项目尝试用“21 Lessons, Get Started Building with Generative AI ”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/generative-ai-for-beginners",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "21 Lessons, Get Started Building with Generative AI ",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/generative-ai-for-beginners",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/generative-ai-for-beginners",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "donnemartin/system-design-primer",
+        "one_line_summary": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "solution": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 237 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards. 这个项目尝试用“Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/donnemartin/system-design-primer",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/donnemartin/system-design-primer",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "antirez/ds4",
+        "one_line_summary": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+        "solution": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 384 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm 这个项目尝试用“DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/antirez/ds4",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "DeepSeek 4 Flash and PRO local inference engine for Metal, CUDA and ROCm",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/antirez/ds4",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/antirez/ds4",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "shiyu-coder/Kronos",
+        "one_line_summary": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "solution": "Kronos: A Foundation Model for the Language of Financial Markets",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 200 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Kronos: A Foundation Model for the Language of Financial Markets 这个项目尝试用“Kronos: A Foundation Model for the Language of Financial Markets”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/shiyu-coder/Kronos",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Kronos: A Foundation Model for the Language of Financial Markets",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/shiyu-coder/Kronos",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/shiyu-coder/Kronos",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "one_line_summary": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "solution": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 1057 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees. 这个项目尝试用“Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Panniantong/Agent-Reach",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Panniantong/Agent-Reach",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Panniantong/Agent-Reach",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Alishahryar1/free-claude-code",
+        "one_line_summary": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+        "solution": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 278 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported) 这个项目尝试用“Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Alishahryar1/free-claude-code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Alishahryar1/free-claude-code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Alishahryar1/free-claude-code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "iv-org/invidious",
+        "one_line_summary": "Invidious is an alternative front-end to YouTube",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Invidious is an alternative front-end to YouTube",
+        "solution": "Invidious is an alternative front-end to YouTube",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 402 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Invidious is an alternative front-end to YouTube 这个项目尝试用“Invidious is an alternative front-end to YouTube”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/iv-org/invidious",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Invidious is an alternative front-end to YouTube",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/iv-org/invidious",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/iv-org/invidious",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "livekit/agents",
+        "one_line_summary": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+        "solution": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 148 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：A framework for building realtime voice AI agents 🤖🎙️📹  这个项目尝试用“A framework for building realtime voice AI agents 🤖🎙️📹 ”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/livekit/agents",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/livekit/agents",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/livekit/agents",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "usekaneo/kaneo",
+        "one_line_summary": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "solution": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 665 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：🎯 All you need. Nothing you don't. Open source project management that works for you, not against you. 这个项目尝试用“🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/usekaneo/kaneo",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🎯 All you need. Nothing you don't. Open source project management that works for you, not against you.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/usekaneo/kaneo",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/usekaneo/kaneo",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jamiepine/voicebox",
+        "one_line_summary": "The open-source AI voice studio. Clone, dictate, create.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The open-source AI voice studio. Clone, dictate, create.",
+        "solution": "The open-source AI voice studio. Clone, dictate, create.",
+        "why_now": "该项目位列当日 Trending 第 16 名，当日新增 412 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The open-source AI voice studio. Clone, dictate, create. 这个项目尝试用“The open-source AI voice studio. Clone, dictate, create.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 16 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jamiepine/voicebox",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The open-source AI voice studio. Clone, dictate, create.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jamiepine/voicebox",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 52,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jamiepine/voicebox",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
