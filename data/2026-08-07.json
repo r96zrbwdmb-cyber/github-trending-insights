@@ -1,0 +1,1237 @@
+{
+  "date": "2026-08-07",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 13,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "TencentCloud/TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "language": "TypeScript",
+      "stars": 16616,
+      "forks": 1496,
+      "stars_today": 1057,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "embedding",
+        "llm",
+        "local-first",
+        "long-term-memory",
+        "memory",
+        "openclaw-plugin",
+        "vector-search"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-04-07T06:34:26Z",
+      "updated_at": "2026-08-07T04:03:19Z",
+      "open_issues": 534,
+      "default_branch": "feat/server_team",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"./assets/images/logo.png\" alt=\"TencentDB Agent Memory\" width=\"880\" /> ### Agents remember. Humans innovate. <a href=\"https://trendshift.io/repositories/29310?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-29310\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/29310\" alt=\"TencentCloud%2FTencentDB-Agent-Memory | Trendshift\" width=\"250\" height=\"55\"/></a> [![npm](https://img.shields.io/npm/v/@tencentdb-agent-memory/memory-tencentdb?color=blue)](https://www.npmjs.com/package/@tencentdb-agent-memory/memory-tencentdb) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE) [![Node](https://img.shields.io/badge/node-%3E=22.16-brightgreen)](https://nodejs.org/) [![OpenClaw](https://img.shields.io/badge/OpenClaw-%3E=2026.3.13-orange)](https://github.com/openclaw/openclaw) [![Hermes](https://img.shields.io/badge/Hermes-Gateway-7B61FF)](https://hermes-agent.nousresearch.com/docs/) [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/dJQM6mKMF) [Installation](#installation) · [What is it?](#what-is-tencentdb-agent-memory) · [Team Play](#one-play-style-build-a-growing-agent-team-for-a-one-person-company) · [Technical Implementation](#technical-implementation) · [Benchmark](#benchmark) [**English**](./README.md) · [简体中文](./README_CN.md) </div> --- > **Latest:** Team Memory Beta is evolving quickly — install it and start exploring in minutes. <td> <video src=\"https://github.com/user-attachments/assets/efb1a808-1f86-4cfe-802c-f7453f7ca938\" width=\"100%\" controls autoplay loop muted playsinline></video> </td> # Installation Start all three services in one go (`memory-core` + `memory-hub` + `proxy`): ```bash git clone https://github.com/Tencent/TencentDB-Agent-Memory.git cd TencentDB-Agent-Memory/deploy/global-images cp .env.example .env $EDITOR .env # Fill in two sets of LLM parameters (memory group + proxy group) ./start-all.sh # Launch everything with one command; when finished, it prints a one-liner you can paste directly into Claude ``` Open the panel: [http://localhost:8125](http://localhost:8125). Complete installation documentation (standalone Memory Hub deployment, Proxy + Claude Code / CodeBuddy usage, stop and cleanup, port reference, etc.) is available in [**INSTALL.md**](./INSTALL.md) (中文: [INSTALL_CN.md](./INSTALL_CN.md)). ### Migrating data from an older version If you're already on an older release (v1.x / v0.x) and want to bring your existing data over to v2.0.0+, we provide a migration tool: See [**Data Migration Tool (v2 → v3)**](./MemoryCore/scripts/migrate-v2-to-v3/README.md) for full usage and flags. New installations can skip this. # What is TencentDB Agent Memory? We started from a practical question: **How do you reduce repetitive work when using Agents?** If project context has already been explained, it shouldn't need to be repeated in a new session. If documents have already been read, every Agent shouldn't have to start again from page one. A workflow that already works shouldn't have to be rediscovered next time. Memory here means more than just \"remembering conversations.\" **Any information that helps the next Agent avoid reinventing the wheel should be saved, organized, and reused.** ```text Existing information → Reusable memory assets → Fewer turns → Less rework → More stable results and higher efficiency ``` ### Let experience accumulate, flow, and pass on to the next Agent **Memory Hub** for Agent teams closes the loop across the entire experience lifecycle: work produces assets, assets circulate through the team, and new members can load the team's save file on day one. 1. **Automatic asset extraction**: Extract Chat Memory and Skills from conversations and tasks; convert documents and code into Wiki and CodeGraph; then manage, review, and route them consistently. 2. **Portable & multi-Agent compatible**: Memory as",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": 2,
+      "streak_days": 6
+    },
+    {
+      "rank": 2,
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 83070,
+      "forks": 8899,
+      "stars_today": 593,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-15T20:20:26Z",
+      "updated_at": "2026-08-07T04:03:52Z",
+      "open_issues": 101,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. <a href=\"https://trendshift.io/repositories/25200\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/25200\" alt=\"addyosmani%2Fagent-skills | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> ![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg) ``` DEFINE PLAN BUILD VERIFY REVIEW SHIP ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │ QA │ ───▶ │ Go │ │Refine│ │ PRD │ │ Impl │ │Debug │ │ Gate │ │ Live │ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ /spec /plan /build /test /review /ship ``` --- ## Commands 8 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | |-------------------|---------|---------------| | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | Want fewer manual steps once the spec exists? **`/build auto`** generates the plan and implements every task in a single approved pass — you approve the plan once, then it runs autonomously. It removes the human stepping *between* tasks, not the verification: every task is still test-driven and committed individually, and it pauses on failures or risky steps. Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on. --- ## Quick Start **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more): ```bash npx skills add addyosmani/agent-skills # install all 24 skills npx skills add addyosmani/agent-skills --list # browse before installing ``` Or grab individual skills: ```bash npx skills add addyosmani/agent-skills --skill code-review-and-quality # five-axis review before merge npx skills add addyosmani/agent-skills --skill interview-me # requirements interrogation, one question at a time npx skills add addyosmani/agent-skills --skill test-driven-development # red-green-refactor, enforced ``` > **Installing one skill?** A per-skill `npx` install copies only > `skills/<name>/`, not the repo-level `references/` directory. The skill still > works, but paths to supplementary shared checklists are unavailable. Use a > whole-repo integration, clone the repository, or copy the needed checklist into > a `references/` directory inside the installed skill. This portability gap is > tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361). Prefer a native integration? Pick your tool below. <details> <summary><b>Claude Code (recommended)</b></summary> **Marketplace install:** ``` /plugin marketplace add addyosmani/agent-skills /plugin install agent-skills@addy-agent-skills ``` > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or use the full HTTPS URL to force HTTPS cloning during the marketplace-add step: > ```bash > /plugin marketplace add https://github.com/addyosmani/agent-skills.git > /plugin install agent-skills@",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "cloudflare/computer",
+      "url": "https://github.com/cloudflare/computer",
+      "description": "Give your agent a computer 👾",
+      "language": "TypeScript",
+      "stars": 4933,
+      "forks": 246,
+      "stars_today": 2802,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-06-05T10:38:15Z",
+      "updated_at": "2026-08-07T04:03:42Z",
+      "open_issues": 22,
+      "default_branch": "main",
+      "readme_excerpt": "# Cloudflare Computer Cloudflare Computer is a virtual filesystem that lives inside a Durable Object. The Durable Object holds the authoritative state in SQLite and exposes one pluggable execution surface through `workspace.runtime`. Three backends ship today: - **Container** projects the SQLite state into a sandbox container as a real FUSE mount. A sandbox-side daemon (`computerd`) mounts the state as a filesystem and syncs changes back over a capnweb RPC channel. Full Linux userland, real binaries, real network. - **Isolate shell** runs [just-bash](https://github.com/vercel-labs/just-bash) in a Dynamic Worker. It reaches the authoritative Workspace over Workers RPC, so there is no second store or sync round trip. - **Isolate JavaScript** runs an ECMAScript module in a fresh Dynamic Worker with structured input/results, durable relative imports, configured libraries, Workspace-backed `node:fs/promises`, and trusted `ws:git` and `ws:artifacts` modules. A Workspace may register multiple backends under stable IDs. `workspace.runtime.exec(source, { backend })` is the single execution entry point; the selected backend defines whether `source` is a shell command or an ECMAScript module. Backends connect lazily on first use. Workspace can also be constructed without a backend at all, giving callers the filesystem on its own. > [!IMPORTANT] > **PREVIEW ONLY** This package is provided as a preview for feedback only. > APIs are unstable and the design is subject to change. > > Suitable for experiments, exploration and prototypes. It is NOT suitable > for production use at this time. > > The specification under [`docs/`](docs/) is forward-looking — read it for > intent, not as description of the code today. ## Using it If you want to build on Cloudflare Computer, install [`@cloudflare/computer`](packages/computer/README.md) and follow that package's README — it has the installation steps, the entrypoint map, and worked examples of the `fs` and `runtime` surfaces. To contribute feedback, see [`CONTRIBUTING.md`](CONTRIBUTING.md). Approved collaborators should follow [`COLLABORATORS.md`](COLLABORATORS.md) for setup, build, and test instructions. ## Examples The [`examples/`](examples) directory holds runnable consumers of the public surface. Each is a Worker workspace with its own README. - [`examples/container`](examples/container) — runs `computerd` inside a container, mounts a workspace, and talks to a Durable Object over capnweb. A `write` / `read` / `exec` HTTP surface. - [`examples/worker-shell`](examples/worker-shell) — same HTTP surface as the container example, but the shell runs [just-bash](https://github.com/vercel-labs/just-bash) in a Dynamic Worker loaded through `env.LOADER`. No container. - [`examples/worker-javascript`](examples/worker-javascript) — mirrors `worker-shell`, but `exec` evaluates an ECMAScript module in a Dynamic Worker instead of running a shell command. - [`examples/think`](examples/think) — a [`@cloudflare/think`](https://www.npmjs.com/package/@cloudflare/think) chat agent that uses the workspace as its working directory, reachable from a terminal. - [`examples/think-compare-runtimes`](examples/think-compare-runtimes) — a web UI that runs the same agent task against the container and worker runtimes side by side. - [`examples/tutorial`](examples/tutorial) — a step-by-step build: one endpoint, one agent that writes a markdown recipe card on the host and runs `pandoc` on it in the container to produce a PDF. - [`examples/artifacts`](examples/artifacts) — generates a Worker project in a workspace and publishes it to Cloudflare Artifacts as a clone-ready repo. - [`examples/assets`](examples/assets) — turns a prompt into an image with Workers AI, writes it to the workspace, and returns a shareable link through `@cloudflare/computer/assets`. ## Repository layout The repo is a small monorepo. Each package has its own README with package-specific status and usage notes. - [`packages/dofs`](packages/dofs/README.md) ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -2,
+      "streak_days": 2
+    },
+    {
+      "rank": 4,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 207368,
+      "forks": 17909,
+      "stars_today": 1873,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-07T04:04:05Z",
+      "open_issues": 295,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship — you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one — installing both leaves you with every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugins install mattpocock-skills ``` Or, from inside a session: ``` /plugin install mattpocock-skills ``` It's in Claude Code's official marketplace, so there's nothing to add first, and updates arrive automatically. </details> <details> <summary><strong>Codex, and other agents</strong></summary> ```bash npx skills@latest add mattpocock/skills ``` Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take — make sure `setup-matt-pocock-skills` is one of them.** A native Codex plugin is on the roadmap — see [`.agents/adr/0002-ship-as-a-claude-code-plugin.md`](./.agents/adr/0002-ship-as-a-claude-code-plugin.md). </details> <details> <summary><strong>For tinkerers</strong></summary> Use the same installer, on any agent — including Claude Code: ```bash npx skills@latest add mattpocock/skills ``` It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull my latest changes when you want them with `npx skills update`. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, Linear, or local files) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalignment. You think the dev knows what you want. Then you see what they've built - and you realize it didn't understand you at all. This is just the same in the AI age. There is a communication gap between you and the agent. The fix for this is a **grilling session** - getting the agent",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "goauthentik/authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "description": "The authentication glue you need.",
+      "language": "Python",
+      "stars": 23193,
+      "forks": 1777,
+      "stars_today": 138,
+      "topics": [
+        "authentication",
+        "authentik",
+        "authorization",
+        "kubernetes",
+        "oauth2",
+        "oauth2-client",
+        "oauth2-server",
+        "oidc",
+        "oidc-client",
+        "oidc-provider",
+        "proxy",
+        "reverse-proxy",
+        "saml",
+        "saml-idp",
+        "saml-sp",
+        "security",
+        "sso"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2019-12-30T09:19:48Z",
+      "updated_at": "2026-08-07T04:00:51Z",
+      "open_issues": 1140,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"https://goauthentik.io/img/icon_top_brand_colour.svg\" height=\"150\" alt=\"authentik logo\"> </p> --- [![Join Discord](https://img.shields.io/discord/809154715984199690?label=Discord&style=for-the-badge)](https://goauthentik.io/discord) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-main.yml?branch=main&label=core%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-main.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-outpost.yml?branch=main&label=outpost%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-outpost.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-web.yml?branch=main&label=web%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-web.yml) [![Code Coverage](https://img.shields.io/codecov/c/gh/goauthentik/authentik?style=for-the-badge)](https://codecov.io/gh/goauthentik/authentik) ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge) [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://explore.transifex.com/authentik/authentik/) ## What is authentik? authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters. Our [enterprise offering](https://goauthentik.io/pricing) is available for organizations to securely replace existing IdPs such as Okta, Auth0, Entra ID, and Ping Identity for robust, large-scale identity management. ## Installation - Docker Compose: recommended for small/test setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/). - Kubernetes (Helm Chart): recommended for larger setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm). - AWS CloudFormation: deploy on AWS using our official templates. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/). - DigitalOcean Marketplace: one-click deployment via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik). ## Screenshots | Light | Dark | | ----------------------------------------------------------- | ---------------------------------------------------------- | | ![](https://docs.goauthentik.io/img/screen_apps_light.jpg) | ![](https://docs.goauthentik.io/img/screen_apps_dark.jpg) | | ![](https://docs.goauthentik.io/img/screen_admin_light.jpg) | ![](https://docs.goauthentik.io/img/screen_admin_dark.jpg) | ## Development and contributions See the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/) for information about setting up local build environments, testing your contributions, and our contribution process. When you contribute documentation, either to accompany a code change or as a standalone contribution, please be sure to follow our documentation [Style Guide](website/docs/developer-docs/docs/style-guide.mdx). ## Security Please see [SECURITY.md](SECURITY.md). ## Adoption Using authentik? We'd love to hear your story and feature your logo. Email us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR! ## License [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE) [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge)](website/LICENSE) [![authentik EE License](https://img.shields.io/badge/License-EE-orange?style=for-the-badge)](authentik/enterprise/LICENSE)",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "huangruiteng/loopx",
+      "url": "https://github.com/huangruiteng/loopx",
+      "description": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+      "language": "Python",
+      "stars": 2984,
+      "forks": 221,
+      "stars_today": 847,
+      "topics": [
+        "agent-control-plane",
+        "agent-ops",
+        "ai-agents",
+        "codex",
+        "long-running-agents",
+        "loop-engineering",
+        "loopx",
+        "workflow-automation"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-31T14:58:56Z",
+      "updated_at": "2026-08-07T04:03:36Z",
+      "open_issues": 31,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h1 align=\"center\">LoopX</h1> <img src=\"docs/assets/loopx-social-preview.png\" alt=\"LoopX loop engineering social preview banner\" width=\"560\"> **The local control plane for long-running AI agent work.** <sub>Keep objectives, gates, todos, evidence, quota, and handoffs stable while Codex, Claude Code, Cursor, or your own runtime executes bounded turns.</sub> <a href=\"https://trendshift.io/repositories/102379?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-102379\"><img src=\"https://trendshift.io/api/badge/repositories/102379\" alt=\"huangruiteng/loopx on Trendshift\" width=\"220\" height=\"48\"></a> [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/huangruiteng/loopx?display_name=tag)](https://github.com/huangruiteng/loopx/releases/latest) [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/XmGgQyCFZd) [![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](pyproject.toml) [![Local first](https://img.shields.io/badge/control--plane-local--first-brightgreen.svg)](docs/public-private-boundary.md) [![Loop Agents](https://img.shields.io/badge/status-loop%20agents%20early-orange.svg)](docs/product/release-readiness.md) [Public website](https://huangruiteng.github.io/loopx/) · [Docs](https://huangruiteng.github.io/loopx/docs/) · [Try LoopX](#try-loopx) · [See real loops](#evidence) · [How it works](#why-loopx) · [User manual](https://my.feishu.cn/wiki/CaL5wMk9ui17ngkWzeUcMlAYnZg) · [简体中文](README.zh-CN.md) **把会干活的 Agent，接成可管理、可复盘、可持续改进的数字员工。** </div> --- A lightweight state kernel and agent-agnostic local control plane for loop engineering, LoopX keeps long-running work reviewable, restartable, and easier to hand off across turns, tools, and agents. It does not replace your agent runtime. **Loop engineering for long-running AI agents and peer agent teams.** > Keep the loop moving. Keep the judgment human. <a id=\"how-it-works\"></a> ## Why LoopX An agent can finish a task in one session. Long-running work is harder: objectives change, owner decisions appear, evidence goes stale, agents hand work to peers, and a scheduler can keep spending after no useful transition remains. Chat memory and a timer are not enough to govern that. LoopX keeps the durable control state in one compact layer: ```text objective / issue / project │ ▼ LoopX state: objective + gates + todos + scope + evidence + quota │ ├─ human judgment needed? ── yes ─▶ ask a concrete question and wait │ ├─ safe fallback available? ──────▶ run one bounded agent slice │ ▼ Codex / Claude Code / Cursor / shell agent executes one turn │ ▼ write evidence + handoff + next todo ─▶ quota decides the next tick ``` ![LoopX control-plane board](docs/assets/control-plane-board.svg) A useful mental model is an **[agent-native Kanban for long-running work](docs/development/control-plane-course/00-concept-primer.md)**. Cards carry identity, authority, evidence, and continuation. Moves are validated operators such as claim, gate, monitor, and writeback. The board is a projection; LoopX state remains the source of truth. Registered agents are peers. Claims, leases, task boundaries, capabilities, and typed continuation decide who acts next; no durable leader identity is required. LoopX is useful when you run: - multi-day engineering, research, benchmark, or experiment objectives; - issue and PR loops that must preserve scope, evidence, and review state; - recurring heartbeat or monitor work; - projects with owner, safety, publication, or private-data gates; - peer-agent teams where ownership, leases, and handoff matter; - creator, research, or operations workflows whose progress must remain legible to a non-engineering operator. LoopX is not an autonomous production controller. Dangerous permissions, publishing, production writes, and final ownership stay with the human. <a id=\"see-it-in-action\"></a> ## Evide",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -4,
+      "streak_days": 2
+    },
+    {
+      "rank": 7,
+      "full_name": "google/guava",
+      "url": "https://github.com/google/guava",
+      "description": "Google core libraries for Java",
+      "language": "Java",
+      "stars": 51654,
+      "forks": 11164,
+      "stars_today": 13,
+      "topics": [
+        "guava",
+        "java"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2014-05-29T16:23:17Z",
+      "updated_at": "2026-08-07T03:09:23Z",
+      "open_issues": 746,
+      "default_branch": "master",
+      "readme_excerpt": "# Guava: Google Core Libraries for Java [![GitHub Release](https://img.shields.io/github/v/release/google/guava)](https://github.com/google/guava/releases/latest) [![CI](https://github.com/google/guava/actions/workflows/ci.yml/badge.svg)](https://github.com/google/guava/actions/workflows/ci.yml) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/7197/badge)](https://www.bestpractices.dev/projects/7197) Guava is a set of core Java libraries from Google that includes new collection types (such as multimap and multiset), immutable collections, a graph library, and utilities for concurrency, I/O, hashing, primitives, strings, and more! It is widely used on most Java projects within Google, and widely used by many other companies as well. Guava comes in two flavors: * The JRE flavor requires JDK 1.8 or higher. * If you need support for Android, use [the Android flavor](https://github.com/google/guava/wiki/Android). You can find the Android Guava source in the [`android` directory]. [`android` directory]: https://github.com/google/guava/tree/master/android ## Adding Guava to your build Guava's Maven group ID is `com.google.guava`, and its artifact ID is `guava`. Guava provides two different \"flavors\": one for use on a (Java 8+) JRE and one for use on Android or by any library that wants to be compatible with Android. These flavors are specified in the Maven version field as either `33.6.0-jre` or `33.6.0-android`. For more about depending on Guava, see [using Guava in your build]. To add a dependency on Guava using Maven, use the following: ```xml <dependency> <groupId>com.google.guava</groupId> <artifactId>guava</artifactId> <version>33.6.0-jre</version> <!-- or, for Android: --> <version>33.6.0-android</version> </dependency> ``` To add a dependency using Gradle: ```gradle dependencies { // Pick one: // 1. Use Guava in your implementation only: implementation(\"com.google.guava:guava:33.6.0-jre\") // 2. Use Guava types in your public API: api(\"com.google.guava:guava:33.6.0-jre\") // 3. Android - Use Guava in your implementation only: implementation(\"com.google.guava:guava:33.6.0-android\") // 4. Android - Use Guava types in your public API: api(\"com.google.guava:guava:33.6.0-android\") } ``` For more information on when to use `api` and when to use `implementation`, consult the [Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation). ## Snapshots and Documentation Snapshots of Guava built from the `master` branch are available through Maven using version `999.0.0-HEAD-jre-SNAPSHOT`, or `999.0.0-HEAD-android-SNAPSHOT` for the Android flavor. [Snapshot API Javadoc][guava-snapshot-api-docs] as well as [Snapshot API Diffs][guava-snapshot-api-diffs] are also available. Another easy way to get to the Javadoc is to open [guava.dev/api](https://guava.dev/api). You can also jump right to a specific class by appending the class name to guava.dev. For example, [guava.dev/ImmutableList](https://guava.dev/ImmutableList)! ## Learn about Guava - Our users' guide, [Guava Explained] - [A nice collection](https://www.tfnico.com/presentations/google-guava) of other helpful links ## Links - [GitHub project](https://github.com/google/guava) - [Issue tracker: Report a defect or feature request](https://github.com/google/guava/issues/new) - [StackOverflow: Ask \"how-to\" and \"why-didn't-it-work\" questions](https://stackoverflow.com/questions/ask?tags=guava+java) - [guava-announce: Announcements of releases and upcoming significant changes](https://groups.google.com/group/guava-announce) - [guava-discuss: For open-ended questions and discussion](https://groups.google.com/group/guava-discuss) ## IMPORTANT WARNINGS 1. APIs marked with the `@Beta` annotation at the class or method level are subject to change. They can be modified in any way, or even removed, at any time. If your code is a library itself (i.e., it is used on the CLASSPATH of users outs",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "TapXWorld/ChinaTextbook",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "description": "所有小初高、大学PDF教材。",
+      "language": "Roff",
+      "stars": 77254,
+      "forks": 17451,
+      "stars_today": 134,
+      "topics": [],
+      "license": "",
+      "created_at": "2020-01-05T04:11:06Z",
+      "updated_at": "2026-08-07T04:04:01Z",
+      "open_issues": 118,
+      "default_branch": "master",
+      "readme_excerpt": "## 项目的由来 虽然国内教育网站已提供免费资源，但大多数普通人获取信息的途径依然受限。有些人利用这一点，在某站上销售这些带有私人水印的资源。为了应对这种情况，我计划将这些资源集中并开源，以促进义务教育的普及和消除地区间的教育贫困。 还有一个最重要的原因是，希望海外华人能够让自己的孩子继续了解国内教育。 ## 学习数学 希望未来出现更多不是为了考学而读书的人。 ### 小学数学 - [一年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [一年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [二年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%8C%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [二年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%BA%8C%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [三年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [三年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [四年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E5%9B%9B%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [四年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E5%9B%9B%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [五年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [五年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [六年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E5%85%AD%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [六年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E5%85%AD%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) ### 初中数学 - [初一上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E4%B8%83%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [初一下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+      "language": "Python",
+      "stars": 186079,
+      "forks": 46055,
+      "stars_today": 37,
+      "topics": [
+        "agentic-ai",
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "autonomous-agents",
+        "claude",
+        "gpt",
+        "llama-api",
+        "llm",
+        "openai",
+        "python"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2023-03-16T09:21:07Z",
+      "updated_at": "2026-08-07T04:02:27Z",
+      "open_issues": 506,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://platform.agpt.co/signup?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=hero_banner\"> <img src=\"docs/home/.gitbook/assets/Banner_image.png\" alt=\"AutoGPT\" width=\"100%\" /> </a> </p> <h1 align=\"center\">AutoGPT — AI agents that finish the work</h1> <p align=\"center\"> <strong>Get 10 hours back every week.</strong><br /> Describe what you want done. AutoGPT builds the agent, runs it, and reports back. </p> <p align=\"center\"> <a href=\"https://platform.agpt.co/signup?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=header_get_started\"><strong>Get started</strong></a> · <a href=\"https://platform.agpt.co/tour?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=tour_header\">Tour</a> · <a href=\"https://agpt.co/pricing?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=header_pricing\">Pricing</a> · <a href=\"https://docs.agpt.co\">Docs</a> · <a href=\"https://discord.gg/autogpt\">Discord</a> · <a href=\"#self-host-autogpt\">Self-host</a> </p> <p align=\"center\"> <a href=\"https://discord.gg/autogpt\"> <img src=\"https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white\" alt=\"Join Discord\" /> </a> <a href=\"https://docs.agpt.co\"> <img src=\"https://img.shields.io/badge/Docs-read-0A7AFF?logo=gitbook&logoColor=white\" alt=\"Read the docs\" /> </a> </p> --- ## The open-source platform for AI agents AutoGPT lets you build, deploy, and run AI agents that carry out complete workflows. Describe an outcome in plain English or shape every step in the visual builder, then run the agent on demand, on a schedule, or from a trigger. **185,000+ GitHub stars. Cited by:** | | | |---|---| | “Next frontier of prompt engineering imo: ‘AutoGPTs’.” | **Andrej Karpathy**, founding member of OpenAI | | “If you have a phone you can run AutoGPT. You don't even need to learn how to code.” | **Amjad Masad**, co-founder & CEO of Replit | | “AutoGPT might be the next big step in AI.” | **Lior Alexander**, CEO of AlphaSignal | --- ## Four surfaces, one platform <table> <tr> <td width=\"50%\" align=\"center\" valign=\"top\"> <a href=\"https://agpt.co/product/autopilot/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=autopilot\"> <img src=\"docs/content/imgs/readme/autogpt_autopilot_chat.jpg\" alt=\"AutoPilot chat creating an AutoGPT agent\" /> </a> <br /><strong><a href=\"https://agpt.co/product/autopilot/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=autopilot\">AutoPilot</a></strong> <br />Describe the job in plain English and turn the conversation into a working agent. </td> <td width=\"50%\" align=\"center\" valign=\"top\"> <a href=\"https://agpt.co/product/agents/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=agents\"> <img src=\"docs/content/imgs/readme/autogpt_agent_dashboard.jpg\" alt=\"Agents dashboard showing statuses, runs, and costs\" /> </a> <br /><strong><a href=\"https://agpt.co/product/agents/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=agents\">Agents</a></strong> <br />See every agent, run, cost, and action that needs your attention. </td> </tr> <tr> <td width=\"50%\" align=\"center\" valign=\"top\"> <a href=\"https://agpt.co/product/marketplace/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=marketplace\"> <img src=\"docs/content/imgs/readme/autogpt_marketplace.png\" alt=\"AutoGPT Marketplace showing ready-made community agents\" /> </a> <br /><strong><a href=\"https://agpt.co/product/marketplace/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=autogpt_readme&amp;utm_content=marketplace\">Marketplace</a></strong> <br />Start from proven agents, add one to your library, and customize it for your work. </td> <td width=\"50%\" align=\"center\" valign=\"top\"> <a href=\"https://agp",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "tirth8205/code-review-graph",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "description": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+      "language": "Python",
+      "stars": 29108,
+      "forks": 2687,
+      "stars_today": 237,
+      "topics": [
+        "ai-coding",
+        "claude",
+        "claude-code",
+        "code-review",
+        "graphrag",
+        "incremental",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "python",
+        "static-analysis",
+        "tree-sitter"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-26T17:25:13Z",
+      "updated_at": "2026-08-07T04:02:02Z",
+      "open_issues": 73,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\">code-review-graph</h1> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/23329?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-23329\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"https://trendshift.io/api/badge/repositories/23329\" alt=\"tirth8205%2Fcode-review-graph | Trendshift\" width=\"250\" height=\"55\" /> </a> </p> <p align=\"center\"> <strong>Stop burning tokens. Start reviewing smarter.</strong> </p> <p align=\"center\"> <a href=\"README.md\">English</a> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"README.ja-JP.md\">日本語</a> | <a href=\"README.ko-KR.md\">한국어</a> | <a href=\"README.hi-IN.md\">हिन्दी</a> </p> <p align=\"center\"> <a href=\"https://pypi.org/project/code-review-graph/\"><img src=\"https://img.shields.io/pypi/v/code-review-graph?style=flat-square&color=blue\" alt=\"PyPI\"></a> <a href=\"https://pepy.tech/project/code-review-graph\"><img src=\"https://img.shields.io/pepy/dt/code-review-graph?style=flat-square\" alt=\"Downloads\"></a> <a href=\"https://github.com/tirth8205/code-review-graph/stargazers\"><img src=\"https://img.shields.io/github/stars/tirth8205/code-review-graph?style=flat-square\" alt=\"Stars\"></a> <a href=\"https://opensource.org/licenses/MIT\"><img src=\"https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square\" alt=\"MIT Licence\"></a> <a href=\"https://github.com/tirth8205/code-review-graph/actions/workflows/ci.yml\"><img src=\"https://github.com/tirth8205/code-review-graph/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a> <a href=\"https://www.python.org/\"><img src=\"https://img.shields.io/badge/python-3.10%2B-blue.svg?style=flat-square\" alt=\"Python 3.10+\"></a> <a href=\"https://modelcontextprotocol.io/\"><img src=\"https://img.shields.io/badge/MCP-compatible-green.svg?style=flat-square\" alt=\"MCP\"></a> <a href=\"https://code-review-graph.com\"><img src=\"https://img.shields.io/badge/website-code--review--graph.com-blue?style=flat-square\" alt=\"Website\"></a> <a href=\"https://discord.gg/3p58KXqGFN\"><img src=\"https://img.shields.io/badge/discord-join-5865F2?style=flat-square&logo=discord&logoColor=white\" alt=\"Discord\"></a> </p> <p align=\"center\"> <a href=\"docs/USAGE.md\">Usage</a> · <a href=\"docs/COMMANDS.md\">Commands</a> · <a href=\"docs/FAQ.md\">FAQ</a> · <a href=\"docs/TROUBLESHOOTING.md\">Troubleshooting</a> · <a href=\"docs/GITHUB_ACTION.md\">GitHub Action</a> · <a href=\"docs/REPRODUCING.md\">Reproducing the benchmarks</a> · <a href=\"docs/ROADMAP.md\">Roadmap</a> </p> <br> AI coding tools can end up re-reading large parts of your codebase on review tasks. `code-review-graph` fixes that. It builds a structural map of your code with [Tree-sitter](https://tree-sitter.github.io/tree-sitter/), tracks changes incrementally, and gives your AI assistant precise context via [MCP](https://modelcontextprotocol.io/) so it reads only what matters. <p align=\"center\"> <img src=\"diagrams/diagram1_before_vs_after.png\" alt=\"The Token Problem: reading flask's whole corpus costs 143,594 tokens, a graph answer costs 2,196 — 71.0x fewer\" width=\"85%\" /> </p> --- ## Quick Start ```bash pip install code-review-graph # or: pipx install code-review-graph code-review-graph install # auto-detects and configures all supported platforms code-review-graph build # parse your codebase ``` One command sets up everything. `install` detects which AI coding tools you have, writes the correct MCP configuration for each one, installs platform-native hooks/skills where supported, and injects graph-aware instructions into your platform rules. It auto-detects whether you installed via `uvx` or `pip`/`pipx` and generates the right config. Restart your editor/tool after installing. <p align=\"center\"> <img src=\"diagrams/diagram8_supported_platforms.png\" alt=\"One Install, Every Platform: auto-detects Codex, Claude Code, CodeBuddy Code, Cursor, Windsurf, Zed, Continue, OpenCode, Antigravity, Gemini CLI, Qwen, Qoder, Kiro, GitHub Copilot, and GitHub Copilot CLI\" width=\"85%\" /> </p> To target a specific platf",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "esengine/DeepSeek-Reasonix",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "description": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+      "language": "Go",
+      "stars": 32553,
+      "forks": 2103,
+      "stars_today": 888,
+      "topics": [
+        "agent",
+        "agent-framework",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "deepseek",
+        "developer-tools",
+        "ink",
+        "llm",
+        "prompt-caching",
+        "r1",
+        "terminal",
+        "tool-use",
+        "tui",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-21T08:27:02Z",
+      "updated_at": "2026-08-07T04:04:16Z",
+      "open_issues": 914,
+      "default_branch": "main-v2",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"docs/logo.svg\" alt=\"Reasonix\" width=\"640\"/> </p> <p align=\"center\"> <strong>English</strong> &nbsp;·&nbsp; <a href=\"./README.zh-CN.md\">简体中文</a> &nbsp;·&nbsp; <a href=\"./docs/GUIDE.md\">Guide</a> &nbsp;·&nbsp; <a href=\"./docs/ACP.md\">ACP</a> &nbsp;·&nbsp; <a href=\"./docs/EXTENSIONS.md\">Extensions</a> &nbsp;·&nbsp; <a href=\"./docs/SPEC.md\">Spec</a> &nbsp;·&nbsp; <a href=\"https://esengine.github.io/DeepSeek-Reasonix/\">Website</a> &nbsp;·&nbsp; <strong><a href=\"https://discord.gg/XF78rEME2D\">Discord</a></strong> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/v/reasonix.svg?style=flat-square&color=cb3837&labelColor=161b22&logo=npm&logoColor=white\" alt=\"npm version\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/esengine/DeepSeek-Reasonix/ci.yml?style=flat-square&label=ci&labelColor=161b22&logo=githubactions&logoColor=white\" alt=\"CI\"/></a> <a href=\"./LICENSE\"><img src=\"https://img.shields.io/npm/l/reasonix.svg?style=flat-square&color=8b949e&labelColor=161b22\" alt=\"license\"/></a> <a href=\"https://www.npmjs.com/package/reasonix\"><img src=\"https://img.shields.io/npm/dm/reasonix.svg?style=flat-square&color=3fb950&labelColor=161b22&label=downloads\" alt=\"downloads\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/stargazers\"><img src=\"https://img.shields.io/github/stars/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=dbab09&labelColor=161b22&logo=github&logoColor=white\" alt=\"GitHub stars\"/></a> <a href=\"https://atomgit.com/esengine/DeepSeek-Reasonix\"><img src=\"https://atomgit.com/esengine/DeepSeek-Reasonix/star/badge.svg\" alt=\"AtomGit stars\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=bc8cff&labelColor=161b22&logo=github&logoColor=white\" alt=\"contributors\"/></a> <a href=\"https://github.com/esengine/DeepSeek-Reasonix/discussions\"><img src=\"https://img.shields.io/github/discussions/esengine/DeepSeek-Reasonix.svg?style=flat-square&color=58a6ff&labelColor=161b22&logo=github&logoColor=white\" alt=\"Discussions\"/></a> <a href=\"https://discord.gg/XF78rEME2D\"><img src=\"https://img.shields.io/badge/discord-join-5865F2.svg?style=flat-square&labelColor=161b22&logo=discord&logoColor=white\" alt=\"Discord\"/></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/27020?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-27020\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/27020/monthly?language=Go\" alt=\"esengine/DeepSeek-Reasonix | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/27020?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-27020\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/27020\" alt=\"esengine/DeepSeek-Reasonix | Trendshift\" width=\"250\" height=\"55\"/></a> </p> <br/> <h3 align=\"center\">A DeepSeek-native AI coding agent for your terminal.</h3> <p align=\"center\">A config- and plugin-driven harness — a single static Go binary, tuned around DeepSeek's prefix cache so token costs stay low across long sessions.</p> <br/> > [!IMPORTANT] > **Community · 加入社区** — bilingual Discord for setup help (`#help` / `#求助`), workflow showcases, and feature ideas. → **<https://discord.gg/XF78rEME2D>** <br/> ## Features - **Config-driven.** Providers, the agent, enabled tools, and plugins are all declared in `reasonix.toml`. No hardcoded models. - **Multi-model & composable.** DeepSeek ships as a preset; any OpenAI-compatible endpoint is a config entry, not new code. Optionally run two models together (executor + planner) in separate, cache-stable sessions. - **Plugin-driven.** MCP serv",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": -5,
+      "streak_days": 5
+    },
+    {
+      "rank": 12,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 268212,
+      "forks": 23967,
+      "stars_today": 858,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-08-07T04:03:10Z",
+      "open_issues": 322,
+      "default_branch": "main",
+      "readme_excerpt": "# Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. ## Quickstart Give your agent Superpowers: [Claude Code](#claude-code), [Antigravity](#antigravity), [Codex App](#codex-app), [Codex CLI](#codex-cli), [Cursor](#cursor), [Factory Droid](#factory-droid), [Gemini CLI](#gemini-cli), [GitHub Copilot CLI](#github-copilot-cli), [Kimi Code](#kimi-code), [OpenCode](#opencode), [Pi](#pi). ## How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. ## Commercial Services If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com. ## Installation Installation differs by harness. If you use more than one, install Superpowers separately for each one. ### Claude Code Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers) #### Official Marketplace - Install the plugin from Anthropic's official marketplace: ```bash /plugin install superpowers@claude-plugins-official ``` #### Superpowers Marketplace The Superpowers marketplace provides Superpowers and some other related plugins for Claude Code. - Register the marketplace: ```bash /plugin marketplace add obra/superpowers-marketplace ``` - Install the plugin from this marketplace: ```bash /plugin install superpowers@superpowers-marketplace ``` ### Antigravity Install Superpowers as a plugin from this repository: ```bash agy plugin install https://github.com/obra/superpowers ``` Antigravity runs the plugin's session-start hook, so Superpowers is active from the first message. Reinstall with the same command to update. ### Codex App Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - In the Codex app, click on Plugins in the sidebar. - You should see `Superpowers` in the Coding section. - Click the `+` next to Superpowers and follow the prompts. ### Codex CLI Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - Open the plugin search interface: ```bash /plugins ``` - Search for Superpowers: ```bash superpowers ``` - Select `Install Plugin`. ### Cursor - In Cursor Agent chat, install from marketplace: ```text /add-plugin superpowers ``` - Or search for \"superpowers\" in the plugin marketplace. ### Factory Droid - Register the marketplace: ```bash droid plugin marketplace add https://github.com/obra/superpowers ``` - Install the plugin: ```bash droid plugin install superpowers@superpowers ``` ### Gemini CLI - Install the extension: ```bash gemini extensions install https://github.com/obra/superpowers ``` - Update later: ```bash gemini extensions update ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": -4,
+      "streak_days": 3
+    },
+    {
+      "rank": 13,
+      "full_name": "firecrawl/pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "description": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+      "language": "Rust",
+      "stars": 12582,
+      "forks": 846,
+      "stars_today": 1190,
+      "topics": [
+        "markdown",
+        "nodejs",
+        "ocr-routing",
+        "pdf",
+        "pdf-classification",
+        "pdf-extraction",
+        "pdf-parser",
+        "python",
+        "rust",
+        "text-extraction"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-06T19:44:47Z",
+      "updated_at": "2026-08-07T03:57:27Z",
+      "open_issues": 86,
+      "default_branch": "main",
+      "readme_excerpt": "# pdf-inspector [![Crates.io](https://img.shields.io/crates/v/pdf-inspector.svg)](https://crates.io/crates/pdf-inspector) [![npm](https://img.shields.io/npm/v/@firecrawl/pdf-inspector.svg)](https://www.npmjs.com/package/@firecrawl/pdf-inspector) [![PyPI](https://img.shields.io/pypi/v/pdf-inspector.svg)](https://pypi.org/project/pdf-inspector/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) Fast Rust library for PDF classification and text extraction. Detects whether a PDF is text-based or scanned, extracts text with position awareness, and converts to clean Markdown — all without OCR. Includes bindings for [Python](docs/python.md), [Node.js](napi/README.md), and [browser WebAssembly](wasm/README.md). Built by [Firecrawl](https://firecrawl.dev) to handle text-based PDFs locally in under 200ms, skipping expensive OCR services for the ~54% of PDFs that don't need them. ## Features - **Smart classification** — Detect TextBased, Scanned, ImageBased, or Mixed PDFs in ~10-50ms by sampling content streams. Returns a confidence score (0.0-1.0) and per-page OCR routing. - **Text extraction** — Position-aware extraction with font info, X/Y coordinates, and automatic multi-column reading order. - **Markdown conversion** — Headings (H1-H4 via font size ratios), bullet/numbered/letter lists, code blocks (monospace font detection), tables (rectangle-based and heuristic), bold/italic formatting, URL linking, and page breaks. - **Table detection** — Dual-mode: rectangle-based detection from PDF drawing ops, plus heuristic detection from text alignment. Handles financial tables, footnotes, and continuation tables across pages. - **CID font support** — ToUnicode CMap decoding for Type0/Identity-H fonts, UTF-16BE, UTF-8, and Latin-1 encodings. - **Multi-column layout** — Automatic detection of newspaper-style columns, sequential reading order, and RTL text support. - **Encoding issue detection** — Automatically flags broken font encodings so callers can fall back to OCR. - **Single document load** — The document is parsed once and shared between detection and extraction, avoiding redundant I/O. - **Browser WebAssembly** — Run the same Rust parser locally in browsers and Web Workers, with embedded CMaps and no server round trip. - **Lightweight** — Pure Rust, no ML models, no external services. Single dependency on `lopdf` for PDF parsing. ## Benchmark Evaluated on the [opendataloader-bench](https://github.com/opendataloader-project/opendataloader-bench) corpus (200 PDFs). Only local engines without model-based PDF parsing are shown; OCR was disabled. Scores are 0-1, higher is better. | Engine | Overall | Reading Order (NID) | Tables (TEDS) | Headings (MHS) | Speed (200 docs) | |---|---|---|---|---|---| | pdf-inspector | **0.875** | **0.915** | **0.814** | 0.788 | **0.470s** | | liteparse | 0.873 | 0.913 | 0.693 | **0.811** | 0.750s | | opendataloader | 0.831 | 0.902 | 0.489 | 0.739 | 2.569s | | pymupdf4llm | 0.735 | 0.886 | 0.401 | 0.424 | 17.117s | | markitdown | 0.589 | 0.844 | 0.273 | 0.000 | 16.165s | Results were refreshed on July 31, 2026, on an Apple M4 Pro. Engine versions were pdf-inspector 0.2.6, LiteParse 2.10.1, OpenDataLoader 2.2.1, PyMuPDF4LLM 0.2.0, and MarkItDown 0.1.5. Speed is the median of five alternating or rotating complete corpus runs after an excluded warm-up run, with each parser processing documents sequentially in a single process. The complete parser configuration, per-document predictions, evaluator output, and generated charts are available in the [reproducible results branch](https://github.com/firecrawl/opendataloader-bench/tree/abi/pdf-parser-benchmark-results). **Best fit:** Native-text PDFs where speed, reading order, and table structure matter. In this comparison, pdf-inspector delivered the higher overall, reading-order, and table scores, along with the fastest complete run. That makes it a strong local default for reports, research papers, financial documents, invoices, and lega",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -8,
+      "streak_days": 4
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "至少 0/13 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
+      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
+      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
+      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+    ],
+    "hot_characteristics": [
+      "其他开发者关注方向（13 个项目）"
+    ],
+    "product_business_signals": [
+      "企业智能体机会正向治理、安全和多模型管理迁移。",
+      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
+      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
+      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+    ],
+    "watch_next": [
+      "观察智能体治理项目是否出现企业集成案例。",
+      "观察实时语音智能体在普通设备上的延迟和中文体验。",
+      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
+      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "TencentCloud/TencentDB-Agent-Memory",
+        "one_line_summary": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "solution": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1057 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks. 这个项目尝试用“TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "one_line_summary": "Production-grade engineering skills for AI coding agents.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Production-grade engineering skills for AI coding agents.",
+        "solution": "Production-grade engineering skills for AI coding agents.",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 593 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Production-grade engineering skills for AI coding agents. 这个项目尝试用“Production-grade engineering skills for AI coding agents.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Production-grade engineering skills for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cloudflare/computer",
+        "one_line_summary": "Give your agent a computer 👾",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Give your agent a computer 👾",
+        "solution": "Give your agent a computer 👾",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 2802 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Give your agent a computer 👾 这个项目尝试用“Give your agent a computer 👾”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/computer",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Give your agent a computer 👾",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/computer",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cloudflare/computer",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "Skills for Real Engineers. Straight from my .agents directory.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Skills for Real Engineers. Straight from my .agents directory.",
+        "solution": "Skills for Real Engineers. Straight from my .agents directory.",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 1873 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Skills for Real Engineers. Straight from my .agents directory. 这个项目尝试用“Skills for Real Engineers. Straight from my .agents directory.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "one_line_summary": "The authentication glue you need.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The authentication glue you need.",
+        "solution": "The authentication glue you need.",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 138 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The authentication glue you need. 这个项目尝试用“The authentication glue you need.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The authentication glue you need.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/goauthentik/authentik",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "huangruiteng/loopx",
+        "one_line_summary": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+        "solution": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 847 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs. 这个项目尝试用“Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huangruiteng/loopx",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Lightweight loop engineering state kernel for long-running AI agent teams. Agent-loop agnostic across Codex, Claude Code, and other coding agents, with durable goals, quota-aware auto-wake, executable todos, evidence logs, and verifiable handoffs.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huangruiteng/loopx",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/huangruiteng/loopx",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google/guava",
+        "one_line_summary": "Google core libraries for Java",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Google core libraries for Java",
+        "solution": "Google core libraries for Java",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 13 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Google core libraries for Java 这个项目尝试用“Google core libraries for Java”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/guava",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Google core libraries for Java",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/guava",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google/guava",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "TapXWorld/ChinaTextbook",
+        "one_line_summary": "所有小初高、大学PDF教材。",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "所有小初高、大学PDF教材。",
+        "solution": "所有小初高、大学PDF教材。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 134 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：所有小初高、大学PDF教材。 这个项目尝试用“所有小初高、大学PDF教材。”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TapXWorld/ChinaTextbook",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "所有小初高、大学PDF教材。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TapXWorld/ChinaTextbook",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TapXWorld/ChinaTextbook",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Significant-Gravitas/AutoGPT",
+        "one_line_summary": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+        "solution": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 37 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. 这个项目尝试用“AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Significant-Gravitas/AutoGPT",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "tirth8205/code-review-graph",
+        "one_line_summary": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "solution": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 237 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows. 这个项目尝试用“Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tirth8205/code-review-graph",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Local-first code intelligence graph for MCP and CLI. Builds a persistent map of your codebase so AI coding tools read only what matters, with benchmarked context reductions on reviews and large-repo workflows.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tirth8205/code-review-graph",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/tirth8205/code-review-graph",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "esengine/DeepSeek-Reasonix",
+        "one_line_summary": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "solution": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 888 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running. 这个项目尝试用“DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "DeepSeek-native AI coding agent for your terminal. Engineered around prefix-cache stability — leave it running.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/esengine/DeepSeek-Reasonix",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "obra/superpowers",
+        "one_line_summary": "An agentic skills framework & software development methodology that works.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "An agentic skills framework & software development methodology that works.",
+        "solution": "An agentic skills framework & software development methodology that works.",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 858 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：An agentic skills framework & software development methodology that works. 这个项目尝试用“An agentic skills framework & software development methodology that works.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An agentic skills framework & software development methodology that works.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/obra/superpowers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "firecrawl/pdf-inspector",
+        "one_line_summary": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "solution": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 1190 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions. 这个项目尝试用“Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/pdf-inspector",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fast Rust library for PDF inspection, classification, and text extraction. Intelligently detects scanned vs text-based PDFs to enable smart routing decisions.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/pdf-inspector",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/firecrawl/pdf-inspector",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
