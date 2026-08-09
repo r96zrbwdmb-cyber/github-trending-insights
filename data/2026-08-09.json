@@ -1,0 +1,1097 @@
+{
+  "date": "2026-08-09",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 12,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "language": "TypeScript",
+      "stars": 9122,
+      "forks": 881,
+      "stars_today": 2483,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-08T01:42:41Z",
+      "updated_at": "2026-08-09T03:08:17Z",
+      "open_issues": 387,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://primeintellect.ai\"> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/40c36e38-c5bd-4c5a-9cb3-f7b902cd155d\"> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6414bc9b-126b-41ca-9307-9e982430cde8\"> <img alt=\"Prime Intellect\" src=\"https://github.com/user-attachments/assets/6414bc9b-126b-41ca-9307-9e982430cde8\" width=\"312\" style=\"max-width: 100%;\"> </picture> </a> </p> <h3 align=\"center\"> Prime Agent: A Self-Improving RLM Agent </h3> <p align=\"center\"> <a href=\"packages/coding-agent/docs/index.md\">Documentation</a> &bull; <a href=\"https://github.com/PrimeIntellect-ai/verifiers\">Verifiers</a> &bull; <a href=\"https://github.com/PrimeIntellect-ai/prime-rl\">PRIME-RL</a> &bull; <a href=\"https://github.com/badlogic/pi-mono\">pi-mono</a> </p> <p align=\"center\"> <a href=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/ci.yml\"> <img src=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /> </a> <a href=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/build-binaries.yml\"> <img src=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/build-binaries.yml/badge.svg\" alt=\"Build Binaries\" /> </a> </p> Prime Agent is an open-source coding and research agent for general and long-running work. It is designed around two core abstractions: - The **[Recursive Language Model (RLM)](https://www.primeintellect.ai/blog/rlm)** treats context as variables (*prompt-as-a-variable*) and tools like recursive subagents as function calls (*programmatic tool /sub-agent calling*) inside a persistent REPL. - The **[Continual Harness](https://arxiv.org/abs/2605.09998)** stores supplemental prompts, memories, skill descriptions, and reusable subagent specifications as durable state that Prime Agent can refine through small, evidence-backed updates, local to the session by default. Prime Agent combines a persistent Python control environment with durable harness state, so useful working context and reusable operating patterns can outlive a single chat window. - **Everything is programmatic:** persistent IPython is the built-in model tool; file operations, shell commands, tool use, subagents, and context management happen through code. - **Subagents are built in:** `rlm(...)` spawns real child agents for parallel or background work and returns their results programmatically. - **The harness can improve:** `/refine` reviews the current trajectory and can apply small, evidence-backed updates to supplemental harness state. It never rewrites the immutable base system prompt, and recorded snapshots support rollback. - **Skills are executable:** skills are importable Python packages, and the built-in skill creator can turn recurring workflows into project or personal skills. - **Sessions run in the background:** daemon-backed agents keep running when the terminal disconnects and can be reattached later. - **Agents communicate directly:** running agents can exchange messages and orchestrate one another without routing everything through the user. - **Long tasks keep moving:** automatic compaction, persistent goals, heartbeats, schedules, autonomous mode, and retained subagents preserve progress across turns and terminal sessions. ## Getting Started Install the latest stable release on macOS or Linux: ```bash curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh ``` The installer downloads a versioned release, verifies its SHA-256 checksum, installs the `prime-agent` command, and can prepare the IPython runtime used by the agent. Start Prime Agent from the repository or directory you want it to work in: ```bash cd /path/to/project prime-agent ``` On first launch, run `/login` to choose a subscription or API-key provider. Prime Agent works in the current directory and can run commands and modify files there. Use a disposable clone, ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": 0,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 84631,
+      "forks": 9114,
+      "stars_today": 779,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-15T20:20:26Z",
+      "updated_at": "2026-08-09T03:06:23Z",
+      "open_issues": 101,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. <a href=\"https://trendshift.io/repositories/25200\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/25200\" alt=\"addyosmani%2Fagent-skills | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> ![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg) ``` DEFINE PLAN BUILD VERIFY REVIEW SHIP ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │ QA │ ───▶ │ Go │ │Refine│ │ PRD │ │ Impl │ │Debug │ │ Gate │ │ Live │ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ /spec /plan /build /test /review /ship ``` --- ## Commands 8 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | |-------------------|---------|---------------| | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | Want fewer manual steps once the spec exists? **`/build auto`** generates the plan and implements every task in a single approved pass — you approve the plan once, then it runs autonomously. It removes the human stepping *between* tasks, not the verification: every task is still test-driven and committed individually, and it pauses on failures or risky steps. Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on. --- ## Quick Start **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more): ```bash npx skills add addyosmani/agent-skills # install all 24 skills npx skills add addyosmani/agent-skills --list # browse before installing ``` Or grab individual skills: ```bash npx skills add addyosmani/agent-skills --skill code-review-and-quality # five-axis review before merge npx skills add addyosmani/agent-skills --skill interview-me # requirements interrogation, one question at a time npx skills add addyosmani/agent-skills --skill test-driven-development # red-green-refactor, enforced ``` > **Installing one skill?** A per-skill `npx` install copies only > `skills/<name>/`, not the repo-level `references/` directory. The skill still > works, but paths to supplementary shared checklists are unavailable. Use a > whole-repo integration, clone the repository, or copy the needed checklist into > a `references/` directory inside the installed skill. This portability gap is > tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361). Prefer a native integration? Pick your tool below. <details> <summary><b>Claude Code (recommended)</b></summary> **Marketplace install:** ``` /plugin marketplace add addyosmani/agent-skills /plugin install agent-skills@addy-agent-skills ``` > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or use the full HTTPS URL to force HTTPS cloning during the marketplace-add step: > ```bash > /plugin marketplace add https://github.com/addyosmani/agent-skills.git > /plugin install agent-skills@",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": 0,
+      "streak_days": 4
+    },
+    {
+      "rank": 3,
+      "full_name": "TapXWorld/ChinaTextbook",
+      "url": "https://github.com/TapXWorld/ChinaTextbook",
+      "description": "所有小初高、大学PDF教材。",
+      "language": "Roff",
+      "stars": 77980,
+      "forks": 17665,
+      "stars_today": 118,
+      "topics": [],
+      "license": "",
+      "created_at": "2020-01-05T04:11:06Z",
+      "updated_at": "2026-08-09T03:08:26Z",
+      "open_issues": 119,
+      "default_branch": "master",
+      "readme_excerpt": "## 项目的由来 虽然国内教育网站已提供免费资源，但大多数普通人获取信息的途径依然受限。有些人利用这一点，在某站上销售这些带有私人水印的资源。为了应对这种情况，我计划将这些资源集中并开源，以促进义务教育的普及和消除地区间的教育贫困。 还有一个最重要的原因是，希望海外华人能够让自己的孩子继续了解国内教育。 ## 学习数学 希望未来出现更多不是为了考学而读书的人。 ### 小学数学 - [一年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [一年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%80%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [二年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%8C%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [二年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%BA%8C%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [三年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [三年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%89%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [四年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E5%9B%9B%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [四年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E5%9B%9B%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [五年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [五年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%BA%94%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) - [六年级上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%20%C2%B7%20%E6%95%B0%E5%AD%A6%E5%85%AD%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [六年级下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%B0%8F%E5%AD%A6/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E5%85%AD%E5%B9%B4%E7%BA%A7%E4%B8%8B%E5%86%8C.pdf) ### 初中数学 - [初一上册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE/%E4%B8%83%E5%B9%B4%E7%BA%A7/%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%95%B0%E5%AD%A6%E4%B8%83%E5%B9%B4%E7%BA%A7%E4%B8%8A%E5%86%8C.pdf) - [初一下册](https://github.com/TapXWorld/ChinaTextbook/blob/master/%E5%88%9D%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%BA%BA%E6%95%99%E7%89%88-%E4%BA%BA%E6%B0%91%E6%95%99%E8%82%B2%E5%87%BA%",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": 16786,
+      "forks": 1372,
+      "stars_today": 481,
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-03-31T19:02:20Z",
+      "updated_at": "2026-08-09T03:07:19Z",
+      "open_issues": 32,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills [![Install via skills.sh](https://img.shields.io/badge/skills.sh-install-green)](https://skills.sh/google/skills) This repository contains [Agent Skills](https://agentskills.io/home) for Google products and technologies, including [Google Cloud](https://cloud.google.com). > [!NOTE] > This repository is under active development. ## Installation ```bash npx skills add google/skills ``` From the `npx install` command, you can select the specific skills from this repo to install. ## Available Skills <!-- BEGIN SKILLS --> - **Getting started with Google Cloud** - [**Authenticating to Google Cloud**](./skills/cloud/google-cloud-recipe-auth) - [**Google Cloud Recipe: Foundation Builder**](./skills/cloud/google-cloud-recipe-foundation-builder) - [**Onboarding to Google Cloud**](./skills/cloud/google-cloud-recipe-onboarding) - **Multi-product solution skills** - [**Google Cloud solution-architecture workflow**](./skills/cloud/google-cloud-solution-architecture) - [**Agentic analytics across cloud providers and data types**](./skills/cloud/google-cloud-solution-agentic-analytics-spark-knowledge-catalog) - [**Borderless open data lakehouse agentic AI system**](./skills/cloud/google-cloud-solution-agentic-ai-borderless-data-lakehouse) - [**Build and deploy AI agents on Google Cloud**](./skills/cloud/google-cloud-solution-build-deploy-agents) - [**Data science workflow with AI agents solution**](./skills/cloud/google-cloud-solution-agentic-ai-data-science-workflow) - [**Live bidirectional multimodal streaming agentic AI solution**](./skills/cloud/google-cloud-solution-agentic-ai-bidirectional-streaming) - [**Migrate AI Workloads to GKE Inference**](./skills/cloud/google-cloud-solution-guided-gke-ai-migration) - [**RAG for enterprise search using GKE and AlloyDB**](./skills/cloud/google-cloud-solution-rag-enterprise-search-gke-sqldb) - [**Secure n-tier serverless web application with strict private application tiers**](./skills/cloud/google-cloud-solution-n-tier-serverless-web-app) - **AI/ML** - [**Agent Platform Alert Configuration**](./skills/cloud/agent-platform-alert-configuration) - [**Agent Platform Endpoint Management**](./skills/cloud/agent-platform-endpoint-management) - [**Agent Platform Eval Flywheel Skill**](./skills/cloud/agent-platform-eval-flywheel) - [**Agent Platform GenAI Inference Skill**](./skills/cloud/agent-platform-inference) - [**Agent Platform Model Garden Deploy Skill**](./skills/cloud/agent-platform-deploy) - [**Agent Platform Model Registry Management**](./skills/cloud/agent-platform-model-registry) - [**Agent Platform Model Tuning**](./skills/cloud/agent-platform-tuning) - [**Agent Platform Prompt Management**](./skills/cloud/agent-platform-prompt-management) - [**Agent Platform RAG Engine Management**](./skills/cloud/agent-platform-rag-engine-management) - [**Agent Platform Troubleshooting**](./skills/cloud/agent-platform-troubleshooting) - [**Agent Platform Tuning Management**](./skills/cloud/agent-platform-tuning-management) - [**BigQuery AI & ML**](./skills/cloud/bigquery-ai-ml) - [**Gemini API in Agent Platform**](./skills/cloud/gemini-api) - [**Gemini Enterprise Agent Platform - Managed Agents API Skill**](./skills/cloud/gemini-agents-api) - [**Gemini Interactions API Skill**](./skills/cloud/gemini-interactions-api) - [**LiveAPI Service Skill**](./skills/cloud/gemini-live-api) - [**Migrating from Gemini API in AI Studio to Agent Platform**](./skills/cloud/agent-platform-migrate-from-ai-studio) - [**Skill Registry**](./skills/cloud/agent-platform-skill-registry) - **Infrastructure** - [**GKE AI/ML Inference**](./skills/cloud/gke-inference) - [**GKE App Onboarding**](./skills/cloud/gke-app-onboarding) - [**GKE Backup & Disaster Recovery**](./skills/cloud/gke-backup-dr) - [**GKE Basics & Critical Gotchas**](./skills/cloud/gke-basics) - [**GKE Batch & HPC Workloads**](./skills/cloud/gke-batch-hpc) - [**GKE Cluster Autoscaler**](./skills/cloud/gke-cluster-autoscaler) - [**GKE Cluster Creation**](",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 17,
+      "rank_change": 13,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 210132,
+      "forks": 18155,
+      "stars_today": 1359,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-09T03:06:47Z",
+      "open_issues": 310,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship — you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one — installing both leaves you with every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugins install mattpocock-skills ``` Or, from inside a session: ``` /plugin install mattpocock-skills ``` It's in Claude Code's official marketplace, so there's nothing to add first, and updates arrive automatically. </details> <details> <summary><strong>Codex, and other agents</strong></summary> ```bash npx skills@latest add mattpocock/skills ``` Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take — make sure `setup-matt-pocock-skills` is one of them.** A native Codex plugin is on the roadmap — see [`.agents/adr/0002-ship-as-a-claude-code-plugin.md`](./.agents/adr/0002-ship-as-a-claude-code-plugin.md). </details> <details> <summary><strong>For tinkerers</strong></summary> Use the same installer, on any agent — including Claude Code: ```bash npx skills@latest add mattpocock/skills ``` It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull my latest changes when you want them with `npx skills update`. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, Linear, or local files) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalignment. You think the dev knows what you want. Then you see what they've built - and you realize it didn't understand you at all. This is just the same in the AI age. There is a communication gap between you and the agent. The fix for this is a **grilling session** - getting the agent",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -1,
+      "streak_days": 3
+    },
+    {
+      "rank": 6,
+      "full_name": "goauthentik/authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "description": "The authentication glue you need.",
+      "language": "Python",
+      "stars": 24003,
+      "forks": 1839,
+      "stars_today": 467,
+      "topics": [
+        "authentication",
+        "authentik",
+        "authorization",
+        "kubernetes",
+        "oauth2",
+        "oauth2-client",
+        "oauth2-server",
+        "oidc",
+        "oidc-client",
+        "oidc-provider",
+        "proxy",
+        "reverse-proxy",
+        "saml",
+        "saml-idp",
+        "saml-sp",
+        "security",
+        "sso"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2019-12-30T09:19:48Z",
+      "updated_at": "2026-08-09T03:06:17Z",
+      "open_issues": 1148,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"https://goauthentik.io/img/icon_top_brand_colour.svg\" height=\"150\" alt=\"authentik logo\"> </p> --- [![Join Discord](https://img.shields.io/discord/809154715984199690?label=Discord&style=for-the-badge)](https://goauthentik.io/discord) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-main.yml?branch=main&label=core%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-main.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-outpost.yml?branch=main&label=outpost%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-outpost.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-web.yml?branch=main&label=web%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-web.yml) [![Code Coverage](https://img.shields.io/codecov/c/gh/goauthentik/authentik?style=for-the-badge)](https://codecov.io/gh/goauthentik/authentik) ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge) [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://explore.transifex.com/authentik/authentik/) ## What is authentik? authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters. Our [enterprise offering](https://goauthentik.io/pricing) is available for organizations to securely replace existing IdPs such as Okta, Auth0, Entra ID, and Ping Identity for robust, large-scale identity management. ## Installation - Docker Compose: recommended for small/test setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/). - Kubernetes (Helm Chart): recommended for larger setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm). - AWS CloudFormation: deploy on AWS using our official templates. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/). - DigitalOcean Marketplace: one-click deployment via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik). ## Screenshots | Light | Dark | | ----------------------------------------------------------- | ---------------------------------------------------------- | | ![](https://docs.goauthentik.io/img/screen_apps_light.jpg) | ![](https://docs.goauthentik.io/img/screen_apps_dark.jpg) | | ![](https://docs.goauthentik.io/img/screen_admin_light.jpg) | ![](https://docs.goauthentik.io/img/screen_admin_dark.jpg) | ## Development and contributions See the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/) for information about setting up local build environments, testing your contributions, and our contribution process. When you contribute documentation, either to accompany a code change or as a standalone contribution, please be sure to follow our documentation [Style Guide](website/docs/developer-docs/docs/style-guide.mdx). ## Security Please see [SECURITY.md](SECURITY.md). ## Adoption Using authentik? We'd love to hear your story and feature your logo. Email us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR! ## License [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE) [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge)](website/LICENSE) [![authentik EE License](https://img.shields.io/badge/License-EE-orange?style=for-the-badge)](authentik/enterprise/LICENSE)",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": 0,
+      "streak_days": 3
+    },
+    {
+      "rank": 7,
+      "full_name": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": 96540,
+      "forks": 18662,
+      "stars_today": 153,
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-12-28T03:31:08Z",
+      "updated_at": "2026-08-09T03:06:12Z",
+      "open_issues": 348,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/TauricResearch.png\" style=\"width: 60%; height: auto;\"> </p> <div align=\"center\" style=\"line-height: 1;\"> <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arXiv\" src=\"https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv\"/></a> <a href=\"https://discord.com/invite/hk9PGKShPK\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da\"/></a> <a href=\"https://x.com/TauricResearch\" target=\"_blank\"><img alt=\"X Follow\" src=\"https://img.shields.io/badge/X-TauricResearch-white?logo=x&logoColor=white\"/></a> <a href=\"https://github.com/TauricResearch/\" target=\"_blank\"><img alt=\"Community\" src=\"https://img.shields.io/badge/GitHub_Community-TauricResearch-14C290?logo=discourse\"/></a> </div> <br> <div align=\"center\"> <a href=\"https://github.com/TauricResearch\" target=\"_blank\"><img alt=\"TradingAgents #1 Repository of the Day\" src=\"https://trendshift.io/api/badge/repositories/16192\" width=\"250\" height=\"55\"/></a> </div> <br> <div align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=de\">Deutsch</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=es\">Español</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=fr\">français</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ja\">日本語</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ko\">한국어</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=pt\">Português</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ru\">Русский</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=zh\">中文</a> </div> --- # TradingAgents: Multi-Agents LLM Financial Trading Framework ## News - [2026-07] **TradingAgents v0.3.1** released with correctness and stability fixes: Alpha Vantage look-ahead filtering, graph-router crash-safety, graph-shape-aware checkpoint resume, working crypto sentiment sources, a configurable LLM retry budget, Bedrock API-key auth, and Claude Sonnet 5 / Fable 5 support. See [CHANGELOG.md](CHANGELOG.md) for the full list. - [2026-06] **TradingAgents v0.3.0** released with a verified data-access contract, an expanded provider registry (NVIDIA, Kimi, Groq, Mistral, Bedrock, and any OpenAI-compatible endpoint), FRED and Polymarket data vendors, a current-generation model catalog, and a CI gate. - [2026-05] **TradingAgents v0.2.5** released with the grounded Sentiment Analyst, GPT-5.5 etc. model coverage, Qwen/GLM/MiniMax dual-region support, `TRADINGAGENTS_*` env-var configurability with API-key auto-detection, remote Ollama support, non-US alpha benchmarks, and ticker path-traversal hardening. - [2026-04] **TradingAgents v0.2.4** released with structured-output agents (Research Manager, Trader, Portfolio Manager), LangGraph checkpoint resume, persistent decision log, DeepSeek/Qwen/GLM/Azure provider support, Docker, and a Windows UTF-8 encoding fix. - [2026-03] **TradingAgents v0.2.3** released with multi-language support, GPT-5.4 family models, unified model catalog, backtesting date fidelity, and proxy support. - [2026-03] **TradingAgents v0.2.2** released with GPT-5.4/Gemini 3.1/Claude 4.6 model coverage, five-tier rating scale, OpenAI Responses API, Anthropic effort control, and cross-platform stability. - [2026-02] **TradingAgents v0.2.0** released with multi-provider LLM support (GPT-5.x, Gemini 3.x, Claude 4.x, Grok 4.x) and improved system architecture. - [2026-01] **Trading-R1** [Technical Report](https://arxiv.org/abs/2509.11420) released, with [Terminal](https://github.com/TauricResearch/Trading-R1) expected to land soon. <div align=\"center\"> 🚀 [TradingAgents](#tradingagents-framework) | ⚡ [Installation & CLI](#installation-and-cli) | 🎬 [Demo](https://www.youtu",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "google/guava",
+      "url": "https://github.com/google/guava",
+      "description": "Google core libraries for Java",
+      "language": "Java",
+      "stars": 51862,
+      "forks": 11180,
+      "stars_today": 93,
+      "topics": [
+        "guava",
+        "java"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2014-05-29T16:23:17Z",
+      "updated_at": "2026-08-09T02:45:47Z",
+      "open_issues": 747,
+      "default_branch": "master",
+      "readme_excerpt": "# Guava: Google Core Libraries for Java [![GitHub Release](https://img.shields.io/github/v/release/google/guava)](https://github.com/google/guava/releases/latest) [![CI](https://github.com/google/guava/actions/workflows/ci.yml/badge.svg)](https://github.com/google/guava/actions/workflows/ci.yml) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/7197/badge)](https://www.bestpractices.dev/projects/7197) Guava is a set of core Java libraries from Google that includes new collection types (such as multimap and multiset), immutable collections, a graph library, and utilities for concurrency, I/O, hashing, primitives, strings, and more! It is widely used on most Java projects within Google, and widely used by many other companies as well. Guava comes in two flavors: * The JRE flavor requires JDK 1.8 or higher. * If you need support for Android, use [the Android flavor](https://github.com/google/guava/wiki/Android). You can find the Android Guava source in the [`android` directory]. [`android` directory]: https://github.com/google/guava/tree/master/android ## Adding Guava to your build Guava's Maven group ID is `com.google.guava`, and its artifact ID is `guava`. Guava provides two different \"flavors\": one for use on a (Java 8+) JRE and one for use on Android or by any library that wants to be compatible with Android. These flavors are specified in the Maven version field as either `33.6.0-jre` or `33.6.0-android`. For more about depending on Guava, see [using Guava in your build]. To add a dependency on Guava using Maven, use the following: ```xml <dependency> <groupId>com.google.guava</groupId> <artifactId>guava</artifactId> <version>33.6.0-jre</version> <!-- or, for Android: --> <version>33.6.0-android</version> </dependency> ``` To add a dependency using Gradle: ```gradle dependencies { // Pick one: // 1. Use Guava in your implementation only: implementation(\"com.google.guava:guava:33.6.0-jre\") // 2. Use Guava types in your public API: api(\"com.google.guava:guava:33.6.0-jre\") // 3. Android - Use Guava in your implementation only: implementation(\"com.google.guava:guava:33.6.0-android\") // 4. Android - Use Guava types in your public API: api(\"com.google.guava:guava:33.6.0-android\") } ``` For more information on when to use `api` and when to use `implementation`, consult the [Gradle documentation on API and implementation separation](https://docs.gradle.org/current/userguide/java_library_plugin.html#sec:java_library_separation). ## Snapshots and Documentation Snapshots of Guava built from the `master` branch are available through Maven using version `999.0.0-HEAD-jre-SNAPSHOT`, or `999.0.0-HEAD-android-SNAPSHOT` for the Android flavor. [Snapshot API Javadoc][guava-snapshot-api-docs] as well as [Snapshot API Diffs][guava-snapshot-api-diffs] are also available. Another easy way to get to the Javadoc is to open [guava.dev/api](https://guava.dev/api). You can also jump right to a specific class by appending the class name to guava.dev. For example, [guava.dev/ImmutableList](https://guava.dev/ImmutableList)! ## Learn about Guava - Our users' guide, [Guava Explained] - [A nice collection](https://www.tfnico.com/presentations/google-guava) of other helpful links ## Links - [GitHub project](https://github.com/google/guava) - [Issue tracker: Report a defect or feature request](https://github.com/google/guava/issues/new) - [StackOverflow: Ask \"how-to\" and \"why-didn't-it-work\" questions](https://stackoverflow.com/questions/ask?tags=guava+java) - [guava-announce: Announcements of releases and upcoming significant changes](https://groups.google.com/group/guava-announce) - [guava-discuss: For open-ended questions and discussion](https://groups.google.com/group/guava-discuss) ## IMPORTANT WARNINGS 1. APIs marked with the `@Beta` annotation at the class or method level are subject to change. They can be modified in any way, or even removed, at any time. If your code is a library itself (i.e., it is used on the CLASSPATH of users outs",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 12,
+      "rank_change": 4,
+      "streak_days": 3
+    },
+    {
+      "rank": 9,
+      "full_name": "LadybirdBrowser/ladybird",
+      "url": "https://github.com/LadybirdBrowser/ladybird",
+      "description": "Truly independent web browser",
+      "language": "C++",
+      "stars": 65020,
+      "forks": 3106,
+      "stars_today": 48,
+      "topics": [
+        "browser",
+        "browser-engine"
+      ],
+      "license": "BSD-2-Clause",
+      "created_at": "2024-05-30T09:18:10Z",
+      "updated_at": "2026-08-09T03:03:11Z",
+      "open_issues": 537,
+      "default_branch": "master",
+      "readme_excerpt": "# Ladybird [Ladybird](https://ladybird.org) is a truly independent web browser, using a novel engine based on web standards. > [!IMPORTANT] > Ladybird is in a pre-alpha state, and only suitable for use by developers > ## Features We aim to build a complete, usable browser for the modern web. Ladybird uses a multi-process architecture with a main UI process, several WebContent renderer processes, an ImageDecoder process, and a RequestServer process. Image decoding and network connections are done out of process to be more robust against malicious content. Each tab has its own renderer process, which is sandboxed from the rest of the system. At the moment, many core library support components are inherited from SerenityOS: - LibWeb: Web rendering engine - LibJS: JavaScript engine - LibWasm: WebAssembly implementation - LibCrypto/LibTLS: Cryptography primitives and Transport Layer Security - LibHTTP: HTTP/1.1 client - LibGfx: 2D Graphics Library, Image Decoding and Rendering - LibUnicode: Unicode and locale support - LibMedia: Audio and video playback - LibCore: Event loop, OS abstraction layer - LibIPC: Inter-process communication ## How do I build and run this? See [build instructions](Documentation/BuildInstructionsLadybird.md) for information on how to build Ladybird. Ladybird runs on Linux, macOS, Windows (with WSL2), and many other \\*Nixes. ## How do I read the documentation? Code-related documentation can be found in the [documentation](Documentation/) folder. ## Get in touch and participate! Join [our Discord server](https://discord.gg/nvfjVJ4Svh) to participate in issue and development discussions. Please read [Getting involved with Ladybird](Documentation/GettingStartedContributing.md) if you're new to Ladybird and want to help. Before opening an issue, please see the [issue policy](CONTRIBUTING.md#issue-policy) and the [detailed issue-reporting guidelines](ISSUES.md). The project participation guidelines can be found in [`CONTRIBUTING.md`](CONTRIBUTING.md). ## License Ladybird is licensed under a 2-clause BSD license.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "denoland/celld",
+      "url": "https://github.com/denoland/celld",
+      "description": "self-hosted, distributed Durable Objects",
+      "language": "Rust",
+      "stars": 2619,
+      "forks": 74,
+      "stars_today": 432,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2025-04-25T12:27:48Z",
+      "updated_at": "2026-08-09T03:06:50Z",
+      "open_issues": 13,
+      "default_branch": "main",
+      "readme_excerpt": "# celld Self-hosted, distributed **Durable Objects**. celld is an open-source daemon that runs Cloudflare Workers and Durable Objects on your own machines. Each object is its own SQLite database, addressed by name and replicated to an S3-compatible bucket you own; nodes coordinate through that bucket alone, with no control plane or consensus. Because every object is its own small database, applications shard by construction — the contention and blast-radius failures of one shared database are designed out, not managed. Idle cells hibernate to nearly nothing. Learn more at [celld.dev](https://celld.dev) or read the [documentation](https://celld.dev/docs). ## How it works Every `celld` node embeds V8 and executes Wrangler bundles. The fleet shares an S3-compatible bucket containing deployments, cell state, and small ownership records. Object-storage compare-and-swap ensures that exactly one node owns a cell at a time, without a membership protocol, failure detector, or consensus service. celld continuously replicates each cell's SQLite database to the bucket. When a cell moves or wakes up, its new owner restores that database and resumes execution. The bucket is the durable source of truth; nodes are replaceable. ## Install The installer downloads the `celld` binary (provenance is verifiable with `gh attestation verify`): ```sh curl -fsSL https://celld.dev/install.sh | sh ``` Put `~/.local/bin` on your `PATH` if the installer asks you to. Worker projects deployed with `celld deploy` need [esbuild](https://esbuild.github.io) on `PATH`; asset-only projects do not. The installer keeps verified releases under `~/.local/lib/celld/releases` and atomically switches one `current` pointer. To remove celld, use the guarded uninstaller: ```sh curl -fsSL https://celld.dev/uninstall.sh | sh ``` ## Container The release image contains the `celld` binary and is published for Linux x86-64 and ARM64: ```sh docker run --rm ghcr.io/denoland/celld --version ``` Persist the runtime's local state and pass the standard AWS credential environment through: ```sh docker volume create celld-state docker run --rm --network host \\ -e AWS_ACCESS_KEY_ID \\ -e AWS_SECRET_ACCESS_KEY \\ -e AWS_SESSION_TOKEN \\ -e CELLD_WATCH=/var/lib/celld/state \\ -v celld-state:/var/lib/celld \\ ghcr.io/denoland/celld \\ --bucket s3://my-cells-bucket \\ --endpoint https://ACCOUNT.r2.cloudflarestorage.com \\ --region auto \\ --listen 0.0.0.0:8080 \\ --advertise node-a.internal:8080 ``` Drop `--endpoint`/`--region` for real AWS S3. Behind a load balancer, give each node a distinct `--advertise` its peers can reach. ## Run it celld uses the standard AWS credential chain. Deploy to an S3-compatible bucket, then start celld against the same bucket: ```sh celld deploy . \\ --bucket s3://my-cells-bucket celld \\ --bucket s3://my-cells-bucket \\ --listen 0.0.0.0:8080 \\ --advertise 10.0.0.12:8080 ``` Use `--endpoint` for another S3-compatible service and `--region` when it cannot be inferred. A fleet runs one application, and every node loads its latest successfully committed deployment from `deploy/current.json`. Run `celld --help` for the complete command line. Deployment objects use the documented types in `crates/celld/protocol.rs`. `celld deploy` invokes `esbuild` from `PATH` for Worker code, accepts the supported Wrangler config subset—including co-deployed or asset-only static assets—and writes those objects directly. Every node discovers owners and peers from bucket leases; there is no account or join service. Peer HTTP does not terminate TLS. Put every advertised address on a trusted private network or an encrypted overlay such as WireGuard or Tailscale; do not publish the peer port directly. A literal public IP is rejected unless `--unsafe-public-advertise` is supplied explicitly. The first current node creates `fleet/peer-auth.json` in the bucket. All peer requests are protocol-versioned, body-bound, HMAC-authenticated, clock-bounded, and replay-protected with that fleet secret. Treat ac",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 4,
+      "streak_days": 2
+    },
+    {
+      "rank": 11,
+      "full_name": "litu54/DevOps-Interview-Guide",
+      "url": "https://github.com/litu54/DevOps-Interview-Guide",
+      "description": " DevOps Interview Guide",
+      "language": "",
+      "stars": 716,
+      "forks": 892,
+      "stars_today": 68,
+      "topics": [],
+      "license": "",
+      "created_at": "2025-04-06T16:47:44Z",
+      "updated_at": "2026-08-09T02:44:17Z",
+      "open_issues": 5,
+      "default_branch": "main",
+      "readme_excerpt": "# DevOps & SRE Interview Questions Real interview questions collected from people who actually sat through DevOps, SRE, and Cloud engineering interviews in 2025 and 2026. No paraphrasing, no \"top 50 questions\" filler — these are the exact questions candidates were asked, organized so you can look up a specific company or just browse broadly to prep. ## What's here - **151 interview write-ups** - **85 companies**, plus an `Others/` folder for interviews where the company wasn't named - Topics span Kubernetes, Docker, Terraform, AWS/Azure/GCP, CI/CD (Jenkins, GitHub Actions, Azure DevOps), Ansible, Linux, scripting, and SRE fundamentals (SLI/SLO/SLA, observability, incident response) Some companies show up more than once — different candidates, different rounds, sometimes years apart. Each of those is kept as a separate file rather than merged, since the questions and interviewer style often differ. ## How it's organized ``` <Company Name>/ DevOps_Engineer.md (default when no specific role was mentioned) DevOps_Engineer_2.md (second interview for the same company) SRE_principal.md (used when a role was explicitly called out) ... ``` Each file is one interview experience. If a company was interviewed at more than once, you'll find multiple files in its folder instead of one giant merged list. Roles are reflected in the filename when the original submission mentioned one; otherwise it defaults to `DevOps_Engineer`. Submissions that never named a company live under `Others/`. ## Using this Search the repo for a company name, or open its folder directly. If you're prepping broadly rather than for one company, skim a handful of folders across different company sizes (product companies, service companies like TCS/Infosys/Wipro, fintech, etc.) — the range of questions tells you more than any single list. ## Contributing Have an interview experience worth sharing? Add it as a new file under the matching company folder (create the folder if it doesn't exist yet). Keep the one-file-per-interview format, and include the role and years of experience at the top if you can — it helps other candidates gauge relevance. If the company can't be named, put it under `Others/`. ## Support this This is maintained on personal time, and it only stays useful because people keep contributing their interview experiences. If it helped your prep, starring the repo is the simplest way to say thanks — it also makes the repo easier for the next person to find.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "bannedbook/fanqiang",
+      "url": "https://github.com/bannedbook/fanqiang",
+      "description": "翻墙-科学上网",
+      "language": "Kotlin",
+      "stars": 49937,
+      "forks": 8258,
+      "stars_today": 101,
+      "topics": [
+        "brook",
+        "daze",
+        "fanqiang",
+        "goflyway",
+        "lightsocks",
+        "proxy",
+        "psiphon",
+        "shadowsocks",
+        "ssr",
+        "trojan",
+        "v2ray"
+      ],
+      "license": "",
+      "created_at": "2015-01-14T00:34:25Z",
+      "updated_at": "2026-08-09T03:07:35Z",
+      "open_issues": 333,
+      "default_branch": "master",
+      "readme_excerpt": "# 翻墙-科学上网、翻墙工具、翻墙教程项目库 * [翻墙新闻-FQNews-安卓APP](https://github.com/bannedbook/fanqiang/tree/master/fqnews2) * [安卓翻墙软件](https://github.com/bannedbook/fanqiang/wiki/%E5%AE%89%E5%8D%93%E7%BF%BB%E5%A2%99%E8%BD%AF%E4%BB%B6) * [安卓翻墙APP教程](https://github.com/bannedbook/fanqiang/tree/master/android) * [Chrome一键翻墙包](https://github.com/bannedbook/fanqiang/wiki/Chrome%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85) * [Chrome一键翻墙包 Mac版](https://github.com/bannedbook/fanqiang/tree/master/ChromeGoMac#chromegomacchrome%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85-mac%E7%89%88) * [EdgeGo-Edge一键翻墙包](https://github.com/bannedbook/fanqiang/tree/master/EdgeGo) * [火狐firefox一键翻墙包](https://github.com/bannedbook/fanqiang/wiki/%E7%81%AB%E7%8B%90firefox%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85) * [Firefox一键翻墙包Linux版](https://github.com/bannedbook/fanqiang/tree/master/FirefoxFqLinux) * [自建V2ray服务器翻墙简明教程](https://github.com/bannedbook/fanqiang/blob/master/v2ss/%E8%87%AA%E5%BB%BAV2ray%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md) * [自建Shadowsocks服务器翻墙简明教程](https://github.com/bannedbook/fanqiang/blob/master/v2ss/%E8%87%AA%E5%BB%BAShadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md) * [免费ss账号](https://github.com/bannedbook/fanqiang/wiki/%E5%85%8D%E8%B4%B9ss%E8%B4%A6%E5%8F%B7) * [v2ray免费账号](https://github.com/bannedbook/fanqiang/wiki/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7) * [苹果电脑MAC翻墙](https://github.com/bannedbook/fanqiang/wiki/%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91MAC%E7%BF%BB%E5%A2%99) * [iphone翻墙](https://github.com/bannedbook/fanqiang/wiki/iphone%E7%BF%BB%E5%A2%99) * [TorBrowser一键翻墙包](https://github.com/bannedbook/fanqiang/wiki/TorBrowser%E4%B8%80%E9%94%AE%E7%BF%BB%E5%A2%99%E5%8C%85) * [中国大陆注册ChatGPT教程](https://github.com/bannedbook/fanqiang/blob/master/signup-chatgpt.md#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E6%B3%A8%E5%86%8Cchatgpt%E6%95%99%E7%A8%8B) ## [Windows V2ray/SS/SSR 翻墙教程](https://github.com/bannedbook/fanqiang/tree/master/windows) * [Clash for Windows 翻墙教程](https://github.com/bannedbook/fanqiang/tree/master/windows/ClashDotNetFramework.md) * [V2rayN 教程](https://github.com/bannedbook/fanqiang/tree/master/windows/V2RayN.md) * [SSTap教程](https://github.com/bannedbook/fanqiang/tree/master/windows/SSTap.md) * [Windows翻墙之SSR教程](https://github.com/bannedbook/fanqiang/tree/master/windows/ShadowsocksR.md) * [TorBrowser+V2rayN配置使用教程](https://github.com/bannedbook/fanqiang/tree/master/windows/tor-v2ray.md) ## [iPhone/iPad/iOS V2ray/SS 翻墙APP教程](https://github.com/bannedbook/fanqiang/tree/master/ios) * [iphone翻墙](https://github.com/bannedbook/fanqiang/wiki/iphone%E7%BF%BB%E5%A2%99) * [注册苹果美区 Apple ID 帐号并购买APP指南](https://github.com/bannedbook/fanqiang/tree/master/ios/AppleID.md) * [Iphone/iPad通过电脑局域网共享翻墙](https://github.com/bannedbook/fanqiang/tree/master/ios/fqByLan.md) * [Potatso教程](https://github.com/bannedbook/fanqiang/tree/master/ios/PotatsoLite.md) * [Shadowrocket小火箭配置使用教程](https://github.com/bannedbook/fanqiang/tree/master/ios/Shadowrocket.md) * [Quantumult X 配置使用简易教程](https://github.com/bannedbook/fanqiang/tree/master/ios/QuantumultX.md) * [iOS翻墙之Surge教程](https://github.com/bannedbook/fanqiang/tree/master/ios/Surge.md) ## [Android 安卓翻墙APP教程](https://github.com/bannedbook/fanqiang/tree/master/android) * [V2free安卓翻墙教程](https://github.com/bannedbook/fanqiang/tree/master/android/v2free.md) * [Clash for android 教程](https://github.com/bannedbook/fanqiang/tree/master/android/clash.md) * [BifrostV 教程](https://github.com/bannedbook/fanqiang/tree/master/android/BifrostV.md) * [Shadowsocks for android 教程](https://github.com/bannedbook/fanqiang/tree/master/android/Shadowsocks.md) * [SSR 安卓翻墙教程](https://github.com/bannedbook/fanqiang/tree/master/android/ShadowsocksR.md) * [Surfboard 教程](https://github.com/bannedbook/fanqiang/tree/master/android/Surfboard.md) * [V2RayNG 教程](https://github.com/bannedbook/fanqiang/tree/master/android/V2RayNG.md) ## [Mac翻墙软件教程](https://github.com/bannedbook/fanqiang/tree/master/macos) * ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "至少 0/12 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
+      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
+      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
+      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+    ],
+    "hot_characteristics": [
+      "其他开发者关注方向（12 个项目）"
+    ],
+    "product_business_signals": [
+      "企业智能体机会正向治理、安全和多模型管理迁移。",
+      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
+      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
+      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+    ],
+    "watch_next": [
+      "观察智能体治理项目是否出现企业集成案例。",
+      "观察实时语音智能体在普通设备上的延迟和中文体验。",
+      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
+      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "one_line_summary": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "solution": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 2483 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：A self-improving RLM agent for coding workflows and long-running autonomous tasks. 这个项目尝试用“A self-improving RLM agent for coding workflows and long-running autonomous tasks.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "one_line_summary": "Production-grade engineering skills for AI coding agents.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Production-grade engineering skills for AI coding agents.",
+        "solution": "Production-grade engineering skills for AI coding agents.",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 779 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Production-grade engineering skills for AI coding agents. 这个项目尝试用“Production-grade engineering skills for AI coding agents.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Production-grade engineering skills for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "TapXWorld/ChinaTextbook",
+        "one_line_summary": "所有小初高、大学PDF教材。",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "所有小初高、大学PDF教材。",
+        "solution": "所有小初高、大学PDF教材。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 118 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：所有小初高、大学PDF教材。 这个项目尝试用“所有小初高、大学PDF教材。”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TapXWorld/ChinaTextbook",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "所有小初高、大学PDF教材。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TapXWorld/ChinaTextbook",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TapXWorld/ChinaTextbook",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google/skills",
+        "one_line_summary": "Agent Skills for Google products and technologies",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Agent Skills for Google products and technologies",
+        "solution": "Agent Skills for Google products and technologies",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 481 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Agent Skills for Google products and technologies 这个项目尝试用“Agent Skills for Google products and technologies”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Agent Skills for Google products and technologies",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "Skills for Real Engineers. Straight from my .agents directory.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Skills for Real Engineers. Straight from my .agents directory.",
+        "solution": "Skills for Real Engineers. Straight from my .agents directory.",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 1359 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Skills for Real Engineers. Straight from my .agents directory. 这个项目尝试用“Skills for Real Engineers. Straight from my .agents directory.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "one_line_summary": "The authentication glue you need.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The authentication glue you need.",
+        "solution": "The authentication glue you need.",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 467 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The authentication glue you need. 这个项目尝试用“The authentication glue you need.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The authentication glue you need.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/goauthentik/authentik",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "one_line_summary": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "solution": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 153 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：TradingAgents: Multi-Agents LLM Financial Trading Framework 这个项目尝试用“TradingAgents: Multi-Agents LLM Financial Trading Framework”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TauricResearch/TradingAgents",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TauricResearch/TradingAgents",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TauricResearch/TradingAgents",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google/guava",
+        "one_line_summary": "Google core libraries for Java",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Google core libraries for Java",
+        "solution": "Google core libraries for Java",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 93 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Google core libraries for Java 这个项目尝试用“Google core libraries for Java”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/guava",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Google core libraries for Java",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/guava",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google/guava",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "LadybirdBrowser/ladybird",
+        "one_line_summary": "Truly independent web browser",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Truly independent web browser",
+        "solution": "Truly independent web browser",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 48 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Truly independent web browser 这个项目尝试用“Truly independent web browser”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/LadybirdBrowser/ladybird",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Truly independent web browser",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/LadybirdBrowser/ladybird",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/LadybirdBrowser/ladybird",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "denoland/celld",
+        "one_line_summary": "self-hosted, distributed Durable Objects",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "self-hosted, distributed Durable Objects",
+        "solution": "self-hosted, distributed Durable Objects",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 432 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：self-hosted, distributed Durable Objects 这个项目尝试用“self-hosted, distributed Durable Objects”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/denoland/celld",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "self-hosted, distributed Durable Objects",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/denoland/celld",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/denoland/celld",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "litu54/DevOps-Interview-Guide",
+        "one_line_summary": " DevOps Interview Guide",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": " DevOps Interview Guide",
+        "solution": " DevOps Interview Guide",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 68 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说： DevOps Interview Guide 这个项目尝试用“ DevOps Interview Guide”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/litu54/DevOps-Interview-Guide",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": " DevOps Interview Guide",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/litu54/DevOps-Interview-Guide",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/litu54/DevOps-Interview-Guide",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "bannedbook/fanqiang",
+        "one_line_summary": "翻墙-科学上网",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "翻墙-科学上网",
+        "solution": "翻墙-科学上网",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 101 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：翻墙-科学上网 这个项目尝试用“翻墙-科学上网”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bannedbook/fanqiang",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "翻墙-科学上网",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bannedbook/fanqiang",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/bannedbook/fanqiang",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
