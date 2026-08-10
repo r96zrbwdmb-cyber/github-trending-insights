@@ -9,6 +9,10 @@ from email.message import EmailMessage
 from pathlib import Path
 from typing import Any, Dict, List
 
+from .models import IndustryAnalysis
+from .producthunt import product_analysis_quality_errors
+from .quality import github_analysis_quality_errors
+
 PUBLIC_SITE = "https://r96zrbwdmb-cyber.github.io/github-trending-insights/"
 
 
@@ -78,6 +82,22 @@ def send_daily_email(root: Path) -> None:
     if not username or not password or not recipient:
         raise RuntimeError(
             "未完整配置 SMTP_USERNAME、SMTP_APP_PASSWORD 和 REPORT_EMAIL_TO"
+        )
+    github = _latest_snapshot(root / "data")
+    producthunt = _latest_snapshot(root / "data" / "producthunt")
+    github_errors = github_analysis_quality_errors(
+        IndustryAnalysis.from_dict(github.get("industry_analysis", {})),
+        int(github.get("repository_count", 0)),
+    )
+    product_errors = product_analysis_quality_errors(
+        producthunt.get("analysis", {}), int(producthunt.get("product_count", 0))
+    )
+    if not producthunt.get("analysis", {}).get("available"):
+        product_errors.append("商业分析不可用")
+    if github_errors or product_errors:
+        raise RuntimeError(
+            "日报质量检查未通过，邮件已停止发送："
+            + "、".join(github_errors + product_errors)
         )
     subject, body = build_daily_email(root)
     message = EmailMessage()

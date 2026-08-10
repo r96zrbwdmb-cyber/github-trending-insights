@@ -478,12 +478,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：RuntimeError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 11 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "6/11 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Productivity（6 个产品）、Artificial Intelligence（5 个产品）、GitHub（3 个产品）、Developer Tools（2 个产品）、Analytics（2 个产品）。"
     ],
     "buying_capabilities": [
@@ -494,7 +495,11 @@
       "Analytics（2 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "需要命令行工作的技术用户（2 个产品）",
+      "希望在手机消息中直接使用 AI 的普通用户（1 个产品）",
+      "正在寻找 Capptivo 所代表的Open Source方案的个人或团队（1 个产品）",
+      "需要处理大量网页事务的知识工作者（1 个产品）",
+      "销售、运营和行政团队（1 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -505,22 +510,23 @@
     "products": [
       {
         "slug": "zinley",
-        "category": "Productivity",
-        "what_it_sells": "Your Personal AI Representative for calls, email, and tasks",
+        "category": "消息入口的个人 AI 助手",
+        "what_it_sells": "一款面向上述场景的消息入口的个人 AI 助手产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望在手机消息中直接使用 AI 的普通用户"
         ],
-        "problem_solved": "Most AI waits inside a chat. Zinley is reachable by you and the people around you. With its own phone number and email, it answers calls, handles email, books things, and gets work done within your rules. It remembers your people and relationships, then reports back in your language. Not another chatbot. A second you that shows up.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Zinley 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。",
+        "plain_scenario": "以 Zinley 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Zinley 的目标用户而言，在熟悉的消息入口直接获得帮助",
+          "减少应用切换并降低 AI 使用门槛"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Your Personal AI Representative for calls, email, and tasks",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Zinley 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心服务能力；消息隐私、身份验证和错误操作是关键风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -529,6 +535,11 @@
             "claim": "Your Personal AI Representative for calls, email, and tasks",
             "source_url": "https://www.producthunt.com/products/zinley?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Your Personal AI Representative for calls, email, and tasks"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/IQRSF4SZFC3JK2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Zinley | Your Personal Extension Skip to content Zinley Use Cases U s e C a s e s U s e C a s e s Resources R e s o u r c e s R e s o u r c e s Pricing P r i c i n g P r i c i n g Enterprise E n t e r p r i s e E n t e r p r i s e Use Zinley U s e Z i n l e y U s e Z i n l e y Use Zinley Web Desktop Mobile Coming soon Use Cases Personal extension Featured Calls you miss Daily Work Scheduling Cross"
           }
         ],
         "strategy_judgments": [
@@ -538,21 +549,22 @@
       {
         "slug": "capptivo",
         "category": "Open Source",
-        "what_it_sells": "Free open-source screen recorder & demo editor",
+        "what_it_sells": "一款面向上述场景的Open Source产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Capptivo 所代表的Open Source方案的个人或团队"
         ],
-        "problem_solved": "Capptivo is a free, open-source screen recorder and demo editor for macOS, Windows, and Linux. Record locally, add follow-cursor zooms, polish the look, burn on-device captions, and export, no account, no subscription. Give your demos the spotlight they deserve.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Capptivo 为例：在出现“Free open-source screen recorder & demo editor”所描述的需求时，用 Capptivo 完成一次具体任务。",
+        "plain_scenario": "以 Capptivo 为例：在出现“Free open-source screen recorder & demo editor”所描述的需求时，用 Capptivo 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Capptivo 的目标用户而言，让用户可以直接试用 Capptivo 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Free open-source screen recorder & demo editor",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Capptivo 为例：在出现“Free open-source screen recorder & demo editor”所描述的需求时，用 Capptivo 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -561,6 +573,11 @@
             "claim": "Free open-source screen recorder & demo editor",
             "source_url": "https://www.producthunt.com/products/capptivo?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Free open-source screen recorder & demo editor"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/4DHHOKGIDD7PW7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Capptivo — Open-Source Screen Recorder for Polished Demos Capptivo Why us Install Sponsors Blog Changelog English GitHub Give your demos the spotlight they deserve Capptivo is a Screen Studio and Cursorful alternative. Create stunning screen recordings in seconds, not hours. With smart follow-cursor zoom and automatic zoom fragments, your demos practically make themselves. Install now A clean, int"
           }
         ],
         "strategy_judgments": [
@@ -569,22 +586,24 @@
       },
       {
         "slug": "yoursitee",
-        "category": "Social Media",
-        "what_it_sells": "Make your bio link worth clicking",
+        "category": "浏览器执行型智能体",
+        "what_it_sells": "一款面向上述场景的浏览器执行型智能体产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要处理大量网页事务的知识工作者",
+          "销售、运营和行政团队"
         ],
-        "problem_solved": "YourSitee turns your scattered online presence into one visual page that feels like you, not another list of buttons. Build with 20+ widgets, import your Linktree with AI, and see what people click with built-in analytics. All your links. One place.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 YourSitee 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+        "plain_scenario": "以 YourSitee 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 YourSitee 的目标用户而言，把 AI 的建议转化为实际完成的操作",
+          "减少重复网页录入和跨系统搬运信息"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Make your bio link worth clicking",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 YourSitee 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -601,22 +620,23 @@
       },
       {
         "slug": "lumichats-4",
-        "category": "Productivity",
-        "what_it_sells": "A Claude Code alternative for people who avoid the terminal",
+        "category": "桌面终端工具",
+        "what_it_sells": "一款面向上述场景的桌面终端工具产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要命令行工作的技术用户"
         ],
-        "problem_solved": "70,000 people use LumiChats in a browser and kept asking for the one thing a browser cannot do: touch their files. So we built the desktop one. It runs commands on your machine, writes real documents, and you pay only for the work you run.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Lumichats 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
+        "plain_scenario": "以 Lumichats 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Lumichats 的目标用户而言，改善高频命令行操作体验",
+          "提供另一种本地开发工具选择"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "A Claude Code alternative for people who avoid the terminal",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Lumichats 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -633,22 +653,23 @@
       },
       {
         "slug": "zen-whisper",
-        "category": "Productivity",
-        "what_it_sells": "On-device Mac dictation that types into any app",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Hold a shortcut and dictate into any Mac app without sending audio to the cloud. Zen Whisper keeps core speech recognition on-device, with local models, searchable transcripts, voice memos, media transcription, and Pro tools for larger models and translation.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Zen Whisper 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 Zen Whisper 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Zen Whisper 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费试用，付费价格未确认",
+        "conversion_path": "先自助试用，再决定是否购买",
         "positioning": "On-device Mac dictation that types into any app",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Zen Whisper 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -657,6 +678,11 @@
             "claim": "On-device Mac dictation that types into any app",
             "source_url": "https://www.producthunt.com/products/zen-whisper?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "On-device Mac dictation that types into any app"
+          },
+          {
+            "claim": "官网提供免费试用，付费价格未确认",
+            "source_url": "https://www.producthunt.com/r/PE7NC64GZFJYCM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Zen Whisper for Mac | Local-first Dictation & Speech to Text | ZENPRODUCTS Skip to main content Skip to content Toggle navigation Apps Posts About Explore apps ↗ Available now Zen Whisper 🎙️ Private, local-first Mac dictation and transcription that follows your cursor. 🎙️ Hold a shortcut, dictate into your apps, transcribe files or supported public links, and work across 110 spoken language option"
           }
         ],
         "strategy_judgments": [
@@ -665,22 +691,24 @@
       },
       {
         "slug": "finamie",
-        "category": "Fintech",
-        "what_it_sells": "Speak your expenses and get instant spending insights",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "Finamie turns your voice into detailed financial insights, automatically. Log expenses hands-free, track your spending, and understand your money like never before.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Finamie 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 Finamie 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Finamie 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
+        "pricing_model": "官网公开价格：$0、$39.99/year、$3.33/mo",
         "conversion_path": "官网自助购买",
         "positioning": "Speak your expenses and get instant spending insights",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Finamie 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -689,6 +717,11 @@
             "claim": "Speak your expenses and get instant spending insights",
             "source_url": "https://www.producthunt.com/products/finamie-know-your-money-for-real?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Speak your expenses and get instant spending insights"
+          },
+          {
+            "claim": "官网公开价格：$0、$39.99/year、$3.33/mo",
+            "source_url": "https://www.producthunt.com/r/Y4KK6X4DKGW4QQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Finamie — Know your money. For real. Finamie Download Personal Finance App Know your money. For real. Stop guessing where your money goes. Finamie turns your voice into detailed financial insights — automatically. Download on the App Store See how it works Available in English and Spanish · Free to start · No card required Features Everything you need to understand and control your finances Just s"
           }
         ],
         "strategy_judgments": [
@@ -698,21 +731,22 @@
       {
         "slug": "uniwebpay-skill",
         "category": "Fintech",
-        "what_it_sells": "Financial Infra for the AI era",
+        "what_it_sells": "一款面向上述场景的Fintech产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 UniwebPay Skill 所代表的Fintech方案的个人或团队"
         ],
-        "problem_solved": "Accept payments the moment you ship. UniwebPay Skill is the financial infrastructure for the AI era, helping builders turn AI products into businesses. Generate payment links, accept global payment methods, and start getting paid without the usual payment setup, merchant onboarding, or infrastructure overhead.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 UniwebPay Skill 为例：在出现“Financial Infra for the AI era”所描述的需求时，用 UniwebPay Skill 完成一次具体任务。",
+        "plain_scenario": "以 UniwebPay Skill 为例：在出现“Financial Infra for the AI era”所描述的需求时，用 UniwebPay Skill 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 UniwebPay Skill 的目标用户而言，让用户可以直接试用 UniwebPay Skill 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Financial Infra for the AI era",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 UniwebPay Skill 为例：在出现“Financial Infra for the AI era”所描述的需求时，用 UniwebPay Skill 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -729,22 +763,23 @@
       },
       {
         "slug": "termexo",
-        "category": "Productivity",
-        "what_it_sells": "A local Windows workbench for Claude Code and Codex",
+        "category": "桌面终端工具",
+        "what_it_sells": "一款面向上述场景的桌面终端工具产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要命令行工作的技术用户"
         ],
-        "problem_solved": "Termexo brings Claude Code and Codex into one recoverable Windows workspace. Arrange real PTY terminals in custom grids, search and resume native sessions, get notified when an agent needs approval, and switch Claude-compatible model profiles without rebuilding environment variables. Local-first, no Termexo account required.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Termexo 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
+        "plain_scenario": "以 Termexo 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Termexo 的目标用户而言，改善高频命令行操作体验",
+          "提供另一种本地开发工具选择"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "A local Windows workbench for Claude Code and Codex",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Termexo 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -761,22 +796,24 @@
       },
       {
         "slug": "bolcho-ai",
-        "category": "Productivity",
-        "what_it_sells": "Build Voice AI agents that actually speak India",
+        "category": "数据采集基础设施评测",
+        "what_it_sells": "一款面向上述场景的数据采集基础设施评测产品",
         "target_customers": [
-          "目标客户未公开"
+          "数据采集团队",
+          "SaaS 与 AI 数据产品团队"
         ],
-        "problem_solved": "Bolcho AI is an AI voice platform that helps businesses build, deploy and scale multilingual AI phone and web agents. Unlike generic Voice AI platforms, Bolcho is built for India—with native language support, ultra-low latency, telephony integrations, and the flexibility to bring your own LLMs, STT, and TTS providers. From sales and support to appointment booking and customer engagement, launch production-ready voice agents in minutes.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Bolcho AI 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。",
+        "plain_scenario": "以 Bolcho AI 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Bolcho AI 的目标用户而言，减少只依据供应商宣传做采购决定的风险",
+          "更快找到适合特定网站的数据采集方案"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Build Voice AI agents that actually speak India",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Bolcho AI 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，但 AI 产品的数据采集团队可能使用它。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -785,6 +822,11 @@
             "claim": "Build Voice AI agents that actually speak India",
             "source_url": "https://www.producthunt.com/products/bolcho-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Build Voice AI agents that actually speak India"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/ARDYQ5LAOGAWQM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Bolcho — Voice AI for Bharat Live demo Features CRM Pricing Resources Developers FAQ Log in Sign up ॐ अ क ज्ञ ம అ ক ੴ २ ऋ 🇮🇳 Voice AI, engineered for Bharat Voice AI built for Bharat . Build, launch and scale AI voice & chat agents for phone calls and your website. Ultra-low latency, genuine Indian languages, and pricing that’s near provider cost. Start free Talk to a live agent 11+ Indian languag"
           }
         ],
         "strategy_judgments": [
@@ -793,22 +835,24 @@
       },
       {
         "slug": "timeos-2-0-2",
-        "category": "Productivity",
-        "what_it_sells": "Work your tasks. Bill your clients with confidence.",
+        "category": "视频审阅与客户反馈",
+        "what_it_sells": "一款面向上述场景的视频审阅与客户反馈产品",
         "target_customers": [
-          "目标客户未公开"
+          "视频编辑者",
+          "需要审批视频的客户和营销团队"
         ],
-        "problem_solved": "Two years since the first TimeOS! And It's time for 2.0 update! TimeOS 2.0 closes the loop with companion Invoicing app. Hit Load, then Generate PDF and your sessions become line items! Customize the invoice if needed, download the PDF and sent to the client.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 TimeOS 2.0 为例：视频修改意见分散在聊天和邮件中，时间点与版本难以对应。",
+        "plain_scenario": "以 TimeOS 2.0 为例：视频修改意见分散在聊天和邮件中，时间点与版本难以对应。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 TimeOS 2.0 的目标用户而言，让反馈直接对应视频位置",
+          "减少编辑者确认版本和解释修改意见的时间"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Work your tasks. Bill your clients with confidence.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 TimeOS 2.0 为例：视频修改意见分散在聊天和邮件中，时间点与版本难以对应。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力；产品价值是审阅协作与版本沟通。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -826,21 +870,22 @@
       {
         "slug": "freqwave-eq",
         "category": "Chrome Extensions",
-        "what_it_sells": "Customize your web audio with a real-time EQ",
+        "what_it_sells": "一款面向上述场景的Chrome Extensions产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 FreqWave EQ 所代表的Chrome Extensions方案的个人或团队"
         ],
-        "problem_solved": "8-band Web Audio Equalizer - fixing muddy podcasts, harsh streams and quiet dialogue. Featuring EQ modes and DSP Compression.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 FreqWave EQ 为例：在出现“Customize your web audio with a real-time EQ”所描述的需求时，用 FreqWave EQ 完成一次具体任务。",
+        "plain_scenario": "以 FreqWave EQ 为例：在出现“Customize your web audio with a real-time EQ”所描述的需求时，用 FreqWave EQ 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 FreqWave EQ 的目标用户而言，让用户可以直接试用 FreqWave EQ 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Customize your web audio with a real-time EQ",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 FreqWave EQ 为例：在出现“Customize your web audio with a real-time EQ”所描述的需求时，用 FreqWave EQ 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -863,49 +908,117 @@
     "status": "complete",
     "top_categories": [
       [
-        "Productivity",
-        22
+        "AI 工具使用监控",
+        8
       ],
       [
-        "Open Source",
+        "语音原生应用与操作",
         7
       ],
       [
-        "Design Tools",
+        "桌面终端工具",
         6
       ],
       [
-        "Artificial Intelligence",
-        4
+        "创意智能体工作系统",
+        5
       ],
       [
-        "Mac",
-        4
+        "浏览器执行型智能体",
+        5
       ],
       [
-        "SaaS",
-        3
+        "Productivity",
+        4
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        62
+        52
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
-        12
+        "官网提供免费入口；是否有付费方案尚未确认",
+        11
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        6
+        "官网提供免费试用，付费价格未确认",
+        5
+      ],
+      [
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        2
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        80
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        8
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        7
+      ],
+      [
+        "需要免手操作的用户",
+        7
+      ],
+      [
+        "需要命令行工作的技术用户",
+        6
+      ],
+      [
+        "内容创作者",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "桌面终端工具",
+        "change_per_day": 1.33
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "数据采集基础设施评测",
+        "change_per_day": 0.67
+      },
+      {
+        "category": "Writing",
+        "change_per_day": 0.33
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.33
+      }
+    ],
+    "cooling": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": -1.33
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "语音原生应用与操作",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -0.67
+      },
+      {
+        "category": "AI 工具使用监控",
+        "change_per_day": -0.67
+      }
     ]
   },
   "trend_30d": {
@@ -914,49 +1027,117 @@
     "status": "complete",
     "top_categories": [
       [
-        "Productivity",
-        22
+        "AI 工具使用监控",
+        8
       ],
       [
-        "Open Source",
+        "语音原生应用与操作",
         7
       ],
       [
-        "Design Tools",
+        "桌面终端工具",
         6
       ],
       [
-        "Artificial Intelligence",
-        4
+        "创意智能体工作系统",
+        5
       ],
       [
-        "Mac",
-        4
+        "浏览器执行型智能体",
+        5
       ],
       [
-        "SaaS",
-        3
+        "Productivity",
+        4
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        62
+        52
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
-        12
+        "官网提供免费入口；是否有付费方案尚未确认",
+        11
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        6
+        "官网提供免费试用，付费价格未确认",
+        5
+      ],
+      [
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        2
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        80
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        8
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        7
+      ],
+      [
+        "需要免手操作的用户",
+        7
+      ],
+      [
+        "需要命令行工作的技术用户",
+        6
+      ],
+      [
+        "内容创作者",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "桌面终端工具",
+        "change_per_day": 1.33
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "数据采集基础设施评测",
+        "change_per_day": 0.67
+      },
+      {
+        "category": "Writing",
+        "change_per_day": 0.33
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.33
+      }
+    ],
+    "cooling": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": -1.33
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "语音原生应用与操作",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -0.67
+      },
+      {
+        "category": "AI 工具使用监控",
+        "change_per_day": -0.67
+      }
     ]
   }
 }

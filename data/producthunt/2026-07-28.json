@@ -579,12 +579,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：ValueError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 15 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "13/15 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Artificial Intelligence（6 个产品）、Developer Tools（4 个产品）、SaaS（3 个产品）、Design Tools（3 个产品）、Productivity（3 个产品）。"
     ],
     "buying_capabilities": [
@@ -595,7 +596,11 @@
       "Productivity（3 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "希望减少键盘操作的知识工作者（2 个产品）",
+      "需要免手操作的用户（2 个产品）",
+      "内容创作者（2 个产品）",
+      "社交媒体与创意团队（2 个产品）",
+      "正在寻找 Prefactor 所代表的SaaS方案的个人或团队（1 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -607,21 +612,22 @@
       {
         "slug": "prefactor",
         "category": "SaaS",
-        "what_it_sells": "Evaluate your AI Agents in real-time",
+        "what_it_sells": "一款面向上述场景的SaaS产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Prefactor 所代表的SaaS方案的个人或团队"
         ],
-        "problem_solved": "Most agents pass their evals and fail in production. Prefactor is the evaluation layer that closes the gap. We score every agent run in real time, surface quality regressions and drift as they happen, and show engineering teams exactly how their agents are performing at scale. Built for the teams shipping agents to customers.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Prefactor 为例：在出现“Evaluate your AI Agents in real-time”所描述的需求时，用 Prefactor 完成一次具体任务。",
+        "plain_scenario": "以 Prefactor 为例：在出现“Evaluate your AI Agents in real-time”所描述的需求时，用 Prefactor 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Prefactor 的目标用户而言，让用户可以直接试用 Prefactor 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Evaluate your AI Agents in real-time",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Prefactor 为例：在出现“Evaluate your AI Agents in real-time”所描述的需求时，用 Prefactor 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -638,22 +644,24 @@
       },
       {
         "slug": "cekura-3",
-        "category": "SaaS",
-        "what_it_sells": "The self-improvement loop for voice agents",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "Cekura is the testing, observability, and self-improvement platform for production voice and chat AI agents. It simulates thousands of scenarios, catches failures, diagnoses the root cause, rewrites prompts and config, then re-validates with a full regression sweep. Unlike tools that hand failures back to your team, Cekura closes the loop by fixing the agent itself and proving the fix holds without overfitting.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Cekura 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 Cekura 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Cekura 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "The self-improvement loop for voice agents",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Cekura 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -670,22 +678,24 @@
       },
       {
         "slug": "lottie-creator-2-0",
-        "category": "Design Tools",
-        "what_it_sells": "After Effects for the web, built on Lottie",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "Yes, we're calling it: After Effects for the web. Design vector animations from scratch in your browser, move faster with Motion Copilot AI, wire up interactivity with State Machines, and export production-ready Lottie + dotLottie. No desktop app. No dev handoff.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Lottie Creator 2.0 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 Lottie Creator 2.0 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Lottie Creator 2.0 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "After Effects for the web, built on Lottie",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Lottie Creator 2.0 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -703,21 +713,22 @@
       {
         "slug": "leaping-ai",
         "category": "Artificial Intelligence",
-        "what_it_sells": "AI agents that call and text in multi-day campaigns",
+        "what_it_sells": "一款面向上述场景的Artificial Intelligence产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Leaping AI 所代表的Artificial Intelligence方案的个人或团队"
         ],
-        "problem_solved": "We allow companies that operate in the physical world (home remodeling, roofing, trades) to automate inbound and outbound calling & texting and run multi-threaded campaigns spanning several weeks. Our AI agents can hold 100+ parallel conversations, speak in multiple languages and integrate into any CRM. We help put appointment scheduling, customer service & confirmation calls on autopilot and eliminate missed calls, slow speed to lead and insufficient lead follow ups for our customers.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Leaping AI 为例：在出现“AI agents that call and text in multi-day campaigns”所描述的需求时，用 Leaping AI 完成一次具体任务。",
+        "plain_scenario": "以 Leaping AI 为例：在出现“AI agents that call and text in multi-day campaigns”所描述的需求时，用 Leaping AI 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Leaping AI 的目标用户而言，让用户可以直接试用 Leaping AI 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "AI agents that call and text in multi-day campaigns",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Leaping AI 为例：在出现“AI agents that call and text in multi-day campaigns”所描述的需求时，用 Leaping AI 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -735,21 +746,22 @@
       {
         "slug": "hardbook",
         "category": "Productivity",
-        "what_it_sells": "The freelancer booking link that signs the contract for you",
+        "what_it_sells": "一款面向上述场景的Productivity产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Hardbook 所代表的Productivity方案的个人或团队"
         ],
-        "problem_solved": "The gap between agreed dates and a signed contract is where freelance jobs die. Hardbook fixes it. Your client picks dates and signs the contract in one flow. No app, no account, no chasing. Built by a freelancer to stop deal decay and lock in work.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Hardbook 为例：在出现“The freelancer booking link that signs the contract for you”所描述的需求时，用 Hardbook 完成一次具体任务。",
+        "plain_scenario": "以 Hardbook 为例：在出现“The freelancer booking link that signs the contract for you”所描述的需求时，用 Hardbook 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Hardbook 的目标用户而言，让用户可以直接试用 Hardbook 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "The freelancer booking link that signs the contract for you",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Hardbook 为例：在出现“The freelancer booking link that signs the contract for you”所描述的需求时，用 Hardbook 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -766,22 +778,24 @@
       },
       {
         "slug": "ycode-ai-agents",
-        "category": "Open Source",
-        "what_it_sells": "Build websites with AI",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "Connect Claude, OpenAI, Gemini or Grok to Ycode and use your preferred AI directly inside the website builder. Describe what you want to change, and the agent can update designs, manage CMS content, and build or improve components for you",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Ycode AI Agents 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 Ycode AI Agents 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Ycode AI Agents 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Build websites with AI",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Ycode AI Agents 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -799,21 +813,22 @@
       {
         "slug": "easycircuit",
         "category": "Design Tools",
-        "what_it_sells": "Hardware prototyping, as simple as vibe-coding",
+        "what_it_sells": "一款面向上述场景的Design Tools产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 EasyCircuit 所代表的Design Tools方案的个人或团队"
         ],
-        "problem_solved": "An AI circuit copilot that designs your project and sources the parts automatically — no electrical engineering experience needed. Describe it in plain language, get a verified parts kit, and build it staged from breadboard to soldered perfboard.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 EasyCircuit 为例：在出现“Hardware prototyping, as simple as vibe-coding”所描述的需求时，用 EasyCircuit 完成一次具体任务。",
+        "plain_scenario": "以 EasyCircuit 为例：在出现“Hardware prototyping, as simple as vibe-coding”所描述的需求时，用 EasyCircuit 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 EasyCircuit 的目标用户而言，让用户可以直接试用 EasyCircuit 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Hardware prototyping, as simple as vibe-coding",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 EasyCircuit 为例：在出现“Hardware prototyping, as simple as vibe-coding”所描述的需求时，用 EasyCircuit 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -831,21 +846,22 @@
       {
         "slug": "jotform-website-widgets",
         "category": "Marketing",
-        "what_it_sells": "Build and embed no-code website widgets in minutes",
+        "what_it_sells": "一款面向上述场景的Marketing产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Jotform Website Widgets 所代表的Marketing方案的个人或团队"
         ],
-        "problem_solved": "Upgrade your website with customizable no-code widgets. Create interactive experiences with reviews, booking, chat, popups, countdowns, FAQs, media galleries, announcements, and much more, then personalize every widget and embed it on any website in minutes.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Jotform Website Widgets 为例：在出现“Build and embed no-code website widgets in minutes”所描述的需求时，用 Jotform Website Widgets 完成一次具体任务。",
+        "plain_scenario": "以 Jotform Website Widgets 为例：在出现“Build and embed no-code website widgets in minutes”所描述的需求时，用 Jotform Website Widgets 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Jotform Website Widgets 的目标用户而言，让用户可以直接试用 Jotform Website Widgets 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Build and embed no-code website widgets in minutes",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Jotform Website Widgets 为例：在出现“Build and embed no-code website widgets in minutes”所描述的需求时，用 Jotform Website Widgets 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -862,22 +878,24 @@
       },
       {
         "slug": "firstpass",
-        "category": "Design Tools",
-        "what_it_sells": "Actionable input so you nail every launch",
+        "category": "AI 提示词训练与娱乐",
+        "what_it_sells": "一款面向上述场景的AI 提示词训练与娱乐产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望练习模型沟通的人",
+          "AI 社区与教育活动组织者"
         ],
-        "problem_solved": "If you've ever shipped a launch and watched your copy get truncated, ignored, or misread — Firstpass shows you every surface a stranger meets your product on (the Product Hunt page, the leaderboard row, the Glaze Store grid) and pins handwritten crit notes to what breaks in each one, before you publish. The same tagline lives or dies differently depending on where it lands: PH gives you 60 characters, the Glaze Store caps at 40, the browse grid cuts near 33. Nobody checks — until it's live.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Firstpass 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
+        "plain_scenario": "以 Firstpass 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Firstpass 的目标用户而言，用游戏方式理解模型对措辞的反应",
+          "为 AI 社区提供可分享的挑战内容"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Actionable input so you nail every launch",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Firstpass 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是游戏对象和核心机制，但产品本身不代表新的模型技术。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -894,22 +912,24 @@
       },
       {
         "slug": "flowtask-2-0",
-        "category": "Productivity",
-        "what_it_sells": "Company brain for AI Agents",
+        "category": "浏览器执行型智能体",
+        "what_it_sells": "一款面向上述场景的浏览器执行型智能体产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要处理大量网页事务的知识工作者",
+          "销售、运营和行政团队"
         ],
-        "problem_solved": "Company Brain for AI agents, Fragmented communication and data of a company which is left on channels Emails, Slacks, WhatsApp and LinkedIn connect it all in one place with approval layer attach so personal and works chats don't gets mixed and connect it with any ai agents simultaneously, where records are keep getting updated minutes by minutes and so AI agents are getting updated as well so use AI agents with less cost of context and don't have to repeat.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 FlowTask 2.0 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+        "plain_scenario": "以 FlowTask 2.0 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 FlowTask 2.0 的目标用户而言，把 AI 的建议转化为实际完成的操作",
+          "减少重复网页录入和跨系统搬运信息"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Company brain for AI Agents",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 FlowTask 2.0 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -927,21 +947,22 @@
       {
         "slug": "superunit",
         "category": "Artificial Intelligence",
-        "what_it_sells": "AI agents that verify employment by phone, email & fax ",
+        "what_it_sells": "一款面向上述场景的Artificial Intelligence产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Superunit 所代表的Artificial Intelligence方案的个人或团队"
         ],
-        "problem_solved": "Every time someone gets hired, applies for a mortgage, or leases an apartment, someone has to confirm they actually worked where they said they did. That means millions of calls, emails, faxes (yes, in 2026), to HR and payroll departments. Superunit's AI agents do all of that from start to finish. They research, call, email, fax and handle documents until the verification is done.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Superunit 为例：在出现“AI agents that verify employment by phone, email & fax ”所描述的需求时，用 Superunit 完成一次具体任务。",
+        "plain_scenario": "以 Superunit 为例：在出现“AI agents that verify employment by phone, email & fax ”所描述的需求时，用 Superunit 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Superunit 的目标用户而言，让用户可以直接试用 Superunit 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "AI agents that verify employment by phone, email & fax ",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Superunit 为例：在出现“AI agents that verify employment by phone, email & fax ”所描述的需求时，用 Superunit 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -959,21 +980,22 @@
       {
         "slug": "cercle",
         "category": "Health & Fitness",
-        "what_it_sells": "The bat signal for your closest friends.",
+        "what_it_sells": "一款面向上述场景的Health & Fitness产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Cercle 所代表的Health & Fitness方案的个人或团队"
         ],
-        "problem_solved": "Cercle is conquering the loneliness epidemic by bringing back connections with the people that matter most. Check in with yourself and share your mood with your close friends or your entire Cercle. Take the guesswork out of your friendships, know how they're feeling before that phone call or text. Your friends' mood updates live on your home-screen widget, so you know who needs you before they have to ask. Built after watching a series of close friends live and struggle in silence",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Cercle 为例：在出现“The bat signal for your closest friends.”所描述的需求时，用 Cercle 完成一次具体任务。",
+        "plain_scenario": "以 Cercle 为例：在出现“The bat signal for your closest friends.”所描述的需求时，用 Cercle 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Cercle 的目标用户而言，让用户可以直接试用 Cercle 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "The bat signal for your closest friends.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Cercle 为例：在出现“The bat signal for your closest friends.”所描述的需求时，用 Cercle 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -990,22 +1012,23 @@
       },
       {
         "slug": "mcp-billing",
-        "category": "API",
-        "what_it_sells": "OAuth 2.1 + usage-based Stripe billing for MCP servers",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Self-hosted Next.js/TypeScript boilerplate: full OAuth 2.1 + PKCE, API key management with zero-downtime rotation, usage-based Stripe billing, and Redis rate limiting. 7 modules, 300+ tests. One-time €79, no revenue share, no platform lock-in. The metering core is free and open source on npm.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 MCP-Billing 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 MCP-Billing 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 MCP-Billing 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "OAuth 2.1 + usage-based Stripe billing for MCP servers",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 MCP-Billing 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1022,22 +1045,24 @@
       },
       {
         "slug": "liminal-6",
-        "category": "Productivity",
-        "what_it_sells": "A workspace & 2nd brain for you, your agent, and your team",
+        "category": "企业多智能体协作",
+        "what_it_sells": "一款面向上述场景的企业多智能体协作产品",
         "target_customers": [
-          "目标客户未公开"
+          "部署多个 AI 助手的企业团队",
+          "AI 运营与安全负责人"
         ],
-        "problem_solved": "Your agent writes files locally in markdown and HTML, the formats it already speaks. Liminal renders them as clean UI instantly and syncs to your team in real time. Share a link and everyone sees the same live workspace, editable in the browser. No sending markdown over Slack, no hosting your own HTML, no waiting on Google Drive. No MCP calls, no proprietary formats, no wasted tokens. Over time, it becomes a shared second brain for your team and every agent working with you.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Liminal 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+        "plain_scenario": "以 Liminal 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Liminal 的目标用户而言，减少团队管理多个智能体入口的混乱",
+          "让智能体协作过程更可见、更可控"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "A workspace & 2nd brain for you, your agent, and your team",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Liminal 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行主体；平台价值在于连接、权限和协作治理。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1054,22 +1079,24 @@
       },
       {
         "slug": "conduit-16",
-        "category": "Customer Communication",
-        "what_it_sells": "AI agents purpose-built for Hospitality",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "Conduit automates guest conversations and the work behind it. Conduit agents reply across email, WhatsApp, OTAs and social, voice calls. Agents dispatch subagents to act inside your PMS and tech stack: dispatching cleaners, updating calendars, closing the loop. Agents learn from every interaction, and you can inspect every step. 140+ languages, SOC 2 Type II. 50M+ conversations and $3B+ in reservation value for 300+ brands including Marriott, Hilton, Nobu and Fairmont.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Conduit 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 Conduit 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Conduit 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "AI agents purpose-built for Hospitality",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Conduit 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1092,15 +1119,11 @@
     "status": "observing",
     "top_categories": [
       [
-        "Design Tools",
-        3
+        "语音原生应用与操作",
+        2
       ],
       [
-        "Productivity",
-        3
-      ],
-      [
-        "SaaS",
+        "创意智能体工作系统",
         2
       ],
       [
@@ -1108,11 +1131,15 @@
         2
       ],
       [
-        "Open Source",
+        "SaaS",
         1
       ],
       [
-        "Marketing",
+        "Productivity",
+        1
+      ],
+      [
+        "Design Tools",
         1
       ]
     ],
@@ -1124,10 +1151,49 @@
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        15
+        "希望减少键盘操作的知识工作者",
+        2
+      ],
+      [
+        "需要免手操作的用户",
+        2
+      ],
+      [
+        "内容创作者",
+        2
+      ],
+      [
+        "社交媒体与创意团队",
+        2
+      ],
+      [
+        "正在寻找 Prefactor 所代表的SaaS方案的个人或团队",
+        1
       ]
-    ]
+    ],
+    "strengthening": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "语音原生应用与操作",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "Productivity",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "企业多智能体协作",
+        "change_per_day": 1.0
+      }
+    ],
+    "cooling": []
   },
   "trend_30d": {
     "window_days": 30,
@@ -1135,15 +1201,11 @@
     "status": "observing",
     "top_categories": [
       [
-        "Design Tools",
-        3
+        "语音原生应用与操作",
+        2
       ],
       [
-        "Productivity",
-        3
-      ],
-      [
-        "SaaS",
+        "创意智能体工作系统",
         2
       ],
       [
@@ -1151,11 +1213,15 @@
         2
       ],
       [
-        "Open Source",
+        "SaaS",
         1
       ],
       [
-        "Marketing",
+        "Productivity",
+        1
+      ],
+      [
+        "Design Tools",
         1
       ]
     ],
@@ -1167,9 +1233,48 @@
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        15
+        "希望减少键盘操作的知识工作者",
+        2
+      ],
+      [
+        "需要免手操作的用户",
+        2
+      ],
+      [
+        "内容创作者",
+        2
+      ],
+      [
+        "社交媒体与创意团队",
+        2
+      ],
+      [
+        "正在寻找 Prefactor 所代表的SaaS方案的个人或团队",
+        1
       ]
-    ]
+    ],
+    "strengthening": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "语音原生应用与操作",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "Productivity",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "企业多智能体协作",
+        "change_per_day": 1.0
+      }
+    ],
+    "cooling": []
   }
 }

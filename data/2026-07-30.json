@@ -488,35 +488,33 @@
     }
   ],
   "industry_analysis": {
-    "analysis_version": 4,
+    "analysis_version": 5,
     "available": true,
-    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：ValueError: 行业分类返回的仓库集合与输入不一致",
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：手动选择基于 GitHub 项目资料的免费规则分析",
     "key_judgments": [
-      "至少 4/17 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
-      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
-      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
-      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
-      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+      "当日 8/17 个项目可从资料确认与 AI 直接相关；其余 9 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（6 个）、AI 智能体与数字劳动力（3 个）、地理空间分析产品（1 个）。",
+      "排名第一的 opengeos/GeoLibre 代表“地理空间分析产品”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
     ],
     "hot_characteristics": [
-      "其他开发者关注方向（10 个项目）",
+      "其他数字产品与工具（6 个项目）",
+      "AI 智能体与数字劳动力（3 个项目）",
       "地理空间分析产品（1 个项目）",
       "AI 伴侣与数字角色（1 个项目）",
       "AI 智能体工作系统（1 个项目）",
-      "实时语音智能体（1 个项目）",
-      "金融研究知识生态（1 个项目）"
+      "实时语音智能体（1 个项目）"
     ],
     "product_business_signals": [
-      "企业智能体机会正向治理、安全和多模型管理迁移。",
-      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
-      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
-      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
     ],
     "watch_next": [
-      "观察智能体治理项目是否出现企业集成案例。",
-      "观察实时语音智能体在普通设备上的延迟和中文体验。",
-      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
-      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
     ],
     "repositories": [
       {
@@ -537,14 +535,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "大规模性能、专业功能深度和组织协作能力仍需验证。",
         "ai_relevance": "空间数据更容易进入 AI 与业务决策流程。",
-        "plain_language_explanation": "通俗地说：传统地理工具安装复杂、跨设备协作困难且可能要求上传数据。 这个项目尝试用“提供跨浏览器、桌面、移动端和研究环境的轻量地理分析产品。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，GeoLibre 希望解决的是：传统地理工具安装复杂、跨设备协作困难且可能要求上传数据。 它的办法是：提供跨浏览器、桌面、移动端和研究环境的轻量地理分析产品。",
         "scenario_examples": [
-          "城市规划人员在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如城市规划人员把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 GeoLibre 的潜在使用者而言，空间数据更容易进入 AI 与业务决策流程。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "空间数据更容易进入 AI 与业务决策流程。",
         "who_should_care": "城市规划人员、环境研究人员",
@@ -600,14 +597,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "长期留存、情感依赖、内容安全和使用门槛仍需验证。",
         "ai_relevance": "AI 产品从回答问题走向陪伴和参与活动。",
-        "plain_language_explanation": "通俗地说：现有助手缺少持续人格、实时陪伴和跨场景互动。 这个项目尝试用“提供用户自己掌控、支持实时语音和游戏互动的虚拟角色。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，airi 希望解决的是：现有助手缺少持续人格、实时陪伴和跨场景互动。 它的办法是：提供用户自己掌控、支持实时语音和游戏互动的虚拟角色。",
         "scenario_examples": [
-          "数字娱乐用户在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如数字娱乐用户把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 airi 的潜在使用者而言，AI 产品从回答问题走向陪伴和参与活动。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "AI 产品从回答问题走向陪伴和参与活动。",
         "who_should_care": "数字娱乐用户、游戏玩家",
@@ -663,14 +659,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "效果主张仍需独立基准和真实团队案例验证。",
         "ai_relevance": "关注点从模型能力转向长期工作与受控执行。",
-        "plain_language_explanation": "通俗地说：智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。 这个项目尝试用“把技能、记忆、安全规则和研究流程组合为智能体工作框架。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，ECC 希望解决的是：智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。 它的办法是：把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
         "scenario_examples": [
-          "使用 AI 助手的团队在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如使用 AI 助手的团队把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 ECC 的潜在使用者而言，关注点从模型能力转向长期工作与受控执行。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "关注点从模型能力转向长期工作与受控执行。",
         "who_should_care": "使用 AI 助手的团队、AI 工具产品团队",
@@ -726,14 +721,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "设备性能、噪声、语言覆盖和对话稳定性决定实际体验。",
         "ai_relevance": "语音 AI 可成为设备侧、可定制的交互入口。",
-        "plain_language_explanation": "通俗地说：自然语音交互常受延迟、云服务成本和隐私限制影响。 这个项目尝试用“使用开源模型构建可本地运行的语音智能体。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，speech-to-speech 希望解决的是：自然语音交互常受延迟、云服务成本和隐私限制影响。 它的办法是：使用开源模型构建可本地运行的语音智能体。",
         "scenario_examples": [
-          "语音产品团队在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如语音产品团队把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 speech-to-speech 的潜在使用者而言，语音 AI 可成为设备侧、可定制的交互入口。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "语音 AI 可成为设备侧、可定制的交互入口。",
         "who_should_care": "语音产品团队、客服与助理产品",
@@ -773,32 +767,32 @@
       },
       {
         "full_name": "1jehuang/jcode",
-        "one_line_summary": "The most RAM efficient harness",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
         "target_users": [
-          "相关行业从业者"
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
         ],
-        "problem_solved": "The most RAM efficient harness",
-        "solution": "The most RAM efficient harness",
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "why_now": "该项目位列当日 Trending 第 5 名，当日新增 640 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：The most RAM efficient harness 这个项目尝试用“The most RAM efficient harness”来降低门槛。",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "通俗地说，jcode 希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 jcode 的潜在使用者而言，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -822,7 +816,7 @@
             "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "低",
+        "confidence": "中",
         "priority_score": 85,
         "evidence": [
           {
@@ -835,32 +829,31 @@
       },
       {
         "full_name": "grokability/snipe-it",
-        "one_line_summary": "A free open source IT asset/license management system",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 snipe it 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "A free open source IT asset/license management system",
-        "solution": "A free open source IT asset/license management system",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 snipe it 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 6 名，当日新增 164 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：A free open source IT asset/license management system 这个项目尝试用“A free open source IT asset/license management system”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，snipe-it 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 snipe it 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 snipe-it 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -897,32 +890,31 @@
       },
       {
         "full_name": "deepfakes/faceswap",
-        "one_line_summary": "Deepfakes Software For All",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 faceswap 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "Deepfakes Software For All",
-        "solution": "Deepfakes Software For All",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 faceswap 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 7 名，当日新增 166 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：Deepfakes Software For All 这个项目尝试用“Deepfakes Software For All”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，faceswap 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 faceswap 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 faceswap 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -959,32 +951,32 @@
       },
       {
         "full_name": "microsoft/VibeVoice",
-        "one_line_summary": "Open-Source Frontier Voice AI",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
         "target_users": [
-          "相关行业从业者"
+          "客服与销售团队",
+          "需要免手操作的普通用户"
         ],
-        "problem_solved": "Open-Source Frontier Voice AI",
-        "solution": "Open-Source Frontier Voice AI",
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
         "why_now": "该项目位列当日 Trending 第 8 名，当日新增 336 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：Open-Source Frontier Voice AI 这个项目尝试用“Open-Source Frontier Voice AI”来降低门槛。",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "通俗地说，VibeVoice 希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 VibeVoice 的潜在使用者而言，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1008,7 +1000,7 @@
             "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "低",
+        "confidence": "中",
         "priority_score": 76,
         "evidence": [
           {
@@ -1021,32 +1013,31 @@
       },
       {
         "full_name": "different-ai/openwork",
-        "one_line_summary": "The open-source alternative to Claude Cowork (powered by opencode)",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 openwork 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "The open-source alternative to Claude Cowork (powered by opencode)",
-        "solution": "The open-source alternative to Claude Cowork (powered by opencode)",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 openwork 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 9 名，当日新增 97 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：The open-source alternative to Claude Cowork (powered by opencode) 这个项目尝试用“The open-source alternative to Claude Cowork (powered by opencode)”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，openwork 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 openwork 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 openwork 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1083,32 +1074,32 @@
       },
       {
         "full_name": "obra/superpowers",
-        "one_line_summary": "An agentic skills framework & software development methodology that works.",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
         "target_users": [
-          "相关行业从业者"
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
         ],
-        "problem_solved": "An agentic skills framework & software development methodology that works.",
-        "solution": "An agentic skills framework & software development methodology that works.",
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "why_now": "该项目位列当日 Trending 第 10 名，当日新增 616 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：An agentic skills framework & software development methodology that works. 这个项目尝试用“An agentic skills framework & software development methodology that works.”来降低门槛。",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "通俗地说，superpowers 希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 superpowers 的潜在使用者而言，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1132,7 +1123,7 @@
             "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "低",
+        "confidence": "中",
         "priority_score": 70,
         "evidence": [
           {
@@ -1145,32 +1136,31 @@
       },
       {
         "full_name": "MoonshotAI/FlashKDA",
-        "one_line_summary": "FlashKDA: high-performance Kimi Delta Attention kernels",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 FlashKDA 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "FlashKDA: high-performance Kimi Delta Attention kernels",
-        "solution": "FlashKDA: high-performance Kimi Delta Attention kernels",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 FlashKDA 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 11 名，当日新增 91 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：FlashKDA: high-performance Kimi Delta Attention kernels 这个项目尝试用“FlashKDA: high-performance Kimi Delta Attention kernels”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，FlashKDA 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 FlashKDA 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 FlashKDA 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1207,32 +1197,31 @@
       },
       {
         "full_name": "NanmiCoder/MediaCrawler",
-        "one_line_summary": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 MediaCrawler 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
-        "solution": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 MediaCrawler 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 12 名，当日新增 154 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫 这个项目尝试用“小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，MediaCrawler 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 MediaCrawler 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 MediaCrawler 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1269,32 +1258,32 @@
       },
       {
         "full_name": "alibaba/open-code-review",
-        "one_line_summary": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
         "target_users": [
-          "相关行业从业者"
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
         ],
-        "problem_solved": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-        "solution": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "why_now": "该项目位列当日 Trending 第 13 名，当日新增 359 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible. 这个项目尝试用“Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.”来降低门槛。",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "通俗地说，open-code-review 希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 open-code-review 的潜在使用者而言，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1318,7 +1307,7 @@
             "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "低",
+        "confidence": "中",
         "priority_score": 61,
         "evidence": [
           {
@@ -1347,14 +1336,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "资源收录和历史回测都不代表未来收益。",
         "ai_relevance": "反映金融研究与自动化交易仍受持续关注。",
-        "plain_language_explanation": "通俗地说：系统化交易资料分散，筛选学习路径和工具成本高。 这个项目尝试用“整理交易策略、工具、书籍和教程的资源目录。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，awesome-systematic-trading 希望解决的是：系统化交易资料分散，筛选学习路径和工具成本高。 它的办法是：整理交易策略、工具、书籍和教程的资源目录。",
         "scenario_examples": [
-          "量化研究者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如量化研究者把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 awesome-systematic-trading 的潜在使用者而言，反映金融研究与自动化交易仍受持续关注。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "反映金融研究与自动化交易仍受持续关注。",
         "who_should_care": "量化研究者、金融学习者",
@@ -1394,32 +1382,31 @@
       },
       {
         "full_name": "maderix/ANE",
-        "one_line_summary": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
-        "industry_direction": "其他开发者关注方向",
+        "one_line_summary": "提供名为 ANE 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "相关行业从业者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
-        "solution": "Training neural networks on Apple Neural Engine via reverse-engineered private APIs",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 ANE 的开源工具或资料。",
         "why_now": "该项目位列当日 Trending 第 15 名，当日新增 22 Star；这只代表开发者关注信号。",
-        "noteworthy_technology": "公开资料不足",
-        "technology_impact": "暂不判断行业影响。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
         "product_form": "开源项目或工具",
         "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
-        "risks": "证据不足，不能推断市场价值。",
-        "ai_relevance": "暂不判断行业影响。",
-        "plain_language_explanation": "通俗地说：Training neural networks on Apple Neural Engine via reverse-engineered private APIs 这个项目尝试用“Training neural networks on Apple Neural Engine via reverse-engineered private APIs”来降低门槛。",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，ANE 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 ANE 的开源工具或资料。",
         "scenario_examples": [
-          "相关行业从业者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 ANE 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "暂不判断行业影响。",
-        "who_should_care": "相关行业从业者",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
           "是否出现可核实的真实用户案例",
           "是否连续多日或多周保持关注",
@@ -1472,14 +1459,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "专业能力、格式兼容性和商业模式尚待核实。",
         "ai_relevance": "让非专业参与者也能查看和讨论空间方案。",
-        "plain_language_explanation": "通俗地说：三维建筑方案制作和分享门槛高，客户难以直观参与讨论。 这个项目尝试用“提供可创建和分享三维建筑项目的产品。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，editor 希望解决的是：三维建筑方案制作和分享门槛高，客户难以直观参与讨论。 它的办法是：提供可创建和分享三维建筑项目的产品。",
         "scenario_examples": [
-          "建筑设计师在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如建筑设计师把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 editor 的潜在使用者而言，让非专业参与者也能查看和讨论空间方案。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "让非专业参与者也能查看和讨论空间方案。",
         "who_should_care": "建筑设计师、空间方案沟通者",
@@ -1535,14 +1521,13 @@
         "maturity": "需结合正式版本、用户案例和长期维护情况判断",
         "risks": "版权、解析准确性、断章取义和知识过时是主要风险。",
         "ai_relevance": "知识管理从保存资料转向在任务中调用资料。",
-        "plain_language_explanation": "通俗地说：专业书籍难以在实际任务中即时检索和应用。 这个项目尝试用“把技术书籍 PDF 转成智能体可调用的技能资料。”来降低门槛。",
+        "plain_language_explanation": "通俗地说，book-to-skill 希望解决的是：专业书籍难以在实际任务中即时检索和应用。 它的办法是：把技术书籍 PDF 转成智能体可调用的技能资料。",
         "scenario_examples": [
-          "知识工作者在日常工作中使用该产品处理相关任务",
-          "团队先用小范围试点验证效果，再决定是否扩大采用"
+          "例如知识工作者把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "减少重复工作或沟通成本",
-          "让相关能力更容易进入实际工作流程"
+          "对 book-to-skill 的潜在使用者而言，知识管理从保存资料转向在任务中调用资料。",
+          "降低采用相关能力的操作门槛"
         ],
         "industry_implications": "知识管理从保存资料转向在任务中调用资料。",
         "who_should_care": "知识工作者、培训团队",

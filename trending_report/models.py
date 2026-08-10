@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, List, Optional
 
-ANALYSIS_VERSION = 4
+ANALYSIS_VERSION = 5
 
 
 @dataclass

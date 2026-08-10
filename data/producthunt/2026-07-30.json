@@ -676,12 +676,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：RuntimeError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 15 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "11/15 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Artificial Intelligence（14 个产品）、Productivity（7 个产品）、GitHub（6 个产品）、Developer Tools（5 个产品）、Open Source（5 个产品）。"
     ],
     "buying_capabilities": [
@@ -692,7 +693,11 @@
       "Open Source（5 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "希望减少键盘操作的知识工作者（2 个产品）",
+      "需要免手操作的用户（2 个产品）",
+      "高频使用 Claude、Codex 或 Cursor 的个人和团队（2 个产品）",
+      "长期使用编程智能体的软件团队（2 个产品）",
+      "希望保留项目上下文的开发者（2 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -703,22 +708,24 @@
     "products": [
       {
         "slug": "ski",
-        "category": "Productivity",
-        "what_it_sells": "Free voice coding for Claude Code, Codex and more",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "We just built SKI — voice coding for Claude Code, Codex and more. It's not dictation: your agent answers you out loud, like a real teammate, so you build at the speed you think. You can even bring it into a meeting to build live, or send it in your place to speak for you. It's an ambient thing that just sits on your desktop — hit a key, talk, it works. All on your machine, free. Available on Mac & Windows.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 SKI 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 SKI 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 SKI 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Free voice coding for Claude Code, Codex and more",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 SKI 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -727,6 +734,11 @@
             "claim": "Free voice coding for Claude Code, Codex and more",
             "source_url": "https://www.producthunt.com/products/ski?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Free voice coding for Claude Code, Codex and more"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/4776JMPD744PM7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "SKI — Voice coding. Let your coding agent talk with you. (Mac & Windows) SKI How The loop Privacy Features Tutorials Meetings Agents FAQ Download Voice coding for your agent Let your coding agent talk with you. You talk. It builds. It answers — out loud, in a natural voice. Everything runs on your own computer; nothing you say ever leaves it. Free for life. Download See how it works SKI File Edit "
           }
         ],
         "strategy_judgments": [
@@ -735,22 +747,24 @@
       },
       {
         "slug": "memmy-agent",
-        "category": "Productivity",
-        "what_it_sells": "Let every AI remember the same you.",
+        "category": "企业多智能体协作",
+        "what_it_sells": "一款面向上述场景的企业多智能体协作产品",
         "target_customers": [
-          "目标客户未公开"
+          "部署多个 AI 助手的企业团队",
+          "AI 运营与安全负责人"
         ],
-        "problem_solved": "🍙 Memmy Agent is a personal memory hub and local AI agent for all AI Agent and tools like Claude Code, Codex, OpenClaw and Hermes. Gives every AI one shared, full-controlled memory — they all remember the same you. Memmy turns chats, decisions, prefs, progresses, and experiences into long-term memory, brings the right context into matching task, also can take on work directly. Local-first by default. Your memory stay under your control: manage them anytime. Free start with 2M ChatGPT tokens.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Memmy Agent 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+        "plain_scenario": "以 Memmy Agent 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Memmy Agent 的目标用户而言，减少团队管理多个智能体入口的混乱",
+          "让智能体协作过程更可见、更可控"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费试用，付费价格未确认",
+        "conversion_path": "先自助试用，再决定是否购买",
         "positioning": "Let every AI remember the same you.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Memmy Agent 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行主体；平台价值在于连接、权限和协作治理。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -759,6 +773,11 @@
             "claim": "Let every AI remember the same you.",
             "source_url": "https://www.producthunt.com/products/memmy?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Let every AI remember the same you."
+          },
+          {
+            "claim": "官网提供免费试用，付费价格未确认",
+            "source_url": "https://www.producthunt.com/r/5S7SGS3F5S6RN6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Memmy Memmy Community Docs GitHub Feedback Download Mac ARM64 Windows x64 Docs Download Me m my Let every AI remember the same you Download desktop app Download Mac ARM64 Windows x64 Learn more Memory that powers preference understanding, task relay, and continuous evolution. Built for people who work with several AI tools every day. What you said, decided and care about — Memmy keeps it organized"
           }
         ],
         "strategy_judgments": [
@@ -767,22 +786,24 @@
       },
       {
         "slug": "ai-search-console",
-        "category": "Marketing",
-        "what_it_sells": "Prompt analytics and citation mapping for AI search",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "AI Search Console helps SEO and GEO teams replace manual AI visibility checks with repeatable data. Track brand mentions, rankings, share of voice, competitors, and cited sources across ChatGPT, Claude, Gemini, and Perplexity. Analyze visibility at the individual prompt level, find content and citation gaps, and generate client-ready reports without spreadsheets or screenshots.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 AI Search Console 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 AI Search Console 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 AI Search Console 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Prompt analytics and citation mapping for AI search",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 AI Search Console 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -799,22 +820,23 @@
       },
       {
         "slug": "claude-code-usage-tracking-by-langwatch",
-        "category": "Open Source",
-        "what_it_sells": "See what your Claude Code sessions actually cost",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Track Claude Code usage: cost, cache, session replay. Run `npx langwatch claude` once. Every session gets cost with cache reads/writes as separate token classes, every bash and MCP call as a span, theoretical vs billed for your Max plan, and a full terminal replay in the UI. Works for Codex too.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Claude Code usage tracking by LangWatch  为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 Claude Code usage tracking by LangWatch  为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Claude Code usage tracking by LangWatch  的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
+        "pricing_model": "官网公开价格：$221.02、$801.75、$14.96",
         "conversion_path": "官网自助购买",
         "positioning": "See what your Claude Code sessions actually cost",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Claude Code usage tracking by LangWatch  为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -823,6 +845,11 @@
             "claim": "See what your Claude Code sessions actually cost",
             "source_url": "https://www.producthunt.com/products/langwatch?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "See what your Claude Code sessions actually cost"
+          },
+          {
+            "claim": "官网公开价格：$221.02、$801.75、$14.96",
+            "source_url": "https://www.producthunt.com/r/5R3GKBPGWVMPBY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Track your Claude Code usage | LangWatch Platform Langy New The automated AI engineer: reads your traces, writes the tests, and opens the pull request Agentic AI Testing Run realistic user scenarios against your agent to catch issues before production LLM Evaluation Measure response quality and accuracy so you ship agents that hold up in production LLM Observability Trace every agent step and moni"
           }
         ],
         "strategy_judgments": [
@@ -831,22 +858,24 @@
       },
       {
         "slug": "nina-5",
-        "category": "Customer Success",
-        "what_it_sells": "Guide users step by step inside your product.",
+        "category": "AI 文档生产与维护",
+        "what_it_sells": "一款面向上述场景的AI 文档生产与维护产品",
         "target_customers": [
-          "目标客户未公开"
+          "软件产品团队",
+          "需要维护帮助中心或产品文档的团队"
         ],
-        "problem_solved": "NINA lives inside your product and helps users exactly where they get stuck. They ask “How do I…?” by voice or text, and NINA guides them step by step on the live interface before they open a ticket, search documentation, or message support. It is not a scripted tour, chatbot, or FAQ. NINA is built for B2B SaaS teams still relying on onboarding calls, product videos, Slack channels, and repeated support answers.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 NINA 为例：让 AI 把初稿整理成可发布的文档站，并在内容变化后持续更新。",
+        "plain_scenario": "以 NINA 为例：让 AI 把初稿整理成可发布的文档站，并在内容变化后持续更新。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 NINA 的目标用户而言，减少排版、迁移和发布文档的重复工作",
+          "让文档更新更容易跟上产品变化"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费试用，付费价格未确认",
+        "conversion_path": "先自助试用，再决定是否购买",
         "positioning": "Guide users step by step inside your product.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 NINA 为例：让 AI 把初稿整理成可发布的文档站，并在内容变化后持续更新。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行者，负责创建和维护内容；人工审批决定最终发布。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -855,6 +884,11 @@
             "claim": "Guide users step by step inside your product.",
             "source_url": "https://www.producthunt.com/products/agenq-nina-ai-product-assistant?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Guide users step by step inside your product."
+          },
+          {
+            "claim": "官网提供免费试用，付费价格未确认",
+            "source_url": "https://www.producthunt.com/r/NKDYVHNHKYNZ5X?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Nina - AgenQ Skip to content AgenQ Menu Home Solution Nina Faster Revenue Slash Costs End Operations Overload Stop Knowledge Loss Features Voice and Chat Guidance Real-time Workflow Navigation Action-Based Execution Trained on Your Product Knowledge Use Case Guided Onboarding Adoption Enablement Just Ask Assistance Case Studies Pricing Resources Documentation Book A Meeting Get Started Blogs Book "
           }
         ],
         "strategy_judgments": [
@@ -863,22 +897,23 @@
       },
       {
         "slug": "pally-3",
-        "category": "Productivity",
-        "what_it_sells": "Your personal assistant that lives in your texts",
+        "category": "消息入口的个人 AI 助手",
+        "what_it_sells": "一款面向上述场景的消息入口的个人 AI 助手产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望在手机消息中直接使用 AI 的普通用户"
         ],
-        "problem_solved": "Pally is your personal assistant that lives in your texts. Stop leaving people on read: let Pally reply for you, do your work, and save you time. We’re the only text agent that natively connects to your iMessage and WhatsApp inboxes, meaning Pally can monitor, alert, and even reply to your friends for you - in your tone, with your context.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Pally 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。",
+        "plain_scenario": "以 Pally 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Pally 的目标用户而言，在熟悉的消息入口直接获得帮助",
+          "减少应用切换并降低 AI 使用门槛"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网公开价格：£210、$0",
+        "conversion_path": "官网自助购买",
         "positioning": "Your personal assistant that lives in your texts",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Pally 为例：用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心服务能力；消息隐私、身份验证和错误操作是关键风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -887,6 +922,11 @@
             "claim": "Your personal assistant that lives in your texts",
             "source_url": "https://www.producthunt.com/products/pally?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Your personal assistant that lives in your texts"
+          },
+          {
+            "claim": "官网公开价格：£210、$0",
+            "source_url": "https://www.producthunt.com/r/O2GO374S5UU2NW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Pally | One text away from done Product Use Cases Integrations Pricing Testimonials FAQ Text Pally Your personal assistant in iMessage and RCS. One text away from done. Pally connects to all your inboxes and tools, and handles the things you'd forget, automatically. Try it today for free. Text Pally You have loose threads everywhere. The plan's in WhatsApp. The receipt's in Gmail. The decision's i"
           }
         ],
         "strategy_judgments": [
@@ -895,22 +935,24 @@
       },
       {
         "slug": "greplica",
-        "category": "Open Source",
-        "what_it_sells": "Self updating wiki for coding agents",
+        "category": "编程智能体记忆与流程管理",
+        "what_it_sells": "一款面向上述场景的编程智能体记忆与流程管理产品",
         "target_customers": [
-          "目标客户未公开"
+          "长期使用编程智能体的软件团队",
+          "希望保留项目上下文的开发者"
         ],
-        "problem_solved": "Greplica gives your engineering team and every coding agent a shared memory of the codebase. It continuously extracts decisions, constraints, gotchas, failed approaches, and file-level context from coding sessions, then retrieves only what matters for the task at hand. Unlike static docs or siloed agent memory, Greplica stays grounded in the repo, keeps knowledge fresh, and works across developers, agents, clones, and forks. It is open source, runs locally, and offers a managed shared mode.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Greplica 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。",
+        "plain_scenario": "以 Greplica 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Greplica 的目标用户而言，减少每次任务重复解释项目背景",
+          "降低智能体因遗忘约定而重复犯错的概率"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
+        "pricing_model": "官网显示存在付费方案，具体价格未能可靠提取",
         "conversion_path": "官网自助购买",
         "positioning": "Self updating wiki for coding agents",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Greplica 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。”这一具体入口区别于通用工具",
+        "ai_role": "AI 智能体是使用者，产品提供可保存和审查的项目记忆。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -919,6 +961,11 @@
             "claim": "Self updating wiki for coding agents",
             "source_url": "https://www.producthunt.com/products/greplica?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Self updating wiki for coding agents"
+          },
+          {
+            "claim": "官网显示存在付费方案，具体价格未能可靠提取",
+            "source_url": "https://www.producthunt.com/r/Y6ERMPHE5K2ZGA?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "GitHub - Autoloops/greplica at producthunt · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Copilot app Direct agents from issue to merge MCP Registry Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work"
           }
         ],
         "strategy_judgments": [
@@ -928,21 +975,22 @@
       {
         "slug": "expert-chase-for-ios-android",
         "category": "Productivity",
-        "what_it_sells": "Where human life runs with AI",
+        "what_it_sells": "一款面向上述场景的Productivity产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Expert Chase for iOS & Android 所代表的Productivity方案的个人或团队"
         ],
-        "problem_solved": "Our users wanted it, now they've got it. Introducing Expert Chase for iOS & Android, along with a powerful new experience and native integrations. Expert Chase is now available on Web, iOS, and Android, with support for both the Apple and Google ecosystems. Integrations include: Apple Calendar, Google Calendar, Apple Reminders, Google Tasks, Apple Health, Google Health Connect.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Expert Chase for iOS & Android 为例：在出现“Where human life runs with AI”所描述的需求时，用 Expert Chase for iOS & Android 完成一次具体任务。",
+        "plain_scenario": "以 Expert Chase for iOS & Android 为例：在出现“Where human life runs with AI”所描述的需求时，用 Expert Chase for iOS & Android 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Expert Chase for iOS & Android 的目标用户而言，让用户可以直接试用 Expert Chase for iOS & Android 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Where human life runs with AI",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Expert Chase for iOS & Android 为例：在出现“Where human life runs with AI”所描述的需求时，用 Expert Chase for iOS & Android 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -960,21 +1008,22 @@
       {
         "slug": "focus-room",
         "category": "Productivity",
-        "what_it_sells": "Turn YouTube into your personal learning platform ",
+        "what_it_sells": "一款面向上述场景的Productivity产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Focus Room 所代表的Productivity方案的个人或团队"
         ],
-        "problem_solved": "Focus Room turns YouTube into a personal learning platform with a structured, course-inspired interface. Convert educational videos and playlists into organized courses, navigate lessons using timestamped topics, generate concise summaries, create notes and to-do lists, track your progress, and bookmark courses for later. With unnecessary recommendations and distractions removed, Focus Room helps transform passive watching into focused, consistent learning.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Focus Room 为例：在出现“Turn YouTube into your personal learning platform ”所描述的需求时，用 Focus Room 完成一次具体任务。",
+        "plain_scenario": "以 Focus Room 为例：在出现“Turn YouTube into your personal learning platform ”所描述的需求时，用 Focus Room 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Focus Room 的目标用户而言，让用户可以直接试用 Focus Room 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Turn YouTube into your personal learning platform ",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Focus Room 为例：在出现“Turn YouTube into your personal learning platform ”所描述的需求时，用 Focus Room 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -983,6 +1032,11 @@
             "claim": "Turn YouTube into your personal learning platform ",
             "source_url": "https://www.producthunt.com/products/focus-room?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Turn YouTube into your personal learning platform "
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/QVIVCH4IY2RXQW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Focus Room F Focus Room Sign in Start studying F o c u s R o o m Turn YouTube into your personal learning platform—follow structured courses, watch the best educational videos without distractions, and make consistent progress. I want to learn Python Search A better way to learn from video From passive watching to active learning. A distraction-free player Watch educational videos without comments"
           }
         ],
         "strategy_judgments": [
@@ -992,21 +1046,22 @@
       {
         "slug": "agentos-4",
         "category": "Open Source",
-        "what_it_sells": "254× cheaper sandbox alternative, powered by WebAssembly",
+        "what_it_sells": "一款面向上述场景的Open Source产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 agentOS 所代表的Open Source方案的个人或团队"
         ],
-        "problem_solved": "Give agents a Linux operating system as a library – no sandboxes, VMs, or SaaS. Built on WebAssembly, the same tech powering Cloudflare Workers and Chrome. Support Claude Code, Codex, OpenCode, Pi, Eve, and Flue.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 agentOS 为例：在出现“254× cheaper sandbox alternative, powered by WebAssembly”所描述的需求时，用 agentOS 完成一次具体任务。",
+        "plain_scenario": "以 agentOS 为例：在出现“254× cheaper sandbox alternative, powered by WebAssembly”所描述的需求时，用 agentOS 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 agentOS 的目标用户而言，让用户可以直接试用 agentOS 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网公开价格：$0.0504、$0.0162、$0.000000073",
+        "conversion_path": "官网自助购买",
         "positioning": "254× cheaper sandbox alternative, powered by WebAssembly",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 agentOS 为例：在出现“254× cheaper sandbox alternative, powered by WebAssembly”所描述的需求时，用 agentOS 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1015,6 +1070,11 @@
             "claim": "254× cheaper sandbox alternative, powered by WebAssembly",
             "source_url": "https://www.producthunt.com/products/agentos-3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "254× cheaper sandbox alternative, powered by WebAssembly"
+          },
+          {
+            "claim": "官网公开价格：$0.0504、$0.0162、$0.000000073",
+            "source_url": "https://www.producthunt.com/r/DVJCQ4F3GS7JKD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "agentOS — Virtual operating system for agents Documentation Cookbooks Use Cases Registry 61 Deploy GitHub Give agents an operating system as a library. Each agent gets a lightweight OS for execution, filesystems, orchestration, and apps. Runs in your existing backend – no sandboxes, VMs, or SaaS. 92× faster cold starts 47× less memory 254× cheaper to run $ npm install @rivet-dev/agentos Copy Set u"
           }
         ],
         "strategy_judgments": [
@@ -1023,22 +1083,23 @@
       },
       {
         "slug": "yap-5",
-        "category": "Productivity",
-        "what_it_sells": "Open-source voice dictation for Mac, fully on-device",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Yap turns speech into text anywhere you can type on your Mac. Set a hotkey, talk, press it again, and the words get pasted into whatever field you were in. It runs entirely on device using macOS 26's speech APIs, so there's no model to download and nothing leaves your machine. It's around 3,000 lines of native Swift in a 4 MB app that idles near 60 MB of memory. Free, MIT licensed, and built by Frigade because we wanted it for ourselves.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Yap 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 Yap 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Yap 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Open-source voice dictation for Mac, fully on-device",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Yap 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1056,21 +1117,22 @@
       {
         "slug": "craftstory",
         "category": "Marketing",
-        "what_it_sells": "Photorealistic human video, powered by compact AI",
+        "what_it_sells": "一款面向上述场景的Marketing产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 CraftStory 所代表的Marketing方案的个人或团队"
         ],
-        "problem_solved": "🎁 Product Hunt exclusive: 50% off Producer for your first month → https://app.craftstory.com/?promo=producthunt CraftStory generates hyper-realistic, human-centric videos for L&D, podcasts, and UGC. Create videos from a single image or train a custom avatar from just a 15-second video. Powered by a proprietary model trained on professional actor footage licensed through revenue-sharing agreements, CraftStory delivers realistic, expressive videos at just 4.5 cents per second.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 CraftStory 为例：在出现“Photorealistic human video, powered by compact AI”所描述的需求时，用 CraftStory 完成一次具体任务。",
+        "plain_scenario": "以 CraftStory 为例：在出现“Photorealistic human video, powered by compact AI”所描述的需求时，用 CraftStory 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 CraftStory 的目标用户而言，让用户可以直接试用 CraftStory 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Photorealistic human video, powered by compact AI",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 CraftStory 为例：在出现“Photorealistic human video, powered by compact AI”所描述的需求时，用 CraftStory 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1079,6 +1141,11 @@
             "claim": "Photorealistic human video, powered by compact AI",
             "source_url": "https://www.producthunt.com/products/craftstory?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Photorealistic human video, powered by compact AI"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/B3PMR2PY3RVRFL?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "CraftStory — Turn Any Photo Into a Talking AI Video 🔴 We’re live on Product Hunt — 50% off Producer for your first month! Open producthunt.com, search “CraftStory”, claim the offer on our launch page. Claim the discount → × ☰ Use Cases Features How It Works Pricing Press Try It Free 🔊 ⏸ Photorealistic human video, powered by compact AI Turn Any Photo Into a Hyper-Realistic Video Photorealistic tal"
           }
         ],
         "strategy_judgments": [
@@ -1087,22 +1154,24 @@
       },
       {
         "slug": "tablo-4",
-        "category": "Productivity",
-        "what_it_sells": "A tiny cat that watches your AI coding agents for you",
+        "category": "编程智能体记忆与流程管理",
+        "what_it_sells": "一款面向上述场景的编程智能体记忆与流程管理产品",
         "target_customers": [
-          "目标客户未公开"
+          "长期使用编程智能体的软件团队",
+          "希望保留项目上下文的开发者"
         ],
-        "problem_solved": "You kick off an AI agent, switch tabs, and forget it's stuck or 90% through its context window. tablo fixes that, a tiny cat in your screen corner watching every Claude Code & Codex session: live context meters, tool approvals, and a nudge the second one needs you. Unlike usage dashboards, tablo tracks the conversation context filling up in real time, per session, across both tools — in a widget that stays out of your way. cozy by default. 🐱",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 tablo 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。",
+        "plain_scenario": "以 tablo 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 tablo 的目标用户而言，减少每次任务重复解释项目背景",
+          "降低智能体因遗忘约定而重复犯错的概率"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "A tiny cat that watches your AI coding agents for you",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 tablo 为例：智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。”这一具体入口区别于通用工具",
+        "ai_role": "AI 智能体是使用者，产品提供可保存和审查的项目记忆。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1111,6 +1180,11 @@
             "claim": "A tiny cat that watches your AI coding agents for you",
             "source_url": "https://www.producthunt.com/products/tablo-a-desktop-cat-widget?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "A tiny cat that watches your AI coding agents for you"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/DKBTCCS7VNPF54?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "tablo — a tiny cat that watches your coding agents reboot I don't like light mode. Bleh skip say hi to tablo sit sleeping running playing shocked the menace monitoring your coding agents ▮ claude code + codex · one widget to rule them all install tablo scroll ↓ 01 · what it does a tiny cat widget on your screen > one place for all — every agent's activity at a glance > context window monitoring — "
           }
         ],
         "strategy_judgments": [
@@ -1119,22 +1193,24 @@
       },
       {
         "slug": "caimera-2",
-        "category": "Photography",
-        "what_it_sells": "AI Visual Production Platform for Fashion Teams",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "From sketch to sale — Caimera helps e-commerce brands go to market faster. Create stunning product photos, videos, and social content with AI.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Caimera 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 Caimera 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Caimera 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费试用，付费价格未确认",
+        "conversion_path": "先自助试用，再决定是否购买",
         "positioning": "AI Visual Production Platform for Fashion Teams",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Caimera 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1143,6 +1219,11 @@
             "claim": "AI Visual Production Platform for Fashion Teams",
             "source_url": "https://www.producthunt.com/products/caimera-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "AI Visual Production Platform for Fashion Teams"
+          },
+          {
+            "claim": "官网提供免费试用，付费价格未确认",
+            "source_url": "https://www.producthunt.com/r/KHVJ5UX5JMQ652?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Caimera - AI Fashion Models for E-commerce Brands × AI Consumer Sentiment Report 2026 Insights from 502 US Consumers Product Caimera AI Resources Caimera AI Pricing Try for free Product Caimera AI Resources Caimera AI Pricing Try for free New Meet VooDoo. Product videos in one click New Meet VooDoo. Product videos in one click AI Visual Production Platform for Fashion Teams AI Visual Production Pl"
           }
         ],
         "strategy_judgments": [
@@ -1151,22 +1232,24 @@
       },
       {
         "slug": "premation",
-        "category": "Design Tools",
-        "what_it_sells": "An open-source AI alternative to After Effects",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "Motion Editor is an open-source, AI-native alternative to Adobe After Effects. Unlike closed-source motion tools, it gives creators and developers the freedom to customize, extend, and build on the platform. It combines timeline-based editing, 2D/3D motion design, and integrated AI assistance to create a modern, community-driven motion graphics experience.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Premation 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 Premation 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Premation 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
-        "conversion_path": "官网自助购买",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "An open-source AI alternative to After Effects",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Premation 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -1175,6 +1258,11 @@
             "claim": "An open-source AI alternative to After Effects",
             "source_url": "https://www.producthunt.com/products/premation?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "An open-source AI alternative to After Effects"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/EMI4NPH7TZYILF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Premation - A desktop motion-graphics studio Skip to content Features Export Pricing Docs GitHub 16 Download Get The viewport is the exporter The frame you approve is the frame you ship. Premation is a professional motion studio. Dynamic WebGPU timeline rendering ensures your preview and final export are identical. Download Studio Explore Workspace 60.0 fps Search layers Composition 1 Title / lock"
           }
         ],
         "strategy_judgments": [
@@ -1189,49 +1277,117 @@
     "status": "observing",
     "top_categories": [
       [
-        "Productivity",
-        13
-      ],
-      [
-        "Design Tools",
+        "语音原生应用与操作",
         5
       ],
       [
-        "Open Source",
+        "AI 工具使用监控",
+        5
+      ],
+      [
+        "创意智能体工作系统",
         4
       ],
       [
+        "编程智能体记忆与流程管理",
+        4
+      ],
+      [
+        "Productivity",
+        3
+      ],
+      [
         "Artificial Intelligence",
-        3
-      ],
-      [
-        "Marketing",
-        3
-      ],
-      [
-        "SaaS",
         2
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        37
+        33
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         5
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
+        "官网提供免费试用，付费价格未确认",
         3
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
+      ],
+      [
+        "官网公开价格：£210、$0",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        45
+        "希望减少键盘操作的知识工作者",
+        5
+      ],
+      [
+        "需要免手操作的用户",
+        5
+      ],
+      [
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        5
+      ],
+      [
+        "内容创作者",
+        4
+      ],
+      [
+        "社交媒体与创意团队",
+        4
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "消息入口的个人 AI 助手",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "AI 工具使用监控",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "个人信息整理与阅读",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "AI 文档生产与维护",
+        "change_per_day": 0.5
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -2.0
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "AI 提示词训练与娱乐",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": -1.0
+      }
     ]
   },
   "trend_30d": {
@@ -1240,49 +1396,117 @@
     "status": "observing",
     "top_categories": [
       [
-        "Productivity",
-        13
-      ],
-      [
-        "Design Tools",
+        "语音原生应用与操作",
         5
       ],
       [
-        "Open Source",
+        "AI 工具使用监控",
+        5
+      ],
+      [
+        "创意智能体工作系统",
         4
       ],
       [
+        "编程智能体记忆与流程管理",
+        4
+      ],
+      [
+        "Productivity",
+        3
+      ],
+      [
         "Artificial Intelligence",
-        3
-      ],
-      [
-        "Marketing",
-        3
-      ],
-      [
-        "SaaS",
         2
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        37
+        33
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         5
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
+        "官网提供免费试用，付费价格未确认",
         3
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
+      ],
+      [
+        "官网公开价格：£210、$0",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        45
+        "希望减少键盘操作的知识工作者",
+        5
+      ],
+      [
+        "需要免手操作的用户",
+        5
+      ],
+      [
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        5
+      ],
+      [
+        "内容创作者",
+        4
+      ],
+      [
+        "社交媒体与创意团队",
+        4
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": 2.0
+      },
+      {
+        "category": "消息入口的个人 AI 助手",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "AI 工具使用监控",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "个人信息整理与阅读",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "AI 文档生产与维护",
+        "change_per_day": 0.5
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -2.0
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "AI 提示词训练与娱乐",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": -1.0
+      }
     ]
   }
 }

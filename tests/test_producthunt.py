@@ -114,6 +114,12 @@ class ProductHuntPipelineTests(TestCase):
             )
             self.assertEqual(snapshot["product_count"], 15)
             self.assertEqual(snapshot["trend_7d"]["observed_days"], 1)
+            benefits = {
+                tuple(item["benefits"])
+                for item in snapshot["analysis"]["products"]
+            }
+            self.assertGreater(len(benefits), 5)
+            self.assertNotIn("产品方尚未提供足够资料，需进一步核实", text)
 
     def test_history_reports_actual_observed_days(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

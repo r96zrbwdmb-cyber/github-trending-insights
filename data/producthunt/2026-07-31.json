@@ -446,12 +446,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：RuntimeError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 12 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "8/12 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Artificial Intelligence（7 个产品）、SaaS（4 个产品）、Open Source（3 个产品）、Analytics（2 个产品）、Developer Tools（2 个产品）。"
     ],
     "buying_capabilities": [
@@ -462,7 +463,11 @@
       "Developer Tools（2 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "内容创作者（1 个产品）",
+      "社交媒体与创意团队（1 个产品）",
+      "正在寻找 Cleanlist AI 所代表的Sales方案的个人或团队（1 个产品）",
+      "高频使用 Claude、Codex 或 Cursor 的个人和团队（1 个产品）",
+      "正在寻找 Poth Labs 所代表的Customer Success方案的个人或团队（1 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -473,22 +478,24 @@
     "products": [
       {
         "slug": "minimax-h3",
-        "category": "Design Tools",
-        "what_it_sells": "Unified video generation for motion design and branding",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "MiniMax H3 is an open multimodal model that generates 2K video with native stereo sound. It unifies text, image, and audio inputs, excelling at accurate text rendering, visual packaging, and complex instruction following for commercial content creation.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 MiniMax H3 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 MiniMax H3 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 MiniMax H3 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Unified video generation for motion design and branding",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 MiniMax H3 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -506,21 +513,22 @@
       {
         "slug": "cleanlist-ai-3",
         "category": "Sales",
-        "what_it_sells": "Natural-language prospecting: find, enrich and sync leads.",
+        "what_it_sells": "一款面向上述场景的Sales产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Cleanlist AI 所代表的Sales方案的个人或团队"
         ],
-        "problem_solved": "Cleanlist AI turns any prospecting input into a verified, enriched, CRM-ready lead list. Upload a CSV, paste LinkedIn or Sales Navigator URLs, add domains, or use search filters, then let AI agents enrich contacts, verify emails, research each lead, and sync the final list to your CRM. With a 15-provider enrichment waterfall, AI research columns, and one-click CRM sync, Cleanlist helps GTM teams build lists without stitching together six tools.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Cleanlist AI 为例：在出现“Natural-language prospecting: find, enrich and sync leads.”所描述的需求时，用 Cleanlist AI 完成一次具体任务。",
+        "plain_scenario": "以 Cleanlist AI 为例：在出现“Natural-language prospecting: find, enrich and sync leads.”所描述的需求时，用 Cleanlist AI 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Cleanlist AI 的目标用户而言，让用户可以直接试用 Cleanlist AI 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Natural-language prospecting: find, enrich and sync leads.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Cleanlist AI 为例：在出现“Natural-language prospecting: find, enrich and sync leads.”所描述的需求时，用 Cleanlist AI 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -537,22 +545,23 @@
       },
       {
         "slug": "mectrics",
-        "category": "Mac",
-        "what_it_sells": "Your Mac's vitals in the menu bar. Free and open source.",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "CPU, memory, battery, network, disk, GPU, temperature and fans in your menu bar. You pick which ones show, and a click opens the detail behind it. Compact Health folds the whole machine into one item that stays quiet until something's off. MIT, macOS 15+.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 mectrics 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 mectrics 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 mectrics 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Your Mac's vitals in the menu bar. Free and open source.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 mectrics 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -570,21 +579,22 @@
       {
         "slug": "poth-labs",
         "category": "Customer Success",
-        "what_it_sells": "The customer brain for your company",
+        "what_it_sells": "一款面向上述场景的Customer Success产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Poth Labs 所代表的Customer Success方案的个人或团队"
         ],
-        "problem_solved": "Customer knowledge isn't a collection of documents. It's a network of relationships. Poth builds a living model of your customers before answering questions, so Ask Poth can reason across all your company knows instead of summarizing isolated sources. That unlocks questions no single source can answer, from what's driving churn to why customers adopt or abandon features. Every conclusion is grounded in evidence. If the answer isn't there, Poth launches adaptive surveys to collect what's missing.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Poth Labs 为例：在出现“The customer brain for your company”所描述的需求时，用 Poth Labs 完成一次具体任务。",
+        "plain_scenario": "以 Poth Labs 为例：在出现“The customer brain for your company”所描述的需求时，用 Poth Labs 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Poth Labs 的目标用户而言，让用户可以直接试用 Poth Labs 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "The customer brain for your company",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Poth Labs 为例：在出现“The customer brain for your company”所描述的需求时，用 Poth Labs 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -601,22 +611,24 @@
       },
       {
         "slug": "depthdata",
-        "category": "Analytics",
-        "what_it_sells": "The system of record for your company's AI spend.",
+        "category": "AI 提示词训练与娱乐",
+        "what_it_sells": "一款面向上述场景的AI 提示词训练与娱乐产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望练习模型沟通的人",
+          "AI 社区与教育活动组织者"
         ],
-        "problem_solved": "Companies now pay for four or five AI tools (ChatGPT, Claude, Copilot, and more) but can't answer the basics: what are we spending, who's using it, and which seats sit idle? DepthData connects every AI tool into one audit ready view of spend and adoption. What makes it different: every number is labeled by how it's verified, we never read prompts, and we show exactly what each vendor's API can and can't expose. The trusted system of record for your company's AI spend.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 DepthData 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
+        "plain_scenario": "以 DepthData 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 DepthData 的目标用户而言，用游戏方式理解模型对措辞的反应",
+          "为 AI 社区提供可分享的挑战内容"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "The system of record for your company's AI spend.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 DepthData 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是游戏对象和核心机制，但产品本身不代表新的模型技术。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -633,22 +645,24 @@
       },
       {
         "slug": "halo-by-scam-ai",
-        "category": "Meetings",
-        "what_it_sells": "Know who’s real on every video call",
+        "category": "招聘流程自动化",
+        "what_it_sells": "一款面向上述场景的招聘流程自动化产品",
         "target_customers": [
-          "目标客户未公开"
+          "招聘团队",
+          "需要大量安排候选人沟通的成长型企业"
         ],
-        "problem_solved": "The person on your next video call might not be real. With Halo you don't have to guess. Halo secures your Zoom, Teams, or Google Meet call live and flags synthetic faces the moment it detects one, entirely on your device. Deepfake video calls are already being used to scam people and businesses around the world, it's just that most people have no way to tell. From confirming who you're hiring to confirming who you're wiring money to, Halo catches it before it costs you.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Halo by Scam AI 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
+        "plain_scenario": "以 Halo by Scam AI 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Halo by Scam AI 的目标用户而言，减少面试排期和重复跟进",
+          "让招聘人员把时间放在候选人判断与沟通质量上"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Know who’s real on every video call",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Halo by Scam AI 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 可承担协调和信息整理，但不应在缺乏监督时决定候选人的公平机会。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -666,21 +680,22 @@
       {
         "slug": "witr",
         "category": "Linux",
-        "what_it_sells": "Why is this running? Trace process, port, container or file",
+        "what_it_sells": "一款面向上述场景的Linux产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 witr 所代表的Linux方案的个人或团队"
         ],
-        "problem_solved": "ps, top and lsof tell you what is running. witr tells you why. Point it at a process, PID, port, container or file and it traces the chain that explains it - systemd, supervisor, shell or cron - plus who started it, when, from where, and the warnings worth knowing. Run it bare for an interactive TUI with Processes, Ports, Containers and Locks tabs. Or script it: --short for a one-line chain, --json with real exit codes. One static Go binary for Linux, macOS, Windows and BSD.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 witr 为例：在出现“Why is this running? Trace process, port, container or file”所描述的需求时，用 witr 完成一次具体任务。",
+        "plain_scenario": "以 witr 为例：在出现“Why is this running? Trace process, port, container or file”所描述的需求时，用 witr 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 witr 的目标用户而言，让用户可以直接试用 witr 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Why is this running? Trace process, port, container or file",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 witr 为例：在出现“Why is this running? Trace process, port, container or file”所描述的需求时，用 witr 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -697,22 +712,24 @@
       },
       {
         "slug": "customer-io-summer-release",
-        "category": "Email",
-        "what_it_sells": "New ways to reach customers in the moments that matter",
+        "category": "浏览器执行型智能体",
+        "what_it_sells": "一款面向上述场景的浏览器执行型智能体产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要处理大量网页事务的知识工作者",
+          "销售、运营和行政团队"
         ],
-        "problem_solved": "Customer.io's most expansive launch yet brings powerful new ways to engage customers exactly when it matters across expanded triggers, surfaces, and channels. Reach customers with geofencing, Live Notifications, flexible SMS providers, notification inbox, and beyond. Improved WhatsApp management, smarter AI, and more, all from one platform.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Customer.io Summer Release 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+        "plain_scenario": "以 Customer.io Summer Release 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Customer.io Summer Release 的目标用户而言，把 AI 的建议转化为实际完成的操作",
+          "减少重复网页录入和跨系统搬运信息"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "New ways to reach customers in the moments that matter",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Customer.io Summer Release 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -730,21 +747,22 @@
       {
         "slug": "screencap",
         "category": "Productivity",
-        "what_it_sells": "Turn your team's real workflows into AI training data",
+        "what_it_sells": "一款面向上述场景的Productivity产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Screencap 所代表的Productivity方案的个人或团队"
         ],
-        "problem_solved": "Screencap records how work actually happens: screen, clicks, keystrokes, window context and teams can use it to turn real workflows into structured datasets for automation and AI training. Consent and privacy are enforced while recording so most sensitive apps are blocked before anything is written, and every trace is scrubbed and reviewed before it leaves a machine. macOS, open source. Try it solo with a free trial, or talk to us about a team pilot.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Screencap 为例：在出现“Turn your team's real workflows into AI training data”所描述的需求时，用 Screencap 完成一次具体任务。",
+        "plain_scenario": "以 Screencap 为例：在出现“Turn your team's real workflows into AI training data”所描述的需求时，用 Screencap 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Screencap 的目标用户而言，让用户可以直接试用 Screencap 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Turn your team's real workflows into AI training data",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Screencap 为例：在出现“Turn your team's real workflows into AI training data”所描述的需求时，用 Screencap 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -762,21 +780,22 @@
       {
         "slug": "gemini-robotics-2",
         "category": "Robots",
-        "what_it_sells": "Google's AI brain for the next generation of robots",
+        "what_it_sells": "一款面向上述场景的Robots产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Gemini Robotics 2 所代表的Robots方案的个人或团队"
         ],
-        "problem_solved": "Gemini Robotics 2 is Google DeepMind’s latest step toward intelligent robots that can understand, reason, and act in the physical world. Powered by advanced Gemini models, it brings whole-body intelligence, dexterous manipulation, and adaptive reasoning to robots of different shapes and sizes. From complex physical tasks to multi-robot collaboration, Gemini Robotics 2 moves us closer to a future where robots can work alongside humans.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Gemini Robotics 2 为例：在出现“Google's AI brain for the next generation of robots”所描述的需求时，用 Gemini Robotics 2 完成一次具体任务。",
+        "plain_scenario": "以 Gemini Robotics 2 为例：在出现“Google's AI brain for the next generation of robots”所描述的需求时，用 Gemini Robotics 2 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Gemini Robotics 2 的目标用户而言，让用户可以直接试用 Gemini Robotics 2 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Google's AI brain for the next generation of robots",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Gemini Robotics 2 为例：在出现“Google's AI brain for the next generation of robots”所描述的需求时，用 Gemini Robotics 2 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -793,22 +812,24 @@
       },
       {
         "slug": "tracellm",
-        "category": "Open Source",
-        "what_it_sells": "OpenTelemetry for production AI applications",
+        "category": "数据采集基础设施评测",
+        "what_it_sells": "一款面向上述场景的数据采集基础设施评测产品",
         "target_customers": [
-          "目标客户未公开"
+          "数据采集团队",
+          "SaaS 与 AI 数据产品团队"
         ],
-        "problem_solved": "Tracellm is an observability platform for production AI applications. Monitor prompt execution, token consumption, latency, spans, errors, and model calls across your LLM workflows. Export traces using OpenTelemetry (OTLP) and quickly identify bottlenecks before they impact users",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 TraceLLM 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。",
+        "plain_scenario": "以 TraceLLM 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 TraceLLM 的目标用户而言，减少只依据供应商宣传做采购决定的风险",
+          "更快找到适合特定网站的数据采集方案"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "OpenTelemetry for production AI applications",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 TraceLLM 为例：采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，但 AI 产品的数据采集团队可能使用它。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -826,21 +847,22 @@
       {
         "slug": "mubert-api",
         "category": "Music",
-        "what_it_sells": "Edit tracks & stems, get consistent music with new engine",
+        "what_it_sells": "一款面向上述场景的Music产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Mubert API 所代表的Music方案的个人或团队"
         ],
-        "problem_solved": "Meet the new Mubert API. Edit tracks, swap stems, and generate more consistent music with our latest engine. Create tracks up to 2 hours long, stream music in real time, and integrate Mubert into your pipeline in minutes with Skills.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Mubert API 为例：在出现“Edit tracks & stems, get consistent music with new engine”所描述的需求时，用 Mubert API 完成一次具体任务。",
+        "plain_scenario": "以 Mubert API 为例：在出现“Edit tracks & stems, get consistent music with new engine”所描述的需求时，用 Mubert API 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Mubert API 的目标用户而言，让用户可以直接试用 Mubert API 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Edit tracks & stems, get consistent music with new engine",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Mubert API 为例：在出现“Edit tracks & stems, get consistent music with new engine”所描述的需求时，用 Mubert API 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -863,49 +885,117 @@
     "status": "observing",
     "top_categories": [
       [
-        "Productivity",
-        14
-      ],
-      [
-        "Design Tools",
+        "AI 工具使用监控",
         6
       ],
       [
-        "Open Source",
+        "语音原生应用与操作",
         5
       ],
       [
+        "创意智能体工作系统",
+        5
+      ],
+      [
+        "Productivity",
+        4
+      ],
+      [
+        "编程智能体记忆与流程管理",
+        4
+      ],
+      [
         "Artificial Intelligence",
-        3
-      ],
-      [
-        "Marketing",
-        3
-      ],
-      [
-        "Mac",
-        3
+        2
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        49
+        45
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         5
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
+        "官网提供免费试用，付费价格未确认",
         3
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
+      ],
+      [
+        "官网公开价格：£210、$0",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        57
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        6
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        5
+      ],
+      [
+        "需要免手操作的用户",
+        5
+      ],
+      [
+        "内容创作者",
+        5
+      ],
+      [
+        "社交媒体与创意团队",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "Productivity",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Open Source",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Sales",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Customer Success",
+        "change_per_day": 0.5
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "独立应用商业化",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 音乐陪练",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 生成软件的质量控制",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -0.5
+      }
     ]
   },
   "trend_30d": {
@@ -914,49 +1004,117 @@
     "status": "observing",
     "top_categories": [
       [
-        "Productivity",
-        14
-      ],
-      [
-        "Design Tools",
+        "AI 工具使用监控",
         6
       ],
       [
-        "Open Source",
+        "语音原生应用与操作",
         5
       ],
       [
+        "创意智能体工作系统",
+        5
+      ],
+      [
+        "Productivity",
+        4
+      ],
+      [
+        "编程智能体记忆与流程管理",
+        4
+      ],
+      [
         "Artificial Intelligence",
-        3
-      ],
-      [
-        "Marketing",
-        3
-      ],
-      [
-        "Mac",
-        3
+        2
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        49
+        45
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         5
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
+        "官网提供免费试用，付费价格未确认",
         3
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
+      ],
+      [
+        "官网公开价格：£210、$0",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        57
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        6
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        5
+      ],
+      [
+        "需要免手操作的用户",
+        5
+      ],
+      [
+        "内容创作者",
+        5
+      ],
+      [
+        "社交媒体与创意团队",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "Productivity",
+        "change_per_day": 1.0
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Open Source",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Sales",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Customer Success",
+        "change_per_day": 0.5
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "独立应用商业化",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 音乐陪练",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 生成软件的质量控制",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -0.5
+      }
     ]
   }
 }

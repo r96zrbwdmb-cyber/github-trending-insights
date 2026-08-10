@@ -446,257 +446,194 @@
     }
   ],
   "industry_analysis": {
-    "analysis_version": 4,
+    "analysis_version": 5,
     "available": true,
-    "error": "免费模式仅使用 GitHub 项目资料与历史数据，未执行外部官网和论文网页检索",
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：手动选择基于 GitHub 项目资料的免费规则分析",
     "key_judgments": [
-      "项目提供了结合蓝牙网状网络和互联网协议的混合通信架构",
-      "强调隐私保护，无需账号和服务器支持",
-      "适合灾难应急和隐私敏感场景的离线及在线消息传递",
-      "技术实现了自动路由和多跳转发，提升通信范围和可靠性",
-      "项目活跃度高，开发者关注度显著"
+      "当日 5/15 个项目可从资料确认与 AI 直接相关；其余 10 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（7 个）、AI 安全、权限与治理（1 个）、AI 伴侣与数字角色（1 个）。",
+      "排名第一的 permissionlesstech/bitchat 代表“AI 安全、权限与治理”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
     ],
     "hot_characteristics": [
-      "去中心化通信",
-      "蓝牙网状网络",
-      "端到端加密",
-      "无账号隐私保护",
-      "开源VPN客户端",
-      "支持自建VPN服务器"
+      "其他数字产品与工具（7 个项目）",
+      "AI 安全、权限与治理（1 个项目）",
+      "AI 伴侣与数字角色（1 个项目）",
+      "地理空间分析产品（1 个项目）",
+      "个人生产力工具（1 个项目）",
+      "AI 智能体与数字劳动力（1 个项目）"
     ],
     "product_business_signals": [
-      "已上架App Store，具备实际用户触达渠道",
-      "开源且无版权限制，便于社区和企业二次开发",
-      "支持iOS和macOS，覆盖主流苹果生态用户",
-      "拥有超过14000颗星，显示开发者和用户的关注度较高。",
-      "持续更新至2026年，表明项目活跃且有维护。",
-      "支持多平台和多协议，具备较强的市场适应性。"
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
     ],
     "watch_next": [
-      "去中心化通信协议创新",
-      "蓝牙网状网络技术进展",
-      "隐私保护即时通讯应用",
-      "amnezia-vpn/amnezia-client",
-      "其他开源VPN项目",
-      "网络隐私保护相关工具"
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
     ],
     "repositories": [
       {
         "full_name": "permissionlesstech/bitchat",
-        "one_line_summary": "一款结合蓝牙网状网络和互联网协议的去中心化端到端加密消息应用，无需账号和服务器支持。",
-        "industry_direction": "去中心化通信",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
         "target_users": [
-          "户外运动爱好者",
-          "灾难应急通信人员",
-          "隐私保护意识强的社交用户"
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
         ],
-        "problem_solved": "解决了在无网络或网络受限环境下的安全、去中心化即时通信问题，同时兼顾全球互联网消息传递。",
-        "solution": "采用蓝牙低功耗网状网络实现离线多跳消息转发，结合基于Nostr协议的互联网消息传递，保障隐私和通信连续性。",
-        "why_now": "随着隐私保护需求提升和灾难应急通信需求增加，结合蓝牙网状网络和去中心化互联网协议的混合通信方案具备现实应用价值。",
-        "noteworthy_technology": "结合蓝牙低功耗网状网络与Nostr协议的双传输架构，端到端加密和多跳路由技术",
-        "technology_impact": "推动去中心化通信技术发展，减少对中心化服务器依赖，提升通信隐私和抗审查能力。",
-        "product_form": "移动端应用（iOS/macOS）",
-        "commercialization_signal": "已发布App Store应用，具备用户端产品形态和市场验证潜力",
-        "maturity": "中等成熟，已有App Store产品和活跃社区支持",
-        "risks": "蓝牙通信范围和多跳能力有限，可能影响大规模覆盖；隐私保护依赖于设备标识管理；专有加密协议可能限制互操作性。",
-        "ai_relevance": "低",
-        "plain_language_explanation": "想象你在一个没有手机信号的山区，仍然可以通过蓝牙连接附近的人群聊天，消息还能通过其他人转发到更远的地方；同时，当有网络时，消息也能通过互联网传递给全球的朋友。这个应用就像一个没有中间人、保护隐私的无线对讲机和聊天室。",
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 2346 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "通俗地说，bitchat 希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
         "scenario_examples": [
-          "户外徒步或露营时，团队成员通过蓝牙网状网络保持联系，无需手机信号",
-          "灾难发生时，传统通信中断，救援人员利用该应用实现离线消息传递",
-          "在隐私敏感环境中，用户无需注册账号即可安全地与附近或远程朋友聊天"
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
         ],
         "practical_benefits": [
-          "在无网络环境下实现本地多人即时通信，适合户外活动和灾难应急",
-          "保护用户隐私，无需注册账号或提供手机号，降低信息泄露风险",
-          "自动选择最佳通信路径，提升消息送达率和通信效率"
+          "对 bitchat 的潜在使用者而言，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
         ],
-        "industry_implications": "如果此类去中心化蓝牙网状通信技术成熟并广泛应用，将重塑灾难应急通信、隐私社交和物联网设备间的通信方式，减少对中心化服务器和网络的依赖，提升通信安全性和抗审查能力。",
-        "who_should_care": "户外活动组织者、应急管理机构、隐私社交应用开发者及用户",
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
         "validation_signals": [
-          "App Store下载量和用户评价增长",
-          "社区活跃度和贡献者数量变化",
-          "蓝牙网状网络消息转发成功率和覆盖范围测试数据"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Dual Transport Architecture: Bluetooth mesh for offline + Nostr protocol for internet-based messaging",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/permissionlesstech/bitchat",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "No accounts, no phone numbers, no central servers",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "No accounts, no phone numbers, no central servers",
-            "source_url": "https://github.com/permissionlesstech/bitchat",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Private Message End-to-End Encryption: Noise Protocol for mesh, BitChat private envelopes for Nostr fallback",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "bluetooth mesh chat, IRC vibes",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/permissionlesstech/bitchat",
-            "verification_status": "README 未找到对应原文"
-          },
-          {
-            "claim": "Automatic peer discovery and multi-hop message relay over Bluetooth LE",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Automatic peer discovery and multi-hop message relay over Bluetooth LE",
-            "source_url": "https://github.com/permissionlesstech/bitchat",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Location-Based Channels: Geographic chat rooms using geohash coordinates over global Nostr relays",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
-            "source_excerpt": "",
-            "source_url": "https://github.com/permissionlesstech/bitchat",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
         "confidence": "中",
-        "priority_score": 8,
-        "evidence": [],
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/permissionlesstech/bitchat",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "amnezia-vpn/amnezia-client",
-        "one_line_summary": "一个支持自建服务器的开源VPN客户端，简化VPN部署并支持多种协议和流量混淆。",
-        "industry_direction": "网络安全",
+        "one_line_summary": "提供名为 amnezia client 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "个人用户",
-          "中小企业",
-          "网络安全爱好者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决用户搭建和使用私有VPN的复杂性，提升网络访问的隐私和安全。",
-        "solution": "提供一个易用的客户端，自动化部署VPN服务器，支持多协议和流量混淆，保障用户网络隐私和访问自由。",
-        "why_now": "全球对网络隐私和访问自由的需求日益增长，技术成熟使得自建VPN更易实现。",
-        "noteworthy_technology": "自动化VPN服务器部署，流量混淆技术",
-        "technology_impact": "自动化部署和流量混淆技术降低了VPN使用门槛，提高了网络隐私保护水平。",
-        "product_form": "开源软件客户端，支持自动部署VPN服务器的功能",
-        "commercialization_signal": "项目活跃且用户基础较大，具备商业化潜力，尤其在隐私保护和网络访问自由领域。",
-        "maturity": "成熟，持续维护中",
-        "risks": "依赖用户自有服务器资源，技术门槛虽降低但仍需一定网络知识。",
-        "ai_relevance": "无直接AI相关性，属于网络安全和隐私保护工具。",
-        "plain_language_explanation": "想象你在家或公司网络中需要安全访问互联网，Amnezia就像一个智能助手，帮你快速搭建自己的VPN通道，保护你的上网隐私，还能绕过网络限制。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 amnezia client 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 515 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，amnezia-client 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 amnezia client 的开源工具或资料。",
         "scenario_examples": [
-          "远程办公时通过自建VPN安全访问公司内网资源。",
-          "在网络受限地区绕过防火墙访问被屏蔽的网站。",
-          "保护公共WiFi环境下的上网隐私，防止数据被窃取。"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "节省了复杂VPN服务器搭建的时间和技术成本。",
-          "提升了网络访问的隐私和安全性，防止数据被监控。",
-          "支持多平台使用，方便不同设备安全上网。"
+          "对 amnezia-client 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该方向持续发展，将推动个人和企业用户更便捷地部署私有VPN，提升网络访问的隐私和安全性，影响网络安全服务市场。",
-        "who_should_care": "网络安全从业者、隐私保护倡导者、需要跨境访问的个人和企业用户。",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "用户下载量和活跃度持续增长。",
-          "社区反馈和问题解决效率提升。",
-          "新增协议和功能的持续集成和发布。"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Amnezia是一个开源VPN客户端，支持用户自建VPN服务器。",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/amnezia-vpn/amnezia-client",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "支持OpenVPN, WireGuard和IKEv2等经典VPN协议。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Classic VPN-protocols: OpenVPN, WireGuard and IKEv2 protocols.",
-            "source_url": "https://github.com/amnezia-vpn/amnezia-client",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "支持流量混淆协议如Cloak和Shadowsocks，提升隐私保护。",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "Amnezia VPN Client (Desktop+Mobile)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/amnezia-vpn/amnezia-client",
-            "verification_status": "README 未找到对应原文"
-          },
-          {
-            "claim": "支持Windows, MacOS, Linux, Android, iOS多平台。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Windows, MacOS, Linux, Android, iOS releases.",
-            "source_url": "https://github.com/amnezia-vpn/amnezia-client",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "自动安装VPN docker容器，简化部署流程。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Amnezia will automatically install VPN docker containers to your server and connect to the VPN.",
-            "source_url": "https://github.com/amnezia-vpn/amnezia-client",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 7,
-        "evidence": [],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/amnezia-vpn/amnezia-client",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "moeru-ai/airi",
-        "one_line_summary": "自托管AI虚拟伴侣，支持实时语音聊天和游戏互动，提升数字生活体验。",
-        "industry_direction": "ai-companion",
+        "one_line_summary": "提供用户自己掌控、支持实时语音和游戏互动的虚拟角色。",
+        "industry_direction": "AI 伴侣与数字角色",
         "target_users": [
-          "数字生活爱好者",
-          "游戏玩家",
-          "注重隐私的技术用户"
+          "数字娱乐用户",
+          "游戏玩家"
         ],
-        "problem_solved": "解决了用户在数字生活中缺乏个性化、互动性强且隐私安全的AI伴侣问题。",
-        "solution": "基于AI技术构建的虚拟角色，支持实时语音交互和游戏玩法，用户自托管确保数据安全。",
-        "why_now": "AI技术成熟，用户对个性化虚拟伴侣和隐私保护需求提升，数字娱乐和远程社交需求增长。",
-        "noteworthy_technology": "结合实时语音交互与游戏玩法的AI虚拟角色技术。",
-        "technology_impact": "推动AI虚拟伴侣技术与游戏互动的深度融合，提升数字娱乐和社交体验。",
-        "product_form": "开源软件，提供多平台安装包和Web访问。",
-        "commercialization_signal": "提供多平台安装包和活跃社区，具备商业化潜力。",
-        "maturity": "中高",
-        "risks": "依赖用户技术能力进行自托管，可能限制部分用户群体。",
-        "ai_relevance": "高度相关，属于AI虚拟伴侣和数字生活领域。",
-        "plain_language_explanation": "想象你有一个虚拟的朋友，不仅能和你语音聊天，还能陪你一起玩Minecraft或Factorio游戏。这个朋友是AI驱动的，能理解你、陪伴你，而且你可以自己掌控它，保证隐私安全。",
+        "problem_solved": "现有助手缺少持续人格、实时陪伴和跨场景互动。",
+        "solution": "提供用户自己掌控、支持实时语音和游戏互动的虚拟角色。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 572 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音与可行动数字角色",
+        "technology_impact": "AI 产品从回答问题走向陪伴和参与活动。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "长期留存、情感依赖、内容安全和使用门槛仍需验证。",
+        "ai_relevance": "AI 产品从回答问题走向陪伴和参与活动。",
+        "plain_language_explanation": "通俗地说，airi 希望解决的是：现有助手缺少持续人格、实时陪伴和跨场景互动。 它的办法是：提供用户自己掌控、支持实时语音和游戏互动的虚拟角色。",
         "scenario_examples": [
-          "远程工作时，AI伴侣通过语音聊天缓解孤独感。",
-          "游戏玩家与AI伴侣一起玩Minecraft，提升游戏体验。",
-          "用户在家中通过AI伴侣进行日常对话和娱乐，保障隐私。"
+          "例如数字娱乐用户把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "提升远程社交体验，减少孤独感。",
-          "通过游戏互动增强用户参与感和乐趣。",
-          "自托管保障用户数据隐私，适合注重隐私的用户。"
+          "对 airi 的潜在使用者而言，AI 产品从回答问题走向陪伴和参与活动。",
+          "降低采用相关能力的操作门槛"
         ],
-        "industry_implications": "如果该方向成熟，将推动虚拟伴侣和数字生活服务行业的变革，尤其在娱乐、社交和隐私保护环节。",
-        "who_should_care": "虚拟伴侣开发者、数字娱乐公司、游戏厂商、隐私安全领域企业。",
+        "industry_implications": "AI 产品从回答问题走向陪伴和参与活动。",
+        "who_should_care": "数字娱乐用户、游戏玩家",
         "validation_signals": [
-          "用户活跃度和社区增长速度。",
-          "多平台安装包下载量和使用反馈。",
-          "AI伴侣在游戏中的表现和用户互动质量。"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Re-creating Neuro-sama, a soul container of AI waifu / virtual characters to bring them into our world.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Re-creating Neuro-sama, a soul container of AI waifu / virtual characters to bring them into our world.",
-            "source_url": "https://github.com/moeru-ai/airi",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Capable of realtime voice chat, Minecraft, Factorio playing.",
+            "claim": "项目位列当日 Trending 第 3 名",
             "claim_type": "已验证事实",
             "source_kind": "github_metadata",
             "source_excerpt": "",
@@ -704,16 +641,16 @@
             "verification_status": "结构化数据核对"
           },
           {
-            "claim": "Web / macOS / Windows supported.",
+            "claim": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
             "claim_type": "已验证事实",
             "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/moeru-ai/airi",
-            "verification_status": "结构化数据核对"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 85,
+        "confidence": "中",
+        "priority_score": 91,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -721,74 +658,61 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "opengeos/GeoLibre",
-        "one_line_summary": "轻量级云原生GIS平台，支持跨端运行和本地数据隐私保护",
-        "industry_direction": "地理空间数据分析",
+        "one_line_summary": "提供跨浏览器、桌面、移动端和研究环境的轻量地理分析产品。",
+        "industry_direction": "地理空间分析产品",
         "target_users": [
-          "GIS专业人员",
-          "数据科学家",
-          "城市规划师",
+          "城市规划人员",
           "环境研究人员"
         ],
-        "problem_solved": "解决传统GIS软件跨设备使用不便、安装复杂及数据隐私风险问题",
-        "solution": "提供一个轻量、跨平台且支持本地数据处理的GIS工具，方便用户随时随地进行地理空间数据可视化和分析",
-        "why_now": "云计算普及和数据隐私法规推动对轻量跨端GIS工具的需求增加，技术成熟支持本地高效空间数据处理",
-        "noteworthy_technology": "DuckDB-WASM Spatial实现本地高效空间数据处理，Tauri实现跨平台轻量桌面应用",
-        "technology_impact": "DuckDB-WASM Spatial技术使得复杂空间数据可以在本地高效处理，减少对云端依赖，提升数据隐私和响应速度",
-        "product_form": "云原生GIS平台，支持Web、桌面、移动端及Jupyter笔记本",
-        "commercialization_signal": "多平台安装包和在线版本发布，支持插件扩展，显示产品成熟和商业化潜力",
-        "maturity": "中等成熟，已有多平台版本和活跃社区",
-        "risks": "依赖用户设备性能，复杂大规模数据处理可能受限",
-        "ai_relevance": "无直接AI相关性，但地理空间数据分析是AI应用的重要数据来源，间接相关",
-        "plain_language_explanation": "想象你是城市规划师或环境分析师，过去需要安装复杂的软件在不同设备上查看和分析地图数据。GeoLibre就像一个万能地图工具箱，无论你用电脑、手机还是浏览器，都能快速打开地图，分析地理信息，而且数据都保存在你自己设备上，不用担心泄露。",
+        "problem_solved": "传统地理工具安装复杂、跨设备协作困难且可能要求上传数据。",
+        "solution": "提供跨浏览器、桌面、移动端和研究环境的轻量地理分析产品。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 420 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "本地处理与跨端地理可视化",
+        "technology_impact": "空间数据更容易进入 AI 与业务决策流程。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "大规模性能、专业功能深度和组织协作能力仍需验证。",
+        "ai_relevance": "空间数据更容易进入 AI 与业务决策流程。",
+        "plain_language_explanation": "通俗地说，GeoLibre 希望解决的是：传统地理工具安装复杂、跨设备协作困难且可能要求上传数据。 它的办法是：提供跨浏览器、桌面、移动端和研究环境的轻量地理分析产品。",
         "scenario_examples": [
-          "城市规划师在不同设备上查看和分析城市建筑和交通数据",
-          "环境科学家使用Jupyter笔记本结合Python进行地理空间数据分析",
-          "GIS分析师通过浏览器快速共享和展示地理数据项目"
+          "例如城市规划人员把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "跨设备无缝使用，节省安装和配置时间",
-          "本地数据处理，保障隐私安全",
-          "支持3D和时间序列地理数据，提升分析深度和直观性"
+          "对 GeoLibre 的潜在使用者而言，空间数据更容易进入 AI 与业务决策流程。",
+          "降低采用相关能力的操作门槛"
         ],
-        "industry_implications": "如果GeoLibre广泛采用，将推动GIS行业向云原生、跨端和隐私保护方向发展，降低GIS工具使用门槛，促进地理空间数据在AI模型训练和应用中的集成",
-        "who_should_care": "GIS行业从业者、数据科学家、城市规划和环境研究机构",
+        "industry_implications": "空间数据更容易进入 AI 与业务决策流程。",
+        "who_should_care": "城市规划人员、环境研究人员",
         "validation_signals": [
-          "用户活跃度和下载量持续增长",
-          "社区插件数量和质量提升",
-          "实际项目中采用案例增加"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "A free and open-source, lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "A free and open-source, lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data.",
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/opengeos/GeoLibre",
-            "verification_status": "原文匹配"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "It runs everywhere you do, in the web browser, on the desktop, on mobile, and inside Jupyter notebooks, all while keeping your data local and private.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "It runs everywhere you do, in the web browser, on the desktop, on mobile, and inside Jupyter notebooks, all while keeping your data local and private.",
+            "claim": "A lightweight, cloud-native GIS platform for visualizing, exploring, and analyzing geospatial data. It runs in the web browser, on the desktop, on mobile, and inside Jupyter notebooks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/opengeos/GeoLibre",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "GeoLibre is built with Tauri v2, React, TypeScript, MapLibre GL JS, DuckDB-WASM Spatial, and deck.gl.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "GeoLibre is built with **Tauri v2**, **React**, **TypeScript**, **MapLibre GL JS**, **DuckDB-WASM Spatial**, and **deck.gl**.",
-            "source_url": "https://github.com/opengeos/GeoLibre",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
         "confidence": "中",
-        "priority_score": 75,
+        "priority_score": 88,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -796,73 +720,60 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "yorukot/superfile",
-        "one_line_summary": "一款现代化、跨平台的终端文件管理器，提升命令行文件操作体验",
-        "industry_direction": "开发者工具",
+        "one_line_summary": "提供现代化文件管理体验。",
+        "industry_direction": "个人生产力工具",
         "target_users": [
-          "开发者",
-          "运维工程师",
-          "终端用户"
+          "管理大量本地文件的专业用户"
         ],
-        "problem_solved": "解决传统命令行文件管理界面不友好、操作繁琐的问题",
-        "solution": "提供一个现代化、易用且跨平台的终端文件管理工具，支持常见文件操作和快捷键",
-        "why_now": "随着终端工具现代化趋势和跨平台需求增长，用户对高效终端文件管理工具的需求提升",
-        "noteworthy_technology": "基于Go语言开发，采用现代终端UI框架Bubbletea",
-        "technology_impact": "提升终端环境中文件管理效率，间接支持AI开发和运维流程",
-        "product_form": "开源软件，命令行终端应用",
-        "commercialization_signal": "多平台安装包和活跃社区表明具备一定商业推广潜力",
-        "maturity": "中等成熟度，已有稳定版本和用户基础",
-        "risks": "作为非AI产品，市场竞争激烈，需持续创新和社区支持",
-        "ai_relevance": "无直接AI相关性，但作为开发者工具可辅助AI工程师日常工作",
-        "plain_language_explanation": "superfile就像是命令行里的智能文件柜，帮助你快速浏览、管理电脑里的文件和文件夹。比如你在写代码时，可以用它快速找到项目文件，移动或删除不需要的文件，节省了用鼠标点来点去的时间。",
+        "problem_solved": "大量本地文件的浏览和整理效率低。",
+        "solution": "提供现代化文件管理体验。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 600 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "无特别 AI 技术",
+        "technology_impact": "对 AI 行业主要是本地文件工作流入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "与 AI 行业关联较弱，热度不能解读为 AI 趋势。",
+        "ai_relevance": "对 AI 行业主要是本地文件工作流入口。",
+        "plain_language_explanation": "通俗地说，superfile 希望解决的是：大量本地文件的浏览和整理效率低。 它的办法是：提供现代化文件管理体验。",
         "scenario_examples": [
-          "AI工程师在Linux服务器上快速浏览和管理训练数据文件",
-          "运维人员通过终端快速定位日志文件并进行操作",
-          "开发者在多平台环境下统一使用同一文件管理工具，提升工作效率"
+          "例如管理大量本地文件的专业用户把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "提升命令行文件操作效率，减少切换图形界面的时间",
-          "支持多平台，方便不同操作系统的开发者统一使用",
-          "现代UI设计，降低学习成本，提升使用体验"
+          "对 superfile 的潜在使用者而言，对 AI 行业主要是本地文件工作流入口。",
+          "降低采用相关能力的操作门槛"
         ],
-        "industry_implications": "如果终端文件管理工具持续优化，将提升开发者和运维人员的工作效率，间接促进AI项目开发环境的稳定性和效率",
-        "who_should_care": "软件开发者、运维工程师、AI工程师及需要高效终端文件管理的技术人员",
+        "industry_implications": "对 AI 行业主要是本地文件工作流入口。",
+        "who_should_care": "管理大量本地文件的专业用户",
         "validation_signals": [
-          "GitHub星标持续增长",
-          "社区活跃度和贡献者数量增加",
-          "多平台安装包下载量提升"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "superfile is supported by the community.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "<div align=\"center\"> <h4>superfile is supported by the community.</h4> <a href=\"https://ko-fi.com/yorukot\"> <img alt=\"Donate to superfile on Ko-fi\" src=\"https://ko-fi.com/img/githubbutton_sm.svg\"> </a> <hr> </div>",
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/yorukot/superfile",
-            "verification_status": "原文匹配"
+            "verification_status": "结构化数据核对"
           },
           {
             "claim": "Pretty fancy and modern terminal file manager",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/yorukot/superfile",
-            "verification_status": "README 未找到对应原文"
-          },
-          {
-            "claim": "支持Linux、macOS和Windows系统",
-            "claim_type": "分析判断",
-            "source_kind": "analysis",
-            "source_excerpt": "",
-            "source_url": "https://github.com/yorukot/superfile",
-            "verification_status": "分析推断，需后续验证"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
         "confidence": "中",
-        "priority_score": 75,
+        "priority_score": 85,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -870,82 +781,60 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "NanmiCoder/MediaCrawler",
-        "one_line_summary": "一款支持多主流自媒体平台的多功能数据爬取工具，降低技术门槛，助力内容数据采集。",
-        "industry_direction": "数据采集与处理",
+        "one_line_summary": "提供名为 MediaCrawler 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "市场调研人员",
-          "内容运营人员",
-          "数据分析师",
-          "舆情监控团队"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决了多平台自媒体公开数据采集难、技术门槛高、登录验证复杂等问题。",
-        "solution": "基于浏览器自动化技术，利用登录态缓存和JS表达式获取参数，支持多平台多功能数据采集，降低逆向难度。",
-        "why_now": "自媒体内容爆炸增长，数据驱动决策需求强烈，技术门槛降低使得多平台数据采集成为可能。",
-        "noteworthy_technology": "基于浏览器自动化的登录态保持与参数获取技术，避免复杂逆向",
-        "technology_impact": "通过简化数据采集流程和技术门槛，推动自媒体数据分析和AI驱动内容理解的发展。",
-        "product_form": "开源软件工具，提供命令行及脚本接口",
-        "commercialization_signal": "Pro版本订阅支持及企业级功能暗示商业化尝试",
-        "maturity": "成熟",
-        "risks": "爬虫涉及法律风险，项目声明仅限学习用途，商业使用需谨慎合规",
-        "ai_relevance": "中",
-        "plain_language_explanation": "就像给市场调研员配备了一台能自动帮他从多个社交平台抓取评论和帖子内容的机器人，省去手动查找和复制的繁琐。它还能保存登录状态，避免频繁登录验证，支持多账号和代理，保证数据抓取稳定。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 MediaCrawler 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 362 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，MediaCrawler 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 MediaCrawler 的开源工具或资料。",
         "scenario_examples": [
-          "市场调研团队自动采集抖音和微博的用户评论进行情感分析",
-          "内容运营人员批量抓取小红书和知乎的热门帖子及评论，辅助内容策划",
-          "舆情监控部门实时获取B站和贴吧的相关话题讨论，快速响应热点事件"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "节省大量人工收集自媒体评论和帖子时间",
-          "支持多平台统一采集，方便综合分析",
-          "通过评论词云等功能快速洞察用户关注点"
+          "对 MediaCrawler 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该方向成熟，将极大提升自媒体内容数据获取效率，推动内容分析、舆情监控和市场研究等环节自动化和智能化。",
-        "who_should_care": "市场调研、内容运营、数据分析、舆情监控等岗位及相关企业应关注",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "Pro版本订阅用户增长情况",
-          "多平台数据采集稳定性和覆盖率提升",
-          "社区和企业用户反馈及案例分享"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "基于 Playwright 浏览器自动化框架登录保存登录态",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "- **核心技术**：基于 [Playwright](https://playwright.dev/) 浏览器自动化框架登录保存登录态",
-            "source_url": "https://github.com/NanmiCoder/MediaCrawler",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "无需逆向复杂的加密算法，大幅降低技术门槛",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "- **优势特点**：无需逆向复杂的加密算法，大幅降低技术门槛",
-            "source_url": "https://github.com/NanmiCoder/MediaCrawler",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "一个功能强大的**多平台自媒体数据采集工具**，支持小红书、抖音、快手、B站、微博、贴吧、知乎等主流平台的公开信息抓取。",
-            "source_url": "https://github.com/NanmiCoder/MediaCrawler",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "MediaCrawlerPro版本具备断点续爬、多账号+IP代理池支持、去除Playwright依赖等企业级特性",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/NanmiCoder/MediaCrawler",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/NanmiCoder/MediaCrawler",
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "中",
-        "priority_score": 85,
+        "confidence": "低",
+        "priority_score": 82,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -953,90 +842,60 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "pbakaus/impeccable",
-        "one_line_summary": "面向AI编码代理的前端设计语言和工具，提供丰富命令和检测规则，提升设计质量和效率。",
-        "industry_direction": "ai_productivity_tools",
+        "one_line_summary": "提供名为 impeccable 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "产品经理",
-          "UI/UX设计师",
-          "前端开发工程师",
-          "AI辅助设计工具开发者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决AI生成前端设计风格单一、质量不稳定、缺乏专业设计指导的问题。",
-        "solution": "通过统一设计语言和丰富命令，结合确定性检测规则和AI辅助，系统化提升AI生成前端设计的质量和多样性。",
-        "why_now": "随着AI辅助设计需求激增，传统设计指导难以满足多样化和高质量要求，Impeccable通过系统化设计语言和检测规则应运而生。",
-        "noteworthy_technology": "结合确定性规则与LLM辅助的设计质量检测，丰富的命令行设计操作集成，实时浏览器迭代能力。",
-        "technology_impact": "该项目展示了结合确定性规则与大语言模型辅助的设计质量控制新范式，推动AI设计工具向更专业和自动化方向发展。",
-        "product_form": "命令行工具（CLI）和浏览器扩展插件，集成设计指导和检测功能。",
-        "commercialization_signal": "暂无明确商业化信号",
-        "maturity": "中等成熟",
-        "risks": "依赖预设模板和规则可能限制设计创新，需持续更新规则库以适应多样化设计需求。",
-        "ai_relevance": "高度相关",
-        "plain_language_explanation": "想象你是产品经理或设计师，使用AI辅助设计工具时，常常遇到设计风格单一、重复错误多的问题。Impeccable就像一个专业设计顾问，帮你设定品牌风格、设计规则，并通过一系列命令帮AI优化设计细节，比如调整颜色、布局、字体和动画。它还能自动检查设计中的常见问题，确保设计既美观又实用。你只需在项目中运行简单命令，就能快速得到专业级设计建议和改进方案。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 impeccable 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 847 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，impeccable 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 impeccable 的开源工具或资料。",
         "scenario_examples": [
-          "产品经理用`/impeccable init`快速设定项目设计基调，确保团队和AI设计一致",
-          "设计师用`/impeccable critique`自动审查设计层次和情感表达，提升设计质量",
-          "前端开发用`/impeccable audit`检测无障碍和性能问题，减少上线风险"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "节省设计审查和修改时间，减少反复沟通成本",
-          "提升设计一致性和品牌识别度",
-          "降低设计错误率，提高用户体验质量"
+          "对 impeccable 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该设计语言和工具被广泛采用，将显著提升AI辅助前端设计的效率和质量，减少重复设计错误，推动设计自动化和标准化。",
-        "who_should_care": "产品经理、设计师、前端开发者及AI设计工具厂商应重点关注该项目，因其能显著提升设计效率和质量。",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "社区活跃度持续提升，GitHub star和fork数增长",
-          "用户案例和反馈中体现设计质量明显提升",
-          "集成到主流AI设计工具或平台的合作公告"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Impeccable Design guidance for AI coding agents. 1 skill, 23 commands, live browser iteration, and 60 deterministic detector rules for AI-generated frontend design.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "# Impeccable Design guidance for AI coding agents. 1 skill, 23 commands, live browser iteration, and 60 deterministic detector rules for AI-generated frontend design.",
-            "source_url": "https://github.com/pbakaus/impeccable",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Every model trained on the same SaaS templates. Skip the guidance and you get the same handful of tells on every project: Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, the rounded-square icon tile above every heading.",
-            "claim_type": "分析判断",
-            "source_kind": "analysis",
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/pbakaus/impeccable",
-            "verification_status": "分析推断，需后续验证"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "The CLI and browser extension run the deterministic rules with no LLM and no API key.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "The CLI and browser extension run the deterministic rules with no LLM and no API key.",
+            "claim": "The design language that makes your AI harness better at design.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/pbakaus/impeccable",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Impeccable adds: - One setup flow. `/impeccable init` writes `PRODUCT.md` and offers `DESIGN.md`, so later commands know the audience, brand/product lane, voice, anti-references, colors, type, and components.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Impeccable adds: - **One setup flow.** `/impeccable init` writes `PRODUCT.md` and offers `DESIGN.md`, so later commands know the audience, brand/product lane, voice, anti-references, colors, type, and components.",
-            "source_url": "https://github.com/pbakaus/impeccable",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Avoid overused fonts (Arial, Inter, system defaults) and gray text on colored backgrounds.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Anti-Patterns The skill includes explicit guidance on what to avoid: - Don't use overused fonts (Arial, Inter, system defaults) - Don't use gray text",
-            "source_url": "https://github.com/pbakaus/impeccable",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 85,
+        "confidence": "低",
+        "priority_score": 79,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -1044,382 +903,307 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "shiyu-coder/Kronos",
-        "one_line_summary": "首个开源金融市场K线语言基础模型，支持多任务量化分析与预测",
-        "industry_direction": "金融AI",
+        "one_line_summary": "提供名为 Kronos 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "量化交易员",
-          "金融分析师",
-          "金融科技企业",
-          "投资研究机构"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决金融市场高噪声、多维连续时间序列数据难以直接建模的问题，提供统一基础模型支持多样化量化任务",
-        "solution": "采用专门设计的Tokenizer将连续K线数据离散化，再用大规模自回归Transformer预训练，形成统一基础模型",
-        "why_now": "金融市场数据爆炸增长，传统模型难以高效处理高噪声多维数据，专用基础模型需求迫切，且开源生态成熟支持快速迭代",
-        "noteworthy_technology": "两阶段框架：层次离散化Tokenizer结合自回归Transformer，专门处理高噪声金融K线数据",
-        "technology_impact": "推动金融时间序列数据处理和建模技术进步，促进智能量化分析和自动化交易发展",
-        "product_form": "开源预训练模型及Tokenizer，配套微调脚本和在线演示",
-        "commercialization_signal": "发布微调脚本和在线演示，表明具备实际应用和商业化潜力",
-        "maturity": "中等成熟，已发表论文并被顶会接受，开源社区活跃",
-        "risks": "金融市场数据复杂且受多因素影响，模型预测存在不确定性和风险，需结合专业知识谨慎使用",
-        "ai_relevance": "高度相关，专为金融市场时间序列数据设计的基础模型",
-        "plain_language_explanation": "想象你每天需要分析大量股票或数字货币的价格走势，Kronos就像一个懂金融语言的智能助手，能把复杂的价格数据转成模型能理解的“文字”，然后预测未来走势。它能帮你节省大量手动分析时间，提高决策准确性。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 Kronos 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 441 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，Kronos 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 Kronos 的开源工具或资料。",
         "scenario_examples": [
-          "量化交易团队利用Kronos预测股票或数字货币短期价格走势，优化交易策略",
-          "金融分析师用模型辅助解读复杂K线数据，提升分析效率",
-          "金融科技公司集成Kronos模型，开发智能投顾或风险管理产品"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "自动化处理复杂金融时间序列数据，减少人工分析负担",
-          "提升金融市场走势预测准确率，辅助投资决策",
-          "支持多种规模模型，适配不同企业计算资源和业务需求"
+          "对 Kronos 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该方向成立，将推动金融量化分析和交易策略开发的自动化和智能化，提升市场预测准确性和效率，改变金融数据处理和模型训练环节",
-        "who_should_care": "量化交易团队、金融分析师、金融科技公司及投资研究机构应重点关注",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "AAAI 2026会议论文正式发表及引用情况",
-          "社区微调脚本下载量和使用反馈",
-          "在线演示用户访问量和交互数据"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Kronos是首个开源的金融K线语言基础模型",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Kronos is the **first open-source foundation model** for financial candlesticks (K-lines)",
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/shiyu-coder/Kronos",
-            "verification_status": "原文匹配"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "采用两阶段框架：先量化K线数据为层次离散token，再用自回归Transformer预训练",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "1. A specialized tokenizer first quantizes continuous, multi-dimensional K-line data (OHLCV) into **hierarchical discrete tokens**. 2. A large, autoregressive Transformer is then pre-trained on these tokens",
+            "claim": "Kronos: A Foundation Model for the Language of Financial Markets",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/shiyu-coder/Kronos",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "模型已被AAAI 2026会议接受",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "🚩 **[2025.11.10]** Kronos has been accpeted by AAAI 2026.",
-            "source_url": "https://github.com/shiyu-coder/Kronos",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "支持多种模型规模，参数量从4.1M到数千万不等",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "We release a family of pre-trained models with varying capacities to suit different computational and application needs.",
-            "source_url": "https://github.com/shiyu-coder/Kronos",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "提供微调脚本，方便用户适配自身任务",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "We have released the scripts for fine-tuning! Check them out to adapt Kronos to your own tasks.",
-            "source_url": "https://github.com/shiyu-coder/Kronos",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 9,
-        "evidence": [],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/shiyu-coder/Kronos",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "alibaba/open-code-review",
-        "one_line_summary": "阿里巴巴开源的AI驱动代码审查工具，结合规则引擎和LLM代理，提升代码审查效率和安全性。",
-        "industry_direction": "ai-assisted-development",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
         "target_users": [
-          "软件开发工程师",
-          "安全审计人员",
-          "DevOps工程师"
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
         ],
-        "problem_solved": "解决传统代码审查耗时长、易漏检安全和质量问题，提升代码审查的自动化和智能化水平。",
-        "solution": "结合确定性流水线和大语言模型代理，读取代码差异和上下文，生成结构化、精准的代码审查评论。",
-        "why_now": "随着大语言模型能力提升和软件开发复杂度增加，自动化智能代码审查需求急剧增长。",
-        "noteworthy_technology": "结合确定性流水线与大语言模型代理，支持多模型接口，精准行级注释，内置安全规则集。",
-        "technology_impact": "通过AI辅助代码审查，提升软件开发质量和安全性，推动开发流程智能化升级。",
-        "product_form": "开源命令行工具，支持配置多种大语言模型接口，集成于CI/CD流程。",
-        "commercialization_signal": "阿里巴巴内部大规模使用，开源且提供npm包，具备商业化潜力。",
-        "maturity": "成熟，经过阿里巴巴内部两年大规模验证。",
-        "risks": "依赖大语言模型的准确性和上下文理解能力，可能存在误报或漏报。",
-        "ai_relevance": "高度相关，核心是AI驱动的代码审查工具，结合LLM和规则引擎提升代码质量和安全性。",
-        "plain_language_explanation": "想象你是软件开发团队的一员，平时代码提交后需要同事帮忙检查是否有错误或安全漏洞。Open Code Review就像一个智能助手，自动帮你快速找出代码中的潜在问题，并给出具体行的详细建议。它还能理解整个项目上下文，不只是看改动部分，帮助团队节省大量人工审查时间，提高代码质量。",
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 979 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "通俗地说，open-code-review 希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
         "scenario_examples": [
-          "软件开发团队提交代码后，自动触发Open Code Review生成详细审查报告，减少人工审查负担。",
-          "安全审计团队使用该工具扫描代码库，快速定位潜在安全漏洞。",
-          "新成员接手项目时，利用ocr scan功能审查整个代码文件，快速理解代码质量和潜在问题。"
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
         ],
         "practical_benefits": [
-          "节省人工代码审查时间，提升开发效率",
-          "自动发现安全漏洞和代码缺陷，降低风险",
-          "支持多种主流大语言模型，易于集成现有开发流程"
+          "对 open-code-review 的潜在使用者而言，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
         ],
-        "industry_implications": "如果该方向成熟，将显著提升软件开发中的代码审查效率和质量，尤其在安全漏洞检测和代码规范执行环节。",
-        "who_should_care": "软件开发团队负责人、安全审计团队、DevOps工程师及相关企业。",
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
         "validation_signals": [
-          "GitHub星标持续快速增长",
-          "社区贡献和issue活跃度提升",
-          "更多企业开始在CI/CD流程中集成该工具"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Open Code Review is an AI-powered code review CLI tool.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Open Code Review is an AI-powered code review CLI tool.",
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/alibaba/open-code-review",
-            "verification_status": "原文匹配"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects.",
+            "claim": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/alibaba/open-code-review",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher Precision and F1 with the same underlying model, while consuming only ~1/9 of the tokens and completing reviews faster.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the tokens** and completing reviews faster.",
-            "source_url": "https://github.com/alibaba/open-code-review",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback.",
-            "source_url": "https://github.com/alibaba/open-code-review",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 9,
-        "evidence": [],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/alibaba/open-code-review",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "jenkinsci/jenkins",
-        "one_line_summary": "领先的开源自动化服务器，支持软件开发全流程自动化。",
-        "industry_direction": "devops",
+        "one_line_summary": "自动执行产品构建、测试和发布流程。",
+        "industry_direction": "企业自动化基础设施",
         "target_users": [
-          "软件开发工程师",
-          "DevOps工程师",
-          "运维人员",
-          "AI研发团队"
+          "数字产品团队",
+          "企业 IT 部门"
         ],
-        "problem_solved": "解决软件开发中重复、繁琐的构建、测试和部署任务自动化问题。",
-        "solution": "通过丰富插件和脚本支持，实现软件开发流程的自动化，减少人为干预。",
-        "why_now": "随着软件复杂度提升和AI应用普及，自动化工具需求激增，Jenkins作为成熟方案备受关注。",
-        "noteworthy_technology": "丰富插件生态系统，支持高度定制化自动化流程。",
-        "technology_impact": "自动化工具提升开发效率，缩短产品交付周期，促进AI模型快速迭代和部署。",
-        "product_form": "开源软件，提供多平台安装包和Docker镜像。",
-        "commercialization_signal": "广泛企业级应用，支持多种发行版和长期支持版本，体现成熟商业化能力。",
-        "maturity": "成熟",
-        "risks": "需要一定的配置和维护成本，插件兼容性可能带来稳定性风险。",
-        "ai_relevance": "间接相关，主要作为AI开发和部署的基础设施支持工具。",
-        "plain_language_explanation": "Jenkins就像一个智能助理，帮你自动完成软件开发中的重复工作，比如代码编译、测试和部署，让开发者专注于创新和解决复杂问题。",
+        "problem_solved": "产品更新包含大量重复检查和发布步骤，人工操作容易出错。",
+        "solution": "自动执行产品构建、测试和发布流程。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 180 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "成熟的自动化流水线",
+        "technology_impact": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "成熟系统可能伴随维护复杂度和历史配置负担。",
+        "ai_relevance": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "plain_language_explanation": "通俗地说，jenkins 希望解决的是：产品更新包含大量重复检查和发布步骤，人工操作容易出错。 它的办法是：自动执行产品构建、测试和发布流程。",
         "scenario_examples": [
-          "软件开发团队使用Jenkins自动构建和测试代码，减少手动操作。",
-          "运维团队通过Jenkins自动部署应用，确保部署一致性和快速回滚。",
-          "AI研发团队利用Jenkins自动化训练模型的代码集成和部署流程。"
+          "例如数字产品团队把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "节省大量手动执行构建和测试的时间。",
-          "及时发现代码缺陷，提升软件质量。",
-          "自动部署减少人为错误，加快上线速度。"
+          "对 jenkins 的潜在使用者而言，AI 生成成果仍需可靠检查后才能进入生产环境。",
+          "降低采用相关能力的操作门槛"
         ],
-        "industry_implications": "如果持续集成和自动化工具持续进步，将极大提升软件开发效率，缩短AI模型从开发到部署的周期，推动AI产品快速迭代。",
-        "who_should_care": "软件开发团队、DevOps工程师、AI研发团队及运维人员应重点关注。",
+        "industry_implications": "AI 生成成果仍需可靠检查后才能进入生产环境。",
+        "who_should_care": "数字产品团队、企业 IT 部门",
         "validation_signals": [
-          "持续的版本更新和社区活跃度。",
-          "企业用户案例和成功部署报告。",
-          "插件生态的增长和多样化。"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Jenkins是领先的开源自动化服务器。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Jenkins is the leading open-source automation server.",
-            "source_url": "https://github.com/jenkinsci/jenkins",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "提供超过2000个插件支持自动化各种任务。",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/jenkinsci/jenkins",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "常用于构建项目、运行测试、静态代码分析和部署。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Jenkins is commonly used for: - Building projects - Running tests to detect bugs and other issues as soon as they are introduced - Static code analysis - Deployment",
+            "claim": "Jenkins automation server",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/jenkinsci/jenkins",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "支持多平台发行，包括Docker镜像和本地安装包。",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "The Jenkins project provides official distributions as WAR files, Docker images, native packages and installers for platforms including several Linux distributions and Windows.",
-            "source_url": "https://github.com/jenkinsci/jenkins",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 8,
-        "evidence": [],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jenkinsci/jenkins",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "bradautomates/claude-video",
-        "one_line_summary": "赋予Claude模型观看并理解视频内容的能力，实现自动视频分析和问答。",
-        "industry_direction": "多模态AI",
+        "one_line_summary": "把视频拆解为画面和文字材料交给 AI 助手分析。",
+        "industry_direction": "多模态内容理解",
         "target_users": [
-          "内容创作者",
-          "市场分析师",
-          "技术支持工程师",
-          "教育培训人员"
+          "内容研究人员",
+          "培训与媒体团队"
         ],
-        "problem_solved": "传统AI模型难以直接理解视频内容，依赖不完整的字幕或标题，无法准确回答视频相关问题。",
-        "solution": "自动下载视频或使用已有字幕，提取关键帧和时间戳转录，结合多模态AI模型进行内容理解和问答。",
-        "why_now": "视频内容爆炸增长，传统文本转录无法满足深度理解需求，多模态AI技术成熟，推动视频智能分析成为可能。",
-        "noteworthy_technology": "结合yt-dlp视频下载、ffmpeg帧提取、Whisper语音识别与Claude多模态理解技术",
-        "technology_impact": "多模态视频理解技术将推动视频内容自动化处理，提升内容分析、检索和生成的智能化水平。",
-        "product_form": "命令行工具及插件，支持多平台和多种视频来源",
-        "commercialization_signal": "项目已集成至多个AI代理技能市场，支持多平台安装，具备实际应用场景和用户基础，显示商业化潜力。",
-        "maturity": "中等成熟，依赖成熟的开源工具和API，结合Claude模型能力",
-        "risks": "依赖外部字幕和语音识别质量，处理长视频时计算资源消耗较大，可能存在理解误差。",
-        "ai_relevance": "高度相关，属于多模态AI视频理解领域",
-        "plain_language_explanation": "就像给AI装上了眼睛和耳朵，能看视频里的画面和听声音，帮你快速找到视频里关键内容，节省反复观看的时间。",
+        "problem_solved": "文本助手无法直接理解长视频中的画面与语音信息。",
+        "solution": "把视频拆解为画面和文字材料交给 AI 助手分析。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 434 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "视频、转写与大模型理解的组合",
+        "technology_impact": "视频可转成可搜索、可总结的工作材料。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "画面抽样遗漏、转写错误、成本、版权和隐私需要关注。",
+        "ai_relevance": "视频可转成可搜索、可总结的工作材料。",
+        "plain_language_explanation": "通俗地说，claude-video 希望解决的是：文本助手无法直接理解长视频中的画面与语音信息。 它的办法是：把视频拆解为画面和文字材料交给 AI 助手分析。",
         "scenario_examples": [
-          "市场分析师快速拆解竞争对手广告视频的开头和结构",
-          "技术支持人员通过客户屏幕录制视频快速定位软件故障",
-          "学习者将课程视频自动转成结构化笔记，提升学习效率"
+          "例如内容研究人员把该能力用于真实工作任务，并在小范围内验证。"
         ],
         "practical_benefits": [
-          "快速获取视频关键内容和结构，节省观看时间",
-          "自动诊断屏幕录制中的问题，提升技术支持效率",
-          "将视频内容转成笔记，方便学习和检索"
+          "对 claude-video 的潜在使用者而言，视频可转成可搜索、可总结的工作材料。",
+          "降低采用相关能力的操作门槛"
         ],
-        "industry_implications": "如果该方向成熟，将极大提升视频内容的自动理解、检索和分析效率，推动内容创作、广告、教育和技术支持等行业环节的智能化升级。",
-        "who_should_care": "内容分析师、市场营销人员、技术支持团队、教育培训机构及AI产品开发者应重点关注。",
+        "industry_implications": "视频可转成可搜索、可总结的工作材料。",
+        "who_should_care": "内容研究人员、培训与媒体团队",
         "validation_signals": [
-          "用户反馈中对视频理解准确性和实用性的评价",
-          "集成平台新增用户数和使用频率",
-          "相关竞品或类似功能的市场反响"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Give Claude the ability to watch any video.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "# /watch **Give Claude the ability to watch any video.**",
-            "source_url": "https://github.com/bradautomates/claude-video",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Claude fetches captions first, downloads only what it needs, extracts frames, pulls a timestamped transcript, and reads every frame as an image.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Claude fetches captions first, downloads only what it needs, extracts frames (scene-aware, or fast keyframes at `efficient` detail), pulls a timestamped transcript (free captions when available, Whisper API as fallback), and `Read`s every frame as an image.",
-            "source_url": "https://github.com/bradautomates/claude-video",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Used for analyzing content structure, diagnosing bugs from screen recordings, summarizing videos, extracting key updates, and converting playlists into notes.",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/bradautomates/claude-video",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bradautomates/claude-video",
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 9,
-        "evidence": [],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/bradautomates/claude-video",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "vudovn/ag-kit",
-        "one_line_summary": "面向Google Antigravity的智能代理工程工具包，支持规则、技能、工作流、持久记忆和安全执行。",
-        "industry_direction": "智能代理框架",
+        "one_line_summary": "提供名为 ag kit 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "AI代理开发者",
-          "自动化运维工程师",
-          "智能助理产品经理",
-          "软件开发团队"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决了构建和管理多角色智能代理系统的复杂性，提供生产级别的规则、技能、工作流管理和安全保障。",
-        "solution": "提供一个基于Google Antigravity的智能代理工程套件，包含规则、技能、工作流、持久化记忆、多角色路由和安全执行钩子，支持复杂代理系统的构建和管理。",
-        "why_now": "随着多角色智能代理需求增长和自动化复杂度提升，市场急需成熟、安全、可生产部署的代理工程工具包，Google Antigravity生态的兴起提供了良好基础。",
-        "noteworthy_technology": "集成持久化上下文管理、智能路由、多角色代理协同和安全执行钩子，提升代理系统的可靠性和安全性",
-        "technology_impact": "通过集成多角色智能路由和持久化上下文管理，提升智能代理系统的协同效率和任务连续性；安全钩子机制增强系统运行安全，降低误操作风险。",
-        "product_form": "开源软件工具包，集成CLI和Antigravity插件，支持本地和生产环境部署",
-        "commercialization_signal": "提供生产环境兼容的完整工具链和安全机制，适合企业级智能代理开发",
-        "maturity": "成熟，具备生产环境支持和完整验证机制",
-        "risks": "依赖Google Antigravity运行时，生态和兼容性风险；需要较高技术门槛配置和维护",
-        "ai_relevance": "高度相关",
-        "plain_language_explanation": "想象你在工作中需要一个智能助手团队，每个助手有不同专长，能协同完成复杂任务。AG Kit就像给你提供了一个完整的工具箱，帮你定义这些助手的规则和技能，管理他们的记忆和任务分配，还内置安全机制防止误操作。这样你可以更高效地自动化项目管理、代码测试和任务协调，节省沟通和重复劳动时间。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 ag kit 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 14 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，ag-kit 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 ag kit 的开源工具或资料。",
         "scenario_examples": [
-          "软件开发团队使用AG Kit定义多角色智能代理自动执行代码测试、构建和部署流程",
-          "运维团队利用持久化记忆和工作流管理，实现自动故障检测和修复任务协调",
-          "项目经理通过智能代理自动分配任务和跟踪进度，减少人工调度负担"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "自动化复杂任务分配和执行，减少人工干预",
-          "持久化记忆帮助智能代理保持上下文，提升连续任务效率",
-          "内置安全钩子防止误删重要文件，保障系统安全"
+          "对 ag-kit 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该工具包被广泛采用，将推动AI代理系统的标准化开发流程，提升多角色智能代理的协同效率和安全性，促进AI在自动化运维、智能助理和复杂任务管理等领域的应用深化。",
-        "who_should_care": "AI代理系统开发者、自动化运维团队、智能助理产品负责人、企业级自动化解决方案提供商",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "Antigravity运行时的生产环境部署案例增加",
-          "社区和企业用户反馈代理系统稳定性和安全性提升",
-          "相关自动化项目采用AG Kit实现多角色任务协同",
-          "安全钩子功能在实际项目中有效防止误操作"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Antigravity-first agent engineering kit with rules, skills, specialist agents, workflows, persistent memory, MCP guidance, orchestration, and a native safety hook.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Antigravity-first agent engineering kit with rules, skills, specialist agents, workflows, persistent memory, MCP guidance, orchestration, and a native safety hook.",
-            "source_url": "https://github.com/vudovn/ag-kit",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "The native hook is deliberately narrow. It blocks root-filesystem deletion, drive formatting, and raw-disk overwrite patterns while allowing normal project cleanup such as deleting dist/ or node_modules/.",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/vudovn/ag-kit",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "Antigravity is the supported production runtime for this release.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Antigravity is the supported production runtime for this release.",
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/vudovn/ag-kit",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 85,
+        "confidence": "低",
+        "priority_score": 64,
         "evidence": [
           {
             "title": "GitHub 项目资料",
@@ -1427,244 +1211,190 @@
             "source_type": "project"
           }
         ],
-        "deep_researched": true
+        "deep_researched": false
       },
       {
         "full_name": "apache/cassandra",
-        "one_line_summary": "一个高可扩展、支持事务的开源分布式数据库，适合大规模数据存储和实时访问。",
-        "industry_direction": "分布式数据库",
+        "one_line_summary": "提供名为 cassandra 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "大数据工程师",
-          "数据库管理员",
-          "AI 数据平台开发者",
-          "云服务提供商"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决了大规模数据存储的扩展性和容错性问题，支持高性能事务处理。",
-        "solution": "通过分布式架构和自动数据分区，实现数据的线性扩展和高容错，支持事务操作。",
-        "why_now": "随着 AI 和大数据应用爆发，传统数据库难以满足扩展和性能需求，分布式数据库成为关键基础设施。",
-        "noteworthy_technology": "自动数据分区与重分区机制，支持线性扩展和高容错。",
-        "technology_impact": "自动分区和容错技术提升了大规模数据系统的可靠性和扩展性，推动云计算和 AI 数据基础设施发展。",
-        "product_form": "开源分布式数据库软件",
-        "commercialization_signal": "项目长期活跃且有企业级用户基础，具备商业化潜力。",
-        "maturity": "成熟",
-        "risks": "部署和维护复杂度较高，需要专业运维支持。",
-        "ai_relevance": "间接相关，主要作为大规模数据存储基础设施，支撑 AI 数据处理和训练。",
-        "plain_language_explanation": "想象你在管理一个超大型的客户信息库，数据量巨大且不断增长。Apache Cassandra 就像一个智能的文件柜系统，能自动把文件分散存放在多个柜子里，还能保证你随时能快速找到需要的文件，即使某个柜子坏了也不会丢失数据。它用类似 SQL 的语言操作，门槛低，适合企业快速部署。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 cassandra 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 11 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，cassandra 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 cassandra 的开源工具或资料。",
         "scenario_examples": [
-          "电商平台管理海量用户和订单数据，保证高并发访问和数据一致性。",
-          "AI 训练平台存储和管理大规模训练数据，支持快速读写。",
-          "金融机构实时处理交易数据，确保数据安全和高可用。"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "支持海量数据的高效存储和访问，适合大数据和 AI 训练数据管理。",
-          "自动分区和容错机制减少运维复杂度，提高系统稳定性。",
-          "兼容 SQL 类语言，降低学习成本，方便开发和集成。"
+          "对 cassandra 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果分布式数据库技术持续进步，将极大提升大数据和 AI 训练的数据存储与访问效率，推动云计算和实时分析行业发展。",
-        "who_should_care": "大数据平台架构师、AI 数据工程师、云服务商及需要处理海量数据的企业。",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "企业级用户案例增加，尤其是 AI 和大数据领域。",
-          "社区活跃度和贡献者数量持续增长。",
-          "新版本发布带来性能和功能提升。"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Open source transactional distributed database.",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/apache/cassandra",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "Open source transactional distributed database. Linear scalability and proven fault-tolerance on commodity hardware or cloud infrastructure without compromising performance.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/apache/cassandra",
-            "verification_status": "README 未找到对应原文"
-          },
-          {
-            "claim": "Rows are organized into tables with a required primary key.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Apache Cassandra is a highly-scalable partitioned row store. Rows are organized into tables with a required primary key.",
-            "source_url": "https://github.com/apache/cassandra",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Cassandra Query Language (CQL) is a close relative of SQL.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "The Cassandra Query Language (CQL) is a close relative of SQL.",
-            "source_url": "https://github.com/apache/cassandra",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 8,
-        "evidence": [],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/apache/cassandra",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "mvanhorn/last30days-skill",
-        "one_line_summary": "基于AI代理的多平台实时搜索与用户互动评分，生成精准摘要的智能搜索技能。",
-        "industry_direction": "ai-agent, multi-platform-search, real-time-data, social-media-ai",
+        "one_line_summary": "开放法律 AI 的研究、评测或实验成果，帮助行业判断能力边界。",
+        "industry_direction": "法律 AI 与专业服务研究",
         "target_users": [
-          "销售人员",
-          "产品经理",
-          "市场分析师",
-          "企业决策者"
+          "律师事务所与法务团队",
+          "法律 AI 产品负责人"
         ],
-        "problem_solved": "解决了多平台信息分散、更新滞后和难以快速获取高质量实时内容的问题。",
-        "solution": "通过AI代理并行搜索多个社交和信息平台，基于用户互动数据评分，自动生成内容摘要，提供实时且高相关性的情报。",
-        "why_now": "社交媒体和专业平台信息爆炸，传统搜索引擎难以覆盖和实时更新，AI代理技术成熟使跨平台实时搜索成为可能。",
-        "noteworthy_technology": "跨平台数据融合与基于用户行为的内容评分机制",
-        "technology_impact": "跨平台数据融合和用户行为驱动的内容评分技术将提升信息检索的精准度和时效性，推动智能搜索技术进步。",
-        "product_form": "AI技能插件，支持多平台调用和集成",
-        "commercialization_signal": "项目被推荐为多种AI代理插件，具备实际应用场景和用户基础，显示出商业化潜力。",
-        "maturity": "中等成熟",
-        "risks": "依赖各平台API和授权，可能受限于平台政策变化；信息质量和偏见需持续监控。",
-        "ai_relevance": "高度相关",
-        "plain_language_explanation": "想象你要准备一个重要会议，传统搜索只能给你过时的资料，而这个AI技能能帮你快速浏览Reddit、Twitter、YouTube等多个平台的最新动态，告诉你大家最近都在关注什么，帮你节省大量查找和筛选信息的时间。",
+        "problem_solved": "法律资料量大且错误成本高，通用模型难以直接满足专业准确性要求。",
+        "solution": "开放法律 AI 的研究、评测或实验成果，帮助行业判断能力边界。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 240 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "专业领域 AI 评测",
+        "technology_impact": "法律 AI 的竞争重点是可靠证据、专业流程和责任边界，而非通用问答。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "法律结论必须由专业人员复核，并关注保密、地域法律差异和责任归属。",
+        "ai_relevance": "法律 AI 的竞争重点是可靠证据、专业流程和责任边界，而非通用问答。",
+        "plain_language_explanation": "通俗地说，last30days-skill 希望解决的是：法律资料量大且错误成本高，通用模型难以直接满足专业准确性要求。 它的办法是：开放法律 AI 的研究、评测或实验成果，帮助行业判断能力边界。",
         "scenario_examples": [
-          "销售人员在客户会议前快速了解客户最近动态和行业热点",
-          "产品经理在开发新功能前调研用户反馈和市场趋势",
-          "市场分析师实时跟踪竞争对手动态和行业舆情"
+          "例如法务团队先用它整理案件资料，再由律师核对引用和判断。"
         ],
         "practical_benefits": [
-          "节省信息搜集时间，快速获取最新动态",
-          "提升会议和销售准备的针对性和有效性",
-          "帮助产品开发团队了解用户真实反馈和市场趋势"
+          "对 last30days-skill 的潜在使用者而言，帮助专业团队更快筛选资料",
+          "让法律 AI 的能力和限制更容易被公开检验"
         ],
-        "industry_implications": "如果该方向成立，将改变信息检索和市场调研环节，提升企业对实时动态的把控能力，增强决策的时效性和准确性。",
-        "who_should_care": "销售、产品、市场和企业战略岗位，以及需要实时情报支持的企业和机构。",
+        "industry_implications": "法律 AI 的竞争重点是可靠证据、专业流程和责任边界，而非通用问答。",
+        "who_should_care": "律师事务所与法务团队、法律 AI 产品负责人",
         "validation_signals": [
-          "用户活跃度和插件安装量持续增长",
-          "实际应用案例和用户反馈数量增加",
-          "支持平台数量和数据源持续扩展"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "An AI agent-led search engine scored by upvotes, likes, and real money - not editors.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "An AI agent-led search engine scored by upvotes, likes, and real money - not editors.",
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/mvanhorn/last30days-skill",
-            "verification_status": "原文匹配"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "/last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "/last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief.",
+            "claim": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/mvanhorn/last30days-skill",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "You can't get this search anywhere else because no single AI has access to all of it.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "You can't get this search anywhere else because no single AI has access to all of it.",
-            "source_url": "https://github.com/mvanhorn/last30days-skill",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Google search doesn't touch Reddit comments or X posts.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Google search doesn't touch Reddit comments or X posts.",
-            "source_url": "https://github.com/mvanhorn/last30days-skill",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "ChatGPT has a deal with Reddit but can't search X or TikTok.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "ChatGPT has a deal with Reddit but can't search X or TikTok.",
-            "source_url": "https://github.com/mvanhorn/last30days-skill",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 9,
-        "evidence": [],
+        "confidence": "中",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mvanhorn/last30days-skill",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       },
       {
         "full_name": "ocornut/imgui",
-        "one_line_summary": "面向程序员的轻量级高性能即时模式C++图形用户界面库，适合游戏和实时3D工具开发。",
-        "industry_direction": "ui_toolkit",
+        "one_line_summary": "提供名为 imgui 的开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
         "target_users": [
-          "游戏开发者",
-          "实时3D应用开发者",
-          "工具链开发者"
+          "评估数字工具的产品负责人"
         ],
-        "problem_solved": "解决程序员在开发内容创作和调试工具时，快速构建动态、响应式界面且减少状态管理复杂度的问题。",
-        "solution": "提供一个轻量、无依赖、跨平台的即时模式GUI库，简化界面开发和状态管理。",
-        "why_now": "随着游戏和实时3D应用复杂度提升，开发者对快速迭代和高效调试工具需求增加，Dear ImGui满足这一需求。",
-        "noteworthy_technology": "即时模式GUI设计，极简状态管理，跨平台无依赖架构。",
-        "technology_impact": "即时模式GUI设计减少了UI状态同步错误，提高开发效率，推动游戏和实时应用工具开发革新。",
-        "product_form": "开源C++库",
-        "commercialization_signal": "项目接受企业赞助和支持合同，显示商业化意图和潜力。",
-        "maturity": "成熟",
-        "risks": "不支持完整国际化和无障碍功能，限制了面向普通终端用户的应用场景。",
-        "ai_relevance": "无直接AI相关性，但可作为AI工具开发的UI基础",
-        "plain_language_explanation": "Dear ImGui就像是程序员的快速搭建界面工具箱，帮助他们快速做出调试面板、数据可视化窗口或内容编辑器，而不需要花大量时间设计复杂的界面。它非常轻便，能在各种设备和平台上运行，特别适合游戏开发和实时3D应用。",
+        "problem_solved": "项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。",
+        "solution": "提供名为 imgui 的开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 51 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "通俗地说，imgui 希望解决的是：项目资料显示它在解决一个具体工作问题，但与 AI 行业的直接关系尚不明确。 它的办法是：提供名为 imgui 的开源工具或资料。",
         "scenario_examples": [
-          "游戏开发中快速搭建调试面板查看实时数据",
-          "实时3D应用中创建内容编辑器界面",
-          "嵌入式设备上开发自定义工具界面"
+          "例如产品团队先确认它是否适用于自己的流程，再进行小范围试用。"
         ],
         "practical_benefits": [
-          "节省开发调试工具界面时间",
-          "减少UI状态同步错误",
-          "支持跨平台快速迭代开发"
+          "对 imgui 的潜在使用者而言，为特定工作提供新的工具选择",
+          "帮助团队比较现有方案是否仍然合适"
         ],
-        "industry_implications": "如果该方向持续发展，将推动游戏开发、实时3D应用和嵌入式系统中工具开发效率提升，减少UI开发复杂度。",
-        "who_should_care": "游戏开发团队、实时3D应用开发者、工具链开发者及相关软件公司。",
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
         "validation_signals": [
-          "持续的GitHub Star增长和活跃提交",
-          "主要游戏引擎或工具集成Dear ImGui",
-          "企业赞助合同签订情况"
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
         ],
         "claim_checks": [
           {
-            "claim": "Dear ImGui is a bloat-free graphical user interface library for C++ with minimal dependencies.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "Dear ImGui is a **bloat-free graphical user interface library for C++**.",
-            "source_url": "https://github.com/ocornut/imgui",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "It is fast, portable, renderer agnostic, and self-contained (no external dependencies).",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "It is fast, portable, renderer agnostic, and self-contained (no external dependencies).",
-            "source_url": "https://github.com/ocornut/imgui",
-            "verification_status": "原文匹配"
-          },
-          {
-            "claim": "Designed to enable fast iterations and empower programmers to create content creation tools and visualization/debug tools.",
-            "claim_type": "证据不足",
-            "source_kind": "readme",
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
             "source_excerpt": "",
             "source_url": "https://github.com/ocornut/imgui",
-            "verification_status": "README 未找到对应原文"
+            "verification_status": "结构化数据核对"
           },
           {
-            "claim": "Not supporting full internationalization and accessibility features.",
-            "claim_type": "项目方说法",
-            "source_kind": "readme",
-            "source_excerpt": "full internationalization (right-to-left text, bidirectional text, text shaping etc.) and accessibility features are not supported.",
+            "claim": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
             "source_url": "https://github.com/ocornut/imgui",
-            "verification_status": "原文匹配"
+            "verification_status": "GitHub 项目资料核对"
           }
         ],
-        "confidence": "高",
-        "priority_score": 8,
-        "evidence": [],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ocornut/imgui",
+            "source_type": "project"
+          }
+        ],
         "deep_researched": false
       }
     ]

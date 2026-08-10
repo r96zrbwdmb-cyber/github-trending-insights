@@ -16,7 +16,7 @@ from .clients import HTTPClient, OpenAIClient
 
 PRODUCT_HUNT_API = "https://api.producthunt.com/v2/api/graphql"
 PRODUCT_HUNT_SOURCE = "https://www.producthunt.com/"
-ANALYSIS_VERSION = 1
+ANALYSIS_VERSION = 2
 
 POSTS_QUERY = """
 query DailyPosts($after: DateTime!, $before: DateTime!) {
@@ -283,6 +283,196 @@ def _clean_html(value: str) -> str:
     return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", value)).split())
 
 
+PRODUCT_RULES = [
+    (["product drift", "ai-written code", "prelint"],
+     "AI 生成软件的质量控制", ["使用 AI 开发产品的团队", "产品与工程负责人"],
+     "在 AI 快速改代码后，检查产品行为是否偏离原定需求和规则。",
+     ["更早发现 AI 修改造成的产品偏差", "减少速度提升后返工和验收成本反而上升的问题"],
+     "AI 是被治理的生产工具；产品价值在于检查 AI 生成结果是否仍符合业务要求。"),
+    (["music tutor", "guitar", "playing"],
+     "AI 音乐陪练", ["吉他学习者", "希望提供课后练习的音乐教师"],
+     "用户练琴时获得实时反馈，而不必等到下一次线下课程。",
+     ["缩短动作与反馈之间的等待", "让个人练习更有方向并容易保持频率"],
+     "AI 是实时听辨和反馈能力，但不能完全替代教师对姿势与长期学习计划的判断。"),
+    (["vibe-coded", "paying customers", "app into"],
+     "独立应用商业化", ["用 AI 做出应用的独立创作者", "缺少营销经验的小型产品团队"],
+     "产品做出来后仍不知道怎样定位、获客并转化为付费客户。",
+     ["把注意力从继续开发转向验证付费需求", "降低独立创作者设计销售路径的门槛"],
+     "AI 可能辅助商业建议，但核心价值是产品营销与转化方法。"),
+    (["spawn a team", "give claude code missions", "team of agents"],
+     "AI 开发任务编排", ["同时使用多个编程智能体的开发团队", "管理复杂开发任务的负责人"],
+     "单个编程智能体难以独立覆盖规划、执行和检查等多种角色。",
+     ["把大型开发任务拆给多个角色协作", "让负责人更容易查看任务进度和交付边界"],
+     "AI 智能体是核心执行者，产品负责分工和协同。"),
+    (["hipaa", "healthcare", "clinic", "medical"],
+     "医疗记录与临床工作助手", ["医疗机构和临床工作人员", "重视合规的医疗运营团队"],
+     "临床沟通和记录耗时，同时包含高度敏感的患者信息。",
+     ["减少医务人员整理记录的时间", "在明确合规边界下改善资料回顾和交接"],
+     "AI 可辅助记录与整理，但医疗判断、隐私、HIPAA 合规和错误责任必须由机构验证。"),
+    (["repo-native memory", "memory for coding agents", "coding agents"],
+     "编程智能体记忆与流程管理", ["长期使用编程智能体的软件团队", "希望保留项目上下文的开发者"],
+     "智能体跨任务后容易忘记项目约定、历史决定和上次工作进度。",
+     ["减少每次任务重复解释项目背景", "降低智能体因遗忘约定而重复犯错的概率"],
+     "AI 智能体是使用者，产品提供可保存和审查的项目记忆。"),
+    (["bookmarks", "twitter", "make you read"],
+     "个人信息整理与阅读", ["收藏大量社交内容的知识工作者", "研究和内容创作者"],
+     "收藏内容不断堆积，却缺少整理和重新阅读的机制。",
+     ["把零散收藏变成可回顾的主题", "提高已收藏信息真正被阅读和使用的概率"],
+     "AI 可辅助分类与摘要，但产品核心价值是信息整理和阅读习惯。"),
+    (["assistant", "lives in your texts", "text messages"],
+     "消息入口的个人 AI 助手", ["希望在手机消息中直接使用 AI 的普通用户"],
+     "用户不想为了简单任务反复打开新的 AI 应用和学习复杂界面。",
+     ["在熟悉的消息入口直接获得帮助", "减少应用切换并降低 AI 使用门槛"],
+     "AI 是核心服务能力；消息隐私、身份验证和错误操作是关键风险。"),
+    (["recruiting coordinator", "hiring", "interview"],
+     "招聘流程自动化", ["招聘团队", "需要大量安排候选人沟通的成长型企业"],
+     "候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
+     ["减少面试排期和重复跟进", "让招聘人员把时间放在候选人判断与沟通质量上"],
+     "AI 可承担协调和信息整理，但不应在缺乏监督时决定候选人的公平机会。"),
+    (["video feedback", "editors", "clients"],
+     "视频审阅与客户反馈", ["视频编辑者", "需要审批视频的客户和营销团队"],
+     "视频修改意见分散在聊天和邮件中，时间点与版本难以对应。",
+     ["让反馈直接对应视频位置", "减少编辑者确认版本和解释修改意见的时间"],
+     "AI 不是核心能力；产品价值是审阅协作与版本沟通。"),
+    (["usage", "menu bar", "mission control", "claude code & codex"],
+     "AI 工具使用监控", ["高频使用 Claude、Codex 或 Cursor 的个人和团队"],
+     "多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+     ["更快看清 AI 工具的使用状态", "帮助用户避免额度耗尽或任务失去跟踪"],
+     "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。"),
+    (["terminal", "libghostty", "command line"],
+     "桌面终端工具", ["需要命令行工作的技术用户"],
+     "用户希望获得更轻量、原生且稳定的命令行工作环境。",
+     ["改善高频命令行操作体验", "提供另一种本地开发工具选择"],
+     "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。"),
+    (["body-focused", "hair pulling", "skin picking", "nail biting"],
+     "行为健康自助工具", ["受拔毛、咬甲或皮肤抓挠困扰的人"],
+     "在冲动出现时记录诱因并完成短小练习，逐步减少重复行为。",
+     ["让用户更容易发现行为触发因素", "用低压力的小目标帮助用户坚持行为训练"],
+     "AI 不是产品成立的必要条件；核心价值是行为训练与持续记录。"),
+    (["proxy", "scraping", "success rate", "latency"],
+     "数据采集基础设施评测", ["数据采集团队", "SaaS 与 AI 数据产品团队"],
+     "采购代理服务前，用自己的目标网站比较不同方案的成功率、速度和成本。",
+     ["减少只依据供应商宣传做采购决定的风险", "更快找到适合特定网站的数据采集方案"],
+     "AI 不是核心能力，但 AI 产品的数据采集团队可能使用它。"),
+    (["conference", "sponsor", "exhibit", "speaker"],
+     "B2B 市场与销售情报", ["B2B 市场团队", "销售拓展与合作团队"],
+     "准备会议营销时，查询目标公司参加、赞助或演讲过的活动。",
+     ["减少人工搜集会议名单的时间", "帮助团队优先联系更可能参加行业活动的公司"],
+     "AI 不是核心能力；产品价值来自结构化商业数据。"),
+    (["macros", "calories", "protein", "meal", "nutrition"],
+     "个人营养记录", ["健身与饮食管理用户", "不愿手工搜索食物数据库的人"],
+     "吃完饭拍照或说一句话，快速记录热量、蛋白质、碳水和脂肪。",
+     ["降低每餐手工录入的操作负担", "让营养记录更容易长期坚持"],
+     "AI 主要辅助从照片或语音估算食物信息，最终数值仍需用户校正。"),
+    (["personal crm", "contacts with context", "stay in touch"],
+     "个人关系管理", ["需要长期维护客户与人脉的个人用户", "自由职业者和顾问"],
+     "在手机联系人旁记录背景和跟进线索，避免忘记重要关系。",
+     ["减少记忆人际背景的负担", "帮助用户更有规律地跟进重要联系人"],
+     "未发现 AI 是核心能力；主要价值是联系人上下文和隐私友好的同步。"),
+    (["storage", "disk", "file-type", "allocated space"],
+     "存储空间分析", ["Mac 用户", "管理本地或云端大量文件的专业用户"],
+     "电脑空间不足时，用表格快速找出真正占用空间的文件夹和文件类型。",
+     ["缩短寻找大文件的时间", "降低误删文件和反复清理的成本"],
+     "AI 不是核心能力；它是信息呈现和文件管理工具。"),
+    (["docsalot", "documentation", "publish documentation", "docs site"],
+     "AI 文档生产与维护", ["软件产品团队", "需要维护帮助中心或产品文档的团队"],
+     "让 AI 把初稿整理成可发布的文档站，并在内容变化后持续更新。",
+     ["减少排版、迁移和发布文档的重复工作", "让文档更新更容易跟上产品变化"],
+     "AI 是核心执行者，负责创建和维护内容；人工审批决定最终发布。"),
+    (["voice", "dictation", "say it", "speech"],
+     "语音原生应用与操作", ["希望减少键盘操作的知识工作者", "需要免手操作的用户"],
+     "用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+     ["减少打字和在应用之间切换", "让非技术用户用说话的方式创建个性化工具"],
+     "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。"),
+    (["creative agent", "creative workflows", "content", "creator"],
+     "创意智能体工作系统", ["内容创作者", "社交媒体与创意团队"],
+     "从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+     ["减少创意项目中的跨工具协调", "让小团队覆盖原本需要多种专业角色的工作"],
+     "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。"),
+    (["agents work together", "agentconnect", "permissions", "workspace", "memory"],
+     "企业多智能体协作", ["部署多个 AI 助手的企业团队", "AI 运营与安全负责人"],
+     "在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+     ["减少团队管理多个智能体入口的混乱", "让智能体协作过程更可见、更可控"],
+     "AI 是核心执行主体；平台价值在于连接、权限和协作治理。"),
+    (["browser", "clicking", "filling forms", "gmail", "whatsapp"],
+     "浏览器执行型智能体", ["需要处理大量网页事务的知识工作者", "销售、运营和行政团队"],
+     "直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+     ["把 AI 的建议转化为实际完成的操作", "减少重复网页录入和跨系统搬运信息"],
+     "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。"),
+    (["prompt", "leaderboard", "puzzle", "golf"],
+     "AI 提示词训练与娱乐", ["希望练习模型沟通的人", "AI 社区与教育活动组织者"],
+     "通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
+     ["用游戏方式理解模型对措辞的反应", "为 AI 社区提供可分享的挑战内容"],
+     "AI 是游戏对象和核心机制，但产品本身不代表新的模型技术。"),
+]
+
+
+def _product_profile(product: Product) -> tuple:
+    text = " ".join([
+        product.name, product.tagline, product.description,
+        " ".join(product.topics),
+    ]).lower()
+    for keywords, category, customers, scenario, benefits, ai_role in PRODUCT_RULES:
+        if any(keyword in text for keyword in keywords):
+            return category, customers, scenario, benefits, ai_role
+    topic = product.topics[0] if product.topics else "数字产品"
+    return (
+        topic,
+        [f"正在寻找 {product.name} 所代表的{topic}方案的个人或团队"],
+        f"在出现“{product.tagline or product.name}”所描述的需求时，"
+        f"用 {product.name} 完成一次具体任务。",
+        [
+            f"让用户可以直接试用 {product.name} 所提供的解决方式",
+            "帮助用户比较是否能替代当前的手工流程",
+        ],
+        "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
+    )
+
+
+def _pricing_and_conversion(product: Product) -> tuple:
+    excerpt = " ".join(page.excerpt for page in product.source_pages)
+    lower = excerpt.lower()
+    prices = re.findall(
+        r"(?:\$|€|£)\s?\d+(?:\.\d+)?(?:\s*/\s*(?:mo|month|yr|year))?",
+        excerpt,
+        re.I,
+    )
+    unique_prices = list(dict.fromkeys(value.replace(" ", "") for value in prices))[:3]
+    if unique_prices:
+        label = "官网公开价格：" + "、".join(unique_prices)
+        if any(word in lower for word in ["contact sales", "talk to sales", "book a demo"]):
+            return label + "；另有企业销售方案", "可自助购买，企业客户可联系销售"
+        return label, "官网自助购买"
+    if any(word in lower for word in ["free trial", "start trial", "try for free"]):
+        return "官网提供免费试用，付费价格未确认", "先自助试用，再决定是否购买"
+    if re.search(r"\bfree\b", lower):
+        return "官网提供免费入口；是否有付费方案尚未确认", "官网自助开始使用"
+    if any(word in lower for word in ["contact sales", "talk to sales", "book a demo"]):
+        return "企业询价，具体价格未公开", "预约演示或联系销售"
+    if any(word in lower for word in ["pricing", "per month", "/month"]):
+        return "官网显示存在付费方案，具体价格未能可靠提取", "官网自助购买"
+    return "未公开", "访问官网了解或开始使用"
+
+
+def product_analysis_quality_errors(analysis: Dict[str, Any], expected: int) -> List[str]:
+    products = analysis.get("products", [])
+    errors: List[str] = []
+    if len(products) != expected:
+        errors.append("产品分析数量与榜单不一致")
+    for field_name, label in [
+        ("plain_scenario", "通俗场景"), ("benefits", "实际好处")
+    ]:
+        values = [json.dumps(item.get(field_name), ensure_ascii=False, sort_keys=True)
+                  for item in products]
+        if values and Counter(values).most_common(1)[0][1] > max(3, len(values) // 3):
+            errors.append(f"{label}重复率过高")
+    placeholders = ["需进一步核实", "可从产品官网进一步确认", "目标客户未公开"]
+    if sum(any(word in json.dumps(item, ensure_ascii=False) for word in placeholders)
+           for item in products) > max(3, expected // 3):
+        errors.append("占位式分析过多")
+    return errors
+
+
 def _fallback_analysis(products: List[Product], error: str = "") -> Dict[str, Any]:
     topic_counts = Counter(topic for item in products for topic in item.topics)
     products_result = []
@@ -294,40 +484,35 @@ def _fallback_analysis(products: List[Product], error: str = "") -> Dict[str, An
                 "source_excerpt": product.tagline or product.description,
             }
         ]
-        pricing = "未公开"
-        conversion = "访问官网了解或开始使用"
-        excerpt = " ".join(page.excerpt.lower() for page in product.source_pages)
-        if any(word in excerpt for word in ["free trial", "start free", "try for free"]):
-            pricing = "提供免费试用或免费入口（以官网为准）"
-            conversion = "自助试用"
-        elif any(word in excerpt for word in ["contact sales", "book a demo"]):
-            pricing = "企业询价"
-            conversion = "预约演示或联系销售"
-        elif any(word in excerpt for word in ["pricing", "per month", "/month"]):
-            pricing = "官网提供付费方案，具体价格需人工核对"
-            conversion = "官网自助购买"
+        pricing, conversion = _pricing_and_conversion(product)
+        category, customers, scenario, benefits, ai_role = _product_profile(product)
+        scenario = f"以 {product.name} 为例：{scenario}"
+        benefits = [
+            f"对 {product.name} 的目标用户而言，{benefits[0]}",
+            *benefits[1:],
+        ]
+        if product.source_pages and pricing != "未公开":
+            page = product.source_pages[0]
+            evidence.append({
+                "claim": pricing,
+                "source_url": page.url,
+                "source_excerpt": page.excerpt[:400],
+            })
         products_result.append(
             {
                 "slug": product.slug,
-                "category": product.topics[0] if product.topics else "数字产品",
-                "what_it_sells": product.tagline or product.description or "未公开",
-                "target_customers": ["目标客户未公开"],
-                "problem_solved": product.description or product.tagline or "未公开",
-                "plain_scenario": "可从产品官网进一步确认具体使用场景。",
-                "benefits": ["产品方尚未提供足够资料，需进一步核实"],
+                "category": category,
+                "what_it_sells": f"一款面向上述场景的{category}产品",
+                "target_customers": customers,
+                "problem_solved": f"用户缺少一种简单方式来完成这项任务：{scenario}",
+                "plain_scenario": scenario,
+                "benefits": benefits,
                 "pricing_model": pricing,
                 "conversion_path": conversion,
                 "positioning": product.tagline or "定位未公开",
                 "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-                "differentiation": "差异尚待与竞品核对",
-                "ai_role": (
-                    "可能与 AI 直接相关，需核实具体作用"
-                    if any(
-                        value in (" ".join(product.topics) + product.tagline).lower()
-                        for value in ["ai", "agent", "gpt", "llm"]
-                    )
-                    else "未发现足够证据说明 AI 是核心能力"
-                ),
+                "differentiation": f"分析判断：以“{scenario}”这一具体入口区别于通用工具",
+                "ai_role": ai_role,
                 "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
                 "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
                 "confidence": "低" if not product.source_pages else "中",
@@ -338,21 +523,35 @@ def _fallback_analysis(products: List[Product], error: str = "") -> Dict[str, An
             }
         )
     themes = [f"{name}（{count} 个产品）" for name, count in topic_counts.most_common(5)]
-    return {
+    customer_counts = Counter(
+        value for item in products_result for value in item["target_customers"]
+    )
+    ai_core = sum("AI 是核心" in item["ai_role"] for item in products_result)
+    result = {
         "analysis_version": ANALYSIS_VERSION,
         "available": True,
         "error": error or "使用规则分析；未调用 AI 模型",
         "key_judgments": [
             f"今日完整榜单共分析 {len(products)} 个产品，排名代表 Product Hunt 社区关注。",
             "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+            f"{ai_core}/{len(products)} 个产品可确认 AI 是核心工作机制；"
+            "其余产品不因上榜而被包装成 AI 产品。",
             f"出现较多的产品话题包括：{'、'.join(themes) or '资料不足'}。",
         ],
         "buying_capabilities": themes or ["资料积累后再判断"],
-        "customer_patterns": ["目标客户需要结合官网资料逐项核实"],
+        "customer_patterns": [
+            f"{name}（{count} 个产品）"
+            for name, count in customer_counts.most_common(5)
+        ],
         "business_model_patterns": ["免费入口、订阅和企业询价并存"],
         "new_product_forms": ["观察 AI 是否从附加功能变成产品核心工作流"],
         "products": products_result,
     }
+    errors = product_analysis_quality_errors(result, len(products))
+    if errors:
+        result["available"] = False
+        result["error"] += "；质量检查未通过：" + "、".join(errors)
+    return result
 
 
 def analyze_products(
@@ -425,6 +624,9 @@ def analyze_products(
         result.update(
             {"analysis_version": ANALYSIS_VERSION, "available": True, "error": ""}
         )
+        quality_errors = product_analysis_quality_errors(result, len(products))
+        if quality_errors:
+            raise ValueError("；".join(quality_errors))
         return result
     except Exception as exc:
         return _fallback_analysis(
@@ -462,6 +664,35 @@ def summarize_product_history(
             categories[str(item.get("category", "未分类"))] += 1
             pricing[str(item.get("pricing_model", "未公开"))] += 1
             customers.update(str(value) for value in item.get("target_customers", []))
+    midpoint = len(snapshots) // 2
+    earlier = snapshots[:midpoint]
+    recent = snapshots[midpoint:]
+
+    def category_rates(values: List[Dict[str, Any]]) -> Dict[str, float]:
+        result: Counter[str] = Counter()
+        for value in values:
+            result.update(
+                str(item.get("category", "未分类"))
+                for item in value.get("analysis", {}).get("products", [])
+            )
+        days = max(1, len(values))
+        return {name: count / days for name, count in result.items()}
+
+    earlier_rates = category_rates(earlier)
+    recent_rates = category_rates(recent)
+    changes = sorted(
+        (
+            {
+                "category": name,
+                "change_per_day": round(
+                    recent_rates.get(name, 0) - earlier_rates.get(name, 0), 2
+                ),
+            }
+            for name in set(earlier_rates) | set(recent_rates)
+        ),
+        key=lambda item: item["change_per_day"],
+        reverse=True,
+    )
     return {
         "window_days": window_days,
         "observed_days": len(snapshots),
@@ -469,6 +700,8 @@ def summarize_product_history(
         "top_categories": categories.most_common(6),
         "pricing_patterns": pricing.most_common(5),
         "customer_patterns": customers.most_common(5),
+        "strengthening": [item for item in changes if item["change_per_day"] > 0][:5],
+        "cooling": [item for item in reversed(changes) if item["change_per_day"] < 0][:5],
     }
 
 
@@ -521,8 +754,26 @@ def render_product_report(snapshot: Dict[str, Any]) -> str:
             "",
             "## 过去 7 天 / 30 天",
             "",
-            f"- 7 天窗口：有效观察 {snapshot['trend_7d']['observed_days']}/7 天。",
-            f"- 30 天窗口：有效观察 {snapshot['trend_30d']['observed_days']}/30 天。",
+            f"- **7 天窗口：** 有效观察 {snapshot['trend_7d']['observed_days']}/7 天；"
+            "正在增强："
+            + "、".join(
+                item["category"] for item in snapshot["trend_7d"].get("strengthening", [])
+            )
+            + "；可能降温："
+            + "、".join(
+                item["category"] for item in snapshot["trend_7d"].get("cooling", [])
+            )
+            + "。",
+            f"- **30 天窗口：** 有效观察 {snapshot['trend_30d']['observed_days']}/30 天；"
+            "正在增强："
+            + "、".join(
+                item["category"] for item in snapshot["trend_30d"].get("strengthening", [])
+            )
+            + "；可能降温："
+            + "、".join(
+                item["category"] for item in snapshot["trend_30d"].get("cooling", [])
+            )
+            + "。",
             "",
             "## 数据与证据限制",
             "",

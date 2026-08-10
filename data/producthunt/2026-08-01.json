@@ -498,12 +498,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：RuntimeError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 12 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "7/12 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Productivity（4 个产品）、Artificial Intelligence（4 个产品）、Developer Tools（4 个产品）、Open Source（2 个产品）、Apple（2 个产品）。"
     ],
     "buying_capabilities": [
@@ -514,7 +515,11 @@
       "Apple（2 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "需要命令行工作的技术用户（3 个产品）",
+      "需要处理大量网页事务的知识工作者（2 个产品）",
+      "销售、运营和行政团队（2 个产品）",
+      "正在寻找 DeepSeek-V4-Flash-0731 所代表的API方案的个人或团队（1 个产品）",
+      "高频使用 Claude、Codex 或 Cursor 的个人和团队（1 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -525,22 +530,24 @@
     "products": [
       {
         "slug": "nudgeforme",
-        "category": "Email",
-        "what_it_sells": "AI follow-up agent for missed email opportunities",
+        "category": "浏览器执行型智能体",
+        "what_it_sells": "一款面向上述场景的浏览器执行型智能体产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要处理大量网页事务的知识工作者",
+          "销售、运营和行政团队"
         ],
-        "problem_solved": "NudgeForMe scans your sent conversations, finds threads where someone never replied, and drafts natural follow-ups inside your own mailbox. It starts in draft mode, so you stay in control. You can review each opportunity, select the useful ones, and send from Gmail, Outlook, or IMAP/SMTP. Built by the Snoooz team after processing millions of emails, NudgeForMe is focused on one painful workflow: making sure leads, deals, partnerships, and customer conversations do not quietly go cold.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 NudgeForMe 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+        "plain_scenario": "以 NudgeForMe 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 NudgeForMe 的目标用户而言，把 AI 的建议转化为实际完成的操作",
+          "减少重复网页录入和跨系统搬运信息"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网公开价格：$0、$12/mo、$96/year",
+        "conversion_path": "官网自助购买",
         "positioning": "AI follow-up agent for missed email opportunities",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 NudgeForMe 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -549,6 +556,11 @@
             "claim": "AI follow-up agent for missed email opportunities",
             "source_url": "https://www.producthunt.com/products/nudgeforme?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "AI follow-up agent for missed email opportunities"
+          },
+          {
+            "claim": "官网公开价格：$0、$12/mo、$96/year",
+            "source_url": "https://www.producthunt.com/r/G2YNDDYM6FTUFG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "NudgeForMe - Follow up assistant for your inbox Nudge ForMe How it works Use Cases Pricing Log in Start free Follow up assistant for your inbox AI that finds missed opportunities in your inbox and follows up for you. NudgeForMe scans past conversations for deals, proposals, client requests, intros, and approvals that went quiet, then drafts the next follow-up inside your mailbox. Scan my inbox fre"
           }
         ],
         "strategy_judgments": [
@@ -558,21 +570,22 @@
       {
         "slug": "deepseek-v4-flash-0731",
         "category": "API",
-        "what_it_sells": "Frontier agent intelligence at Flash prices",
+        "what_it_sells": "一款面向上述场景的API产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 DeepSeek-V4-Flash-0731 所代表的API方案的个人或团队"
         ],
-        "problem_solved": "DeepSeek-V4-Flash-0731 is the official release of V4-Flash, featuring a massive leap in agentic capabilities. It outperforms V4-Pro (Preview) on key benchmarks, natively supports the Responses API, and is fully adapted for Codex CLI.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 DeepSeek-V4-Flash-0731 为例：在出现“Frontier agent intelligence at Flash prices”所描述的需求时，用 DeepSeek-V4-Flash-0731 完成一次具体任务。",
+        "plain_scenario": "以 DeepSeek-V4-Flash-0731 为例：在出现“Frontier agent intelligence at Flash prices”所描述的需求时，用 DeepSeek-V4-Flash-0731 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 DeepSeek-V4-Flash-0731 的目标用户而言，让用户可以直接试用 DeepSeek-V4-Flash-0731 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
+        "pricing_model": "官网显示存在付费方案，具体价格未能可靠提取",
         "conversion_path": "官网自助购买",
         "positioning": "Frontier agent intelligence at Flash prices",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 DeepSeek-V4-Flash-0731 为例：在出现“Frontier agent intelligence at Flash prices”所描述的需求时，用 DeepSeek-V4-Flash-0731 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -581,6 +594,11 @@
             "claim": "Frontier agent intelligence at Flash prices",
             "source_url": "https://www.producthunt.com/products/deepseek?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Frontier agent intelligence at Flash prices"
+          },
+          {
+            "claim": "官网显示存在付费方案，具体价格未能可靠提取",
+            "source_url": "https://www.producthunt.com/r/DHPDMPFRNHBRJQ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "deepseek-ai/DeepSeek-V4-Flash-0731 · Hugging Face Hugging Face Models Datasets Spaces Buckets new Docs Enterprise Pricing Website Tasks HuggingChat Collections Languages Organizations Community Blog Posts Daily Papers Hardware Learn Discord Forum GitHub Solutions Team & Enterprise Hugging Face PRO Enterprise Support Inference Providers Inference Endpoints Storage Buckets Log In Sign Up \",\"lstrip\":"
           }
         ],
         "strategy_judgments": [
@@ -589,22 +607,23 @@
       },
       {
         "slug": "port22",
-        "category": "iOS",
-        "what_it_sells": "Claude Code, Codex & more on your phone ",
+        "category": "桌面终端工具",
+        "what_it_sells": "一款面向上述场景的桌面终端工具产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要命令行工作的技术用户"
         ],
-        "problem_solved": "I'd start a long agent run, walk away, and come back to find it had spent 20 minutes waiting on me to approve one file edit. Port22 puts every coding agent running on your Mac onto your phone. See which are working and which are stuck. When one needs permission your phone buzzes and you tap the actual option it offered, not a guessed keystroke. It attaches to what you already run. No wrapper, no config, no new terminal. Free for one Mac and two sessions, every feature on.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Port22 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
+        "plain_scenario": "以 Port22 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Port22 的目标用户而言，改善高频命令行操作体验",
+          "提供另一种本地开发工具选择"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网公开价格：$19.99/year",
+        "conversion_path": "官网自助购买",
         "positioning": "Claude Code, Codex & more on your phone ",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Port22 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -613,6 +632,11 @@
             "claim": "Claude Code, Codex & more on your phone ",
             "source_url": "https://www.producthunt.com/products/port22?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Claude Code, Codex & more on your phone "
+          },
+          {
+            "claim": "官网公开价格：$19.99/year",
+            "source_url": "https://www.producthunt.com/r/Z426QGPUISUCBK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "port22 — your coding agents, in your pocket port22 Agents FAQ Join waitlist Join the waitlist Your coding agents. In your pocket. Run the Mac agent, pair your phone, and drive Claude Code, Codex, or OpenCode from anywhere — reading the live transcript and approving as it works. Join the waitlist Beta out soon Attach to what's already running. port22 drives the session you already started — not a f"
           }
         ],
         "strategy_judgments": [
@@ -621,22 +645,23 @@
       },
       {
         "slug": "agentmicro",
-        "category": "Open Source",
-        "what_it_sells": "Live Codex task status in your macOS menu bar",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "AgentMicro is a local-first macOS menu-bar companion for supervising parallel Codex Desktop and CLI tasks. It surfaces task state, project, elapsed time, and results at a glance, then opens the matching Codex Desktop task with one click. It observes local metadata only and never uploads prompts, responses, source code, or task history.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 AgentMicro 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 AgentMicro 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 AgentMicro 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Live Codex task status in your macOS menu bar",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 AgentMicro 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -645,6 +670,11 @@
             "claim": "Live Codex task status in your macOS menu bar",
             "source_url": "https://www.producthunt.com/products/agentmicro?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Live Codex task status in your macOS menu bar"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/OQQQ3Q6OSVD35Q?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "AgentMicro — Live Codex task status in your macOS menu bar AgentMicro View on GitHub ↗ A LOCAL-FIRST COMPANION FOR CODEX Live Codex task status, in your macOS menu bar. Track parallel Codex tasks, projects, and results without reopening Codex. Download for macOS Read the docs Free and open source · macOS 14+ · Codex Desktop or CLI 01 Know what needs you See thinking, unread results, input requests"
           }
         ],
         "strategy_judgments": [
@@ -653,22 +683,24 @@
       },
       {
         "slug": "yamanote-3d",
-        "category": "Web App",
-        "what_it_sells": "Ride Tokyo’s Yamanote Line in a 3D world",
+        "category": "浏览器执行型智能体",
+        "what_it_sells": "一款面向上述场景的浏览器执行型智能体产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要处理大量网页事务的知识工作者",
+          "销售、运营和行政团队"
         ],
-        "problem_solved": "Yamanote 3D is a free browser experience inspired by Tokyo’s Yamanote Line. Walk through an E235 carriage, sit down, watch the city, listen to announcements, and get off at stations. I built it to have realistic train sounds and city ambience in the background while studying or working. Feedback is very welcome.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Yamanote 3D 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
+        "plain_scenario": "以 Yamanote 3D 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Yamanote 3D 的目标用户而言，把 AI 的建议转化为实际完成的操作",
+          "减少重复网页录入和跨系统搬运信息"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Ride Tokyo’s Yamanote Line in a 3D world",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Yamanote 3D 为例：直接在用户已登录的网页中点击、填写表单并完成跨应用任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心决策和执行能力；账号权限、误操作和敏感数据是主要风险。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -685,22 +717,23 @@
       },
       {
         "slug": "terminalwidget",
-        "category": "Productivity",
-        "what_it_sells": "Put script output in your Desktop/Home screen widgets.",
+        "category": "桌面终端工具",
+        "what_it_sells": "一款面向上述场景的桌面终端工具产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要命令行工作的技术用户"
         ],
-        "problem_solved": "Display command output, progress, sparklines, and images in customizable widgets for macOS, iOS, and iPadOS. Universal app, one-time purchase.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 TerminalWidget 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
+        "plain_scenario": "以 TerminalWidget 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 TerminalWidget 的目标用户而言，改善高频命令行操作体验",
+          "提供另一种本地开发工具选择"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网公开价格：$19.99",
+        "conversion_path": "官网自助购买",
         "positioning": "Put script output in your Desktop/Home screen widgets.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 TerminalWidget 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -709,6 +742,11 @@
             "claim": "Put script output in your Desktop/Home screen widgets.",
             "source_url": "https://www.producthunt.com/products/terminalwidget?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Put script output in your Desktop/Home screen widgets."
+          },
+          {
+            "claim": "官网公开价格：$19.99",
+            "source_url": "https://www.producthunt.com/r/UKIMX63EX5ST2R?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "TerminalWidget for Mac, iPhone, and iPad | Terminal Widget Terminal Widget Menu Home Widgets Integrations AppleScript Shortcuts.app Command Line Tool URL Scheme Recipes Newsletter TestFlight More Apps Put Terminal Output on Your Desktop TerminalWidget lets you send output from commands, scripts, APIs, and Shortcuts directly to widgets across macOS, iOS, and iPadOS with rich formatting, progress ba"
           }
         ],
         "strategy_judgments": [
@@ -717,22 +755,23 @@
       },
       {
         "slug": "terminal-candy",
-        "category": "Mac",
-        "what_it_sells": "A native macOS terminal you can skin and theme",
+        "category": "桌面终端工具",
+        "what_it_sells": "一款面向上述场景的桌面终端工具产品",
         "target_customers": [
-          "目标客户未公开"
+          "需要命令行工作的技术用户"
         ],
-        "problem_solved": "Terminal Candy is a real, native macOS terminal you live inside. Pick a skin — Game Boy, cassette deck, Pip-Boy, or your own art — and draw the terminal square right on it. It pings you (sound + dock bounce) when Claude Code or Codex actually needs input, so you stop babysitting the window. The Skin Builder turns any image into a terminal; 84 palettes, CRT effects, ⌥Space hotkey, community skin marketplace. 14-day free trial, then $10 once — no subscription. macOS 14+, Apple Silicon.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Terminal Candy 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
+        "plain_scenario": "以 Terminal Candy 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Terminal Candy 的目标用户而言，改善高频命令行操作体验",
+          "提供另一种本地开发工具选择"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网公开价格：$10",
+        "conversion_path": "官网自助购买",
         "positioning": "A native macOS terminal you can skin and theme",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Terminal Candy 为例：用户希望获得更轻量、原生且稳定的命令行工作环境。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力，与 AI 行业的关系主要是可作为智能体工具入口。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -741,6 +780,11 @@
             "claim": "A native macOS terminal you can skin and theme",
             "source_url": "https://www.producthunt.com/products/terminal-candy?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "A native macOS terminal you can skin and theme"
+          },
+          {
+            "claim": "官网公开价格：$10",
+            "source_url": "https://www.producthunt.com/r/LF7L5WEVZODLXZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Terminal Candy — Skin Your Claude Code & AI Agent Terminal Skip to content Terminal Candy Skin Builder FAQ Skins Tools we love Account Download Skin Builder FAQ Skins Tools we love Account Download for macOS free to download · try it today Your terminal as anything. A real shell in a native macOS app. Pick a skin, define the terminal square — that's it. Terminal Candy — zsh terminal-candy $ run ~ "
           }
         ],
         "strategy_judgments": [
@@ -749,22 +793,24 @@
       },
       {
         "slug": "basedash-audit-logs",
-        "category": "Artificial Intelligence",
-        "what_it_sells": "Every action in your BI tool, on the record.",
+        "category": "企业多智能体协作",
+        "what_it_sells": "一款面向上述场景的企业多智能体协作产品",
         "target_customers": [
-          "目标客户未公开"
+          "部署多个 AI 助手的企业团队",
+          "AI 运营与安全负责人"
         ],
-        "problem_solved": "Native audit logs for Basedash — every sign-in, query, and configuration change is on the record, including every query the AI runs, attributed and traceable. Answer who saw what, when with one filter, stream events to your SIEM, set retention to match your policy, and pull the log through the API. Built for security reviews and enterprise rollouts, alongside SSO, SCIM, and RBAC. Your BI tool finally has a memory. Every action, on the record.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Basedash Audit Logs 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+        "plain_scenario": "以 Basedash Audit Logs 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Basedash Audit Logs 的目标用户而言，减少团队管理多个智能体入口的混乱",
+          "让智能体协作过程更可见、更可控"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "Every action in your BI tool, on the record.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Basedash Audit Logs 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行主体；平台价值在于连接、权限和协作治理。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -773,6 +819,11 @@
             "claim": "Every action in your BI tool, on the record.",
             "source_url": "https://www.producthunt.com/products/basedash?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Every action in your BI tool, on the record."
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/4BFYBSUOLNVBUR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Introducing Basedash audit logs | Basedash Skip to content Open in new tab Copy logo as SVG Brand guidelines Data sources Features AI data analyst Trusted answers from your data Dashboards Build and share visual reports Warehouse Connect 750+ data sources Embedding Embed charts in your product Insights AI-generated daily data briefings Automations AI-powered data workflows MCP server Connect any A"
           }
         ],
         "strategy_judgments": [
@@ -781,22 +832,24 @@
       },
       {
         "slug": "syncstaq",
-        "category": "Productivity",
-        "what_it_sells": "Stripe billing data, always current in Google Sheets",
+        "category": "语音原生应用与操作",
+        "what_it_sells": "一款面向上述场景的语音原生应用与操作产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望减少键盘操作的知识工作者",
+          "需要免手操作的用户"
         ],
-        "problem_solved": "SyncStaq syncs Stripe billing data into Google Sheets — charges, invoices, invoice line items, customers, subscriptions, payouts and disputes, each in its own structured tab. What's different: most exports and scripts pull by created date, so records that change later (refunds, subscription updates, disputes) quietly go stale. SyncStaq syncs from Stripe's event stream, so your sheet updates when the data changes. Read-only Stripe access. Hourly sync. 14-day free trial.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 SyncStaq 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
+        "plain_scenario": "以 SyncStaq 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 SyncStaq 的目标用户而言，减少打字和在应用之间切换",
+          "让非技术用户用说话的方式创建个性化工具"
         ],
-        "pricing_model": "提供免费试用或免费入口（以官网为准）",
-        "conversion_path": "自助试用",
+        "pricing_model": "官网提供免费试用，付费价格未确认",
+        "conversion_path": "先自助试用，再决定是否购买",
         "positioning": "Stripe billing data, always current in Google Sheets",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 SyncStaq 为例：用一句自然语言创建小应用或直接让电脑完成记录、发送和查询任务。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心能力：负责理解语音意图、生成应用或把指令转成操作。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -805,6 +858,11 @@
             "claim": "Stripe billing data, always current in Google Sheets",
             "source_url": "https://www.producthunt.com/products/syncstaq?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Stripe billing data, always current in Google Sheets"
+          },
+          {
+            "claim": "官网提供免费试用，付费价格未确认",
+            "source_url": "https://www.producthunt.com/r/7AJ3R66DDJFLAR?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "SyncStaq | Stripe billing data in Google Sheets SyncStaq Stripe → Google Sheets How it works Sample Sheet Pricing Log in Your Stripe data, already in Google Sheets. Keep Stripe data flowing into a structured Google Sheet, so you can answer real questions, not fight with exports and stale files. Get started ✓ Ongoing hourly sync ✓ Read-only Stripe access ✓ First sync backfills 6 months ✓ 14-day fre"
           }
         ],
         "strategy_judgments": [
@@ -814,21 +872,22 @@
       {
         "slug": "essaykraft",
         "category": "Writing",
-        "what_it_sells": "Native essay writing app for Mac and iPad ",
+        "what_it_sells": "一款面向上述场景的Writing产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 EssayKraft 所代表的Writing方案的个人或团队"
         ],
-        "problem_solved": "EssayKraft is a native Swift Mac and iPad writing app built for students who are tired of wrestling with reference managers. Write essays, papers and dissertations with a built-in reference manager, automatic citations, rich text formatting and PDF or DOCX export, all in one place. No subscriptions, no accounts, no juggling citation tools. Just a fast, distraction-free writing experience designed specifically for academic work. Buy once, own it forever.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 EssayKraft 为例：在出现“Native essay writing app for Mac and iPad ”所描述的需求时，用 EssayKraft 完成一次具体任务。",
+        "plain_scenario": "以 EssayKraft 为例：在出现“Native essay writing app for Mac and iPad ”所描述的需求时，用 EssayKraft 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 EssayKraft 的目标用户而言，让用户可以直接试用 EssayKraft 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网公开价格：$14.99",
+        "conversion_path": "官网自助购买",
         "positioning": "Native essay writing app for Mac and iPad ",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 EssayKraft 为例：在出现“Native essay writing app for Mac and iPad ”所描述的需求时，用 EssayKraft 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -837,6 +896,11 @@
             "claim": "Native essay writing app for Mac and iPad ",
             "source_url": "https://www.producthunt.com/products/essaykraft?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "Native essay writing app for Mac and iPad "
+          },
+          {
+            "claim": "官网公开价格：$14.99",
+            "source_url": "https://www.producthunt.com/r/Z6QVYVVWL3T2ZZ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "‎EssayKraft App - App Store Search Today Games Apps Arcade Platform iPhone iPad Mac Vision Watch TV EssayKraft Write & manage your references $14.99 Share Age Rating 4+ Years Category Productivity Developer Noah Page Language EN English Size 3.4 MB iPad, Mac A focused writing app for students and academics: paginated editing, automatic citations, built-in reference lookup, and DOCX export. Essay K"
           }
         ],
         "strategy_judgments": [
@@ -845,22 +909,24 @@
       },
       {
         "slug": "kopai",
-        "category": "SaaS",
-        "what_it_sells": " Share your expertise, and let our agents earn for you.",
+        "category": "AI 提示词训练与娱乐",
+        "what_it_sells": "一款面向上述场景的AI 提示词训练与娱乐产品",
         "target_customers": [
-          "目标客户未公开"
+          "希望练习模型沟通的人",
+          "AI 社区与教育活动组织者"
         ],
-        "problem_solved": "Kopai turns your expertise into an AI agent you can sell, priced per message instead of per hour. Upload your knowledge, publish in minutes with no code, and let people pay for instant answers instead of booking your calendar. You keep 70% of everything your agent earns. Built-in evaluation testing, encrypted knowledge bases, and multi-agent orchestration mean it's not a prompt wrapper, it's real infrastructure. We handle discovery, billing, and trust so you can focus on what you know.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Kopai 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
+        "plain_scenario": "以 Kopai 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Kopai 的目标用户而言，用游戏方式理解模型对措辞的反应",
+          "为 AI 社区提供可分享的挑战内容"
         ],
-        "pricing_model": "官网提供付费方案，具体价格需人工核对",
+        "pricing_model": "官网公开价格：$2、$1.00、$1",
         "conversion_path": "官网自助购买",
         "positioning": " Share your expertise, and let our agents earn for you.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Kopai 为例：通过限字数和禁用词的竞赛，练习怎样用更少指令得到目标输出。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是游戏对象和核心机制，但产品本身不代表新的模型技术。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -869,6 +935,11 @@
             "claim": " Share your expertise, and let our agents earn for you.",
             "source_url": "https://www.producthunt.com/products/kopai-the-marketplace-for-ai-agents?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": " Share your expertise, and let our agents earn for you."
+          },
+          {
+            "claim": "官网公开价格：$2、$1.00、$1",
+            "source_url": "https://www.producthunt.com/r/32Z4PUCTZP3CTF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Kopai — Build, Publish, and Sell AI Agents Kopai Marketplace How It Works Docs Sign in Start building Build it · Publish it · Get paid Turn what you know into an agent that earns Turn what you know into an AI agent — build it in minutes, publish it to the marketplace, and let it work for the people who need it. Start building Explore marketplace Free to start · No code required usekopai.com/agents"
           }
         ],
         "strategy_judgments": [
@@ -878,21 +949,22 @@
       {
         "slug": "tandem-18523e81-25b7-43d7-b68b-ad9994f49a57",
         "category": "Tech",
-        "what_it_sells": "AI-native office leasing brokerage",
+        "what_it_sells": "一款面向上述场景的Tech产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Tandem 所代表的Tech方案的个人或团队"
         ],
-        "problem_solved": "Tandem is building an AI-native office leasing brokerage. Every Tandem agent works with an agentic brain behind them. It's watching the market constantly: what came available this morning, what a similar unit actually leased for last month, which landlords are flexible on term, what's about to come back online. Knowing the market stops being one person's job, so it doesn't stop when they go home, and it isn't limited to the buildings they've personally walked.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Tandem 为例：在出现“AI-native office leasing brokerage”所描述的需求时，用 Tandem 完成一次具体任务。",
+        "plain_scenario": "以 Tandem 为例：在出现“AI-native office leasing brokerage”所描述的需求时，用 Tandem 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Tandem 的目标用户而言，让用户可以直接试用 Tandem 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
-        "pricing_model": "未公开",
-        "conversion_path": "访问官网了解或开始使用",
+        "pricing_model": "官网提供免费入口；是否有付费方案尚未确认",
+        "conversion_path": "官网自助开始使用",
         "positioning": "AI-native office leasing brokerage",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Tandem 为例：在出现“AI-native office leasing brokerage”所描述的需求时，用 Tandem 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "中",
@@ -901,6 +973,11 @@
             "claim": "AI-native office leasing brokerage",
             "source_url": "https://www.producthunt.com/products/tandem-11?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
             "source_excerpt": "AI-native office leasing brokerage"
+          },
+          {
+            "claim": "官网提供免费入口；是否有付费方案尚未确认",
+            "source_url": "https://www.producthunt.com/r/GOUD2D2F43WGBJ?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+AI+Industry+Intelligence+Daily+%28ID%3A+294702%29",
+            "source_excerpt": "Tandem | Lease office space at startup speed Sign up Browse offices Saved Tour cart Negotiate Move-in Office Leasing 101 FAQ Sign up Log in Lease office space at startup speed Full-market access. Next-day tours. Expert negotiation. Start my search A smarter way to find & lease office space See the entire market Every available office — across landlords, broker listings, and off-market opportunitie"
           }
         ],
         "strategy_judgments": [
@@ -915,49 +992,117 @@
     "status": "complete",
     "top_categories": [
       [
+        "AI 工具使用监控",
+        7
+      ],
+      [
+        "语音原生应用与操作",
+        6
+      ],
+      [
+        "创意智能体工作系统",
+        5
+      ],
+      [
         "Productivity",
-        16
-      ],
-      [
-        "Design Tools",
-        6
-      ],
-      [
-        "Open Source",
-        6
-      ],
-      [
-        "Artificial Intelligence",
         4
       ],
       [
-        "Mac",
+        "浏览器执行型智能体",
         4
       ],
       [
-        "SaaS",
-        3
+        "编程智能体记忆与流程管理",
+        4
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        55
+        46
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
-        9
+        "官网提供免费入口；是否有付费方案尚未确认",
+        8
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        5
+        "官网提供免费试用，付费价格未确认",
+        4
+      ],
+      [
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        2
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        69
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        7
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        6
+      ],
+      [
+        "需要免手操作的用户",
+        6
+      ],
+      [
+        "内容创作者",
+        5
+      ],
+      [
+        "社交媒体与创意团队",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "桌面终端工具",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Productivity",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Writing",
+        "change_per_day": 0.33
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.33
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "独立应用商业化",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 音乐陪练",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 生成软件的质量控制",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -0.5
+      }
     ]
   },
   "trend_30d": {
@@ -966,49 +1111,117 @@
     "status": "complete",
     "top_categories": [
       [
+        "AI 工具使用监控",
+        7
+      ],
+      [
+        "语音原生应用与操作",
+        6
+      ],
+      [
+        "创意智能体工作系统",
+        5
+      ],
+      [
         "Productivity",
-        16
-      ],
-      [
-        "Design Tools",
-        6
-      ],
-      [
-        "Open Source",
-        6
-      ],
-      [
-        "Artificial Intelligence",
         4
       ],
       [
-        "Mac",
+        "浏览器执行型智能体",
         4
       ],
       [
-        "SaaS",
-        3
+        "编程智能体记忆与流程管理",
+        4
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        55
+        46
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
-        9
+        "官网提供免费入口；是否有付费方案尚未确认",
+        8
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        5
+        "官网提供免费试用，付费价格未确认",
+        4
+      ],
+      [
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        2
+      ],
+      [
+        "官网公开价格：$221.02、$801.75、$14.96",
+        1
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        69
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        7
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        6
+      ],
+      [
+        "需要免手操作的用户",
+        6
+      ],
+      [
+        "内容创作者",
+        5
+      ],
+      [
+        "社交媒体与创意团队",
+        5
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "桌面终端工具",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Productivity",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Writing",
+        "change_per_day": 0.33
+      },
+      {
+        "category": "Music",
+        "change_per_day": 0.33
+      }
+    ],
+    "cooling": [
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "独立应用商业化",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 音乐陪练",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 生成软件的质量控制",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "Design Tools",
+        "change_per_day": -0.5
+      }
     ]
   }
 }

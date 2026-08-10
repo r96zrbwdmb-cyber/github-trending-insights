@@ -22,13 +22,17 @@ from .fallback import build_fallback_analysis
 from .models import IndustryAnalysis, Repository
 from .producthunt import (
     OfficialSiteReader,
+    Product,
     ProductHuntClient,
+    SourcePage,
     analyze_products,
     latest_complete_day,
+    product_analysis_quality_errors,
     producthunt_token,
     render_product_report,
     summarize_product_history,
 )
+from .quality import github_analysis_quality_errors
 from .report import (
     render_daily_report,
     render_periodic_report,
@@ -145,6 +149,22 @@ def run(
         )
     else:
         industry_analysis = (openai or _openai_client()).analyze(repositories)
+        quality_errors = github_analysis_quality_errors(
+            industry_analysis, len(repositories)
+        )
+        if quality_errors:
+            industry_analysis = build_fallback_analysis(
+                repositories,
+                "模型输出质量检查未通过：" + "、".join(quality_errors),
+            )
+            fallback_errors = github_analysis_quality_errors(
+                industry_analysis, len(repositories)
+            )
+            if fallback_errors:
+                raise RuntimeError(
+                    "GitHub 行业分析质量检查未通过："
+                    + "、".join(fallback_errors)
+                )
 
     snapshot = {
         "date": report_date.isoformat(),
@@ -218,6 +238,12 @@ def run_producthunt(
     for product in products:
         site_reader.enrich(product)
     analysis = analyze_products(products, openai or _openai_client())
+    quality_errors = product_analysis_quality_errors(analysis, len(products))
+    if quality_errors or not analysis.get("available"):
+        raise RuntimeError(
+            "Product Hunt 商业分析质量检查未通过："
+            + "、".join(quality_errors or [str(analysis.get("error", "未知错误"))])
+        )
     data_dir = root / "data" / "producthunt"
     snapshot: Dict[str, Any] = {
         "date": report_date.isoformat(),
@@ -354,6 +380,17 @@ def reanalyze(
             if fallback
             else client.analyze(repositories)
         )
+        quality_errors = github_analysis_quality_errors(analysis, len(repositories))
+        if quality_errors:
+            analysis = build_fallback_analysis(
+                repositories, "历史重建时质量检查触发规则分析：" + "、".join(quality_errors)
+            )
+        final_errors = github_analysis_quality_errors(analysis, len(repositories))
+        if final_errors:
+            raise RuntimeError(
+                f"{snapshot['date']} GitHub 历史分析质量不合格："
+                + "、".join(final_errors)
+            )
         snapshot["industry_analysis"] = analysis.to_dict()
         snapshot.pop("ai_analysis", None)
         snapshot.pop("rule_analysis", None)
@@ -385,5 +422,66 @@ def reanalyze(
             ),
         )
         updated.append(report_path)
+    product_dir = data_dir / "producthunt"
+    product_paths = sorted(product_dir.glob("????-??-??.json"))[-days:]
+    for path in product_paths:
+        snapshot = _load_json(path)
+        products: List[Product] = []
+        for value in snapshot.get("products", []):
+            fields = {
+                key: value.get(key)
+                for key in Product.__dataclass_fields__
+                if key != "source_pages"
+            }
+            fields["source_pages"] = [
+                SourcePage(
+                    url=str(page.get("url", "")),
+                    title=str(page.get("title", "")),
+                    excerpt=str(page.get("excerpt", "")),
+                    kind=str(page.get("kind", "官网")),
+                )
+                for page in value.get("source_pages", [])
+            ]
+            products.append(Product(**fields))
+        if not products:
+            continue
+        product_analysis = analyze_products(
+            products, None if fallback else client
+        )
+        product_errors = product_analysis_quality_errors(
+            product_analysis, len(products)
+        )
+        if product_errors or not product_analysis.get("available"):
+            # analyze_products(None) is the deterministic, evidence-based fallback.
+            product_analysis = analyze_products(products, None)
+            product_errors = product_analysis_quality_errors(
+                product_analysis, len(products)
+            )
+        if product_errors or not product_analysis.get("available"):
+            raise RuntimeError(
+                f"{snapshot.get('date')} Product Hunt 历史分析质量不合格："
+                + "、".join(product_errors or [str(product_analysis.get("error", ""))])
+            )
+        snapshot["analysis"] = product_analysis
+        atomic_write(path, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
+
+    # Recalculate Product Hunt rolling windows only after every selected day has
+    # been upgraded, so old template labels cannot leak into newer summaries.
+    for path in product_paths:
+        snapshot = _load_json(path)
+        if not snapshot.get("products"):
+            continue
+        report_date = date.fromisoformat(snapshot["date"])
+        snapshot["trend_7d"] = summarize_product_history(
+            product_dir, report_date, 7
+        )
+        snapshot["trend_30d"] = summarize_product_history(
+            product_dir, report_date, 30
+        )
+        atomic_write(path, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
+        report_path = root / "reports" / "producthunt" / f"{report_date}.md"
+        atomic_write(report_path, render_product_report(snapshot))
+        updated.append(report_path)
     _refresh_navigation(root)
+    build_site(root)
     return updated

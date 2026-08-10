@@ -611,12 +611,13 @@
     }
   ],
   "analysis": {
-    "analysis_version": 1,
+    "analysis_version": 2,
     "available": true,
-    "error": "AI 分析失败，已使用规则分析：RuntimeError",
+    "error": "免费 AI 凭证不可用，已使用规则分析",
     "key_judgments": [
       "今日完整榜单共分析 15 个产品，排名代表 Product Hunt 社区关注。",
       "多数新品仍处于获客和定位验证阶段，不能从首发热度推断商业成功。",
+      "9/15 个产品可确认 AI 是核心工作机制；其余产品不因上榜而被包装成 AI 产品。",
       "出现较多的产品话题包括：Artificial Intelligence（11 个产品）、Developer Tools（5 个产品）、GitHub（3 个产品）、Hiring（2 个产品）、Open Source（2 个产品）。"
     ],
     "buying_capabilities": [
@@ -627,7 +628,11 @@
       "Open Source（2 个产品）"
     ],
     "customer_patterns": [
-      "目标客户需要结合官网资料逐项核实"
+      "内容创作者（2 个产品）",
+      "社交媒体与创意团队（2 个产品）",
+      "招聘团队（2 个产品）",
+      "需要大量安排候选人沟通的成长型企业（2 个产品）",
+      "部署多个 AI 助手的企业团队（2 个产品）"
     ],
     "business_model_patterns": [
       "免费入口、订阅和企业询价并存"
@@ -638,22 +643,24 @@
     "products": [
       {
         "slug": "adant-ai",
-        "category": "Advertising",
-        "what_it_sells": "Claude for viral, high-converting social ads",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "AdAnt AI is a team of Creative Agents that handles Social Ad Strategy, Creation, and Iteration. Built on the strategies our founding team used to generate 50M+ Organic Views and reduce Paid Acquisition Costs by 60% on average, AdAnt AI creates Scroll-Stopping, High-Converting Ads for TikTok, Instagram, and YouTube.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 AdAnt AI 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 AdAnt AI 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 AdAnt AI 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Claude for viral, high-converting social ads",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 AdAnt AI 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -670,22 +677,24 @@
       },
       {
         "slug": "wispr-flow-notetaker",
-        "category": "Notes",
-        "what_it_sells": "Meeting notes that get the details right.",
+        "category": "B2B 市场与销售情报",
+        "what_it_sells": "一款面向上述场景的B2B 市场与销售情报产品",
         "target_customers": [
-          "目标客户未公开"
+          "B2B 市场团队",
+          "销售拓展与合作团队"
         ],
-        "problem_solved": "Your follow-ups are only as good as your meeting notes. Wispr Notetaker gets your words and your speakers right, so your recaps, follow-ups, and answers are too. Before the meeting starts, it checks the invite so names are spelled correctly, and it brings the terminology you've already taught Wispr Flow into every conversation. Your transcripts use real names instead of \"Speaker 1\" and \"Speaker 2,\" and every meeting is ready to pull into Claude or ChatGPT via MCP. Available on Mac. Free to try.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Wispr Flow Notetaker 为例：准备会议营销时，查询目标公司参加、赞助或演讲过的活动。",
+        "plain_scenario": "以 Wispr Flow Notetaker 为例：准备会议营销时，查询目标公司参加、赞助或演讲过的活动。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Wispr Flow Notetaker 的目标用户而言，减少人工搜集会议名单的时间",
+          "帮助团队优先联系更可能参加行业活动的公司"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Meeting notes that get the details right.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Wispr Flow Notetaker 为例：准备会议营销时，查询目标公司参加、赞助或演讲过的活动。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是核心能力；产品价值来自结构化商业数据。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -702,22 +711,24 @@
       },
       {
         "slug": "nextdoor-company",
-        "category": "Hiring",
-        "what_it_sells": "Discover startups hiring near you, on a map",
+        "category": "招聘流程自动化",
+        "what_it_sells": "一款面向上述场景的招聘流程自动化产品",
         "target_customers": [
-          "目标客户未公开"
+          "招聘团队",
+          "需要大量安排候选人沟通的成长型企业"
         ],
-        "problem_solved": "Find startups hiring near you, on a map. 400+ hand curated startups globally, 16,000+ live job openings updated weekly. Filter by work mode: remote, hybrid, or on site. See funding, valuation, and revenue details, verified founder profiles, key investors, and their investment details, all in one place.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 NextDoor.Company 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
+        "plain_scenario": "以 NextDoor.Company 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 NextDoor.Company 的目标用户而言，减少面试排期和重复跟进",
+          "让招聘人员把时间放在候选人判断与沟通质量上"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Discover startups hiring near you, on a map",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 NextDoor.Company 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 可承担协调和信息整理，但不应在缺乏监督时决定候选人的公平机会。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -735,21 +746,22 @@
       {
         "slug": "ngrok-ai-gateway",
         "category": "Software Engineering",
-        "what_it_sells": "One private gateway for every AI model",
+        "what_it_sells": "一款面向上述场景的Software Engineering产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 ngrok AI Gateway 所代表的Software Engineering方案的个人或团队"
         ],
-        "problem_solved": "ngrok AI Gateway provides one hosted gateway for every model: public providers, custom endpoints, and the models you run yourself. Use one key and one URL to route across OpenAI, Anthropic, and self-hosted models with observability, access control, and fallbacks built in. Your private models connect through ngrok’s network, so they sit beside hosted providers without being exposed to the public internet.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 ngrok AI Gateway 为例：在出现“One private gateway for every AI model”所描述的需求时，用 ngrok AI Gateway 完成一次具体任务。",
+        "plain_scenario": "以 ngrok AI Gateway 为例：在出现“One private gateway for every AI model”所描述的需求时，用 ngrok AI Gateway 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 ngrok AI Gateway 的目标用户而言，让用户可以直接试用 ngrok AI Gateway 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "One private gateway for every AI model",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 ngrok AI Gateway 为例：在出现“One private gateway for every AI model”所描述的需求时，用 ngrok AI Gateway 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -766,22 +778,24 @@
       },
       {
         "slug": "cloudflare-wallets",
-        "category": "Developer Tools",
-        "what_it_sells": "the programmable wallet for the agentic Internet",
+        "category": "创意智能体工作系统",
+        "what_it_sells": "一款面向上述场景的创意智能体工作系统产品",
         "target_customers": [
-          "目标客户未公开"
+          "内容创作者",
+          "社交媒体与创意团队"
         ],
-        "problem_solved": "Cloudflare Wallets introduces a programmable wallet layer for the agentic Internet. Built for the future where AI agents can discover, use, and pay for services autonomously, it gives agents a secure way to transact with APIs, content, and digital services. With virtual wallets, spending controls, and machine-friendly payments, Cloudflare is building the financial infrastructure for the next generation of AI applications.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Cloudflare Wallets 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
+        "plain_scenario": "以 Cloudflare Wallets 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Cloudflare Wallets 的目标用户而言，减少创意项目中的跨工具协调",
+          "让小团队覆盖原本需要多种专业角色的工作"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "the programmable wallet for the agentic Internet",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Cloudflare Wallets 为例：从一个创意目标出发，让不同智能体完成研究、制作、监控和修改。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心生产能力，但成品质量、版权与品牌一致性仍需人工把关。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -798,22 +812,24 @@
       },
       {
         "slug": "kiro-crew",
-        "category": "Developer Tools",
-        "what_it_sells": "Open source agentic development workspace",
+        "category": "企业多智能体协作",
+        "what_it_sells": "一款面向上述场景的企业多智能体协作产品",
         "target_customers": [
-          "目标客户未公开"
+          "部署多个 AI 助手的企业团队",
+          "AI 运营与安全负责人"
         ],
-        "problem_solved": "Kiro Crew is a persistent workspace that remembers your context, lessons, and skills across sessions, so you come back to progress instead of a cold start. Build a crew of agents that work across the tools you already use, wrapped in purpose-built Apps for the jobs you repeat.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Kiro Crew 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+        "plain_scenario": "以 Kiro Crew 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Kiro Crew 的目标用户而言，减少团队管理多个智能体入口的混乱",
+          "让智能体协作过程更可见、更可控"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Open source agentic development workspace",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Kiro Crew 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行主体；平台价值在于连接、权限和协作治理。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -830,22 +846,24 @@
       },
       {
         "slug": "keystroke-3",
-        "category": "Open Source",
-        "what_it_sells": "Build powerful AI agents & workflows",
+        "category": "企业多智能体协作",
+        "what_it_sells": "一款面向上述场景的企业多智能体协作产品",
         "target_customers": [
-          "目标客户未公开"
+          "部署多个 AI 助手的企业团队",
+          "AI 运营与安全负责人"
         ],
-        "problem_solved": "Keystroke is an all-in-one platform for building powerful AI agents. Describe the agent you need, and Keystroke builds it, connects your tools, tests it, and deploys it to a shared workspace. Give agents memory, workflows, triggers, approvals, and access to 1,000+ integrations. Open source, YC-backed, and free to try with $20 in credits.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Keystroke 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
+        "plain_scenario": "以 Keystroke 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Keystroke 的目标用户而言，减少团队管理多个智能体入口的混乱",
+          "让智能体协作过程更可见、更可控"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Build powerful AI agents & workflows",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Keystroke 为例：在聊天、代码和任务系统中统一分配智能体角色、权限、记忆与工作空间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 是核心执行主体；平台价值在于连接、权限和协作治理。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -863,21 +881,22 @@
       {
         "slug": "backengine-mcp",
         "category": "API",
-        "what_it_sells": "Make private company knowledge usable for AI",
+        "what_it_sells": "一款面向上述场景的API产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 BackEngine MCP 所代表的API方案的个人或团队"
         ],
-        "problem_solved": "Most companies wire Claude or ChatGPT into Slack, email, calls, tickets, and their CRM over one singular MCP. That's raw pipes into scattered systems. The model reads a slice and guesses at the rest. BackEngine MCP connects to the same tools, but reads everything first, joins all of it into one permissioned record per account, kept current, so Claude and ChatGPT always work from the whole picture. Head-to-head: 67% fewer errors, 2.4x more key facts, 65% fewer tokens vs. direct connectors.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 BackEngine MCP 为例：在出现“Make private company knowledge usable for AI”所描述的需求时，用 BackEngine MCP 完成一次具体任务。",
+        "plain_scenario": "以 BackEngine MCP 为例：在出现“Make private company knowledge usable for AI”所描述的需求时，用 BackEngine MCP 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 BackEngine MCP 的目标用户而言，让用户可以直接试用 BackEngine MCP 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Make private company knowledge usable for AI",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 BackEngine MCP 为例：在出现“Make private company knowledge usable for AI”所描述的需求时，用 BackEngine MCP 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -895,21 +914,22 @@
       {
         "slug": "capacity-desktop",
         "category": "Website Builder",
-        "what_it_sells": "A free Lovable that lives on your Mac",
+        "what_it_sells": "一款面向上述场景的Website Builder产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Capacity Desktop 所代表的Website Builder方案的个人或团队"
         ],
-        "problem_solved": "A Mac app that turns plain English into real apps — built and stored on your machine, not someone else's servers. Your code, your GitHub, your own AI at cost. No marked-up credits, no lock-in. Free, no sign-up. macOS (Apple Silicon), Windows on the roadmap.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Capacity Desktop 为例：在出现“A free Lovable that lives on your Mac”所描述的需求时，用 Capacity Desktop 完成一次具体任务。",
+        "plain_scenario": "以 Capacity Desktop 为例：在出现“A free Lovable that lives on your Mac”所描述的需求时，用 Capacity Desktop 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Capacity Desktop 的目标用户而言，让用户可以直接试用 Capacity Desktop 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "A free Lovable that lives on your Mac",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Capacity Desktop 为例：在出现“A free Lovable that lives on your Mac”所描述的需求时，用 Capacity Desktop 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -926,22 +946,24 @@
       },
       {
         "slug": "x-money-2",
-        "category": "Fintech",
-        "what_it_sells": "Your money, on the world's most powerful network.",
+        "category": "个人信息整理与阅读",
+        "what_it_sells": "一款面向上述场景的个人信息整理与阅读产品",
         "target_customers": [
-          "目标客户未公开"
+          "收藏大量社交内容的知识工作者",
+          "研究和内容创作者"
         ],
-        "problem_solved": "One app, everything money can do: earn industry-leading APY, get cashback with the X Card, and send money instantly on X.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 X Money 为例：收藏内容不断堆积，却缺少整理和重新阅读的机制。",
+        "plain_scenario": "以 X Money 为例：收藏内容不断堆积，却缺少整理和重新阅读的机制。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 X Money 的目标用户而言，把零散收藏变成可回顾的主题",
+          "提高已收藏信息真正被阅读和使用的概率"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Your money, on the world's most powerful network.",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 X Money 为例：收藏内容不断堆积，却缺少整理和重新阅读的机制。”这一具体入口区别于通用工具",
+        "ai_role": "AI 可辅助分类与摘要，但产品核心价值是信息整理和阅读习惯。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -958,22 +980,24 @@
       },
       {
         "slug": "dover-mcp",
-        "category": "Hiring",
-        "what_it_sells": "Run your hiring process from Claude or ChatGPT",
+        "category": "招聘流程自动化",
+        "what_it_sells": "一款面向上述场景的招聘流程自动化产品",
         "target_customers": [
-          "目标客户未公开"
+          "招聘团队",
+          "需要大量安排候选人沟通的成长型企业"
         ],
-        "problem_solved": "Dover’s MCP connects Dover’s free ATS to ChatGPT, Claude, Cursor, and other AI tools. You can now use powerful AI tools to review applicants, schedule interviews, move candidates through your pipeline, add notes, and coordinate hiring. Access is secure and respects your team's existing permissions. Available today as part of Dover's free ATS for startups.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Dover MCP 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
+        "plain_scenario": "以 Dover MCP 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Dover MCP 的目标用户而言，减少面试排期和重复跟进",
+          "让招聘人员把时间放在候选人判断与沟通质量上"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Run your hiring process from Claude or ChatGPT",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 Dover MCP 为例：候选人沟通、面试安排和状态跟进占用招聘人员大量时间。”这一具体入口区别于通用工具",
+        "ai_role": "AI 可承担协调和信息整理，但不应在缺乏监督时决定候选人的公平机会。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -990,22 +1014,23 @@
       },
       {
         "slug": "stepgrab",
-        "category": "Mac",
-        "what_it_sells": "Turn any Mac task into a step-by-step guide",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Documenting a workflow means screenshots, cropping, arrows, and typing out every step. StepGrab does it for you: hit record, do the task once, and every click comes back as an annotated screenshot with the step already written. Native Mac menu bar app, on-device, no account, nothing uploaded. Export as GIF, PDF, MP4, clickable HTML, Markdown, or vertical video — one recording, your brand color. Free tier is real. Pro $2.99/mo, $12.99/yr, or $44.99 once.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 StepGrab 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 StepGrab 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 StepGrab 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Turn any Mac task into a step-by-step guide",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 StepGrab 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1023,21 +1048,22 @@
       {
         "slug": "npm-i-g-hotcell",
         "category": "Open Source",
-        "what_it_sells": "Local sandboxes for AI agents on your Mac, Linux, bare metal",
+        "what_it_sells": "一款面向上述场景的Open Source产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 npm i -g hotcell 所代表的Open Source方案的个人或团队"
         ],
-        "problem_solved": "Self-hostable sandbox SDK inspired by Cloudflare Sandbox SDK. works on any device (Mac, Linux, bare metal). super easy to use (both by human engineers and agents). you get full control over capacity/token spent per sandbox, you can default-deny egress but still allow access to LLM providers, and API keys never directly enter each sandbox (it creates per-sandbox tokens instead that die when the sandbox stops). npm i -g hotcell",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 npm i -g hotcell 为例：在出现“Local sandboxes for AI agents on your Mac, Linux, bare metal”所描述的需求时，用 npm i -g hotcell 完成一次具体任务。",
+        "plain_scenario": "以 npm i -g hotcell 为例：在出现“Local sandboxes for AI agents on your Mac, Linux, bare metal”所描述的需求时，用 npm i -g hotcell 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 npm i -g hotcell 的目标用户而言，让用户可以直接试用 npm i -g hotcell 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Local sandboxes for AI agents on your Mac, Linux, bare metal",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "可能与 AI 直接相关，需核实具体作用",
+        "differentiation": "分析判断：以“以 npm i -g hotcell 为例：在出现“Local sandboxes for AI agents on your Mac, Linux, bare metal”所描述的需求时，用 npm i -g hotcell 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1054,22 +1080,23 @@
       },
       {
         "slug": "keytones",
-        "category": "Mac",
-        "what_it_sells": "Distinct key sounds for uppercase, lowercase & more",
+        "category": "AI 工具使用监控",
+        "what_it_sells": "一款面向上述场景的AI 工具使用监控产品",
         "target_customers": [
-          "目标客户未公开"
+          "高频使用 Claude、Codex 或 Cursor 的个人和团队"
         ],
-        "problem_solved": "Ever typed a whole sentence in caps before noticing? Keytones plays a distinct sound for each key group (uppercase, lowercase, space bar, and modifiers) so your ears catch a stray Caps Lock before your eyes do. Tune Pitch, Length, Damping + Volume per group, import your own sounds, or, if audible feedback isn't an option, turn on Visual Feedback: a glowing screen edge that pulses with every keystroke. Per-app control, Siri + Shortcuts, instant triple-tap mute. One-time purchase, no subscription.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Keytones 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
+        "plain_scenario": "以 Keytones 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Keytones 的目标用户而言，更快看清 AI 工具的使用状态",
+          "帮助用户避免额度耗尽或任务失去跟踪"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Distinct key sounds for uppercase, lowercase & more",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Keytones 为例：多个 AI 工具的使用量、任务状态和成本不容易在一个地方掌握。”这一具体入口区别于通用工具",
+        "ai_role": "AI 不是产品本身的核心能力；它负责观察和管理其他 AI 工具。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1087,21 +1114,22 @@
       {
         "slug": "hansel-2",
         "category": "Productivity",
-        "what_it_sells": "Remember everything you've worked on",
+        "what_it_sells": "一款面向上述场景的Productivity产品",
         "target_customers": [
-          "目标客户未公开"
+          "正在寻找 Hansel 所代表的Productivity方案的个人或团队"
         ],
-        "problem_solved": "Hansel helps you remember what you worked on, find past context, and answer questions about your workday. Your data stays encrypted on your Mac.",
-        "plain_scenario": "可从产品官网进一步确认具体使用场景。",
+        "problem_solved": "用户缺少一种简单方式来完成这项任务：以 Hansel 为例：在出现“Remember everything you've worked on”所描述的需求时，用 Hansel 完成一次具体任务。",
+        "plain_scenario": "以 Hansel 为例：在出现“Remember everything you've worked on”所描述的需求时，用 Hansel 完成一次具体任务。",
         "benefits": [
-          "产品方尚未提供足够资料，需进一步核实"
+          "对 Hansel 的目标用户而言，让用户可以直接试用 Hansel 所提供的解决方式",
+          "帮助用户比较是否能替代当前的手工流程"
         ],
         "pricing_model": "未公开",
         "conversion_path": "访问官网了解或开始使用",
         "positioning": "Remember everything you've worked on",
         "acquisition_hypothesis": "分析判断：通过 Product Hunt 首发获取早期用户",
-        "differentiation": "差异尚待与竞品核对",
-        "ai_role": "未发现足够证据说明 AI 是核心能力",
+        "differentiation": "分析判断：以“以 Hansel 为例：在出现“Remember everything you've worked on”所描述的需求时，用 Hansel 完成一次具体任务。”这一具体入口区别于通用工具",
+        "ai_role": "根据现有资料无法确认 AI 是核心能力，不把营销标签当作技术事实。",
         "maturity": "已在 Product Hunt 正式发布，实际采用仍待验证",
         "risks": "Product Hunt 热度不等于收入、留存或长期市场需求。",
         "confidence": "低",
@@ -1124,53 +1152,117 @@
     "status": "complete",
     "top_categories": [
       [
+        "AI 工具使用监控",
+        8
+      ],
+      [
         "Productivity",
-        25
+        8
       ],
       [
-        "Open Source",
-        11
+        "语音原生应用与操作",
+        7
       ],
       [
-        "Mac",
-        6
+        "企业多智能体协作",
+        7
       ],
       [
-        "Marketing",
-        3
+        "创意智能体工作系统",
+        7
       ],
       [
-        "Analytics",
-        3
-      ],
-      [
-        "iOS",
-        3
+        "桌面终端工具",
+        7
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        67
+        51
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         15
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        12
+        "官网提供免费试用，付费价格未确认",
+        5
       ],
       [
-        "企业询价",
-        1
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        3
+      ],
+      [
+        "官网公开价格：$19.99",
+        2
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        95
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        8
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        7
+      ],
+      [
+        "需要免手操作的用户",
+        7
+      ],
+      [
+        "部署多个 AI 助手的企业团队",
+        7
+      ],
+      [
+        "AI 运营与安全负责人",
+        7
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "消息入口的个人 AI 助手",
+        "change_per_day": 0.92
+      },
+      {
+        "category": "企业多智能体协作",
+        "change_per_day": 0.58
+      },
+      {
+        "category": "B2B 市场与销售情报",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "Analytics",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "个人信息整理与阅读",
+        "change_per_day": 0.25
+      }
+    ],
+    "cooling": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": -0.67
+      },
+      {
+        "category": "AI 提示词训练与娱乐",
+        "change_per_day": -0.42
+      },
+      {
+        "category": "Linux",
+        "change_per_day": -0.33
+      },
+      {
+        "category": "Robots",
+        "change_per_day": -0.33
+      },
+      {
+        "category": "AI 文档生产与维护",
+        "change_per_day": -0.33
+      }
     ]
   },
   "trend_30d": {
@@ -1179,53 +1271,117 @@
     "status": "complete",
     "top_categories": [
       [
+        "AI 工具使用监控",
+        11
+      ],
+      [
+        "语音原生应用与操作",
+        10
+      ],
+      [
+        "创意智能体工作系统",
+        9
+      ],
+      [
         "Productivity",
-        31
+        9
       ],
       [
-        "Open Source",
-        12
-      ],
-      [
-        "Mac",
+        "企业多智能体协作",
         8
       ],
       [
-        "Design Tools",
-        6
-      ],
-      [
-        "Artificial Intelligence",
-        5
-      ],
-      [
-        "Developer Tools",
-        5
+        "桌面终端工具",
+        8
       ]
     ],
     "pricing_patterns": [
       [
         "未公开",
-        97
+        81
       ],
       [
-        "提供免费试用或免费入口（以官网为准）",
+        "官网提供免费入口；是否有付费方案尚未确认",
         15
       ],
       [
-        "官网提供付费方案，具体价格需人工核对",
-        12
+        "官网提供免费试用，付费价格未确认",
+        5
       ],
       [
-        "企业询价",
-        1
+        "官网显示存在付费方案，具体价格未能可靠提取",
+        3
+      ],
+      [
+        "官网公开价格：$19.99",
+        2
       ]
     ],
     "customer_patterns": [
       [
-        "目标客户未公开",
-        125
+        "高频使用 Claude、Codex 或 Cursor 的个人和团队",
+        11
+      ],
+      [
+        "希望减少键盘操作的知识工作者",
+        10
+      ],
+      [
+        "需要免手操作的用户",
+        10
+      ],
+      [
+        "内容创作者",
+        9
+      ],
+      [
+        "社交媒体与创意团队",
+        9
       ]
+    ],
+    "strengthening": [
+      {
+        "category": "桌面终端工具",
+        "change_per_day": 1.15
+      },
+      {
+        "category": "企业多智能体协作",
+        "change_per_day": 0.7
+      },
+      {
+        "category": "消息入口的个人 AI 助手",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "浏览器执行型智能体",
+        "change_per_day": 0.5
+      },
+      {
+        "category": "B2B 市场与销售情报",
+        "change_per_day": 0.4
+      }
+    ],
+    "cooling": [
+      {
+        "category": "编程智能体记忆与流程管理",
+        "change_per_day": -1.0
+      },
+      {
+        "category": "Artificial Intelligence",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "AI 工具使用监控",
+        "change_per_day": -0.5
+      },
+      {
+        "category": "创意智能体工作系统",
+        "change_per_day": -0.45
+      },
+      {
+        "category": "Marketing",
+        "change_per_day": -0.3
+      }
     ]
   }
 }
