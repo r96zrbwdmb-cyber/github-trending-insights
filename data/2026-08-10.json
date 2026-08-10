@@ -1,0 +1,1133 @@
+{
+  "date": "2026-08-10",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 12,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "language": "TypeScript",
+      "stars": 11476,
+      "forks": 1177,
+      "stars_today": 2356,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-08T01:42:41Z",
+      "updated_at": "2026-08-10T03:19:02Z",
+      "open_issues": 452,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://primeintellect.ai\"> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/40c36e38-c5bd-4c5a-9cb3-f7b902cd155d\"> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/6414bc9b-126b-41ca-9307-9e982430cde8\"> <img alt=\"Prime Intellect\" src=\"https://github.com/user-attachments/assets/6414bc9b-126b-41ca-9307-9e982430cde8\" width=\"312\" style=\"max-width: 100%;\"> </picture> </a> </p> <h3 align=\"center\"> Prime Agent: A Self-Improving RLM Agent </h3> <p align=\"center\"> <a href=\"packages/coding-agent/docs/index.md\">Documentation</a> &bull; <a href=\"https://github.com/PrimeIntellect-ai/verifiers\">Verifiers</a> &bull; <a href=\"https://github.com/PrimeIntellect-ai/prime-rl\">PRIME-RL</a> &bull; <a href=\"https://github.com/badlogic/pi-mono\">pi-mono</a> </p> <p align=\"center\"> <a href=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/ci.yml\"> <img src=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /> </a> <a href=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/build-binaries.yml\"> <img src=\"https://github.com/PrimeIntellect-ai/prime-agent/actions/workflows/build-binaries.yml/badge.svg\" alt=\"Build Binaries\" /> </a> </p> Prime Agent is an open-source coding and research agent for general and long-running work. It is designed around two core abstractions: - The **[Recursive Language Model (RLM)](https://www.primeintellect.ai/blog/rlm)** treats context as variables (*prompt-as-a-variable*) and tools like recursive subagents as function calls (*programmatic tool /sub-agent calling*) inside a persistent REPL. - The **[Continual Harness](https://arxiv.org/abs/2605.09998)** stores supplemental prompts, memories, skill descriptions, and reusable subagent specifications as durable state that Prime Agent can refine through small, evidence-backed updates, local to the session by default. Prime Agent combines a persistent Python control environment with durable harness state, so useful working context and reusable operating patterns can outlive a single chat window. - **Everything is programmatic:** persistent IPython is the built-in model tool; file operations, shell commands, tool use, subagents, and context management happen through code. - **Subagents are built in:** `rlm(...)` spawns real child agents for parallel or background work and returns their results programmatically. - **The harness can improve:** `/refine` reviews the current trajectory and can apply small, evidence-backed updates to supplemental harness state. It never rewrites the immutable base system prompt, and recorded snapshots support rollback. - **Skills are executable:** skills are importable Python packages, and the built-in skill creator can turn recurring workflows into project or personal skills. - **Sessions run in the background:** daemon-backed agents keep running when the terminal disconnects and can be reattached later. - **Agents communicate directly:** running agents can exchange messages and orchestrate one another without routing everything through the user. - **Long tasks keep moving:** automatic compaction, persistent goals, heartbeats, schedules, autonomous mode, and retained subagents preserve progress across turns and terminal sessions. ## Getting Started Install the latest stable release on macOS or Linux: ```bash curl -fsSL https://app.primeintellect.ai/prime-agent/install.sh | sh ``` The installer downloads a versioned release, verifies its SHA-256 checksum, installs the `prime-agent` command, and can prepare the IPython runtime used by the agent. Start Prime Agent from the repository or directory you want it to work in: ```bash cd /path/to/project prime-agent ``` On first launch, run `/login` to choose a subscription or API-key provider. Prime Agent works in the current directory and can run commands and modify files there. Use a disposable clone, ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": 0,
+      "streak_days": 3
+    },
+    {
+      "rank": 2,
+      "full_name": "vitali87/code-graph-rag",
+      "url": "https://github.com/vitali87/code-graph-rag",
+      "description": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+      "language": "Python",
+      "stars": 3106,
+      "forks": 527,
+      "stars_today": 96,
+      "topics": [
+        "ai",
+        "ast",
+        "claude-code",
+        "code-analysis",
+        "code-understanding",
+        "codebase-search",
+        "developer-tools",
+        "graph-database",
+        "knowledge-graph",
+        "llm",
+        "mcp",
+        "mcp-server",
+        "memgraph",
+        "monorepo",
+        "multi-language",
+        "python",
+        "rag",
+        "retrieval-augmented-generation",
+        "semantic-search",
+        "tree-sitter"
+      ],
+      "license": "MIT",
+      "created_at": "2025-06-16T14:31:57Z",
+      "updated_at": "2026-08-10T03:18:53Z",
+      "open_issues": 24,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <!-- Bitbucket strips <picture>/<source> tags, so we use a single light-mode <img>. Restore the theme-aware <picture> block below when the GitHub account is reinstated: <picture> <source srcset=\"assets/logo-dark-any.png\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"assets/logo-light-any.png\" media=\"(prefers-color-scheme: light)\"> <img src=\"assets/logo-dark-any.png\" alt=\"Code-Graph-RAG Logo\" width=\"480\"> </picture> --> <img src=\"assets/logo-light-any.png\" alt=\"Code-Graph-RAG Logo\" width=\"480\"> <p> <!-- Badges below are commented out while the GitHub account is suspended. Restore them when the account is reinstated. Stars/Forks: shields.io hits GitHub's API (returns \"repo not found\" for suspended accounts). gitcgr: indexes from GitHub (shows \"not indexed\" while unavailable). MseeP.ai: badge PNG ignores inline height on Bitbucket and renders as a full-size tile. <a href=\"https://github.com/vitali87/code-graph-rag/stargazers\"> <img src=\"https://img.shields.io/github/stars/vitali87/code-graph-rag?style=social\" alt=\"GitHub stars\" /> </a> <a href=\"https://github.com/vitali87/code-graph-rag/network/members\"> <img src=\"https://img.shields.io/github/forks/vitali87/code-graph-rag?style=social\" alt=\"GitHub forks\" /> </a> --> <a href=\"https://github.com/vitali87/code-graph-rag/actions/workflows/ci.yml\"> <img src=\"https://img.shields.io/github/actions/workflow/status/vitali87/code-graph-rag/ci.yml?branch=main\" alt=\"CI\" /> </a> <a href=\"https://codecov.io/gh/vitali87/code-graph-rag\"> <img src=\"https://codecov.io/gh/vitali87/code-graph-rag/graph/badge.svg\" alt=\"Codecov\" /> </a> <a href=\"https://sonarcloud.io/summary/overall?id=vitali87_code-graph-rag\"> <img src=\"https://sonarcloud.io/api/project_badges/measure?project=vitali87_code-graph-rag&metric=alert_status\" alt=\"Quality Gate Status\" /> </a> <!-- <a href=\"https://mseep.ai/app/vitali87-code-graph-rag\"> <img src=\"https://mseep.net/pr/vitali87-code-graph-rag-badge.png\" alt=\"MseeP.ai Security Assessment\" height=\"20\" /> </a> --> <a href=\"https://code-graph-rag.com\"> <img src=\"https://img.shields.io/badge/Enterprise-Support%20%26%20Services-6366f1\" alt=\"Enterprise Support\" /> </a> <a href=\"https://pypi.org/project/code-graph-rag/\"> <img src=\"https://img.shields.io/pypi/v/code-graph-rag\" alt=\"PyPI Version\" /> </a> <a href=\"https://pepy.tech/projects/code-graph-rag\"> <img src=\"https://static.pepy.tech/personalized-badge/code-graph-rag?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads\" alt=\"PyPI Downloads\" /> </a> <a href=\"https://skillsllm.com/security-check/DHsMGRb1Ysys\"> <img src=\"https://skillsllm.com/security-check/badge.svg?owner=vitali87&repo=code-graph-rag\" alt=\"SkillsLLM Security Check\" /> </a> <a href=\"https://scorecard.dev/viewer/?uri=github.com/vitali87/code-graph-rag\"> <img src=\"https://api.scorecard.dev/projects/github.com/vitali87/code-graph-rag/badge\" alt=\"OpenSSF Scorecard\" /> </a> <a href=\"https://www.bestpractices.dev/projects/13757\"> <img src=\"https://www.bestpractices.dev/projects/13757/badge\" alt=\"OpenSSF Best Practices\" /> </a> <!-- <a href=\"https://gitcgr.com/vitali87/code-graph-rag\"> <img src=\"https://gitcgr.com/badge/vitali87/code-graph-rag.svg\" alt=\"gitcgr\" /> </a> --> </p> </div> # Code-Graph-RAG Code-Graph-RAG parses a multi-language codebase with Tree-sitter, builds a knowledge graph of its structure in Memgraph, and lets you query, edit, and optimise that code in plain English. It works across a monorepo of mixed languages under one unified graph schema. <p align=\"center\"> <img src=\"./assets/demo.gif\" alt=\"demo\"> </p> ## Latest News 🔥 <!-- SECTION:latest_news --> - **Release Automation**: `NEWS.md` and the README's \"Latest News\" section now refresh automatically on every release, keeping the changelog current without hand edits. - **Ruby Support**: Ruby joins the graph through a new pluggable ast-grep tier that adds a language from a single YAML pattern file, emitting `Module`, `Function`, and",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 3,
+      "full_name": "msitarzewski/agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "language": "Shell",
+      "stars": 140917,
+      "forks": 23006,
+      "stars_today": 858,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-10-13T12:12:29Z",
+      "updated_at": "2026-08-10T03:18:44Z",
+      "open_issues": 110,
+      "default_branch": "main",
+      "readme_excerpt": "# 🎭 The Agency: AI Specialists Ready to Transform Your Workflow > **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. [![GitHub stars](https://img.shields.io/github/stars/msitarzewski/agency-agents?style=social)](https://github.com/msitarzewski/agency-agents) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com) [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?logo=github)](https://github.com/sponsors/msitarzewski) [![Download the app](https://img.shields.io/github/v/release/msitarzewski/agency-agents-app?label=Download%20app&color=2563eb)](https://github.com/msitarzewski/agency-agents-app/releases/latest) > ### 🆕 There's an app now > > **[Agency Agents](https://agencyagents.app)** is a native app for **macOS, Linux & Windows** that browses the entire roster and installs it into Claude Code, Cursor, Codex, Gemini, Osaurus, and more — with a click. No clone, no scripts, and it auto-updates. > > **→ [Download the latest release](https://github.com/msitarzewski/agency-agents-app/releases/latest) · [agencyagents.app](https://agencyagents.app)** --- ## 🚀 What Is This? Born from a Reddit thread and months of iteration, **The Agency** is a growing collection of meticulously crafted AI agent personalities. Each agent is: - **🎯 Specialized**: Deep expertise in their domain (not generic prompt templates) - **🧠 Personality-Driven**: Unique voice, communication style, and approach - **📋 Deliverable-Focused**: Real code, processes, and measurable outcomes - **✅ Production-Ready**: Battle-tested workflows and success metrics **Think of it as**: Assembling your dream team, except they're AI specialists who never sleep, never complain, and always deliver. --- ## ⚡ Quick Start ### Option 1: Install the app (Recommended) The fastest way in — no clone, no terminal. [**Agency Agents**](https://agencyagents.app) is a native desktop app (macOS · Linux · Windows) that browses the whole roster and installs agents into Claude Code, Cursor, Codex, Gemini CLI, OpenCode, Qwen, and Osaurus for you, then keeps them up to date. **[⬇ Download the latest release](https://github.com/msitarzewski/agency-agents-app/releases/latest)** — or on a Mac: ```bash brew install --cask msitarzewski/agency-agents/agency-agents ``` Prefer the command line? The script-based options below install the same agents. ### Option 2: Use with Claude Code ```bash # Install all agents to your Claude Code directory ./scripts/install.sh --tool claude-code # Or manually copy a category if you only want one division cp engineering/*.md ~/.claude/agents/ # Then activate any agent in your Claude Code sessions: # \"Hey Claude, activate Frontend Developer mode and help me build a React component\" ``` ### Option 3: Use as Reference Each agent file contains: - Identity & personality traits - Core mission & workflows - Technical deliverables with code examples - Success metrics & communication style Browse the agents below and copy/adapt the ones you need! ### Option 4: Use with Other Tools (GitHub Copilot, Antigravity, Gemini CLI, OpenCode, OpenClaw, Cursor, Aider, Windsurf, Kimi Code, Codex, Osaurus, Hermes, Mistral Vibe) ```bash # Step 1 -- generate integration files for all supported tools ./scripts/convert.sh # Step 2 -- install interactively (auto-detects what you have installed) ./scripts/install.sh # Or target a specific tool directly ./scripts/install.sh --tool antigravity ./scripts/install.sh --tool gemini-cli ./scripts/install.sh --tool opencode ./scripts/install.sh --tool copilot ./scripts/install.sh --tool openclaw ./scripts/install.sh --tool cursor ./scripts/install.sh --tool aider ./scripts/install.sh --tool windsurf ./scripts/install.sh ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "pranshuparmar/witr",
+      "url": "https://github.com/pranshuparmar/witr",
+      "description": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+      "language": "Go",
+      "stars": 20786,
+      "forks": 729,
+      "stars_today": 210,
+      "topics": [
+        "cli",
+        "containers",
+        "devops",
+        "docker",
+        "freebsd",
+        "go",
+        "golang",
+        "incident-response",
+        "kubernetes",
+        "linux",
+        "macos",
+        "monitoring",
+        "observability",
+        "process-management",
+        "sysadmin",
+        "systemd",
+        "terminal",
+        "troubleshooting",
+        "tui",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-12-20T17:26:59Z",
+      "updated_at": "2026-08-10T03:18:31Z",
+      "open_issues": 8,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # witr ### Why is this running? Trace any process, port, container, or file back to the exact chain that started it —<br> one command, machine-readable JSON, or an [interactive TUI](#3-interactive-mode-tui). [![Latest Release](https://img.shields.io/github/v/release/pranshuparmar/witr?label=Latest%20Release&style=flat-square)](https://github.com/pranshuparmar/witr/releases/latest) [![Platforms](https://img.shields.io/badge/platforms-linux%20%7C%20macos%20%7C%20windows%20%7C%20freebsd-blue?style=flat-square)](#8-platform-support) <br> [![Package Managers](https://img.shields.io/badge/Package%20Managers-brew%20|%20conda%20|%20aur%20|%20winget%20|%20npm%20|%20ports%20|%20...%20-blue?style=flat-square)](https://repology.org/project/witr/versions) <a href=\"https://trendshift.io/repositories/18714\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/18714\" alt=\"pranshuparmar/witr on Trendshift\" width=\"250\" height=\"55\" /></a> <a href=\"https://www.producthunt.com/products/witr?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-witr\" target=\"_blank\" rel=\"noopener noreferrer\"><img alt=\"witr - Why is this running? Trace process, port, container or file. | Product Hunt\" width=\"250\" height=\"54\" src=\"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1211309&amp;theme=light&amp;t=1785480480150\"></a> ### 🎮 [**Try witr in your browser →**](https://pranshuparmar.github.io/witr/) *Investigate a simulated Linux box — a guided tutorial and free-play sandbox, no install required.* <a href=\"https://pranshuparmar.github.io/witr/\"><img width=\"1232\" alt=\"witr's interactive TUI and CLI answering why a node process is running — the same systemd → PM2 → node chain in both\" src=\"https://github.com/user-attachments/assets/dbe271ad-25e5-425b-b414-392d0c4eee37\" /></a> </div> --- <div align=\"center\"> [**Purpose**](#1-purpose) • [**Installation**](#2-installation) • [**TUI**](#3-interactive-mode-tui) • [**Flags**](#4-flags--options) • [**Core Concept**](#5-core-concept) • [**Examples**](#6-example-outputs) <br> [**Output Behavior**](#7-output-behavior) • [**Platforms**](#8-platform-support) • [**Success Criteria**](#9-success-criteria) • [**Sponsors**](#10-sponsors) </div> --- ## 1. Purpose **witr** exists to answer a single question: > **Why is this running?** When something is running on a system, whether it is a process, a service, or something bound to a port, there is always a cause. That cause is often indirect, non-obvious, or spread across multiple layers such as supervisors, containers, services, or shells. Existing tools (`ps`, `top`, `lsof`, `ss`, `systemctl`, `docker ps`) expose state and metadata. They show _what_ is running, but leave the user to infer _why_ by manually correlating outputs across tools. **witr** makes that causality explicit. It explains **where a running thing came from**, **how it was started**, and **what chain of systems is responsible for it existing right now**, in a single, human-readable output or an **interactive TUI dashboard**. > 📖 Curious how witr came to be? [Read the story](https://medium.com/@pranshu.parmar/witr-why-is-this-running-a9a97cbedd18) or browse the [Hacker News discussion](https://news.ycombinator.com/item?id=46392910). --- ## 2. Installation witr is distributed as a single static binary for Linux, macOS, FreeBSD, and Windows. witr is also independently packaged and maintained across multiple operating systems and ecosystems. An up-to-date overview of packaging status is available on [Repology](https://repology.org/project/witr/versions). Please note that community packages may lag GitHub releases due to independent review and validation. > [!TIP] > If you use a package manager (Homebrew, Conda, Winget, etc.), we recommend installing via that for easier updates. Otherwise, the install script is the quickest way to get started. --- ### 2.1 Quick Install #### Unix (Linux, macOS & FreeBSD) ```bash curl -fsSL https",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "google-deepmind/weathernext",
+      "url": "https://github.com/google-deepmind/weathernext",
+      "description": "",
+      "language": "Python",
+      "stars": 7123,
+      "forks": 941,
+      "stars_today": 86,
+      "topics": [
+        "weather",
+        "weather-forecast"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2023-07-14T11:07:57Z",
+      "updated_at": "2026-08-10T03:17:53Z",
+      "open_issues": 76,
+      "default_branch": "main",
+      "readme_excerpt": "# WeatherNext ## WeatherNext 2 This repo contains the code for WeatherNext 2 (WN2), the global, medium-range atmospheric and cyclone forecasting model developed by Google DeepMind and Google Research. It also contains code for prior generation models [GraphCast](https://deepmind.google/blog/graphcast-ai-model-for-faster-and-more-accurate-global-weather-forecasting/) and [GenCast](https://deepmind.google/blog/gencast-predicts-weather-and-the-risks-of-extreme-conditions-with-sota-accuracy/). ### Accessing Forecast Data Feeds If you are interested in directly accessing daily data feeds of WN2 model outputs rather than running the model yourself, we provide them across multiple platforms: * [Google Cloud](https://developers.google.com/weathernext/guides/access-forecast) (including Earth Engine, BigQuery, and Vertex AI). * [WeatherLab](https://deepmind.google.com/science/weatherlab) (including cyclone tracks). * [OpenMeteo](https://open-meteo.com/en/docs/google-weathernext-api) (including an API and interactive builder). ### Learn More * **Model Guide & Documentation:** [Google Developers WeatherNext Guide](https://developers.google.com/weathernext/guides/models) * **WeatherNext Cyclones Paper:** [Operational tropical cyclone forecasting with AI](https://www.nature.com/articles/s41586-026-10953-2) * **FGN/WN2 Technical Report:** [Skillful joint probabilistic weather forecasting from marginals (arXiv:2506.10772)](https://arxiv.org/abs/2506.10772) * **WeatherNext 2 Blog Post:** [WeatherNext 2: Our most advanced weather forecasting model](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/weathernext-2/) * **WeatherNext Cyclones Blog Post:** [WeatherNext: AI model achieves breakthrough in forecasting cyclones](https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/) ### Older Models This repository serves as the primary home for the WeatherNext family models. Alongside WN2, this repository also hosts the code and documentation for our legacy and specialized models: * [WeatherNext Graph](docs/weathernext1_graph/README.md): Deterministic medium-range weather forecasting using graph neural networks. Published as GraphCast. * [WeatherNext Gen](docs/weathernext1_gen/README.md): Diffusion-based ensemble forecasting for medium-range weather. Published as GenCast. ## Provided Pretrained Models This repository provides code to run the different versions of WeatherNext 2 and WeatherNext Cyclones. The only difference between them is that WN2 can also predict 100m wind. In particular, WN2 also forecasts cyclones with the exact same algorithm as WN Cyclones. Their weights are different due to independent training runs. ### WeatherNext 2 1. **WeatherNext2_<2025** (Used Operationally): 0.25° resolution (~30km). Fine-tuned on ECMWF HRES data and designed to be initialized directly from operational HRES initial conditions rather than ERA5 reanalysis. Trained on data through 2024. Corresponding weights files: `WeatherNext2_<2025_model{1,2,3,4}.npz`. ### WeatherNext Cyclones - models which reproduce the results in paper 1. **WeatherNextCyclones_<2025** (Used Operationally): 0.25° resolution. The model that ran live during the 2025 Atlantic hurricane season, publicly referred to as FNV3 (NHC's postprocessed version was called GDMI). Trained on data through 2024. The paper appendix contains a partial evaluation of 2025 in NHC basins for this model checkpoint, and how the tracker improvement in September 2025 improved results. Corresponding weights files: `WeatherNextCyclones_<2025_model{1,2,3,4}.npz`. 2. **WeatherNextCyclones_<2024**: 0.25° resolution. Reproduces results from the paper on 2024. Trained on data through 2023. Corresponding weights files: `WeatherNextCyclones_<2024_model{1,2,3,4}.npz`. 3. **WeatherNextCyclones_<2023**: 0.25° resolution. Reproduces results from the paper on 2023. Trained on data through 2022. Corresponding weights files: `WeatherNextCyclones_<2023_model{1,2,3,4}.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 85234,
+      "forks": 9169,
+      "stars_today": 680,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-15T20:20:26Z",
+      "updated_at": "2026-08-10T03:16:32Z",
+      "open_issues": 105,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. <a href=\"https://trendshift.io/repositories/25200\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/25200\" alt=\"addyosmani%2Fagent-skills | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> ![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg) ``` DEFINE PLAN BUILD VERIFY REVIEW SHIP ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │ QA │ ───▶ │ Go │ │Refine│ │ PRD │ │ Impl │ │Debug │ │ Gate │ │ Live │ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ /spec /plan /build /test /review /ship ``` --- ## Commands 8 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | |-------------------|---------|---------------| | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | Want fewer manual steps once the spec exists? **`/build auto`** generates the plan and implements every task in a single approved pass — you approve the plan once, then it runs autonomously. It removes the human stepping *between* tasks, not the verification: every task is still test-driven and committed individually, and it pauses on failures or risky steps. Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on. --- ## Quick Start **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more): ```bash npx skills add addyosmani/agent-skills # install all 24 skills npx skills add addyosmani/agent-skills --list # browse before installing ``` Or grab individual skills: ```bash npx skills add addyosmani/agent-skills --skill code-review-and-quality # five-axis review before merge npx skills add addyosmani/agent-skills --skill interview-me # requirements interrogation, one question at a time npx skills add addyosmani/agent-skills --skill test-driven-development # red-green-refactor, enforced ``` > **Installing one skill?** A per-skill `npx` install copies only > `skills/<name>/`, not the repo-level `references/` directory. The skill still > works, but paths to supplementary shared checklists are unavailable. Use a > whole-repo integration, clone the repository, or copy the needed checklist into > a `references/` directory inside the installed skill. This portability gap is > tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361). Prefer a native integration? Pick your tool below. <details> <summary><b>Claude Code (recommended)</b></summary> **Marketplace install:** ``` /plugin marketplace add addyosmani/agent-skills /plugin install agent-skills@addy-agent-skills ``` > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or use the full HTTPS URL to force HTTPS cloning during the marketplace-add step: > ```bash > /plugin marketplace add https://github.com/addyosmani/agent-skills.git > /plugin install agent-skills@",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -4,
+      "streak_days": 5
+    },
+    {
+      "rank": 7,
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+      "language": "Python",
+      "stars": 61321,
+      "forks": 52037,
+      "stars_today": 306,
+      "topics": [
+        "a-stock",
+        "ai-agent",
+        "aigc",
+        "llm",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-10T06:43:20Z",
+      "updated_at": "2026-08-10T03:18:42Z",
+      "open_issues": 40,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # 📈 股票智能分析系统 [![GitHub stars](https://img.shields.io/github/stars/ZhuLinsen/daily_stock_analysis?style=social)](https://github.com/ZhuLinsen/daily_stock_analysis/stargazers) [![CI](https://github.com/ZhuLinsen/daily_stock_analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/ZhuLinsen/daily_stock_analysis/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/) [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Ready-2088FF?logo=github-actions&logoColor=white)](https://github.com/features/actions) [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://hub.docker.com/r/zhulinsen/daily_stock_analysis) <p align=\"center\"> <img src=\"https://trendshift.io/api/badge/trendshift/repositories/18527/daily?language=Python\" alt=\"#1 Python Repository Of The Day | Trendshift\" width=\"250\" height=\"55\"/>&nbsp;<a href=\"https://hellogithub.com/repository/ZhuLinsen/daily_stock_analysis\" target=\"_blank\"><img src=\"https://api.hellogithub.com/v1/widgets/recommend.svg?rid=6daa16e405ce46ed97b4a57706aeb29f&claim_uid=pfiJMqhR9uvDGlT&theme=neutral\" alt=\"Featured｜HelloGitHub\" width=\"230\" /></a> </p> > 🤖 基于 AI 大模型的 A股/港股/美股/日股/韩股/台股自选股智能分析系统，每日自动分析并推送「决策仪表盘」到企业微信/飞书/Telegram/Discord/Slack/邮箱 [**产品预览**](#-产品预览) · [**功能特性**](#-功能特性) · [**快速开始**](#-快速开始) · [**推送效果**](#-推送效果) · [**文档中心**](docs/INDEX.md) · [**完整指南**](docs/full-guide.md) 简体中文 | [English](docs/README_EN.md) | [繁體中文](docs/README_CHT.md) </div> ## 💖 赞助商 (Sponsors) <div align=\"center\"> <p align=\"center\"> <a href=\"https://open.anspire.cn/dsa?share_code=QFBC0FYC\" target=\"_blank\"><img src=\"./docs/assets/anspire.png\" alt=\"Anspire Open 一站式模型和搜索服务\" width=\"300\" height=\"141\" style=\"width: 300px; height: 141px; object-fit: contain;\"></a> <a href=\"https://serpapi.com/baidu-search-api?utm_source=github_daily_stock_analysis\" target=\"_blank\"><img src=\"./docs/assets/serpapi_banner_zh.png\" alt=\"轻松抓取搜索引擎上的实时金融新闻数据 - SerpApi\" width=\"300\" height=\"141\" style=\"width: 300px; height: 141px; object-fit: contain;\"></a> </p> </div> ## 🖥️ 产品预览 <p align=\"center\"> <img src=\"docs/assets/readme_workspace_tour_20260510.gif\" alt=\"DSA Web 工作台演示\" width=\"720\"> </p> ## ✨ 功能特性 | 能力 | 覆盖内容 | |------|------| | AI 决策报告 | 核心结论、评分、趋势、买卖点位、风险警报、催化因素、操作检查清单 | | 多市场数据聚合 | 覆盖 A股、港股、美股、日股、韩股、台股和 ETF，支持行情、K 线、技术指标、新闻、公告、基本面与报告辅助数据；不同市场的数据源和能力边界见 [市场支持边界](docs/market-support.md) | | Web / 桌面工作台 | 手动分析、任务进度、历史报告、完整 Markdown、回测、持仓、配置管理、浅色 / 深色主题 | | Agent 策略问股 | 多轮追问，支持均线、缠论、波浪、趋势、热点、事件、成长、预期等 15 种内置策略，覆盖 Web/Bot/API | | 智能导入与补全 | 图片、CSV/Excel、剪贴板导入；股票代码/名称/拼音/别名补全 | | 自动化与推送 | GitHub Actions、Docker、本地定时任务、FastAPI 服务和企业微信/飞书/Telegram/Discord/Slack/邮件推送 | > 功能细节、字段契约、基本面 P0 超时语义、交易纪律、数据源优先级、Web/API 行为请看 [完整配置与部署指南](docs/full-guide.md)。 ### 技术栈与数据来源 | 类型 | 支持 | |------|------| | AI 模型 | [Anspire](https://open.anspire.cn/dsa?share_code=QFBC0FYC)、[AIHubMix](https://aihubmix.com/?aff=CfMq)、Gemini、OpenAI 兼容、DeepSeek、通义千问、Claude、Ollama 本地模型等 | | 行情数据 | [TickFlow](https://tickflow.org/auth/register?ref=WDSGSPS5XC)、AkShare、Tushare、Pytdx、Baostock、YFinance、Longbridge | | 新闻搜索 | [Anspire](https://open.anspire.cn/dsa/?share_code=QFBC0FYC)、[SerpAPI](https://serpapi.com/baidu-search-api?utm_source=github_daily_stock_analysis)、[Tavily](https://tavily.com/)、[Bocha](https://open.bocha.cn/)、[Brave](https://brave.com/search/api/)、[MiniMax](https://platform.minimaxi.com/)、SearXNG | | 社交舆情 | [Stock Sentiment API](https://api.adanos.org/docs)（Reddit / X / Polymarket，仅美股，可选） | > 项目默认内置 AkShare、Baostock、YFinance 等免费行情源，可零配置运行；免费源受上游限流、接口变动和网络波动影响，稳定性不保证。长期定时、批量分析或更稳定行情建议配置 TickFlow、Tushare、Longbridge 等 token 型数据源，适用市场、Actions 映射和 fallback 规则见 [数据源配置](docs/full-guide.md#数据源配置)。 ## 🚀 快速开始 ### 方式一：[GitHub Actions（推荐）](https://www.bilibili.com/video/BV11FEb66EXG/) > 5 分钟完成部署，零成本，无需服务器。 #### 1. Fork 本仓库 点击右上角 `For",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "goauthentik/authentik",
+      "url": "https://github.com/goauthentik/authentik",
+      "description": "The authentication glue you need.",
+      "language": "Python",
+      "stars": 24327,
+      "forks": 1860,
+      "stars_today": 310,
+      "topics": [
+        "authentication",
+        "authentik",
+        "authorization",
+        "kubernetes",
+        "oauth2",
+        "oauth2-client",
+        "oauth2-server",
+        "oidc",
+        "oidc-client",
+        "oidc-provider",
+        "proxy",
+        "reverse-proxy",
+        "saml",
+        "saml-idp",
+        "saml-sp",
+        "security",
+        "sso"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2019-12-30T09:19:48Z",
+      "updated_at": "2026-08-10T03:17:59Z",
+      "open_issues": 1150,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"https://goauthentik.io/img/icon_top_brand_colour.svg\" height=\"150\" alt=\"authentik logo\"> </p> --- [![Join Discord](https://img.shields.io/discord/809154715984199690?label=Discord&style=for-the-badge)](https://goauthentik.io/discord) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-main.yml?branch=main&label=core%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-main.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-outpost.yml?branch=main&label=outpost%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-outpost.yml) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/goauthentik/authentik/ci-web.yml?branch=main&label=web%20build&style=for-the-badge)](https://github.com/goauthentik/authentik/actions/workflows/ci-web.yml) [![Code Coverage](https://img.shields.io/codecov/c/gh/goauthentik/authentik?style=for-the-badge)](https://codecov.io/gh/goauthentik/authentik) ![Latest version](https://img.shields.io/docker/v/authentik/server?sort=semver&style=for-the-badge) [![](https://img.shields.io/badge/Help%20translate-transifex-blue?style=for-the-badge)](https://explore.transifex.com/authentik/authentik/) ## What is authentik? authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters. Our [enterprise offering](https://goauthentik.io/pricing) is available for organizations to securely replace existing IdPs such as Okta, Auth0, Entra ID, and Ping Identity for robust, large-scale identity management. ## Installation - Docker Compose: recommended for small/test setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/docker-compose/). - Kubernetes (Helm Chart): recommended for larger setups. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/kubernetes/) and the Helm chart [repository](https://github.com/goauthentik/helm). - AWS CloudFormation: deploy on AWS using our official templates. See the [documentation](https://docs.goauthentik.io/docs/install-config/install/aws/). - DigitalOcean Marketplace: one-click deployment via the official Marketplace app. See the [app listing](https://marketplace.digitalocean.com/apps/authentik). ## Screenshots | Light | Dark | | ----------------------------------------------------------- | ---------------------------------------------------------- | | ![](https://docs.goauthentik.io/img/screen_apps_light.jpg) | ![](https://docs.goauthentik.io/img/screen_apps_dark.jpg) | | ![](https://docs.goauthentik.io/img/screen_admin_light.jpg) | ![](https://docs.goauthentik.io/img/screen_admin_dark.jpg) | ## Development and contributions See the [Developer Documentation](https://docs.goauthentik.io/docs/developer-docs/) for information about setting up local build environments, testing your contributions, and our contribution process. When you contribute documentation, either to accompany a code change or as a standalone contribution, please be sure to follow our documentation [Style Guide](website/docs/developer-docs/docs/style-guide.mdx). ## Security Please see [SECURITY.md](SECURITY.md). ## Adoption Using authentik? We'd love to hear your story and feature your logo. Email us at [hello@goauthentik.io](mailto:hello@goauthentik.io) or open a GitHub Issue/PR! ## License [![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE) [![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey?style=for-the-badge)](website/LICENSE) [![authentik EE License](https://img.shields.io/badge/License-EE-orange?style=for-the-badge)](authentik/enterprise/LICENSE)",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": -2,
+      "streak_days": 4
+    },
+    {
+      "rank": 9,
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": 17302,
+      "forks": 1398,
+      "stars_today": 528,
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-03-31T19:02:20Z",
+      "updated_at": "2026-08-10T03:15:53Z",
+      "open_issues": 32,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills [![Install via skills.sh](https://img.shields.io/badge/skills.sh-install-green)](https://skills.sh/google/skills) This repository contains [Agent Skills](https://agentskills.io/home) for Google products and technologies, including [Google Cloud](https://cloud.google.com). > [!NOTE] > This repository is under active development. ## Installation ```bash npx skills add google/skills ``` From the `npx install` command, you can select the specific skills from this repo to install. ## Available Skills <!-- BEGIN SKILLS --> - **Getting started with Google Cloud** - [**Authenticating to Google Cloud**](./skills/cloud/google-cloud-recipe-auth) - [**Google Cloud Recipe: Foundation Builder**](./skills/cloud/google-cloud-recipe-foundation-builder) - [**Onboarding to Google Cloud**](./skills/cloud/google-cloud-recipe-onboarding) - **Multi-product solution skills** - [**Google Cloud solution-architecture workflow**](./skills/cloud/google-cloud-solution-architecture) - [**Agentic analytics across cloud providers and data types**](./skills/cloud/google-cloud-solution-agentic-analytics-spark-knowledge-catalog) - [**Borderless open data lakehouse agentic AI system**](./skills/cloud/google-cloud-solution-agentic-ai-borderless-data-lakehouse) - [**Build and deploy AI agents on Google Cloud**](./skills/cloud/google-cloud-solution-build-deploy-agents) - [**Data science workflow with AI agents solution**](./skills/cloud/google-cloud-solution-agentic-ai-data-science-workflow) - [**Live bidirectional multimodal streaming agentic AI solution**](./skills/cloud/google-cloud-solution-agentic-ai-bidirectional-streaming) - [**Migrate AI Workloads to GKE Inference**](./skills/cloud/google-cloud-solution-guided-gke-ai-migration) - [**RAG for enterprise search using GKE and AlloyDB**](./skills/cloud/google-cloud-solution-rag-enterprise-search-gke-sqldb) - [**Secure n-tier serverless web application with strict private application tiers**](./skills/cloud/google-cloud-solution-n-tier-serverless-web-app) - **AI/ML** - [**Agent Platform Alert Configuration**](./skills/cloud/agent-platform-alert-configuration) - [**Agent Platform Endpoint Management**](./skills/cloud/agent-platform-endpoint-management) - [**Agent Platform Eval Flywheel Skill**](./skills/cloud/agent-platform-eval-flywheel) - [**Agent Platform GenAI Inference Skill**](./skills/cloud/agent-platform-inference) - [**Agent Platform Model Garden Deploy Skill**](./skills/cloud/agent-platform-deploy) - [**Agent Platform Model Registry Management**](./skills/cloud/agent-platform-model-registry) - [**Agent Platform Model Tuning**](./skills/cloud/agent-platform-tuning) - [**Agent Platform Prompt Management**](./skills/cloud/agent-platform-prompt-management) - [**Agent Platform RAG Engine Management**](./skills/cloud/agent-platform-rag-engine-management) - [**Agent Platform Troubleshooting**](./skills/cloud/agent-platform-troubleshooting) - [**Agent Platform Tuning Management**](./skills/cloud/agent-platform-tuning-management) - [**BigQuery AI & ML**](./skills/cloud/bigquery-ai-ml) - [**Gemini API in Agent Platform**](./skills/cloud/gemini-api) - [**Gemini Enterprise Agent Platform - Managed Agents API Skill**](./skills/cloud/gemini-agents-api) - [**Gemini Interactions API Skill**](./skills/cloud/gemini-interactions-api) - [**LiveAPI Service Skill**](./skills/cloud/gemini-live-api) - [**Migrating from Gemini API in AI Studio to Agent Platform**](./skills/cloud/agent-platform-migrate-from-ai-studio) - [**Skill Registry**](./skills/cloud/agent-platform-skill-registry) - **Infrastructure** - [**GKE AI/ML Inference**](./skills/cloud/gke-inference) - [**GKE App Onboarding**](./skills/cloud/gke-app-onboarding) - [**GKE Backup & Disaster Recovery**](./skills/cloud/gke-backup-dr) - [**GKE Basics & Critical Gotchas**](./skills/cloud/gke-basics) - [**GKE Batch & HPC Workloads**](./skills/cloud/gke-batch-hpc) - [**GKE Cluster Autoscaler**](./skills/cloud/gke-cluster-autoscaler) - [**GKE Cluster Creation**](",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -5,
+      "streak_days": 3
+    },
+    {
+      "rank": 10,
+      "full_name": "Comfy-Org/ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+      "language": "Python",
+      "stars": 125637,
+      "forks": 14849,
+      "stars_today": 365,
+      "topics": [
+        "ai",
+        "comfy",
+        "comfyui",
+        "python",
+        "pytorch",
+        "stable-diffusion"
+      ],
+      "license": "GPL-3.0",
+      "created_at": "2023-01-17T03:15:56Z",
+      "updated_at": "2026-08-10T03:17:53Z",
+      "open_issues": 4503,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> # ComfyUI **The most powerful and modular AI engine for content creation.** [![Website][website-shield]][website-url] [![Dynamic JSON Badge][discord-shield]][discord-url] [![Twitter][twitter-shield]][twitter-url] [![Matrix][matrix-shield]][matrix-url] <br> [![][github-release-shield]][github-release-link] [![][github-release-date-shield]][github-release-link] [![][github-downloads-shield]][github-downloads-link] [![][github-downloads-latest-shield]][github-downloads-link] [matrix-shield]: https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white [matrix-url]: https://app.element.io/#/room/%23comfyui_space%3Amatrix.org [website-shield]: https://img.shields.io/badge/ComfyOrg-4285F4?style=flat [website-url]: https://www.comfy.org/ <!-- Workaround to display total user from https://github.com/badges/shields/issues/4500#issuecomment-2060079995 --> [discord-shield]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fcomfyorg%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&logo=discord&logoColor=white&label=Discord&color=green&suffix=%20total [discord-url]: https://discord.com/invite/comfyorg [twitter-shield]: https://img.shields.io/twitter/follow/ComfyUI [twitter-url]: https://x.com/ComfyUI [github-release-shield]: https://img.shields.io/github/v/release/comfyanonymous/ComfyUI?style=flat&sort=semver [github-release-link]: https://github.com/comfyanonymous/ComfyUI/releases [github-release-date-shield]: https://img.shields.io/github/release-date/comfyanonymous/ComfyUI?style=flat [github-downloads-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/total?style=flat [github-downloads-latest-shield]: https://img.shields.io/github/downloads/comfyanonymous/ComfyUI/latest/total?style=flat&label=downloads%40latest [github-downloads-link]: https://github.com/comfyanonymous/ComfyUI/releases <img width=\"1590\" height=\"795\" alt=\"ComfyUI Screenshot\" src=\"https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2\" /> <br> </div> ComfyUI is the AI creation engine for visual professionals who demand control over every model, every parameter, and every output. Its powerful and modular node graph interface empowers creatives to generate images, videos, 3D models, audio, and more... - ComfyUI natively supports the latest open-source state of the art models. - API nodes provide access to the best closed source models such as Nano Banana, Seedance, Hunyuan3D, etc. - It is available on Windows, Linux, and macOS, locally with our [desktop application](https://www.comfy.org/download), our [portable install](#installing) or on our [cloud](https://www.comfy.org/cloud). - The most sophisticated workflows can be exposed through a simple UI thanks to App Mode. - It integrates seamlessly into production pipelines with our API endpoints. ## Get Started ### Local #### [Desktop Application](https://www.comfy.org/download) - The easiest way to get started. - Available on Windows & macOS. #### [Windows Portable Package](#installing) - Get the latest commits and completely portable. - Available on Windows. #### [Manual Install](#manual-install-windows-linux) Supports all operating systems and GPU types (NVIDIA, AMD, Intel, Apple Silicon, Ascend). ### Cloud #### [Comfy Cloud](https://www.comfy.org/cloud) - Our official paid cloud version for those who can't afford local hardware. ## Examples See what ComfyUI can do with the [newer template workflows](https://comfy.org/workflows) or old [example workflows](https://comfyanonymous.github.io/ComfyUI_examples/). ## Features - A visual node graph for building and reusing image, video, audio, 3D, and text workflows without code. - Reusable subgraphs, workflow templates, App Mode, and a local API for integrating workflows into applications. - Efficient local execution with asynchronous queueing, partial graph re-execution, smart VRAM and RAM management, model offloading, and support for quantized m",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "harveyai/harvey-labs",
+      "url": "https://github.com/harveyai/harvey-labs",
+      "description": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+      "language": "Python",
+      "stars": 867,
+      "forks": 180,
+      "stars_today": 47,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-03-30T18:20:43Z",
+      "updated_at": "2026-08-10T03:15:11Z",
+      "open_issues": 46,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"docs/assets/lab-hero.png\" alt=\"Harvey LAB\" width=\"100%\"> </p> <p align=\"center\"> <strong>Legal Agent Benchmark (LAB): An open-source benchmark for evaluating agents on real legal work.</strong> </p> <p align=\"center\"> <a href=\"https://github.com/harveyai/harvey-labs/tags\"><img alt=\"Latest version\" src=\"https://img.shields.io/github/v/tag/harveyai/harvey-labs?display_name=tag&sort=semver&style=flat-square&label=version\"></a> <img alt=\"License: MIT\" src=\"https://img.shields.io/badge/license-MIT-green?style=flat-square\"> <img alt=\"Legal practice areas\" src=\"https://img.shields.io/badge/legal%20practice%20areas-24%20%2B%20contracting-0E7C7B?style=flat-square\"> <img alt=\"Tasks\" src=\"https://img.shields.io/badge/tasks-1671-4F46E5?style=flat-square\"> <a href=\"https://github.com/harveyai/harvey-labs/actions/workflows/validate-task-schema.yml\"><img alt=\"Test suite\" src=\"https://github.com/harveyai/harvey-labs/actions/workflows/validate-task-schema.yml/badge.svg?branch=main\"></a> </p> Harvey LAB is an open-source project aimed at benchmarking LLM agents' abilities to perform legal work in realistic environments. LAB consists of two parts: a dataset of *tasks* containing agent instructions, documents, and rubrics as well as an *execution harness* for running and evaluating agents against those tasks. LAB is an ongoing project and we expect to consistently add to and refine the task set and execution harness. Read the announcement post: [Introducing Harvey's Legal Agent Benchmark](https://www.harvey.ai/blog/introducing-harveys-legal-agent-benchmark) ## Getting Started Start with the full walkthrough in **[docs/tutorial.md](docs/tutorial.md)** — it takes one realistic M&A data-room assignment end to end: setup, task inspection, agent run, scoring, report review, and comparison dashboards. ## Additional Documentation | Guide | Description | |---|---| | [Architecture](docs/architecture.md) | Task model, harness, tools, adapters, reports, and sweeps | | [Evaluation Methodology](docs/eval-strategies.md) | All-pass rubric scoring and LLM judge behavior | | [Contributing](CONTRIBUTING.md) | Add tasks, model adapters, evaluation improvements, and docs | ## Citation If you use Harvey LAB in your research, please cite it as: ```bibtex @misc{harveylab2026, title = {Harvey LAB: The Legal Agent Benchmark}, author = {{Harvey AI}}, year = {2026}, version = {v1.0}, url = {https://github.com/harveyai/harvey-labs/tree/v1.0}, note = {Announcement: \\url{https://www.harvey.ai/blog/introducing-harveys-legal-agent-benchmark}} } ```",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 17710,
+      "forks": 4016,
+      "stars_today": 163,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-08T23:46:22Z",
+      "updated_at": "2026-08-10T03:15:48Z",
+      "open_issues": 1418,
+      "default_branch": "main",
+      "readme_excerpt": "# T3 Code T3 Code is an \"agent harness control surface\". It enables control of the agents on your machine with a best-in-class mobile app ([iOS](https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824), [Android](https://play.google.com/store/apps/details?id=com.t3tools.t3code)), [web app](https://app.t3.codes) and [Electron-based desktop app](https://t3.codes). Works with your subscriptions on Claude Code, Codex, Cursor, Grok Build, and OpenCode. If they're set up on your computer, T3 Code can control them. ## \"Wait, what are you selling me?\" Nothing. We built T3 Code because we wanted the best possible development experience with agents. We were inspired by existing solutions like the Codex desktop app, Conductor, Claude Desktop and Cursor Glass, but none met our bar. We wanted something performant, remote-ready, and truly open. If we ever go the wrong direction, we want you to have everything you need to fork and build the editor that you want. ## Installation > [!WARNING] > T3 Code currently supports Codex, Claude, Cursor, Grok Build and OpenCode. Install and authenticate at least one provider before use: > > - Codex: install [Codex CLI](https://developers.openai.com/codex/cli) and run `codex login` > - Claude: install [Claude Code](https://claude.com/product/claude-code) and run `claude auth login` > - Cursor: install [Cursor CLI](https://cursor.com/cli) and run `agent login` > - Grok Build: install [Grok Build CLI](https://x.ai/cli) and run `grok login` > - OpenCode: install [OpenCode](https://opencode.ai) and run `opencode auth login` ### Try it out (install-free) The easiest way to test T3 Code is to run the server in your terminal (requires Node.js 22.16+, 23.11+, or 24.10+): ```bash npx t3@latest ``` This will launch T3 Code's backend on your machine as well as the local web app to control your agents. Tip: Use `npx t3@latest --help` for the full CLI reference. ### Desktop app Install the latest version of the desktop app from [GitHub Releases](https://github.com/pingdotgg/t3code/releases), or from your favorite package registry: #### Windows (`winget`) ```bash winget install T3Tools.T3Code ``` #### macOS (Homebrew) ```bash brew install --cask t3-code ``` #### Arch Linux (AUR) ```bash yay -S t3code-bin ``` ## Some notes We are very very early in this project. Expect bugs. We are (mostly) not accepting contributions yet. Small fixes may be considered. Big features will not be. ## Documentation Full docs live in [docs/](./docs). There's no docs site yet. - [Install and first run](./docs/user/install.md) - [Permission modes](./docs/user/permission-modes.md) - [Keyboard shortcuts](./docs/user/keybindings.md) - [Customize a project icon](./docs/user/project-settings.md) - [Remote access from a phone or another machine](./docs/user/remote-access.md) - [Keeping app and server in sync](./docs/user/updating.md) - [Source control integrations](./docs/user/source-control.md) - Multiple accounts: [Codex](./docs/user/providers-codex.md) · [Claude](./docs/user/providers-claude.md) - Linux: [run T3 Code as a background service](./docs/user/background-service.md) Building from source? Start at [docs/internals/overview.md](./docs/internals/overview.md). ## If you REALLY want to contribute still.... read this first ### Install `vp` T3 Code uses Vite+ so you'll need to install the global `vp` command-line tool. #### macOS / Linux ```bash curl -fsSL https://vite.plus | bash ``` #### Windows ```bash irm https://vite.plus/ps1 | iex ``` Checkout their getting started guide for more information: https://viteplus.dev/guide/ ### Install dependencies ```bash vp i ``` Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening an issue or PR. Need support? Join the [Discord](https://discord.gg/jn4EGJjrvv).",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 4,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "至少 0/12 个项目直接涉及智能体、语音、多模态或 AI 应用基础设施。",
+      "智能体热点从“完成任务”转向记忆、安全、身份、权限和可靠运行。",
+      "本地优先跨语音、金融数据和地理空间产品出现，价值是降低云依赖并增强数据控制。",
+      "金融领域同时出现数据底座和研究资源，开发者正在补齐 AI 金融应用的资料工具层。",
+      "连续留榜的 AI 伴侣与视频理解项目显示，多模态交互仍比单纯文本问答更吸引注意。"
+    ],
+    "hot_characteristics": [
+      "其他开发者关注方向（12 个项目）"
+    ],
+    "product_business_signals": [
+      "企业智能体机会正向治理、安全和多模型管理迁移。",
+      "消费 AI 开始强调实时语音、持续角色和参与具体活动。",
+      "本地运行与用户掌控数据成为多个应用方向的共同卖点。",
+      "多数项目仍处于开源关注阶段，不能推断付费采用或商业成功。"
+    ],
+    "watch_next": [
+      "观察智能体治理项目是否出现企业集成案例。",
+      "观察实时语音智能体在普通设备上的延迟和中文体验。",
+      "观察 AI 伴侣与视频理解项目能否持续留榜并形成用户留存。",
+      "核实金融数据工具的数据授权、准确性和商业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "PrimeIntellect-ai/prime-agent",
+        "one_line_summary": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "solution": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 2356 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：A self-improving RLM agent for coding workflows and long-running autonomous tasks. 这个项目尝试用“A self-improving RLM agent for coding workflows and long-running autonomous tasks.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "vitali87/code-graph-rag",
+        "one_line_summary": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "solution": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 96 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs 这个项目尝试用“The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vitali87/code-graph-rag",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The ultimate RAG for your monorepo. Query, understand, and edit multi-language codebases with the power of AI and knowledge graphs",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vitali87/code-graph-rag",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/vitali87/code-graph-rag",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "one_line_summary": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "solution": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 858 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. 这个项目尝试用“A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/msitarzewski/agency-agents",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/msitarzewski/agency-agents",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/msitarzewski/agency-agents",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pranshuparmar/witr",
+        "one_line_summary": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "solution": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 210 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI. 这个项目尝试用“Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pranshuparmar/witr",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Why is this running? Trace any process, port, container, or file back to what started it - CLI + TUI.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pranshuparmar/witr",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pranshuparmar/witr",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google-deepmind/weathernext",
+        "one_line_summary": "公开资料不足。",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "公开资料不足，待进一步判断。",
+        "solution": "公开资料不足。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 86 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：公开资料不足，待进一步判断。 这个项目尝试用“公开资料不足。”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-deepmind/weathernext",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-deepmind/weathernext",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google-deepmind/weathernext",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "one_line_summary": "Production-grade engineering skills for AI coding agents.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Production-grade engineering skills for AI coding agents.",
+        "solution": "Production-grade engineering skills for AI coding agents.",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 680 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Production-grade engineering skills for AI coding agents. 这个项目尝试用“Production-grade engineering skills for AI coding agents.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Production-grade engineering skills for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "one_line_summary": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "solution": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 306 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs. 这个项目尝试用“LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "goauthentik/authentik",
+        "one_line_summary": "The authentication glue you need.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The authentication glue you need.",
+        "solution": "The authentication glue you need.",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 310 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The authentication glue you need. 这个项目尝试用“The authentication glue you need.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The authentication glue you need.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/goauthentik/authentik",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/goauthentik/authentik",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google/skills",
+        "one_line_summary": "Agent Skills for Google products and technologies",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "Agent Skills for Google products and technologies",
+        "solution": "Agent Skills for Google products and technologies",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 528 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：Agent Skills for Google products and technologies 这个项目尝试用“Agent Skills for Google products and technologies”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Agent Skills for Google products and technologies",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Comfy-Org/ComfyUI",
+        "one_line_summary": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "solution": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 365 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. 这个项目尝试用“The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Comfy-Org/ComfyUI",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Comfy-Org/ComfyUI",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Comfy-Org/ComfyUI",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "harveyai/harvey-labs",
+        "one_line_summary": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+        "solution": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 47 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：A benchmark built to evaluate and improve agent capabilities for supporting legal work. 这个项目尝试用“A benchmark built to evaluate and improve agent capabilities for supporting legal work.”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/harveyai/harvey-labs",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A benchmark built to evaluate and improve agent capabilities for supporting legal work.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/harveyai/harvey-labs",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/harveyai/harvey-labs",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "one_line_summary": "公开资料不足。",
+        "industry_direction": "其他开发者关注方向",
+        "target_users": [
+          "相关行业从业者"
+        ],
+        "problem_solved": "公开资料不足，待进一步判断。",
+        "solution": "公开资料不足。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 163 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "公开资料不足",
+        "technology_impact": "暂不判断行业影响。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "证据不足，不能推断市场价值。",
+        "ai_relevance": "暂不判断行业影响。",
+        "plain_language_explanation": "通俗地说：公开资料不足，待进一步判断。 这个项目尝试用“公开资料不足。”来降低门槛。",
+        "scenario_examples": [
+          "相关行业从业者在日常工作中使用该产品处理相关任务",
+          "团队先用小范围试点验证效果，再决定是否扩大采用"
+        ],
+        "practical_benefits": [
+          "减少重复工作或沟通成本",
+          "让相关能力更容易进入实际工作流程"
+        ],
+        "industry_implications": "暂不判断行业影响。",
+        "who_should_care": "相关行业从业者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pingdotgg/t3code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
