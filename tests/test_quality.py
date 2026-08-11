@@ -28,6 +28,27 @@ class QualityGateTests(unittest.TestCase):
                               for item in analysis.repositories}), 4)
         self.assertIn("4/4", analysis.key_judgments[0])
 
+    def test_github_fallback_distinguishes_projects_in_same_broad_theme(self) -> None:
+        repositories = [
+            Repository(1, "org/context", "https://github.com/org/context",
+                       description="Context graphs and provenance for accountable AI"),
+            Repository(2, "org/roles", "https://github.com/org/roles",
+                       description="A complete AI agency with specialized expert roles"),
+            Repository(3, "org/manager", "https://github.com/org/manager",
+                       description="An app to manage agents at work"),
+            Repository(4, "org/learner", "https://github.com/org/learner",
+                       description="A self-improving agent for long-running autonomous tasks"),
+        ]
+        analysis = build_fallback_analysis(repositories, "fixture")
+        self.assertEqual(github_analysis_quality_errors(analysis, 4), [])
+        self.assertEqual(
+            len({tuple(item.practical_benefits) for item in analysis.repositories}),
+            4,
+        )
+        self.assertEqual(
+            len({item.problem_solved for item in analysis.repositories}), 4
+        )
+
     def test_product_fallback_rejects_template_repetition(self) -> None:
         products = [
             Product(str(i), i, f"p-{i}", f"Product {i}", "Same", "Same",

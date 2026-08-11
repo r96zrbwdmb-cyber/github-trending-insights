@@ -8,9 +8,22 @@ from typing import Any, Dict, List
 from .models import IndustryAnalysis
 
 
-def _duplicate_error(values: List[Any], label: str) -> str:
-    normalized = [json.dumps(value, ensure_ascii=False, sort_keys=True) for value in values]
-    if normalized and Counter(normalized).most_common(1)[0][1] > max(3, len(values) // 3):
+def _duplicate_error(
+    values: List[Any], label: str, subjects: List[str] | None = None
+) -> str:
+    normalized = []
+    for index, value in enumerate(values):
+        text = json.dumps(value, ensure_ascii=False, sort_keys=True)
+        if subjects:
+            subject = subjects[index]
+            text = text.replace(subject, "<项目>")
+            text = re.sub(
+                r"对\s*<项目>\s*的潜在使用者而言[，,]?", "", text
+            )
+        normalized.append(text)
+    if normalized and Counter(normalized).most_common(1)[0][1] >= max(
+        3, (len(values) + 3) // 4
+    ):
         return f"{label}重复率过高"
     return ""
 
@@ -24,11 +37,12 @@ def github_analysis_quality_errors(
     errors: List[str] = []
     if len(insights) != expected:
         errors.append("项目分析数量与榜单不一致")
+    subjects = [item.full_name.split("/")[-1] for item in insights]
     for values, label in [
         ([item.practical_benefits for item in insights], "实际好处"),
         ([item.plain_language_explanation for item in insights], "通俗解释"),
     ]:
-        error = _duplicate_error(values, label)
+        error = _duplicate_error(values, label, subjects)
         if error:
             errors.append(error)
     placeholders = ["相关行业从业者", "暂不判断行业影响", "公开资料不足"]
