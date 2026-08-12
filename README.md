@@ -14,7 +14,7 @@
 - 相比过去 7 天和 30 天，哪些方向正在出现、增强、持续或降温？
 
 <!-- latest-report:start -->
-最新日报：[2026-08-11](reports/2026-08-11.md) · 最新周报：[2026-W32](reports/weekly/2026-W32.md) · 最新月报：[2026-07](reports/monthly/2026-07.md) · [查看全部历史](reports/index.md)
+最新日报：[2026-08-12](reports/2026-08-12.md) · 最新周报：[2026-W32](reports/weekly/2026-W32.md) · 最新月报：[2026-07](reports/monthly/2026-07.md) · [查看全部历史](reports/index.md)
 <!-- latest-report:end -->
 
 ## 报告体系
