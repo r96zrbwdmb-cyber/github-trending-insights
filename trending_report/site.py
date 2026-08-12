@@ -6,6 +6,8 @@ import shutil
 from pathlib import Path
 from typing import Any, Dict, List
 
+from .periods import ensure_period_summaries, load_periods
+
 
 def _load(path: Path) -> Dict[str, Any]:
     try:
@@ -24,6 +26,7 @@ def _json_for_script(value: Any) -> str:
 
 
 def build_site(root: Path) -> Path:
+    ensure_period_summaries(root)
     site = root / "site"
     output = root / "_site"
     output.mkdir(parents=True, exist_ok=True)
@@ -43,6 +46,10 @@ def build_site(root: Path) -> Path:
         "github": github,
         "producthunt": producthunt,
         "dates": {"github": github_days, "producthunt": product_days},
+        "periods": {
+            "github": load_periods(root, "github"),
+            "producthunt": load_periods(root, "producthunt"),
+        },
     }
     template = (site / "index.html").read_text(encoding="utf-8")
     page = template.replace("__SITE_DATA__", _json_for_script(data))

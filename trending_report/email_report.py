@@ -29,11 +29,73 @@ def _items(values: List[Any], limit: int = 5) -> str:
     return "".join(f"<li>{html.escape(str(value))}</li>" for value in values[:limit])
 
 
+def _closing_periods(
+    root: Path, platform: str, snapshot_date: str
+) -> List[Dict[str, Any]]:
+    values: List[Dict[str, Any]] = []
+    for period_type in ["weekly", "monthly"]:
+        directory = root / "data" / "periods" / platform / period_type
+        paths = sorted(directory.glob("*.json"))
+        if not paths:
+            continue
+        try:
+            value = json.loads(paths[-1].read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if value.get("end_date") == snapshot_date:
+            values.append(value)
+    return values
+
+
+def _period_email(root: Path, github_date: str, product_date: str) -> str:
+    blocks: List[str] = []
+    for platform, platform_name, snapshot_date in [
+        ("github", "GitHub 行业信号", github_date),
+        ("producthunt", "Product Hunt 商业信号", product_date),
+    ]:
+        for value in _closing_periods(root, platform, snapshot_date):
+            period_name = "本周总结" if value.get("period_type") == "weekly" else "本月总结"
+            observed = int(value.get("observed_days", 0))
+            expected = int(value.get("expected_days", 0))
+            platform_label = html.escape(platform_name)
+            display_label = html.escape(
+                str(value.get("display_label", "周期总结"))
+            )
+            summary_items = _items(value.get("executive_summary", []), 3)
+            strengthening = html.escape(
+                "、".join(value.get("strengthening", [])[:5])
+                or "尚未形成可靠信号"
+            )
+            watch_next = html.escape(
+                "、".join(value.get("watch_next", [])[:3])
+                or "继续验证趋势是否持续"
+            )
+            blocks.append(
+                f"""<div style="background:#fff;border:1px solid #111;padding:24px;margin:18px 0">
+                  <p style="font-size:12px;letter-spacing:1px;margin:0">
+                    {platform_label} · {period_name}
+                  </p>
+                  <h2 style="margin:8px 0">{display_label}</h2>
+                  <p style="color:#666">有效观察 {observed}/{expected} 天</p>
+                  <ul style="padding-left:22px;line-height:1.8">
+                    {summary_items}
+                  </ul>
+                  <p><strong>正在增强：</strong>{strengthening}</p>
+                  <p><strong>下一步关注：</strong>{watch_next}</p>
+                </div>"""
+            )
+    if not blocks:
+        return ""
+    return "<h2 style=\"margin-top:36px\">周期总结</h2>" + "".join(blocks)
+
+
 def build_daily_email(root: Path) -> tuple[str, str]:
     github = _latest_snapshot(root / "data")
     producthunt = _latest_snapshot(root / "data" / "producthunt")
     github_analysis = github.get("industry_analysis", {})
     product_analysis = producthunt.get("analysis", {})
+    github_date = str(github.get("date", ""))
+    product_date = str(producthunt.get("date", ""))
     report_date = max(
         str(github.get("date", "")),
         str(producthunt.get("date", "")),
@@ -63,6 +125,8 @@ def build_daily_email(root: Path) -> tuple[str, str]:
       </ol>
       <a href="{PUBLIC_SITE}#producthunt" style="color:#fff;font-weight:bold">查看 Top 15 产品 →</a>
     </div>
+
+    {_period_email(root, github_date, product_date)}
 
     <p style="color:#666;font-size:13px;line-height:1.7">
       榜单热度代表关注信号，不等于收入、融资、留存或市场采用。

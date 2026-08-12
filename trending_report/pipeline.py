@@ -4,7 +4,7 @@ import calendar
 import json
 import os
 import tempfile
-from datetime import date, datetime, timedelta
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from zoneinfo import ZoneInfo
@@ -20,6 +20,12 @@ from .analysis import (
 from .clients import GitHubClient, OpenAIClient
 from .fallback import build_fallback_analysis
 from .models import IndustryAnalysis, Repository
+from .periods import (
+    github_period_summary,
+    is_month_end,
+    period_path,
+    producthunt_period_summary,
+)
 from .producthunt import (
     OfficialSiteReader,
     Product,
@@ -187,6 +193,9 @@ def run(
     day_over_day = summarize_day_over_day(
         repositories, prior_snapshots, report_date
     )
+    snapshot["trend_7d"] = trend_7d
+    snapshot["trend_30d"] = trend_30d
+    snapshot["day_over_day"] = day_over_day
     report_content = render_daily_report(
         report_date,
         repositories,
@@ -204,13 +213,12 @@ def run(
     atomic_write(index_path, json.dumps(index, ensure_ascii=False, indent=2) + "\n")
     atomic_write(report_path, report_content)
 
-    if report_date.weekday() == 0:
-        generate_weekly(root, report_date - timedelta(days=1), openai=openai)
-    if report_date.day == 1:
-        previous_month_end = report_date - timedelta(days=1)
+    if report_date.weekday() == 6:
+        generate_weekly(root, report_date, openai=openai)
+    if is_month_end(report_date):
         generate_monthly(
             root,
-            f"{previous_month_end.year:04d}-{previous_month_end.month:02d}",
+            f"{report_date.year:04d}-{report_date.month:02d}",
             openai=openai,
         )
     _refresh_navigation(root)
@@ -270,6 +278,10 @@ def run_producthunt(
         else:
             atomic_write(existing, previous)
         raise
+    if report_date.weekday() == 6:
+        _generate_producthunt_period(root, report_date, "weekly")
+    if is_month_end(report_date):
+        _generate_producthunt_period(root, report_date, "monthly")
     return report_path
 
 
@@ -314,6 +326,13 @@ def generate_weekly(
     )
     path = root / "reports" / "weekly" / f"{label}.md"
     atomic_write(path, report)
+    payload = github_period_summary(
+        snapshots, end_date, "weekly", synthesis=synthesis
+    )
+    atomic_write(
+        period_path(root, "github", "weekly", label),
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+    )
     _refresh_navigation(root)
     return path
 
@@ -348,8 +367,37 @@ def generate_monthly(
     )
     path = root / "reports" / "monthly" / f"{month}.md"
     atomic_write(path, report)
+    payload = github_period_summary(
+        snapshots, end_date, "monthly", synthesis=synthesis
+    )
+    atomic_write(
+        period_path(root, "github", "monthly", month),
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+    )
     _refresh_navigation(root)
     return path
+
+
+def _generate_producthunt_period(
+    root: Path, end_date: date, period_type: str
+) -> Path:
+    data_dir = root / "data" / "producthunt"
+    snapshots = [
+        value
+        for path in sorted(data_dir.glob("????-??-??.json"))
+        if (value := _load_json(path)).get("products")
+    ]
+    payload = producthunt_period_summary(
+        data_dir, snapshots, end_date, period_type
+    )
+    return_path = period_path(
+        root, "producthunt", period_type, str(payload["label"])
+    )
+    atomic_write(
+        return_path,
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+    )
+    return return_path
 
 
 def reanalyze(
@@ -400,6 +448,17 @@ def reanalyze(
             snapshot if item.get("date") == snapshot["date"] else item
             for item in all_snapshots
         ]
+        snapshot["trend_7d"] = summarize_window(all_snapshots, report_date, 7)
+        snapshot["trend_30d"] = summarize_window(all_snapshots, report_date, 30)
+        snapshot["day_over_day"] = summarize_day_over_day(
+            repositories,
+            [
+                item
+                for item in all_snapshots
+                if item.get("date", "") < snapshot["date"]
+            ],
+            report_date,
+        )
         atomic_write(path, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
         report_path = root / "reports" / f"{report_date.isoformat()}.md"
         atomic_write(
@@ -408,17 +467,9 @@ def reanalyze(
                 report_date,
                 repositories,
                 analysis,
-                summarize_window(all_snapshots, report_date, 7),
-                summarize_window(all_snapshots, report_date, 30),
-                summarize_day_over_day(
-                    repositories,
-                    [
-                        item
-                        for item in all_snapshots
-                        if item.get("date", "") < snapshot["date"]
-                    ],
-                    report_date,
-                ),
+                snapshot["trend_7d"],
+                snapshot["trend_30d"],
+                snapshot["day_over_day"],
             ),
         )
         updated.append(report_path)
@@ -481,6 +532,10 @@ def reanalyze(
         atomic_write(path, json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n")
         report_path = root / "reports" / "producthunt" / f"{report_date}.md"
         atomic_write(report_path, render_product_report(snapshot))
+        if report_date.weekday() == 6:
+            _generate_producthunt_period(root, report_date, "weekly")
+        if is_month_end(report_date):
+            _generate_producthunt_period(root, report_date, "monthly")
         updated.append(report_path)
     _refresh_navigation(root)
     build_site(root)

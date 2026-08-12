@@ -145,3 +145,24 @@ class ProductHuntPipelineTests(TestCase):
             trend = summarize_product_history(data, date(2026, 7, 29), 7)
             self.assertEqual(trend["observed_days"], 2)
             self.assertEqual(trend["status"], "observing")
+
+    def test_period_end_creates_product_weekly_and_monthly_summaries(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            run_producthunt(
+                root,
+                date(2026, 5, 31),
+                producthunt=FakeProductHunt(),
+                reader=NoopReader(),
+                openai=None,
+            )
+            self.assertTrue(
+                root.joinpath(
+                    "data/periods/producthunt/weekly/2026-W22.json"
+                ).exists()
+            )
+            self.assertTrue(
+                root.joinpath(
+                    "data/periods/producthunt/monthly/2026-05.json"
+                ).exists()
+            )

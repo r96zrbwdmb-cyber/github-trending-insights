@@ -8,6 +8,55 @@ const esc = (value = "") => String(value).replace(/[&<>"']/g, c => (
 ));
 const list = (items) => (items || []).map(esc).join("、") || "未公开";
 
+function latestPeriod(periodType) {
+  const periods = (((window.SITE_DATA.periods || {})[state.view] || {})[periodType] || []);
+  const dates = availableDates();
+  const selectedDate = state.date || dates[dates.length - 1] || "";
+  return periods.filter(item => !selectedDate || item.end_date <= selectedDate).at(-1) || null;
+}
+
+function periodItems(value) {
+  return (value || []).length ? value : ["尚未形成可靠信号"];
+}
+
+function periodList(value) {
+  return periodItems(value)
+    .slice(0, 5)
+    .map(item => String(item).replace(/[。；，、]+$/g, ""))
+    .join("；");
+}
+
+function renderPeriodCard(period, kind) {
+  if (!period) {
+    return `<article class="period-card period-empty">
+      <p class="kicker">${kind === "weekly" ? "周度总结" : "月度总结"}</p>
+      <h3>等待首个完整周期</h3>
+      <p>到本${kind === "weekly" ? "周日" : "月最后一天"}后自动生成，不用手动操作。</p>
+    </article>`;
+  }
+  const status = period.status === "complete" ? "有效总结" : "观察期总结";
+  const groups = [
+    ["正在增强", period.strengthening],
+    ["持续关注", period.persistent],
+    ["可能降温", period.cooling],
+    ["主要用户", period.audiences],
+    [state.view === "github" ? "常见产品形态" : "常见收费方式", period.business_models],
+    ["下期关注", period.watch_next]
+  ];
+  return `<article class="period-card">
+    <div class="period-top">
+      <div><p class="kicker">${kind === "weekly" ? "周度总结" : "月度总结"}</p>
+      <h3>${esc(period.display_label || period.label)}</h3></div>
+      <span class="period-status">${esc(status)} · ${Number(period.observed_days || 0)}/${Number(period.expected_days || 0)} 天</span>
+    </div>
+    <ul class="period-summary">${periodItems(period.executive_summary).slice(0,3).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <dl class="period-details">${groups.map(([label, items]) => `
+      <div><dt>${esc(label)}</dt><dd>${esc(periodList(items))}</dd></div>`).join("")}
+    </dl>
+    <p class="period-limit">${esc(period.limits || "周期趋势是关注度信号，不直接等于市场结果。")}</p>
+  </article>`;
+}
+
 function githubData(snapshot) {
   const analysis = snapshot.industry_analysis || {};
   const insightMap = Object.fromEntries((analysis.repositories || []).map(x => [x.full_name, x]));
@@ -108,6 +157,12 @@ function render(snapshot) {
   $("patterns").innerHTML = data.patterns.length
     ? data.patterns.map(x => `<article>${esc(x)}</article>`).join("")
     : "<article>历史数据积累后再形成可靠判断。</article>";
+  $("periods-title").textContent = state.view === "github"
+    ? "AI 行业周度与月度总结"
+    : "产品与商业周度、月度总结";
+  $("periods").innerHTML = ["weekly", "monthly"]
+    .map(kind => renderPeriodCard(latestPeriod(kind), kind))
+    .join("");
   const status = $("status");
   status.hidden = true;
   status.textContent = "";

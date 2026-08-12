@@ -106,13 +106,34 @@ class PipelineTests(TestCase):
             self.assertIn("完整复盘", monthly.read_text(encoding="utf-8"))
             self.assertTrue(root.joinpath("reports/index.md").exists())
 
-    def test_monday_and_month_start_create_periodic_reports(self) -> None:
+    def test_period_end_creates_weekly_and_monthly_reports(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            root.joinpath("README.md").write_text("# Test\n", encoding="utf-8")
+            report_day = date(2026, 5, 31)  # Sunday and calendar month end.
+            run(root, report_day, no_ai=True, github=FakeGitHub())
+            self.assertTrue(root.joinpath("reports/weekly/2026-W22.md").exists())
+            self.assertTrue(root.joinpath("reports/monthly/2026-05.md").exists())
+            self.assertTrue(
+                root.joinpath("data/periods/github/weekly/2026-W22.json").exists()
+            )
+            self.assertTrue(
+                root.joinpath("data/periods/github/monthly/2026-05.json").exists()
+            )
+            snapshot = json.loads(
+                root.joinpath("data/2026-05-31.json").read_text(encoding="utf-8")
+            )
+            self.assertIn("trend_7d", snapshot)
+            self.assertIn("trend_30d", snapshot)
+            self.assertIn("day_over_day", snapshot)
+
+    def test_monday_and_month_start_do_not_create_new_periods(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             root.joinpath("README.md").write_text("# Test\n", encoding="utf-8")
             run(root, date(2026, 6, 1), no_ai=True, github=FakeGitHub())
-            self.assertTrue(any(root.joinpath("reports/weekly").glob("*.md")))
-            self.assertTrue(root.joinpath("reports/monthly/2026-05.md").exists())
+            self.assertFalse(root.joinpath("reports/weekly").exists())
+            self.assertFalse(root.joinpath("reports/monthly").exists())
 
     def test_backfill_keeps_readme_linked_to_latest_daily(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

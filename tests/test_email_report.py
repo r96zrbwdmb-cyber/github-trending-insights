@@ -37,12 +37,32 @@ class EmailReportTests(unittest.TestCase):
                 ),
                 encoding="utf-8",
             )
+            period_dir = root / "data" / "periods" / "github" / "weekly"
+            period_dir.mkdir(parents=True)
+            period_dir.joinpath("2026-W31.json").write_text(
+                json.dumps(
+                    {
+                        "period_type": "weekly",
+                        "display_label": "2026 年第 31 周",
+                        "end_date": "2026-07-30",
+                        "observed_days": 5,
+                        "expected_days": 7,
+                        "executive_summary": ["企业智能体需求持续增强"],
+                        "strengthening": ["企业智能体"],
+                        "watch_next": ["验证真实付费"],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
 
             subject, body = build_daily_email(root)
 
             self.assertIn("2026-07-30", subject)
             self.assertIn("AI 智能体评估正在升温", body)
             self.assertIn("企业开始购买 AI 质量保障能力", body)
+            self.assertIn("周期总结", body)
+            self.assertIn("企业智能体需求持续增强", body)
             self.assertNotIn("ValueError", body)
             self.assertNotIn("内部分析错误", body)
 
