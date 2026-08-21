@@ -572,6 +572,17 @@ CATEGORY_RULES: List[Tuple[List[str], tuple]] = [
 ]
 
 
+def _source_statement(repo: Repository, limit: int = 110) -> str:
+    """Return a compact, repository-owned description for safe differentiation."""
+    subject = re.sub(r"[-_/]+", " ", repo.full_name.split("/")[-1]).strip()
+    statement = re.sub(r"\s+", " ", repo.description or "").strip()
+    if not statement:
+        statement = "、".join(repo.topics[:4])
+    if not statement:
+        statement = f"名为 {subject} 的项目"
+    return statement[:limit].rstrip()
+
+
 def _rule_profile(repo: Repository) -> tuple:
     if repo.full_name in PROFILES:
         base = PROFILES[repo.full_name]
@@ -584,12 +595,7 @@ def _rule_profile(repo: Repository) -> tuple:
         if any(keyword in text for keyword in keywords):
             return profile
     subject = re.sub(r"[-_/]+", " ", repo.full_name.split("/")[-1]).strip()
-    source_statement = re.sub(r"\s+", " ", repo.description).strip()
-    if not source_statement:
-        source_statement = "、".join(repo.topics[:4])
-    if not source_statement:
-        source_statement = f"名为 {subject} 的项目"
-    source_statement = source_statement[:140].rstrip()
+    source_statement = _source_statement(repo, 140)
     return (
         "其他数字产品与工具", ["评估数字工具的产品负责人"],
         f"现有资料不足以确认具体客户问题；项目方仅说明：{source_statement}",
@@ -609,8 +615,13 @@ def build_fallback_analysis(
         (direction, users, problem, solution, technology, impact, risk,
          scenario, benefits) = _rule_profile(repo)
         subject = repo.full_name.split("/")[-1]
+        source_statement = _source_statement(repo)
         scenarios = [scenario]
-        benefits = [f"对 {subject} 的潜在使用者而言，{benefits[0]}", *benefits[1:]]
+        benefits = [
+            f"对 {subject} 的潜在使用者而言，在项目方所述的“{source_statement}”场景中，"
+            f"{benefits[0]}",
+            *benefits[1:],
+        ]
         insights.append(
             RepoInsight(
                 full_name=repo.full_name,
@@ -631,8 +642,8 @@ def build_fallback_analysis(
                 risks=risk,
                 ai_relevance=impact,
                 plain_language_explanation=(
-                    f"通俗地说，{subject} 希望解决的是：{problem} "
-                    f"它的办法是：{solution}"
+                    f"项目方把 {subject} 描述为“{source_statement}”。通俗地说，"
+                    f"它希望解决的是：{problem} 它的办法是：{solution}"
                 ),
                 scenario_examples=scenarios,
                 practical_benefits=benefits,
