@@ -594,7 +594,6 @@ def _rule_profile(repo: Repository) -> tuple:
     for keywords, profile in CATEGORY_RULES:
         if any(keyword in text for keyword in keywords):
             return profile
-    subject = re.sub(r"[-_/]+", " ", repo.full_name.split("/")[-1]).strip()
     source_statement = _source_statement(repo, 140)
     return (
         "其他数字产品与工具", ["评估数字工具的产品负责人"],
