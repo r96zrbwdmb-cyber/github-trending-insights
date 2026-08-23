@@ -1,0 +1,1585 @@
+{
+  "date": "2026-08-23",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 17,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "language": "Rust",
+      "stars": 113566,
+      "forks": 17378,
+      "stars_today": 1544,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2025-04-13T05:37:54Z",
+      "updated_at": "2026-08-23T02:37:42Z",
+      "open_issues": 13497,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"><strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer. <p align=\"center\"> <img src=\"https://github.com/openai/codex/blob/main/.github/codex-cli-splash.png\" alt=\"Codex CLI splash\" width=\"80%\" /> </p> </br> If you want Codex in your code editor (VS Code, Cursor, Windsurf), <a href=\"https://developers.openai.com/codex/ide\">install in your IDE.</a> </br>If you want the desktop app experience, run <code>codex app</code> or visit <a href=\"https://chatgpt.com/codex?app-landing-page=true\">the Codex App page</a>. </br>If you are looking for the <em>cloud-based agent</em> from OpenAI, <strong>Codex Web</strong>, go to <a href=\"https://chatgpt.com/codex\">chatgpt.com/codex</a>.</p> --- ## Quickstart ### Installing and running Codex CLI Run the following on Mac or Linux to install Codex CLI: ```shell curl -fsSL https://chatgpt.com/codex/install.sh | sh ``` Run the following on Windows to install Codex CLI: ```shell powershell -ExecutionPolicy ByPass -c \"irm https://chatgpt.com/codex/install.ps1 | iex\" ``` The standalone installers download from `https://releases.openai.com/codex` by default and fall back to GitHub Releases if a metadata or asset download is unavailable. To force GitHub Releases, set `CODEX_INSTALLER_USE_RELEASES_OPENAI_COM` to `false` (`0` and `no` are also accepted): ```shell curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_INSTALLER_USE_RELEASES_OPENAI_COM=false sh ``` ```powershell $env:CODEX_INSTALLER_USE_RELEASES_OPENAI_COM='false'; irm https://chatgpt.com/codex/install.ps1 | iex ``` Codex CLI can also be installed via the following package managers: ```shell # Install using npm npm install -g @openai/codex ``` ```shell # Install using Homebrew brew install --cask codex ``` Then simply run `codex` to get started. <details> <summary>You can also go to the <a href=\"https://github.com/openai/codex/releases/latest\">latest GitHub Release</a> and download the appropriate binary for your platform.</summary> Each GitHub Release contains many executables, but in practice, you likely want one of these: - macOS - Apple Silicon/arm64: `codex-aarch64-apple-darwin.tar.gz` - x86_64 (older Mac hardware): `codex-x86_64-apple-darwin.tar.gz` - Linux - x86_64: `codex-x86_64-unknown-linux-musl.tar.gz` - arm64: `codex-aarch64-unknown-linux-musl.tar.gz` Each archive contains a single entry with the platform baked into the name (e.g., `codex-x86_64-unknown-linux-musl`), so you likely want to rename it to `codex` after extracting it. </details> ### Using Codex with your ChatGPT plan Run `codex` and select **Sign in with ChatGPT**. We recommend signing into your ChatGPT account to use Codex as part of your Plus, Pro, Business, Edu, or Enterprise plan. [Learn more about what's included in your ChatGPT plan](https://help.openai.com/en/articles/11369540-codex-in-chatgpt). You can also use Codex with an API key, but this requires [additional setup](https://developers.openai.com/codex/auth#sign-in-with-an-api-key). ## Docs - [**Codex Documentation**](https://developers.openai.com/codex) - [**Contributing**](./docs/contributing.md) - [**Installing & building**](./docs/install.md) - [**Open source fund**](./docs/open-source-fund.md) This repository is licensed under the [Apache-2.0 License](LICENSE).",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 2,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 232198,
+      "forks": 19815,
+      "stars_today": 2683,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-08-23T02:36:41Z",
+      "open_issues": 385,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) Two ways in, two philosophies. **The [Claude Code plugin](https://code.claude.com/docs/en/plugins)** installs the whole set as a managed, read-only bundle that updates when I ship, so you subscribe rather than fork. **[skills.sh](https://skills.sh/mattpocock/skills)** copies editable skill files into your project, so you can hack on them and make them your own. Pick one: installing both leaves you with every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugins install mattpocock-skills ``` Or, from inside a session: ``` /plugin install mattpocock-skills ``` It's in Claude Code's official marketplace, so there's nothing to add first, and updates arrive automatically. </details> <details> <summary><strong>Codex, and other agents</strong></summary> ```bash npx skills@latest add mattpocock/skills ``` Pick the skills you want, and which coding agents to install them on. **The installer lets you choose which skills to take, so make sure `setup-matt-pocock-skills` is one of them.** A native Codex plugin is on the roadmap (see [`.agents/adr/0002-ship-as-a-claude-code-plugin.md`](./.agents/adr/0002-ship-as-a-claude-code-plugin.md)). </details> <details> <summary><strong>For tinkerers</strong></summary> Use the same installer, on any agent, including Claude Code: ```bash npx skills@latest add mattpocock/skills ``` It writes the skills into your repo as ordinary files you own and can edit. Nothing updates behind your back; pull my latest changes when you want them with `npx skills update`. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, Linear, or local files) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalignment. You think the dev knows what you want. Then you see what they've built - and you realize it didn't understand you at all. This is just the same in the AI age. There is a communication gap between you and the agent. The fix for this is a **grilling session** - getting the age",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -1,
+      "streak_days": 3
+    },
+    {
+      "rank": 3,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 242199,
+      "forks": 36702,
+      "stars_today": 411,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-08-23T02:34:07Z",
+      "open_issues": 149,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/hero.png\" alt=\"ECC - the agent harness operating system\" width=\"100%\" /> </p> <p align=\"center\"> <a href=\"https://www.star-history.com/affaan-m/ecc\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending&theme=dark\" /> <img src=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending\" alt=\"GitHub Trending Repository of the Day\" height=\"46\" /> </picture> </a> <a href=\"https://www.star-history.com/affaan-m/ecc\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank&theme=dark\" /> <img src=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank\" alt=\"Star History Global Rank\" height=\"46\" /> </picture> </a> </p> <p align=\"center\"> <strong>Language:</strong> <a href=\"README.md\">English</a> | <a href=\"docs/pt-BR/README.md\">Português (Brasil)</a> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"docs/zh-TW/README.md\">繁體中文</a> | <a href=\"docs/ja-JP/README.md\">日本語</a> | <a href=\"docs/ko-KR/README.md\">한국어</a> | <a href=\"docs/tr/README.md\">Türkçe</a> | <a href=\"docs/ru/README.md\">Русский</a> | <a href=\"docs/vi-VN/README.md\">Tiếng Việt</a> | <a href=\"docs/th/README.md\">ไทย</a> | <a href=\"docs/de-DE/README.md\">Deutsch</a> | <a href=\"docs/es/README.md\">Español</a> </p> <p align=\"center\"> <a href=\"https://discord.gg/36yGMHGFbR\"><img src=\"https://img.shields.io/discord/1496644400590094540?logo=discord&logoColor=white&label=Discord&color=5865F2\" alt=\"Discord\" /></a> <a href=\"https://ecc.tools\"><img src=\"https://img.shields.io/badge/Website-ecc.tools-E07856?logo=googlechrome&logoColor=white\" alt=\"Website\" /></a> <a href=\"https://github.com/apps/ecc-tools\"><img src=\"https://img.shields.io/badge/GitHub%20App-ECC%20Tools-181717?logo=github&logoColor=white\" alt=\"GitHub App\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT license\" /></a> </p> <p align=\"center\"> <a href=\"https://github.com/affaan-m/ECC/stargazers\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fstars&style=flat\" alt=\"Stars\" /></a> <a href=\"https://github.com/affaan-m/ECC/network/members\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fforks&style=flat\" alt=\"Forks\" /></a> <a href=\"https://github.com/affaan-m/ECC/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/affaan-m/ECC?style=flat\" alt=\"Contributors\" /></a> <a href=\"https://github.com/marketplace/ecc-tools\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Finstalls&logo=github\" alt=\"GitHub App installs\" /></a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/ecc-universal\"><img src=\"https://img.shields.io/npm/dw/ecc-universal?label=ecc-universal&logo=npm\" alt=\"ecc-universal npm downloads\" /></a> <a href=\"https://www.npmjs.com/package/ecc-agentshield\"><img src=\"https://img.shields.io/npm/dw/ecc-agentshield?label=ecc-agentshield&logo=npm\" alt=\"ecc-agentshield npm downloads\" /></a> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white\" alt=\"Shell\" /> <img src=\"https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white\" alt=\"TypeScript\" /> <img src=\"https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" /> <img src=\"https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white\" alt=\"Go\" /> <img src=\"https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white\" alt=\"Java\" /> <img src=\"https://img.shields.io/badge/-Perl-39457E?logo=perl&logoColor=white\" alt=\"Perl\" /> <img src=\"https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white\" alt=\"Markdown\" /> </p> > [!WARNING] > **Official sources only.** Install ECC only from verified channels: the GitHub repository [github.com/affaan-m/ECC](https://github.com/affaan-m/ECC), ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 11,
+      "rank_change": 8,
+      "streak_days": 2
+    },
+    {
+      "rank": 4,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 276218,
+      "forks": 24705,
+      "stars_today": 592,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-08-23T02:34:07Z",
+      "open_issues": 308,
+      "default_branch": "main",
+      "readme_excerpt": "# Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. ## Table of Contents - [How it works](#how-it-works) - [Commercial Services](#commercial-services) - [Getting Started](#installation) - [Claude Code](#claude-code) - [Antigravity](#antigravity) - [Codex App](#codex-app) - [Codex CLI](#codex-cli) - [Cursor](#cursor) - [Devin CLI](#devin-cli) - [Factory Droid](#factory-droid) - [Gemini CLI](#gemini-cli) - [GitHub Copilot CLI](#github-copilot-cli) - [Grok Build CLI](#grok-build-cli) - [Kimi Code](#kimi-code) - [OpenCode](#opencode) - [Pi](#pi) - [Hermes Agent](#hermes-agent) - [The Basic Workflow](#the-basic-workflow) - [Community](#community) - [What's Inside](#whats-inside) - [Philosophy](#philosophy) - [Contributing](#contributing) - [Updating](#updating) - [License](#license) - [Visual companion telemetry](#visual-companion-telemetry) ## How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. ## Commercial Services If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com. ## Installation Installation differs by harness. If you use more than one, install Superpowers separately for each one. ### Claude Code Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers) #### Official Marketplace - Install the plugin from Anthropic's official marketplace: ```bash /plugin install superpowers@claude-plugins-official ``` #### Superpowers Marketplace The Superpowers marketplace provides Superpowers and some other related plugins for Claude Code. - Register the marketplace: ```bash /plugin marketplace add obra/superpowers-marketplace ``` - Install the plugin from this marketplace: ```bash /plugin install superpowers@superpowers-marketplace ``` ### Antigravity Install Superpowers as a plugin from this repository: ```bash agy plugin install https://github.com/obra/superpowers ``` Antigravity runs the plugin's session-start hook, so Superpowers is active from the first message. Reinstall with the same command to update. ### Codex App Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - In the Codex app, click on Plugins in the sidebar. - You should see `Superpowers` in the Coding section. - Click the `+` next to Superpowers and follow the prompts. ### Codex CLI Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - Open the plugin search interface: ```bash /plugins ``` - Search for Superpowers: ```bash superpowers ``` - Select `Install Plugin`. ### Cursor - In Cursor Agent chat, install from market",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": 3,
+      "streak_days": 3
+    },
+    {
+      "rank": 5,
+      "full_name": "Wei-Shaw/sub2api",
+      "url": "https://github.com/Wei-Shaw/sub2api",
+      "description": "Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+      "language": "Go",
+      "stars": 38808,
+      "forks": 8040,
+      "stars_today": 278,
+      "topics": [
+        "2api",
+        "antigravity2api",
+        "cc2api",
+        "claude",
+        "claude-code",
+        "codex",
+        "crs",
+        "crs2",
+        "gemini"
+      ],
+      "license": "LGPL-3.0",
+      "created_at": "2025-12-18T02:26:18Z",
+      "updated_at": "2026-08-23T02:31:49Z",
+      "open_issues": 2800,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"assets/logo.svg\" alt=\"Sub2API Logo\" width=\"128\" /> # Sub2API [![Go](https://img.shields.io/badge/Go-1.26.5-00ADD8.svg)](https://golang.org/) [![Vue](https://img.shields.io/badge/Vue-3.4+-4FC08D.svg)](https://vuejs.org/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-336791.svg)](https://www.postgresql.org/) [![Redis](https://img.shields.io/badge/Redis-7+-DC382D.svg)](https://redis.io/) [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/) <a href=\"https://trendshift.io/repositories/21823\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/21823\" alt=\"Wei-Shaw%2Fsub2api | Trendshift\" width=\"250\" height=\"55\"/></a> **AI API Gateway Platform for Subscription Quota Distribution** English | [中文](README_CN.md) | [日本語](README_JA.md) </div> ## ⚠️ Important Notice Please read the following carefully before using this project: - **🚨 Terms of Service Risk**: Using this project may violate the terms of service of Anthropic and other upstream providers. Please review the relevant providers' user agreements before use; all risks arising from such use are borne solely by the user. - **⚖️ Compliant Use**: Use this project only in compliance with the laws and regulations of your country or region. Any unlawful use is strictly prohibited. - **📖 Disclaimer**: This project is provided for technical learning and research purposes only. The authors assume no liability for account bans, service interruptions, data loss, or any other direct or indirect damages resulting from the use of this project. - **🚫 No Commercial Authorization**: The developers of this project have never authorized any individual or organization to conduct any form of commercial operation based on this project. Any commercial activity conducted in the name of or based on this project is unrelated to this project and its developers, and all resulting disputes, losses, and legal liabilities shall be borne solely by the party conducting such activity. ## ❤️ Sponsors > [Want to appear here?](mailto:support@sub2api.org) <table> <tr> <td width=\"180\"><a href=\"https://cctk.ai/register?aff=SUB2API\"><img src=\"assets/partners/logos/cctk.jpg\" alt=\"CCTK.AI\" width=\"150\"></a></td> <td>Thanks to CCTK.AI for sponsoring this project! <a href=\"https://cctk.ai/register?aff=SUB2API\">CCTK.AI</a> is an AI API gateway focused on stability and cost-effectiveness, offering fast relay services for Claude, OpenAI, Gemini, and other popular models. It works seamlessly with Claude Code, Codex, and other mainstream coding tools, delivering the same model capabilities at a fraction of the official cost. Register via <a href=\"https://cctk.ai/register?aff=SUB2API\">this link</a> for faster, more stable, and more affordable AI API access.</td> </tr> <tr> <td width=\"180\"><a href=\"https://www.openmodel.ai?ref=sub2api\"><img src=\"assets/partners/logos/openmodel.jpg\" alt=\"openmodel\" width=\"150\"></a></td> <td>One API, every top model! <a href=\"https://www.openmodel.ai?ref=sub2api\">OpenModel</a> is a production-grade, high-availability AI API gateway that makes your applications truly fast and stable: automatic failover, smart routing to the best-performing channel, and a production-grade SLA. An SLA that far surpasses any single provider — making stability your core competitive advantage. Works directly with Claude Code, Codex, and Gemini CLI. Register via this link to get started.</td> </tr> <tr> <td width=\"180\"><a href=\"https://etok.ai\"><img src=\"assets/partners/logos/etok.png\" alt=\"ETok\" width=\"150\"></a></td> <td>Thanks to ETok.ai for sponsoring this project! ETok.ai is dedicated to building a one-stop AI programming tool service platform. We offer professional Claude Code packages and technical community services, with support for Google Gemini and OpenAI Codex. Through carefully designed plans and a professional tech community, we provide developers with reliable service guarantees and continuous technical support, m",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "makeplane/plane",
+      "url": "https://github.com/makeplane/plane",
+      "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+      "language": "TypeScript",
+      "stars": 57248,
+      "forks": 5446,
+      "stars_today": 263,
+      "topics": [
+        "boards",
+        "bug-tracker",
+        "django",
+        "docker",
+        "gantt",
+        "issue-tracker",
+        "jira",
+        "jira-alternative",
+        "kanban",
+        "linear",
+        "postgresql",
+        "product-management",
+        "project-management",
+        "project-planning",
+        "python",
+        "react",
+        "redis",
+        "typescipt",
+        "vite",
+        "work-management"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2022-11-19T12:55:01Z",
+      "updated_at": "2026-08-23T02:33:49Z",
+      "open_issues": 1081,
+      "default_branch": "preview",
+      "readme_excerpt": "<br /><br /> <p align=\"center\"> <a href=\"https://plane.so\"> <img src=\"https://media.docs.plane.so/logo/plane_github_readme.png\" alt=\"Plane Logo\" width=\"400\"> </a> </p> <p align=\"center\"><b>Modern project management for all teams</b></p> <p align=\"center\"> <a href=\"https://plane.so/\"><b>Website</b></a> • <a href=\"https://forum.plane.so\"><b>Forum</b></a> • <a href=\"https://x.com/planepowers\"><b>X</b></a> • <a href=\"https://docs.plane.so/\"><b>Documentation</b></a> </p> <p> <a href=\"https://app.plane.so/#gh-light-mode-only\" target=\"_blank\"> <img src=\"https://media.docs.plane.so/GitHub-readme/github-top.webp\" alt=\"Plane Screens\" width=\"100%\" /> </a> </p> Meet [Plane](https://plane.so/), an open-source project management tool to track issues, run ~sprints~ cycles, and manage product roadmaps without the chaos of managing the tool itself. 🧘‍♀️ > Plane is evolving every day. Your suggestions, ideas, and reported bugs help us immensely. Do not hesitate to join in the conversation on [Forum](https://forum.plane.so) or raise a GitHub issue. We read everything and respond to most. ## 🚀 Installation Getting started with Plane is simple. Choose the setup that works best for you: - **Plane Cloud** Sign up for a free account on [Plane Cloud](https://app.plane.so)—it's the fastest way to get up and running without worrying about infrastructure. - **Self-host Plane** Prefer full control over your data and infrastructure? Install and run Plane on your own servers. Follow our detailed [deployment guides](https://developers.plane.so/self-hosting/overview) to get started. | Installation methods | Docs link | | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | Docker | [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://developers.plane.so/self-hosting/methods/docker-compose) | | Kubernetes | [![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)](https://developers.plane.so/self-hosting/methods/kubernetes) | | Managed hosting | [<img alt=\"Deploy with Zenith\" src=\"https://cdn.zenith.hosting/buttons/deploy-with-zenith.svg\" height=\"40\">](https://zenith.hosting/host/plane) | `Instance admins` can configure instance settings with [God mode](https://developers.plane.so/self-hosting/govern/instance-admin). ## 🌟 Features - **Work Items** Efficiently create and manage tasks with a robust rich text editor that supports file uploads. Enhance organization and tracking by adding sub-properties and referencing related issues. - **Cycles** Maintain your team’s momentum with Cycles. Track progress effortlessly using burn-down charts and other insightful tools. - **Modules** Simplify complex projects by dividing them into smaller, manageable modules. - **Views** Customize your workflow by creating filters to display only the most relevant issues. Save and share these views with ease. - **Pages** Capture and organize ideas using Plane Pages, complete with AI capabilities and a rich text editor. Format text, insert images, add hyperlinks, or convert your notes into actionable items. - **Analytics** Access real-time insights across all your Plane data. Visualize trends, remove blockers, and keep your projects moving forward. ## 🛠️ Local development See [CONTRIBUTING](./CONTRIBUTING.md) ## ⚙️ Built with [![React Router](https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router&style=for-the-badge&logoColor=white)](https://reactrouter.com/) [![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)](https://www.djangoproject.com/) [![Node JS](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white)](https://nodejs.org/en) ## 📸 Screenshots <p> <a href=\"https://plane.so\" target=\"_blank\"> <im",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+      "language": "TypeScript",
+      "stars": 201847,
+      "forks": 60307,
+      "stars_today": 149,
+      "topics": [
+        "ai",
+        "apis",
+        "automation",
+        "cli",
+        "data-flow",
+        "development",
+        "integration-framework",
+        "integrations",
+        "ipaas",
+        "low-code",
+        "low-code-platform",
+        "mcp",
+        "mcp-client",
+        "mcp-server",
+        "n8n",
+        "no-code",
+        "self-hosted",
+        "typescript",
+        "workflow",
+        "workflow-automation"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2019-06-22T09:24:21Z",
+      "updated_at": "2026-08-23T02:31:30Z",
+      "open_issues": 1069,
+      "default_branch": "master",
+      "readme_excerpt": "![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png) # n8n – The Platform for AI Agents and Workflow Automation Fair-code platform to build and deploy AI agents and workflows. Combine a visual canvas with custom code, run it self-hosted or in the [cloud](https://app.n8n.cloud/login), and connect to 1500+ integrations. AI automation you can trust with real work, from prototype to production. ![n8n.io - Screenshot](https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png) ## Key Capabilities - **AI-Native Automation Platform**: Build and operationalize AI workflows and multi-step agents using your own data, models, and tools - **Model Flexibility, No Lock-In**: Connect to OpenAI, Anthropic, Google, or open-source models and switch providers without changing your architecture - **From Prototype to Production**: Design multi-step AI workflows with logic, tool use, human approvals, and full observability - **Code When You Need It**: Combine visual building with JavaScript, Python, and npm packages for advanced AI workflows - **Enterprise-Ready AI**: Self-host or deploy securely with role-based access, audit trails, and support for sensitive data - **Leverage What Already Exists**: 1500+ integrations and 9,000+ workflow [templates](https://n8n.io/workflows) to connect AI with your existing systems ## Quick Start Try n8n instantly with our install script (requires [Docker](https://www.docker.com/)): ```sh curl -fsSL https://get.n8n.io | sh ``` Or deploy manually with [Docker](https://docs.n8n.io/hosting/installation/docker/): ``` docker volume create n8n_data docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n ``` Access the editor at http://localhost:5678 ## Resources - 📚 [Documentation](https://docs.n8n.io) - 🔧 [1500+ Integrations](https://n8n.io/integrations) - 💡 [Example Workflows](https://n8n.io/workflows) - 🤖 [AI & LangChain Guide](https://docs.n8n.io/advanced-ai/) - 👥 [Community Forum](https://community.n8n.io) - 📖 [Community Tutorials](https://community.n8n.io/c/tutorials/28) ## Support Need help? Our community forum is the place to get support and connect with other users: [community.n8n.io](https://community.n8n.io) ## License n8n is [fair-code](https://faircode.io) distributed under the [Sustainable Use License](https://github.com/n8n-io/n8n/blob/master/LICENSE.md) and [n8n Enterprise License](https://github.com/n8n-io/n8n/blob/master/LICENSE_EE.md). - **Source Available**: Always visible source code - **Self-Hostable**: Deploy anywhere - **Extensible**: Add your own nodes and functionality [Enterprise Licenses](mailto:license@n8n.io) available for additional features and support. Additional information about the license model can be found in the [docs](https://docs.n8n.io/sustainable-use-license/). ## Contributing Found a bug 🐛 or have a feature idea ✨? Check our [Contributing Guide](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) for a setup guide & best practices. ## Join the Team Want to shape the future of automation? Check out our [job posts](https://n8n.io/careers) and join our team! ## What does n8n mean? **Short answer:** It means \"nodemation\" and is pronounced as n-eight-n. **Long answer:** \"I get that question quite often (more often than I expected) so I decided it is probably best to answer it here. While looking for a good name for the project with a free domain I realized very quickly that all the good ones I could think of were already taken. So, in the end, I chose nodemation. 'node-' in the sense that it uses a Node-View and that it uses Node.js and '-mation' for 'automation' which is what the project is supposed to help with. However, I did not like how long the name was and I could not imagine writing something that long every time in the CLI. That is when I then ended up on 'n8n'.\" - **Jan Oberhauser, Founder and CEO, n8n.io**",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "anthropics/claude-code",
+      "url": "https://github.com/anthropics/claude-code",
+      "description": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+      "language": "Python",
+      "stars": 142566,
+      "forks": 22838,
+      "stars_today": 127,
+      "topics": [],
+      "license": "",
+      "created_at": "2025-02-22T17:41:21Z",
+      "updated_at": "2026-08-23T02:35:32Z",
+      "open_issues": 15084,
+      "default_branch": "main",
+      "readme_excerpt": "# Claude Code ![](https://img.shields.io/badge/Node.js-18%2B-brightgreen?style=flat-square) [![npm]](https://www.npmjs.com/package/@anthropic-ai/claude-code) [npm]: https://img.shields.io/npm/v/@anthropic-ai/claude-code.svg?style=flat-square Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows -- all through natural language commands. Use it in your terminal, IDE, or tag @claude on Github. **Learn more in the [official documentation](https://code.claude.com/docs/en/overview)**. <img src=\"./demo.gif\" /> ## Get started > [!NOTE] > Installation via npm is deprecated. Use one of the recommended methods below. For more installation options, uninstall steps, and troubleshooting, see the [setup documentation](https://code.claude.com/docs/en/setup). 1. Install Claude Code: **MacOS/Linux (Recommended):** ```bash curl -fsSL https://claude.ai/install.sh | bash ``` **Homebrew (MacOS/Linux):** ```bash brew install --cask claude-code ``` **Windows (Recommended):** ```powershell irm https://claude.ai/install.ps1 | iex ``` **WinGet (Windows):** ```powershell winget install Anthropic.ClaudeCode ``` **NPM (Deprecated):** ```bash npm install -g @anthropic-ai/claude-code ``` 2. Navigate to your project directory and run `claude`. ## Plugins This repository includes several Claude Code plugins that extend functionality with custom commands and agents. See the [plugins directory](./plugins/README.md) for detailed documentation on available plugins. ## Reporting Bugs We welcome your feedback. Use the `/bug` command to report issues directly within Claude Code, or file a [GitHub issue](https://github.com/anthropics/claude-code/issues). ## Connect on Discord Join the [Claude Developers Discord](https://anthropic.com/discord) to connect with other developers using Claude Code. Get help, share feedback, and discuss your projects with the community. ## Data collection, usage, and retention When you use Claude Code, we collect feedback, which includes usage data (such as code acceptance or rejections), associated conversation data, and user feedback submitted via the `/bug` command. ### How we use your data See our [data usage policies](https://code.claude.com/docs/en/data-usage). ### Privacy safeguards We have implemented several safeguards to protect your data, including limited retention periods for sensitive information, restricted access to user session data, and clear policies against using feedback for model training. For full details, please review our [Commercial Terms of Service](https://www.anthropic.com/legal/commercial-terms) and [Privacy Policy](https://www.anthropic.com/legal/privacy).",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "AprilNEA/OpenLogi",
+      "url": "https://github.com/AprilNEA/OpenLogi",
+      "description": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+      "language": "Rust",
+      "stars": 13999,
+      "forks": 375,
+      "stars_today": 959,
+      "topics": [
+        "dpi",
+        "gpui",
+        "hid",
+        "hidpp",
+        "local-first",
+        "logitech",
+        "logitech-mouse",
+        "logitech-options",
+        "mouse-remapping",
+        "mx-master",
+        "privacy",
+        "rust",
+        "smartshift"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-05-24T10:10:36Z",
+      "updated_at": "2026-08-23T02:36:40Z",
+      "open_issues": 261,
+      "default_branch": "master",
+      "readme_excerpt": "> [!WARNING] > **OpenLogi is under active development** and not yet stable — features and config may still change. Give the repo a **Star** ⭐ and **Watch** 👀 it to get notified when a new release lands. <h4 align=\"right\"><strong>English</strong> | <a href=\"docs/README.zh-CN.md\">简体中文</a> | <a href=\"docs/README.ja.md\">日本語</a> | <a href=\"docs/README.de.md\">Deutsch</a> | <a href=\"docs/README.fr.md\">Français</a> | <a href=\"docs/README.ko.md\">한국어</a></h4> <p align=\"center\"> <img src=\"https://assets.openlogi.org/brand/openlogi-icon.png\" width=\"138\" alt=\"OpenLogi\"/> </p> <h1 align=\"center\">OpenLogi</h1> <p align=\"center\"><strong>⚡️ A native, local-first alternative to Logitech Options+, written in Rust 🦀<br/>Unlock the full capabilities of Logitech mice, keyboards, and webcams over HID++ and UVC</strong></p> <div align=\"center\"> <a href=\"https://twitter.com/AprilNEA\" target=\"_blank\"> <img alt=\"twitter\" src=\"https://img.shields.io/badge/follow-AprilNEA-green?style=social&logo=Twitter\"></a> <a href=\"https://t.me/+VDtkR5OSAT04NzVh\" target=\"_blank\"> <img alt=\"telegram\" src=\"https://img.shields.io/badge/chat-telegram-blueviolet?style=flat&logo=Telegram\"></a> <a href=\"https://github.com/AprilNEA/OpenLogi/releases\" target=\"_blank\"> <img alt=\"GitHub downloads\" src=\"https://img.shields.io/github/downloads/AprilNEA/OpenLogi/total.svg?style=flat\"></a> <a href=\"https://github.com/AprilNEA/OpenLogi/commits\" target=\"_blank\"> <img alt=\"GitHub commit\" src=\"https://img.shields.io/github/commit-activity/m/AprilNEA/OpenLogi?style=flat\"></a> <img alt=\"Hits\" src=\"https://hits.aprilnea.com/hits?url=https://github.com/aprilnea/openlogi\"> </div> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/42303\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/42303\" alt=\"AprilNEA%2FOpenLogi | Trendshift\" width=\"250\" height=\"55\"/></a> </p> > **Fed up with Options+? Try OpenLogi.** Runs on macOS, Linux, and Windows. --- ## Beyond Options+ Things OpenLogi does that Options+ won't: - **Stay light.** Native Rust + GPUI. - **Run on Linux.** Linux is a first-class platform in OpenLogi. - **Gestures on any button.** Give the gesture role to any physical button — or turn gestures off entirely. - **Plain-text config.** Everything is one TOML file you can sync between machines however you like. - **Script it.** A real CLI alongside the GUI. ## Features - Devices connected over Logi Bolt receivers, Unifying receivers, Bluetooth, or a wired connection, with battery percentage and charge state - Button remapping via the OS input hook: a built-in action catalog plus custom keyboard shortcuts authored in the TOML config¹ - Per-application profile overlays that auto-switch on app focus (macOS + Windows; Linux on X11 / XWayland only) - Litra lights: power, brightness, and color temperature, with optional auto power that follows camera activity **Mouse** - Capture and remap the middle, mode-shift, and thumbwheel buttons (middle everywhere, the rest where the device exposes them) - Per-direction gesture bindings with live capture, on any capable button - Actions Ring: a cursor-centred, eight-slot overlay of actions (`ShowActionsRing`), with per-application layouts - DPI control with presets and Cycle / Set-preset actions (`0x2201`) - SmartShift wheel: mode toggle, sensitivity, and a permanent-ratchet panel (`0x2111`) - Per-device native scroll inversion (`0x2121`, supported devices) **Keyboard** - Global F-key remapping: the same action catalog as the mouse, plus power-user actions — typed text, key combos, multi-step workflows (macOS + Windows) - Static RGB lighting (`0x8070` / `0x8080`, supported devices) **Camera** - Any Logitech UVC webcam (Brio, StreamCam, the C920 series, …), plug and play - Live preview that opens the camera only while you watch — leaving it releases the camera entirely and the LED goes off - Image controls written straight to the UVC hardware — zoom, focus, exposure, brightness, contrast, saturation, sharpness, white balance, t",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -5,
+      "streak_days": 3
+    },
+    {
+      "rank": 10,
+      "full_name": "modular/modular",
+      "url": "https://github.com/modular/modular",
+      "description": "The Modular Platform (includes MAX & Mojo)",
+      "language": "Mojo",
+      "stars": 28857,
+      "forks": 3066,
+      "stars_today": 395,
+      "topics": [
+        "ai",
+        "language",
+        "machine-learning",
+        "max",
+        "modular",
+        "mojo",
+        "programming-language"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2023-04-28T22:17:24Z",
+      "updated_at": "2026-08-23T02:34:46Z",
+      "open_issues": 1112,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- rumdl-disable-file MD033 MD041 MD075 --> <div align=\"center\"> <img src=\"https://modular-assets.s3.us-east-1.amazonaws.com/images/modular-banner-github.png\"> [About Modular] | [MAX docs] | [Mojo docs] | [Contributing] </div> --- # Modular Platform This repo hosts open-source components of the Modular Platform, a unified platform for AI development and deployment, including the **MAX Framework**🧑‍🚀 and the **Mojo Language**🔥. ## Get started To get started with the Modular Platform and serve a model using the MAX framework, see [the MAX quickstart guide](https://max.modular.com/get-started). To get started with the Mojo language, see [the Mojo quickstart guide](https://mojolang.org/docs/manual/quickstart/). ## About the repo We're constantly open-sourcing more of the Modular Platform and you can find all of it in here. The main components include: - Mojo compiler: [/KGEN](KGEN) - Mojo standard library: [/mojo/stdlib](mojo/stdlib) - MAX accelerator library: [/max/kernels](/max/kernels) - MAX inference server: [/max/python/max/serve](/max/python/max/serve) (OpenAI-compatible endpoint) - MAX model pipelines: [/max/python/max/pipelines](/max/python/max/pipelines) (Python-based graphs) - Code examples: [/max/examples](/max/examples) + [/mojo/examples](mojo/examples) ## Contribute We accept contributions to the [Mojo standard library](./mojo), [MAX accelerator library](./max/kernels), [MAX model architectures](/max/python/max/pipelines/architectures), code examples, Mojo docs, and more. We aren't accepting contributions to the Mojo compiler yet. First, please read the [Contribution Guide](./CONTRIBUTING.md), and then refer to the following documentation about how to develop in the repo: - [`/max/docs`](/max/docs): Docs for developers working in the MAX framework codebase. - [`/mojo/stdlib/docs`](/mojo/stdlib/docs): Docs for developers working in the Mojo standard library. We also welcome your bug reports. If you have a bug, please [file an issue here](https://github.com/modular/modular/issues/new/choose). ## License This repository and its contributions are licensed under the Apache License v2.0 with LLVM Exceptions. See [LICENSE](LICENSE). MAX usage and distribution are licensed under the [Modular Community License](https://www.modular.com/legal/community). ### Third party licenses You are entirely responsible for checking and validating the licenses of third parties (for example, Hugging Face) for related software and libraries that are downloaded. ## Community & Events Get help from community members, tune in for a community meeting, or join a local meetup. | Channel | Link | |-----------------------|-------------------------------------------------| | 💬 Discord | [discord.gg/modular][discord] | | 💬 Forum | [forum.modular.com][forum] | | 📅 Meetup Group | [meetup.com/modular-meetup-group][meetup-group] | | 🎦 Community Meetings | [Upcoming community calls][public-com-meet-doc] | | 📺 YouTube | [youtube.com/@modularinc][youtube] | **Upcoming events** will be posted on our [Meetup page][meetup-group] and [Discord][discord]. Community meeting recordings will be posted on our [YouTube][youtube]. ## Thanks to our contributors <a href=\"https://github.com/modular/modular/graphs/contributors\"> <img src=\"https://contrib.rocks/image?repo=modular/modular\" /> </a> <!-- Link references --> <!-- Header navigation links --> [About Modular]: https://www.modular.com/ [MAX docs]: https://max.modular.com/ [Contributing]: ./CONTRIBUTING.md [Mojo docs]: https://mojolang.org/docs/ <!-- Community & Events links --> [discord]: https://discord.gg/modular [forum]: https://forum.modular.com/ [meetup-group]: https://www.meetup.com/modular-meetup-group/ [youtube]: https://www.youtube.com/@modularinc [public-com-meet-doc]: https://modul.ar/community-meeting-doc",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 0,
+      "streak_days": 3
+    },
+    {
+      "rank": 11,
+      "full_name": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "description": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+      "language": "",
+      "stars": 205345,
+      "forks": 21009,
+      "stars_today": 315,
+      "topics": [],
+      "license": "",
+      "created_at": "2026-01-27T03:53:13Z",
+      "updated_at": "2026-08-23T02:34:40Z",
+      "open_issues": 126,
+      "default_branch": "main",
+      "readme_excerpt": "# Karpathy-Inspired Claude Code Guidelines > Check out my new project [Multica](https://github.com/multica-ai/multica) — an open-source platform for running and managing coding agents with reusable skills. > > Follow me on X: [https://x.com/jiayuan_jy](https://x.com/jiayuan_jy) A single `CLAUDE.md` file to improve Claude Code behavior, derived from [Andrej Karpathy's observations](https://x.com/karpathy/status/2015883857489522876) on LLM coding pitfalls. English | [简体中文](./README.zh.md) ## The Problems From Andrej's post: > \"The models make wrong assumptions on your behalf and just run along with them without checking. They don't manage their confusion, don't seek clarifications, don't surface inconsistencies, don't present tradeoffs, don't push back when they should.\" > \"They really like to overcomplicate code and APIs, bloat abstractions, don't clean up dead code... implement a bloated construction over 1000 lines when 100 would do.\" > \"They still sometimes change/remove comments and code they don't sufficiently understand as side effects, even if orthogonal to the task.\" ## The Solution Four principles in one file that directly address these issues: | Principle | Addresses | |-----------|-----------| | **Think Before Coding** | Wrong assumptions, hidden confusion, missing tradeoffs | | **Simplicity First** | Overcomplication, bloated abstractions | | **Surgical Changes** | Orthogonal edits, touching code you shouldn't | | **Goal-Driven Execution** | Leverage through tests-first, verifiable success criteria | ## The Four Principles in Detail ### 1. Think Before Coding **Don't assume. Don't hide confusion. Surface tradeoffs.** LLMs often pick an interpretation silently and run with it. This principle forces explicit reasoning: - **State assumptions explicitly** — If uncertain, ask rather than guess - **Present multiple interpretations** — Don't pick silently when ambiguity exists - **Push back when warranted** — If a simpler approach exists, say so - **Stop when confused** — Name what's unclear and ask for clarification ### 2. Simplicity First **Minimum code that solves the problem. Nothing speculative.** Combat the tendency toward overengineering: - No features beyond what was asked - No abstractions for single-use code - No \"flexibility\" or \"configurability\" that wasn't requested - No error handling for impossible scenarios - If 200 lines could be 50, rewrite it **The test:** Would a senior engineer say this is overcomplicated? If yes, simplify. ### 3. Surgical Changes **Touch only what you must. Clean up only your own mess.** When editing existing code: - Don't \"improve\" adjacent code, comments, or formatting - Don't refactor things that aren't broken - Match existing style, even if you'd do it differently - If you notice unrelated dead code, mention it — don't delete it When your changes create orphans: - Remove imports/variables/functions that YOUR changes made unused - Don't remove pre-existing dead code unless asked **The test:** Every changed line should trace directly to the user's request. ### 4. Goal-Driven Execution **Define success criteria. Loop until verified.** Transform imperative tasks into verifiable goals: | Instead of... | Transform to... | |--------------|-----------------| | \"Add validation\" | \"Write tests for invalid inputs, then make them pass\" | | \"Fix the bug\" | \"Write a test that reproduces it, then make it pass\" | | \"Refactor X\" | \"Ensure tests pass before and after\" | For multi-step tasks, state a brief plan: ``` 1. [Step] → verify: [check] 2. [Step] → verify: [check] 3. [Step] → verify: [check] ``` Strong success criteria let the LLM loop independently. Weak criteria (\"make it work\") require constant clarification. ## Install **Option A: Claude Code Plugin (recommended)** From within Claude Code, first add the marketplace: ``` /plugin marketplace add forrestchang/andrej-karpathy-skills ``` Then install the plugin: ``` /plugin install andrej-karpathy-skills@karpathy-skills ``` This installs the g",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "mahlernim/google-timeline-visualizer",
+      "url": "https://github.com/mahlernim/google-timeline-visualizer",
+      "description": "Visualize your year in travel using your Google Location History (Timeline) data",
+      "language": "Kotlin",
+      "stars": 2582,
+      "forks": 303,
+      "stars_today": 441,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-12-16T06:49:16Z",
+      "updated_at": "2026-08-23T02:34:20Z",
+      "open_issues": 8,
+      "default_branch": "main",
+      "readme_excerpt": "# Timeline Visualizer [한국어 안내](README.ko.md) · [日本語](README.ja.md) Turn your Timeline file into an animated travel video on your Android phone. Choose exact dates, preview the Journey, and create an MP4 ready to watch or share. ![Videos library](play-store/assets/screenshots/en-US/01-videos.png) ![New video](play-store/assets/screenshots/en-US/03-selected-period.png) ![Android](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white) ![License](https://img.shields.io/github/license/mahlernim/google-timeline-visualizer) ![Build](https://github.com/mahlernim/google-timeline-visualizer/actions/workflows/validate.yml/badge.svg) ## Use on iPhone Open the [iPhone web app](https://ahn-lab.org/google-timeline-visualizer/) in Safari. There is no app to install and no Timeline file is uploaded. 1. In Google Maps, open **profile picture → Settings → Personal content → Export Timeline data** and save `Timeline.json` in Files. 2. Return to the web app and select **Choose Timeline.json**. 3. Choose a month range or exact dates, select the camera movement, and confirm the map privacy notice. 4. Preview the journey, then select **Create MP4**. 5. Play, share, or download the finished video. MP4 creation requires Safari 16.4 or newer with H.264 encoding support. Keep the tab open while the video is being created. To keep the web app on the Home Screen, use Safari's Share menu and choose **Add to Home Screen**. ## Install on Android The app is not yet on Google Play. Install it from this repository's [latest release](https://github.com/mahlernim/google-timeline-visualizer/releases/latest): 1. Under **Assets**, download the latest `TimelineVisualizer-*.apk` file on your phone. Do not download the `.sha256` checksum file. 2. Open the downloaded file. 3. If Android blocks the installation, select **Settings**, allow your browser or file manager to **Install unknown apps**, then return and try again. 4. After installation, you can turn that permission off again. Only download the APK from this repository. Android may display a warning because the app is installed outside Google Play. That warning is expected for a directly distributed APK. Future releases can be installed over this release. Requires Android 8.0 or newer. ## Get your Timeline file On Android, the export is in the phone's Settings app, not in Google Maps: 1. Open **Phone Settings**. 2. Select **Location → Location services → Timeline**. 3. Select **Export Timeline data**, then **Continue**. 4. Save `Timeline.json` somewhere easy to find, such as **Downloads**. See [Google's Timeline Help](https://support.google.com/maps/answer/6258979) if the Timeline menu is missing or the labels differ on your phone. Names and menu locations can vary by phone. In Timeline Visualizer, **Get Timeline file** shows these instructions and can open Location settings for you. Android does not provide apps with a standard link directly to the Timeline page. On iPhone, the exported JSON can be used directly in the [iPhone web app](https://ahn-lab.org/google-timeline-visualizer/). It can also be moved to an Android phone and opened in the Android app. ## Restore a missing Google Maps Timeline If older trips disappeared after changing phones, reinstalling Google Maps, or resetting a device, an encrypted Timeline backup may be available in Google Maps. Use the app's **Restore Google Maps Timeline** link or follow the [restoration guide](docs/restore-google-maps-timeline.md). Restore the history in Google Maps first, then export a new JSON file. Timeline Visualizer cannot access your Google account or encrypted backup and does not restore it directly. ## Create and share a video 1. Open **Create video**, select **Choose file**, and choose your Timeline file. 2. Choose a month range or use **Exact dates** for a trip lasting only a few days. The latest full year is selected by default, and ranges may cross year boundaries. 3. Confirm the name and title template, then choose a preset or a c",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -10,
+      "streak_days": 3
+    },
+    {
+      "rank": 13,
+      "full_name": "ripienaar/free-for-dev",
+      "url": "https://github.com/ripienaar/free-for-dev",
+      "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+      "language": "HTML",
+      "stars": 133942,
+      "forks": 14029,
+      "stars_today": 829,
+      "topics": [
+        "awesome-list",
+        "free-for-developers"
+      ],
+      "license": "",
+      "created_at": "2015-03-18T21:06:26Z",
+      "updated_at": "2026-08-23T02:37:42Z",
+      "open_issues": 13,
+      "default_branch": "master",
+      "readme_excerpt": "# free-for.dev Developers and open-source authors now have many services offering free tiers, but finding them all takes time to make informed decisions. This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings with free developer tiers. The scope of this particular list is limited to things that infrastructure developers (System Administrators, DevOps Practitioners, etc.) are likely to find useful. We love all the free services out there, but it would be good to keep it on topic. It's a grey line sometimes, so this is opinionated; please don't feel offended if I don't accept your contribution. This list results from Pull Requests, reviews, ideas, and work done by 1600+ people. You can also help by sending [Pull Requests](https://github.com/ripienaar/free-for-dev) to add more services or remove ones whose offerings have changed or been retired. [![Track Awesome List](https://www.trackawesomelist.com/badge.svg)](https://www.trackawesomelist.com/ripienaar/free-for-dev) **NOTE**: This list is only for as-a-Service offerings, not for self-hosted software. To be eligible, a service must offer a free tier, not just a free trial. The free tier must be for at least a year if it is time-bucketed. We also consider the free tier from a security perspective, so SSO is fine, but I will not accept services that restrict TLS to paid-only tiers. # Table of Contents * [Major Cloud Providers' Always-Free Limits](#major-cloud-providers) * [Cloud management solutions](#cloud-management-solutions) * [Analytics, Events, and Statistics](#analytics-events-and-statistics) * [APIs, Data and ML](#apis-data-and-ml) * [Artifact Repos](#artifact-repos) * [BaaS](#baas) * [Low-code Platform](#low-code-platform) * [CDN and Protection](#cdn-and-protection) * [CI and CD](#ci-and-cd) * [CMS](#cms) * [Code Generation](#code-generation) * [Code Quality](#code-quality) * [Code Search and Browsing](#code-search-and-browsing) * [Crash and Exception Handling](#crash-and-exception-handling) * [Data Visualization on Maps](#data-visualization-on-maps) * [Managed Data Services](#managed-data-services) * [Design and UI](#design-and-ui) * [Dev Blogging Sites](#dev-blogging-sites) * [DNS](#dns) * [Docker Related](#docker-related) * [Domain](#domain) * [Education and Career Development](#education-and-career-development) * [Email](#email) * [Feature Toggles Management Platforms](#feature-toggles-management-platforms) * [Font](#font) * [Forms](#forms) * [Generative AI](#generative-ai) * [IaaS](#iaas) * [IDE and Code Editing](#ide-and-code-editing) * [International Mobile Number Verification API and SDK](#international-mobile-number-verification-api-and-sdk) * [Issue Tracking and Project Management](#issue-tracking-and-project-management) * [Log Management](#log-management) * [Mobile App Distribution and Feedback](#mobile-app-distribution-and-feedback) * [Management Systems](#management-system) * [Messaging and Streaming](#messaging-and-streaming) * [Miscellaneous](#miscellaneous) * [Monitoring](#monitoring) * [PaaS](#paas) * [Package Build System](#package-build-system) * [Payment and Billing Integration](#payment-and-billing-integration) * [Privacy Management](#privacy-management) * [Screenshot APIs](#screenshot-apis) * [Flutter Related and Building IOS Apps without Mac](#flutter-related-and-building-ios-apps-without-mac) * [Search](#search) * [Security and PKI](#security-and-pki) * [Authentication, Authorization, and User Management](#authentication-authorization-and-user-management) * [Source Code Repos](#source-code-repos) * [Storage and Media Processing](#storage-and-media-processing) * [Tunneling, WebRTC, Web Socket Servers and Other Routers](#tunneling-webrtc-web-socket-servers-and-other-routers) * [Testing](#testing) * [Tools for Teams and Collaboration](#tools-for-teams-and-collaboration) * [Translation Management](#translation-management) * [Visitor Session Recording](#visitor-session-recording) * [Web Hosting](#web-hosting) * [Commenting Platforms](#c",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "microsoft/TypeScript",
+      "url": "https://github.com/microsoft/TypeScript",
+      "description": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+      "language": "Go",
+      "stars": 110549,
+      "forks": 13745,
+      "stars_today": 104,
+      "topics": [
+        "javascript",
+        "language",
+        "typechecker",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2014-06-17T15:28:39Z",
+      "updated_at": "2026-08-23T02:21:39Z",
+      "open_issues": 5203,
+      "default_branch": "main",
+      "readme_excerpt": "# TypeScript [![CI](https://github.com/microsoft/TypeScript/actions/workflows/ci.yml/badge.svg)](https://github.com/microsoft/TypeScript/actions/workflows/ci.yml) [![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/typescript) [![Downloads](https://img.shields.io/npm/dm/typescript.svg)](https://www.npmjs.com/package/typescript) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/microsoft/TypeScript/badge)](https://securityscorecards.dev/viewer/?uri=github.com/microsoft/TypeScript) [TypeScript](https://www.typescriptlang.org/) is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. Try it out at the [playground](https://www.typescriptlang.org/play/), and stay up to date via [our blog](https://blogs.msdn.microsoft.com/typescript) and [Twitter account](https://twitter.com/typescript). Find others who are using TypeScript at [our community page](https://www.typescriptlang.org/community/). ## Installing For the latest stable version: ```bash npm install -D typescript ``` For our nightly builds: ```bash npm install -D typescript@next ``` ## Contribute There are many ways to [contribute](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) to TypeScript. * [Submit bugs](https://github.com/microsoft/TypeScript/issues) and help us verify fixes as they are checked in. * Review the [source code changes](https://github.com/microsoft/TypeScript/pulls). * Engage with other TypeScript users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/typescript). * Help each other in the [TypeScript Community Discord](https://discord.gg/typescript). * Join the [#typescript](https://twitter.com/search?q=%23TypeScript) discussion on Twitter. * [Contribute bug fixes](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md). This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments. ## Documentation * [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) * [Programming handbook](https://www.typescriptlang.org/docs/handbook/intro.html) * [Homepage](https://www.typescriptlang.org/) ## Roadmap For details on our planned features and future direction, please refer to our [roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap).",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": -8,
+      "streak_days": 2
+    },
+    {
+      "rank": 15,
+      "full_name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": 4681,
+      "forks": 382,
+      "stars_today": 286,
+      "topics": [],
+      "license": "",
+      "created_at": "2026-01-23T01:57:42Z",
+      "updated_at": "2026-08-23T02:26:51Z",
+      "open_issues": 53,
+      "default_branch": "main",
+      "readme_excerpt": "# Cursor plugins Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest. ## Plugins | `name` | Plugin | Author | Category | `description` (from marketplace) | |:-------|:-------|:-------|:---------|:-------------------------------------| | `teaching` | [Teaching](teaching/) | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | `continual-learning` | [Continual Learning](continual-learning/) | Cursor | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | `cursor-team-kit` | [Cursor Team Kit](cursor-team-kit/) | Cursor | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification. | | `thermos` | [Thermos](thermos/) | Cursor | Developer Tools | Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows. | | `create-plugin` | [Create Plugin](create-plugin/) | Cursor | Developer Tools | Scaffold and validate new agent plugins. | | `ralph-loop` | [Ralph Loop](ralph-loop/) | Cursor | Developer Tools | Iterative self-referential AI loops using the Ralph Wiggum technique. | | `agent-compatibility` | [Agent Compatibility](agent-compatibility/) | Cursor | Developer Tools | CLI-backed repo compatibility scans plus agents that audit startup, validation, and docs against reality. | | `cli-for-agent` | [CLI for Agents](cli-for-agent/) | Cursor | Developer Tools | Patterns for designing CLIs that coding agents can run reliably: flags, help with examples, pipelines, errors, idempotency, dry-run. | | `pr-review-canvas` | [PR Review Canvas](pr-review-canvas/) | Cursor | Developer Tools | Render PR diffs as review canvases grouped by importance. | | `docs-canvas` | [Docs Canvas](docs-canvas/) | Cursor | Developer Tools | Render documentation as a navigable canvas. | | `cursor-sdk` | [Cursor SDK](cursor-sdk/) | Cursor | Developer Tools | Build apps, scripts, and automations with the TypeScript SDK. | | `orchestrate` | [Orchestrate](orchestrate/) | Cursor | Developer Tools | Fan large tasks out across parallel cloud agents with planners, workers, verifiers, and structured handoffs. | | `pstack` | [pstack](pstack/) | Lauren Tan | Developer Tools | if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence. | | `gmail` | [Gmail](third_party/gmail/) | Cursor | Productivity | Search, read, draft, and manage email. | | `google-drive` | [Google Drive](third_party/google-drive/) | Cursor | Productivity | Search, read, create, and share files. | | `google-calendar` | [Google Calendar](third_party/google-calendar/) | Cursor | Productivity | Search events and schedule meetings. | | `gong` | [Gong](third_party/gong/) | Cursor | Integrations | Pull account summaries, deal insights, and call briefs. | | `salesforce` | [Salesforce](third_party/salesforce/) | Cursor | Integrations | Query, create, and update records in your org. | | `playwright` | [Playwright](third_party/playwright/) | Cursor | Integrations | Navigate, click, screenshot, and test in a real browser. | | `github` | [GitHub](third_party/github/) | Cursor | Integrations | Manage repos, issues, pull requests, and Actions. | | `ashby` | [Ashby](third_party/ashby/) | Cursor | Integrations | Search candidates, prep interviews, and manage pipeline tasks. | | `hubspot` | [HubSpot](third_party/hubspot/) | Cursor | Integrations | Search and update contacts, companies, deals, and tickets. | | `intercom` | [Intercom](third_party/intercom/) | Cursor | Integrations | Search conversations, contacts, and Help Center articles. | | `zoom` | [Zoom](third_party/zoom/) | Cursor | Integrations | Search meetings, pull transcripts, and ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": -6,
+      "streak_days": 3
+    },
+    {
+      "rank": 16,
+      "full_name": "PostHog/posthog",
+      "url": "https://github.com/PostHog/posthog",
+      "description": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+      "language": "Python",
+      "stars": 38633,
+      "forks": 3244,
+      "stars_today": 286,
+      "topics": [
+        "ab-testing",
+        "ai-analytics",
+        "analytics",
+        "cdp",
+        "data-warehouse",
+        "experiments",
+        "feature-flags",
+        "javascript",
+        "product-analytics",
+        "python",
+        "react",
+        "session-replay",
+        "surveys",
+        "typescript",
+        "web-analytics"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2020-01-23T22:46:58Z",
+      "updated_at": "2026-08-23T02:30:04Z",
+      "open_issues": 5196,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"> <img alt=\"posthoglogo\" src=\"https://user-images.githubusercontent.com/65415371/205059737-c8a4f836-4889-4654-902e-f302b187b6a0.png\"> </p> <p align=\"center\"> <a href='https://posthog.com/contributors'><img alt=\"GitHub contributors\" src=\"https://img.shields.io/github/contributors/posthog/posthog\"/></a> <a href='http://makeapullrequest.com'><img alt='PRs Welcome' src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields'/></a> <img alt=\"Docker Pulls\" src=\"https://img.shields.io/docker/pulls/posthog/posthog\"/> <a href=\"https://github.com/PostHog/posthog/commits/master\"><img alt=\"GitHub commit activity\" src=\"https://img.shields.io/github/commit-activity/m/posthog/posthog\"/> </a> <a href=\"https://github.com/PostHog/posthog/issues?q=is%3Aissue%20state%3Aclosed\"><img alt=\"GitHub closed issues\" src=\"https://img.shields.io/github/issues-closed/posthog/posthog\"/> </a> </p> <p align=\"center\"> <a href=\"https://posthog.com/docs\">Docs</a> - <a href=\"https://posthog.com/community\">Community</a> - <a href=\"https://posthog.com/roadmap\">Roadmap</a> - <a href=\"https://posthog.com/why\">Why PostHog?</a> - <a href=\"https://posthog.com/changelog\">Changelog</a> - <a href=\"https://github.com/PostHog/posthog/issues/new?assignees=&labels=bug&template=bug_report.yml\">Bug reports</a> </p> <p align=\"center\"> <a href=\"https://www.youtube.com/watch?v=1FZji2L-LmM\"> <img src=\"https://res.cloudinary.com/dmukukwp6/image/upload/demo_thumb_68d0d8d56d\" alt=\"PostHog Demonstration\"> </a> </p> ## PostHog is the open source platform for building self-driving products [PostHog](https://posthog.com/) provides every tool you need to build a successful product, and captures all the context agents need to proactively diagnose problems, uncover opportunities, and ship fixes: - [Self-driving mode](https://posthog.com/docs/self-driving): Turn signals in your product data (errors, rage clicks, failed queries, and more) into researched reports and pull requests you review and merge. - [Product analytics](https://posthog.com/product-analytics): Autocapture or manually instrument event-based analytics to understand user behavior and analyze data with visualization or SQL. - [Web analytics](https://posthog.com/web-analytics): Monitor web traffic and user sessions with a GA-like dashboard. Easily monitor conversion, web vitals, and revenue. - [Session replays](https://posthog.com/session-replay): Watch real user sessions of interactions with your website or mobile app to diagnose issues and understand user behavior. - [Feature flags](https://posthog.com/feature-flags): Safely roll out features to select users or cohorts with feature flags. - [Experiments](https://posthog.com/experiments): Test changes and measure their statistical impact on goal metrics. Set up experiments with no-code too. - [Error tracking](https://posthog.com/error-tracking): Track errors, get alerts, and resolve issues to improve your product. - [Logs](https://posthog.com/logs): Ingest, search, and analyze log data alongside the rest of your product data. - [Surveys](https://posthog.com/surveys): Ask anything with our collection of no-code survey templates, or build custom surveys with our survey builder. - [Data warehouse](https://posthog.com/data-warehouse): Sync data from external tools like Stripe, Hubspot, your data warehouse, and more. Query it alongside your product data. - [Data pipelines](https://posthog.com/cdp): Run custom filters and transformations on your incoming data. Send it to 25+ tools or any webhook in real time or batch export large amounts to your warehouse. - [AI observability](https://posthog.com/docs/ai-observability): Capture traces, generations, latency, and cost for your LLM-powered app. - [Workflows](https://posthog.com/docs/workflows): Create workflows that automate actions or send messages to your users. You can steer it all from [Slack](https://posthog.com/slack), [web](https://posthog.com/ai), desktop ([PostHog Desktop](https://posthog.com/deskt",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -11,
+      "streak_days": 3
+    },
+    {
+      "rank": 17,
+      "full_name": "Tencent/AI-Infra-Guard",
+      "url": "https://github.com/Tencent/AI-Infra-Guard",
+      "description": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+      "language": "Python",
+      "stars": 5522,
+      "forks": 521,
+      "stars_today": 150,
+      "topics": [
+        "agent",
+        "agent-security",
+        "ai-infra",
+        "ai-red-teaming",
+        "ai-security",
+        "llm",
+        "llm-evaluation",
+        "llm-jailbreak",
+        "llm-security",
+        "mcp-scan",
+        "openclaw-security",
+        "prompt-injection",
+        "prompt-security",
+        "scanner",
+        "security",
+        "security-tools",
+        "skill-scanner",
+        "skills-security",
+        "vulnerability"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-12-25T06:39:30Z",
+      "updated_at": "2026-08-23T02:36:21Z",
+      "open_issues": 26,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <h1 align=\"center\"><img vertical-align=\"middle\" width=\"400px\" src=\"img/logo-full-new.png\" alt=\"A.I.G\"/></h1> </p> <p align=\"center\"> <a href=\"https://tencent.github.io/AI-Infra-Guard/\">📖 Documentation</a> &nbsp;|&nbsp; 🌐 <a href=\"./readme/README_ZH.md\">🇨🇳 中文</a> · <a href=\"./readme/README_JA.md\">🇯🇵 日本語</a> · <a href=\"./readme/README_ES.md\">🇪🇸 Español</a> · <a href=\"./readme/README_DE.md\">🇩🇪 Deutsch</a> · <a href=\"./readme/README_FR.md\">🇫🇷 Français</a> · <a href=\"./readme/README_KR.md\">🇰🇷 한국어</a> · <a href=\"./readme/README_PT.md\">🇧🇷 Português</a> · <a href=\"./readme/README_RU.md\">🇷🇺 Русский</a> </p> <p align=\"center\"> <a href=\"https://github.com/tencent/AI-Infra-Guard/stargazers\"> <img src=\"https://img.shields.io/github/stars/tencent/AI-Infra-Guard?style=social\" alt=\"GitHub stars\"> </a> <a href=\"https://github.com/Tencent/AI-Infra-Guard\"> <img alt=\"GitHub downloads\" src=\"https://img.shields.io/github/downloads/Tencent/AI-Infra-Guard/total\"> </a> <a href=\"https://github.com/Tencent/AI-Infra-Guard\"> <img alt=\"docker pulls\" src=\"https://img.shields.io/docker/pulls/zhuquelab/aig-server.svg?color=gold\"> </a> <a href=\"https://github.com/Tencent/AI-Infra-Guard\"> <img alt=\"Release\" src=\"https://img.shields.io/github/v/release/Tencent/AI-Infra-Guard?color=green\"> </a> <a href=\"https://deepwiki.com/Tencent/AI-Infra-Guard\"> <img src=\"https://deepwiki.com/badge.svg\" alt=\"Ask DeepWiki\"> </a> </p> <p align=\"center\"> <a href=\"https://clawhub.ai/aigsec/edgeone-clawscan\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/ClawHub-EdgeOne%20ClawScan-a870dc\" alt=\"EdgeOne ClawScan\"> </a> <a href=\"https://clawhub.ai/aigsec/edgeone-skill-scanner\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/ClawHub-EdgeOne%20Skill%20Scanner-2ea44f\" alt=\"EdgeOne Skill Scanner\"> </a> <a href=\"https://clawhub.ai/aigsec/aig-scanner\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/ClawHub-AIG%20Scanner-e6a817\" alt=\"AIG Scanner\"> </a> </p> <p align=\"center\"> <a href=\"https://github.com/openclaw/clawscan\" target=\"_blank\"> <img src=\"https://img.shields.io/badge/OpenClaw-Recommended-ff6b6b\" alt=\"OpenClaw Recommended\"> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/13637\" target=\"_blank\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://trendshift.io/api/badge/repositories/13637\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://trendshift.io/api/badge/repositories/13637\"><img src=\"https://trendshift.io/api/badge/repositories/13637\" alt=\"Tencent%2FAI-Infra-Guard | Trendshift\" width=\"250\" height=\"55\"/></picture></a>&nbsp; <a href=\"https://www.blackhat.com/eu-25/arsenal/schedule/index.html#aigai-infra-guard-48381\" target=\"_blank\"><img src=\"img/blackhat.png\" alt=\"Tencent%2FAI-Infra-Guard | blackhat\" width=\"175\" height=\"55\"/></a>&nbsp; <a href=\"https://github.com/deepseek-ai/awesome-deepseek-integration\" target=\"_blank\"><img src=\"img/awesome-deepseek.png\" alt=\"Tencent%2FAI-Infra-Guard | awesome-deepseek-integration\" width=\"273\" height=\"55\"/></a> </p> <br> <p align=\"center\"> <h2 align=\"center\">🚀 AI Red Teaming Platform by Tencent Zhuque Lab</h2> </p> <b>A.I.G (AI-Infra-Guard)</b> integrates capabilities such as ClawScan(OpenClaw Security Scan), Agent Scan，AI infra vulnerability scan, MCP Server & Agent Skills scan, and Jailbreak Evaluation, aiming to provide users with the most comprehensive, intelligent, and user-friendly solution for AI security risk self-examination. <p> We are committed to making A.I.G(AI-Infra-Guard) the industry-leading AI red teaming platform. More stars help this project reach a wider audience, attracting more developers to contribute, which accelerates iteration and improvement. Your star is crucial to us! </p> <p align=\"center\"> <a href=\"https://github.com/Tencent/AI-Infra-Guard\"> <img src=\"https://img.shields.io/badge/⭐-Give%20us%20a%20Star-yellow?style=for-the-badge&logo=github\" alt=\"Give us a Star\"> </a> </p> <br> ## 📋 User Feedback Survey Help us impro",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "当日 7/17 个项目可从资料确认与 AI 直接相关；其余 10 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（9 个）、AI 智能体与数字劳动力（3 个）、AI 编程智能体（1 个）。",
+      "排名第一的 openai/codex 代表“AI 编程智能体”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（9 个项目）",
+      "AI 智能体与数字劳动力（3 个项目）",
+      "AI 编程智能体（1 个项目）",
+      "AI 智能体工作系统（1 个项目）",
+      "AI 软件开发方法与技能体系（1 个项目）",
+      "轻量项目与任务管理（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "openai/codex",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1544 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 codex 描述为“Lightweight coding agent that runs in your terminal”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 codex 的潜在使用者而言，在项目方所述的“Lightweight coding agent that runs in your terminal”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/codex",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Lightweight coding agent that runs in your terminal",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/codex",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/openai/codex",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 2683 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 skills 描述为“Skills for Real Engineers. Straight from my .agents directory.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Skills for Real Engineers. Straight from my .agents directory.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "one_line_summary": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "industry_direction": "AI 智能体工作系统",
+        "target_users": [
+          "使用 AI 助手的团队",
+          "AI 工具产品团队"
+        ],
+        "problem_solved": "智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。",
+        "solution": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 411 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可积累经验的智能体框架",
+        "technology_impact": "关注点从模型能力转向长期工作与受控执行。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "效果主张仍需独立基准和真实团队案例验证。",
+        "ai_relevance": "关注点从模型能力转向长期工作与受控执行。",
+        "plain_language_explanation": "项目方把 ECC 描述为“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first dev”。通俗地说，它希望解决的是：智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。 它的办法是：把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "scenario_examples": [
+          "例如使用 AI 助手的团队把该能力用于真实工作任务，并在小范围内验证。"
+        ],
+        "practical_benefits": [
+          "对 ECC 的潜在使用者而言，在项目方所述的“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first dev”场景中，关注点从模型能力转向长期工作与受控执行。",
+          "降低采用相关能力的操作门槛"
+        ],
+        "industry_implications": "关注点从模型能力转向长期工作与受控执行。",
+        "who_should_care": "使用 AI 助手的团队、AI 工具产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/affaan-m/ECC",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "obra/superpowers",
+        "one_line_summary": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "industry_direction": "AI 软件开发方法与技能体系",
+        "target_users": [
+          "正在引入 AI 开发流程的软件团队",
+          "工程管理和质量负责人"
+        ],
+        "problem_solved": "只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。",
+        "solution": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 592 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "技能化开发流程",
+        "technology_impact": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "方法论效果依赖团队执行，可能增加流程负担，也需要用交付质量和周期验证。",
+        "ai_relevance": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "plain_language_explanation": "项目方把 superpowers 描述为“An agentic skills framework & software development methodology that works.”。通俗地说，它希望解决的是：只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。 它的办法是：把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "scenario_examples": [
+          "例如团队要求智能体先写验收条件，再分步实现和测试，最后由人员审查。"
+        ],
+        "practical_benefits": [
+          "对 superpowers 的潜在使用者而言，在项目方所述的“An agentic skills framework & software development methodology that works.”场景中，减少每位成员各自摸索 AI 开发流程的成本",
+          "让 AI 参与的软件交付更容易检查和复盘"
+        ],
+        "industry_implications": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "who_should_care": "正在引入 AI 开发流程的软件团队、工程管理和质量负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An agentic skills framework & software development methodology that works.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/obra/superpowers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Wei-Shaw/sub2api",
+        "one_line_summary": "围绕“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+        "solution": "围绕“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 278 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 sub2api 描述为“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。 它的办法是：围绕“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 sub2api 的潜在使用者而言，在项目方所述的“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”场景中，可直接查看和试验项目方所述的“Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Wei-Shaw/sub2api",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Sub2API 一站式开源中转服务，让 Claude、Openai 、Gemini、Grok订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Wei-Shaw/sub2api",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Wei-Shaw/sub2api",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "makeplane/plane",
+        "one_line_summary": "提供可自行部署的任务、看板和问题跟踪工具。",
+        "industry_direction": "轻量项目与任务管理",
+        "target_users": [
+          "小型产品团队",
+          "希望自主管理数据的协作团队"
+        ],
+        "problem_solved": "复杂项目工具可能带来过多配置和使用负担，小团队只需要清晰追踪任务和进度。",
+        "solution": "提供可自行部署的任务、看板和问题跟踪工具。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 263 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "自托管轻量协作",
+        "technology_impact": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "迁移成本、权限、通知、集成和长期维护能力决定能否替代成熟商业产品。",
+        "ai_relevance": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "plain_language_explanation": "项目方把 plane 描述为“🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform t”。通俗地说，它希望解决的是：复杂项目工具可能带来过多配置和使用负担，小团队只需要清晰追踪任务和进度。 它的办法是：提供可自行部署的任务、看板和问题跟踪工具。",
+        "scenario_examples": [
+          "例如五人产品团队用看板追踪研究、设计和发布任务，不引入复杂企业流程。"
+        ],
+        "practical_benefits": [
+          "对 plane 的潜在使用者而言，在项目方所述的“🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform t”场景中，减少小团队配置复杂项目系统的负担",
+          "让组织可以自行控制任务和协作数据"
+        ],
+        "industry_implications": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "who_should_care": "小型产品团队、希望自主管理数据的协作团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makeplane/plane",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makeplane/plane",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/makeplane/plane",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "n8n-io/n8n",
+        "one_line_summary": "围绕“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ",
+        "solution": "围绕“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 149 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 n8n 描述为“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code,”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ 它的办法是：围绕“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 n8n 的潜在使用者而言，在项目方所述的“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code,”场景中，可直接查看和试验项目方所述的“Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integ”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/n8n-io/n8n",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/n8n-io/n8n",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/n8n-io/n8n",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "anthropics/claude-code",
+        "one_line_summary": "把代码关系组织成可查询的知识图谱，再让 AI 基于这些关系回答和修改。",
+        "industry_direction": "AI 软件知识与代码理解",
+        "target_users": [
+          "大型软件团队",
+          "技术管理者和代码审查团队"
+        ],
+        "problem_solved": "大型软件系统关系复杂，新成员和 AI 助手难以理解修改会影响哪里。",
+        "solution": "把代码关系组织成可查询的知识图谱，再让 AI 基于这些关系回答和修改。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 127 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "代码知识图谱与检索增强",
+        "technology_impact": "AI 编程正在从读单个文件走向理解整个产品系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "错误的依赖关系可能让 AI 给出看似合理但会破坏系统的修改建议。",
+        "ai_relevance": "AI 编程正在从读单个文件走向理解整个产品系统。",
+        "plain_language_explanation": "项目方把 claude-code 描述为“Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you co”。通俗地说，它希望解决的是：大型软件系统关系复杂，新成员和 AI 助手难以理解修改会影响哪里。 它的办法是：把代码关系组织成可查询的知识图谱，再让 AI 基于这些关系回答和修改。",
+        "scenario_examples": [
+          "例如团队接手旧系统时，先询问某项功能涉及哪些模块和依赖。"
+        ],
+        "practical_benefits": [
+          "对 claude-code 的潜在使用者而言，在项目方所述的“Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you co”场景中，减少理解大型系统所需的人工查找",
+          "降低跨模块修改遗漏影响范围的概率"
+        ],
+        "industry_implications": "AI 编程正在从读单个文件走向理解整个产品系统。",
+        "who_should_care": "大型软件团队、技术管理者和代码审查团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/claude-code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Claude Code is an agentic coding tool that lives in your terminal, understands your codebase, and helps you code faster by executing routine tasks, explaining complex code, and handling git workflows - all through natural language commands.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/claude-code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/anthropics/claude-code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "AprilNEA/OpenLogi",
+        "one_line_summary": "围绕“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no",
+        "solution": "围绕“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 959 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 OpenLogi 描述为“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShi”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no 它的办法是：围绕“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 OpenLogi 的潜在使用者而言，在项目方所述的“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShi”场景中，可直接查看和试验项目方所述的“⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/AprilNEA/OpenLogi",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "⚡️A native, local-first alternative to Logitech Options+, written in Rust 🦀 — remap buttons, DPI, and SmartShift over HID++. No account, no telemetry.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/AprilNEA/OpenLogi",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/AprilNEA/OpenLogi",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "modular/modular",
+        "one_line_summary": "围绕“The Modular Platform (includes MAX & Mojo)”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The Modular Platform (includes MAX & Mojo)",
+        "solution": "围绕“The Modular Platform (includes MAX & Mojo)”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 395 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 modular 描述为“The Modular Platform (includes MAX & Mojo)”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The Modular Platform (includes MAX & Mojo) 它的办法是：围绕“The Modular Platform (includes MAX & Mojo)”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The Modular Platform (includes MAX & Mojo)”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 modular 的潜在使用者而言，在项目方所述的“The Modular Platform (includes MAX & Mojo)”场景中，可直接查看和试验项目方所述的“The Modular Platform (includes MAX & Mojo)”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/modular/modular",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The Modular Platform (includes MAX & Mojo)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/modular/modular",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/modular/modular",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "multica-ai/andrej-karpathy-skills",
+        "one_line_summary": "围绕“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+        "solution": "围绕“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 315 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 andrej-karpathy-skills 描述为“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM co”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls. 它的办法是：围绕“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 andrej-karpathy-skills 的潜在使用者而言，在项目方所述的“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM co”场景中，可直接查看和试验项目方所述的“A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/multica-ai/andrej-karpathy-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/multica-ai/andrej-karpathy-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mahlernim/google-timeline-visualizer",
+        "one_line_summary": "围绕“Visualize your year in travel using your Google Location History (Timeline) data”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Visualize your year in travel using your Google Location History (Timeline) data",
+        "solution": "围绕“Visualize your year in travel using your Google Location History (Timeline) data”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 441 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 google-timeline-visualizer 描述为“Visualize your year in travel using your Google Location History (Timeline) data”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Visualize your year in travel using your Google Location History (Timeline) data 它的办法是：围绕“Visualize your year in travel using your Google Location History (Timeline) data”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Visualize your year in travel using your Google Location History (Timeline) data”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 google-timeline-visualizer 的潜在使用者而言，在项目方所述的“Visualize your year in travel using your Google Location History (Timeline) data”场景中，可直接查看和试验项目方所述的“Visualize your year in travel using your Google Location History (Timeline) data”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mahlernim/google-timeline-visualizer",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Visualize your year in travel using your Google Location History (Timeline) data",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mahlernim/google-timeline-visualizer",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mahlernim/google-timeline-visualizer",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ripienaar/free-for-dev",
+        "one_line_summary": "围绕“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+        "solution": "围绕“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 829 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 free-for-dev 描述为“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev 它的办法是：围绕“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 free-for-dev 的潜在使用者而言，在项目方所述的“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”场景中，可直接查看和试验项目方所述的“A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ripienaar/free-for-dev",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ripienaar/free-for-dev",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ripienaar/free-for-dev",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/TypeScript",
+        "one_line_summary": "围绕“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+        "solution": "围绕“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 104 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 TypeScript 描述为“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：TypeScript is a superset of JavaScript that compiles to clean JavaScript output. 它的办法是：围绕“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 TypeScript 的潜在使用者而言，在项目方所述的“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”场景中，可直接查看和试验项目方所述的“TypeScript is a superset of JavaScript that compiles to clean JavaScript output.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/TypeScript",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "TypeScript is a superset of JavaScript that compiles to clean JavaScript output.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/TypeScript",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/TypeScript",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cursor/plugins",
+        "one_line_summary": "围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Cursor plugin specification and official plugins",
+        "solution": "围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 286 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 plugins 描述为“Cursor plugin specification and official plugins”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Cursor plugin specification and official plugins 它的办法是：围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Cursor plugin specification and official plugins”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 plugins 的潜在使用者而言，在项目方所述的“Cursor plugin specification and official plugins”场景中，可直接查看和试验项目方所述的“Cursor plugin specification and official plugins”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cursor/plugins",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Cursor plugin specification and official plugins",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cursor/plugins",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cursor/plugins",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "PostHog/posthog",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 16 名，当日新增 286 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 posthog 描述为“:hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observ”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 posthog 的潜在使用者而言，在项目方所述的“:hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observ”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 16 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PostHog/posthog",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": ":hedgehog: PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/PostHog/posthog",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 52,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/PostHog/posthog",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Tencent/AI-Infra-Guard",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 17 名，当日新增 150 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 AI-Infra-Guard 描述为“A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra sc”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 AI-Infra-Guard 的潜在使用者而言，在项目方所述的“A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra sc”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 17 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Tencent/AI-Infra-Guard",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A full-stack AI Red Teaming platform securing AI ecosystems via Agent Scan, Skills Scan, MCP scan, AI Infra scan and LLM jailbreak evaluation.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Tencent/AI-Infra-Guard",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 49,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Tencent/AI-Infra-Guard",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  }
+}
