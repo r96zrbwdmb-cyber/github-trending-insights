@@ -54,7 +54,7 @@ jobs:
       - name: Commit valid report
         shell: bash
         run: |
-          git add data/producthunt reports/producthunt
+          git add data/producthunt data/periods/producthunt reports/producthunt
           if git diff --cached --quiet; then
             echo "No Product Hunt changes to commit."
             exit 0
