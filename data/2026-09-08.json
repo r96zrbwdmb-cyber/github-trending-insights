@@ -1,0 +1,1823 @@
+{
+  "date": "2026-09-08",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 15,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "description": "Write HTML. Render video. Built for agents.",
+      "language": "TypeScript",
+      "stars": 46570,
+      "forks": 4345,
+      "stars_today": 474,
+      "topics": [
+        "ai",
+        "animation",
+        "ffmpeg",
+        "framework",
+        "gsap",
+        "html",
+        "mcp",
+        "puppeteer",
+        "rendering",
+        "typescript",
+        "video"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-03-10T01:51:06Z",
+      "updated_at": "2026-09-08T05:58:58Z",
+      "open_issues": 181,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/logo/dark.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"docs/logo/light.svg\"> <img alt=\"HyperFrames\" src=\"docs/logo/light.svg\" width=\"300\"> </picture> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/hyperframes\"><img src=\"https://img.shields.io/npm/v/hyperframes.svg?style=flat\" alt=\"npm version\"></a> <a href=\"https://www.npmjs.com/package/hyperframes\"><img src=\"https://img.shields.io/npm/dm/hyperframes.svg?style=flat\" alt=\"npm downloads\"></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache%202.0-blue.svg\" alt=\"License\"></a> <a href=\"https://nodejs.org\"><img src=\"https://img.shields.io/badge/node-%3E%3D22-brightgreen\" alt=\"Node.js\"></a> <a href=\"https://discord.gg/EbK98HBPdk\"><img src=\"https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white\" alt=\"Discord\"></a> </p> <p align=\"center\"><b>Write HTML. Render video. Built for agents.</b></p> <p align=\"center\"> <a href=\"https://hyperframes.heygen.com/quickstart\">Quickstart</a> | <a href=\"https://hyperframes.heygen.com/showcase\">Showcase</a> | <a href=\"https://www.hyperframes.dev/\">Playground</a> | <a href=\"https://hyperframes.heygen.com/catalog/blocks/data-chart\">Catalog</a> | <a href=\"https://hyperframes.heygen.com/introduction\">Docs</a> | <a href=\"https://discord.gg/EbK98HBPdk\">Discord</a> </p> <p align=\"center\"> <img src=\"docs/public/images/hyperframes-logo-motion-1280-trimmed.webp\" alt=\"HyperFrames demo: HTML code on the left transforms into a rendered video on the right\" width=\"800\"> </p> HyperFrames is an open-source framework for turning HTML, CSS, media, and seekable animations into deterministic MP4 videos. Use it locally with the CLI, from AI coding agents with skills, or as the rendering core behind hosted authoring workflows. ## Quick Start ### With an AI coding agent Install the HyperFrames skills, then describe the video you want: ```bash npx skills add heygen-com/hyperframes ``` > The picker opens with nothing pre-selected — the **Core Skills** group is all you need: the `/hyperframes` router installs each creation workflow on demand. Agents and non-interactive runs should use `npx hyperframes skills update` instead — it installs exactly the core set, whereas `skills add --all` installs every `SKILL.md` in the repo — the 20 published skills plus six repo-internal ones under `.claude/skills` / `.agents/skills`. For the full published set use `npx hyperframes skills`. > > `skills add` resolves the skills.sh registry blob, which can lag `main` by hours. `npx hyperframes skills update` installs from the current `main`, so reach for it when you need the newest copy of a skill. Try a prompt like: > Using `/hyperframes`, create a 10-second product intro with a fade-in title, a background video, and subtle background music. The skills teach agents the HyperFrames production loop: plan the video, write valid HTML, wire seekable animations, add media, lint, preview, and render. They work with Claude Code, Cursor, Gemini CLI, Codex, and other coding agents that support skills. ## Skills HyperFrames ships 20 skills agents load on demand. Read `/hyperframes` first — it's the router and capability map; it picks a workflow for any \"make me a…\" request — video, deck, or composition port — and points to the domain skills below. Default to the **core set** — the router installs each creation workflow on demand. `npx hyperframes skills update` installs exactly that from anywhere; the interactive picker (`npx skills add heygen-com/hyperframes`) lists it as the \"Core Skills\" group, nothing pre-selected. The picker is interactive-only — a non-interactive or agent run without `--skill` installs all 20. Use `npx skills add heygen-com/hyperframes --all` to install all 20 deliberately (skips the picker), or `npx skills add heygen-com/hyperframes --skill <name>` for just one (bare name, no leading `/`). Installs stay lean after that: `n",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 2,
+      "full_name": "microsoft/markitdown",
+      "url": "https://github.com/microsoft/markitdown",
+      "description": "Python tool for converting files and office documents to Markdown.",
+      "language": "Python",
+      "stars": 180755,
+      "forks": 13281,
+      "stars_today": 886,
+      "topics": [
+        "autogen",
+        "autogen-extension",
+        "langchain",
+        "markdown",
+        "microsoft-office",
+        "openai",
+        "pdf"
+      ],
+      "license": "MIT",
+      "created_at": "2024-11-13T19:56:40Z",
+      "updated_at": "2026-09-08T05:58:35Z",
+      "open_issues": 625,
+      "default_branch": "main",
+      "readme_excerpt": "# MarkItDown [![PyPI](https://img.shields.io/pypi/v/markitdown.svg)](https://pypi.org/project/markitdown/) ![PyPI - Downloads](https://img.shields.io/pypi/dd/markitdown) > [!IMPORTANT] > MarkItDown performs I/O with the privileges of the current process. Like open() or requests.get(), it will access resources that the process itself can access. Sanitize your inputs in untrusted environments, and call the narrowest `convert_*` function needed for your use case (e.g., `convert_stream()`, or `convert_local()`). See the [Security Considerations](#security-considerations) section of the documentation for more information. MarkItDown is a lightweight Python utility for converting various files to Markdown for use with LLMs and related text analysis pipelines. To this end, it is most comparable to [textract](https://github.com/deanmalmgren/textract), but with a focus on preserving important document structure and content as Markdown (including: headings, lists, tables, links, etc.) While the output is often reasonably presentable and human-friendly, it is meant to be consumed by text analysis tools -- and may not be the best option for high-fidelity document conversions for human consumption. MarkItDown currently supports the conversion from: - PDF - PowerPoint - Word - Excel - Images (EXIF metadata and OCR) - Audio (EXIF metadata and speech transcription) - HTML - Text-based formats (CSV, JSON, XML) - ZIP files (iterates over contents) - YouTube URLs - EPubs - ... and more! ## Why Markdown? Markdown is extremely close to plain text, with minimal markup or formatting, but still provides a way to represent important document structure. Mainstream LLMs, such as OpenAI's GPT-4o, natively \"_speak_\" Markdown, and often incorporate Markdown into their responses unprompted. This suggests that they have been trained on vast amounts of Markdown-formatted text, and understand it well. As a side benefit, Markdown conventions are also highly token-efficient. ## Prerequisites MarkItDown requires Python 3.10 or higher. It is recommended to use a virtual environment to avoid dependency conflicts. With the standard Python installation, you can create and activate a virtual environment using the following commands: ```bash python -m venv .venv source .venv/bin/activate ``` If using `uv`, you can create a virtual environment with: ```bash uv venv --python=3.12 .venv source .venv/bin/activate # NOTE: Be sure to use 'uv pip install' rather than just 'pip install' to install packages in this virtual environment ``` If you are using Anaconda, you can create a virtual environment with: ```bash conda create -n markitdown python=3.12 conda activate markitdown ``` ## Installation To install MarkItDown, use pip: `pip install 'markitdown[all]'`. Alternatively, you can install it from the source: ```bash git clone git@github.com:microsoft/markitdown.git cd markitdown pip install -e 'packages/markitdown[all]' ``` ## Usage ### Command-Line ```bash markitdown path-to-file.pdf > document.md ``` Or use `-o` to specify the output file: ```bash markitdown path-to-file.pdf -o document.md ``` You can also pipe content: ```bash cat path-to-file.pdf | markitdown ``` ### Optional Dependencies MarkItDown has optional dependencies for activating various file formats. Earlier in this document, we installed all optional dependencies with the `[all]` option. However, you can also install them individually for more control. For example: ```bash pip install 'markitdown[pdf, docx, pptx]' ``` will install only the dependencies for PDF, DOCX, and PPTX files. At the moment, the following optional dependencies are available: * `[all]` Installs all optional dependencies * `[pptx]` Installs dependencies for PowerPoint files * `[docx]` Installs dependencies for Word files * `[xlsx]` Installs dependencies for Excel files * `[xls]` Installs dependencies for older Excel files * `[pdf]` Installs dependencies for PDF files * `[outlook]` Installs dependencies for Outlook messages * `[az-doc-int",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 3,
+      "full_name": "mksglu/context-mode",
+      "url": "https://github.com/mksglu/context-mode",
+      "description": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+      "language": "TypeScript",
+      "stars": 21019,
+      "forks": 1524,
+      "stars_today": 96,
+      "topics": [
+        "antigravity",
+        "claude",
+        "claude-code",
+        "claude-code-hooks",
+        "claude-code-plugins",
+        "claude-code-skill",
+        "codex",
+        "codex-cli",
+        "context-mode",
+        "copilot",
+        "cursor-plugin",
+        "kiro",
+        "mcp",
+        "mcp-server",
+        "mcp-tools",
+        "openclaw",
+        "opencode",
+        "pi-agent",
+        "skills",
+        "zed-extension"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-02-23T05:56:28Z",
+      "updated_at": "2026-09-08T05:55:09Z",
+      "open_issues": 214,
+      "default_branch": "main",
+      "readme_excerpt": "# Context Mode **The other half of the context problem.** [![users](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.message&label=users&color=brightgreen)](https://www.npmjs.com/package/context-mode) [![npm](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.npm&label=npm&color=blue)](https://www.npmjs.com/package/context-mode) [![marketplace](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fmksglu%2Fcontext-mode%40main%2Fstats.json&query=%24.marketplace&label=marketplace&color=blue)](https://github.com/mksglu/context-mode) [![GitHub stars](https://img.shields.io/github/stars/mksglu/context-mode?style=flat&color=yellow)](https://github.com/mksglu/context-mode/stargazers) [![GitHub forks](https://img.shields.io/github/forks/mksglu/context-mode?style=flat&color=blue)](https://github.com/mksglu/context-mode/network/members) [![Last commit](https://img.shields.io/github/last-commit/mksglu/context-mode?color=green)](https://github.com/mksglu/context-mode/commits) [![License: ELv2](https://img.shields.io/badge/License-ELv2-blue.svg)](LICENSE) [![Discord](https://img.shields.io/discord/1478479412700909750?label=Discord&logo=discord&color=5865f2)](https://discord.gg/DCN9jUgN5v) [![Hacker News #1](https://img.shields.io/badge/Hacker%20News-%231%20%E2%80%A2%20570%2B%20points-ff6600?logo=ycombinator&logoColor=white)](https://news.ycombinator.com/item?id=47193064) <p align=\"center\"> <sub>Used across teams at</sub> <br><br> <a href=\"#\"><img src=\"https://img.shields.io/badge/Microsoft-141414?style=flat\" alt=\"Microsoft\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Google-141414?style=flat&logo=google&logoColor=white\" alt=\"Google\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Meta-141414?style=flat&logo=meta&logoColor=white\" alt=\"Meta\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Amazon-141414?style=flat\" alt=\"Amazon\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/IBM-141414?style=flat\" alt=\"IBM\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/NVIDIA-141414?style=flat&logo=nvidia&logoColor=white\" alt=\"NVIDIA\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/ByteDance-141414?style=flat&logo=bytedance&logoColor=white\" alt=\"ByteDance\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Stripe-141414?style=flat&logo=stripe&logoColor=white\" alt=\"Stripe\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Datadog-141414?style=flat&logo=datadog&logoColor=white\" alt=\"Datadog\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Salesforce-141414?style=flat\" alt=\"Salesforce\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/GitHub-141414?style=flat&logo=github&logoColor=white\" alt=\"GitHub\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Red%20Hat-141414?style=flat&logo=redhat&logoColor=white\" alt=\"Red Hat\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Supabase-141414?style=flat&logo=supabase&logoColor=white\" alt=\"Supabase\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Canva-141414?style=flat\" alt=\"Canva\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Notion-141414?style=flat&logo=notion&logoColor=white\" alt=\"Notion\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Hasura-141414?style=flat&logo=hasura&logoColor=white\" alt=\"Hasura\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Framer-141414?style=flat&logo=framer&logoColor=white\" alt=\"Framer\" /></a> <a href=\"#\"><img src=\"https://img.shields.io/badge/Cursor-141414?style=flat&logo=cursor&logoColor=white\" alt=\"Cursor\" /></a> </p> ## The Problem Every MCP tool call dumps raw data into your context window. A Playwright snapshot costs 56 KB. Twenty GitHub issues cost 59 KB. One access log — 45 KB. After 30 minutes, 40% of your context is gone. And w",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "jo-inc/camofox-browser",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+      "language": "JavaScript",
+      "stars": 9935,
+      "forks": 1031,
+      "stars_today": 135,
+      "topics": [
+        "ai-agent",
+        "anti-bot",
+        "antidetect-browser",
+        "automation",
+        "bot-detection",
+        "browser-automation",
+        "cloudflare-bypass",
+        "headless-browser",
+        "javascript",
+        "nodejs",
+        "playwright",
+        "puppeteer",
+        "scraping",
+        "stealth-browser",
+        "web-scraping"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-26T07:31:13Z",
+      "updated_at": "2026-09-08T05:58:56Z",
+      "open_issues": 126,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"fox.png\" alt=\"camofox-browser\" width=\"200\" /> <h1>camofox-browser</h1> <p><strong>Anti-detection browser server for AI agents, powered by Camoufox</strong></p> <p> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" alt=\"License: MIT\" /></a> <a href=\"https://github.com/jo-inc/camofox-browser/stargazers\"><img src=\"https://img.shields.io/github/stars/jo-inc/camofox-browser\" alt=\"GitHub stars\" /></a> <a href=\"https://www.npmjs.com/package/camofox-browser\"><img src=\"https://img.shields.io/npm/v/camofox-browser\" alt=\"npm version\" /></a> <a href=\"https://github.com/jo-inc/camofox-browser/commits\"><img src=\"https://img.shields.io/github/last-commit/jo-inc/camofox-browser\" alt=\"GitHub last commit\" /></a> </p> <p> Standing on the mighty shoulders of <a href=\"https://camoufox.com\">Camoufox</a> - a Firefox fork with fingerprint spoofing at the C++ level. </p> </div> <br/> > <a href=\"https://askjo.ai?ref=camofox\"><img src=\"jo-logo.png\" alt=\"Jo\" width=\"80\" height=\"80\" align=\"left\" /></a> > > Built by the team behind <a href=\"https://askjo.ai?ref=camofox\"><strong>jo, a personal AI agent</strong></a> that runs half on your Mac, half on a dedicated cloud machine just for you -- with zero maintenance needed. Available on macOS, Telegram, WhatsApp, and email. <a href=\"https://askjo.ai?ref=camofox\">Try the beta free -></a> <br/> ```bash git clone https://github.com/jo-inc/camofox-browser && cd camofox-browser npm install && npm start # -> http://localhost:9377 ``` --- ## Why AI agents need to browse the real web. Playwright gets blocked. Headless Chrome gets fingerprinted. Stealth plugins become the fingerprint. Camoufox patches Firefox at the **C++ implementation level** - `navigator.hardwareConcurrency`, WebGL renderers, AudioContext, screen geometry, WebRTC - all spoofed before JavaScript ever sees them. No shims, no wrappers, no tells. This project wraps that engine in a REST API built for agents: accessibility snapshots instead of bloated HTML, stable element refs for clicking, and search macros for common sites. ## Features - **C++ Anti-Detection** - bypasses Google, Cloudflare, and most bot detection - **Element Refs** - stable `e1`, `e2`, `e3` identifiers for reliable interaction - **Token-Efficient** - accessibility snapshots are ~90% smaller than raw HTML - **Runs on Anything** - lazy browser launch + idle shutdown keeps memory at ~40MB when idle. Designed to share a box with the rest of your stack -- Raspberry Pi, $5 VPS, shared infra. - **Session Isolation** - separate cookies/storage per user - **Cookie Import** - inject Netscape-format cookie files for authenticated browsing - **File Upload** - attach files from a configured upload directory without a native OS dialog - **Proxy + GeoIP** - route traffic through residential proxies with automatic locale/timezone - **Structured Logging** - JSON log lines with request IDs for production observability - **YouTube Transcripts** - extract captions from any YouTube video via yt-dlp, no API key needed - **Search Macros** - `@google_search`, `@youtube_search`, `@amazon_search`, `@reddit_subreddit`, and 10 more - **Snapshot Screenshots** - include a base64 PNG screenshot alongside the accessibility snapshot - **Large Page Handling** - automatic snapshot truncation with offset-based pagination - **Download Capture** - capture browser downloads and fetch them via API (optional inline base64) - **DOM Image Extraction** - list `<img>` src/alt and optionally return inline data URLs - **Deploy Anywhere** - Docker, Fly.io, Railway - **VNC Interactive Login** - log into sites visually via noVNC, export storage state for agent reuse - **OpenAPI Docs** - auto-generated spec at [`/openapi.json`](http://localhost:9377/openapi.json) and interactive docs at [`/docs`](http://localhost:9377/docs) - **Structured Extract** - `POST /tabs/:tabId/extract` with a JSON Schema that maps properties to snapshot refs via `x-ref` - **Session Tracing** - opt-in",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "MoonTechLab/LunaTV",
+      "url": "https://github.com/MoonTechLab/LunaTV",
+      "description": "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+      "language": "TypeScript",
+      "stars": 9895,
+      "forks": 9009,
+      "stars_today": 197,
+      "topics": [],
+      "license": "NOASSERTION",
+      "created_at": "2025-08-12T13:59:33Z",
+      "updated_at": "2026-09-08T05:55:01Z",
+      "open_issues": 10,
+      "default_branch": "main",
+      "readme_excerpt": "# MoonTV <div align=\"center\"> <img src=\"public/logo.png\" alt=\"MoonTV Logo\" width=\"120\"> </div> > 🎬 **MoonTV** 是一个开箱即用的、跨平台的影视聚合播放器。它基于 **Next.js 14** + **Tailwind&nbsp;CSS** + **TypeScript** 构建，支持多资源搜索、在线播放、收藏同步、播放记录、云端存储，让你可以随时随地畅享海量免费影视内容。 <div align=\"center\"> ![Next.js](https://img.shields.io/badge/Next.js-14-000?logo=nextdotjs) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38bdf8?logo=tailwindcss) ![TypeScript](https://img.shields.io/badge/TypeScript-4.x-3178c6?logo=typescript) ![License](https://img.shields.io/badge/License-MIT-green) ![Docker Ready](https://img.shields.io/badge/Docker-ready-blue?logo=docker) </div> --- ## ✨ 功能特性 - 🔍 **多源聚合搜索**：一次搜索立刻返回全源结果。 - 📄 **丰富详情页**：支持剧集列表、演员、年份、简介等完整信息展示。 - ▶️ **流畅在线播放**：集成 HLS.js & ArtPlayer。 - ❤️ **收藏 + 继续观看**：支持 Kvrocks/Redis/Upstash 存储，多端同步进度。 - 📱 **PWA**：离线缓存、安装到桌面/主屏，移动端原生体验。 - 🌗 **响应式布局**：桌面侧边栏 + 移动底部导航，自适应各种屏幕尺寸。 - 👿 **智能去广告**：自动跳过视频中的切片广告（实验性）。 ### 注意：部署后项目为空壳项目，无内置播放源和直播源，需要自行收集 <details> <summary>点击查看项目截图</summary> <img src=\"public/screenshot1.png\" alt=\"项目截图\" style=\"max-width:600px\"> <img src=\"public/screenshot2.png\" alt=\"项目截图\" style=\"max-width:600px\"> <img src=\"public/screenshot3.png\" alt=\"项目截图\" style=\"max-width:600px\"> </details> ### 请不要在 B站、小红书、微信公众号、抖音、今日头条或其他中国大陆社交平台发布视频或文章宣传本项目，不授权任何“科技周刊/月刊”类项目或站点收录本项目。 ## 🗺 目录 - [技术栈](#技术栈) - [部署](#部署) - [一键部署](#zeabur-一键部署) - [Docker 部署](#Kvrocks-存储推荐) - [配置文件](#配置文件) - [订阅](#订阅) - [自动更新](#自动更新) - [环境变量](#环境变量) - [客户端](#客户端) - [AndroidTV 使用](#AndroidTV-使用) - [Roadmap](#roadmap) - [安全与隐私提醒](#安全与隐私提醒) - [License](#license) - [致谢](#致谢) ## 技术栈 | 分类 | 主要依赖 | | --------- | ----------------------------------------------------------------------------------------------------- | | 前端框架 | [Next.js 14](https://nextjs.org/) · App Router | | UI & 样式 | [Tailwind&nbsp;CSS 3](https://tailwindcss.com/) | | 语言 | TypeScript 4 | | 播放器 | [ArtPlayer](https://github.com/zhw2590582/ArtPlayer) · [HLS.js](https://github.com/video-dev/hls.js/) | | 代码质量 | ESLint · Prettier · Jest | | 部署 | Docker | ## 部署 本项目**仅支持 Docker 或其他基于 Docker 的平台** 部署。 ### zeabur 一键部署 点击下方按钮即可一键部署，自动配置 LunaTV + Kvrocks 数据库： [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/8MPTQU/deploy) **优势**： - ✅ 无需配置，一键启动（自动部署完整环境） - ✅ 自动 HTTPS 和全球 CDN 加速 - ✅ 持久化存储，数据永不丢失 - ✅ 免费额度足够个人使用 **⚠️ 重要提示**：部署完成后，需要在 Zeabur 中为 LunaTV 服务设置访问域名（Domain）才能在浏览器中访问。详见下方 [设置访问域名](#5-设置访问域名必须) 步骤。 ### Kvrocks 存储（推荐） ```yml services: moontv-core: image: ghcr.io/moontechlab/lunatv:latest container_name: moontv-core restart: on-failure ports: - '3000:3000' environment: - USERNAME=admin - PASSWORD=admin_password - NEXT_PUBLIC_STORAGE_TYPE=kvrocks - KVROCKS_URL=redis://moontv-kvrocks:6666 networks: - moontv-network depends_on: - moontv-kvrocks moontv-kvrocks: image: apache/kvrocks container_name: moontv-kvrocks restart: unless-stopped volumes: - kvrocks-data:/var/lib/kvrocks networks: - moontv-network networks: moontv-network: driver: bridge volumes: kvrocks-data: ``` ### Redis 存储（有一定的丢数据风险） ```yml services: moontv-core: image: ghcr.io/moontechlab/lunatv:latest container_name: moontv-core restart: on-failure ports: - '3000:3000' environment: - USERNAME=admin - PASSWORD=admin_password - NEXT_PUBLIC_STORAGE_TYPE=redis - REDIS_URL=redis://moontv-redis:6379 networks: - moontv-network depends_on: - moontv-redis moontv-redis: image: redis:alpine container_name: moontv-redis restart: unless-stopped networks: - moontv-network # 请开启持久化，否则升级/重启后数据丢失 volumes: - ./data:/data networks: moontv-network: driver: bridge ``` ### Upstash 存储 1. 在 [upstash](https://upstash.com/) 注册账号并新建一个 Redis 实例，名称任意。 2. 复制新数据库的 **HTTPS ENDPOINT 和 TOKEN** 3. 使用如下 docker compose ```yml services: moontv-core: image: ghcr.io/moontechlab/lunatv:latest container_name: moontv-core restart: on-failure ports: - '3000:3000' environment: - USERNAME=admin - PASSWORD=admin_password - NEXT_PUBLIC_STORAGE_TYPE=upstash - UPSTASH_URL=上面 https 开头的 HTTPS ENDPOINT - UPSTASH_TOKEN=上面的 TOKEN ``` ### ☁️ Zeabur 部署（推荐） Thanks to @SzeM",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 253150,
+      "forks": 37974,
+      "stars_today": 1897,
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-18T00:51:51Z",
+      "updated_at": "2026-09-08T05:58:53Z",
+      "open_issues": 170,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/hero.png\" alt=\"ECC - the agent harness operating system\" width=\"100%\" /> </p> <p align=\"center\"> <a href=\"https://www.star-history.com/affaan-m/ecc\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending&theme=dark\" /> <img src=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=trending\" alt=\"GitHub Trending Repository of the Day\" height=\"46\" /> </picture> </a> <a href=\"https://www.star-history.com/affaan-m/ecc\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank&theme=dark\" /> <img src=\"https://api.star-history.com/badge?repo=affaan-m/ECC&type=rank\" alt=\"Star History Global Rank\" height=\"46\" /> </picture> </a> </p> <p align=\"center\"> <strong>Language:</strong> <a href=\"README.md\">English</a> | <a href=\"docs/pt-BR/README.md\">Português (Brasil)</a> | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"docs/zh-TW/README.md\">繁體中文</a> | <a href=\"docs/ja-JP/README.md\">日本語</a> | <a href=\"docs/ko-KR/README.md\">한국어</a> | <a href=\"docs/tr/README.md\">Türkçe</a> | <a href=\"docs/ru/README.md\">Русский</a> | <a href=\"docs/vi-VN/README.md\">Tiếng Việt</a> | <a href=\"docs/th/README.md\">ไทย</a> | <a href=\"docs/de-DE/README.md\">Deutsch</a> | <a href=\"docs/es/README.md\">Español</a> | <a href=\"docs/uk-UA/README.md\">Українська</a> </p> <p align=\"center\"> <a href=\"https://discord.gg/36yGMHGFbR\"><img src=\"https://img.shields.io/discord/1496644400590094540?logo=discord&logoColor=white&label=Discord&color=5865F2\" alt=\"Discord\" /></a> <a href=\"https://ecc.tools\"><img src=\"https://img.shields.io/badge/Website-ecc.tools-E07856?logo=googlechrome&logoColor=white\" alt=\"Website\" /></a> <a href=\"https://github.com/apps/ecc-tools\"><img src=\"https://img.shields.io/badge/GitHub%20App-ECC%20Tools-181717?logo=github&logoColor=white\" alt=\"GitHub App\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT license\" /></a> </p> <p align=\"center\"> <a href=\"https://github.com/affaan-m/ECC/stargazers\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fstars&style=flat\" alt=\"Stars\" /></a> <a href=\"https://github.com/affaan-m/ECC/network/members\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Fforks&style=flat\" alt=\"Forks\" /></a> <a href=\"https://github.com/affaan-m/ECC/graphs/contributors\"><img src=\"https://img.shields.io/github/contributors/affaan-m/ECC?style=flat\" alt=\"Contributors\" /></a> <a href=\"https://github.com/marketplace/ecc-tools\"><img src=\"https://img.shields.io/endpoint?url=https%3A%2F%2Fapi.ecc.tools%2Fbadge%2Finstalls&logo=github\" alt=\"GitHub App installs\" /></a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/ecc-universal\"><img src=\"https://img.shields.io/npm/dw/ecc-universal?label=ecc-universal&logo=npm\" alt=\"ecc-universal npm downloads\" /></a> <a href=\"https://www.npmjs.com/package/ecc-agentshield\"><img src=\"https://img.shields.io/npm/dw/ecc-agentshield?label=ecc-agentshield&logo=npm\" alt=\"ecc-agentshield npm downloads\" /></a> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/-Shell-4EAA25?logo=gnu-bash&logoColor=white\" alt=\"Shell\" /> <img src=\"https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white\" alt=\"TypeScript\" /> <img src=\"https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white\" alt=\"Python\" /> <img src=\"https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white\" alt=\"Go\" /> <img src=\"https://img.shields.io/badge/-Java-ED8B00?logo=openjdk&logoColor=white\" alt=\"Java\" /> <img src=\"https://img.shields.io/badge/-Perl-39457E?logo=perl&logoColor=white\" alt=\"Perl\" /> <img src=\"https://img.shields.io/badge/-Markdown-000000?logo=markdown&logoColor=white\" alt=\"Markdown\" /> </p> > [!WARNING] > **Official sources only.** Install ECC only from verified channels: the GitHub repository [github.com/",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -5,
+      "streak_days": 8
+    },
+    {
+      "rank": 7,
+      "full_name": "coreyhaines31/marketingskills",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "language": "JavaScript",
+      "stars": 48302,
+      "forks": 7454,
+      "stars_today": 580,
+      "topics": [
+        "claude",
+        "codex",
+        "marketing"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-15T19:45:23Z",
+      "updated_at": "2026-09-08T05:58:22Z",
+      "open_issues": 106,
+      "default_branch": "main",
+      "readme_excerpt": "# Marketing Skills for AI Agents A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io). Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills). New to the terminal and coding agents? Check out the companion guide [Coding for Marketers](https://codingformarketers.com?ref=marketingskills). **Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing). Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help. ## Partners The library is free and MIT-licensed. [Verified Partners](tools/REGISTRY.md#verified-partners) fund the work — vetted, disclosed tool integrations, listed alongside the neutral options and never influencing what the core skills recommend. The full rules and boundaries are in [tools/PARTNERS.md](tools/PARTNERS.md). [Become a partner →](https://marketing-skills.com/sponsorship) <!-- PARTNERS:START --> > ◆ **[Converly](https://converly.io?ref=marketingskills)** — *Conversion tracking / attribution.* Server-side conversion tracking that fires when someone submits a form, books a meeting, or starts a chat — passing click IDs and identifiers for Enhanced Conversions (Google) and high EMQ match rates (Meta), across 100+ tools. CLI + MCP so your agent sets it up in minutes. → [Integration guide](tools/integrations/converly.md) > ◆ **[Ploy](https://ploy.ai?ref=marketingskills)** — *AI website & growth platform.* AI marketing platform built around a Webflow-grade website builder — site optimization, SEO/AEO, visitor identification, and ad creative in one, with WebMCP to expose site actions to AI assistants. → [Integration guide](tools/integrations/ploy.md) <!-- PARTNERS:END --> <!-- The Partners block above is generated from partners.json — run `node scripts/sync-partners.mjs` after editing it. --> ## What are Skills? Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, your agent can recognize when you're working on a marketing task and apply the right frameworks and best practices. ## How Skills Work Together Skills reference each other and build on shared context. The `product-marketing` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything. ``` ┌──────────────────────────────────────┐ │ product-marketing │ │ (read by all other skills first) │ └──────────────────┬───────────────────┘ │ ┌──────────────┬─────────────┬─────────────┼─────────────┬──────────────┬──────────────┐ ▼ ▼ ▼ ▼ ▼ ▼ ▼ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────┐ ┌──────────┐ ┌─────────────┐ ┌───────────┐ │ SEO & │ │ CRO │ │Content & │ │ Paid & │ │ Growth & │ │ Sales & │ │ Strategy │ │ Content │ │ │ │ Copy │ │Measurement │ │Retention │ │ GTM │ │ │ ├──────────┤ ├──────────┤ ├──────────┤ ├────────────┤ ├──────────┤ ├─────────────┤ ├───────────┤ │seo-audit │ │cro │ │copywritng│ │ads │ │referrals │ │revops │ │mktg-ideas │ │ai-seo │ │signup │ │copy-edit │ │ad-creative │ │free-to",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 13,
+      "rank_change": 6,
+      "streak_days": 2
+    },
+    {
+      "rank": 8,
+      "full_name": "The-Swarm-Corporation/AutoHedge",
+      "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+      "description": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+      "language": "Python",
+      "stars": 5365,
+      "forks": 819,
+      "stars_today": 517,
+      "topics": [
+        "ai",
+        "blackrock",
+        "finance",
+        "goldmansachs",
+        "hedgefund",
+        "jpmorgan",
+        "ml",
+        "quant",
+        "quantitative-finance",
+        "quantitative-trading",
+        "trading"
+      ],
+      "license": "MIT",
+      "created_at": "2024-12-10T20:34:46Z",
+      "updated_at": "2026-09-08T05:57:55Z",
+      "open_issues": 19,
+      "default_branch": "main",
+      "readme_excerpt": "# AutoHedge [![Join our Discord](https://img.shields.io/badge/Discord-Join%20our%20server-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/VapjxpSyHC3) [![Subscribe on YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@kyegomez3242) [![Connect on LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kye-g-38759a207/) [![Follow on X.com](https://img.shields.io/badge/X.com-Follow-1DA1F2?style=for-the-badge&logo=x&logoColor=white)](https://x.com/swarms_corp) AutoHedge is an enterprise-grade autonomous agent hedge fund that trades on your behalf. It combines swarm intelligence and specialized AI agents to perform end-to-end market analysis, risk management, and execution with minimal human intervention. **Current support:** Full autonomous trading on Solana. **Coming soon:** Coinbase and additional exchanges. --- ## Overview AutoHedge is built to be the world's most powerful autonomous agent hedge fund. It runs continuous analysis, generates and validates trading theses, sizes risk, and executes orders across supported venues. The system is designed for institutional reliability: structured outputs, comprehensive logging, and a risk-first architecture that scales from single strategies to multi-venue, multi-asset deployment. --- ## Features - **Multi-Agent Architecture**: Specialized agents for each stage of the trading pipeline - Director Agent: strategy and thesis generation - Quant Agent: technical and statistical analysis - Risk Management Agent: position sizing and risk assessment - Execution Agent: order generation and execution - **Real-Time Market Analysis**: Integration with live market data for analysis and execution - **Risk-First Design**: Built-in risk management and position sizing before any execution - **Structured Output**: JSON-formatted recommendations and analysis for downstream systems - **Enterprise Logging**: Detailed, configurable logging for audit and debugging - **Extensible Framework**: Modular design for custom strategies and new venues --- ## Supported Venues | Venue | Status | Notes | |-----------|----------------|--------------------------| | Solana | Supported | Full autonomous trading | | Coinbase | Coming soon | In development | | Other CEX | Roadmap | Planned expansion | --- ## Quick Start ### Installation ```bash pip install -U autohedge ``` ### Environment Variables ```bash # Jupiter API (token price & search tools) # Get a key at https://portal.jup.ag JUPITER_API_KEY= # OpenAI (experimental agents) OPENAI_API_KEY= ANTHROPIC_API_KEY= WORKSPACE_DIR=\"agent_workspace\" # Trading WALLET_PRIVATE_KEY=\"\" ``` See `.env.example` for a full reference. ### Basic Usage ```python autohedge ``` --- ## Architecture AutoHedge uses a multi-agent pipeline where each agent has a defined responsibility: ```mermaid graph TD A[Director Agent] --> B[Quant Agent] B --> C[Risk Manager] C --> D[Execution Agent] D --> E[Trade Output] ``` --- ## Contributing Contributions are welcome. See [Contributing Guidelines](CONTRIBUTING.md) for details. 1. Fork the repository 2. Create a feature branch (`git checkout -b feature/AmazingFeature`) 3. Commit changes (`git commit -m 'Add some AmazingFeature'`) 4. Push to the branch (`git push origin feature/AmazingFeature`) 5. Open a Pull Request --- ## License MIT License. See [LICENSE](LICENSE) for details. --- ## Acknowledgments - [Swarms](https://swarms.ai) for the AI agent framework --- ## Support - Issue Tracker: [GitHub Issues](https://github.com/The-Swarm-Corporation/AutoHedge/issues) - Community: [Discord](https://swarms.ai) --- AutoHedge by [The Swarm Corporation](https://github.com/The-Swarm-Corporation)",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 17,
+      "rank_change": 9,
+      "streak_days": 2
+    },
+    {
+      "rank": 9,
+      "full_name": "BraveOPotato/FckSignups",
+      "url": "https://github.com/BraveOPotato/FckSignups",
+      "description": "A list of tools that are open-source, in-browser, and require no-signups!",
+      "language": "TypeScript",
+      "stars": 3934,
+      "forks": 230,
+      "stars_today": 501,
+      "topics": [],
+      "license": "GPL-3.0",
+      "created_at": "2026-05-07T19:05:56Z",
+      "updated_at": "2026-09-08T05:52:42Z",
+      "open_issues": 499,
+      "default_branch": "main",
+      "readme_excerpt": "# NoSignups ## (formerly FckSignups) [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/hbDDqdmcm) [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/r/fucksignups/) > **Open Source Tools. Zero Bullsh*t.** A curated collection of open-source tools you can use instantly in your browser. no accounts, no emails, no tracking. Just tools that work. --- ## What is this? NoSignups is a React + TypeScript project. If you want to run it locally, simply clone the repo, install the depedencies, and run the server. Here's a command that would do all the previous steps in one go: ```bash git clone https://github.com/BraveOPotato/FckSignups.git && \\ cd FckSignups && \\ npm install && \\ npm run dev ``` --- ## Philosophy | We believe | We reject | |------------|-----------| | Tools should work immediately | Forced registration walls | | Your data belongs to you | Data harvesting and tracking | | Open source is the default | Proprietary black boxes | | Simple is better | Bloat and unnecessary complexity | --- ## Tool schema | Field | Required | Description | |-------|----------|-------------| | `id` | Yes | URL-friendly unique identifier | | `name` | Yes | Display name | | `description` | Yes | One-sentence summary | | `url` | Yes | Direct link to the tool | | `category` | Yes | Must match a category `id` | | `tags` | No | Array of searchable keywords | | `github` | No | Link to source repository | | `license` | No | SPDX license identifier | | `stars` | No | GitHub star count (for display) | | `featured` | No | Boolean; pins to top | | `notRecommendedReason` | No | Reason why the entry isn't recommended | --- ## Categories The default categories are: | ID | Name | Icon | |----|------|------| | `all` | All | ◈ | | `productivity` | Productivity | ⚡ | | `design` | Design & Graphics | 🎨 | | `development` | Development | 💻 | | `writing` | Writing & Docs | ✍️ | | `privacy` | Privacy | 🔒 | | `utilities` | Utilities | 🛠️ | | `data` | Data & Analytics | 📊 | | `media` | Media | 🎬 | | `education` | Education | 🎓 | --- ## Contributing ### Contribution guidelines - The tool must work **without creating an account** - Keep descriptions under 140 characters - Use 3-5 relevant tags per tool - Use the following link to add a tool you [found/made](https://github.com/BraveOPotato/FckSignups/issues/new?template=request-to-add-a-tool.md) or simply use the \"SUBMIT A TOOL\" button on the website. --- ## Discussions If you'd like to voice your opinion, we have a community on reddit [r/fucksignups](https://www.reddit.com/r/fucksignups/). Don't be afraid to critique. --- ## Featured > Why are some tools featured? It's simple. We're at 200+ tools, and a lot of them are similar. To break the homogeneity, I flag the unique ones to the top. This is biased since \"what is uniqueness?\" and I simply define that as a tool that is different from the other ones. Whether it's outstanding quality, or simply a very unique idea. --- ## License The NoSignups directory code is released under the **GPL-3.0 License**. Individual tools listed in the directory retain their own licenses. We do not claim ownership of any third-party projects. --- ## Credits Curated with spite by people who are tired of typing their email into everything. --- *No cookies. No analytics. No bullsh*t.*",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 12,
+      "rank_change": 3,
+      "streak_days": 3
+    },
+    {
+      "rank": 10,
+      "full_name": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow",
+      "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+      "language": "Python",
+      "stars": 81936,
+      "forks": 11295,
+      "stars_today": 195,
+      "topics": [
+        "agent",
+        "agentic",
+        "agentic-framework",
+        "agentic-workflow",
+        "ai",
+        "ai-agents",
+        "deep-research",
+        "harness",
+        "langchain",
+        "langgraph",
+        "langmanus",
+        "llm",
+        "multi-agent",
+        "nodejs",
+        "podcast",
+        "python",
+        "superagent",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2025-05-07T02:50:19Z",
+      "updated_at": "2026-09-08T05:53:03Z",
+      "open_issues": 906,
+      "default_branch": "main",
+      "readme_excerpt": "# 🦌 DeerFlow - 2.0 English | [中文](./README_zh.md) | [日本語](./README_ja.md) | [Français](./README_fr.md) | [Русский](./README_ru.md) [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](./backend/pyproject.toml) [![Node.js](https://img.shields.io/badge/Node.js-22%2B-339933?logo=node.js&logoColor=white)](./Makefile) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) <a href=\"https://trendshift.io/repositories/14699\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/14699\" alt=\"bytedance%2Fdeer-flow | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> > On February 28th, 2026, DeerFlow claimed the 🏆 #1 spot on GitHub Trending following the launch of version 2. Thanks a million to our incredible community — you made this happen! 💪🔥 DeerFlow (**D**eep **E**xploration and **E**fficient **R**esearch **Flow**) is an open-source **super agent harness** that orchestrates **sub-agents**, **memory**, and **sandboxes** to do almost anything — powered by **extensible skills**. https://github.com/user-attachments/assets/a8bcadc4-e040-4cf2-8fda-dd768b999c18 > [!NOTE] > **DeerFlow 2.0 is a ground-up rewrite.** It shares no code with v1. If you're looking for the original Deep Research framework, it's maintained on the [`1.x` branch](https://github.com/bytedance/deer-flow/tree/main-1.x) — contributions there are still welcome. Active development has moved to 2.0. ## Official Website Learn more and see **real demos** on our [**official website**](https://deerflow.tech). The landing-page case studies open as allowlisted, read-only showcases without requiring a sign-in. ## Sister Projects <img width=\"446\" height=\"280\" alt=\"image\" align=\"middle\" src=\"https://github.com/user-attachments/assets/077edef4-d560-41af-bb0d-d0a5f14fcc20\" /> - [**LLM Space**](https://github.com/deer-flow/llm-space) - Meet our secret weapon behind DeerFlow — one desktop tool to prototype agent ideas, inspect each harness step, replay failures, and benchmark performance. ## Coding Plan from ByteDance Volcengine - We strongly recommend using Doubao-Seed-2.0-Code, DeepSeek v3.2 and Kimi 2.5 to run DeerFlow - [Learn more](https://www.byteplus.com/en/activity/codingplan?utm_campaign=deer_flow&utm_content=deer_flow&utm_medium=devrel&utm_source=OWO&utm_term=deer_flow) - [中国大陆地区的开发者请点击这里](https://www.volcengine.com/activity/codingplan?utm_campaign=deer_flow&utm_content=deer_flow&utm_medium=devrel&utm_source=OWO&utm_term=deer_flow) ## InfoQuest DeerFlow has newly integrated the intelligent search and crawling toolset independently developed by BytePlus--[InfoQuest (supports free online experience)](https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest) <a href=\"https://docs.byteplus.com/en/docs/InfoQuest/What_is_Info_Quest\" target=\"_blank\"> <img src=\"https://sf16-sg.tiktokcdn.com/obj/eden-sg/hubseh7bsbps/20251208-160108.png\" alt=\"InfoQuest_banner\" /> </a> --- ## Table of Contents - [🦌 DeerFlow - 2.0](#-deerflow---20) - [Official Website](#official-website) - [Coding Plan from ByteDance Volcengine](#coding-plan-from-bytedance-volcengine) - [InfoQuest](#infoquest) - [Table of Contents](#table-of-contents) - [One-Line Agent Setup](#one-line-agent-setup) - [Quick Start](#quick-start) - [Configuration](#configuration) - [Running the Application](#running-the-application) - [Deployment Sizing](#deployment-sizing) - [Option 1: Docker (Recommended)](#option-1-docker-recommended) - [Option 2: Local Development](#option-2-local-development) - [Advanced](#advanced) - [Sandbox Mode](#sandbox-mode) - [MCP Server](#mcp-server) - [IM Channels](#im-channels) - [LangSmith Tracing](#langsmith-tracing) - [Langfuse Tracing](#langfuse-tracing) - [Monocle Tracing](#monocle-tracing) - [Using Multiple Providers](#using-multiple-providers) - [Personal Access Tokens](#personal-access-tokens) - [From Deep Research to Super Agent Harness](#from-deep-research-to-super-agent-harness) - [Co",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "openai/skills",
+      "url": "https://github.com/openai/skills",
+      "description": "Skills Catalog for Codex",
+      "language": "Python",
+      "stars": 26160,
+      "forks": 1754,
+      "stars_today": 351,
+      "topics": [],
+      "license": "",
+      "created_at": "2025-11-25T06:25:42Z",
+      "updated_at": "2026-09-08T05:59:03Z",
+      "open_issues": 292,
+      "default_branch": "main",
+      "readme_excerpt": "> [!IMPORTANT] > **This repository is deprecated.** For current Codex skill and plugin examples, use the [OpenAI Plugins repository](https://github.com/openai/plugins). If you want to add your own skills to Codex, follow the [Build plugins](https://developers.openai.com/codex/plugins/build) guide, which includes instructions for creating a skill-only plugin. # Agent Skills Agent Skills are folders of instructions, scripts, and resources that AI agents can discover and use to perform at specific tasks. Write once, use everywhere. Codex uses skills to help package capabilities that teams and individuals can use to complete specific tasks in a repeatable way. This repository catalogs skills for use and distribution with Codex. Learn more: - [Using skills in Codex](https://developers.openai.com/codex/skills) - [Create custom skills in Codex](https://developers.openai.com/codex/skills/create-skill) - [Agent Skills open standard](https://agentskills.io) ## Installing a skill Skills in [`.system`](skills/.system/) are automatically installed in the latest version of Codex. To install [curated](skills/.curated/) or [experimental](skills/.experimental/) skills, you can use the `$skill-installer` inside Codex. Curated skills can be installed by name (defaults to `skills/.curated`): ``` $skill-installer gh-address-comments ``` For experimental skills, specify the skill folder. For example: ``` $skill-installer install the create-plan skill from the .experimental folder ``` Or provide the GitHub directory URL: ``` $skill-installer install https://github.com/openai/skills/tree/main/skills/.experimental/create-plan ``` After installing a skill, restart Codex to pick up new skills. ## License The license of an individual skill can be found directly inside the skill's directory inside the `LICENSE.txt` file.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -6,
+      "streak_days": 2
+    },
+    {
+      "rank": 12,
+      "full_name": "lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "language": "Zig",
+      "stars": 34985,
+      "forks": 1653,
+      "stars_today": 58,
+      "topics": [
+        "browser",
+        "browser-automation",
+        "cdp",
+        "headless",
+        "lightpanda",
+        "playwright",
+        "puppeteer",
+        "zig"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2023-02-07T15:19:34Z",
+      "updated_at": "2026-09-08T05:55:11Z",
+      "open_issues": 92,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://lightpanda.io\"><img src=\"https://cdn.lightpanda.io/assets/images/logo/lpd-logo.png\" alt=\"Logo\" height=170></a> </p> <h1 align=\"center\">Lightpanda Browser</h1> <p align=\"center\"> <strong>The headless browser built from scratch for AI agents and automation.</strong><br> Not a Chromium fork. Not a WebKit patch. A new browser, written in Zig. </p> </div> <div align=\"center\"> [![License](https://img.shields.io/github/license/lightpanda-io/browser)](https://github.com/lightpanda-io/browser/blob/main/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/lightpanda_io)](https://twitter.com/lightpanda_io) [![GitHub stars](https://img.shields.io/github/stars/lightpanda-io/browser)](https://github.com/lightpanda-io/browser) [![Discord](https://img.shields.io/discord/1391984864894521354?style=flat-square&label=discord)](https://discord.gg/K63XeymfB5) </div> <div align=\"center\"> [<img width=\"350px\" src=\"https://cdn.lightpanda.io/assets/images/github/execution-time-v2.svg\"> ](https://github.com/lightpanda-io/demo) &emsp; [<img width=\"350px\" src=\"https://cdn.lightpanda.io/assets/images/github/memory-frame-v2.svg\"> ](https://github.com/lightpanda-io/demo) </div> ## Benchmarks Requesting 933 real web pages over the network on a AWS EC2 m5.large instance. See [benchmark details](https://github.com/lightpanda-io/demo/blob/main/BENCHMARKS.md#crawler-benchmark). | Metric | Lightpanda | Headless Chrome | Difference | | :---- | :---- | :---- | :---- | | Memory (peak, 100 pages) | 123MB | 2GB | ~16x less | | Execution time (100 pages) | 5s | 46s | ~9x faster | ## Quick start ### Install **Package Managers** Latest nightly from Homebrew: ```console brew install lightpanda-io/browser/lightpanda ``` Latest nightly from Arch Linux User Repository: ```console yay -S lightpanda-nightly-bin ``` **Download from the nightly builds** You can download the last binary from the [nightly builds](https://github.com/lightpanda-io/browser/releases/tag/nightly) for Linux and MacOS for both x86_64 and aarch64. *For Linux* ```console curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-x86_64-linux && \\ chmod a+x ./lightpanda ``` Verify the binary before running anything: ```console ./lightpanda version ``` [Linux aarch64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly) > **Note:** The Linux release binaries are linked against glibc. On musl-based distros (Alpine, etc.) the binary fails with `cannot execute: required file not found` because the glibc dynamic linker is missing. Use a glibc-based base image (e.g., `FROM debian:bookworm-slim` or `FROM ubuntu:24.04`) or [build from sources](#build-from-sources). *For MacOS* ```console curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-aarch64-macos && \\ chmod a+x ./lightpanda ``` [MacOS x86_64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly) *For Windows + WSL2* Lightpanda has no native Windows binary. Install it inside WSL following the Linux steps above. WSL not installed? Run `wsl --install` from an administrator shell, restart, then open `wsl`. See [Microsoft's WSL install guide](https://learn.microsoft.com/en-us/windows/wsl/install) for details. Your automation client (Puppeteer, Playwright, etc.) can run either inside WSL or on the Windows host. WSL forwards `localhost:9222` automatically. **Install from Docker** Lightpanda provides [official Docker images](https://hub.docker.com/r/lightpanda/browser) for both Linux amd64 and arm64 architectures. The following command fetches the Docker image and starts a new container exposing Lightpanda's CDP server on port `9222`. ```console docker run -d --name lightpanda -p 127.0.0.1:9222:9222 lightpanda/browser:nightly ``` ### Dump a URL ```console ./lightpanda fetch --obey-robots --dump html --log-format pretty --log-level info https://demo-browser.lightpanda.io/campfire-",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "pascalorg/editor",
+      "url": "https://github.com/pascalorg/editor",
+      "description": "Create and share 3D architectural projects.",
+      "language": "TypeScript",
+      "stars": 22466,
+      "forks": 2872,
+      "stars_today": 168,
+      "topics": [
+        "3d",
+        "architecture",
+        "bim",
+        "cad",
+        "editor",
+        "floorplan",
+        "mcp",
+        "nextjs",
+        "parametric-design",
+        "react-three-fiber",
+        "threejs",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-16T19:35:06Z",
+      "updated_at": "2026-09-08T05:57:42Z",
+      "open_issues": 45,
+      "default_branch": "main",
+      "readme_excerpt": "# Pascal Editor A 3D building editor built with React Three Fiber and WebGPU. [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![npm @pascal-app/core](https://img.shields.io/npm/v/@pascal-app/core?label=%40pascal-app%2Fcore)](https://www.npmjs.com/package/@pascal-app/core) [![npm @pascal-app/viewer](https://img.shields.io/npm/v/@pascal-app/viewer?label=%40pascal-app%2Fviewer)](https://www.npmjs.com/package/@pascal-app/viewer) [![npm @pascal-app/cli](https://img.shields.io/npm/v/@pascal-app/cli?label=%40pascal-app%2Fcli)](https://www.npmjs.com/package/@pascal-app/cli) [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/XRKsDcpqgS) [![X (Twitter)](https://img.shields.io/badge/follow-%40pascal__app-black?logo=x&logoColor=white)](https://x.com/pascal_app) https://github.com/user-attachments/assets/8b50e7cf-cebe-4579-9cf3-8786b35f7b6b ## Run the Editor Locally Node.js 22.13 or newer can create a persistent local Pascal installation without cloning this repository: ```bash npx @pascal-app/cli editor ``` The CLI starts the editor and an authenticated MCP service in the background, selects collision-free loopback ports, and keeps projects in `~/.pascal/data/pascal.db`. Configure an agent to launch `pascal mcp connect`. See [Run Pascal locally](https://editor.pascal.app/docs/developers/local-editor) for pnpm/Bun commands, project management, MCP setup, updates, storage paths, and troubleshooting. ## Agent skills Install Pascal's public agent workflows from this repository with [skills.sh](https://skills.sh): ```bash npx skills add pascalorg/editor \\ --skill pascal-3d \\ --skill furniture-fit ``` Claude Code users can install the same canonical skill source as a plugin: ```text /plugin marketplace add pascalorg/editor /plugin install pascal-agent-skills@pascal ``` Codex users can install the same plugin from the repository marketplace: ```bash codex plugin marketplace add pascalorg/editor codex plugin add pascal-agent-skills@pascal ``` [`pascal-3d`](skills/pascal-3d/SKILL.md) covers safe local or hosted MCP setup and verified scene work. [`furniture-fit`](skills/furniture-fit/SKILL.md) produces a bounded, evidence-based footprint assessment without claiming unsupported height, swing, or delivery checks. See [skills/README.md](skills/README.md) for package details and validation. The skills inspect the connected MCP tool schemas before using optional fields. A capability present in this repository may be absent from an older installed or hosted release; the agent should report the narrower supported result instead of assuming source-only inputs are available. ## Using Published Packages The viewer runtime and built-in node definitions are separate packages. Install the full built-in viewer set, then load the built-in plugin once before mounting `<Viewer>`. Capture sessions are an optional transport-neutral extension: ```bash npm install @pascal-app/core @pascal-app/viewer @pascal-app/editor @pascal-app/nodes npm install @pascal-app/capture-protocol @pascal-app/capture-viewer ``` ```typescript import { loadPlugin } from '@pascal-app/core' import { builtinPlugin } from '@pascal-app/nodes' await loadPlugin(builtinPlugin) ``` See the [`@pascal-app/viewer` quick start](packages/viewer/README.md#usage) for a React example. ## Repository Architecture This is a Turborepo monorepo with the reusable editor packages, the standalone app, and the CLI that distributes it: ``` editor/ ├── apps/ │ └── editor/ # Next.js application ├── packages/ │ ├── core/ # Schemas, scene state, and registry contracts │ ├── viewer/ # 3D rendering runtime and shared systems │ ├── capture-protocol/ # Static/live capture-session contracts │ ├── capture-viewer/ # Capture source runtime and reference renderers │ ├── editor/ # Editing tools and UI components │ ├── nodes/ # Built-in node definitions, renderers, and systems │ ├── cli/ # Persistent local editor installer and process ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "language": "TypeScript",
+      "stars": 71489,
+      "forks": 8461,
+      "stars_today": 394,
+      "topics": [
+        "agentic-ai",
+        "agentic-framework",
+        "agentic-workflow",
+        "agents",
+        "ai-agents",
+        "ai-assistant",
+        "ai-skills",
+        "autonomous-agents",
+        "claude-code",
+        "codex",
+        "dsh-plugin",
+        "harness",
+        "mcp-server",
+        "multi-agent",
+        "multi-agent-systems",
+        "npm",
+        "skills",
+        "swarm",
+        "swarm-intelligence",
+        "typescript"
+      ],
+      "license": "MIT",
+      "created_at": "2025-06-02T21:24:20Z",
+      "updated_at": "2026-09-08T05:55:28Z",
+      "open_issues": 946,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> [![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering) <!-- Try Ruflo — the 4 badges first-time visitors actually act on --> [![Try the UI Beta — flo.ruv.io](https://img.shields.io/badge/_Try_the_UI_Beta-flo.ruv.io-6366f1?style=for-the-badge&logoColor=white&logo=svelte)](https://flo.ruv.io/) [![npm version (ruflo)](https://img.shields.io/npm/v/ruflo?label=npx%20ruflo&style=for-the-badge&logo=npm&color=cb3837)](https://www.npmjs.com/package/ruflo) [![MIT License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT) [![Star on GitHub](https://img.shields.io/github/stars/ruvnet/claude-flow?style=for-the-badge&logo=github&color=gold)](https://github.com/ruvnet/claude-flow) <!-- Ecosystem strip (collapsed visually with flat-square) --> [![Goal Planner](https://img.shields.io/badge/_Goal_Planner-goal.ruv.io-8b5cf6?style=flat-square&logoColor=white&logo=react)](https://goal.ruv.io/) [![Live Agents](https://img.shields.io/badge/_Live_Agents-goal.ruv.io%2Fagents-10b981?style=flat-square&logoColor=white&logo=react)](https://goal.ruv.io/agents) [![🕸️ RuVector Agentic DB](https://img.shields.io/badge/RuVector_Agentic-DB-06b6d4?style=flat-square&logoColor=white&logo=graphql)](https://github.com/ruvnet/ruvector) [![Ecosystem downloads](https://img.shields.io/badge/ecosystem%20downloads-8.1M%2B-blue?style=flat-square&logo=npm)](https://github.com/ruvnet/ruflo/blob/main/data/clone-data.proof.json) [![Git clones (14d)](https://img.shields.io/badge/git%20clones%2014d-106k-blueviolet?style=flat-square&logo=github)](https://github.com/ruvnet/ruflo/blob/main/data/clone-data.ledger.json) [![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-D97757?style=flat-square&logoColor=white&logo=anthropic)](https://github.com/ruvnet/claude-flow) [![Codex Plugin](https://img.shields.io/badge/Codex-Plugin-412991?style=flat-square&logoColor=white&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMi4yODIgOS44MjFhNS45ODUgNS45ODUgMCAwIDAtLjUxNi00LjkxIDYuMDQ2IDYuMDQ2IDAgMCAwLTYuNTEtMi45QTYuMDY1IDYuMDY1IDAgMCAwIDQuOTgxIDQuMThhNS45ODUgNS45ODUgMCAwIDAtMy45OTggMi45IDYuMDQ2IDYuMDQ2IDAgMCAwIC43NDMgNy4wOTcgNS45OCA1Ljk4IDAgMCAwIC41MSA0LjkxMSA2LjA1MSA2LjA1MSAwIDAgMCA2LjUxNSAyLjlBNS45ODUgNS45ODUgMCAwIDAgMTMuMjYgMjRhNi4wNTYgNi4wNTYgMCAwIDAgNS43NzItNC4yMDYgNS45OSA1Ljk5IDAgMCAwIDMuOTk4LTIuOSA2LjA1NiA2LjA1NiAwIDAgMC0uNzQ3LTcuMDczek0xMy4yNiAyMi40M2E0LjQ3NiA0LjQ3NiAwIDAgMS0yLjg3Ni0xLjA0bC4xNDItLjA4IDQuNzc4LTIuNzU4YS43OTUuNzk1IDAgMCAwIC4zOTMtLjY4MXYtNi43MzdsMi4wMiAxLjE2OGEuMDcxLjA3MSAwIDAgMSAuMDM4LjA1MnY1LjU4M2E0LjUwNCA0LjUwNCAwIDAgMS00LjQ5NSA0LjQ5NHpNMy42IDE4LjMwNGE0LjQ3IDQuNDcgMCAwIDEtLjUzNS0zLjAxNGwuMTQyLjA4NSA0Ljc4MyAyLjc1OWEuNzcxLjc3MSAwIDAgMCAuNzgxIDBsNS44NDMtMy4zNjl2Mi4zMzJhLjA4LjA4IDAgMCAxLS4wMzMuMDYyTDkuNzQgMTkuOTVhNC41IDQuNSAwIDAgMS02LjE0LTEuNjQ2ek0yLjM0IDcuODk2YTQuNDg1IDQuNDg1IDAgMCAxIDIuMzY2LTEuOTczVjExLjZhLjc2Ni43NjYgMCAwIDAgLjM4OC42NzdsNS44MTUgMy4zNTQtMi4wMiAxLjE2OGEuMDc2LjA3NiAwIDAgMS0uMDcyIDBsLTQuODMtMi43ODZBNC41MDQgNC41MDQgMCAwIDEgMi4zNCA3Ljg3MnptMTYuNTk3IDMuODU1LTUuODMzLTMuMzg3IDIuMDE2LTEuMTY1YS4wNzYuMDc2IDAgMCAxIC4wNzEgMGw0LjgzIDIuNzkxYTQuNDk0IDQuNDk0IDAgMCAxLS42NzYgOC4xMDR2LTUuNjc3YS43OS43OSAwIDAgMC0uNDA3LS42Njd6bTIuMDEtMy4wMjMtLjE0MS0uMDg1LTQuNzc0LTIuNzgyYS43NzYuNzc2IDAgMCAwLS43ODUgMEw5LjQwOSA5LjIzVjYuODk3YS4wNjYuMDY2IDAgMCAxIC4wMjgtLjA2Mmw0LjgzLTIuNzg3YTQuNDk5IDQuNDk5IDAgMCAxIDYuNjggNC42NnpNOC4zMDcgMTIuODYzbC0yLjAyLTEuMTY0YS4wOC4wOCAwIDAgMS0uMDM4LS4wNTdWNi4wNzRhNC40OTkgNC40OTkgMCAwIDEgNy4zNzYtMy40NTRsLS4xNDIuMDgtNC43NzggMi43NThhLjc5NS43OTUgMCAwIDAtLjM5My42ODJ6bTEuMDk3LTIuMzY2IDIuNjAyLTEuNSAyLjYwNyAxLjV2Mi45OTlsLTIuNTk3IDEuNS0yLjYwNy0xLjVaIi8%2BPC9zdmc%2B)](https://www.npmjs.com/package/@claude-flow/codex) # Ruflo **An agent meta-harness for Claude Code and Codex.** [![RuFlo Explained — build an AI team that plans, remembers, tests, and ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": -4,
+      "streak_days": 3
+    },
+    {
+      "rank": 15,
+      "full_name": "shiaho777/web-to-app",
+      "url": "https://github.com/shiaho777/web-to-app",
+      "description": "The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone",
+      "language": "Kotlin",
+      "stars": 6240,
+      "forks": 943,
+      "stars_today": 64,
+      "topics": [
+        "android",
+        "app",
+        "web"
+      ],
+      "license": "Unlicense",
+      "created_at": "2025-11-26T04:45:16Z",
+      "updated_at": "2026-09-08T05:58:08Z",
+      "open_issues": 6,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"app/src/main/res/mipmap-xxxhdpi/ic_launcher.png\" width=\"96\" alt=\"WebToApp icon\" /> # WebToApp ### Build Android APKs from web projects, directly on your phone. **An on-device APK workshop that goes far beyond URL wrapping — it can fork and exec full server runtimes, ship a hardened anti-censorship network stack, sign bundles for Google Play, and run MV3 browser extensions, all without a PC or a remote build server.** **English** · [简体中文](.github/docs/README_CN.md) <p align=\"center\"> <a href=\"https://github.com/shiaho777/web-to-app/stargazers\"> <img src=\"https://img.shields.io/github/stars/shiaho777/web-to-app?style=for-the-badge\" alt=\"Stars\"> </a> <a href=\"https://github.com/shiaho777/web-to-app/network/members\"> <img src=\"https://img.shields.io/github/forks/shiaho777/web-to-app?style=for-the-badge\" alt=\"Forks\"> </a> <a href=\"https://github.com/shiaho777/web-to-app/releases/latest\"> <img src=\"https://img.shields.io/github/v/release/shiaho777/web-to-app\" alt=\"Latest Version\"> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/22597?utm_source=trendshift-badge&utm_medium=badge&utm_campaign=badge-trendshift-22597\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"https://trendshift.io/api/badge/trendshift/repositories/22597/weekly?language=Kotlin\" alt=\"shiaho777%2Fweb-to-app | Trendshift\" width=\"250\" height=\"55\"> </a> </p> <p align=\"center\"> <a href=\"https://www.swiftproxy.net/?ref=shiaho\"> <img src=\".github/assets/sponsors/swiftproxy-logo-full.png\" alt=\"Swiftproxy\" width=\"220\" /> </a><br/> <a href=\"https://www.swiftproxy.net/?ref=shiaho\"><b>Sponsored by Swiftproxy</b></a> — Swiftproxy · Reliable Residential Proxies for Web Automation </p> <p align=\"center\"> <a href=\"#what-makes-webtoapp-different\">What's different</a> · <a href=\"#what-you-can-build\">What you can build</a> · <a href=\"#capability-overview\">Capability overview</a> · <a href=\"#full-feature-map\">Feature map</a> · <a href=\"#module-market\">Module market</a> · <a href=\"#documentation\">Documentation</a> · <a href=\"#architecture\">Architecture</a> · <a href=\"#build-from-source\">Build</a> </p> --- <div align=\"center\"> <img src=\".github/assets/social-preview.png\" width=\"90%\" alt=\"WebToApp: My Apps home, the app list with the main toolbox (Agent, Extension Modules, Port Manager), per-app APK actions (Edit, Create Shortcut, Build/Share/Export APK), and the About screen — all running on an Android phone\" /> </div> --- ## What makes WebToApp different Most \"website to app\" tools stop at wrapping a URL in a WebView. WebToApp is closer to a pocket-sized APK workshop, and the hard parts are exactly where it diverges: - **It runs real server runtimes on-device.** Node.js, PHP, Python, Go, and WordPress are fork+exec'd as native binaries straight from app storage — like Termux, packaged into an installable APK. URL-wrapper tools cannot do this at all. - **It ships a hardened, anti-censorship network stack.** DNS-over-HTTPS, TLS fingerprint spoofing (Chrome / Firefox / Safari JA3 templates) with a local MITM bridge, Encrypted Client Hello (ECH) on the GeckoView engine to encrypt the SNI, per-app proxies, and CORS bypass for locked-down SPAs. - **The whole build is self-contained.** Binary AXML/ARSC patching, permission pruning, V1/V2/V3 signing, and Google Play-ready AAB export all happen inside the app via `apksig` — no remote build queue, no PC. - **It stays extensible after shipping.** Add JS/CSS modules, Tampermonkey-style userscripts, or MV3 Chrome extensions (live-searched and installed from the Chrome Web Store) without rebuilding the host. - **The host UI speaks 10 languages out of the box.** Chinese, English, Arabic (RTL), Portuguese, Spanish, French, German, Russian, Japanese, and Korean — switch anytime in Settings; new in-app copy is maintained for all ten. --- ## Capability overview A quick scan of what's in the box. Each links to the detailed feature map below. | Area | Highlights | | --- | --- | | **Build targets**",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "当日 8/15 个项目可从资料确认与 AI 直接相关；其余 7 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（6 个）、AI 智能体与数字劳动力（4 个）、AI 编程智能体（1 个）。",
+      "排名第一的 heygen-com/hyperframes 代表“AI 智能体与数字劳动力”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（6 个项目）",
+      "AI 智能体与数字劳动力（4 个项目）",
+      "AI 编程智能体（1 个项目）",
+      "面向 AI 的网页数据入口（1 个项目）",
+      "AI 智能体工作系统（1 个项目）",
+      "跨平台 AI 研究助手（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "heygen-com/hyperframes",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 474 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 hyperframes 描述为“Write HTML. Render video. Built for agents.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 hyperframes 的潜在使用者而言，在项目方所述的“Write HTML. Render video. Built for agents.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/heygen-com/hyperframes",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Write HTML. Render video. Built for agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/heygen-com/hyperframes",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/heygen-com/hyperframes",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/markitdown",
+        "one_line_summary": "围绕“Python tool for converting files and office documents to Markdown.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Python tool for converting files and office documents to Markdown.",
+        "solution": "围绕“Python tool for converting files and office documents to Markdown.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 886 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 markitdown 描述为“Python tool for converting files and office documents to Markdown.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Python tool for converting files and office documents to Markdown. 它的办法是：围绕“Python tool for converting files and office documents to Markdown.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Python tool for converting files and office documents to Markdown.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 markitdown 的潜在使用者而言，在项目方所述的“Python tool for converting files and office documents to Markdown.”场景中，可直接查看和试验项目方所述的“Python tool for converting files and office documents to Markdown.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/markitdown",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Python tool for converting files and office documents to Markdown.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/markitdown",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/markitdown",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mksglu/context-mode",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 96 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 context-mode 描述为“Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memo”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 context-mode 的潜在使用者而言，在项目方所述的“Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memo”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mksglu/context-mode",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Context window optimization for AI coding agents. Sandboxes tool output (98% reduction), persists session memory, and   enforces routing across 17 platforms via MCP + hooks.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mksglu/context-mode",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mksglu/context-mode",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jo-inc/camofox-browser",
+        "one_line_summary": "把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "industry_direction": "面向 AI 的网页数据入口",
+        "target_users": [
+          "需要外部信息的 AI 产品团队",
+          "研究、销售与市场情报团队"
+        ],
+        "problem_solved": "网页结构复杂且经常变化，AI 产品难以稳定取得干净、可引用的外部资料。",
+        "solution": "把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 135 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "网页到结构化上下文的转换",
+        "technology_impact": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "必须遵守网站条款、版权和隐私要求，动态网页与反爬措施也会影响完整性。",
+        "ai_relevance": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "plain_language_explanation": "项目方把 camofox-browser 描述为“Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppetee”。通俗地说，它希望解决的是：网页结构复杂且经常变化，AI 产品难以稳定取得干净、可引用的外部资料。 它的办法是：把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "scenario_examples": [
+          "例如市场研究助手定期读取公司官网更新，并保留原页面供分析人员复核。"
+        ],
+        "practical_benefits": [
+          "对 camofox-browser 的潜在使用者而言，在项目方所述的“Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppetee”场景中，减少为不同网站分别维护采集流程的成本",
+          "让 AI 回答更容易附带最新网页依据"
+        ],
+        "industry_implications": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "who_should_care": "需要外部信息的 AI 产品团队、研究、销售与市场情报团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jo-inc/camofox-browser",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jo-inc/camofox-browser",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jo-inc/camofox-browser",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "MoonTechLab/LunaTV",
+        "one_line_summary": "围绕“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+        "solution": "围绕“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 197 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 LunaTV 描述为“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源 它的办法是：围绕“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 LunaTV 的潜在使用者而言，在项目方所述的“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”场景中，可直接查看和试验项目方所述的“本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/MoonTechLab/LunaTV",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "本项目采用 CC BY-NC-SA 协议，禁止任何商业化行为，任何衍生项目必须保留本项目地址并以相同协议开源",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/MoonTechLab/LunaTV",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/MoonTechLab/LunaTV",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "one_line_summary": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "industry_direction": "AI 智能体工作系统",
+        "target_users": [
+          "使用 AI 助手的团队",
+          "AI 工具产品团队"
+        ],
+        "problem_solved": "智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。",
+        "solution": "把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 1897 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可积累经验的智能体框架",
+        "technology_impact": "关注点从模型能力转向长期工作与受控执行。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "效果主张仍需独立基准和真实团队案例验证。",
+        "ai_relevance": "关注点从模型能力转向长期工作与受控执行。",
+        "plain_language_explanation": "项目方把 ECC 描述为“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first dev”。通俗地说，它希望解决的是：智能体容易遗忘经验、重复犯错，任务质量与安全性不稳定。 它的办法是：把技能、记忆、安全规则和研究流程组合为智能体工作框架。",
+        "scenario_examples": [
+          "例如使用 AI 助手的团队把该能力用于真实工作任务，并在小范围内验证。"
+        ],
+        "practical_benefits": [
+          "对 ECC 的潜在使用者而言，在项目方所述的“The agent harness performance optimization system. Skills, instincts, memory, security, and research-first dev”场景中，关注点从模型能力转向长期工作与受控执行。",
+          "降低采用相关能力的操作门槛"
+        ],
+        "industry_implications": "关注点从模型能力转向长期工作与受控执行。",
+        "who_should_care": "使用 AI 助手的团队、AI 工具产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/affaan-m/ECC",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/affaan-m/ECC",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "coreyhaines31/marketingskills",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 580 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 marketingskills 描述为“Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 marketingskills 的潜在使用者而言，在项目方所述的“Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coreyhaines31/marketingskills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coreyhaines31/marketingskills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/coreyhaines31/marketingskills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "The-Swarm-Corporation/AutoHedge",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 517 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 AutoHedge 描述为“Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 AutoHedge 的潜在使用者而言，在项目方所述的“Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Build your autonomous hedge fund in minutes. AutoHedge harnesses the power of swarm intelligence and AI agents to automate market analysis, risk management, and trade execution.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/The-Swarm-Corporation/AutoHedge",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "BraveOPotato/FckSignups",
+        "one_line_summary": "围绕“A list of tools that are open-source, in-browser, and require no-signups!”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A list of tools that are open-source, in-browser, and require no-signups!",
+        "solution": "围绕“A list of tools that are open-source, in-browser, and require no-signups!”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 501 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 FckSignups 描述为“A list of tools that are open-source, in-browser, and require no-signups!”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A list of tools that are open-source, in-browser, and require no-signups! 它的办法是：围绕“A list of tools that are open-source, in-browser, and require no-signups!”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A list of tools that are open-source, in-browser, and require no-signups!”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 FckSignups 的潜在使用者而言，在项目方所述的“A list of tools that are open-source, in-browser, and require no-signups!”场景中，可直接查看和试验项目方所述的“A list of tools that are open-source, in-browser, and require no-signups!”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/BraveOPotato/FckSignups",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A list of tools that are open-source, in-browser, and require no-signups!",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/BraveOPotato/FckSignups",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/BraveOPotato/FckSignups",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "bytedance/deer-flow",
+        "one_line_summary": "让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "industry_direction": "跨平台 AI 研究助手",
+        "target_users": [
+          "市场与竞争研究人员",
+          "需要追踪近期舆论的产品团队"
+        ],
+        "problem_solved": "近期观点分散在多个社交和内容平台，人工搜索容易遗漏来源或只看到单一圈层。",
+        "solution": "让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 195 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "跨平台近期信息综合",
+        "technology_impact": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "平台样本偏差、虚假内容、访问限制和摘要失真都可能制造错误共识。",
+        "ai_relevance": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "plain_language_explanation": "项目方把 deer-flow 描述为“An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes”。通俗地说，它希望解决的是：近期观点分散在多个社交和内容平台，人工搜索容易遗漏来源或只看到单一圈层。 它的办法是：让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "scenario_examples": [
+          "例如产品团队整理过去 30 天用户对某类 AI 硬件的高频抱怨，并逐条回看来源。"
+        ],
+        "practical_benefits": [
+          "对 deer-flow 的潜在使用者而言，在项目方所述的“An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes”场景中，减少在多个平台重复搜索同一主题的时间",
+          "让近期市场判断更容易回到原始讨论核对"
+        ],
+        "industry_implications": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "who_should_care": "市场与竞争研究人员、需要追踪近期舆论的产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bytedance/deer-flow",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bytedance/deer-flow",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/bytedance/deer-flow",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "openai/skills",
+        "one_line_summary": "围绕“Skills Catalog for Codex”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Skills Catalog for Codex",
+        "solution": "围绕“Skills Catalog for Codex”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 351 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 skills 描述为“Skills Catalog for Codex”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Skills Catalog for Codex 它的办法是：围绕“Skills Catalog for Codex”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Skills Catalog for Codex”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Skills Catalog for Codex”场景中，可直接查看和试验项目方所述的“Skills Catalog for Codex”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills Catalog for Codex",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/openai/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "lightpanda-io/browser",
+        "one_line_summary": "围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Lightpanda: the headless browser designed for AI and automation",
+        "solution": "围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 58 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 browser 描述为“Lightpanda: the headless browser designed for AI and automation”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Lightpanda: the headless browser designed for AI and automation 它的办法是：围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Lightpanda: the headless browser designed for AI and automation”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 browser 的潜在使用者而言，在项目方所述的“Lightpanda: the headless browser designed for AI and automation”场景中，可直接查看和试验项目方所述的“Lightpanda: the headless browser designed for AI and automation”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lightpanda-io/browser",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Lightpanda: the headless browser designed for AI and automation",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lightpanda-io/browser",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/lightpanda-io/browser",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pascalorg/editor",
+        "one_line_summary": "提供可创建和分享三维建筑项目的产品。",
+        "industry_direction": "空间设计与创作工具",
+        "target_users": [
+          "建筑设计师",
+          "空间方案沟通者"
+        ],
+        "problem_solved": "三维建筑方案制作和分享门槛高，客户难以直观参与讨论。",
+        "solution": "提供可创建和分享三维建筑项目的产品。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 168 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "浏览器中的三维空间协作",
+        "technology_impact": "让非专业参与者也能查看和讨论空间方案。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "专业能力、格式兼容性和商业模式尚待核实。",
+        "ai_relevance": "让非专业参与者也能查看和讨论空间方案。",
+        "plain_language_explanation": "项目方把 editor 描述为“Create and share 3D architectural projects.”。通俗地说，它希望解决的是：三维建筑方案制作和分享门槛高，客户难以直观参与讨论。 它的办法是：提供可创建和分享三维建筑项目的产品。",
+        "scenario_examples": [
+          "例如建筑设计师把该能力用于真实工作任务，并在小范围内验证。"
+        ],
+        "practical_benefits": [
+          "对 editor 的潜在使用者而言，在项目方所述的“Create and share 3D architectural projects.”场景中，让非专业参与者也能查看和讨论空间方案。",
+          "降低采用相关能力的操作门槛"
+        ],
+        "industry_implications": "让非专业参与者也能查看和讨论空间方案。",
+        "who_should_care": "建筑设计师、空间方案沟通者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pascalorg/editor",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Create and share 3D architectural projects.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pascalorg/editor",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pascalorg/editor",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ruvnet/ruflo",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 394 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 ruflo 描述为“🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, an”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 ruflo 的潜在使用者而言，在项目方所述的“🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, an”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruvnet/ruflo",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🌊 The original agent meta-harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruvnet/ruflo",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ruvnet/ruflo",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "shiaho777/web-to-app",
+        "one_line_summary": "围绕“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone",
+        "solution": "围绕“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 64 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 web-to-app 描述为“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone 它的办法是：围绕“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 web-to-app 的潜在使用者而言，在项目方所述的“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”场景中，可直接查看和试验项目方所述的“The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/shiaho777/web-to-app",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The most full featured web-to-app toolkit on Android, a complete APK workshop that runs entirely on your phone",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/shiaho777/web-to-app",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/shiaho777/web-to-app",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 上下文与可追责决策基础设施",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [],
+    "cooling": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 天气与气候预测",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 2
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 37,
+        "project_count": 14
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 29,
+        "project_count": 20
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 17,
+        "project_count": 9
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 天气与气候预测",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 37
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 37
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 29
+      },
+      {
+        "name": "软件产品团队",
+        "count": 17
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 17
+      },
+      {
+        "name": "使用 AI 助手的团队",
+        "count": 7
+      },
+      {
+        "name": "AI 工具产品团队",
+        "count": 7
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 5
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 118
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 25,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "个人网络隐私与连接工具",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助安全研究技能",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "视频平台替代访问界面",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 58,
+        "project_count": 19
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 19,
+        "project_count": 9
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 11,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 13,
+        "project_count": 7
+      },
+      {
+        "theme": "AI 上下文与可追责决策基础设施",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "可复用的 AI 专业角色库",
+        "appearances": 5,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 129,
+        "project_count": 66
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 105,
+        "project_count": 39
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 58,
+        "project_count": 19
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 19,
+        "project_count": 9
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 13,
+        "project_count": 7
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 129
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 105
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 105
+      },
+      {
+        "name": "软件产品团队",
+        "count": 58
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 58
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 19
+      },
+      {
+        "name": "客服、研究和内部运营团队",
+        "count": 19
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 13
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 425
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-09-07",
+    "new": [
+      "MoonTechLab/LunaTV",
+      "bytedance/deer-flow",
+      "heygen-com/hyperframes",
+      "jo-inc/camofox-browser",
+      "lightpanda-io/browser",
+      "microsoft/markitdown",
+      "mksglu/context-mode",
+      "pascalorg/editor",
+      "shiaho777/web-to-app"
+    ],
+    "retained": [
+      "BraveOPotato/FckSignups",
+      "The-Swarm-Corporation/AutoHedge",
+      "affaan-m/ECC",
+      "coreyhaines31/marketingskills",
+      "openai/skills",
+      "ruvnet/ruflo"
+    ],
+    "exited": [
+      "DietrichGebert/ponytail",
+      "NousResearch/hermes-agent",
+      "OpenWhispr/openwhispr",
+      "Stremio/stremio-web",
+      "aipoch/open-science",
+      "anomalyco/opencode",
+      "blader/humanizer",
+      "cathrynlavery/diagram-design",
+      "humanlayer/skills",
+      "llvm/llvm-project",
+      "magnitudedev/magnitude",
+      "mattpocock/skills"
+    ],
+    "risers": [
+      {
+        "full_name": "The-Swarm-Corporation/AutoHedge",
+        "previous_rank": 17,
+        "rank": 8,
+        "change": 9
+      },
+      {
+        "full_name": "coreyhaines31/marketingskills",
+        "previous_rank": 13,
+        "rank": 7,
+        "change": 6
+      },
+      {
+        "full_name": "BraveOPotato/FckSignups",
+        "previous_rank": 12,
+        "rank": 9,
+        "change": 3
+      },
+      {
+        "full_name": "ruvnet/ruflo",
+        "previous_rank": 10,
+        "rank": 14,
+        "change": -4
+      },
+      {
+        "full_name": "affaan-m/ECC",
+        "previous_rank": 1,
+        "rank": 6,
+        "change": -5
+      },
+      {
+        "full_name": "openai/skills",
+        "previous_rank": 5,
+        "rank": 11,
+        "change": -6
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "affaan-m/ECC",
+        "previous_stars_today": 1485,
+        "stars_today": 1897,
+        "change": 412
+      },
+      {
+        "full_name": "The-Swarm-Corporation/AutoHedge",
+        "previous_stars_today": 142,
+        "stars_today": 517,
+        "change": 375
+      },
+      {
+        "full_name": "openai/skills",
+        "previous_stars_today": 46,
+        "stars_today": 351,
+        "change": 305
+      },
+      {
+        "full_name": "coreyhaines31/marketingskills",
+        "previous_stars_today": 329,
+        "stars_today": 580,
+        "change": 251
+      },
+      {
+        "full_name": "ruvnet/ruflo",
+        "previous_stars_today": 276,
+        "stars_today": 394,
+        "change": 118
+      },
+      {
+        "full_name": "BraveOPotato/FckSignups",
+        "previous_stars_today": 436,
+        "stars_today": 501,
+        "change": 65
+      }
+    ]
+  }
+}
