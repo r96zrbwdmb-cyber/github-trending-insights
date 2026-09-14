@@ -1,0 +1,2276 @@
+{
+  "date": "2026-09-14",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 19,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "JustVugg/colibri",
+      "url": "https://github.com/JustVugg/colibri",
+      "description": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+      "language": "C",
+      "stars": 30340,
+      "forks": 3283,
+      "stars_today": 868,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-01T12:27:49Z",
+      "updated_at": "2026-09-14T06:19:01Z",
+      "open_issues": 127,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"assets/colibri-logo.svg\" width=\"560\" alt=\"colibrì — tiny engine, immense model\"> </p> <p align=\"center\"> <a href=\"https://justvugg.github.io/colibri\"><img src=\"https://img.shields.io/badge/website-justvugg.github.io%2Fcolibri-1f6feb\" alt=\"Website\"></a> <a href=\"https://github.com/JustVugg/colibri/releases\"><img src=\"https://img.shields.io/github/v/release/JustVugg/colibri?color=2ea043\" alt=\"Latest release\"></a> </p> <p align=\"center\"> <a href=\"https://justvugg.github.io/colibri\"><b>Website</b></a> · <a href=\"https://discord.gg/RXV83nSZdk\"><b>Discord</b></a> · English · <a href=\"README.zh-CN.md\">简体中文</a> · <a href=\"README.zh-TW.md\">繁體中文</a> · <a href=\"README.it.md\">Italiano</a> </p> **Tiny engine, immense model.** Run **frontier MoE models — 744B to 2.8T parameters** — on consumer and heterogeneous hardware, in pure C with zero engine dependencies, by treating storage, RAM, and VRAM as a single inference hierarchy (AI memory multitiering). Nine families run today: **GLM-5.2/5.3** (744B), **GLM-5.3-Flash** (321B, with vision), **Inkling** (975B), **Kimi K3** (2.8T), **DeepSeek V4 Flash** (284B), **DeepSeek V4.1 Flash** (552B, with vision), **Qwen3.8-Flash-Next** (125B + 51B n-gram), **Qwen3.6** (35B-A3B) and **OLMoE** (7B) — one C file each, the same `coli chat` / `coli serve` / `coli web` front end. [Full roster ↓](#other-supported-models) > **Colibrì is an inference engine you can run today, and an open research > platform.** Its primary goal is to pursue inference-side performance across > the entire software/hardware boundary — model formats, memory hierarchy, > storage I/O, placement, scheduling, kernels, speculation, and CPU/GPU > overlap — so large models depend less on scarce hardware and cost less to run. Colibrì treats VRAM, RAM, and storage as a single multitier hierarchy, and it is deliberately a place to test aggressive systems ideas — so there is **no SLA on speed, and a hard guarantee on semantics**: experiments must earn their place through reproducible end-to-end measurements, and the default policy **never silently changes model precision or router semantics**. Insufficient fast memory may reduce speed; it must not quietly redefine the model. ``` $ ./coli chat 🐦 colibri v1.11.0 — GLM-5.2 · 744B MoE · int4 · streaming CPU ✓ ready in 32s · resident 9.9 GB › ciao! ◆ Ciao! 😊 Come posso aiutarti oggi? ``` ## See it running <p align=\"center\"> <img src=\"docs/media/colibri-dashboard.png\" width=\"900\" alt=\"colibrì web dashboard — live metrics, hardware panel, expert tiers\"> </p> <p align=\"center\"><em>The web dashboard (<code>./coli web</code>): a 744B model at <strong>4 tok/s, TTFT 1.6 s, disk 0</strong> — full expert residency on 6× RTX 5090, with live token metrics, the per-turn time breakdown, the VRAM/RAM/disk tier bar and the live mini-brain in the corner.</em></p> <p align=\"center\"> <img src=\"docs/media/colibri-brain.png\" width=\"900\" alt=\"the Brain page — 19,456 experts as a live cortex\"> </p> <p align=\"center\"><em>The <strong>Brain</strong> page: all 19,456 experts as a living cortex — colour is the storage tier, brightness is routing heat, and every expert routed in a turn flashes white. Hovering shows the expert's <a href=\"https://github.com/JustVugg/colibri/issues/175\">measured topic affinity</a>.</em></p> <p align=\"center\"> <img src=\"docs/media/colibri-atlas.png\" width=\"900\" alt=\"the Atlas page — the measured expert atlas as a 3-D galaxy\"> </p> <p align=\"center\"><em>The <strong>Atlas</strong> page: the <a href=\"https://github.com/JustVugg/colibri/issues/175\">measured expert atlas</a> as a 3-D galaxy — 13,260 characterised experts, 1,041 replicated specialists clustering by topic (poetry, law, Chinese, SQL…). Position is measured routing affinity, not a learned embedding. Drag to spin.</em></p> ## The research mission With Colibrì, private frontier model access is not limited by availability of hyperscaler-class hardware. With its multitiering features Colibrì **removes proprietary ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 2,
+      "full_name": "ever-co/ever-gauzy",
+      "url": "https://github.com/ever-co/ever-gauzy",
+      "description": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+      "language": "TypeScript",
+      "stars": 5384,
+      "forks": 957,
+      "stars_today": 191,
+      "topics": [
+        "accounting",
+        "billing",
+        "bookkeeping",
+        "crm",
+        "crm-platform",
+        "erp",
+        "expenses",
+        "hr",
+        "human-resources",
+        "invoices",
+        "invoicing",
+        "issue-tracker",
+        "payroll",
+        "productivity",
+        "project-management",
+        "salary",
+        "team-management",
+        "time-tracker",
+        "time-tracking",
+        "timetracking"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2019-06-02T09:47:13Z",
+      "updated_at": "2026-09-14T06:19:05Z",
+      "open_issues": 468,
+      "default_branch": "develop",
+      "readme_excerpt": "# Ever Gauzy Platform [uri_gauzy]: https://gauzy.co [uri_license]: https://www.gnu.org/licenses/agpl-3.0.html [uri_license_image]: https://img.shields.io/badge/License-AGPL%20v3-blue.svg ![visitors](https://visitor-badge.laobi.icu/badge?page_id=ever-co.gauzy-platform) [![License: AGPL v3][uri_license_image]][uri_license] [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ever-co/ever-gauzy) [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ever-co/ever-gauzy) ## 💡 What's New - 🔥🔥🔥 we just released [Ever Works](https://github.com/ever-works/ever-works) - An open agentic runtime that autonomously researches, ships, and maintains entire businesses, 24/7. Please grab it now from <https://github.com/ever-works/ever-works> and make it ⭐⭐⭐ on GitHub! - if you like Gauzy, you should also like [Ever Teams](https://github.com/ever-co/ever-teams) - Open Work & Productivity Platform. Please check <https://github.com/ever-co/ever-teams> and make it ⭐ on GitHub! It's built with a React (NextJs) / ReactNative (Expo) stack and connects to headless [Ever Gauzy Platform APIs](https://api.gauzy.co/docs). ## 🌟 What is it [Ever® Gauzy™][uri_gauzy] - **Open Business Management Platform** for Collaborative, On-Demand and Sharing Economies. - **Enterprise Resource Planning** (ERP) - **Customer Relationship Management** (CRM) - **Human Resource Management** (HRM) - **Applicant Tracking System** (ATS) - **Work and Project Management** (PM) - **Employee Time-Tracking, Activity & Productivity Tracking** <img width=\"1905\" height=\"988\" alt=\"image\" src=\"https://github.com/user-attachments/assets/6197a87a-8ae9-4380-91c3-3f85f8406542\" /> Ever® Gauzy™ Platform is a part of our larger Open Platform for **Collaborative, On-Demand and Sharing Economies** - [Ever® Platform™](https://ever.co). ## ✨ Features Main features: - Human Resources Management (HRM) with Time Management / Tracking and Employees Performance Monitoring - Customer Relationship Management (CRM) - Enterprise Resource Planning (ERP) - Projects / Tasks Management - Sales Management - Financial and Cost Management (including _Accounting_, _Invoicing_, etc) - Inventory, Supply Chain Management, and Production Management A more detailed list of the features available in the platform: - [Headless APIs](https://api.gauzy.co/docs) - Dashboard (provides an overview of different metrics, such as company income/expenses, employee bonuses, etc.) - Time Management / Time Tracking / Activity Tracking / Timesheets - Employees Management (register of company employees/contractors, rates of employees, etc.) - Employee Onboarding - Applicant Tracking System (ATS) / Candidates Interviews - Contacts Management (Clients / Customers / Leads / etc.) - Schedules / Appointments / Events - Project Management / Tasks - Goals / KPI / Objectives / Key Results - Sales Pipelines - Proposals - Accounting / Invoicing / Estimates - Billing - Payments - Income / Expenses Management - Time Off Management / Holidays / Approvals - Inventory - Equipment / Sharing - Multiple Organizations Management - Organization Departments and Teams - Organization Clients and Vendors - Help Center / Knowledge Base - Tags / Labels - Reports / Insights / Analytics - Organization and Employee Public Pages - Integrations (Upwork, HubStaff, etc.) - Email History / Email Templates - Data Import / Export - Roles / Permissions - Multi-currency - Multi-lingual - Dark / Light / Corporate / Material and other Themes Read more [about Gauzy](https://github.com/ever-co/ever-gauzy/wiki/About-Gauzy) and [how to use it](https://github.com/ever-co/ever-gauzy/wiki/How-to-use-Gauzy) at your company, on-demand business, freelance business, agency, studio or in-house teams. ## 🌼 Screenshots <details> <summary>Show / Hide Screenshots</summary> ### Web UI ![overview](https://docs.gauzy.co/overview.png) ### Desktop Timer UI (Standard) ![timer](https://docs.gauzy.co/deskto",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 3,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "language": "JavaScript",
+      "stars": 32392,
+      "forks": 6478,
+      "stars_today": 2680,
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-09-14T06:20:08Z",
+      "open_issues": 200,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # 🌐 God's Eye View [![CI](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/bilawalsidhu/gods-eye-view/actions/workflows/ci.yml) ### A spy-satellite simulator in your browser — then you realize the sources are public and the data is real. Photorealistic 3D globe. Live aircraft, ships, satellites, earthquakes, traffic, and public cameras. Hands-free voice control powered by a realtime AI agent. *No place left behind.* ![Orbital HUD, a tracked live globe, FLIR terrain — then OPEN SOURCED](docs/media/hero-open-source-reveal.gif) <a href=\"https://www.youtube.com/@bilawalsidhu\"> <img src=\"docs/media/youtube-popular-videos.png\" alt=\"The God's Eye View video series on YouTube\" width=\"100%\"> </a> ▶️ **From the project behind the viral God's Eye View series** *(formerly WorldView)* — [5M+ on YouTube](https://youtube.com/playlist?list=PL6qSg2I-7_koPbDnSMo0QeeHX_RknA2uv&si=nBGYMoHWQw41v93Q) · [25M+ across socials](https://www.google.com/search?q=god%27s+eye+view) [![Reached #1 on GitHub Trending](https://img.shields.io/badge/%231_GitHub_Trending-thank_you!-F0A63C?style=flat-square&logo=github)](https://x.com/bilawalsidhu/status/2093798887815348521) 🏆 **Reached #1 on GitHub Trending, daily and weekly · August 2026** **[#8 Product of the Day](https://www.producthunt.com/products/god-s-eye-view?launch=god-s-eye-view)** · Hunted by Chris Messina, creator of the hashtag *“pretty cool”* — [Brendan Eich](https://x.com/BrendanEich/status/2094592096401490266), creator of JavaScript and co-founder of Mozilla and Brave · Featured on **[Pinokio](https://pinokio.co/posts/01m1m4p9xxm3qw7dnnpj2wr93g)** ⚡ **Start without API keys.** Install with [Pinokio](https://pinokio.co/apps/github-com-bilawalsidhu-gods-eye-view) or run locally from the terminal. Add optional keys inside the app. **[→ Quick Start](#-quick-start)** </div> --- <div align=\"center\"> **[Quick Start](#-quick-start) · [First Five Minutes](#-the-first-five-minutes) · [Talk to It](#-talk-to-it) · [What's Live](#-whats-on-the-globe) · [Under the Hood](#-under-the-hood) · [Keys & Costs](#-api-keys)** </div> --- ## 🌍 Why This Exists God's Eye View brings public signals into one explorable globe. Track the world live. Talk to it. Break it. Extend it. Flight transponders, ship beacons, orbital elements, seismographs, and public cameras already tell us a lot about the world. God's Eye View puts them in the same place, so you can move between a global picture and an individual aircraft, ship, or street. It runs locally in your browser, with source code you can inspect and extend. > Half the magic is that it looks like a forbidden cockpit. The other half is that every line of code is inspectable. Most feeds are live or regularly refreshed. Traffic is simulated along real roads using aggregate location data. CCTV camera poses and rocket launch trajectories are coarse estimates. Start with the included data sources, then add your own. Each layer is a separate module. --- ## 🎛️ What This Thing Does - **🛩️ Cockpit view:** Ride inside a tracked flight — the camera holds the terrain under you all the way down. - **📡 Contacts:** A 250 km roster of everything near your target — step through live aircraft and drop into any cockpit. - **🎯 Click-to-track anything:** Camera locks on, draws a fading trail, surfaces full metadata — and a tracked fire or vessel hands you off to the nearest live camera in one click. - **🖊️ Voice whiteboard:** Speak annotations onto the world — real boundary polygons, marks, and routes. - **🛫 3D hangar:** Real per-class aircraft models — 787, ATR-72, Citation, Bell 206, MQ-9 — and a tracked contact swaps from glyph to 3D model as you close in. - **🎨 Reskin reality:** GLSL sensor looks over the normal globe — CRT, NVG, FLIR/thermal, Noir, Snow. - **🟩 Detection overlay:** Screen-space bounding boxes and IDs on everything in view. - **🎖️ Military HUD:** Tactical heads-up display with intelligence-style",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -2,
+      "streak_days": 4
+    },
+    {
+      "rank": 4,
+      "full_name": "tech-leads-club/agent-skills",
+      "url": "https://github.com/tech-leads-club/agent-skills",
+      "description": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+      "language": "TypeScript",
+      "stars": 5790,
+      "forks": 503,
+      "stars_today": 265,
+      "topics": [
+        "agent",
+        "ai",
+        "antigravity",
+        "claude-code",
+        "copilot",
+        "cursor",
+        "skills"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-01-19T13:21:32Z",
+      "updated_at": "2026-09-14T06:17:41Z",
+      "open_issues": 31,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\".github/assets/logo.png\" alt=\"Tech Leads Club\" width=\"400\" /> </p> <p align=\"center\"> <img src=\"https://img.shields.io/npm/v/@tech-leads-club/agent-skills?style=flat-square&color=blue\" alt=\"npm version\" /> <img src=\"https://img.shields.io/npm/dt/@tech-leads-club/agent-skills?style=flat-square&color=blue\" alt=\"total downloads\" /> <img src=\"https://img.shields.io/npm/dm/@tech-leads-club/agent-skills?style=flat-square&color=blue\" alt=\"monthly downloads\" /> <img src=\"https://img.shields.io/github/license/tech-leads-club/agent-skills?style=flat-square\" alt=\"license\" /> <img src=\"https://img.shields.io/github/actions/workflow/status/tech-leads-club/agent-skills/release.yml?style=flat-square\" alt=\"build status\" /> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/node-%3E%3D22-brightgreen?style=flat-square&logo=node.js\" alt=\"node version\" /> <img src=\"https://img.shields.io/badge/TypeScript-100%25-blue?style=flat-square&logo=typescript\" alt=\"typescript\" /> <img src=\"https://img.shields.io/badge/Nx%20Cloud-Enabled-blue?style=flat-square&logo=nx\" alt=\"nx cloud\" /> <img src=\"https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square\" alt=\"semantic-release\" /> </p> <p align=\"center\"> <img src=\"https://img.shields.io/github/stars/tech-leads-club/agent-skills?style=flat-square&color=yellow\" alt=\"github stars\" /> <img src=\"https://img.shields.io/github/contributors/tech-leads-club/agent-skills?style=flat-square&color=orange\" alt=\"contributors\" /> <img src=\"https://img.shields.io/github/last-commit/tech-leads-club/agent-skills?style=flat-square\" alt=\"last commit\" /> <img src=\"https://img.shields.io/badge/AI-Powered%20Skills-purple?style=flat-square&logo=openai\" alt=\"ai powered\" /> </p> <h1 align=\"center\">🧠 Agent Skills</h1> <p align=\"center\"> <strong>The secure, validated skill registry for professional AI coding agents</strong> </p> <p align=\"center\"> In an ecosystem where <a href=\"https://github.com/snyk/agent-scan/blob/main/.github/reports/skills-report.pdf\">over 13% of marketplace skills contain critical vulnerabilities</a>, <b>Agent Skills</b> stands apart as a hardened library of <b>verified</b>, <b>tested</b>, and <b>safe</b> capabilities. Extend <b>Antigravity</b>, <b>Claude Code</b>, <b>Cursor</b>, and more with absolute confidence. </p> <p align=\"center\"> <a href=\"https://tech-leads-club.github.io/agent-skills/\" target=\"_blank\">https://tech-leads-club.github.io/agent-skills/</a> </p> ## 📖 Table of Contents - [✨ What are Skills?](#-what-are-skills) - [🛡️ Security & Trust](#️-security--trust) - [🤖 Supported Agents](#-supported-agents) - [🌟 Featured Skills](#-featured-skills) - [🚀 Quick Start](#-quick-start) - [⚡ How It Works](#-how-it-works) - [🔌 MCP Server](#-mcp-server) - [🤝 Contributing](#-contributing) - [🛡️ Content & Authorship](#️-content--authorship) - [📄 License and Attribution](#-license-and-attribution) ## ✨ What are Skills? Skills are packaged instructions and resources that extend AI agent capabilities. Think of them as **plugins for your AI assistant** — they teach your agent new workflows, patterns, and specialized knowledge. ``` packages/skills-catalog/skills/ (category-name)/ skill/ SKILL.md ← Main instructions templates/ ← File templates references/ ← On-demand documentation ``` ## 🛡️ Security & Trust Your environment's safety is our top priority. Unlike open marketplaces where **13.4% of skills contain critical issues**, `agent-skills` is a managed, hardened library: 100% open source (no binaries), static analysis in CI/CD, immutable integrity via lockfiles and content hashing, and human-curated prompts. The CLI uses defense-in-depth (sanitization, path isolation, symlink guards, atomic lockfile, audit trail); every skill is scanned with [Snyk Agent Scan](https://github.com/snyk/agent-scan) (formerly mcp-scan) before publishing. → **Full threat model, implementation details, and vulnerability reporting:** [SECURITY.md](SECURITY",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "melgarafael/DeskcommCRM",
+      "url": "https://github.com/melgarafael/DeskcommCRM",
+      "description": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+      "language": "TypeScript",
+      "stars": 2331,
+      "forks": 607,
+      "stars_today": 432,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "chatbot",
+        "crm",
+        "customer-support",
+        "ecommerce",
+        "lgpd",
+        "mcp",
+        "multi-tenant",
+        "nextjs",
+        "nuvemshop",
+        "open-source",
+        "rag",
+        "sales-automation",
+        "self-hosted",
+        "supabase",
+        "typescript",
+        "waha",
+        "whatsapp",
+        "whatsapp-api"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-28T20:00:33Z",
+      "updated_at": "2026-09-14T06:17:58Z",
+      "open_issues": 145,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> 🇧🇷 Português · [🇺🇸 English](README.en.md) · [🇪🇸 Español](README.es.md) <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/brand/deskcomm-logo-dark.svg\"> <img src=\"docs/brand/deskcomm-logo.svg\" alt=\"Deskcomm CRM\" width=\"420\"> </picture> # 🛠️ DeskcommCRM — o Sistema Operacional de Vendas com IA, open source, pro WhatsApp **Agentes de IA que atendem, qualificam e vendem no WhatsApp — dentro de um CRM open source rodando no seu servidor.** **Sem mensalidade, sem feature travada, seus dados com você. A alternativa aberta a Kommo, Octadesk e Intercom.** [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org) [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript)](https://www.typescriptlang.org) [![Supabase](https://img.shields.io/badge/Supabase-Postgres%2BAuth%2BStorage-3ecf8e?logo=supabase)](https://supabase.com) [![Self-hosted](https://img.shields.io/badge/self--hosted-1%20comando-orange)](hostgator-setup-kit/) [![CI](https://github.com/melgarafael/DeskcommCRM/actions/workflows/ci.yml/badge.svg)](https://github.com/melgarafael/DeskcommCRM/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE) [**⚡ Instalar**](#-instalar-na-sua-vps-o-caminho-principal) · [**🔄 Atualizar**](#-atualizar) · [**🧭 Visão**](VISION.md) · [**🏗️ Arquitetura**](ARCHITECTURE.md) · [**🤝 Contribuir**](CONTRIBUTING.md) · [**🗺️ Roadmap**](#%EF%B8%8F-roadmap) </div> --- > ### ☁️ Rode este CRM em produção com 1 comando > > O DeskcommCRM foi desenvolvido em **parceria com a HostGator**: o [`hostgator-setup-kit/`](hostgator-setup-kit/) > instala o CRM completo (app + WhatsApp + banco) numa VPS com um único comando, e o > [runbook de produção](docs/runbooks/waha-hostgator.md) já assume esse ambiente. > > **[👉 Assinar a VPS HostGator com desconto da parceria](https://www.hostgator.com.br/52708-141-3-52.html)** — > datacenter em São Paulo, ideal pro WhatsApp rodando 24/7. *(link de parceiro — assinar por ele apoia o projeto e sai mais barato)* > > **Ainda não tem servidor?** Rode isto **no seu computador** (macOS, Linux ou WSL). Ele diz > qual plano contratar — com os números do runbook, não um \"depende\" — e te devolve o > comando certo pro seu caso: > > ```bash > curl -fsSL https://raw.githubusercontent.com/melgarafael/DeskcommCRM/main/hostgator-setup-kit/comecar.sh | bash > ``` > > *(prefere ler antes de executar? clone o repo e rode `bash hostgator-setup-kit/comecar.sh` — > ele não instala nada sem você confirmar.)* --- ## ⚡ Instalar na sua VPS (o caminho principal) ### 1. Entre na sua VPS Abra o **Terminal** no seu computador (no Windows, o **PowerShell**; no Mac ou Linux, o **Terminal**) e conecte com o IP e a porta que a hospedagem te mandou por e-mail: ```bash ssh -p PORTA root@SEU_IP ``` Troque `PORTA` e `SEU_IP` pelos seus. Se a hospedagem não mencionou porta nenhuma, é a padrão (22) e você pode omitir: `ssh root@SEU_IP`. Ele pede a senha. **Ao digitar, não aparece nada na tela — nem asteriscos.** Isso não é travamento: é o terminal escondendo a senha. Digite (ou cole) e dê Enter. > Na primeira conexão ele pergunta `Are you sure you want to continue connecting?` — responda > `yes`. É o servidor se apresentando pela primeira vez. ### 2. Rode o instalador Já dentro da VPS: ```bash git clone https://github.com/melgarafael/DeskcommCRM.git cd DeskcommCRM bash hostgator-setup-kit/install.sh ``` É isso. **Você não instala Node, nem pnpm, nem compila nada** — a imagem do app já vem pronta. Se faltar Docker, o instalador pergunta e instala sozinho. ### O que você precisa ter em mãos | Item | Onde conseguir | |---|---| | **VPS com Docker** | [HostGator](https://www.hostgator.com.br/52708-141-3-52.html) (parceria) — ou qualquer VPS com Docker. 4 GB de RAM recomendados | | **Domínio** | Um registro **A** apontando pro IP da VPS (ex.: `crm.suaempresa.com.br`) | | **Banco** | Conta grátis no [supabase.com](https://supabase.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -3,
+      "streak_days": 3
+    },
+    {
+      "rank": 6,
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "language": "Python",
+      "stars": 58699,
+      "forks": 7376,
+      "stars_today": 380,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "claude",
+        "copilot",
+        "cursor",
+        "elevenlabs",
+        "ffmpeg",
+        "flux",
+        "image-generation",
+        "open-source",
+        "openai",
+        "python",
+        "remotion",
+        "stable-diffusion",
+        "text-to-speech",
+        "text-to-video",
+        "video-generation",
+        "video-production"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2026-03-29T15:23:22Z",
+      "updated_at": "2026-09-14T06:20:00Z",
+      "open_issues": 320,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/monty-dark.svg\"> <img src=\"assets/monty-light.svg\" alt=\"Monty the Clapper — the official mascot of OpenMontage\" width=\"200\"> </picture> </p> <p align=\"center\"><sub><em>Monty the Clapper — the official mascot of OpenMontage</em></sub></p> <h1 align=\"center\">OpenMontage</h1> <p align=\"center\"><strong>The first open-source, agentic video production system.</strong></p> <p align=\"center\"> <a href=\"https://openmontage.video\"><img src=\"https://img.shields.io/badge/Website-openmontage.video-d14a28?style=for-the-badge\" alt=\"openmontage.video\"></a> </p> <p align=\"center\"> <a href=\"#start-from-a-video-you-already-love\">Paste A Video</a> &nbsp;·&nbsp; <a href=\"#quick-start\">Quick Start</a> &nbsp;·&nbsp; <a href=\"#try-these-prompts\">Try These Prompts</a> &nbsp;·&nbsp; <a href=\"#pipelines\">Pipelines</a> &nbsp;·&nbsp; <a href=\"#how-it-works\">How It Works</a> &nbsp;·&nbsp; <a href=\"#sponsors\">Sponsors</a> &nbsp;·&nbsp; <a href=\"docs/PROVIDERS.md\">Providers</a> &nbsp;·&nbsp; <a href=\"docs/PR_REVIEW_GUIDE.md\">Review Guide</a> &nbsp;·&nbsp; <a href=\"AGENT_GUIDE.md\">Agent Guide</a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPLv3-blue.svg\" alt=\"License\"></a> </p> <p align=\"center\"> <a href=\"https://github.com/trending\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/assets/repo-of-the-day-dark.svg\"> <img alt=\"🏆 #1 Repository of the Day on GitHub Trending\" src=\".github/assets/repo-of-the-day-light.svg\" height=\"60\"> </picture> </a> </p> <p align=\"center\"><strong>Follow The Build</strong></p> <p align=\"center\"> <a href=\"https://www.youtube.com/@OpenMontage\"><img src=\"https://img.shields.io/badge/YouTube-%40OpenMontage-FF0000?style=for-the-badge&logo=youtube&logoColor=white\" alt=\"YouTube\"></a> <a href=\"https://x.com/calesthioailabs\"><img src=\"https://img.shields.io/badge/X-%40calesthioailabs-111111?style=for-the-badge&logo=x&logoColor=white\" alt=\"X\"></a> <a href=\"https://github.com/calesthio/OpenMontage/discussions\"><img src=\"https://img.shields.io/badge/Community-GitHub%20Discussions-0b1220?style=for-the-badge&logo=github&logoColor=white\" alt=\"GitHub Discussions\"></a> </p> ## Sponsors > Want to support OpenMontage? [Sponsor the project](https://github.com/sponsors/calesthio). <details open> <summary>Click to collapse</summary> <table> <tr> <td width=\"180\" align=\"center\"><a href=\"https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607\"><img src=\"assets/sponsors/bloome.png\" alt=\"Bloome\" width=\"150\"></a></td> <td><strong>Bloome</strong> lets multiple AI agents (Claude, ChatGPT, DeepSeek, and more) collaborate in one conversation for agentic video pipelines. It has zero setup, runs in the cloud, works on web and mobile, and lets you share a configured agent with your whole team. <strong><a href=\"https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607\">Try Bloome</a></strong>.</td> </tr> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.atlascloud.ai/coding-plan\"><img src=\"assets/sponsors/atlas-cloud.png\" alt=\"Atlas Cloud\" width=\"150\"></a></td> <td><strong>Atlas Cloud</strong> is a full-modal AI inference platform that gives developers a single AI API for video generation, image generation, and LLM APIs. Instead of managing multiple vendor integrations, you connect once and get unified access to 300+ curated models across all modalities. Check out Atlas Cloud's new <a href=\"https://www.atlascloud.ai/coding-plan\">coding plan</a> promotion for more budget-friendly API access.</td> </tr> </table> </details> --- Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition. **Important distinction:** OpenMontage can make image-based videos, but it can also make a real **vide",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "asgeirtj/system_prompts_leaks",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "description": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+      "language": "JavaScript",
+      "stars": 66258,
+      "forks": 10825,
+      "stars_today": 706,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-prompts",
+        "anthropic",
+        "chatbot",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "cursor",
+        "gemini",
+        "generative-ai",
+        "google",
+        "grok",
+        "llm",
+        "openai",
+        "prompt",
+        "prompt-engineering",
+        "system-prompt",
+        "system-prompts"
+      ],
+      "license": "CC0-1.0",
+      "created_at": "2025-05-03T02:43:56Z",
+      "updated_at": "2026-09-14T06:18:42Z",
+      "open_issues": 56,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <sub>Thanks to</sub> </p> <p align=\"center\"> <a href=\"https://go.asgeirtj.workers.dev/latitude\"> <img src=\"assets/latitude-dark.png\" alt=\"Latitude Logo\" width=\"700\"/> </a> </p> <div align=\"center\" markdown=\"1\"> ### [Open Source Agent Analytics](https://go.asgeirtj.workers.dev/latitude) [Understand your agents in production](https://go.asgeirtj.workers.dev/latitude) </div> --- > **The Washington Post** built its interactive story on prompts from this repo: [See the hidden rules behind AI. Then use them to rewrite this article.](https://archive.today/pYtPk) (May 11, 2026) > > **CEPS' AI World** built a live data dashboard from this repo's files: [System prompts and what they tell us about the chat before the chat](https://aiworld.eu/story/system-prompts-and-what-they-tell-us-about-the-chat-before-the-chat) (July 10, 2026) # System Prompts Leaks Leaked system prompts, captured verbatim — the hidden instructions and rules that ChatGPT, Claude, Gemini, Grok and every other AI chatbot receives before your first message. ![Last Commit](https://img.shields.io/github/last-commit/asgeirtj/system_prompts_leaks?style=flat) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](http://makeapullrequest.com) ## Most recent additions/changes | What | Date | Link | |------|------|------| | **ChatGPT Work Codex (local)** | September 13, 2026 | [ChatGPT Work Codex local system prompt](OpenAI/Codex/gpt-6-astra-chatgpt-work-local.md) | | **Gemini 3.8 Flash** | September 13, 2026 | [Gemini 3.8 Flash System Prompt](Google/gemini-3.8-flash.md) | | **Claude Code headless (Fable 5.1)** | September 5, 2026 | [Claude Code headless system prompt (Fable 5.1)](Anthropic/claude-code/claude-code-headless-fable-5.1.md) | | **Codex GPT-6-Astra** | September 4, 2026 | [Codex GPT-6-Astra system prompt](OpenAI/Codex/gpt-6-astra.md) | | **Claude Fable 5.1** | September 1, 2026 | [Claude Fable 5.1 system prompt](Anthropic/claude-fable-5.1.md) · [Claude Code (Fable 5.1)](Anthropic/claude-code/claude-code-fable-5.1.md) | | **Grok 4.6** | August 29, 2026 | [Grok 4.6 system prompt](xAI/grok-4.6.md) | | **Grok Bot** | August 21, 2026 | [Grok Bot System Prompt](xAI/grok-bot.md) | | **Gemini 3.7 Flash** | August 18, 2026 | [Gemini 3.7 Flash System Prompt](Google/gemini-3.7-flash.md) | | **Muse Code (Meta's coding CLI)** | August 17, 2026 | [Muse Code system prompt](Meta/muse-code.md) | | **Claude Cowork (new capture + setup skills)** | August 17, 2026 | [Claude Cowork system prompt](Anthropic/claude-cowork/claude-cowork.md) · [setup skills](Anthropic/claude-cowork) | | **Claude Science** | August 14, 2026 | [Claude Science system prompt](Anthropic/claude-science.md) | | **Codex GPT-5.6 (Sol variant)** | July 26, 2026 | [Codex GPT-5.6 system prompt](OpenAI/Codex/gpt-5.6.md) | | **Grok 4.5** | July 26, 2026 | [Grok 4.5 system prompt](xAI/grok-4.5.md) | | **Claude Opus 5** | July 24, 2026 | [Claude Opus 5 system prompt](Anthropic/claude-opus-5.md) · [Claude Code (Opus 5)](Anthropic/claude-code/claude-code-opus-5.md) | | **Claude Design (full prompt + 53 tools + 22 skills + 10 starter components)** | July 23, 2026 | [Claude Design system prompt](Anthropic/claude-design/claude-design.md) · [skills](Anthropic/claude-design/skills) · [starter components](Anthropic/claude-design/starter-components) | | **Perplexity** | July 17, 2026 | [Perplexity AI system prompt](Perplexity/perplexity-ai.md) | | **Claude Code (new models)** | July 16, 2026 | [Claude Code system prompt (Fable 5)](Anthropic/claude-code/claude-code-fable-5.md) · [Sonnet 5](Anthropic/claude-code/claude-code-sonnet-5.md) | | **OpenCode · Pi · CommandCode** | July 16, 2026 | [OpenCode system prompt](OpenCode/opencode.md) · [Pi system prompt](Pi/instructions.md) · [CommandCode CLI system prompt](Misc/commandcode-cli.md) | | **Kimi K2.6** | July 14, 2026 | [Kimi K2.6 system prompt](Kimi/kimi-2.6.md) | | **Perplexity Deep Research** | July 14, 2026 | [Perplexity Deep Research system prom",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": -4,
+      "streak_days": 2
+    },
+    {
+      "rank": 8,
+      "full_name": "vxcontrol/pentagi",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "description": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+      "language": "Go",
+      "stars": 24149,
+      "forks": 3110,
+      "stars_today": 590,
+      "topics": [
+        "ai-agents",
+        "ai-security-tool",
+        "anthropic",
+        "autonomous-agents",
+        "golang",
+        "gpt",
+        "graphql",
+        "multi-agent-system",
+        "offensive-security",
+        "open-source",
+        "openai",
+        "penetration-testing",
+        "penetration-testing-tools",
+        "react",
+        "security-automation",
+        "security-testing",
+        "security-tools",
+        "self-hosted"
+      ],
+      "license": "MIT",
+      "created_at": "2025-01-06T22:22:48Z",
+      "updated_at": "2026-09-14T06:19:48Z",
+      "open_issues": 62,
+      "default_branch": "main",
+      "readme_excerpt": "# PentAGI <div align=\"center\" style=\"font-size: 1.5em; margin: 20px 0;\"> <strong>P</strong>enetration testing <strong>A</strong>rtificial <strong>G</strong>eneral <strong>I</strong>ntelligence </div> <br> <div align=\"center\"> > **Join the Community!** Connect with security researchers, AI enthusiasts, and fellow ethical hackers. Get support, share insights, and stay updated with the latest PentAGI developments. [![Discord](https://img.shields.io/badge/Discord-7289DA?logo=discord&logoColor=white)](https://discord.gg/2xrMh7qX6m)⠀[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/+Ka9i6CNwe71hMWQy) <a href=\"https://trendshift.io/repositories/15161\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/15161\" alt=\"vxcontrol%2Fpentagi | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> </div> ## Table of Contents - [Overview](#overview) - [Features](#features) - [Architecture](#architecture) - [Agent Supervision](#advanced-agent-supervision) - [Quick Start](#quick-start) - [Agent Docker Access](#giving-agents-docker-without-giving-away-the-host) - [Running Several Instances](#running-several-instances-tenant_id) - [How to Use PentAGI After Login](#how-to-use-pentagi-after-login) - [API Access](#api-access) - [LLM Provider Configuration](#custom-llm-provider-configuration) - [Ollama](#ollama-provider-configuration) - [OpenAI](#openai-provider-configuration) - [Anthropic](#anthropic-provider-configuration) - [Google AI (Gemini)](#google-ai-gemini-provider-configuration) - [AWS Bedrock](#aws-bedrock-provider-configuration) - [DeepSeek](#deepseek-provider-configuration) - [GLM](#glm-provider-configuration) - [Kimi](#kimi-provider-configuration) - [Qwen](#qwen-provider-configuration) - [MiniMax](#minimax-provider-configuration) - [Advanced Setup](#advanced-setup) - [Langfuse Integration](#langfuse-integration) - [Monitoring and Observability](#monitoring-and-observability) - [Knowledge Graph (Graphiti)](#knowledge-graph-integration-graphiti) - [OAuth Integration](#github-and-google-oauth-integration) - [Docker Image Configuration](#docker-image-configuration) - [Development](#development) - [Testing LLM Agents](#testing-llm-agents) - [Embedding Configuration and Testing](#embedding-configuration-and-testing) - [Function Testing with ftester](#function-testing-with-ftester) - [Building](#building) - [Credits](#credits) - [License](#license) ## Overview PentAGI is an innovative tool for automated security testing that leverages cutting-edge artificial intelligence technologies. The project is designed for information security professionals, researchers, and enthusiasts who need a powerful and flexible solution for conducting penetration tests. You can watch the video **PentAGI overview**: [![PentAGI Overview Video](https://github.com/user-attachments/assets/0828dc3e-15f1-4a1d-858e-9696a146e478)](https://youtu.be/R70x5Ddzs1o) ## Features - Secure & Isolated. All operations are performed in a sandboxed Docker environment with complete isolation. - Fully Autonomous. AI-powered agent that automatically determines and executes penetration testing steps with optional execution monitoring and intelligent task planning for enhanced reliability. - Professional Pentesting Tools. Built-in suite of 20+ professional security tools including nmap, metasploit, sqlmap, and more. - Smart Memory System. Long-term storage of research results and successful approaches for future use. - Optional Knowledge Graph Integration. Graphiti-powered knowledge graph using Neo4j for semantic relationship tracking and advanced context understanding. - Web Intelligence. Built-in browser via [scraper](https://hub.docker.com/r/vxcontrol/scraper) for gathering latest information from web sources. - External Search Systems. Integration with advanced search APIs including [Tavily](https://tavily.com), [Firecrawl](https://www.firecrawl.dev), [Traversaal](https://traversaal.ai), [Per",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 16,
+      "rank_change": 8,
+      "streak_days": 2
+    },
+    {
+      "rank": 9,
+      "full_name": "multimodal-art-projection/YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "language": "Python",
+      "stars": 7913,
+      "forks": 877,
+      "stars_today": 487,
+      "topics": [
+        "ai",
+        "audio-generation",
+        "deep-learning",
+        "foundation-models",
+        "gpt",
+        "huggingface",
+        "llama",
+        "llms",
+        "music-generation",
+        "style-transfers",
+        "voice-cloning"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-01-23T06:21:58Z",
+      "updated_at": "2026-09-14T06:18:45Z",
+      "open_issues": 14,
+      "default_branch": "main",
+      "readme_excerpt": "> Looking for the original YuE? Its code, documentation, and license are preserved on the **[YuE-v1 branch](https://github.com/multimodal-art-projection/YuE/tree/YuE-v1)**. <p align=\"center\"> <img src=\"assets/logo.png\" alt=\"YuE\" width=\"150\" /> </p> <p align=\"center\"> <picture> <source media=\"(max-width: 600px)\" srcset=\"assets/institutions-mobile.svg\" /> <img src=\"assets/institutions.svg\" alt=\"HKUST, M·A·P, Tokenwave.AI, NYU, Stanford, MBZUAI, NOIZ, and ACE Studio\" width=\"760\" /> </picture> </p> <h1 align=\"center\">YuE2: Unifying Symbolic and Audio Music Generation at Frontier Quality</h1> <p align=\"center\"><strong>Compose in symbols. Create in sound.</strong></p> <p align=\"center\"> <a href=\"https://map-yue2.github.io/\">🎧 Demos</a> · <a href=\"https://huggingface.co/m-a-p/YuE2-3B\">🤗 YuE2</a> · <a href=\"#quick-start\">🚀 Quick start</a> · <a href=\"#agent-skill\">🤖 Agent skill</a> · <a href=\"#benchmarks\">📊 Benchmarks</a> · <a href=\"https://huggingface.co/m-a-p/MERT-v2-FullSong\">🤗 MERT2</a> · <a href=\"https://huggingface.co/m-a-p/SheetSage2\">🤗 SheetSage2</a> · <a href=\"https://huggingface.co/datasets/m-a-p/WildSongBench\">🤗 WSB</a> · <a href=\"https://github.com/multimodal-art-projection/YuE/releases/tag/yue2-v0.1.6\">📦 Release</a> · <a href=\"https://discord.gg/ssAyWMnMzu\"><img alt=\"Join us on Discord\" src=\"https://img.shields.io/discord/842440537755353128?color=5865F2&amp;logo=discord&amp;logoColor=white&amp;label=Discord&amp;style=flat-square\" height=\"20\" /></a> </p> **YuE2 brings frontier song quality to music generation with an editable composition.** Give it lyrics and a style prompt: it writes a melody-and-chord plan, then realizes that plan as a complete song with vocals and accompaniment. - **Frontier quality.** YuE2 is competitive with Suno v5/v6 on WildSongBench. YuE2 (best-of-8) achieves **6.9632 SongBench Avg**, the highest observed mean among all evaluated settings. - **White-box music generation through symbolic planning.** Read, play, and change the composition before rendering it. Melody and chords become explicit controls that a person or an agent can inspect and edit. - **Zero-shot covers and agentic editing.** Reimagine a transcribed song in a new style, or refine a song through a conversation about its score, arrangement, and lyrics—all with the same generation checkpoint. [![YuE2 song quality and text alignment on WildSongBench](assets/frontier-teaser.png)](https://map-yue2.github.io/#model-overview) *192 WildSongBench prompts. Both YuE2 settings use symbolic planning. Bo8 = best-of-8. The axes are normalized comparison indices; bubble area represents AudioBox production quality. [Scores and evaluation protocol](docs/benchmarks.md). [Vector PDF](assets/frontier-teaser.pdf) · [SVG](assets/frontier-teaser.svg).* ## Hear what you can make | Create | Cover | Edit with an agent | |---|---|---| | Lyrics + style → score → full song | Source recording → melody score → a new interpretation | Musical feedback → score, style, or lyric revisions → a new recording | | [Listen and inspect the score](https://map-yue2.github.io/#abc-cot-gen) | [Hear zero-shot covers](https://map-yue2.github.io/#cover) | [Follow an editing conversation](https://map-yue2.github.io/#agentic-music-editing) | The agentic demo follows **The Last Train through 9 steps and 14 versions**, from Mandarin pop to English jazz with new harmony and a saxophone solo. Listen to each version and inspect its conversation, score, prompt, and lyrics. ## How it works ![YuE2 architecture: style and lyrics become an editable score, semantic music tokens, acoustic latents, and audio](assets/architecture.png) One **AR–NAR Mixture-of-Transformers** backbone predicts the score and semantic tokens autoregressively, then generates acoustic latents with flow matching. A VAE decodes those latents into stereo audio. Creation, covering, and editing differ in where the score comes from: YuE2, a transcribed recording, or an edited composition. The staged Python API exposes `plan()` → `",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 10,
+      "full_name": "yuliskov/SmartTube",
+      "url": "https://github.com/yuliskov/SmartTube",
+      "description": "Browse media content with your own rules on Android TV",
+      "language": "Java",
+      "stars": 33521,
+      "forks": 2037,
+      "stars_today": 233,
+      "topics": [
+        "android",
+        "android-tv",
+        "android-tv-box",
+        "java",
+        "kotlin",
+        "retrofit2",
+        "rxjava-android"
+      ],
+      "license": "MIT",
+      "created_at": "2020-07-28T12:53:52Z",
+      "updated_at": "2026-09-14T06:18:36Z",
+      "open_issues": 712,
+      "default_branch": "master",
+      "readme_excerpt": "[<img src=\"images/badge_fdroid.png\" alt=\"Get it on F-Droid\" height=\"80\">](https://f-droid.org/packages/app.smarttube.fdroid/) [<img src=\"images/badge_github.png\" alt=\"Get it on GitHub\" height=\"80\">](https://github.com/yuliskov/SmartTube/releases) # Important announcement about the app My development environment was infected by unknown malicious software, as a result of which a few builds may have been affected. Once the issue was detected, I secured everything with a full disk wipe, restored a clean setup, and now all builds are scanned with VirusTotal. The F-Droid version will also be verified before release. Public keys may have been compromised, which is why I am sharing this issue. You can download the new version and the new public key below, and instructions for restoring backups are provided. No extra actions are required since the app uses **one-time connection codes**. These codes have very limited permissions (for example, they cannot change your password). Still, you can revoke them if you want full peace of mind. # How to revoke access: 1. Open [myaccount.google.com/security](https://myaccount.google.com/security) 2. Find **“Your connections to third-party apps & services”** 3. Tap **“See all connection”** and locate **YouTube TV** or **Google Drive** 4. Select the app → **“Remove access”** Please keep built-in security features enabled to stay protected. # SmartTube <!-- <img width=\"100\" src=\"https://github.com/yuliskov/SmartTube/blob/master/smarttubetv/src/ststable/res/mipmap-nodpi/app_icon.png\" alt=\"logo\"/> --> ![The app screenshot](./images/browse_home.png) SmartTube is a free and open-source media client for Android TVs and TV boxes. It allows you to browse and play content from various public sources in a TV-optimized interface. ### ✅ Features - Clean interface - SponsorBlock integration - Adjustable playback speed - 8K resolution support - 60fps playback - HDR compatibility - View live chat - Customizable buttons - Does not require Google Services - Helpful international community ### ❌ Limitations - Not supported on phones and tablets - Comment functionality is unstable - Voice search and casting performance may be inferior to official apps, depending on your device Give it a try! **Do you have any question?** Ctrl+F or ⌘F this readme first! [**Installation**](#installation) | [**Official Site**](https://smarttubeapp.github.io) | [**Donation**](#donation) | [**FAQ**](#faq) | [Support / Chat](#support) | [Build](#build) | [Translate the app](https://jtbrinkmann.de/tools/android-strings.xml-translator.html) | [Changelog](https://t.me/s/SmartTubeNewsEN) | [Liability](#liability) ## Device support > [!IMPORTANT] > Starting in October 2025 new Amazon FireTV devices no longer run Android under the hood. SmartTube will **not** be compatible with the Fire Stick 4k Select and newer devices which run Amazon's own VegaOS. ![Device support image](images/new/compatibility.png) * **Supported:** all Android TVs and TV boxes (incl. All FireTV devices released before Oct. 2025, NVIDIA Shield & Chromecast with Google TV), even older ones with Android 4.3 (Kitkat). * **Not supported:** Smartphones, non-Android platforms like Samsung Tizen, LG webOS, Apple TV, etc. ## Installation > [video of the installation](images/new/zPV0imF.mp4) (note: download url changed to `kutt.to/stn_beta` or `kutt.to/stn_stable`) **Do not** download SmartTube from any **app store**, APK websites or blogs; these were uploaded by other people and may contain malware or ads. SmartTube is not officially published on any app store. There is a **beta release** (recommended) and a **stable release**. Beta gets new features and bugfixes faster than the stable release. You can use either of the following methods to install the app: - (**Easiest**) Install [Downloader by AFTVnews](https://www.aftvnews.com/downloader/) on your Android TV, open it and enter `kutt.to/stn_beta` or `kutt.to/stn_stable`, then read, understand and confirm the security prompts. (<sma",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 11,
+      "full_name": "alphaXiv/OpenResearch",
+      "url": "https://github.com/alphaXiv/OpenResearch",
+      "description": "Turn your coding agents into research agents",
+      "language": "Rust",
+      "stars": 2240,
+      "forks": 151,
+      "stars_today": 289,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-06-07T01:51:39Z",
+      "updated_at": "2026-09-14T06:20:13Z",
+      "open_issues": 11,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h1><img src=\".github/readme-assets/openresearch.svg\" alt=\"\" width=\"36\" /> OpenResearch</h1> **The local-first workspace for research agents and autoresearch.** <p>Turn <img src=\".github/readme-assets/claude.svg\" alt=\"\" width=\"16\" height=\"16\" align=\"texttop\" /> Claude Code, <img src=\".github/readme-assets/codex.svg\" alt=\"\" width=\"16\" height=\"16\" align=\"texttop\" /> Codex, <img src=\".github/readme-assets/opencode.svg\" alt=\"\" width=\"16\" height=\"16\" align=\"texttop\" /> OpenCode, or <img src=\".github/readme-assets/cursor.svg\" alt=\"\" width=\"16\" height=\"16\" align=\"texttop\" /> Cursor into research agents that can review literature, develop hypotheses, run experiments, and produce research artifacts.</p> <p> <a href=\"https://github.com/alphaXiv/OpenResearch/releases/latest/download/OpenResearch.dmg\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\".github/readme-assets/download-macos-dark.svg\"><img src=\".github/readme-assets/download-macos.svg\" alt=\"Download OpenResearch for macOS\" width=\"220\" height=\"44\" /></picture></a> <a href=\"https://github.com/alphaXiv/OpenResearch/releases/latest/download/openresearch-cli-x86_64-pc-windows-msvc.zip\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\".github/readme-assets/download-windows-dark.svg\"><img src=\".github/readme-assets/download-windows.svg\" alt=\"Download OpenResearch for Windows (Beta)\" width=\"220\" height=\"44\" /></picture></a> <a href=\"#get-started\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\".github/readme-assets/install-linux-centered-dark.svg\"><img src=\".github/readme-assets/install-linux-centered.svg\" alt=\"Install OpenResearch for Linux\" width=\"220\" height=\"44\" /></picture></a> </p> <p> <a href=\"https://openresearch.sh/docs\"><img src=\".github/readme-assets/action-documentation.svg\" alt=\"Documentation\" width=\"132\" height=\"24\" /></a><img src=\".github/readme-assets/action-separator.svg\" alt=\" · \" width=\"12\" height=\"24\" /> <a href=\"https://github.com/alphaXiv/OpenResearch/releases\"><img src=\".github/readme-assets/action-releases.svg\" alt=\"Releases\" width=\"78\" height=\"24\" /></a> </p> <p><sub>macOS 11+ · Windows beta requires <a href=\"docs/windows.md\">Git for Windows</a></sub></p> <p><a href=\"https://trendshift.io/repositories/89363\"><img src=\"https://trendshift.io/api/badge/repositories/89363\" alt=\"GitHub Trending: #1 Repository of the Day\" width=\"250\" height=\"55\" /></a></p> </div> ## Get started Install the CLI on macOS or Linux, then launch OpenResearch: ```sh curl -LsSf https://openresearch.sh/install.sh | sh orx up ``` On Windows, use the beta download above after installing [Git for Windows](docs/windows.md). `orx up` opens the local dashboard at `http://127.0.0.1:4791`. [Connect a local model](docs/local-models.md) to use LM Studio, oMLX, Ollama, or a custom endpoint with OpenCode. Create an account at [openresearch.sh](https://openresearch.sh) to receive email updates and use managed OpenResearch compute. ## Built for research agents | | OpenResearch gives you | |---|---| | **Parallel exploration** | Give each research direction an independent agent session and isolated git worktree. | | **Reproducible experiments** | Track variants in a git-native experiment tree; every run receives an immutable archive of its recorded commit. | | **Evidence in context** | Keep logs, diffs, files, results, and artifacts tied to the work that produced them. | | **Your choice of agent** | Use Claude Code, Codex, OpenCode, or Cursor, with the harness and model selected per session. | | **Your choice of compute** | Run locally, on your own infrastructure, or with managed OpenResearch compute. | | **Local ownership** | Keep projects, conversations, experiments, runs, logs, code, and artifacts on your machine. | ### Autoresearch OpenResearch can run the full loop autonomously: propose an idea, change the code, launch an experiment, inspect the evidence, and decide what to try next. Multiple agents can explore different directions in paralle",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 27499,
+      "forks": 3386,
+      "stars_today": 2632,
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "tauri",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2026-04-09T21:40:26Z",
+      "updated_at": "2026-09-14T06:18:40Z",
+      "open_issues": 49,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h3>NOTE: Electron Rewrite Ongoing: Please dont't create desktop app related issues and pr</h3> <p><img src=\"docs/logo.png\" alt=\"VoiceStudio logo\" width=\"120\" height=\"120\" /></p> <h1>VoiceStudio</h1> <p> <a href=\"https://trendshift.io/repositories/28176?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-28176\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/28176\" alt=\"VoiceStudio ranking on Trendshift\" width=\"220\" height=\"48\" /></a> </p> <p><sub>Previously OmniVoice-Studio</sub></p> <h3>Clone voices, dub video, dictate, and produce long-form audio on your own hardware.</h3> <p>16 TTS engines · 11 ASR engines · 646-language catalogue · macOS, Windows, Linux, and Docker</p> <p>No account, API key, subscription, or usage meter for the local workflow.</p> <p> <a href=\"#install\">Install</a> · <a href=\"#features\">Features</a> · <a href=\"#comparison\">Compare</a> · <a href=\"#requirements\">Requirements</a> · <a href=\"#hardware-recommendations\">Hardware</a> · <a href=\"#engines\">Engines</a> · <a href=\"#architecture\">Architecture</a> · <a href=\"#api\">API</a> · <a href=\"#documentation\">Docs</a> · <a href=\"#faq\">FAQ</a> · <a href=\"README_CN.md\"><strong>简体中文</strong></a> </p> <p> <a href=\"https://github.com/debpalash/VoiceStudio/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/debpalash/VoiceStudio/ci.yml?branch=main&style=flat-square&label=CI\" alt=\"CI status\" /></a> <a href=\"https://github.com/debpalash/VoiceStudio/stargazers\"><img src=\"https://img.shields.io/github/stars/debpalash/VoiceStudio?style=flat-square&color=f59e0b\" alt=\"GitHub stars\" /></a> <a href=\"https://github.com/debpalash/VoiceStudio/releases\"><img src=\"https://img.shields.io/github/downloads/debpalash/VoiceStudio/total?style=flat-square&color=8b5cf6&label=downloads\" alt=\"Total downloads\" /></a> <a href=\"https://github.com/debpalash/VoiceStudio/releases/latest\"><img src=\"https://img.shields.io/github/v/release/debpalash/VoiceStudio?style=flat-square&color=10b981\" alt=\"Latest release\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue?style=flat-square\" alt=\"AGPL-3.0 license\" /></a> <a href=\"https://discord.gg/bzQavDfVV9\"><img src=\"https://img.shields.io/badge/Discord-Community-5865F2?style=flat-square&logo=discord&logoColor=white\" alt=\"Discord community\" /></a> </p> <p> <a href=\"https://github.com/debpalash/VoiceStudio/releases/latest\"><img src=\"https://img.shields.io/badge/Download-macOS_·_Windows_·_Linux-10b981?style=for-the-badge\" alt=\"Download VoiceStudio\" /></a> </p> </div> <div align=\"center\"> <img src=\"docs/media/0.5.0/quick-switch.gif\" alt=\"Switching TTS engines from the VoiceStudio status bar\" width=\"100%\" /> </div> > [!WARNING] > **Active beta.** Use the [latest release](https://github.com/debpalash/VoiceStudio/releases/latest) for stable work. `main` contains the newest fixes and may change between releases. Report problems through [GitHub Issues](https://github.com/debpalash/VoiceStudio/issues). ## At a glance | | VoiceStudio | |---|---| | **Workflows** | Voice cloning and design, video dubbing, dictation, stories, audiobooks, batch generation | | **Language catalogue** | 646 TTS languages; actual coverage and quality depend on the selected engine | | **Engines** | 16 TTS · 11 ASR · switch in Model Catalogue or with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>E</kbd> | | **Platforms** | macOS 13.3+ on Apple Silicon · Windows 10/11 x64 · Linux x86_64 with glibc 2.39+ | | **Compute** | CUDA · Apple Silicon MPS/MLX · ROCm on Linux · CPU · optional remote workers | | **Interfaces** | Desktop app · local REST/SSE/WebSocket API · OpenAI-compatible audio API · MCP Server | | **Storage** | Voices, projects, settings, and outputs stay on the machine by default | | **License** | AGPL-3.0 application; downloaded models keep their upstream terms | The Voice workspace starts with three tabs: **From audio** ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "SnailSploit/Claude-Red",
+      "url": "https://github.com/SnailSploit/Claude-Red",
+      "description": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+      "language": "Python",
+      "stars": 4288,
+      "forks": 601,
+      "stars_today": 506,
+      "topics": [
+        "claude-ai",
+        "claude-pt",
+        "claude-skills",
+        "redteam",
+        "redteam-tools",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-03-04T05:52:35Z",
+      "updated_at": "2026-09-14T06:18:31Z",
+      "open_issues": 13,
+      "default_branch": "main",
+      "readme_excerpt": "![claude-red banner](/assets/banner.png) <div align=\"center\"> # claude-red **Offensive security skills for Claude — drop-in `SKILL.md` files that turn Claude into a context-aware red team operator.** [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Skills](https://img.shields.io/badge/skills-78-red.svg)](#skill-index) [![Categories](https://img.shields.io/badge/categories-23-orange.svg)](#categories) [![Stars](https://img.shields.io/github/stars/SnailSploit/claude-red?style=social)](https://github.com/SnailSploit/claude-red) [![Forks](https://img.shields.io/github/forks/SnailSploit/claude-red?style=social)](https://github.com/SnailSploit/claude-red/network/members) [Overview](#overview) &bull; [Quickstart](#quickstart) &bull; [Categories](#categories) &bull; [Skill Index](#skill-index) &bull; [Roadmap](#roadmap) &bull; [Contributing](#contributing) </div> --- ## Overview `claude-red` is a curated library of offensive security skills for the [Claude Skills system](https://docs.claude.com). Each skill is a structured `SKILL.md` file that primes Claude with expert-level methodology for a specific attack surface — from SQL injection to shellcode, EDR evasion to ADCS abuse. Drop a skill into your Claude environment and it behaves like a domain specialist: it knows the techniques, the tooling, the edge cases, and the escalation paths. Skills load on demand based on conversational triggers — you don't pay context for skills you aren't using. **Use cases:** authorized red team engagements, bug bounty triage, security research, CTF preparation, operator training, and methodical attack surface exploration. --- ## Quickstart ### Claude Skills System (Recommended) ```bash git clone https://github.com/SnailSploit/claude-red ~/.claude/skills/claude-red ``` Claude auto-loads matching skills based on conversational triggers (e.g., mentioning SQL injection loads `offensive-sqli`). To install a single category: ```bash git clone --filter=blob:none --sparse https://github.com/SnailSploit/claude-red cd claude-red && git sparse-checkout set Skills/web Skills/active-directory ``` ### Claude Code ```bash cat Skills/web/offensive-sqli/SKILL.md | claude --system-file - cat Skills/active-directory/**/SKILL.md | claude --system-file - ``` ### Claude.ai (Manual) Paste the contents of a `SKILL.md` into a Project's system prompt or prepend it to your conversation. ### Install Script ```bash ./install.sh # interactive ./install.sh --target ~/.claude/skills # explicit target ./install.sh --category web # single category ``` --- ## Categories | Category | Skills | Focus | |---|---:|---| | [Web Application](#web-application) | 16 | OWASP Top 10, business logic, advanced web vulnerability classes | | [Auth & Identity](#auth--identity) | 2 | JWT exploitation, OAuth/OIDC abuse | | [Active Directory](#active-directory) | 1 | On-prem AD attack methodology | | [Wireless](#wireless) | 14 | 802.11, WPA2/3, EAP, WPS, evil-twin, BLE, Zigbee, Z-Wave, LoRa, sub-GHz | | [Cloud](#cloud) | 1 | AWS, Azure, GCP attack paths | | [Mobile](#mobile) | 1 | Android and iOS application testing | | [IoT & Embedded](#iot--embedded) | 1 | Hardware, firmware, RTOS, ICS/OT | | [Infrastructure & Red Team](#infrastructure--red-team) | 7 | Initial access, EDR evasion, advanced red team operations, Windows internals | | [Exploit Development](#exploit-development) | 6 | Stack/heap corruption, ROP, mitigations, crash analysis, TOCTOU | | [Fuzzing & Vulnerability Research](#fuzzing--vulnerability-research) | 4 | libFuzzer, AFL++, coverage-guided fuzzing, vulnerability taxonomy | | [Reconnaissance](#reconnaissance) | 2 | OSINT tooling and structured intelligence collection | | [API Security](#api-security) | 2 | REST/gRPC/WebSocket testing, business logic abuse | | [Container & Kubernetes](#container--kubernetes) | 2 | Container escape, Kubernetes cluster exploitation | | [CI/CD & Pipeline](#cicd--pipeline) | 2 | Pipeline exploitation, secrets extraction | | [Crypt",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 13,
+      "rank_change": 0,
+      "streak_days": 2
+    },
+    {
+      "rank": 14,
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "stars": 23832,
+      "forks": 1760,
+      "stars_today": 443,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "code-review",
+        "code-review-assistant",
+        "harness",
+        "repository-level-context"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-05-18T02:16:36Z",
+      "updated_at": "2026-09-14T06:19:34Z",
+      "open_issues": 148,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <a href=\"https://open-codereview.ai\"> <img src=\"imgs/logo-core.svg\" alt=\"OpenCodeReview logo\" width=\"180\" /> </a> <h1>OpenCodeReview</h1> </div> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/41087?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-41087\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"https://trendshift.io/api/badge/repositories/41087\" alt=\"alibaba%2Fopen-code-review | Trendshift\" style=\"width: 280px; height: 60px;\" width=\"280\" height=\"60\" /> </a> <a href=\"https://trendshift.io/repositories/41087\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/trendshift/repositories/41087/weekly?language=Go\" alt=\"alibaba%2Fopen-code-review | Trendshift\" style=\"width: 280px; height: 60px;\" width=\"280\" height=\"60\" /> </a> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/@alibaba-group/open-code-review\"><img alt=\"npm\" src=\"https://img.shields.io/npm/v/@alibaba-group/open-code-review?style=flat-square\" /></a> <a href=\"https://github.com/alibaba/open-code-review/actions/workflows/release.yml\"><img alt=\"Build status\" src=\"https://img.shields.io/github/actions/workflow/status/alibaba/open-code-review/release.yml?style=flat-square\" /></a> <a href=\"https://github.com/alibaba/open-code-review/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/github/license/alibaba/open-code-review?style=flat-square\" /></a> <a href=\"https://deepwiki.com/alibaba/open-code-review\"><img alt=\"Ask DeepWiki\" src=\"https://deepwiki.com/badge.svg\" /></a> <a href=\"https://www.bestpractices.dev/projects/13328\"><img alt=\"OpenSSF Best Practices\" src=\"https://img.shields.io/badge/OpenSSF-Gold-D4AF37?style=flat-square\" /></a> </p> <p align=\"center\"> <a href=\"#supported-platforms\"><img alt=\"Windows\" src=\"https://img.shields.io/badge/Windows-supported-blue.svg\" /></a> <a href=\"#supported-platforms\"><img alt=\"macOS\" src=\"https://img.shields.io/badge/macOS-supported-blue.svg\" /></a> <a href=\"#supported-platforms\"><img alt=\"Linux\" src=\"https://img.shields.io/badge/Linux-supported-blue.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Claude Code\" src=\"https://img.shields.io/badge/Claude_Code-supported-blueviolet.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Codex\" src=\"https://img.shields.io/badge/Codex-supported-blueviolet.svg\" /></a> <a href=\"#supported-agents\"><img alt=\"Cursor\" src=\"https://img.shields.io/badge/Cursor-supported-blueviolet.svg\" /></a> </p> <p align=\"center\"> English | <a href=\"README.zh-CN.md\">简体中文</a> | <a href=\"README.ja-JP.md\">日本語</a> | <a href=\"README.ko-KR.md\">한국어</a> | <a href=\"README.ru-RU.md\">Русский</a> </p> --- ## What is Open Code Review? Open Code Review is an AI-powered code review CLI tool. It originated as Alibaba Group's internal official AI code review assistant — over the past two years, it has served tens of thousands of developers and identified millions of code defects. After thorough validation at massive scale, we incubated it into an open source project for the community. Simply configure a model endpoint to get started. It reads Git diffs, sends changed files to a configurable LLM via an agent with tool-use capabilities, and generates structured review comments with line-level precision. The agent can read full file contents, search the codebase, inspect other changed files for context, and produce deep reviews — not just surface-level diff feedback. Beyond diff review, `ocr scan` reviews entire files for auditing unfamiliar codebases or directories that have no meaningful diff. Visit the [official website](https://open-codereview.ai) for more details. ![Highlights](imgs/highlights-en.png) ## Benchmark > Compared to general-purpose agents (Claude Code), Open Code Review achieves significantly higher **Precision** and **F1** with the same underlying model, while consuming only **~1/9 of the tokens** and completing reviews faster. Note that its Recall is lower than general-purpose agents — a deliberate trade-off ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 15,
+      "full_name": "jihe520/MathModelAgent",
+      "url": "https://github.com/jihe520/MathModelAgent",
+      "description": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+      "language": "Python",
+      "stars": 5444,
+      "forks": 412,
+      "stars_today": 246,
+      "topics": [
+        "agent",
+        "llm",
+        "mathmodel",
+        "skills"
+      ],
+      "license": "",
+      "created_at": "2025-01-30T14:02:20Z",
+      "updated_at": "2026-09-14T06:13:12Z",
+      "open_issues": 43,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\">🤖 MathModelAgent 📐</h1> <p align=\"center\"> <img src=\"./docs/icon.png\" height=\"250px\"> </p> <h4 align=\"center\"> 专为数学建模设计的 Agent<br> 自动完成数学建模，生成一份完整的可以直接提交的论文。 </h4> <h5 align=\"center\">简体中文 | <a href=\"README_EN.md\">English</a></h5> <p align=\"center\"> <a href=\"https://github.com/jihe520/MathModelAgent/releases/latest\"><b>⬇️ 下载最新桌面版（推荐）</b></a> </p> <p align=\"center\"> 🎨 姊妹项目：<a href=\"https://github.com/jihe520/sci-box\"><b>sci-box</b></a> —— 科研图表 & 流程图 SKILL 合集 </p> --- ## 🖥️ 桌面版（推荐使用方式） > **不想折腾环境？直接下载桌面版，开箱即用。** > > 👉 **[前往 Releases 下载最新版本](https://github.com/jihe520/MathModelAgent/releases/latest)** 桌面版已内置 Claude Code 与全套 MathModelAgent SKILLS，无需安装 Python / Node.js / Redis，也无需手动配置 SKILL，装好填一个模型 API Key 即可开始建模。 | 系统 | 下载文件 | |------|----------| | macOS（Apple 芯片 M 系列） | `mathmodel-<version>-arm64.dmg` | | macOS（Intel 芯片） | `mathmodel-<version>-x64.dmg` | | Windows 64 位 | `mathmodel-<version>-x64.exe` | macOS 安装包已 Developer ID 签名并通过 Apple 公证。 > [!TIP] > 不确定自己的 Mac 是哪种芯片？点击左上角 → 关于本机，看「芯片」一栏：显示 Apple M 系列选 arm64，显示 Intel 选 x64。 > [!WARNING] > Windows 安装包当前未签名，首次安装或运行时可能出现 Microsoft Defender SmartScreen 提示，请选择「更多信息」→「仍要运行」，并务必从官方 [Releases 页面](https://github.com/jihe520/MathModelAgent/releases/latest) 下载。 安装后应用会自动检查更新（macOS 支持自动更新，Windows 待代码签名证书配置完成后启用）。 如果你是开发者，想自行部署或参与贡献，请继续阅读下方的 [SKILLS](#skills) 与 [使用教程](#-使用教程)。 --- ## 🌟 愿景： 3 天的比赛时间变为 1 小时 自动完整一份可以获奖级别的建模论文 <p align=\"center\"> <img src=\"./docs/chat.png\"> <img src=\"./docs/coder.png\"> </p> ## ✨ 功能特性 - 🔍 自动分析问题，数学建模，编写代码，纠正错误，撰写论文 - 💻 Code Interpreter - local Interpreter: 基于 jupyter , 代码保存为 notebook 方便再编辑 - 云端 code interpreter: [E2B](https://e2b.dev/) 和 [daytona](https://app.daytona.io/) - 📝 生成一份编排好格式的论文 - 🤝 multi-agents: 建模手，代码手，论文手等 - 🔄 multi-llms: 每个 agent 设置不同的、合适的模型 - 🤖 支持所有模型: [litellm](https://docs.litellm.ai/docs/providers) - 💰 成本低：workflow agentless，不依赖 agent 框架 - 🧩 自定义模板：prompt inject 为每个 subtask 单独设置需求 - 🌐 Web Search: Agent 自主搜索互联网获取真实数据（Tavily API） - 📚 RAG 知识库: 从本地知识库检索建模方法、代码模板、论文写作参考（ChromaDB + Rerank） - 🤝 HIL 人机协作: 关键节点暂停等待用户审批，支持 6 种决策动作（confirm / edit / regenerate / ask / skip / abort） - 🛡️ 四层容错: 有限重试 → Fallback Hand Off → Evaluator Shadow Mode → Feedback Rerun --- --- 我在平台中托管了一个在线版本，方便使用，欢迎体验： https://mathmodel.top/home ## SKILLS 项目蒸馏成完全由 SKILLS 驱动 不再做 Harness 层 ### Intro MathModelAgent SKILL —— 直接在 Harness 中驱动的数学建模自动化方案. **💰 开源免费，接入任意模型** 完全开源免费，可接入任何模型。 **🧠 端到端自动化** 从问题分析、建模、编码、绘图到论文排版和验收，一条 `/1start-mathmodel` 命令全自动完成，中间阶段自动串联，无需人工干预。 **📄 17 套 Typst 论文模板** 内置中英文主流赛事模板（国赛、华数杯、华为杯、MCM/ICM 等），自动匹配赛事类型，生成排版精良、可直接提交的 PDF 论文。 **📐 内置建模知识库** 包含完整的建模规范、模型选择决策树（AHP、TOPSIS、ARIMA、GA 等）、常见易错模式和 MCM/ICM 评分标准，每个阶段自动参考，降低模型幻觉。 **✅ 9 步自动验收** 文本泄漏检测 → 数值一致性校验 → Typst 编译 → PDF 可视化检查，确保论文零低级错误。 **🔧 可组合、可扩展** 每个阶段是独立 Skill，可单独调用（如只跑分析、只写论文）；模板和知识库可自由扩展；支持 Typst 生态排版。 ### 🎨 姊妹项目：sci-box（科研图表 & 流程图） 科研绘图和流程图模板已独立成仓库 **[jihe520/sci-box](https://github.com/jihe520/sci-box)**，可单独安装、单独使用： | SKILL | 内容 | |-------|------| | `scibox-figure` | SHAP / ROC / Taylor / 云雨图 / 和弦图 / 环形热图等科研图表复刻模板（Python + Matplotlib，导出 PNG / PDF / SVG） | | `scibox-diagram` | 可编辑的 draw.io 模板：五层技术路线图、三栏研究框架、三栏流程图、横向任务流水线 | ``` npx skills add jihe520/sci-box ``` ![figure](./docs/figure_templates.png) ### Install & Usage 安装 SKILL ``` npx skills add jihe520/MathModelAgent --all ``` 运行 ``` // claude claude --dangerously-skip-permissions claude: /1start-mathmodel 完成这个数学建模任务 // codex codex --yolo codex: $start-mathmodel 完成这个数学建模任务 ``` 其他命令 ``` /doctor: 检查环境配置 /typst-author: typst 知识 ``` ### What Can You Contribute? 项目以后只会做 SKLLS 层的迭代和优化，不会再做其他部分。 如果你希望寻找 Agent 开发岗位，你可以研究该项目 Agent 设计并贡献，我会尽量合并. 你能做什么： - 优化贡献比赛 typst Template , 你可以找一些 LaTeX 转成 typst - 优化 SKILL Workflow - 在不同的 Harness 上测试 不同的 LLM, 提供反馈和案例放在 example 仓库 Harness SKILL 的优化需要大量黑盒测试和调优. ### Thinking - 两年前，我做了一个 Mulit-Agent 的数学建模项目并开源出来，收到了社区的欢迎和很多 star, 感谢大家支持。 - 感谢开源的 latex 模板，我在此基础上转化为 typst 模板 - 此 SKILL 是一个基础模板，你可以基于此构建更适合你自己的 MathModel SKILL - For Agent DEVs : 两年前，我都是自己实现一套 Agent 框架，现在和以后更多的 Agent 产品直接基于 Harness 如 Codex / Claude Code / Pi +",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": -9,
+      "streak_days": 3
+    },
+    {
+      "rank": 16,
+      "full_name": "tonhowtf/omniget",
+      "url": "https://github.com/tonhowtf/omniget",
+      "description": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+      "language": "Rust",
+      "stars": 11949,
+      "forks": 1039,
+      "stars_today": 507,
+      "topics": [
+        "bilibili-downloader",
+        "course-downloader",
+        "download-manager",
+        "downloader",
+        "epub-reader",
+        "hotmart-downloader",
+        "instagram-downloader",
+        "media-downloader",
+        "reddit-downloader",
+        "spaced-repetition",
+        "subtitle-downloader",
+        "telegram-downloader",
+        "tiktok-downloader",
+        "twitch-downloader",
+        "twitter-downloader",
+        "udemy-downloader",
+        "video-downloader",
+        "youtube-downloader",
+        "yt-dlp",
+        "yt-dlp-gui"
+      ],
+      "license": "GPL-3.0",
+      "created_at": "2026-02-11T22:44:56Z",
+      "updated_at": "2026-09-14T06:20:09Z",
+      "open_issues": 39,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- Search keywords (kept here so GitHub search, Google and AI assistants can find the project): OmniGet is a free open source downloader and media toolbox for Windows, macOS and Linux. udemy downloader, hotmart downloader, kiwify downloader, course downloader, youtube downloader, yt-dlp gui, instagram downloader, instagram story downloader, reels downloader, twitter downloader, x video downloader, pinterest downloader, pinterest board backup, tiktok downloader, reddit downloader, twitch vod downloader, bilibili downloader, telegram downloader, torrent client, magnet downloader, subtitle downloader, whisper transcription, text to speech, epub reader, pdf reader, anki flashcards, spaced repetition, music player, spicetify, media downloader, download manager, tauri, rust, svelte. GitHub allows 20 topics. The repository uses exactly these 20: downloader, download-manager, media-downloader, video-downloader, youtube-downloader, yt-dlp, yt-dlp-gui, course-downloader, udemy-downloader, hotmart-downloader, bilibili-downloader, tiktok-downloader, instagram-downloader, twitter-downloader, reddit-downloader, telegram-downloader, twitch-downloader, subtitle-downloader, epub-reader, spaced-repetition --> <p align=\"center\"> <img src=\"assets/readme/hero.svg\" alt=\"OmniGet: paste a link, get the file. Downloads, tools and a study library in one desktop app for Windows, macOS and Linux.\" width=\"100%\" /> </p> <h1 align=\"center\">OmniGet</h1> <p align=\"center\"> <b>English</b> · <a href=\"README_pt_br.md\">Português (BR)</a> · <a href=\"README.ru.md\">Русский</a> · <a href=\"README_zh_CN.md\">简体中文</a> </p> <p align=\"center\"> <b>Download Udemy and Hotmart courses, YouTube, Instagram, X, Pinterest, TikTok and 1,800+ other sites.<br/>Then transcribe, convert, read and study what you saved. One free desktop app, no terminal.</b> </p> <p align=\"center\"> <a href=\"https://github.com/tonhowtf/omniget/releases/latest\"><img src=\"https://img.shields.io/github/v/release/tonhowtf/omniget?style=for-the-badge&label=release&color=F28500\" alt=\"Latest release\" /></a> <a href=\"https://github.com/tonhowtf/omniget/releases\"><img src=\"https://img.shields.io/github/downloads/tonhowtf/omniget/total?style=for-the-badge&label=downloads&color=1E6FE8\" alt=\"Total downloads\" /></a> <a href=\"https://github.com/tonhowtf/omniget/stargazers\"><img src=\"https://img.shields.io/github/stars/tonhowtf/omniget?style=for-the-badge&color=FFD426\" alt=\"GitHub stars\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-GPL--3.0-2AA845?style=for-the-badge\" alt=\"License GPL-3.0\" /></a> <a href=\"https://discord.gg/jgdxyPy7Vn\"><img src=\"https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord community\" /></a> <a href=\"https://hosted.weblate.org/engage/omniget/\"><img src=\"https://hosted.weblate.org/widget/omniget/frontend-json/svg-badge.svg\" alt=\"Translation status\" /></a> </p> <p align=\"center\"> <a href=\"#download-and-install\"><img src=\"https://img.shields.io/badge/Download_for_Windows,_macOS_or_Linux-→-F28500?style=for-the-badge\" alt=\"Download OmniGet\" height=\"40\" /></a> &nbsp; <a href=\"#the-tools-section-108-tools-in-16-categories\"><img src=\"https://img.shields.io/badge/See_the_108_tools-→-3D5BF0?style=for-the-badge\" alt=\"See the Tools section\" height=\"40\" /></a> </p> <p align=\"center\"> <sub>Free. Open source under GPL-3.0. No account, no ads, no telemetry on what you download. Your files stay on your computer.</sub><br/> <sub>9,500+ GitHub stars. The most starred repository in the <a href=\"https://github.com/topics/udemy-downloader\">udemy-downloader</a>, <a href=\"https://github.com/topics/hotmart-downloader\">hotmart-downloader</a> and <a href=\"https://github.com/topics/course-downloader\">course-downloader</a> topics.</sub> </p> <p align=\"center\"> <img src=\"assets/readme/home.png\" alt=\"OmniGet home screen: paste a URL, magnet link or .torrent and the file lands in your folder\" width=\"900\" /> </p> --- ## Contents - [Why O",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 17,
+      "full_name": "jiji262/douyin-downloader",
+      "url": "https://github.com/jiji262/douyin-downloader",
+      "description": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+      "language": "Python",
+      "stars": 11542,
+      "forks": 1764,
+      "stars_today": 452,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2023-05-25T08:10:38Z",
+      "updated_at": "2026-09-14T06:20:02Z",
+      "open_issues": 40,
+      "default_branch": "main",
+      "readme_excerpt": "# Douyin Downloader V2.0 <p align=\"center\"> <img src=\"https://socialify.git.ci/jiji262/douyin-downloader/image?custom_description=Douyin+batch+download+tool%2C+remove+watermarks%2C+support+batch+download+of+videos%2C+gallery%2C+and+author+homepages.&description=1&font=Source+Code+Pro&forks=1&owner=1&pattern=Circuit+Board&stargazers=1&theme=Light\" alt=\"douyin-downloader\" width=\"820\" /> </p> <p align=\"center\"> <a href=\"https://linux.do\" alt=\"LINUX DO\"> <img src=\"https://img.shields.io/badge/LINUX-DO-FFB003.svg?logo=data:image/svg%2bxml;base64,DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxwYXRoIGQ9Ik00Ni44Mi0uMDU1aDYuMjVxMjMuOTY5IDIuMDYyIDM4IDIxLjQyNmM1LjI1OCA3LjY3NiA4LjIxNSAxNi4xNTYgOC44NzUgMjUuNDV2Ni4yNXEtMi4wNjQgMjMuOTY4LTIxLjQzIDM4LTExLjUxMiA3Ljg4NS0yNS40NDUgOC44NzRoLTYuMjVxLTIzLjk3LTIuMDY0LTM4LjAwNC0yMS40M1EuOTcxIDY3LjA1Ni0uMDU0IDUzLjE4di02LjQ3M0MxLjM2MiAzMC43ODEgOC41MDMgMTguMTQ4IDIxLjM3IDguODE3IDI5LjA0NyAzLjU2MiAzNy41MjcuNjA0IDQ2LjgyMS0uMDU2IiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZWNlY2VjO2ZpbGwtb3BhY2l0eToxIi8+PHBhdGggZD0iTTQ3LjI2NiAyLjk1N3EyMi41My0uNjUgMzcuNzc3IDE1LjczOGE0OS43IDQ5LjcgMCAwIDEgNi44NjcgMTAuMTU3cS00MS45NjQuMjIyLTgzLjkzIDAgOS43NS0xOC42MTYgMzAuMDI0LTI0LjM4N2E2MSA2MSAwIDAgMSA5LjI2Mi0xLjUwOCIgc3R5bGU9InN0cm9rZTpub25lO2ZpbGwtcnVsZTpldmVub2RkO2ZpbGw6IzE5MTkxOTtmaWxsLW9wYWNpdHk6MSIvPjxwYXRoIGQ9Ik03Ljk4IDcwLjkyNmMyNy45NzctLjAzNSA1NS45NTQgMCA4My45My4xMTNRODMuNDI2IDg3LjQ3MyA2Ni4xMyA5NC4wODZxLTE4LjgxIDYuNTQ0LTM2LjgzMi0xLjg5OC0xNC4yMDMtNy4wOS0yMS4zMTctMjEuMjYyIiBzdHlsZT0ic3Ryb2tlOm5vbmU7ZmlsbC1ydWxlOmV2ZW5vZGQ7ZmlsbDojZjlhZjAwO2ZpbGwtb3BhY2l0eToxIi8+PC9zdmc+\" /></a> </p> 中文文档 (Chinese): [README.zh-CN.md](./README.zh-CN.md) A practical Douyin downloader supporting videos, image-notes, collections, music, favorites collections, and profile batch downloads, with progress display, retries, SQLite deduplication, download integrity checks, and browser fallback support. ## Desktop App (Douzy) A desktop GUI built on the same backend, with dedicated workspaces for Douyin, TikTok, and YouTube. Paste a link to start, sync account content, follow every task, and manage downloaded works in a local archive. - **Three platforms:** Douyin videos, galleries, profiles, and collections; TikTok videos, photos, and profiles; YouTube videos, Shorts, channels, and playlists - **Account content:** sync Douyin following, favorites collections, collected series, and likes - **Visual workflow:** multi-link queue, task status and retry controls, local download archive, filters, and quick re-download > **Beta:** The desktop app is currently in closed beta. To try it, download the build from the [Releases](https://github.com/jiji262/douyin-downloader/releases) page. | **Douyin link download** | **TikTok download workspace** | **YouTube workbench** | |:---:|:---:|:---:| | ![Douzy Douyin link download workspace](img/desktop/001.png) | ![Douzy TikTok download workspace](img/desktop/002.png) | ![Douzy YouTube workbench](img/desktop/003.png) | | Paste a video, gallery, profile, or collection link and start in one click. | Download public videos, photo posts, and profiles without signing in. | Scan videos, Shorts, channels, and playlists, then configure video, MP3, or subtitle downloads. | | **Following management** | **Favorites and likes** | **Task Center** | | ![Douzy following management](img/desktop/004.png) | ![Douzy favorites and likes](img/desktop/005.png) | ![Douzy Task Center](img/desktop/006.png) | | Sync creators, filter new works, add notes, and download directly from the list. | Browse collected videos, series, and liked works from the current Douyin account. | Track job results, retry failures, and open output folders. | _Screenshots were captured from the current desktop `main` build. Demonstration data is used for privacy._ ## Feature Overview ### Supported | Feature | Description | |---------|-------------| | Single video download | `/video/{aweme_id}` | | Single image-note ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 18,
+      "full_name": "Swordfish90/cool-retro-term",
+      "url": "https://github.com/Swordfish90/cool-retro-term",
+      "description": "A good looking terminal emulator which mimics the old cathode display...",
+      "language": "QML",
+      "stars": 26294,
+      "forks": 1018,
+      "stars_today": 57,
+      "topics": [
+        "linux",
+        "macos",
+        "qml",
+        "qt",
+        "retro",
+        "terminal"
+      ],
+      "license": "",
+      "created_at": "2013-11-22T09:59:57Z",
+      "updated_at": "2026-09-14T06:12:26Z",
+      "open_issues": 567,
+      "default_branch": "master",
+      "readme_excerpt": "# cool-retro-term |> Default Amber|C:\\ IBM DOS|$ Default Green| |---|---|---| |![Default Amber Cool Retro Term](https://user-images.githubusercontent.com/121322/32070717-16708784-ba42-11e7-8572-a8fcc10d7f7d.gif)|![IBM DOS](https://user-images.githubusercontent.com/121322/32070716-16567e5c-ba42-11e7-9e64-ba96dfe9b64d.gif)|![Default Green Cool Retro Term](https://user-images.githubusercontent.com/121322/32070715-163a1c94-ba42-11e7-80bb-41fbf10fc634.gif)| ## Description cool-retro-term is a terminal emulator which mimics the look and feel of the old cathode tube screens. It has been designed to be eye-candy, customizable, and reasonably lightweight. It uses the QML port of qtermwidget (Konsole): https://github.com/Swordfish90/qmltermwidget. This terminal emulator works under Linux and macOS and requires Qt6. Settings such as colors, fonts, and effects can be accessed via context menu. ## Screenshots ![Image](<https://i.imgur.com/TNumkDn.png>) ![Image](<https://i.imgur.com/hfjWOM4.png>) ![Image](<https://i.imgur.com/GYRDPzJ.jpg>) ## Install If you want to get a hold of the latest version, just go to the Releases page and grab the latest AppImage (Linux) or dmg (macOS). Alternatively, most distributions such as Ubuntu, Fedora or Arch already package cool-retro-term in their official repositories. ## Building Check out the wiki and follow the instructions on how to build it on [Linux](https://github.com/Swordfish90/cool-retro-term/wiki/Build-Instructions-(Linux)) and [macOS](https://github.com/Swordfish90/cool-retro-term/wiki/Build-Instructions-(macOS)).",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 19,
+      "full_name": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+      "language": "Python",
+      "stars": 165669,
+      "forks": 34562,
+      "stars_today": 152,
+      "topics": [
+        "audio",
+        "deep-learning",
+        "deepseek",
+        "gemma",
+        "glm",
+        "hacktoberfest",
+        "llm",
+        "machine-learning",
+        "model-hub",
+        "natural-language-processing",
+        "nlp",
+        "pretrained-models",
+        "python",
+        "pytorch",
+        "pytorch-transformers",
+        "qwen",
+        "speech-recognition",
+        "transformer",
+        "vlm"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2018-10-29T13:56:00Z",
+      "updated_at": "2026-09-14T06:18:29Z",
+      "open_issues": 2447,
+      "default_branch": "main",
+      "readme_excerpt": "<!--- Copyright 2020 The HuggingFace Team. All rights reserved. Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --> <p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg\"> <img alt=\"Hugging Face Transformers Library\" src=\"https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg\" width=\"352\" height=\"59\" style=\"max-width: 100%;\"> </picture> <br/> <br/> </p> <p align=\"center\"> <a href=\"https://huggingface.com/models\"><img alt=\"Checkpoints on Hub\" src=\"https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/models&color=brightgreen\"></a> <a href=\"https://circleci.com/gh/huggingface/transformers\"><img alt=\"Build\" src=\"https://img.shields.io/circleci/build/github/huggingface/transformers/main\"></a> <a href=\"https://github.com/huggingface/transformers/blob/main/LICENSE\"><img alt=\"GitHub\" src=\"https://img.shields.io/github/license/huggingface/transformers.svg?color=blue\"></a> <a href=\"https://huggingface.co/docs/transformers/index\"><img alt=\"Documentation\" src=\"https://img.shields.io/website/http/huggingface.co/docs/transformers/index.svg?down_color=red&down_message=offline&up_message=online\"></a> <a href=\"https://github.com/huggingface/transformers/releases\"><img alt=\"GitHub release\" src=\"https://img.shields.io/github/release/huggingface/transformers.svg\"></a> <a href=\"https://github.com/huggingface/transformers/blob/main/CODE_OF_CONDUCT.md\"><img alt=\"Contributor Covenant\" src=\"https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg\"></a> <a href=\"https://zenodo.org/badge/latestdoi/155220641\"><img src=\"https://zenodo.org/badge/155220641.svg\" alt=\"DOI\"></a> </p> <h4 align=\"center\"> <p> <b>English</b> | <a href=\"i18n/README_zh-hans.md\">简体中文</a> | <a href=\"i18n/README_zh-hant.md\">繁體中文</a> | <a href=\"i18n/README_ko.md\">한국어</a> | <a href=\"i18n/README_es.md\">Español</a> | <a href=\"i18n/README_ja.md\">日本語</a> | <a href=\"i18n/README_hd.md\">हिन्दी</a> | <a href=\"i18n/README_ru.md\">Русский</a> | <a href=\"i18n/README_pt-br.md\">Português</a> | <a href=\"i18n/README_te.md\">తెలుగు</a> | <a href=\"i18n/README_fr.md\">Français</a> | <a href=\"i18n/README_de.md\">Deutsch</a> | <a href=\"i18n/README_it.md\">Italiano</a> | <a href=\"i18n/README_vi.md\">Tiếng Việt</a> | <a href=\"i18n/README_ar.md\">العربية</a> | <a href=\"i18n/README_ur.md\">اردو</a> | <a href=\"i18n/README_bn.md\">বাংলা</a> | <a href=\"i18n/README_fa.md\">فارسی</a> | <a href=\"i18n/README_ro.md\">Română</a> | <a href=\"i18n/README_tr.md\">Türkçe</a> </p> </h4> <h3 align=\"center\"> <p>State-of-the-art pretrained models for inference and training</p> </h3> <h3 align=\"center\"> <img src=\"https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/transformers_as_a_model_definition.png\"/> </h3> Transformers acts as the model-definition framework for state-of-the-art machine learning with text, computer vision, audio, video, and multimodal models, for both inference and training. It centralizes the model definition so that this definition is agreed upon across the ecosystem. `transformers` is the pivot across frameworks: if a model definition is supported, it will be compatible with the majority of training frameworks (Axolotl, Unsloth, DeepSpeed, FSDP, PyTorc",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：RuntimeError: 请求失败：https://models.github.ai/inference/chat/completions（HTTPError）",
+    "key_judgments": [
+      "当日 13/19 个项目可从资料确认与 AI 直接相关；其余 6 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：AI 智能体与数字劳动力（5 个）、其他数字产品与工具（4 个）、AI 编程智能体（3 个）。",
+      "排名第一的 JustVugg/colibri 代表“其他数字产品与工具”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "AI 智能体与数字劳动力（5 个项目）",
+      "其他数字产品与工具（4 个项目）",
+      "AI 编程智能体（3 个项目）",
+      "语音 AI 与自然交互（2 个项目）",
+      "轻量项目与任务管理（1 个项目）",
+      "AI 安全、权限与治理（1 个项目）"
+    ],
+    "product_business_signals": [
+      "AI 智能体与数字劳动力是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 AI 智能体与数字劳动力 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "JustVugg/colibri",
+        "one_line_summary": "围绕“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+        "solution": "围绕“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 868 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 colibri 描述为“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engi”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦 它的办法是：围绕“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 colibri 的潜在使用者而言，在项目方所述的“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engi”场景中，可直接查看和试验项目方所述的“Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JustVugg/colibri",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Run frontier MoE models on hardware you already own — pure C, zero deps, experts streamed from disk. Tiny engine, immense model. 🐦",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JustVugg/colibri",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/JustVugg/colibri",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ever-co/ever-gauzy",
+        "one_line_summary": "提供可自行部署的任务、看板和问题跟踪工具。",
+        "industry_direction": "轻量项目与任务管理",
+        "target_users": [
+          "小型产品团队",
+          "希望自主管理数据的协作团队"
+        ],
+        "problem_solved": "复杂项目工具可能带来过多配置和使用负担，小团队只需要清晰追踪任务和进度。",
+        "solution": "提供可自行部署的任务、看板和问题跟踪工具。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 191 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "自托管轻量协作",
+        "technology_impact": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "迁移成本、权限、通知、集成和长期维护能力决定能否替代成熟商业产品。",
+        "ai_relevance": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "plain_language_explanation": "项目方把 ever-gauzy 描述为“Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co”。通俗地说，它希望解决的是：复杂项目工具可能带来过多配置和使用负担，小团队只需要清晰追踪任务和进度。 它的办法是：提供可自行部署的任务、看板和问题跟踪工具。",
+        "scenario_examples": [
+          "例如五人产品团队用看板追踪研究、设计和发布任务，不引入复杂企业流程。"
+        ],
+        "practical_benefits": [
+          "对 ever-gauzy 的潜在使用者而言，在项目方所述的“Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co”场景中，减少小团队配置复杂项目系统的负担",
+          "让组织可以自行控制任务和协作数据"
+        ],
+        "industry_implications": "它不是 AI 技术，但反映团队仍在寻找更简单、可控的工作管理入口。",
+        "who_should_care": "小型产品团队、希望自主管理数据的协作团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ever-co/ever-gauzy",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Ever® Gauzy™ - Open Business Management Platform (ERP/CRM/HRM/ATS/PM) - https://gauzy.co",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ever-co/ever-gauzy",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ever-co/ever-gauzy",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "one_line_summary": "围绕“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+        "solution": "围绕“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 2680 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 gods-eye-view 描述为“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe. 它的办法是：围绕“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 gods-eye-view 的潜在使用者而言，在项目方所述的“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a”场景中，可直接查看和试验项目方所述的“A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bilawalsidhu/gods-eye-view",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bilawalsidhu/gods-eye-view",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/bilawalsidhu/gods-eye-view",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "tech-leads-club/agent-skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 265 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 agent-skills 描述为“The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Curso”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 agent-skills 的潜在使用者而言，在项目方所述的“The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Curso”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tech-leads-club/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The secure, validated skill registry for professional AI coding agents. Extend Antigravity, Claude Code, Cursor, Copilot and more with absolute confidence.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tech-leads-club/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/tech-leads-club/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "melgarafael/DeskcommCRM",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 432 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 DeskcommCRM 描述为“Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo,”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 DeskcommCRM 的潜在使用者而言，在项目方所述的“Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo,”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/melgarafael/DeskcommCRM",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/melgarafael/DeskcommCRM",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/melgarafael/DeskcommCRM",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 380 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 OpenMontage 描述为“World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent sk”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 OpenMontage 的潜在使用者而言，在项目方所述的“World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent sk”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/calesthio/OpenMontage",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/calesthio/OpenMontage",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/calesthio/OpenMontage",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 706 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 system_prompts_leaks 描述为“Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatG”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 system_prompts_leaks 的潜在使用者而言，在项目方所述的“Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatG”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/asgeirtj/system_prompts_leaks",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Extracted system prompts from Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code. OpenAI - ChatGPT GPT-6-Astra, Codex. Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity. xAI - Grok, Grok Bot, Cursor, Kimi and more! Updated regularly.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/asgeirtj/system_prompts_leaks",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/asgeirtj/system_prompts_leaks",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "vxcontrol/pentagi",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 590 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 pentagi 描述为“Fully autonomous AI Agents system capable of performing complex penetration testing tasks”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 pentagi 的潜在使用者而言，在项目方所述的“Fully autonomous AI Agents system capable of performing complex penetration testing tasks”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vxcontrol/pentagi",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fully autonomous AI Agents system capable of performing complex penetration testing tasks",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vxcontrol/pentagi",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/vxcontrol/pentagi",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "multimodal-art-projection/YuE",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 487 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 YuE 描述为“YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 YuE 的潜在使用者而言，在项目方所述的“YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/multimodal-art-projection/YuE",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/multimodal-art-projection/YuE",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/multimodal-art-projection/YuE",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "yuliskov/SmartTube",
+        "one_line_summary": "围绕“Browse media content with your own rules on Android TV”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Browse media content with your own rules on Android TV",
+        "solution": "围绕“Browse media content with your own rules on Android TV”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 233 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 SmartTube 描述为“Browse media content with your own rules on Android TV”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Browse media content with your own rules on Android TV 它的办法是：围绕“Browse media content with your own rules on Android TV”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Browse media content with your own rules on Android TV”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 SmartTube 的潜在使用者而言，在项目方所述的“Browse media content with your own rules on Android TV”场景中，可直接查看和试验项目方所述的“Browse media content with your own rules on Android TV”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/yuliskov/SmartTube",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Browse media content with your own rules on Android TV",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/yuliskov/SmartTube",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/yuliskov/SmartTube",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "alphaXiv/OpenResearch",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 289 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 OpenResearch 描述为“Turn your coding agents into research agents”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 OpenResearch 的潜在使用者而言，在项目方所述的“Turn your coding agents into research agents”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/alphaXiv/OpenResearch",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Turn your coding agents into research agents",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/alphaXiv/OpenResearch",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/alphaXiv/OpenResearch",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "debpalash/VoiceStudio",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 2632 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 VoiceStudio 描述为“VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbin”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 VoiceStudio 的潜在使用者而言，在项目方所述的“VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbin”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/debpalash/VoiceStudio",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/debpalash/VoiceStudio",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/debpalash/VoiceStudio",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "SnailSploit/Claude-Red",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 506 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 Claude-Red 描述为“claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 Claude-Red 的潜在使用者而言，在项目方所述的“claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/SnailSploit/Claude-Red",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "claude-red is a curated library of offensive security skills designed for the Claude skills system. Each skill is a structured SKILL.md file that primes Claude with expert-level methodology for a specific attack surface — from SQLi to shellcode, EDR evasion to exploit development.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/SnailSploit/Claude-Red",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/SnailSploit/Claude-Red",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "alibaba/open-code-review",
+        "one_line_summary": "结合固定规则和语言模型，对代码改动给出逐行检查意见。",
+        "industry_direction": "AI 辅助代码质量检查",
+        "target_users": [
+          "管理软件质量的产品与安全团队",
+          "需要审查大量改动的研发组织"
+        ],
+        "problem_solved": "人工代码审查时间有限，重复缺陷和安全问题可能在快速发布中被遗漏。",
+        "solution": "结合固定规则和语言模型，对代码改动给出逐行检查意见。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 443 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "规则检查与 AI 审查结合",
+        "technology_impact": "AI 编程价值正在延伸到质量把关，而不是只负责生成代码。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "误报会增加审查负担，漏报仍可能进入生产；最终责任不能交给模型。",
+        "ai_relevance": "AI 编程价值正在延伸到质量把关，而不是只负责生成代码。",
+        "plain_language_explanation": "项目方把 open-code-review 描述为“Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelin”。通俗地说，它希望解决的是：人工代码审查时间有限，重复缺陷和安全问题可能在快速发布中被遗漏。 它的办法是：结合固定规则和语言模型，对代码改动给出逐行检查意见。",
+        "scenario_examples": [
+          "例如发布前自动标出空指针、并发和注入风险，再由工程师确认是否真实存在。"
+        ],
+        "practical_benefits": [
+          "对 open-code-review 的潜在使用者而言，在项目方所述的“Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelin”场景中，减少审查人员重复寻找常见缺陷的时间",
+          "让高风险改动更早进入人工重点检查范围"
+        ],
+        "industry_implications": "AI 编程价值正在延伸到质量把关，而不是只负责生成代码。",
+        "who_should_care": "管理软件质量的产品与安全团队、需要审查大量改动的研发组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/alibaba/open-code-review",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/alibaba/open-code-review",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/alibaba/open-code-review",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jihe520/MathModelAgent",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 246 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 MathModelAgent 描述为“🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatica”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 MathModelAgent 的潜在使用者而言，在项目方所述的“🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatica”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jihe520/MathModelAgent",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jihe520/MathModelAgent",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jihe520/MathModelAgent",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "tonhowtf/omniget",
+        "one_line_summary": "让 AI 同时处理画面、语音和文字并形成可使用的信息。",
+        "industry_direction": "多模态内容理解",
+        "target_users": [
+          "内容、教育和媒体团队",
+          "需要处理图片或视频的业务团队"
+        ],
+        "problem_solved": "大量视觉和视频内容难以被快速搜索、总结和复用。",
+        "solution": "让 AI 同时处理画面、语音和文字并形成可使用的信息。",
+        "why_now": "该项目位列当日 Trending 第 16 名，当日新增 507 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "视觉与语言联合理解",
+        "technology_impact": "企业资料不再局限于文本，视频和图片也能进入知识工作流。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "抽帧、转写和视觉识别错误可能遗漏关键内容，还需关注版权与隐私。",
+        "ai_relevance": "企业资料不再局限于文本，视频和图片也能进入知识工作流。",
+        "plain_language_explanation": "项目方把 omniget 描述为“Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-sou”。通俗地说，它希望解决的是：大量视觉和视频内容难以被快速搜索、总结和复用。 它的办法是：让 AI 同时处理画面、语音和文字并形成可使用的信息。",
+        "scenario_examples": [
+          "例如培训团队把长视频转成带出处的要点和复习材料。"
+        ],
+        "practical_benefits": [
+          "对 omniget 的潜在使用者而言，在项目方所述的“Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-sou”场景中，缩短观看和整理长视频的时间",
+          "让视觉资料可以被搜索和再次利用"
+        ],
+        "industry_implications": "企业资料不再局限于文本，视频和图片也能进入知识工作流。",
+        "who_should_care": "内容、教育和媒体团队、需要处理图片或视频的业务团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 16 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tonhowtf/omniget",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Download Udemy and Hotmart courses, YouTube videos, music and books — 1,800+ sites, no terminal. Free open-source desktop app for Windows, macOS and Linux, with a built-in course player, PDF/EPUB reader and music library. Powered by yt-dlp. Your files stay on your computer.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tonhowtf/omniget",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 52,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/tonhowtf/omniget",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jiji262/douyin-downloader",
+        "one_line_summary": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "industry_direction": "软件运行诊断工具",
+        "target_users": [
+          "维护数字产品的技术团队",
+          "负责系统稳定性的运维人员"
+        ],
+        "problem_solved": "系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。",
+        "solution": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "why_now": "该项目位列当日 Trending 第 17 名，当日新增 452 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "运行关系追踪",
+        "technology_impact": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "主要服务技术团队，与 AI 行业的直接商业关联有限。",
+        "ai_relevance": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "plain_language_explanation": "项目方把 douyin-downloader 描述为“A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries”。通俗地说，它希望解决的是：系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。 它的办法是：把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "scenario_examples": [
+          "例如线上服务异常占用资源时，快速找到启动它的任务和负责人。"
+        ],
+        "practical_benefits": [
+          "对 douyin-downloader 的潜在使用者而言，在项目方所述的“A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries”场景中，缩短故障定位时间",
+          "减少误关关键服务或反复排查的风险"
+        ],
+        "industry_implications": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "who_should_care": "维护数字产品的技术团队、负责系统稳定性的运维人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 17 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jiji262/douyin-downloader",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A practical Douyin downloader for both single-item and profile batch downloads, with progress display, retries, SQLite deduplication, and browser fallback support. 抖音批量下载工具，去水印，支持视频、图集、合集、音乐(原声)。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jiji262/douyin-downloader",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 49,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jiji262/douyin-downloader",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Swordfish90/cool-retro-term",
+        "one_line_summary": "围绕“A good looking terminal emulator which mimics the old cathode display...”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A good looking terminal emulator which mimics the old cathode display...",
+        "solution": "围绕“A good looking terminal emulator which mimics the old cathode display...”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 18 名，当日新增 57 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 cool-retro-term 描述为“A good looking terminal emulator which mimics the old cathode display...”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A good looking terminal emulator which mimics the old cathode display... 它的办法是：围绕“A good looking terminal emulator which mimics the old cathode display...”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A good looking terminal emulator which mimics the old cathode display...”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 cool-retro-term 的潜在使用者而言，在项目方所述的“A good looking terminal emulator which mimics the old cathode display...”场景中，可直接查看和试验项目方所述的“A good looking terminal emulator which mimics the old cathode display...”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 18 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Swordfish90/cool-retro-term",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A good looking terminal emulator which mimics the old cathode display...",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Swordfish90/cool-retro-term",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 46,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Swordfish90/cool-retro-term",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "huggingface/transformers",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 19 名，当日新增 152 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 transformers 描述为“🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, a”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 transformers 的潜在使用者而言，在项目方所述的“🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, a”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 19 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huggingface/transformers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/huggingface/transformers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 43,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/huggingface/transformers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 37,
+        "project_count": 21
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 33,
+        "project_count": 18
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 15,
+        "project_count": 9
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 37
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 33
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 33
+      },
+      {
+        "name": "软件产品团队",
+        "count": 15
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 15
+      },
+      {
+        "name": "正在引入 AI 开发流程的软件团队",
+        "count": 4
+      },
+      {
+        "name": "工程管理和质量负责人",
+        "count": 4
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 4
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 112
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 26,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 天气与气候预测",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "个人网络隐私与连接工具",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 上下文与可追责决策基础设施",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "视频平台替代访问界面",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 13,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 7,
+        "project_count": 3
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 146,
+        "project_count": 72
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 125,
+        "project_count": 43
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 62,
+        "project_count": 22
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 22,
+        "project_count": 10
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 13,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 146
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 125
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 125
+      },
+      {
+        "name": "软件产品团队",
+        "count": 62
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 62
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 22
+      },
+      {
+        "name": "客服、研究和内部运营团队",
+        "count": 22
+      },
+      {
+        "name": "使用 AI 助手的团队",
+        "count": 13
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 443
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-09-13",
+    "new": [
+      "JustVugg/colibri",
+      "Swordfish90/cool-retro-term",
+      "alibaba/open-code-review",
+      "alphaXiv/OpenResearch",
+      "calesthio/OpenMontage",
+      "debpalash/VoiceStudio",
+      "ever-co/ever-gauzy",
+      "huggingface/transformers",
+      "jiji262/douyin-downloader",
+      "tech-leads-club/agent-skills",
+      "tonhowtf/omniget"
+    ],
+    "retained": [
+      "SnailSploit/Claude-Red",
+      "asgeirtj/system_prompts_leaks",
+      "bilawalsidhu/gods-eye-view",
+      "jihe520/MathModelAgent",
+      "melgarafael/DeskcommCRM",
+      "multimodal-art-projection/YuE",
+      "vxcontrol/pentagi",
+      "yuliskov/SmartTube"
+    ],
+    "exited": [
+      "Flowseal/zapret-discord-youtube",
+      "Shubhamsaboo/awesome-llm-apps",
+      "Sonarr/Sonarr",
+      "alsk1992/CloddsBot",
+      "armory3d/armorpaint",
+      "max-sixty/worktrunk",
+      "nab138/iloader",
+      "p1neappleXpress/OpenFlux"
+    ],
+    "risers": [
+      {
+        "full_name": "vxcontrol/pentagi",
+        "previous_rank": 16,
+        "rank": 8,
+        "change": 8
+      },
+      {
+        "full_name": "multimodal-art-projection/YuE",
+        "previous_rank": 14,
+        "rank": 9,
+        "change": 5
+      },
+      {
+        "full_name": "SnailSploit/Claude-Red",
+        "previous_rank": 13,
+        "rank": 13,
+        "change": 0
+      },
+      {
+        "full_name": "yuliskov/SmartTube",
+        "previous_rank": 9,
+        "rank": 10,
+        "change": -1
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "previous_rank": 1,
+        "rank": 3,
+        "change": -2
+      },
+      {
+        "full_name": "melgarafael/DeskcommCRM",
+        "previous_rank": 2,
+        "rank": 5,
+        "change": -3
+      },
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "previous_rank": 3,
+        "rank": 7,
+        "change": -4
+      },
+      {
+        "full_name": "jihe520/MathModelAgent",
+        "previous_rank": 6,
+        "rank": 15,
+        "change": -9
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "asgeirtj/system_prompts_leaks",
+        "previous_stars_today": 217,
+        "stars_today": 706,
+        "change": 489
+      },
+      {
+        "full_name": "bilawalsidhu/gods-eye-view",
+        "previous_stars_today": 2265,
+        "stars_today": 2680,
+        "change": 415
+      },
+      {
+        "full_name": "vxcontrol/pentagi",
+        "previous_stars_today": 189,
+        "stars_today": 590,
+        "change": 401
+      },
+      {
+        "full_name": "SnailSploit/Claude-Red",
+        "previous_stars_today": 113,
+        "stars_today": 506,
+        "change": 393
+      },
+      {
+        "full_name": "multimodal-art-projection/YuE",
+        "previous_stars_today": 210,
+        "stars_today": 487,
+        "change": 277
+      },
+      {
+        "full_name": "yuliskov/SmartTube",
+        "previous_stars_today": 136,
+        "stars_today": 233,
+        "change": 97
+      },
+      {
+        "full_name": "jihe520/MathModelAgent",
+        "previous_stars_today": 262,
+        "stars_today": 246,
+        "change": -16
+      },
+      {
+        "full_name": "melgarafael/DeskcommCRM",
+        "previous_stars_today": 504,
+        "stars_today": 432,
+        "change": -72
+      }
+    ]
+  }
+}
