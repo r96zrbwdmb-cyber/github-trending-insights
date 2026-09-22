@@ -1,0 +1,1476 @@
+{
+  "date": "2026-09-22",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 12,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "description": "A framework for building agentic apps",
+      "language": "TypeScript",
+      "stars": 6091,
+      "forks": 556,
+      "stars_today": 607,
+      "topics": [
+        "agent-native",
+        "agents",
+        "ai",
+        "react",
+        "typescript"
+      ],
+      "license": "",
+      "created_at": "2026-03-12T14:57:10Z",
+      "updated_at": "2026-09-22T06:15:20Z",
+      "open_issues": 83,
+      "default_branch": "main",
+      "readme_excerpt": "<picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F5476444e54ee4a958966c90caca468e3\" /> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F7628600bc10a4940b78f42c5df7628b0\" /> <img alt=\"Agent-Native: The agentic application framework\" src=\"https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F7628600bc10a4940b78f42c5df7628b0\" /> </picture> # Agent-Native Agent-Native is an open-source TypeScript framework for building agents that pair autonomous work with a purpose-built UI. Define each capability once as an [action](https://agent-native.com/docs/actions-overview): the agent uses it as a tool, and the UI calls it from code. ## Quick start ```bash npx --yes @agent-native/core@latest create my-agent --standalone --template chat ``` Follow the [getting started guide](https://agent-native.com/docs/getting-started) for a full intro to the framework. ## Why build agents with UIs? Coding agents work with more than a text box. Their environment provides context, tools, files, tests, and previews that make their capabilities and results visible. Knowledge work needs that same kind of environment. A UI shows what an agent can do and gives people familiar ways to inspect, edit, approve, and share its work. ## How Agent-Native works - **[Shared actions](https://agent-native.com/docs/actions-overview).** The agent calls each capability as a tool, and the UI calls it from code. Both paths use the same validation, permissions, and implementation. - **[Shared data](https://agent-native.com/docs/server-database).** Work done by the agent appears in the UI, and work done in the UI is available to the agent. - **[Shared application state](https://agent-native.com/docs/context-awareness).** The agent receives relevant UI state, such as the current page, selected record, or active view. The agent does not click through the UI. It works through the same action layer as the UI. ### Example: a shared action Create `actions/hello.ts`: ```ts import { defineAction } from \"@agent-native/core/action\"; import { z } from \"zod\"; // One action powers every app surface: UI, agent, HTTP, MCP, A2A, and CLI. export default defineAction({ description: \"Return a friendly greeting.\", schema: z.object({ name: z.string().default(\"world\").describe(\"Name to greet\"), }), http: { method: \"GET\" }, run: async ({ name }) => { return { message: `Hello, ${name}!` }; }, }); ``` The agent receives `hello` as a tool. React calls the same function with `useActionQuery(\"hello\", { name: \"Alex\" })`. Agent-Native also exposes it through HTTP, MCP, A2A, and the CLI. ## Included - **[Agent chat](https://agent-native.com/docs/agent-surfaces):** Let people delegate work, ask questions, and review results in the same UI. - **[Authentication and permissions](https://agent-native.com/docs/authentication):** Control who can access and change shared work. - **[Skills and memory](https://agent-native.com/docs/agent-resources):** Give agents reusable expertise and persistent context. - **[Automations](https://agent-native.com/docs/automations):** Run agent work on schedules or events. - **[Agent teams](https://agent-native.com/docs/agent-teams):** Delegate work to specialist agents in the same workspace or across connected agents. - **[PostgreSQL backend](https://agent-native.com/docs/server-database):** Use PostgreSQL in production and PGlite for local development on any Nitro-compatible host. Bring your LLM, SQL database, tools, and infrastructure. Everything you build stays yours. See Agent-Native in action: https://github.com/user-attachments/assets/ef51644b-6506-46d8-8083-0af7b7e5b65c <br /> ## Open-source agents Start from one of these agents or use it as an example for your own. <br /> <table> <tr> <td width=\"33%\" align=\"center\" valign=\"top\"> <br /> **Clips** <a href=\"https://agent-native.com/apps/clips/\"> <picture> <source me",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "trycua/cua",
+      "url": "https://github.com/trycua/cua",
+      "description": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+      "language": "HTML",
+      "stars": 25805,
+      "forks": 1775,
+      "stars_today": 609,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "apple",
+        "computer-use",
+        "computer-use-agent",
+        "containerization",
+        "cua",
+        "desktop-automation",
+        "hacktoberfest",
+        "lume",
+        "macos",
+        "manus",
+        "operator",
+        "swift",
+        "virtualization",
+        "virtualization-framework",
+        "windows",
+        "windows-sandbox"
+      ],
+      "license": "MIT",
+      "created_at": "2025-01-31T15:02:49Z",
+      "updated_at": "2026-09-22T06:11:28Z",
+      "open_issues": 1035,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <a href=\"https://cua.ai\" target=\"_blank\" rel=\"noopener noreferrer\"> <picture> <source media=\"(prefers-color-scheme: dark)\" alt=\"Cua logo\" width=\"150\" srcset=\"img/logo_white.svg\"> <source media=\"(prefers-color-scheme: light)\" alt=\"Cua logo\" width=\"150\" srcset=\"img/logo_black.svg\"> <img alt=\"Cua logo\" width=\"150\" src=\"img/logo_black.svg\"> </picture> </a> <p align=\"center\"><strong>Give AI agents computers they can use.</strong><br>Cua provides open-source desktop automation, isolated cloud desktops, local macOS VMs, specialist decision models, and benchmarks for evaluating computer-use agents.</p> <p align=\"center\"><strong><a href=\"https://run.cua.ai/?utm_source=github&utm_medium=referral&utm_campaign=fleet_activation&content_id=repo_readme\" target=\"_blank\" rel=\"noopener noreferrer\">Try Cua Fleets now at run.cua.ai</a></strong></p> <p align=\"center\"> <a href=\"https://cua.ai\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://img.shields.io/badge/cua.ai-0ea5e9\" alt=\"cua.ai\"></a> <a href=\"https://discord.gg/mVnXXpdE85\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://img.shields.io/badge/Discord-Join%20Server-10b981?logo=discord&logoColor=white\" alt=\"Discord\"></a> <a href=\"https://x.com/trycua\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://img.shields.io/twitter/follow/trycua?style=social\" alt=\"Twitter\"></a> <a href=\"https://cua.ai/docs\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://img.shields.io/badge/Docs-0ea5e9.svg\" alt=\"Documentation\"></a> <br> <a href=\"https://trendshift.io/repositories/13685\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/13685\" alt=\"trycua%2Fcua | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> </p> </div> ## Choose your path <div align=\"center\"> <table width=\"100%\"> <tr> <td colspan=\"2\" align=\"center\" valign=\"top\" width=\"66.66%\"> <a href=\"#cua-fleets\"> <img src=\"img/card-cua-fleets-wide.gif\" alt=\"Cua Fleets: isolated cloud desktops for your agents\" width=\"100%\"> </a> </td> <td align=\"center\" valign=\"top\" width=\"33.33%\"> <a href=\"https://github.com/trycua/cua/tree/main/libs/cua-s1\"> <img src=\"img/card-cua-s1.gif\" alt=\"CUA-S1: small, specialized models for computer use.\" width=\"100%\"> </a> </td> </tr> <tr> <td align=\"center\" valign=\"top\" width=\"33.33%\"> <a href=\"#cua-driver\"> <img src=\"img/card-cua-driver.gif\" alt=\"Cua Driver: inspect and operate apps on macOS, Windows, and Linux\" width=\"100%\"> </a> </td> <td align=\"center\" valign=\"top\" width=\"33.33%\"> <a href=\"#lume\"> <img src=\"img/card-cua-lume.gif\" alt=\"Lume: local macOS and Linux VMs on Apple Silicon\" width=\"100%\"> </a> </td> <td align=\"center\" valign=\"top\" width=\"33.33%\"> <a href=\"#cua-bench\"> <img src=\"img/card-cua-bench.gif\" alt=\"Cua Bench: create tasks, evaluate agents, and export trajectories\" width=\"100%\"> </a> </td> </tr> </table> </div> - **Cua Fleets:** [Provision a Linux desktop, run a command, and save a screenshot](https://cua.ai/docs/tutorials/your-first-cloud-fleet). - **CUA-S1:** [Explore small, specialized models for computer-use decisions](#cua-s1). - **Cua Driver:** [Operate Calculator and verify its result](https://cua.ai/docs/tutorials/drive-your-first-app). - **Lume:** [Create a Tahoe VM and connect over SSH](https://cua.ai/docs/tutorials/create-your-first-lume-vm). - **Cua Bench:** [Create and verify a simulated task](https://cua.ai/docs/tutorials/your-first-cua-bench-task). Bring your own agent and model, or explore CUA-S1 for specialized decisions. Cua provides the computer and automation tools. [Computer-Use 2.0](https://cua.ai/docs/concepts/what-is-computer-use) describes an agent moving between code, APIs, and graphical interfaces within the same task. ## See Cua Driver in action Two Cua Driver sessions select cells in LibreOffice Calc and objects in Inkscape on an Omarchy desktop while a terminal stays in the foreground. Watch the 50-second demo, then explore [Omarchy on Fleet](https://cua.ai/docs/how-to-g",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": 2,
+      "streak_days": 3
+    },
+    {
+      "rank": 3,
+      "full_name": "Open-Dev-Society/OpenStock",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+      "language": "TypeScript",
+      "stars": 17993,
+      "forks": 2220,
+      "stars_today": 844,
+      "topics": [
+        "coderabbit",
+        "inngest",
+        "nextjs",
+        "shadcn-ui",
+        "stock-market",
+        "tailwindcss"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2025-09-28T18:16:32Z",
+      "updated_at": "2026-09-22T06:14:13Z",
+      "open_issues": 36,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> Ca: B6F3rUqfPfPmHXeMJaVttkrP9tfy5Eq2MUAaubFxpump </p> <p align=\"center\"> <b>New from Open Dev Society:</b> <a href=\"https://github.com/Open-Dev-Society/kitbash\"><b>kitbash</b></a>. Before you build, find out which parts already exist on GitHub. Borrow them, adapt them, or write the rest. </p> <p align=\"center\"> <a href=\"https://www.star-history.com/open-dev-society/openstock\"> <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=rank&theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=rank\" /><img alt=\"Star History Rank\" src=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=rank\" /></picture> <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=trending&theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=trending\" /><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=Open-Dev-Society/OpenStock&type=trending\" /></picture> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/15728?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-15728\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/15728\" alt=\"Open-Dev-Society%2FOpenStock | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/15728?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-15728\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/15728/daily?language=TypeScript\" alt=\"Open-Dev-Society%2FOpenStock | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/15728?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-15728\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/15728/weekly?language=TypeScript\" alt=\"Open-Dev-Society%2FOpenStock | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/15728?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-15728\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/15728/monthly?language=TypeScript\" alt=\"Open-Dev-Society%2FOpenStock | Trendshift\" width=\"250\" height=\"55\"/></a> </p> <div align=\"center\"> <br /> <a href=\"#\" target=\"_blank\"> <img src=\"./public/assets/images/dashboard.png\" alt=\"Project Banner\" /> </a> © Open Dev Society. This project is licensed under AGPL-3.0; if you modify, redistribute, or deploy it (including as a web service), you must release your source code under the same license and credit the original authors. <br /> <br/> <div> <img src=\"https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logoColor=white&logo=next.js&color=000000\" alt=\"Next.js badge\" /> <img src=\"https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6\"/> <img src=\"https://img.shields.io/badge/-Tailwind%20CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=38B2AC\"/> <img src=\"https://img.shields.io/badge/-shadcn/ui-black?style=for-the-badge&logoColor=white&logo=shadcnui&color=000000\"/> <img src=\"https://img.shields.io/badge/-Radix%20UI-black?style=for-the-badge&logoColor=white&logo=radixui&color=000000\"/> <img src=\"https://img.shields.io/badge/-Better%20Auth-black?style=for-the-badge&logoColor=white&logo=betterauth&color=000000\"/> <img src=\"https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=00A35C\"/> <img src=\"https://img.shields.io/badge/-Inngest",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 7,
+      "streak_days": 3
+    },
+    {
+      "rank": 4,
+      "full_name": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "description": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+      "language": "Rust",
+      "stars": 7828,
+      "forks": 527,
+      "stars_today": 167,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-05-21T23:23:51Z",
+      "updated_at": "2026-09-22T06:16:17Z",
+      "open_issues": 26,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/logo-dark.png\"> <img alt=\"ai-memory\" src=\"docs/logo-light.png\" width=\"480\"> </picture> </p> > Long-term memory for AI coding agents. Quit Claude Code mid-task, > start OpenAI Codex in the same directory, continue without > re-explaining the architecture, the failed approaches, or the open > questions. [![Release](https://img.shields.io/github/v/release/akitaonrails/ai-memory)](https://github.com/akitaonrails/ai-memory/releases/latest) [![Rust](https://img.shields.io/badge/rust-1.95+-blue)](rust-toolchain.toml) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE) ## Why ai-memory Your coding agent already has a memory feature. Claude Code takes its own notes, Cursor remembers some things, and every platform is adding more. All of them share the same walls: the notes live on one machine, belong to one agent, and vanish from view the moment you switch tools — or teammates. ai-memory is what's on the other side of those walls. - **It follows you across agents.** Twenty-plus harnesses — Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Grok, Devin, Kimi, Kiro, and more — feed one shared memory. Quit Claude Code mid-task, open Codex in the same directory, and the next agent picks up a real handoff: where you left off, what failed, what's still open. Handoffs are a protocol here, not a convention — typed, owned, claimed exactly once. - **It follows you across machines.** Memory lives in a server you run — on the same laptop, a homelab box, or wherever — so the project you left on the desktop is the project you resume on the laptop. Same knowledge, same open questions. - **It works for a team.** Point everyone at one server and what one person's sessions learn, everyone's agents can retrieve. Knowledge is shared per project; personal handoffs stay personal. Multi-user auth, per-person attribution, and an audit log are built in — not a paid tier. - **Your memory is plain markdown.** The source of truth is a git-backed wiki of ordinary `.md` files: `grep` it, open it in Obsidian, edit it by hand, `rsync` it. The database is a derived index that can always be rebuilt from the files. No vector store to babysit, nothing held hostage in a binary blob. - **It captures the work itself, silently.** Lifecycle hooks record what actually happened — prompts, tool calls, session boundaries — sanitized at a typed privacy boundary before anything is stored, then consolidated into readable pages. No \"remember this\" ceremony. And the default path uses **zero LLM calls**: capture, search, and handoffs all work with no API key at all. - **It tells you the truth about itself.** One self-contained binary. Purge commands that say exactly what \"deleted\" means. A measured write ceiling (~700/s) instead of a guessed one. An audit log of every mutation. Boring, in the way infrastructure should be. ## How it works ``` capture ──▶ consolidate ──▶ recall ──▶ handoff hooks session-end search next agent, observe summaries as + brief any harness silently wiki pages injection ``` Agents emit sanitized observations through lifecycle hooks as you work. At session end, observations become coherent markdown pages in the project's wiki (optionally LLM-written; useful even without). The next session — any agent, any machine — gets a bounded brief and can search everything: full-text, entities, links, and (optionally) vectors, fused into one ranking. Cross-agent handoffs carry the baton explicitly. The full design, including the invariants that keep multi-user and multi-session use safe, is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). ## Support matrix Every row below is a first-party integration — MCP registration, lifecycle hooks, or both — kept honest by CI. The full matrix with per-agent notes and caveats is in [`docs/support-matrix.md`](docs/support-matrix.md). | Area | Status | | --- | --- | | Linux | Supported | | macOS | Supported | | Windows via WSL2 | Suppor",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "coder/coder",
+      "url": "https://github.com/coder/coder",
+      "description": "Secure environments for developers and their agents",
+      "language": "Go",
+      "stars": 16505,
+      "forks": 1569,
+      "stars_today": 460,
+      "topics": [
+        "agents",
+        "dev-tools",
+        "development-environment",
+        "go",
+        "golang",
+        "ide",
+        "jetbrains",
+        "remote-development",
+        "terraform",
+        "vscode"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2021-12-22T06:08:52Z",
+      "updated_at": "2026-09-22T06:12:36Z",
+      "open_issues": 1082,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- markdownlint-disable MD041 --> <div align=\"center\"> <a href=\"https://coder.com#gh-light-mode-only\"> <img src=\"./docs/images/logo-black.png\" alt=\"Coder Logo Light\" style=\"width: 128px\"> </a> <a href=\"https://coder.com#gh-dark-mode-only\"> <img src=\"./docs/images/logo-white.png\" alt=\"Coder Logo Dark\" style=\"width: 128px\"> </a> <h1> Self-Hosted Cloud Development Environments and AI Agents </h1> <a href=\"https://coder.com#gh-light-mode-only\"> <img src=\"./docs/images/banner-black.png\" alt=\"Coder Banner Light\" style=\"width: 650px\"> </a> <a href=\"https://coder.com#gh-dark-mode-only\"> <img src=\"./docs/images/banner-white.png\" alt=\"Coder Banner Dark\" style=\"width: 650px\"> </a> <br> <br> [Quickstart](#quickstart) | [Docs](https://coder.com/docs) | [Why Coder](https://coder.com/docs/about#why-coder) | [Premium](https://coder.com/pricing#compare-plans) [![discord](https://img.shields.io/discord/747933592273027093?label=discord)](https://cdr.co/discord-Y6fMxGdNRg) [![release](https://img.shields.io/github/v/release/coder/coder)](https://github.com/coder/coder/releases/latest) [![godoc](https://pkg.go.dev/badge/github.com/coder/coder.svg)](https://pkg.go.dev/github.com/coder/coder) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9511/badge)](https://www.bestpractices.dev/projects/9511) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/coder/coder/badge)](https://scorecard.dev/viewer/?uri=github.com%2Fcoder%2Fcoder) [![license](https://img.shields.io/github/license/coder/coder)](./LICENSE) </div> [Coder](https://coder.com) is a self-hosted platform for cloud development environments and AI coding agents. Workspaces are defined with Terraform, connected through a secure Wireguard® tunnel, and automatically shut down when not used. Coder Agents runs a native AI coding agent whose loop executes in the control plane on your infrastructure, with no API keys in workspaces. - Define cloud development environments in Terraform - EC2 VMs, Kubernetes Pods, Docker Containers, etc. - Automatically shutdown idle resources to save on costs - Onboard developers in seconds instead of days - Delegate coding work to AI agents on your infrastructure - Bring any model (Anthropic, OpenAI, Google, Bedrock, self-hosted) - No LLM credentials in workspaces, user identity on every action - Centralized model governance, cost tracking, and audit logging <p align=\"center\"> <img src=\"./docs/images/hero-image.png\" alt=\"Coder platform showing templates and a running workspace\"> </p> ## Quickstart > Check out our [install guides](https://coder.com/docs/install) for other methods and a complete tutorial. Try Coder with the [install script](https://github.com/coder/coder/blob/main/install.sh) on Linux and macOS, or grab the latest binary or installer from [GitHub Releases](https://github.com/coder/coder/releases/) on Windows: ```shell curl -L https://coder.com/install.sh | sh ``` Start the server and open [http://localhost:3000](http://localhost:3000) to create your initial user, create a Docker template, and provision your first workspace: ```shell coder server ``` For a production deployment, add a PostgreSQL database (version 13 or later) and an external access URL, and see our [validated architectures](https://coder.com/docs/admin/infrastructure/validated-architectures) for sizing and infrastructure guidance: ```shell coder server --postgres-url <url> --access-url <url> ``` Without these flags, Coder uses a built-in database and sets up a `*.try.coder.app` access URL for evaluation. Use `coder --help` for the full list of flags and environment variables. ## Documentation Browse the [documentation](https://coder.com/docs) or visit a specific section below: - [**Workspaces**](https://coder.com/docs/user-guides/workspace-management): Workspaces contain the IDEs, dependencies, and configuration information needed for software development - [**Templates**](https://coder.com/docs/admin/templates): Templates are written in Terrafo",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 11,
+      "rank_change": 6,
+      "streak_days": 5
+    },
+    {
+      "rank": 6,
+      "full_name": "anthropics/financial-services",
+      "url": "https://github.com/anthropics/financial-services",
+      "description": "",
+      "language": "Python",
+      "stars": 35932,
+      "forks": 5274,
+      "stars_today": 424,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-02-23T19:24:50Z",
+      "updated_at": "2026-09-22T06:14:46Z",
+      "open_issues": 211,
+      "default_branch": "main",
+      "readme_excerpt": "# Claude for Financial Services Reference agents, skills, and data connectors for the financial-services workflows we see most — investment banking, equity research, private equity, and wealth management. Everything here is available **two ways from one source**: install it as a [Claude Cowork](https://claude.com/product/cowork) plugin, or deploy it through the [Claude Managed Agents API](https://docs.claude.com/en/api/managed-agents) behind your own workflow engine. Same system prompt, same skills — you choose where it runs. > [!IMPORTANT] > Nothing in this repository constitutes investment, legal, tax, or accounting advice. These agents draft analyst work product — models, memos, research notes, reconciliations — for review by a qualified professional. They do not make investment recommendations, execute transactions, bind risk, post to a ledger, or approve onboarding; every output is staged for human sign-off. You are responsible for verifying outputs and for compliance with the laws and regulations that apply to your firm. What's in the repo: - **[Agents](#agents)** — named, end-to-end workflow agents (Pitch Agent, Market Researcher, GL Reconciler, …). Each ships as a Cowork plugin **and** as a [Claude Managed Agent template](./managed-agent-cookbooks) you deploy via `/v1/agents`. - **[Vertical plugins](#vertical-plugins)** — the underlying skills, slash commands, and data connectors, bundled by FSI vertical. Install these on their own if you just want `/comps`, `/dcf`, `/earnings` and the connectors without a full agent. ## Agents Each agent is named for the workflow it runs. They're starting points: install the ones that match your work, then tune the prompts, skills, and connectors to how your firm does it. Each agent plugin is **self-contained** — it bundles the skills it uses, so installing the agent is all you need. | Function | Agent | What it does | |---|---|---| | **Coverage & advisory** | **[Pitch Agent](./plugins/agent-plugins/pitch-agent)** | Comps, precedents, LBO → branded pitch deck, end to end | | | **[Meeting Prep Agent](./plugins/agent-plugins/meeting-prep-agent)** | Briefing pack before every client meeting | | **Research & modeling** | **[Market Researcher](./plugins/agent-plugins/market-researcher)** | Sector or theme → industry overview, competitive landscape, peer comps, ideas shortlist | | | **[Earnings Reviewer](./plugins/agent-plugins/earnings-reviewer)** | Earnings call + filings → model update → note draft | | | **[Model Builder](./plugins/agent-plugins/model-builder)** | DCF, LBO, 3-statement, comps — live in Excel | | **Fund admin & finance ops** | **[Valuation Reviewer](./plugins/agent-plugins/valuation-reviewer)** | Ingests GP packages, runs valuation template, stages LP reporting | | | **[GL Reconciler](./plugins/agent-plugins/gl-reconciler)** | Finds breaks, traces root cause, routes for sign-off | | | **[Month-End Closer](./plugins/agent-plugins/month-end-closer)** | Accruals, roll-forwards, variance commentary | | | **[Statement Auditor](./plugins/agent-plugins/statement-auditor)** | Audits LP statements before distribution | | **Operations & onboarding** | **[KYC Screener](./plugins/agent-plugins/kyc-screener)** | Parses onboarding docs, runs the rules engine, flags gaps | For Managed Agent deployment — `agent.yaml`, leaf-worker subagents, steering-event examples, and per-agent security notes — see **[managed-agent-cookbooks/](./managed-agent-cookbooks)**. ## Repository Layout ``` plugins/ agent-plugins/ # Named agents — one self-contained plugin each vertical-plugins/ # Skill + command bundles by FSI vertical, plus MCP connectors partner-built/ # Partner-authored plugins (LSEG, S&P Global) managed-agent-cookbooks/ # Claude Managed Agent cookbooks — one dir per agent claude-for-msft-365-install/ # Admin tooling to provision the Claude Microsoft 365 add-in scripts/ # deploy-managed-agent.sh · check.py · validate.py · orchestrate.py · sync-agent-skills.py ``` ## Getting Started ### Cowork",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 7,
+      "full_name": "cloudflare/quiche",
+      "url": "https://github.com/cloudflare/quiche",
+      "description": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+      "language": "Rust",
+      "stars": 12414,
+      "forks": 1137,
+      "stars_today": 32,
+      "topics": [
+        "http3",
+        "network-programming",
+        "protocol",
+        "quic",
+        "rust"
+      ],
+      "license": "BSD-2-Clause",
+      "created_at": "2018-09-29T18:22:05Z",
+      "updated_at": "2026-09-22T06:11:27Z",
+      "open_issues": 365,
+      "default_branch": "master",
+      "readme_excerpt": "![quiche](quiche.svg) [![crates.io](https://img.shields.io/crates/v/quiche.svg)](https://crates.io/crates/quiche) [![docs.rs](https://docs.rs/quiche/badge.svg)](https://docs.rs/quiche) [![license](https://img.shields.io/github/license/cloudflare/quiche.svg)](https://opensource.org/licenses/BSD-2-Clause) ![build](https://img.shields.io/github/actions/workflow/status/cloudflare/quiche/stable.yml?branch=master) [quiche] is an implementation of the QUIC transport protocol and HTTP/3 as specified by the [IETF]. It provides a low level API for processing QUIC packets and handling connection state. The application is responsible for providing I/O (e.g. sockets handling) as well as an event loop with support for timers. For more information on how quiche came about and some insights into its design you can read a [post] on Cloudflare's blog that goes into some more detail. [quiche]: https://docs.quic.tech/quiche/ [ietf]: https://quicwg.org/ [post]: https://blog.cloudflare.com/enjoy-a-slice-of-quic-and-rust/ Who uses quiche? ---------------- ### Cloudflare quiche powers Cloudflare edge network's [HTTP/3 support][cloudflare-http3]. The [cloudflare-quic.com](https://cloudflare-quic.com) website can be used for testing and experimentation. ### Android Android's DNS resolver uses quiche to [implement DNS over HTTP/3][android-http3]. ### curl quiche can be [integrated into curl][curl-http3] to provide support for HTTP/3. [cloudflare-http3]: https://blog.cloudflare.com/http3-the-past-present-and-future/ [android-http3]: https://security.googleblog.com/2022/07/dns-over-http3-in-android.html [curl-http3]: https://github.com/curl/curl/blob/master/docs/HTTP3.md#quiche-version Getting Started --------------- ### Command-line apps Before diving into the quiche API, here are a few examples on how to use the quiche tools provided as part of the [quiche-apps](apps/) crate. These are not suitable for production environments; see [disclaimers and notes](#disclaimers-and-notes). After cloning the project according to the command mentioned in the [building](#building) section, the client can be run as follows: ```bash $ cargo run --bin quiche-client -- https://cloudflare-quic.com/ ``` while the server can be run as follows: ```bash $ cargo run --bin quiche-server -- --cert apps/src/bin/cert.crt --key apps/src/bin/cert.key ``` (note that the certificate provided is self-signed and should not be used in production) Use the `--help` command-line flag to get a more detailed description of each tool's options. ### Configuring connections The first step in establishing a QUIC connection using quiche is creating a [`Config`] object: ```rust let mut config = quiche::Config::new(quiche::PROTOCOL_VERSION)?; config.set_application_protos(&[b\"example-proto\"]); // Additional configuration specific to application and use case... ``` The [`Config`] object controls important aspects of the QUIC connection such as QUIC version, ALPN IDs, flow control, congestion control, idle timeout and other properties or features. QUIC is a general-purpose transport protocol and there are several configuration properties where there is no reasonable default value. For example, the permitted number of concurrent streams of any particular type is dependent on the application running over QUIC, and other use-case specific concerns. quiche defaults several properties to zero, applications most likely need to set these to something else to satisfy their needs using the following: - [`set_initial_max_streams_bidi()`] - [`set_initial_max_streams_uni()`] - [`set_initial_max_data()`] - [`set_initial_max_stream_data_bidi_local()`] - [`set_initial_max_stream_data_bidi_remote()`] - [`set_initial_max_stream_data_uni()`] [`Config`] also holds TLS configuration. This can be changed by mutators on the an existing object, or by constructing a TLS context manually and creating a configuration using [`with_boring_ssl_ctx_builder()`]. A configuration object can be shared among multiple connections. ### C",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "mvt-project/mvt",
+      "url": "https://github.com/mvt-project/mvt",
+      "description": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+      "language": "Python",
+      "stars": 13696,
+      "forks": 1332,
+      "stars_today": 169,
+      "topics": [
+        "android",
+        "forensics",
+        "forensics-tools",
+        "ios",
+        "mobile",
+        "security"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2021-07-16T05:50:44Z",
+      "updated_at": "2026-09-22T06:14:11Z",
+      "open_issues": 54,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"https://docs.mvt.re/en/latest/mvt.png\" width=\"200\" /> </p> # Mobile Verification Toolkit > [!IMPORTANT] > We recently merged the \"v3\" branch. This introduced breaking changes. If you relied on mvt output in other scripts They might have broken. More details: https://github.com/mvt-project/mvt/issues/757 [![](https://img.shields.io/pypi/v/mvt)](https://pypi.org/project/mvt/) [![Documentation Status](https://readthedocs.org/projects/mvt/badge/?version=latest)](https://docs.mvt.re/en/latest/?badge=latest) [![CI](https://github.com/mvt-project/mvt/actions/workflows/tests.yml/badge.svg)](https://github.com/mvt-project/mvt/actions/workflows/tests.yml) [![Downloads](https://pepy.tech/badge/mvt)](https://pepy.tech/project/mvt) Mobile Verification Toolkit (MVT) is a collection of utilities to simplify and automate the process of gathering forensic traces helpful to identify a potential compromise of Android and iOS devices. It has been developed and released by the [Amnesty International Security Lab](https://securitylab.amnesty.org) in July 2021 in the context of the [Pegasus Project](https://forbiddenstories.org/about-the-pegasus-project/) along with [a technical forensic methodology](https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/). It continues to be maintained by Amnesty International and other contributors. > **Note** > MVT is a forensic research tool intended for technologists and investigators. It requires understanding digital forensics and using command-line tools. This is not intended for end-user self-assessment. If you are concerned with the security of your device please seek reputable expert assistance. > ### Indicators of Compromise MVT supports using public [indicators of compromise (IOCs)](https://github.com/mvt-project/mvt-indicators) to scan mobile devices for potential traces of targeting or infection by known spyware campaigns. This includes IOCs published by [Amnesty International](https://github.com/AmnestyTech/investigations/) and other research groups. > **Warning** > Public indicators of compromise are insufficient to determine that a device is \"clean\", and not targeted with a particular spyware tool. Reliance on public indicators alone can miss recent forensic traces and give a false sense of security. > > Reliable and comprehensive digital forensic support and triage requires access to non-public indicators, research and threat intelligence. > >Such support is available to civil society through [Amnesty International's Security Lab](https://securitylab.amnesty.org/get-help/?c=mvt_docs) or through our forensic partnership with [Access Now’s Digital Security Helpline](https://www.accessnow.org/help/). More information about using indicators of compromise with MVT is available in the [documentation](https://docs.mvt.re/en/latest/iocs/). ## Installation MVT can be installed from sources or from [PyPI](https://pypi.org/project/mvt/) (you will need some dependencies, check the [documentation](https://docs.mvt.re/en/latest/install/)): ``` pip3 install mvt ``` You can also install MVT from PyPI with [uv](https://docs.astral.sh/uv/). First, install uv: ```bash curl -LsSf https://astral.sh/uv/install.sh | sh ``` Then install MVT as a command-line tool: ```bash uv tool install mvt ``` For alternative installation options and known issues, please refer to the [documentation](https://docs.mvt.re/en/latest/install/) as well as [GitHub Issues](https://github.com/mvt-project/mvt/issues). ## Usage MVT provides three commands: `mvt-ios` and `mvt-android` analyse acquisitions from devices of that platform, and `mvt` hosts what belongs to neither: `version`, `completion`, `plugins` and `download-iocs` (`version` and `download-iocs` remain available on the platform commands for now). Running `mvt` on its own shows the installed version, update notices and the available commands. [Check out the documentation to learn how to use them!](ht",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "description": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+      "language": "Python",
+      "stars": 8448,
+      "forks": 1583,
+      "stars_today": 250,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-tools",
+        "ai-video",
+        "ai-video-editor",
+        "auto",
+        "auto-highlight",
+        "highlight",
+        "llm",
+        "video",
+        "video-editing",
+        "video-processing",
+        "videos"
+      ],
+      "license": "MIT",
+      "created_at": "2025-07-08T04:51:15Z",
+      "updated_at": "2026-09-22T06:16:31Z",
+      "open_issues": 25,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"src-tauri/icons/128x128.png\" alt=\"AutoClip\" width=\"80\" height=\"80\"> # AutoClip **把长视频变成值得分享的精彩片段。** **简体中文** · [English](README-EN.md) · [日本語](README-JA.md) · [한국어](README-KO.md) · [Español](README-ES.md) · [Português](README-PT.md) · [Русский](README-RU.md) · [Français](README-FR.md) [![GitHub release](https://img.shields.io/github/v/release/zhouxiaoka/autoclip?style=flat-square)](https://github.com/zhouxiaoka/autoclip/releases/latest) [![GitHub stars](https://img.shields.io/github/stars/zhouxiaoka/autoclip?style=flat-square)](https://github.com/zhouxiaoka/autoclip/stargazers) [![GitHub forks](https://img.shields.io/github/forks/zhouxiaoka/autoclip?style=flat-square)](https://github.com/zhouxiaoka/autoclip/forks) [![GitHub issues](https://img.shields.io/github/issues/zhouxiaoka/autoclip?style=flat-square)](https://github.com/zhouxiaoka/autoclip/issues) [![License: MIT](https://img.shields.io/github/license/zhouxiaoka/autoclip?style=flat-square)](LICENSE) [项目网站](https://zhouxiaoka.github.io/autoclip_intro/) · [讨论](https://github.com/zhouxiaoka/autoclip/discussions) · [反馈问题](https://github.com/zhouxiaoka/autoclip/issues) **桌面安装包: [macOS · Apple Silicon](https://github.com/zhouxiaoka/autoclip/releases/latest) · [Windows · x64](https://github.com/zhouxiaoka/autoclip/releases/latest)** [安装与第一次出片](docs/USER_INSTALLATION_GUIDE.md) · [完整排错指南](docs/FAQ.md) </div> 自 v1.3.1 起，产品界面、官网和 README 均支持中、英、日、韩、西、葡、俄、法。顶栏可切换界面语言或跟随系统；用户素材和生成内容保留原文。 AutoClip 用 AI 分析视频字幕、定位高光、生成标题，并自动剪出片段与合集。适合访谈、播客、课程和直播回放，提供桌面应用、Docker Web 界面和 CLI / MCP 三种使用方式。 ## 界面预览 ![AutoClip v1.3.0 — local video import](docs/images/import-local.jpg) v1.3.0 真实 Web 界面：在文件导入区添加本地视频，可同时提供 SRT 字幕。 ## 社区成就 <p align=\"center\"> <a href=\"https://trendshift.io/repositories/25801\"><img src=\"https://trendshift.io/api/badge/repositories/25801\" alt=\"AutoClip — GitHub Trending\" width=\"250\" height=\"55\"></a> <a href=\"https://trendshift.io/repositories/25801\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/25801/daily?language=Python\" alt=\"AutoClip — Trendshift Python daily ranking\" width=\"250\" height=\"55\"></a> <a href=\"https://trendshift.io/repositories/25801\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/25801/daily\" alt=\"AutoClip — Trendshift daily ranking, all languages\" width=\"250\" height=\"55\"></a> </p> 以下徽章由 Trendshift 提供，点击可查看 AutoClip 的上榜记录。GitHub Trending 与 Trendshift 是不同榜单；徽章展示平台记录的成就，不代表当前实时排名。 ## 你可以做什么 | 能力 | 说明 | | --- | --- | | 导入素材 | 支持本地视频、YouTube 与 B 站链接，可附带 SRT 字幕。 | | 发现高光 | 从字幕提取大纲、话题时间线、精彩度评分和片段标题。 | | 剪辑与合集 | 自动生成视频切片，组合推荐合集，也可手动调整顺序。 | | 发布导出 | 提供抖音、小红书、YouTube Shorts 和 B 站导出预设，支持烧录字幕与标题卡。 | | 自由选择模型 | 支持通义千问、OpenAI 兼容接口、Gemini、硅基流动，以及 Ollama / LM Studio 本地模型。 | | 接入自动化 | 通过 CLI 批量编排，或让支持 MCP 的客户端调用同一条处理流水线。 | > 导入视频 → 准备字幕 / 语音转写 → AI 分析与评分 → 生成切片与合集 → 导出成片 ## 快速开始 ### 1. 桌面版 从 [GitHub Releases](https://github.com/zhouxiaoka/autoclip/releases/latest) 下载适合你的安装包： | 平台 | 安装方式 | | --- | --- | | macOS · Apple Silicon | `.dmg` | | Windows 10 / 11 · x64 | `-setup.exe` | | Intel Mac / Linux | 使用下方 Docker 或 CLI | 桌面安装包内置 Python 和 FFmpeg。实际支持的平台与首次启动说明以对应 Release 为准。安装后先在设置中选择模型提供商、测试连接并保存，再导入视频。 ### 2. Docker / Web 需要 Docker 和 Docker Compose v2。以下命令在仓库根目录执行： ```bash git clone https://github.com/zhouxiaoka/autoclip.git cd autoclip ``` ```bash cp env.example .env ``` 启动前编辑 `.env`：选择 `LLM_PROVIDER`，填写对应服务的 API Key 和模型名；也可以启动后在设置页配置。 ```bash mkdir -p data logs uploads docker compose up -d --build ``` 打开 [Web 界面](http://localhost:3000)；[API 文档](http://localhost:8000/docs) 在后端启动后可用。部署细节见 [Docker 指南](DOCKER.md)（中文）。 Linux 上若绑定目录出现权限错误，先执行以下命令修正项目数据目录的归属，再重新启动服务： ```bash docker compose run --rm --no-deps --user root --entrypoint sh autoclip -c 'chown -R autoclip:autoclip /app/data /app/logs /app/uploads' docker compose up -d ``` ### 3. CLI / MCP 需要 Python 3.10+（建议 3.11）和 PATH 中可用的 FFmpeg。以下安装示例使用 macOS / Linux shell；Windows PowerShell 用 `venv\\Scripts\\Activate.ps1` 激活虚拟环境。CLI 本地处理不需要 Redis。 ```bash git clone https://g",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "ruanyf/weekly",
+      "url": "https://github.com/ruanyf/weekly",
+      "description": "科技爱好者周刊，每周五发布",
+      "language": "",
+      "stars": 104203,
+      "forks": 4458,
+      "stars_today": 182,
+      "topics": [],
+      "license": "",
+      "created_at": "2018-10-13T12:36:07Z",
+      "updated_at": "2026-09-22T06:16:11Z",
+      "open_issues": 9161,
+      "default_branch": "master",
+      "readme_excerpt": "# 科技爱好者周刊 记录每周值得分享的科技内容，周五发布。 欢迎投稿文章/软件/资源，请[提交 issue](https://github.com/ruanyf/weekly/issues) 。 > P.S. 讨论区的[《谁在招人》](https://github.com/ruanyf/weekly/issues/11434)，是一个免费的程序员招聘帖，提供大量就业信息，欢迎发布工作/实习岗位。 ## 2026 **九月** - 第 413 期：[再见了，React Native](docs/issue-413.md) - 第 412 期：[禁止 issue，只用 PR](docs/issue-412.md) - 第 411 期：[OpenClaw 2.0 是一个缩影](docs/issue-411.md) **八月** - 第 410 期：[你需要知道的 AI 三种机制](docs/issue-410.md) - 第 409 期：[程序员的职业未来](docs/issue-409.md) - 第 408 期：[你需要知道的 AI 缓存知识](docs/issue-408.md) - 第 407 期：[国家为什么需要开源软件？](docs/issue-407.md) **七月** - 第 406 期：[道可，道非，常道](docs/issue-406.md) - 第 405 期：[资源，社会公平与算力](docs/issue-405.md) - 第 404 期：[你需要知道的 AI 内存知识](docs/issue-404.md) - 第 403 期：[为什么 Dropbox 不成功](docs/issue-403.md) - 第 402 期：[我在智念 AI 的日子（小说）](docs/issue-402.md) **六月** - 第 401 期：[如何赚到10亿美元](docs/issue-401.md) - 第 400 期：[rsync 的争论](docs/issue-400.md) - 第 399 期：[中国 AI 大厂访问记](docs/issue-399.md) **五月** - 第 398 期：[Token 费用难以负担](docs/issue-398.md) - 第 397 期：[财富正在向 AI 集中](docs/issue-397.md) - 第 396 期：[互联网通信的替代方案](docs/issue-396.md) - 第 395 期：[软件开发的第三种方式](docs/issue-395.md) **四月** - 第 394 期：[第二次 API 开放浪潮](docs/issue-394.md) - 第 393 期：[脑腐状态](docs/issue-393.md) - 第 392 期：[axios 投毒与好莱坞式骗术](docs/issue-392.md) - 第 391 期：[AI 的贫富分化](docs/issue-391.md) **三月** - 第 390 期：[没有语料，大模型就是智障](docs/issue-390.md) - 第 389 期：[未来如何招聘程序员](docs/issue-389.md) - 第 388 期：[测试是新的护城河](docs/issue-388.md) - 第 387 期：[你是领先的](docs/issue-387.md) **二月** - 第 386 期：[当外卖员接入 AI](docs/issue-386.md) - 第 385 期：[马斯克害怕中国车企吗？](docs/issue-385.md) - 第 384 期：[为什么软件股下跌](docs/issue-384.md) **一月** - 第 383 期：[你是第几级 AI 编程](docs/issue-383.md) - 第 382 期：[独立软件的黄昏](docs/issue-382.md) - 第 381 期：[中国 AI 大模型领导者在想什么](docs/issue-381.md) - 第 380 期：[为什么人们拥抱“不对称收益”](docs/issue-380.md) ## 2025 **十二月** - 第 379 期：[《硅谷钢铁侠》摘录](docs/issue-379.md) - 第 378 期：[预测是新的互联网热点](docs/issue-378.md) - 第 377 期：[14万美元的贫困线](docs/issue-377.md) - 第 376 期：[太空数据中心的争议](docs/issue-376.md) **十一月** - 第 375 期：[一扇门的 Bug](docs/issue-375.md) - 第 374 期：[6GHz 的问题](docs/issue-374.md) - 第 373 期：[数据模型是新产品的核心](docs/issue-373.md) - 第 372 期：[软件界面如何设计](docs/issue-372.md) **十月** - 第 371 期：[一个乐观主义者的专访](docs/issue-371.md) - 第 370 期：[正确的代码高亮](docs/issue-370.md) - 第 369 期：[Tim 与罗永浩的对谈](docs/issue-369.md) - 第 368 期：[不要这样管理软件团队](docs/issue-368.md) **九月** - 第 367 期：[Nano Banana 的几个妙用](docs/issue-367.md) - 第 366 期：[旧金山疯狂的 AI 广告](docs/issue-366.md) - 第 365 期：[流量变现正在崩塌](docs/issue-365.md) - 第 364 期：[最难还原的魔方](docs/issue-364.md) **八月** - 第 363 期：[最好懂的神经网络解释](docs/issue-363.md) - 第 362 期：[GitHub 工程师谈系统设计](docs/issue-362.md) - 第 361 期：[暗网 Tor 安全吗](docs/issue-361.md) - 第 360 期：[Dan Wang 的新书](docs/issue-360.md) - 第 359 期：[Palantir 值得关注](docs/issue-359.md) **七月** - 第 358 期：[如何拯救一家濒临倒闭的创业公司](docs/issue-358.md) - 第 357 期：[稳定币的博弈](docs/issue-357.md) - 第 356 期：[公司强推 AI 编程，我该怎么办](docs/issue-356.md) - 第 355 期：[两本《芯片战争》](docs/issue-355.md) **六月** - 第 354 期：[8000mAh 手机电池，说明了什么？](docs/issue-354.md) - 第 353 期：[苹果的“液态玻璃”是为了 AR](docs/issue-353.md) - 第 352 期：[Bug 追踪系统的正确样子](docs/issue-352.md) - 第 351 期：[GitHub Issues（几乎）是最好的笔记应用](docs/issue-351.md) **五月** - 第 350 期：[Java 三十周年](docs/issue-350.md) - 第 349 期：[神经网络算法的发明者](docs/issue-349.md) - 第 348 期：[李飞飞，从移民到 AI 明星](docs/issue-348.md) - 第 347 期：[冷启动的破解之道](docs/issue-347.md) **四月** - 第 346 期：[未来就是永恒感的丧失](docs/issue-346.md) - 第 345 期：[HDMI 2.2 影音可能到头了](docs/issue-345.md) - 第 344 期：[制造业正在“零工化”](docs/issue-344.md) **三月** - 第 343 期：[如何阻止 AI 爬虫](docs/issue-343.md) - 第 342 期：[面试的 AI 作弊——用数字人去面试](docs/issue-342.md) - 第 341 期：[低代码编程，恐怕不会成功](docs/issue-341.md) - 第 340 期：[技术炒作三十年](docs/issue-340.md) **二月** - 第 339 期：[代币是什么](docs/issue-339.md) - 第 338 期：[重新思考 6G](docs/issue-338.md) - 第 337 期：[互联网创业几乎没了](docs/issue-337.md) - 第 336 期：[面对 AI，互联网正在衰落](docs/issue-336.md) **一月** - 第 335 期：[年底的未来已来](docs/issue-335.md) - 第 334 期：[年终笔记四则](docs/issue-334.md) - 第 333 期：[一切都要支付两次](docs/issue-333.md) - 第 332 期：[西蒙·威利森的年终总结，梁文锋的访谈](docs/issue-332.md) ## 2024 **十二月** - 第 331 期：[你可能是一个 NPC](docs/issue-331.md) - 第 330 期：[李开复梳理人工智能](docs/issue-330.md) - 第 3",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "Crosstalk-Solutions/project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+      "language": "TypeScript",
+      "stars": 37976,
+      "forks": 3775,
+      "stars_today": 394,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2025-06-24T15:35:01Z",
+      "updated_at": "2026-09-22T06:16:08Z",
+      "open_issues": 96,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"admin/public/project_nomad_logo.webp\" width=\"200\" height=\"200\"/> # Project NOMAD ### Knowledge That Never Goes Offline [![Website](https://img.shields.io/badge/Website-projectnomad.us-blue)](https://www.projectnomad.us) [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2)](https://discord.com/invite/crosstalksolutions) [![Benchmark](https://img.shields.io/badge/Benchmark-Leaderboard-green)](https://benchmark.projectnomad.us) </div> --- Project NOMAD is a self-contained, offline-first knowledge and education server packed with critical tools, knowledge, and AI to keep you informed and empowered — anytime, anywhere. ## Installation & Quickstart Project NOMAD can be installed on any Debian-based operating system (we recommend Ubuntu 26.04 LTS; 24.04 LTS and Debian 12 are also supported). Installation is completely terminal-based, and all tools and resources are designed to be accessed through the browser, so there's no need for a desktop environment if you'd rather setup NOMAD as a \"server\" and access it through other clients. *Note: sudo/root privileges are required to run the install script* ### Quick Install (Debian-based OS Only) ```bash sudo apt-get update && \\ sudo apt-get install -y curl && \\ curl -fsSL https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/install/install_nomad.sh \\ -o install_nomad.sh && \\ sudo bash install_nomad.sh ``` Project NOMAD is now installed on your device! Open a browser and navigate to `http://localhost:8080` (or `http://DEVICE_IP:8080`) to start exploring! For a complete step-by-step walkthrough (including Ubuntu installation), see the [Installation Guide](https://www.projectnomad.us/install). For Windows users, see the [WSL2 install guide](https://www.projectnomad.us/install/wsl2) — community-supported path covering native Docker and Docker Desktop install routes. ### Advanced Installation For more control over the installation process, copy and paste the [Docker Compose template](https://raw.githubusercontent.com/Crosstalk-Solutions/project-nomad/refs/heads/main/install/management_compose.yaml) into a `docker-compose.yml` file and customize it to your liking (be sure to replace any placeholders with your actual values). Then, run `docker compose up -d` to start the Command Center and its dependencies. Note: this method is recommended for advanced users only, as it requires familiarity with Docker and manual configuration before starting. ## How It Works NOMAD is a management UI (\"Command Center\") and API that orchestrates a collection of containerized tools and resources via [Docker](https://www.docker.com/). It handles installation, configuration, and updates for everything — so you don't have to. **Built-in capabilities include:** - **AI Chat with Knowledge Base** — local AI chat powered by [Ollama](https://ollama.com/) or you can use OpenAI API compatible software such as LM Studio or llama.cpp, with document upload and semantic search (RAG via [Qdrant](https://qdrant.tech/)) - **Information Library** — offline Wikipedia, medical references, ebooks, and more via [Kiwix](https://kiwix.org/) - **Education Platform** — Khan Academy courses with progress tracking via [Kolibri](https://learningequality.org/kolibri/) - **Offline Maps** — downloadable regional maps via [ProtoMaps](https://protomaps.com) - **Data Tools** — encryption, encoding, and analysis via [CyberChef](https://gchq.github.io/CyberChef/) - **Notes** — local note-taking via [FlatNotes](https://github.com/dullage/flatnotes) - **System Benchmark** — hardware scoring with a [community leaderboard](https://benchmark.projectnomad.us) - **Supply Depot** — a one-click app catalog (PDF tools, file browser, e-book library, password manager, and more) plus the ability to run your own custom Docker containers - **Automatic Updates** — opt-in, hands-off updates for the core software, installed apps, and offline content, on a schedule you control - **Easy Setu",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "yynxxxxx/Codex-X",
+      "url": "https://github.com/yynxxxxx/Codex-X",
+      "description": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+      "language": "Rust",
+      "stars": 3766,
+      "forks": 468,
+      "stars_today": 50,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-07-04T03:28:35Z",
+      "updated_at": "2026-09-22T06:13:44Z",
+      "open_issues": 15,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"README.md\"><img src=\"https://img.shields.io/badge/中文-当前-blue\" alt=\"中文\" /></a> <a href=\"README.en.md\"><img src=\"https://img.shields.io/badge/English-Switch-lightgrey\" alt=\"English\" /></a> </p> <div align=\"center\"> <img src=\"apps/desktop/src-tauri/icons/icon.png\" alt=\"Codex-X Logo\" width=\"150\" /> # Codex-X **Codex 可视化提示词注入 · Provider · 会话 · Skills / MCP 管理工具** 一款面向 **OpenAI Codex 桌面端 / Codex CLI** 的跨平台桌面工具。把提示词模板、自定义 Prompt、第三方 API 供应商、会话同步、Skills / MCP 和 TOML 配置都放进可视化界面里，不用反复手改文件。 <p> <img src=\"https://img.shields.io/github/v/release/yynxxxxx/Codex-X?label=version&color=blue\" alt=\"version\" /> <img src=\"https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-555\" alt=\"platform\" /> <img src=\"https://img.shields.io/badge/built%20with-Tauri%202-24C8DB\" alt=\"tauri\" /> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"license\" /> </p> <p> <img src=\"https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white\" /> <img src=\"https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white\" /> <img src=\"https://img.shields.io/badge/Rust-stable-000000?logo=rust&logoColor=white\" /> <img src=\"https://img.shields.io/badge/SQLite-Ready-003B57?logo=sqlite&logoColor=white\" /> <img src=\"https://img.shields.io/badge/Vite-Ready-646CFF?logo=vite&logoColor=white\" /> </p> </div> --- ## Codex-X 是什么？ 当你同时使用 Codex 桌面端、CLI、第三方 API、Skills / MCP 和多套提示词时，配置很容易散落在不同文件里。Codex-X 把这些高频操作集中到一个桌面界面中，让当前状态看得见、常用操作点一下就能完成。 你可以用它： - 像管理插件一样管理提示词：分类、导入 Markdown、自定义编辑、一键启用 / 禁用 - 内置 5 套提示词模板，同时支持用户把自己的提示词变成可视化模板库 - 管理多个可命名的官方 Codex 登录与第三方 API，一键复制、切换，并从 cc-switch 导入现有供应商 - 同步、检查、搜索和删除本地会话，按项目路径整理 Codex 历史记录 - 集中管理 Skills 与 MCP，查看当前 `config.toml`、`auth.json` 和操作备份 - 在设置中按日期、模型查看 Token 用量趋势，子代理用量归入所属主会话 ## 软件预览 <details open> <summary><b>新版 UI：指令提示词管理中心</b></summary> <p align=\"center\"> <img src=\"docs/screenshots/app/new-ui/prompts.png\" alt=\"Codex-X 新版指令提示词管理界面\" width=\"920\" /> </p> </details> <div align=\"center\"> <table> <tr> <td align=\"center\" width=\"50%\"> <b>分类管理</b><br /> <sub>把提示词按破甲 / 逆向、软件开发、写作辅助等分类维护</sub><br /> <img src=\"docs/screenshots/app/new-ui/prompt-categories.png\" alt=\"Codex-X 提示词分类管理\" width=\"420\" /> </td> <td align=\"center\" width=\"50%\"> <b>自定义提示词</b><br /> <sub>直接添加、编辑或导入自己的 Markdown 提示词</sub><br /> <img src=\"docs/screenshots/app/new-ui/prompt-form.png\" alt=\"Codex-X 添加自定义提示词\" width=\"420\" /> </td> </tr> </table> </div> <details> <summary><b>Skills / MCP 可视化管理</b></summary> <p align=\"center\"> <img src=\"docs/screenshots/app/new-ui/skills-mcp.png\" alt=\"Codex-X Skills 与 MCP 管理界面\" width=\"920\" /> </p> </details> ## 功能特性 <div align=\"center\"> <table> <tr> <th align=\"center\" width=\"190\">你想做的事</th> <th align=\"center\">Codex-X 能帮你</th> </tr> <tr> <td align=\"center\"><b>提示词注入管理</b></td> <td align=\"left\">内置 <b>5 套</b>提示词模板，支持分类、GitHub 同步、本地缓存、导入 <code>.md</code>、添加自定义提示词、编辑说明、一键启用 / 禁用。</td> </tr> <tr> <td align=\"center\"><b>启用方式切换</b></td> <td align=\"left\">可选择“保留原提示词”追加写入，也可选择“替换原提示词”完整切换；适合在不同模型、不同任务、不同 Prompt 之间快速切换。</td> </tr> <tr> <td align=\"center\"><b>Provider / API</b></td> <td align=\"left\">保存多个可命名的官方 Codex 登录配置，与第三方供应商统一管理、一键复制和切换；第三方供应商支持连接检测、模型获取 / 测试及从 cc-switch 导入。</td> </tr> <tr> <td align=\"center\"><b>会话管理</b></td> <td align=\"left\">搜索本地会话、按项目路径分组、同步当前供应商、检查会话状态，并支持单选 / 多选 / 项目级永久删除。</td> </tr> <tr> <td align=\"center\"><b>Skills / MCP</b></td> <td align=\"left\">可视化查看 Skills 与 MCP，导入已有配置，从 ZIP 安装 Skill，逐项启用 / 禁用，并检查更新状态。</td> </tr> <tr> <td align=\"center\"><b>配置与登录</b></td> <td align=\"left\">集中查看 <code>config.toml</code> 与 <code>auth.json</code>；官方登录和第三方供应商编辑页均可在 <code>config.toml</code> 旁勾选“开启 1M 上下文窗口”，保存后生效，需模型支持；重要写入前自动备份。</td> </tr> <tr> <td align=\"center\"><b>用量统计</b></td> <td align=\"left\">设置页提供“通用设置 / 用量统计”标签，按日期与模型筛选本地 Token 用量，查看每日趋势、缓存命中率、模型分布及最近 10 个主会话；子代理用量归入所属主会话，不单独计为会话。</td> </tr> <tr> <td align=\"center\"><b>跨平台使用</b></td> <td align=\"left\">提供 macOS Apple Silicon / Intel、Windows MSI / 便携版和 Linux 安装包；安装版可在应用内直接下载、校验并安装更新，便携版继续使用手动下载。</td> </tr> </table> </div> ## 核心亮点 ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 8/12 个项目可从资料确认与 AI 直接相关；其余 4 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：AI 智能体与数字劳动力（5 个）、其他数字产品与工具（3 个）、AI 金融数据与研究（1 个）。",
+      "排名第一的 BuilderIO/agent-native 代表“AI 智能体与数字劳动力”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "AI 智能体与数字劳动力（5 个项目）",
+      "其他数字产品与工具（3 个项目）",
+      "AI 金融数据与研究（1 个项目）",
+      "软件运行诊断工具（1 个项目）",
+      "AI 安全、权限与治理（1 个项目）",
+      "企业知识检索与 RAG（1 个项目）"
+    ],
+    "product_business_signals": [
+      "AI 智能体与数字劳动力是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 AI 智能体与数字劳动力 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "BuilderIO/agent-native",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 607 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 agent-native 描述为“A framework for building agentic apps”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 agent-native 的潜在使用者而言，在项目方所述的“A framework for building agentic apps”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/BuilderIO/agent-native",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A framework for building agentic apps",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/BuilderIO/agent-native",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/BuilderIO/agent-native",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "trycua/cua",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 609 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 cua 描述为“Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 cua 的潜在使用者而言，在项目方所述的“Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/trycua/cua",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/trycua/cua",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/trycua/cua",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Open-Dev-Society/OpenStock",
+        "one_line_summary": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "industry_direction": "AI 金融数据与研究",
+        "target_users": [
+          "金融研究与投资团队",
+          "金融 AI 产品团队"
+        ],
+        "problem_solved": "市场数据和研究资料分散，获取、清洗与验证成本较高。",
+        "solution": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 844 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "金融数据工具化",
+        "technology_impact": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "数据许可、延迟、历史偏差和回测过拟合都可能造成错误判断。",
+        "ai_relevance": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "plain_language_explanation": "项目方把 OpenStock 描述为“OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalize”。通俗地说，它希望解决的是：市场数据和研究资料分散，获取、清洗与验证成本较高。 它的办法是：提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "scenario_examples": [
+          "例如研究人员快速比较某类资产的历史表现，再人工检查数据口径。"
+        ],
+        "practical_benefits": [
+          "对 OpenStock 的潜在使用者而言，在项目方所述的“OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalize”场景中，减少收集和整理金融资料的时间",
+          "提高研究过程的可重复性和可追溯性"
+        ],
+        "industry_implications": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "who_should_care": "金融研究与投资团队、金融 AI 产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Open-Dev-Society/OpenStock",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Open-Dev-Society/OpenStock",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Open-Dev-Society/OpenStock",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "akitaonrails/ai-memory",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 167 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 ai-memory 描述为“Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 ai-memory 的潜在使用者而言，在项目方所述的“Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/akitaonrails/ai-memory",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/akitaonrails/ai-memory",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/akitaonrails/ai-memory",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "coder/coder",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 460 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 coder 描述为“Secure environments for developers and their agents”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 coder 的潜在使用者而言，在项目方所述的“Secure environments for developers and their agents”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coder/coder",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Secure environments for developers and their agents",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coder/coder",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/coder/coder",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "anthropics/financial-services",
+        "one_line_summary": "围绕“名为 financial services 的项目”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：名为 financial services 的项目",
+        "solution": "围绕“名为 financial services 的项目”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 424 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 financial-services 描述为“名为 financial services 的项目”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：名为 financial services 的项目 它的办法是：围绕“名为 financial services 的项目”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“名为 financial services 的项目”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 financial-services 的潜在使用者而言，在项目方所述的“名为 financial services 的项目”场景中，可直接查看和试验项目方所述的“名为 financial services 的项目”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/financial-services",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/financial-services",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/anthropics/financial-services",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cloudflare/quiche",
+        "one_line_summary": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "industry_direction": "软件运行诊断工具",
+        "target_users": [
+          "维护数字产品的技术团队",
+          "负责系统稳定性的运维人员"
+        ],
+        "problem_solved": "系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。",
+        "solution": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 32 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "运行关系追踪",
+        "technology_impact": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "主要服务技术团队，与 AI 行业的直接商业关联有限。",
+        "ai_relevance": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "plain_language_explanation": "项目方把 quiche 描述为“🥧 Savoury implementation of the QUIC transport protocol and HTTP/3”。通俗地说，它希望解决的是：系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。 它的办法是：把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "scenario_examples": [
+          "例如线上服务异常占用资源时，快速找到启动它的任务和负责人。"
+        ],
+        "practical_benefits": [
+          "对 quiche 的潜在使用者而言，在项目方所述的“🥧 Savoury implementation of the QUIC transport protocol and HTTP/3”场景中，缩短故障定位时间",
+          "减少误关关键服务或反复排查的风险"
+        ],
+        "industry_implications": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "who_should_care": "维护数字产品的技术团队、负责系统稳定性的运维人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/quiche",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🥧 Savoury implementation of the QUIC transport protocol and HTTP/3",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/quiche",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cloudflare/quiche",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mvt-project/mvt",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 169 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 mvt 描述为“MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 mvt 的潜在使用者而言，在项目方所述的“MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvt-project/mvt",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "MVT (Mobile Verification Toolkit) helps with conducting forensics of mobile devices in order to find signs of a potential compromise.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvt-project/mvt",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mvt-project/mvt",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "zhouxiaoka/autoclip",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 250 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 autoclip 描述为“AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 autoclip 的潜在使用者而言，在项目方所述的“AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhouxiaoka/autoclip",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AutoClip : AI-powered video clipping and highlight generation · 一款智能高光提取与剪辑的二创工具",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhouxiaoka/autoclip",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/zhouxiaoka/autoclip",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ruanyf/weekly",
+        "one_line_summary": "围绕“科技爱好者周刊，每周五发布”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：科技爱好者周刊，每周五发布",
+        "solution": "围绕“科技爱好者周刊，每周五发布”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 182 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 weekly 描述为“科技爱好者周刊，每周五发布”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：科技爱好者周刊，每周五发布 它的办法是：围绕“科技爱好者周刊，每周五发布”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“科技爱好者周刊，每周五发布”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 weekly 的潜在使用者而言，在项目方所述的“科技爱好者周刊，每周五发布”场景中，可直接查看和试验项目方所述的“科技爱好者周刊，每周五发布”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruanyf/weekly",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "科技爱好者周刊，每周五发布",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruanyf/weekly",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ruanyf/weekly",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Crosstalk-Solutions/project-nomad",
+        "one_line_summary": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "industry_direction": "企业知识检索与 RAG",
+        "target_users": [
+          "知识密集型企业",
+          "客服、研究和内部运营团队"
+        ],
+        "problem_solved": "资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。",
+        "solution": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 394 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "检索增强生成",
+        "technology_impact": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "检索遗漏和过期资料仍会导致错误答案，来源与更新时间必须可见。",
+        "ai_relevance": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "plain_language_explanation": "项目方把 project-nomad 描述为“Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps”。通俗地说，它希望解决的是：资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。 它的办法是：先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "scenario_examples": [
+          "例如客服人员提问后，系统从最新产品文档中找到依据再组织回复。"
+        ],
+        "practical_benefits": [
+          "对 project-nomad 的潜在使用者而言，在项目方所述的“Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps”场景中，减少跨文档搜索时间",
+          "让回答更容易追溯到企业自己的资料"
+        ],
+        "industry_implications": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "who_should_care": "知识密集型企业、客服、研究和内部运营团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "yynxxxxx/Codex-X",
+        "one_line_summary": "围绕“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+        "solution": "围绕“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 50 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 Codex-X 描述为“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。 它的办法是：围绕“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 Codex-X 的潜在使用者而言，在项目方所述的“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”场景中，可直接查看和试验项目方所述的“OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/yynxxxxx/Codex-X",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "OpenAI Codex 桌面端/CLI 的可视化管理工具，具有Provider/API 切换、会话同步、提示词注入、Skills/MCP 管理、TOML 配置可视化的跨平台工具。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/yynxxxxx/Codex-X",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/yynxxxxx/Codex-X",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 3,
+        "project_count": 2
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 3,
+        "project_count": 2
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 18,
+        "project_count": 6
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 3,
+        "project_count": 3
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 27,
+        "project_count": 18
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 25,
+        "project_count": 14
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 18,
+        "project_count": 6
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 27
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 25
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 25
+      },
+      {
+        "name": "软件产品团队",
+        "count": 18
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 18
+      },
+      {
+        "name": "大型软件团队",
+        "count": 5
+      },
+      {
+        "name": "技术管理者和代码审查团队",
+        "count": 5
+      },
+      {
+        "name": "管理软件质量的产品与安全团队",
+        "count": 4
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 112
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 30,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 7,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 6,
+        "project_count": 1
+      },
+      {
+        "theme": "空间设计与创作工具",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 7,
+        "project_count": 4
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 6,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 6,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 26,
+        "project_count": 11
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 145,
+        "project_count": 75
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 136,
+        "project_count": 47
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 79,
+        "project_count": 24
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 26,
+        "project_count": 11
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 15,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 145
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 136
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 136
+      },
+      {
+        "name": "软件产品团队",
+        "count": 79
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 79
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 26
+      },
+      {
+        "name": "客服、研究和内部运营团队",
+        "count": 26
+      },
+      {
+        "name": "使用 AI 助手的团队",
+        "count": 15
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 511
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-09-21",
+    "new": [
+      "Crosstalk-Solutions/project-nomad",
+      "akitaonrails/ai-memory",
+      "cloudflare/quiche",
+      "mvt-project/mvt",
+      "ruanyf/weekly",
+      "yynxxxxx/Codex-X",
+      "zhouxiaoka/autoclip"
+    ],
+    "retained": [
+      "BuilderIO/agent-native",
+      "Open-Dev-Society/OpenStock",
+      "anthropics/financial-services",
+      "coder/coder",
+      "trycua/cua"
+    ],
+    "exited": [
+      "addyosmani/agent-skills",
+      "affaan-m/ECC",
+      "anthropics/claude-code",
+      "cloudflare/security-audit-skill",
+      "higgsfield-ai/higgsfield",
+      "mihail911/modern-software-dev-assignments",
+      "paperless-ngx/paperless-ngx",
+      "vercel-labs/json-render"
+    ],
+    "risers": [
+      {
+        "full_name": "Open-Dev-Society/OpenStock",
+        "previous_rank": 10,
+        "rank": 3,
+        "change": 7
+      },
+      {
+        "full_name": "coder/coder",
+        "previous_rank": 11,
+        "rank": 5,
+        "change": 6
+      },
+      {
+        "full_name": "trycua/cua",
+        "previous_rank": 4,
+        "rank": 2,
+        "change": 2
+      },
+      {
+        "full_name": "BuilderIO/agent-native",
+        "previous_rank": 2,
+        "rank": 1,
+        "change": 1
+      },
+      {
+        "full_name": "anthropics/financial-services",
+        "previous_rank": 5,
+        "rank": 6,
+        "change": -1
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "BuilderIO/agent-native",
+        "previous_stars_today": 98,
+        "stars_today": 607,
+        "change": 509
+      },
+      {
+        "full_name": "anthropics/financial-services",
+        "previous_stars_today": 260,
+        "stars_today": 424,
+        "change": 164
+      },
+      {
+        "full_name": "Open-Dev-Society/OpenStock",
+        "previous_stars_today": 755,
+        "stars_today": 844,
+        "change": 89
+      },
+      {
+        "full_name": "coder/coder",
+        "previous_stars_today": 379,
+        "stars_today": 460,
+        "change": 81
+      },
+      {
+        "full_name": "trycua/cua",
+        "previous_stars_today": 1018,
+        "stars_today": 609,
+        "change": -409
+      }
+    ]
+  }
+}
