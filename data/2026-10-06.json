@@ -1,0 +1,1669 @@
+{
+  "date": "2026-10-06",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 13,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "tester-army/e2e",
+      "url": "https://github.com/tester-army/e2e",
+      "description": "Next generation e2e testing framework for web and mobile apps.",
+      "language": "TypeScript",
+      "stars": 5227,
+      "forks": 222,
+      "stars_today": 1398,
+      "topics": [
+        "e2e",
+        "e2e-testing",
+        "end-to-end-testing",
+        "mobile",
+        "mobile-testing",
+        "playwright",
+        "web"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-22T09:29:04Z",
+      "updated_at": "2026-10-06T07:35:56Z",
+      "open_issues": 51,
+      "default_branch": "main",
+      "readme_excerpt": "<a href=\"https://tester.army/e2e?utm_source=e2e&utm_medium=github&utm_campaign=readme_banner\"><img src=\"./.github/assets/readme-banner.png\" alt=\"e2e, the open source AI testing framework by TesterArmy\" width=\"100%\" /></a> <p align=\"center\"> <a href=\"https://tester.army?utm_source=e2e&utm_medium=github&utm_campaign=readme_badge\"><img alt=\"Made by TesterArmy\" src=\"./.github/assets/made-by-testerarmy.svg\" /></a> <a href=\"https://www.npmjs.com/package/e2e\"><img alt=\"npm version\" src=\"https://img.shields.io/npm/v/e2e.svg?style=for-the-badge&labelColor=000000\" /></a> <a href=\"./LICENSE\"><img alt=\"License: Apache-2.0\" src=\"https://img.shields.io/badge/license-Apache--2.0-green.svg?style=for-the-badge&labelColor=000000\" /></a> <a href=\"https://tester.army/discord\"><img alt=\"Join the community on Discord\" src=\"https://img.shields.io/badge/Join%20the%20community-5865F2.svg?style=for-the-badge&logo=discord&logoColor=white&labelColor=000000\" /></a> </p> <p align=\"center\"> <a href=\"https://www.star-history.com/tester-army/e2e\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=tester-army/e2e&type=trending&theme=dark\" /><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=tester-army/e2e&type=trending\" /></picture></a> </p> # e2e [e2e](https://tester.army/e2e?utm_source=e2e&utm_medium=github&utm_campaign=readme_intro) is an end-to-end testing framework for web and mobile apps. Describe a goal in natural language and an agent drives the app to reach it. Check the result with locators and assertions in the same test. ```ts // tests/checkout.e2e.ts import { test, expect } from 'e2e'; test('a member upgrades to Pro', async ({ app, agent, screen }) => { await app.open('/settings/billing'); await agent.act('upgrade the workspace to the Pro plan'); await agent.assert('the invoice preview shows a prorated amount'); await expect(screen.getByRole('status')).toContainText('Pro'); }); ``` An agent step that a later assertion verifies records its actions, and the next run replays them with no model calls until the app changes. Tests without agent steps need no model. Bring your own subscription, API key, or local model. ## Quick start ```bash npx e2e init ``` `init` asks for an engine, web or mobile, and a model provider, then writes a config and an example test. The [quickstart](https://e2e.tester.army/docs/quickstart) covers the rest. To see a finished setup in your stack, open [`examples/`](https://github.com/tester-army/e2e/tree/main/examples): Vite, Next.js, Expo, and SwiftUI, each a standalone project with a passing suite. ## Packages | Package | What it does | | --- | --- | | [`e2e`](https://www.npmjs.com/package/e2e) | The SDK, runner, and CLI. | | [`@e2e-dev/web`](https://www.npmjs.com/package/@e2e-dev/web) | Browser engine: Chromium, Firefox, and WebKit through Playwright. | | [`@e2e-dev/mobile`](https://www.npmjs.com/package/@e2e-dev/mobile) | iOS and Android engine: simulators and emulators through agent-device. | | [`@e2e-dev/github`](https://www.npmjs.com/package/@e2e-dev/github) | Reporter that posts results as a pull request comment. | | [`@e2e-dev/kernel`](https://www.npmjs.com/package/@e2e-dev/kernel) | Kernel hosted browsers for the web engine. | | [`@e2e-dev/eas`](https://www.npmjs.com/package/@e2e-dev/eas) | EAS Simulators hosted iOS simulators and Android emulators for the mobile engine. | | [`@e2e-dev/decision`](https://e2e.tester.army/docs/decision-models) | Decision-model executors for bounded semantic actions and assertions. | ## Documentation [e2e.tester.army/docs](https://e2e.tester.army/docs). The `e2e` package ships every page, so coding agents can read them offline in `node_modules/e2e/docs`. ## Contributing See [CONTRIBUTING.md](./CONTRIBUTING.md). Questions go to [Discord](https://tester.army/discord). ## Security Please don't open public issues for security vulnerabilities. Follow [SECURITY.md](./SECURITY.md) and report them to ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": 0,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "stars": 96754,
+      "forks": 8536,
+      "stars_today": 534,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence",
+        "chromadb",
+        "claude",
+        "claude-agent-sdk",
+        "claude-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "embeddings",
+        "long-term-memory",
+        "mem0",
+        "memory-engine",
+        "openmemory",
+        "rag",
+        "sqlite",
+        "supermemory"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-08-31T20:50:03Z",
+      "updated_at": "2026-10-06T07:35:59Z",
+      "open_issues": 87,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\"> <br> <a href=\"https://github.com/thedotmack/claude-mem\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/public/claude-mem-logo-for-dark-mode.webp\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"docs/public/claude-mem-logo-for-light-mode.webp\"> <img src=\"docs/public/claude-mem-logo-for-light-mode.webp\" alt=\"Claude-Mem\" width=\"400\"> </picture> </a> </h1> <p align=\"center\"> <img alt=\"Vercel OSS Program\" src=\"https://vercel.com/oss/program-badge-2026.svg\" height=\"24\" /> &nbsp;&nbsp;&nbsp; <img alt=\"Greptile\" src=\"docs/public/greptile-wordmark-green.svg\" height=\"24\" /> &nbsp;&nbsp;&nbsp; <img alt=\"SerpApi\" src=\"docs/public/serpapi-logo-with-wordmark-gradient.svg\" height=\"24\" /> </p> <p align=\"center\"> <a href=\"docs/i18n/README.zh.md\">🇨🇳 中文</a> • <a href=\"docs/i18n/README.zh-tw.md\">🇹🇼 繁體中文</a> • <a href=\"docs/i18n/README.ja.md\">🇯🇵 日本語</a> • <a href=\"docs/i18n/README.pt.md\">🇵🇹 Português</a> • <a href=\"docs/i18n/README.pt-br.md\">🇧🇷 Português</a> • <a href=\"docs/i18n/README.ko.md\">🇰🇷 한국어</a> • <a href=\"docs/i18n/README.es.md\">🇪🇸 Español</a> • <a href=\"docs/i18n/README.de.md\">🇩🇪 Deutsch</a> • <a href=\"docs/i18n/README.fr.md\">🇫🇷 Français</a> • <a href=\"docs/i18n/README.he.md\">🇮🇱 עברית</a> • <a href=\"docs/i18n/README.ar.md\">🇸🇦 العربية</a> • <a href=\"docs/i18n/README.ru.md\">🇷🇺 Русский</a> • <a href=\"docs/i18n/README.pl.md\">🇵🇱 Polski</a> • <a href=\"docs/i18n/README.cs.md\">🇨🇿 Čeština</a> • <a href=\"docs/i18n/README.nl.md\">🇳🇱 Nederlands</a> • <a href=\"docs/i18n/README.tr.md\">🇹🇷 Türkçe</a> • <a href=\"docs/i18n/README.uk.md\">🇺🇦 Українська</a> • <a href=\"docs/i18n/README.vi.md\">🇻🇳 Tiếng Việt</a> • <a href=\"docs/i18n/README.tl.md\">🇵🇭 Tagalog</a> • <a href=\"docs/i18n/README.id.md\">🇮🇩 Indonesia</a> • <a href=\"docs/i18n/README.th.md\">🇹🇭 ไทย</a> • <a href=\"docs/i18n/README.hi.md\">🇮🇳 हिन्दी</a> • <a href=\"docs/i18n/README.bn.md\">🇧🇩 বাংলা</a> • <a href=\"docs/i18n/README.ur.md\">🇵🇰 اردو</a> • <a href=\"docs/i18n/README.ro.md\">🇷🇴 Română</a> • <a href=\"docs/i18n/README.sv.md\">🇸🇪 Svenska</a> • <a href=\"docs/i18n/README.it.md\">🇮🇹 Italiano</a> • <a href=\"docs/i18n/README.el.md\">🇬🇷 Ελληνικά</a> • <a href=\"docs/i18n/README.hu.md\">🇭🇺 Magyar</a> • <a href=\"docs/i18n/README.fi.md\">🇫🇮 Suomi</a> • <a href=\"docs/i18n/README.da.md\">🇩🇰 Dansk</a> • <a href=\"docs/i18n/README.no.md\">🇳🇴 Norsk</a> </p> <h4 align=\"center\">Persistent memory compression system built for <a href=\"https://claude.com/claude-code\" target=\"_blank\">Claude Code</a>.</h4> <p align=\"center\"> <a href=\"LICENSE\"> <img src=\"https://img.shields.io/badge/License-Apache%202.0-blue.svg\" alt=\"License\"> </a> <a href=\"package.json\"> <img src=\"https://img.shields.io/badge/version-13.32.0-green.svg\" alt=\"Version\"> </a> <a href=\"package.json\"> <img src=\"https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg\" alt=\"Node\"> </a> <a href=\"https://github.com/thedotmack/awesome-claude-code\"> <img src=\"https://awesome.re/mentioned-badge.svg\" alt=\"Mentioned in Awesome Claude Code\"> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/15496\" target=\"_blank\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge-dark.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge.svg\"> <img src=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge.svg\" alt=\"thedotmack/claude-mem | Trendshift\" width=\"250\" height=\"55\"/> </picture> </a> </p> <br> <table align=\"center\"> <tr> <td align=\"center\"> <a href=\"https://github.com/thedotmack/claude-mem\"> <picture> <img src=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif\" alt=\"Claude-Mem Preview\" width=\"500\" > </picture> </a> </td> <td align=\"center\"> <a href=\"https://www.star-history.com/#thedotmack/claude-mem&Date\"> <picture> <source media=\"(prefers-color-",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 13,
+      "rank_change": 11,
+      "streak_days": 3
+    },
+    {
+      "rank": 3,
+      "full_name": "earthtojake/text-to-cad",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "description": "Give your agent CAD superpowers.",
+      "language": "Python",
+      "stars": 17585,
+      "forks": 1779,
+      "stars_today": 437,
+      "topics": [
+        "agents",
+        "ai-agents",
+        "cad",
+        "mechanical-engineering",
+        "robotics",
+        "step",
+        "stl",
+        "stp",
+        "text-to-cad"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-22T01:09:45Z",
+      "updated_at": "2026-10-06T07:35:22Z",
+      "open_issues": 35,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"apps/docs/public/brand/logo-texttocad-animated.svg\" alt=\"text-to-cad\" width=\"800\"> Give your agent CAD superpowers. [Docs](https://www.texttocad.dev) [![GitHub stars](https://img.shields.io/github/stars/earthtojake/text-to-cad?style=for-the-badge&logo=github&label=Stars)](https://github.com/earthtojake/text-to-cad/stargazers) [![skills.sh](https://skills.sh/b/earthtojake/text-to-cad?style=for-the-badge)](https://skills.sh/earthtojake/text-to-cad) [![Follow @earthtojake](https://img.shields.io/badge/Follow-%40earthtojake-000000?style=for-the-badge&logo=x)](https://x.com/earthtojake) [![Join Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/5FGB9DwJYU) [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE) [![Tests](https://img.shields.io/github/actions/workflow/status/earthtojake/text-to-cad/test.yml?branch=main&style=for-the-badge&logo=githubactions&logoColor=white&label=Tests)](https://github.com/earthtojake/text-to-cad/actions/workflows/test.yml?query=branch%3Amain) [![cadgen](https://img.shields.io/pypi/v/cadgen?style=for-the-badge&logo=pypi&logoColor=white&label=cadgen)](https://pypi.org/project/cadgen/) [![build123d](https://img.shields.io/badge/build123d-0.11-2F6FB0?style=for-the-badge)](https://github.com/gumyr/build123d) [![Open CASCADE](https://img.shields.io/badge/Open%20CASCADE-7.9-E2001A?style=for-the-badge)](https://dev.opencascade.org) [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](packages/cadgen/pyproject.toml) [![Node.js](https://img.shields.io/badge/Node.js-20+-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org) </div> # text-to-cad The text-to-cad plugin gives your agent local workflows for generating 3D models as STEP, GLB, STL or 3MF files. It also does design for manufacturing checks, generates engineering drawings, and connects to popular 3D printing, sheet metal and CNC fabrication services. It is supported by all popular agents that support plugins or the [skills](https://skills.sh) framework, including Claude Code, Codex, Cursor, Gemini and Grok. ## 💻 Install ### Ask your agent (recommended) Send this message to your agent and it will install text-to-cad for you. ```text Install text-to-cad from https://github.com/earthtojake/text-to-cad ``` Or install it yourself: 1. CAD runs through [uv](https://docs.astral.sh/uv/): check that it is installed (`uv --version`), and if it is missing, install it with [uv's installer](https://docs.astral.sh/uv/getting-started/installation/). 2. Run the commands under your agent app's heading below, or under [Other Agents](#other-agents) if it has none. 3. Restart the app. Its first start downloads CAD's runtime, so it needs a network connection. The plugin for your agent app brings the skills and CAD's viewer, a local server (`cadgen mcp`). For an agent without a plugin, install the skills alone. Install one or the other in an app, not both: two copies means every skill twice. The install commands below take the `latest` branch: it holds the plugin alone and gets each release once it is on PyPI. `main`, where development happens, installs too, but can hold changes that aren't released yet. Each app names the branch in its own way (`#latest`, `--ref latest`, `@latest` or `--branch latest`); leave it out and the app installs `main`. Each app's heading also says how to update text-to-cad, and how to reinstall it: remove it, then install it again. Updating the plugin updates CAD: the new release's cadgen is downloaded the first time it runs, and the skills and the server share it. Earlier releases stay in uv's cache until you run `uv cache prune`. ### Claude Code ```bash claude plugin marketplace add earthtojake/text-to-cad#latest claude plugin install text-to-cad@earthtojake ``` The plugin also starts CAD's server. Where Claude Code can s",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 4,
+      "full_name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 25717,
+      "forks": 6620,
+      "stars_today": 485,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-08T23:46:22Z",
+      "updated_at": "2026-10-06T07:21:34Z",
+      "open_issues": 2495,
+      "default_branch": "main",
+      "readme_excerpt": "# T3 Code T3 Code is an \"agent harness control surface\". It enables control of the agents on your machine with a best-in-class mobile app ([iOS](https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824), [Android](https://play.google.com/store/apps/details?id=com.t3tools.t3code)), [web app](https://app.t3.codes) and [Electron-based desktop app](https://t3.codes). Works with your subscriptions on Claude Code, Codex, Cursor, Grok Build, OpenCode, and Google Antigravity. If they're set up on your computer, T3 Code can control them. ## \"Wait, what are you selling me?\" Nothing. We built T3 Code because we wanted the best possible development experience with agents. We were inspired by existing solutions like the Codex desktop app, Conductor, Claude Desktop and Cursor Glass, but none met our bar. We wanted something performant, remote-ready, and truly open. If we ever go the wrong direction, we want you to have everything you need to fork and build the editor that you want. ## Installation > [!WARNING] > T3 Code currently supports Codex, Claude, Cursor, Grok Build, OpenCode, and Antigravity. Install and authenticate at least one provider before use: > > - Codex: install [Codex CLI](https://developers.openai.com/codex/cli) and run `codex login` > - Claude: install [Claude Code](https://claude.com/product/claude-code) and run `claude auth login` > - Cursor: install [Cursor CLI](https://cursor.com/cli) and run `agent login` > - Grok Build: install [Grok Build CLI](https://x.ai/cli) and run `grok login` > - OpenCode: install [OpenCode](https://opencode.ai) and run `opencode auth login` > - Antigravity: enable it in Settings, then use **Install Antigravity** and **Sign in with Google**. No CLI is required. ### Command line ```bash curl -fsSL https://t3.codes/install.sh | sh ``` On Windows, in PowerShell: ```powershell irm https://t3.codes/install.ps1 | iex ``` Then run `t3` to start the server and open the local web app. `t3 service install` keeps it running in the background, `t3 update` moves to a newer release, and `t3 --help` has the full reference. To try it once without installing, run `npx t3@latest` instead. ### Desktop app Install the latest version of the desktop app from [GitHub Releases](https://github.com/pingdotgg/t3code/releases), or from your favorite package registry: #### Windows (`winget`) ```bash winget install T3Tools.T3Code ``` #### macOS (Homebrew) ```bash brew install --cask t3-code ``` #### Debian, Ubuntu (`.deb`) Download the `.deb` from [GitHub Releases](https://github.com/pingdotgg/t3code/releases), then: ```bash sudo apt install ./T3-Code-*.deb ``` #### Arch Linux (AUR) Stable: ```bash yay -S t3code-bin ``` Nightly: ```bash yay -S t3code-nightly-bin ``` The AUR packaging is maintained in this repository under [`packaging/aur`](./packaging/aur). ## Some notes We are very very early in this project. Expect bugs. We are (mostly) not accepting contributions yet. Small fixes may be considered. Big features will not be. ## Documentation Full docs live in [docs/](./docs). There's no docs site yet. - [Install and first run](./docs/user/install.md) - [Permission modes](./docs/user/permission-modes.md) - [Keyboard shortcuts](./docs/user/keybindings.md) - [Project settings](./docs/user/project-settings.md) - [Appearance preferences](./docs/user/appearance.md) - [Remote access from a phone or another machine](./docs/user/remote-access.md) - [Keeping app and server in sync](./docs/user/updating.md) - [Source control integrations](./docs/user/source-control.md) - Multiple accounts: [Codex](./docs/user/providers-codex.md) · [Claude](./docs/user/providers-claude.md) - [Run T3 Code as a background service](./docs/user/background-service.md) Building from source? Start at [docs/internals/overview.md](./docs/internals/overview.md). ## If you REALLY want to contribute still.... read this first ### Install `vp` T3 Code uses Vite+ so you'll need to install the global `vp` command-line tool. #### macOS / Linux ```bash ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 5,
+      "streak_days": 3
+    },
+    {
+      "rank": 5,
+      "full_name": "boykopovar/AnyPS5",
+      "url": "https://github.com/boykopovar/AnyPS5",
+      "description": "Tool for automatic PS5 executables porting to Linux and Windows",
+      "language": "C++",
+      "stars": 5170,
+      "forks": 381,
+      "stars_today": 997,
+      "topics": [
+        "anyps5",
+        "dynamic-library",
+        "game-porting",
+        "ps5",
+        "ps5-tools",
+        "spir-v",
+        "vulkan"
+      ],
+      "license": "GPL-2.0",
+      "created_at": "2026-08-03T21:30:25Z",
+      "updated_at": "2026-10-06T07:36:00Z",
+      "open_issues": 125,
+      "default_branch": "main",
+      "readme_excerpt": "# About Tool for automatic executables porting to Linux and Windows. Includes a [relinker](core/relinker) that converts executable to the target system's native format and implementations of [system prx libraries](core/libs/prx) suitable for dynamic linking. No emulation or separate runtime process. [Usage](docs/user/USAGE.md), [Build instructions](docs/dev/BUILD.md), [Technical debt of the project](docs/dev/TechnicalDebt.md), [code style conventions](docs/dev/CONVENTIONS.md), [contributing](CONTRIBUTING.md) ## Status [![libraries](https://boykopovar.github.io/AnyPS5/badge-libraries.svg)](https://boykopovar.github.io/AnyPS5/) [![shaders](https://boykopovar.github.io/AnyPS5/badge-shaders.svg)](https://boykopovar.github.io/AnyPS5/) [![progress map](https://boykopovar.github.io/AnyPS5/progress.svg)](https://boykopovar.github.io/AnyPS5/) <sub>* System libraries: percentage of the functions known to the project so far (declared in [core/libs/prx](core/libs/prx)), not of every PS5 system function. The total grows as more functions are declared.</sub> [List of verified games](docs/user/COMPATIBILITY.md) Dreaming Sarah (2D platformer) runs at a stable 60 fps on a GTX 1050 Ti / i5-7500 3.4GHz. Unsupported or unexpected states strictly throw `std::runtime_error`. `what()` is printed to stderr and the process terminates. The [shader recompiler](core/shader/recompiler/Recompiler.cpp) successfully produces SPIR-V (validated via [Spirv-Tools](3rdparty/SPIRV-Tools) when built with `ANYPS5_ENABLE_SPIRV_TOOLS`). ## Compatibility See the [game compatibility list](docs/user/COMPATIBILITY.md) for tested games and known issues. ## Input mapping SDL-mapped game controllers are supported, including analog sticks and triggers. Keyboard and mouse controls can be configured with an `anyps5-input.ini` file. See [input mapping](docs/user/INPUT_MAPPING.md) for the supported devices and configuration format. ## Disclaimer This project is intended for interoperability, research, preservation, and compatibility purposes. It does not include, distribute, or require copyrighted software, firmware, cryptographic keys, or proprietary libraries. Users are responsible for ensuring that any binaries used with this project are obtained and used in accordance with applicable laws and their respective license terms. ## License This project is licensed under the GNU General Public License version 2 only.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+      "language": "Python",
+      "stars": 92157,
+      "forks": 8085,
+      "stars_today": 1155,
+      "topics": [
+        "agent-infrastructure",
+        "ai-agent",
+        "ai-search",
+        "automation",
+        "bilibili",
+        "claude-code",
+        "cli",
+        "cursor",
+        "free-api",
+        "llm-tools",
+        "mcp",
+        "python",
+        "reddit-scraper",
+        "twitter-scraper",
+        "web-scraper",
+        "xiaohongshu",
+        "youtube-transcript"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-24T02:10:24Z",
+      "updated_at": "2026-10-06T07:35:50Z",
+      "open_issues": 213,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\">👁️ Agent Reach</h1> <p align=\"center\"> <strong>给你的 AI Agent 一键装上互联网能力</strong> </p> <p align=\"center\"> 当下最稳的接入方式，替你选好、装好、体检好——接入方式会换代，你不用操心 </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/24387\"><img src=\"https://trendshift.io/api/badge/repositories/24387\" alt=\"Trendshift GitHub Trending #1 Repository of the Day\"></a> <a href=\"https://star-history.com/#Panniantong/Agent-Reach&Date\"><img src=\"https://api.star-history.com/badge?repo=Panniantong/Agent-Reach\" alt=\"Star History Rank\" width=\"196\" height=\"55\"></a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge\" alt=\"MIT License\"></a> <a href=\"https://www.python.org/\"><img src=\"https://img.shields.io/badge/Python-3.10+-green.svg?style=for-the-badge&logo=python&logoColor=white\" alt=\"Python 3.10+\"></a> <a href=\"https://github.com/Panniantong/agent-reach/stargazers\"><img src=\"https://img.shields.io/github/stars/Panniantong/agent-reach?style=for-the-badge\" alt=\"GitHub Stars\"></a> </p> <p align=\"center\"> <a href=\"#快速上手\">快速开始</a> · <a href=\"docs/README_en.md\">English</a> · <a href=\"docs/README_ja.md\">日本語</a> · <a href=\"docs/README_ko.md\">한국어</a> · <a href=\"#支持的平台\">支持平台</a> · <a href=\"#设计理念\">设计理念</a> </p> --- ## ❤️赞助商 > [想出现在这里？](mailto:pnt01@foxmail.com) <details open> <summary>点击折叠</summary> <table> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.browseract.ai/Agent\"><img src=\"docs/assets/sponsors/browseract.png\" alt=\"BrowserAct\" width=\"150\"></a></td> <td><a href=\"https://www.browseract.ai/Agent\">BrowserAct</a> 支持从 Amazon、LinkedIn、X、Google Maps 等复杂网站提取你需要的任意数据。你只需用自然语言描述抓取需求，Agent 就会基于真实浏览器自动探索并测试页面流程，生成可靠、可复用的数据采集 Bot，并返回结构化结果。无需手动构建爬虫，无需编写代码。BrowserAct 内置隐身浏览、验证码处理和高质量住宅代理，帮助你更稳定地完成复杂网页数据采集。新用户注册即送 1000 积分，<a href=\"https://www.browseract.ai/Agent\">立即免费试用</a>。</td> </tr> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.tencentcloud.com/act/pro/intl-openclaw?referral_code=G76Y819A&amp;lang=zh&amp;pg=\"><img src=\"docs/assets/sponsors/tencent-cloud.svg\" alt=\"腾讯云 OpenClaw\" width=\"150\"></a></td> <td>在腾讯云 Lighthouse 秒级部署 OpenClaw 全能助手，可通过对话丝滑接入 Agent Reach，给你的 OpenClaw 一键装上互联网能力。</td> </tr> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach\"><img src=\"docs/assets/sponsors/coreclaw.png\" alt=\"CoreClaw\" width=\"150\"></a></td> <td><a href=\"https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach\">CoreClaw</a> | 网页抓取平台与现成数据采集工具，CoreClaw 提供 100+ 现成数据采集工具，支持 Amazon、TikTok、Google Maps、Instagram、Facebook、YouTube 等平台，无需代码，支持 JSON/CSV 导出，仅对成功结果计费。<a href=\"https://www.coreclaw.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=Reach&amp;utm_term=Reach&amp;utm_id=Reach\">免费$3测试！</a></td> </tr> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.ucloud.cn/site/active/astraflow?ytag=geo_waituo_Agent\"><img src=\"docs/assets/sponsors/astraflow.png\" alt=\"星图 AstraFlow\" width=\"150\"></a></td> <td><a href=\"https://www.ucloud.cn/site/active/astraflow?ytag=geo_waituo_Agent\">优刻得星图astraflow大模型</a>，支持200+模型一键调用：内置 Kimi K3、DeepSeek V4/V3、Qwen 3、GLM5.2、happyhorse等全球领先开源大模型，无需自训，开箱即用</td> </tr> </table> </details> --- ## 为什么需要 Agent Reach？ AI Agent 已经能帮你写代码、改文档、管项目——但你让它去网上找点东西，它就抓瞎了： - 📺 \"帮我看看这个 YouTube 教程讲了什么\" → **看不了**，拿不到字幕 - 🐦 \"帮我搜一下推特上大家怎么评价这个产品\" → **搜不了**，Twitter API 要付费 - 📖 \"去 Reddit 上看看有没有人遇到过同样的 bug\" → **403 被封**，服务器 IP 被拒 - 📕 \"帮我看看小红书上这个品的口碑\" → **打不开**，必须登录才能看 - 📺 \"B站上有个技术视频，帮我总结一下\" → **拿不到**，通用下载工具被 B站风控全面拦截 - 🔍 \"帮我在网上搜一下最新的 LLM 框架对比\" → **没有好用的搜索**，要么付费要么质量差 - 🌐 \"帮我看看这个网页写了啥\" → **抓回来一堆 HTML 标签**，根本没法读 - 📦 \"这个 GitHub 仓库是干嘛的？Issue 里说了什么？\" → 能用，但认证配置很麻烦 - 📡 \"帮我订阅这几个 RSS 源，有更新告诉我\" → 要自己装库写代码 **这些不难实现，但是需要自己折腾配置** 每个平台都有自己的门槛——要付费的 API、要绕过的封锁、要登录的账号、要清洗的数据。你要一个一个去踩坑、装工具、调配置，光是让 Agent 能读个推特就得折腾半天。 **Agent Reach 把这件事变成一句话：** ``` 帮我安装 Agent Reach：https://raw.githubusercontent.com/Pannianton",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": 0,
+      "streak_days": 4
+    },
+    {
+      "rank": 7,
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "description": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+      "language": "Python",
+      "stars": 64287,
+      "forks": 8147,
+      "stars_today": 742,
+      "topics": [
+        "agent",
+        "agentic-ai",
+        "ai",
+        "claude",
+        "copilot",
+        "cursor",
+        "elevenlabs",
+        "ffmpeg",
+        "flux",
+        "image-generation",
+        "open-source",
+        "openai",
+        "python",
+        "remotion",
+        "stable-diffusion",
+        "text-to-speech",
+        "text-to-video",
+        "video-generation",
+        "video-production"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2026-03-29T15:23:22Z",
+      "updated_at": "2026-10-06T07:34:38Z",
+      "open_issues": 355,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/monty-dark.svg\"> <img src=\"assets/monty-light.svg\" alt=\"Monty the Clapper — the official mascot of OpenMontage\" width=\"200\"> </picture> </p> <p align=\"center\"><sub><em>Monty the Clapper — the official mascot of OpenMontage</em></sub></p> <h1 align=\"center\">OpenMontage</h1> <p align=\"center\"><strong>The first open-source, agentic video production system.</strong></p> <p align=\"center\"> <a href=\"https://openmontage.video\"><img src=\"https://img.shields.io/badge/Website-openmontage.video-d14a28?style=for-the-badge\" alt=\"openmontage.video\"></a> </p> <p align=\"center\"> <a href=\"#start-from-a-video-you-already-love\">Paste A Video</a> &nbsp;·&nbsp; <a href=\"#quick-start\">Quick Start</a> &nbsp;·&nbsp; <a href=\"#try-these-prompts\">Try These Prompts</a> &nbsp;·&nbsp; <a href=\"#pipelines\">Pipelines</a> &nbsp;·&nbsp; <a href=\"#how-it-works\">How It Works</a> &nbsp;·&nbsp; <a href=\"#sponsors\">Sponsors</a> &nbsp;·&nbsp; <a href=\"docs/PROVIDERS.md\">Providers</a> &nbsp;·&nbsp; <a href=\"docs/PR_REVIEW_GUIDE.md\">Review Guide</a> &nbsp;·&nbsp; <a href=\"AGENT_GUIDE.md\">Agent Guide</a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPLv3-blue.svg\" alt=\"License\"></a> </p> <p align=\"center\"> <a href=\"https://github.com/trending\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/assets/repo-of-the-day-dark.svg\"> <img alt=\"🏆 #1 Repository of the Day on GitHub Trending\" src=\".github/assets/repo-of-the-day-light.svg\" height=\"60\"> </picture> </a> </p> <p align=\"center\"><strong>Follow The Build</strong></p> <p align=\"center\"> <a href=\"https://www.youtube.com/@OpenMontage\"><img src=\"https://img.shields.io/badge/YouTube-%40OpenMontage-FF0000?style=for-the-badge&logo=youtube&logoColor=white\" alt=\"YouTube\"></a> <a href=\"https://x.com/calesthioailabs\"><img src=\"https://img.shields.io/badge/X-%40calesthioailabs-111111?style=for-the-badge&logo=x&logoColor=white\" alt=\"X\"></a> <a href=\"https://github.com/calesthio/OpenMontage/discussions\"><img src=\"https://img.shields.io/badge/Community-GitHub%20Discussions-0b1220?style=for-the-badge&logo=github&logoColor=white\" alt=\"GitHub Discussions\"></a> </p> ## Sponsors > Want to support OpenMontage? [Sponsor the project](https://github.com/sponsors/calesthio). <details open> <summary>Click to collapse</summary> <table> <tr> <td width=\"180\" align=\"center\"><a href=\"https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607\"><img src=\"assets/sponsors/bloome.png\" alt=\"Bloome\" width=\"150\"></a></td> <td><strong>Bloome</strong> lets multiple AI agents (Claude, ChatGPT, DeepSeek, and more) collaborate in one conversation for agentic video pipelines. It has zero setup, runs in the cloud, works on web and mobile, and lets you share a configured agent with your whole team. <strong><a href=\"https://bloome.im/app?ref=calesthio&utm_medium=github&utm_source=calesthio-OpenMontage-ivor-202607\">Try Bloome</a></strong>.</td> </tr> <tr> <td width=\"180\" align=\"center\"><a href=\"https://www.atlascloud.ai/coding-plan\"><img src=\"assets/sponsors/atlas-cloud.png\" alt=\"Atlas Cloud\" width=\"150\"></a></td> <td><strong>Atlas Cloud</strong> is a full-modal AI inference platform that gives developers a single AI API for video generation, image generation, and LLM APIs. Instead of managing multiple vendor integrations, you connect once and get unified access to 300+ curated models across all modalities. Check out Atlas Cloud's new <a href=\"https://www.atlascloud.ai/coding-plan\">coding plan</a> promotion for more budget-friendly API access.</td> </tr> </table> </details> --- Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition. **Important distinction:** OpenMontage can make image-based videos, but it can also make a real **vide",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 8,
+      "full_name": "caddyserver/caddy",
+      "url": "https://github.com/caddyserver/caddy",
+      "description": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+      "language": "Go",
+      "stars": 77282,
+      "forks": 5082,
+      "stars_today": 515,
+      "topics": [
+        "acme",
+        "automatic-https",
+        "caddy",
+        "caddyfile",
+        "go",
+        "golang",
+        "http",
+        "http-server",
+        "http3",
+        "https",
+        "privacy",
+        "reverse-proxy",
+        "security",
+        "tls",
+        "web-server"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2015-01-13T19:45:03Z",
+      "updated_at": "2026-10-06T07:35:52Z",
+      "open_issues": 281,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://caddyserver.com\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/1d6be89c-df8a-438c-b01d-cef6bf56440a\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/3a5b7419-6925-48f6-ae75-d231f4a4f0c2\"> <img src=\"https://github.com/user-attachments/assets/3a5b7419-6925-48f6-ae75-d231f4a4f0c2\" alt=\"Caddy\" width=\"550\"> </picture> </a> <br> <h3 align=\"center\">a <a href=\"https://zerossl.com\"><img src=\"https://user-images.githubusercontent.com/55066419/208327323-2770dc16-ec09-43a0-9035-c5b872c2ad7f.svg\" height=\"28\" style=\"vertical-align: -7.7px\" valign=\"middle\"></a> project</h3> </p> <hr> <h3 align=\"center\">Every site on HTTPS</h3> <p align=\"center\">Caddy is an extensible server platform that uses TLS by default.</p> <p align=\"center\"> <a href=\"https://github.com/caddyserver/caddy/releases\">Releases</a> · <a href=\"https://caddyserver.com/docs/\">Documentation</a> · <a href=\"https://caddy.community\">Get Help</a> </p> <p align=\"center\"> <a href=\"https://github.com/caddyserver/caddy/actions/workflows/ci.yml\"><img src=\"https://github.com/caddyserver/caddy/actions/workflows/ci.yml/badge.svg\"></a> &nbsp; <a href=\"https://www.bestpractices.dev/projects/7141\"><img src=\"https://www.bestpractices.dev/projects/7141/badge\"></a> &nbsp; <a href=\"https://pkg.go.dev/github.com/caddyserver/caddy/v2\"><img src=\"https://img.shields.io/badge/godoc-reference-%23007d9c.svg\"></a> &nbsp; <a href=\"https://x.com/caddyserver\" title=\"@caddyserver on Twitter\"><img src=\"https://img.shields.io/twitter/follow/caddyserver\" alt=\"@caddyserver on Twitter\"></a> &nbsp; <a href=\"https://caddy.community\" title=\"Caddy Forum\"><img src=\"https://img.shields.io/badge/community-forum-ff69b4.svg\" alt=\"Caddy Forum\"></a> <br> <a href=\"https://sourcegraph.com/github.com/caddyserver/caddy?badge\" title=\"Caddy on Sourcegraph\"><img src=\"https://sourcegraph.com/github.com/caddyserver/caddy/-/badge.svg\" alt=\"Caddy on Sourcegraph\"></a> &nbsp; <a href=\"https://cloudsmith.io/~caddy/repos/\"><img src=\"https://img.shields.io/badge/OSS%20hosting%20by-cloudsmith-blue?logo=cloudsmith\" alt=\"Cloudsmith\"></a> </p> <p align=\"center\"> <b>Powered by</b> <br> <a href=\"https://github.com/caddyserver/certmagic\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://user-images.githubusercontent.com/55066419/206946718-740b6371-3df3-4d72-a822-47e4c48af999.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://user-images.githubusercontent.com/1128849/49704830-49d37200-fbd5-11e8-8385-767e0cd033c3.png\"> <img src=\"https://user-images.githubusercontent.com/1128849/49704830-49d37200-fbd5-11e8-8385-767e0cd033c3.png\" alt=\"CertMagic\" width=\"250\"> </picture> </a> </p> <!-- Warp sponsorship requests this section --> <div align=\"center\" markdown=\"1\"> <hr> <sup>Special thanks to:</sup> <br> <a href=\"https://go.warp.dev/caddy\"> <img alt=\"Warp sponsorship\" width=\"400\" src=\"https://github.com/user-attachments/assets/c8efffde-18c7-4af4-83ed-b1aba2dda394\"> </a> ### [Warp, built for coding with multiple AI agents](https://go.warp.dev/caddy) [Available for MacOS, Linux, & Windows](https://go.warp.dev/caddy)<br> </div> <hr> ### Menu - [Features](#features) - [Install](#install) - [Build from source](#build-from-source) - [For development](#for-development) - [With version information and/or plugins](#with-version-information-andor-plugins) - [Quick start](#quick-start) - [Overview](#overview) - [Full documentation](#full-documentation) - [Getting help](#getting-help) - [About](#about) ## [Features](https://caddyserver.com/features) - **Easy configuration** with the [Caddyfile](https://caddyserver.com/docs/caddyfile) - **Powerful configuration** with its [native JSON config](https://caddyserver.com/docs/json/) - **Dynamic configuration** with the [JSON API](https://caddyserver.com/docs/api) - [**Config adapters**](https://caddyserver.com/docs/config-adapters) if you don",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 9,
+      "full_name": "DuarteSantos8/openGym",
+      "url": "https://github.com/DuarteSantos8/openGym",
+      "description": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+      "language": "JavaScript",
+      "stars": 4587,
+      "forks": 686,
+      "stars_today": 1433,
+      "topics": [
+        "bodyweight",
+        "docker",
+        "fitness",
+        "fitness-tracker",
+        "gym",
+        "health",
+        "mcp",
+        "nodejs",
+        "passkeys",
+        "progressive-web-applications",
+        "pwa",
+        "react",
+        "self-hosted",
+        "self-hosting",
+        "vite",
+        "webauthn",
+        "weightlifting",
+        "workout-tracker"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2026-07-18T20:41:24Z",
+      "updated_at": "2026-10-06T07:35:24Z",
+      "open_issues": 137,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"assets/banner.png\" alt=\"openGym\" width=\"720\"> **A self-hosted gym and body-weight tracker you actually own.** Plan your week, run guided workouts, log every set and your body weight —<br> on your phone, synced across your devices, behind your own passkey login. [![Discord](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fe62jY6fwVb%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&label=Discord&logo=discord&logoColor=white&color=5865F2&style=for-the-badge)](https://discord.gg/e62jY6fwVb) [![Online](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2Fe62jY6fwVb%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&label=&logo=discord&logoColor=white&color=3BA55C&style=for-the-badge)](https://discord.gg/e62jY6fwVb) [![GitHub stars](https://img.shields.io/github/stars/DuarteSantos8/openGym?style=for-the-badge&logo=github&logoColor=white&color=24292f)](https://github.com/DuarteSantos8/openGym/stargazers) [![Release](https://img.shields.io/github/v/release/DuarteSantos8/openGym?style=flat-square)](https://github.com/DuarteSantos8/openGym/releases) [![Tests](https://img.shields.io/github/actions/workflow/status/DuarteSantos8/openGym/test.yml?branch=main&label=tests&style=flat-square)](https://github.com/DuarteSantos8/openGym/actions/workflows/test.yml) [![Pipeline](https://gitlab.com/DuarteSantos8/opengym/badges/main/pipeline.svg?style=flat-square)](https://gitlab.com/DuarteSantos8/opengym/-/pipelines) [![Coverage](https://gitlab.com/DuarteSantos8/opengym/badges/main/coverage.svg?job=test:frontend&style=flat-square)](https://gitlab.com/DuarteSantos8/opengym/-/pipelines?ref=main) [![License: AGPL v3](https://img.shields.io/badge/license-AGPL--3.0-a3e635?style=flat-square)](LICENSE) [Website](https://opengym.duarte-santos.ch) · [Live demo](https://opengym.duarte-santos.ch/demo/) · [Android APK](https://github.com/DuarteSantos8/openGym/releases/latest) · [Self-hosting guide](docs/SELF_HOSTING.md) · [Roadmap](ROADMAP.md) · [Changelog](CHANGELOG.md) </div> <table align=\"center\"> <tr> <td align=\"center\"><img src=\"assets/screenshots/home.png\" alt=\"Home screen\" width=\"230\"><br><sub><b>Home</b> · today's workout and weight</sub></td> <td align=\"center\"><img src=\"assets/screenshots/workout.png\" alt=\"Workout screen\" width=\"230\"><br><sub><b>Guided workout</b> · demos and sets</sub></td> <td align=\"center\"><img src=\"assets/screenshots/stats.png\" alt=\"Stats screen\" width=\"230\"><br><sub><b>Stats</b> · heatmap, charts and PRs</sub></td> </tr> </table> ## Why openGym Most workout apps keep your data on their servers, push you towards a subscription, or vanish when the company does. openGym runs on your own box, keeps your data in a folder you control, and is yours to fork. It still behaves like a modern app: installable on the home screen, passkey sign-in, works offline, syncs between your phone and your laptop. No account on someone else's server, no subscription, no ads, no telemetry. One `docker compose up` and it's running. The [in-browser demo](https://opengym.duarte-santos.ch/demo/) is the real app with example data, if you want to try it before installing anything. ## Features **Planning** - A routine per weekday over a library of **1,324 exercises** with animated demos, searchable and browsable by muscle on a body map. Filter by the equipment you own. - Four starter plans (Push/Pull/Legs, Upper/Lower, Full Body, 5×5) that load as ordinary, editable routines. - Move a session to another day without touching the weekly plan. The week starts on Monday or Sunday, your choice. - Supersets, warm-up sets, drop sets and rest-pause, timed exercises (planks, hangs, carries), cardio by time and speed, rest time per exercise, planned deloads. - Your own exercises, with your own photo, GIF or short video. Location data is stripped on the device before upload. **Training** - Guided sessions: today's wor",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "cloudflare/cloudflare-os",
+      "url": "https://github.com/cloudflare/cloudflare-os",
+      "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+      "language": "TypeScript",
+      "stars": 11111,
+      "forks": 1316,
+      "stars_today": 101,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-04-15T22:22:53Z",
+      "updated_at": "2026-10-06T07:32:18Z",
+      "open_issues": 132,
+      "default_branch": "main",
+      "readme_excerpt": "# Cloudflare OS: An AI productivity environment Cloudflare OS is an \"operating system\" for AI productivity originally developed for use inside Cloudflare. A large portion of Cloudflare's workforce -- from engineering to sales and everything in between -- uses Cloudflare OS every day to help them do their jobs. ![A Q3 planning workspace in Cloudflare OS, with an AI-generated slide deck](docs/images/q3-planning-workspace.png) This is not a traditional computer operating system. We use the term \"operating system\" in two senses: * An operating system for *the company* to be productive with AI, in a way that is safe, so that the security team can sleep at night. * An operating system for AI workloads, analogous to the sense in which a traditional operating system manages compute workloads. Cloudflare OS provides three things in particular: 1. An agent chat UI where you can ask agents to do tasks, preloaded with knowledge about how your company operates. 2. Sandboxed application development, so that you can ask agents to build \"gadgets\" (small personal apps) and safely share what you've built with others. 3. A security framework, called Gatekeepers, that applies guardrails to both agents and apps such that non-technical users can safely \"go nuts\" and nothing bad will happen. We are making Cloudflare OS open source so that others can copy it and customize it for their own company. The idea is not that your company uses Cloudflare OS, but rather that you make it \"*Your Company* OS\". ## Quick Start To quickly run Cloudflare OS locally, [install pnpm](https://pnpm.io/), then do: pnpm run-local Then visit: http://localhost:8787 This runs the whole stack locally on wrangler and workerd. This is not meant for production use, but is a quick way to see what the product does. Alternatively, you can [deploy to your Cloudflare account](https://os.cloudflare.app/deploy). (More options at the end of this readme.) ### What to try Try prompts like: * \"Make slides for my upcoming meeting with a customer.\" (This will use the built-in slides blueprint.) * \"Make a collaborative whiteboard app.\" (This will create a new app from scratch.) * \"Make a tic tac toe game.\" followed by \"I'll be X and you be O. I've made my first move. Your turn.\" * \"Make an issue dashboard for this GitHub repo.\" (Attach a repo; requires that the GitHub integration is configured.) * \"Fix the typos in this Google Doc.\" (Attach a doc; requires that the Google integration is configured.) ### WARNING: Early access Cloudflare OS is in a state of heavy development. This repository is actually version 2, a complete rewrite taking what we learned from version 1 and putting it on a new foundation. As of the August 2026 release, Cloudflare OS v2 is very capable, but still has many rough edges. We know, and we're working on it. For now, consider this an \"early access\" release. ## Overview: What is Cloudflare OS really? ### Gadgets: A new way of thinking about software Cloudflare OS is more than just another chatbox with connectors. The system revolves around a new approach to software, where every user runs their own copy of the productivity apps they use. When you create a slide deck in Cloudflare OS, you are not calling out to some SaaS software running in the cloud. The system creates a *private instance* of the slide deck software *just for you*. We call this a \"gadget\". This instance runs in a separate sandbox from everyone else's slide decks. This has two profound effects: 1. It's impossible for the slide deck app to have a security bug that leaks your slides to an attacker. The Cloudflare OS sandbox controls all access to your private instance of the app. 2. If you want, you can freely modify the code. If the slide deck app is missing a feature you need, you can just ask your agent to add it. And because of point 1, it's totally safe to do so. This is a big departure from the last 25 years of cloud architecture and \"Software as a Service\", but we think AI has changed the equation. W",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "Stremio/stremio-web",
+      "url": "https://github.com/Stremio/stremio-web",
+      "description": "Stremio - Freedom to Stream",
+      "language": "JavaScript",
+      "stars": 14360,
+      "forks": 1636,
+      "stars_today": 111,
+      "topics": [
+        "hacktoberfest",
+        "stremio"
+      ],
+      "license": "GPL-2.0",
+      "created_at": "2018-06-04T12:45:05Z",
+      "updated_at": "2026-10-06T07:26:13Z",
+      "open_issues": 69,
+      "default_branch": "development",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"/assets/images/stremio_symbol.png\" width=\"90\" alt=\"Stremio logo\"> # Stremio Web **Freedom to Stream** — the official web UI of [Stremio](https://www.stremio.com), a modern media center that's a one-stop solution for your video entertainment. [![Build](https://github.com/Stremio/stremio-web/actions/workflows/build.yml/badge.svg)](https://github.com/Stremio/stremio-web/actions/workflows/build.yml) [![Github Page](https://img.shields.io/website?label=Page&logo=github&up_message=online&down_message=offline&url=https%3A%2F%2Fstremio.github.io%2Fstremio-web%2F)](https://stremio.github.io/stremio-web/development) [![Version](https://img.shields.io/github/package-json/v/Stremio/stremio-web/development?label=version&color=7b5bf5)](https://github.com/Stremio/stremio-web/releases) [![License](https://img.shields.io/github/license/Stremio/stremio-web?color=7b5bf5)](/LICENSE.md) **[🌐 Open the Web App](https://web.stremio.com)** · [Website](https://www.stremio.com) · [Report a bug](https://github.com/Stremio/stremio-web/issues/new/choose) <img alt=\"Stremio board\" width=\"100%\" src=\"https://github.com/user-attachments/assets/b3597fcc-ee53-4c4c-82be-457844135230\" /> </div> ## ✨ Features - 🧩 **Addon-powered** — discover movies, series and channels from catalogs provided by [addons](https://web.stremio.com/#/addons) - 🔄 **Sync everywhere** — your library and Continue Watching follow your Stremio account across devices - 📺 **Casting** — play on the big screen via Chromecast - 💬 **Subtitles** — addon-provided or local, with customizable styling - ⌨️ **Keyboard-first player** — full playback control without touching the mouse - 🌍 **50+ languages** — community-translated via [stremio-translations](https://github.com/Stremio/stremio-translations) - 📱 **Installable** — runs as a standalone PWA ## 📸 Screenshots | Discover | Meta Details | |:---:|:---:| | ![Discover](https://github.com/user-attachments/assets/e89af0e8-8c53-4dac-a38a-464b5dfcf1a4) | ![Meta Details](https://github.com/user-attachments/assets/858a6946-d34a-4490-90c2-368b8714d501) | ## 🛠 How it works The UI (this repo) is a React app, but the brains live in [stremio-core](https://github.com/Stremio/stremio-core) — Stremio's Rust engine compiled to WebAssembly and running in a Web Worker. The UI renders state, the core computes it. Playback goes through [stremio-video](https://github.com/Stremio/stremio-video), which picks the right player implementation for the environment. ```mermaid flowchart LR UI[\"React UI<br>(this repo)\"] <--> Core[\"stremio-core<br>Rust → WASM, Web Worker\"] Core <--> API[\"Stremio API\"] Core <--> Addons[\"Addons\"] UI --> Video[\"stremio-video\"] ``` ## 🚀 Getting started You'll need [Node.js](https://nodejs.org) 22+ and [pnpm](https://pnpm.io/installation) 11+. ```bash pnpm install pnpm start ``` The dev server runs at `http://localhost:8080`. | Command | Description | |---|---| | `pnpm start` | Development server with hot reload | | `pnpm run start-prod` | Development server in production mode | | `pnpm run build` | Production build | | `pnpm test` | Run tests | | `pnpm run lint` | Lint the source | | `pnpm run scan-translations` | Check for missing translation keys | ### 🐳 Docker ```bash docker build -t stremio-web . docker run -p 8080:8080 stremio-web ``` ## 🤝 Contributing Bug reports and pull requests are welcome — [`good first issue`](https://github.com/Stremio/stremio-web/labels/good%20first%20issue) is a great place to start. Want Stremio in your language? Contribute to [stremio-translations](https://github.com/Stremio/stremio-translations). Please read the [Code of Conduct](/CODE_OF_CONDUCT.md) first. ## 🧩 Ecosystem | Repository | What it is | |---|---| | [stremio-core](https://github.com/Stremio/stremio-core) | Rust engine: state, addon protocol, library, sync | | [stremio-video](https://github.com/Stremio/stremio-video) | Video player abstraction used by this UI | | [stremio-translations](https://github.com/Stremio/stremio-translatio",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "msitarzewski/agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+      "language": "Shell",
+      "stars": 157439,
+      "forks": 25386,
+      "stars_today": 744,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-10-13T12:12:29Z",
+      "updated_at": "2026-10-06T07:33:43Z",
+      "open_issues": 185,
+      "default_branch": "main",
+      "readme_excerpt": "# 🎭 The Agency: AI Specialists Ready to Transform Your Workflow > **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. [![GitHub stars](https://img.shields.io/github/stars/msitarzewski/agency-agents?style=social)](https://github.com/msitarzewski/agency-agents) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com) [![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?logo=github)](https://github.com/sponsors/msitarzewski) [![Download the app](https://img.shields.io/github/v/release/msitarzewski/agency-agents-app?label=Download%20app&color=2563eb)](https://github.com/msitarzewski/agency-agents-app/releases/latest) > ### 🆕 There's an app now > > **[Agency Agents](https://agencyagents.app)** is a native app for **macOS, Linux & Windows** that browses the entire roster and installs it into Claude Code, Cursor, Codex, Gemini, Osaurus, and more — with a click. No clone, no scripts, and it auto-updates. > > **→ [Download the latest release](https://github.com/msitarzewski/agency-agents-app/releases/latest) · [agencyagents.app](https://agencyagents.app)** --- ## 🚀 What Is This? Born from a Reddit thread and months of iteration, **The Agency** is a growing collection of meticulously crafted AI agent personalities. Each agent is: - **🎯 Specialized**: Deep expertise in their domain (not generic prompt templates) - **🧠 Personality-Driven**: Unique voice, communication style, and approach - **📋 Deliverable-Focused**: Real code, processes, and measurable outcomes - **✅ Production-Ready**: Battle-tested workflows and success metrics **Think of it as**: Assembling your dream team, except they're AI specialists who never sleep, never complain, and always deliver. --- ## ⚡ Quick Start ### Option 1: Install the app (Recommended) The fastest way in — no clone, no terminal. [**Agency Agents**](https://agencyagents.app) is a native desktop app (macOS · Linux · Windows) that browses the whole roster and installs agents into Claude Code, Cursor, Codex, Gemini CLI, OpenCode, Qwen, and Osaurus for you, then keeps them up to date. **[⬇ Download the latest release](https://github.com/msitarzewski/agency-agents-app/releases/latest)** — or on a Mac: ```bash brew install --cask msitarzewski/agency-agents/agency-agents ``` Prefer the command line? The script-based options below install the same agents. ### Option 2: Use with Claude Code ```bash # Install all agents to your Claude Code directory ./scripts/install.sh --tool claude-code # Or manually copy a category if you only want one division cp engineering/*.md ~/.claude/agents/ # Then activate any agent in your Claude Code sessions: # \"Hey Claude, activate Frontend Developer mode and help me build a React component\" ``` ### Option 3: Use as Reference Each agent file contains: - Identity & personality traits - Core mission & workflows - Technical deliverables with code examples - Success metrics & communication style Browse the agents below and copy/adapt the ones you need! ### Option 4: Use with Other Tools (GitHub Copilot, Antigravity, Gemini CLI, OpenCode, OpenClaw, Cursor, Aider, Windsurf, Kimi Code, Codex, Osaurus, Hermes, Mistral Vibe, DeepSeek Harness) ```bash # Step 1 -- generate integration files for all supported tools ./scripts/convert.sh # Step 2 -- install interactively (auto-detects what you have installed) ./scripts/install.sh # Or target a specific tool directly ./scripts/install.sh --tool antigravity ./scripts/install.sh --tool gemini-cli ./scripts/install.sh --tool opencode ./scripts/install.sh --tool copilot ./scripts/install.sh --tool openclaw ./scripts/install.sh --tool cursor ./scripts/install.sh --tool aider ./scripts/install.sh --tool windsurf ./s",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "M-Abozaid/esp32-c3-adblock",
+      "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+      "description": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+      "language": "C++",
+      "stars": 1527,
+      "forks": 133,
+      "stars_today": 196,
+      "topics": [
+        "adblocker",
+        "arduino",
+        "dns",
+        "dns-sinkhole",
+        "esp32",
+        "esp32-c3",
+        "iot",
+        "pi-hole",
+        "platformio"
+      ],
+      "license": "MIT",
+      "created_at": "2026-06-19T18:14:43Z",
+      "updated_at": "2026-10-06T07:35:23Z",
+      "open_issues": 14,
+      "default_branch": "main",
+      "readme_excerpt": "# esp32-c3-adblock [日本語 README](README_JP.md) A **Pi-hole-style DNS ad-blocker** that runs on a **$2 ESP32-C3** — *no PSRAM required*. > 📰 Featured on [Tom's Hardware](https://www.tomshardware.com/networking/clever-hacker-fits-537-000-domains-in-a-tiny-usd5-esp32-ad-blocking-dongle-firmware-uses-only-around-50kb-of-ram-and-can-answer-blocked-lookups-in-10-milliseconds), [XDA Developers](https://www.xda-developers.com/this-tiny-esp32-powered-gadget-blocks-537000-domains-only-uses-50kb-of-ram/), and [Korben](https://korben.info/en/half-million-ad-blocking-domains-50kb-ram-esp32.html). The trick everyone misses: you don't need to keep the blocklist in RAM. Store the domains as **sorted 40-bit hashes in flash** and binary-search them. 140,000+ domains fit in ~0.7 MB of flash and are matched in ~10 ms, using **~50 KB of RAM**. ``` query in ──▶ extract domain ──▶ FNV-1a hash (+ parent suffixes) ──▶ binary-search the flash hash table ├─ hit ──▶ answer 0.0.0.0 (sinkholed) └─ miss ──▶ forward to upstream resolver, relay the reply ``` ## Why this is interesting Most ESP32 DNS sinkholes load the blocklist (domain *strings*) into RAM, so they demand PSRAM. This project stores fixed **5-byte (40-bit) hashes in flash** instead: | | string-in-RAM approach | this (hash-in-flash) | |---|---|---| | Hardware | ESP32 + PSRAM (~$8) | ESP32-C3, no PSRAM (~$2) | | 141k domains | ~2.5 MB of RAM | **0.67 MB of flash** | | RAM used | most of it | **~50 KB** | | Lookup | string compare | ~18 flash reads (~10 ms incl. WiFi RTT) | | Collisions | n/a | 0 at 141k (1 at 537k) | **Why 40 bits?** It's the sweet spot for this flash budget. Collisions follow the birthday bound — at 141k domains you get ~0, at 537k about 1 (i.e. one unlucky domain gets over-blocked). Dropping to 32 bits would save 20% of the flash but cost ~7 collisions at 250k; going to 64 bits wastes 3 bytes per domain to solve a problem you don't have. The same trick works on bigger chips — it isn't a C3 workaround. On a 16 MB ESP32-S3 these hashes hold **~2.7M domains** vs ~466k for strings in 8 MB of PSRAM. Hashes in flash beat strings in PSRAM basically everywhere; the C3 just makes it undeniable. ## Hardware - Any **ESP32-C3** board (tested on a C3 SuperMini), 4 MB flash, **no PSRAM needed** - Classic **ESP32** (DevKit / WROOM, 4 MB) also builds: `pio run -e esp32dev -t upload` (community-contributed, compile-tested; the C3 is the tested target) - Power it from a **stable USB source** (a phone charger or your router's USB port). Cheap/loose USB-C→A adapters can brown out the radio during WiFi transmit. - A **USB-A → USB-C dongle** lets it plug straight into the spare USB port on the back of most routers — no power supply, no extra box. ### Enclosure A printable case for the C3 SuperMini: [`hardware/esp32-c3-supermini-enclosure.stl`](hardware/esp32-c3-supermini-enclosure.stl) Printing notes: - No supports needed; 0.2 mm layers, ~15% infill is plenty. - **Keep the antenna end clear.** The C3's PCB antenna is the zig-zag trace on the short edge opposite the USB-C port — don't bury it in solid plastic or put metal near it, or your RSSI will suffer. - Leave the vents open: the board idles around 45–55 °C. ## Build & flash (PlatformIO) One USB flash to get going — after that, **firmware and blocklist both update over WiFi** (see below). > ⚠️ Use a **current PlatformIO** — the VSCode PlatformIO extension's bundled core, or > `pip install -U platformio` in a venv. The distro/apt `platformio` package (e.g. 4.3.4) is > too old and fails with `AttributeError: ... 'resultcallback'` (issue #4). A one-click browser installer is on the way (hosting TBD). ```bash # 1. copy the secrets template (gitignored, stays local) and edit it: # - WIFI_SSID / WIFI_PASS are optional — leave the placeholders and use the # on-device setup portal instead (below). # - WEB_USER / WEB_PASS / OTA_PASS are NOT optional: they gate the dashboard's # state-changing endpoints (/ban, /addblock, /upload, /update, /setupdate, # /for",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 8/13 个项目可从资料确认与 AI 直接相关；其余 5 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（3 个）、AI 智能体与数字劳动力（3 个）、软件运行诊断工具（2 个）。",
+      "排名第一的 tester-army/e2e 代表“其他数字产品与工具”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（3 个项目）",
+      "AI 智能体与数字劳动力（3 个项目）",
+      "软件运行诊断工具（2 个项目）",
+      "企业智能体共享记忆（1 个项目）",
+      "AI 编程智能体（1 个项目）",
+      "AI 安全、权限与治理（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "tester-army/e2e",
+        "one_line_summary": "围绕“Next generation e2e testing framework for web and mobile apps.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Next generation e2e testing framework for web and mobile apps.",
+        "solution": "围绕“Next generation e2e testing framework for web and mobile apps.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1398 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 e2e 描述为“Next generation e2e testing framework for web and mobile apps.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Next generation e2e testing framework for web and mobile apps. 它的办法是：围绕“Next generation e2e testing framework for web and mobile apps.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Next generation e2e testing framework for web and mobile apps.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 e2e 的潜在使用者而言，在项目方所述的“Next generation e2e testing framework for web and mobile apps.”场景中，可直接查看和试验项目方所述的“Next generation e2e testing framework for web and mobile apps.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tester-army/e2e",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Next generation e2e testing framework for web and mobile apps.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tester-army/e2e",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/tester-army/e2e",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "thedotmack/claude-mem",
+        "one_line_summary": "把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "industry_direction": "企业智能体共享记忆",
+        "target_users": [
+          "同时部署多个 AI 智能体的企业",
+          "知识管理和自动化平台团队"
+        ],
+        "problem_solved": "不同智能体和会话各自保存信息，经验、文档和代码知识难以复用并统一治理。",
+        "solution": "把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 534 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "受治理的智能体记忆中枢",
+        "technology_impact": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "过期资料、权限串用、隐私和错误记忆可能让多个智能体同时产生错误。",
+        "ai_relevance": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "plain_language_explanation": "项目方把 claude-mem 描述为“Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, comp”。通俗地说，它希望解决的是：不同智能体和会话各自保存信息，经验、文档和代码知识难以复用并统一治理。 它的办法是：把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "scenario_examples": [
+          "例如客服和售后智能体共享经过审批的产品知识，但按岗位限制客户数据访问。"
+        ],
+        "practical_benefits": [
+          "对 claude-mem 的潜在使用者而言，在项目方所述的“Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, comp”场景中，减少不同智能体重复整理同一组织资料",
+          "让共享记忆的来源、权限和更新时间更容易统一管理"
+        ],
+        "industry_implications": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "who_should_care": "同时部署多个 AI 智能体的企业、知识管理和自动化平台团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/thedotmack/claude-mem",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/thedotmack/claude-mem",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "earthtojake/text-to-cad",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 437 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 text-to-cad 描述为“Give your agent CAD superpowers.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 text-to-cad 的潜在使用者而言，在项目方所述的“Give your agent CAD superpowers.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/earthtojake/text-to-cad",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Give your agent CAD superpowers.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/earthtojake/text-to-cad",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/earthtojake/text-to-cad",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "one_line_summary": "围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：名为 t3code 的项目",
+        "solution": "围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 485 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 t3code 描述为“名为 t3code 的项目”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：名为 t3code 的项目 它的办法是：围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“名为 t3code 的项目”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 t3code 的潜在使用者而言，在项目方所述的“名为 t3code 的项目”场景中，可直接查看和试验项目方所述的“名为 t3code 的项目”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pingdotgg/t3code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "boykopovar/AnyPS5",
+        "one_line_summary": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "industry_direction": "软件运行诊断工具",
+        "target_users": [
+          "维护数字产品的技术团队",
+          "负责系统稳定性的运维人员"
+        ],
+        "problem_solved": "系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。",
+        "solution": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 997 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "运行关系追踪",
+        "technology_impact": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "主要服务技术团队，与 AI 行业的直接商业关联有限。",
+        "ai_relevance": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "plain_language_explanation": "项目方把 AnyPS5 描述为“Tool for automatic PS5 executables porting to Linux and Windows”。通俗地说，它希望解决的是：系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。 它的办法是：把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "scenario_examples": [
+          "例如线上服务异常占用资源时，快速找到启动它的任务和负责人。"
+        ],
+        "practical_benefits": [
+          "对 AnyPS5 的潜在使用者而言，在项目方所述的“Tool for automatic PS5 executables porting to Linux and Windows”场景中，缩短故障定位时间",
+          "减少误关关键服务或反复排查的风险"
+        ],
+        "industry_implications": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "who_should_care": "维护数字产品的技术团队、负责系统稳定性的运维人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/boykopovar/AnyPS5",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Tool for automatic PS5 executables porting to Linux and Windows",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/boykopovar/AnyPS5",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/boykopovar/AnyPS5",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 1155 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 Agent-Reach 描述为“Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili,”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 Agent-Reach 的潜在使用者而言，在项目方所述的“Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili,”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Panniantong/Agent-Reach",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Panniantong/Agent-Reach",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Panniantong/Agent-Reach",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 742 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 OpenMontage 描述为“World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent sk”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 OpenMontage 的潜在使用者而言，在项目方所述的“World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent sk”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/calesthio/OpenMontage",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "World's first open-source, agentic video production system. 12 production pipelines, 100+ tools, 700+ agent skill and production-knowledge files. Turn your AI coding assistant into a full video production studio.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/calesthio/OpenMontage",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/calesthio/OpenMontage",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "caddyserver/caddy",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 515 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 caddy 描述为“Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 caddy 的潜在使用者而言，在项目方所述的“Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/caddyserver/caddy",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/caddyserver/caddy",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/caddyserver/caddy",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "DuarteSantos8/openGym",
+        "one_line_summary": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "industry_direction": "软件运行诊断工具",
+        "target_users": [
+          "维护数字产品的技术团队",
+          "负责系统稳定性的运维人员"
+        ],
+        "problem_solved": "系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。",
+        "solution": "把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 1433 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "运行关系追踪",
+        "technology_impact": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "主要服务技术团队，与 AI 行业的直接商业关联有限。",
+        "ai_relevance": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "plain_language_explanation": "项目方把 openGym 描述为“Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which m”。通俗地说，它希望解决的是：系统出现异常时，很难快速追溯某个进程、服务或文件由什么启动。 它的办法是：把运行中的对象与其来源关系整理出来，帮助团队定位问题。",
+        "scenario_examples": [
+          "例如线上服务异常占用资源时，快速找到启动它的任务和负责人。"
+        ],
+        "practical_benefits": [
+          "对 openGym 的潜在使用者而言，在项目方所述的“Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which m”场景中，缩短故障定位时间",
+          "减少误关关键服务或反复排查的风险"
+        ],
+        "industry_implications": "它不是 AI 突破，但能降低复杂自动化系统的排障成本。",
+        "who_should_care": "维护数字产品的技术团队、负责系统稳定性的运维人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/DuarteSantos8/openGym",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Self-hosted gym & body-weight tracker — plan routines, log workouts (supersets, warm-ups, cardio), see which muscles are trained, fatigued or detrained, import from FitNotes/Strong/Hevy, passkey login. Your data, your server.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/DuarteSantos8/openGym",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/DuarteSantos8/openGym",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cloudflare/cloudflare-os",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 101 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 cloudflare-os 描述为“Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with you”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 cloudflare-os 的潜在使用者而言，在项目方所述的“Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with you”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/cloudflare-os",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/cloudflare-os",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cloudflare/cloudflare-os",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Stremio/stremio-web",
+        "one_line_summary": "围绕“Stremio - Freedom to Stream”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Stremio - Freedom to Stream",
+        "solution": "围绕“Stremio - Freedom to Stream”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 111 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 stremio-web 描述为“Stremio - Freedom to Stream”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Stremio - Freedom to Stream 它的办法是：围绕“Stremio - Freedom to Stream”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Stremio - Freedom to Stream”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 stremio-web 的潜在使用者而言，在项目方所述的“Stremio - Freedom to Stream”场景中，可直接查看和试验项目方所述的“Stremio - Freedom to Stream”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Stremio/stremio-web",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Stremio - Freedom to Stream",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Stremio/stremio-web",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Stremio/stremio-web",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "msitarzewski/agency-agents",
+        "one_line_summary": "提供已经定义好的专业角色、工作步骤和交付模板，供团队按任务选用。",
+        "industry_direction": "可复用的 AI 专业角色库",
+        "target_users": [
+          "创意与营销团队",
+          "尝试组建 AI 协作流程的小型企业"
+        ],
+        "problem_solved": "团队想让 AI 承担不同岗位任务，却要反复编写角色要求、流程和交付标准。",
+        "solution": "提供已经定义好的专业角色、工作步骤和交付模板，供团队按任务选用。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 744 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "角色化智能体模板",
+        "technology_impact": "智能体产品开始把行业经验包装成可复用的角色和流程，而不只是提供空白聊天框。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色设定不代表真实专业能力，所谓成熟流程仍需用实际交付质量验证。",
+        "ai_relevance": "智能体产品开始把行业经验包装成可复用的角色和流程，而不只是提供空白聊天框。",
+        "plain_language_explanation": "项目方把 agency-agents 描述为“A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy inject”。通俗地说，它希望解决的是：团队想让 AI 承担不同岗位任务，却要反复编写角色要求、流程和交付标准。 它的办法是：提供已经定义好的专业角色、工作步骤和交付模板，供团队按任务选用。",
+        "scenario_examples": [
+          "例如营销负责人选择研究、文案和质量检查三个角色，先形成活动草案再由人审批。"
+        ],
+        "practical_benefits": [
+          "对 agency-agents 的潜在使用者而言，在项目方所述的“A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy inject”场景中，减少从零设计 AI 角色和提示要求的准备时间",
+          "让小团队更快试验多角色协作是否适合自己的业务"
+        ],
+        "industry_implications": "智能体产品开始把行业经验包装成可复用的角色和流程，而不只是提供空白聊天框。",
+        "who_should_care": "创意与营销团队、尝试组建 AI 协作流程的小型企业",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/msitarzewski/agency-agents",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/msitarzewski/agency-agents",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/msitarzewski/agency-agents",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "M-Abozaid/esp32-c3-adblock",
+        "one_line_summary": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "industry_direction": "企业知识检索与 RAG",
+        "target_users": [
+          "知识密集型企业",
+          "客服、研究和内部运营团队"
+        ],
+        "problem_solved": "资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。",
+        "solution": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 196 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "检索增强生成",
+        "technology_impact": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "检索遗漏和过期资料仍会导致错误答案，来源与更新时间必须可见。",
+        "ai_relevance": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "plain_language_explanation": "项目方把 esp32-c3-adblock 描述为“Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binar”。通俗地说，它希望解决的是：资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。 它的办法是：先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "scenario_examples": [
+          "例如客服人员提问后，系统从最新产品文档中找到依据再组织回复。"
+        ],
+        "practical_benefits": [
+          "对 esp32-c3-adblock 的潜在使用者而言，在项目方所述的“Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binar”场景中，减少跨文档搜索时间",
+          "让回答更容易追溯到企业自己的资料"
+        ],
+        "industry_implications": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "who_should_care": "知识密集型企业、客服、研究和内部运营团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Pi-hole-class DNS ad-blocker on a $2 ESP32-C3 (no PSRAM): 537k domains as 40-bit FNV-1a hashes in flash, binary-searched. UDP DNS sinkhole + web dashboard. https://youtube.com/shorts/RaxszOUMi8E?feature=share",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 7,
+        "project_count": 4
+      },
+      {
+        "theme": "可复用的 AI 专业角色库",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 13,
+        "project_count": 6
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 7,
+        "project_count": 4
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 21,
+        "project_count": 16
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 3,
+        "project_count": 2
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 38,
+        "project_count": 16
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 21,
+        "project_count": 16
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 13,
+        "project_count": 6
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 7,
+        "project_count": 4
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 3,
+        "project_count": 2
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 38
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 38
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 21
+      },
+      {
+        "name": "软件产品团队",
+        "count": 13
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 13
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 7
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 7
+      },
+      {
+        "name": "内容、教育和媒体团队",
+        "count": 6
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 111
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 27,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 6,
+        "project_count": 1
+      },
+      {
+        "theme": "企业智能体管理工作台",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助安全研究技能",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "可复用的 AI 专业角色库",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "多模态内容理解",
+        "appearances": 15,
+        "project_count": 11
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 11,
+        "project_count": 7
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 9,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 6,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 51,
+        "project_count": 20
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 12,
+        "project_count": 6
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 9,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 6,
+        "project_count": 1
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 5,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 130,
+        "project_count": 53
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 104,
+        "project_count": 66
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 51,
+        "project_count": 20
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 16,
+        "project_count": 9
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 15,
+        "project_count": 11
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 15,
+        "project_count": 8
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 130
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 130
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 104
+      },
+      {
+        "name": "软件产品团队",
+        "count": 51
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 51
+      },
+      {
+        "name": "知识密集型企业",
+        "count": 16
+      },
+      {
+        "name": "客服、研究和内部运营团队",
+        "count": 16
+      },
+      {
+        "name": "企业安全与合规负责人",
+        "count": 15
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 435
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-10-05",
+    "new": [
+      "DuarteSantos8/openGym",
+      "M-Abozaid/esp32-c3-adblock",
+      "Stremio/stremio-web",
+      "boykopovar/AnyPS5",
+      "cloudflare/cloudflare-os",
+      "msitarzewski/agency-agents"
+    ],
+    "retained": [
+      "Panniantong/Agent-Reach",
+      "caddyserver/caddy",
+      "calesthio/OpenMontage",
+      "earthtojake/text-to-cad",
+      "pingdotgg/t3code",
+      "tester-army/e2e",
+      "thedotmack/claude-mem"
+    ],
+    "exited": [
+      "DietrichGebert/ponytail",
+      "OpenCut-app/OpenCut",
+      "addyosmani/agent-skills",
+      "antirez/ds4",
+      "coreyhaines31/marketingskills",
+      "garrytan/gstack",
+      "getsentry/sentry",
+      "michael-denyer/pstack-claude",
+      "pbakaus/impeccable"
+    ],
+    "risers": [
+      {
+        "full_name": "thedotmack/claude-mem",
+        "previous_rank": 13,
+        "rank": 2,
+        "change": 11
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "previous_rank": 9,
+        "rank": 4,
+        "change": 5
+      },
+      {
+        "full_name": "earthtojake/text-to-cad",
+        "previous_rank": 5,
+        "rank": 3,
+        "change": 2
+      },
+      {
+        "full_name": "caddyserver/caddy",
+        "previous_rank": 10,
+        "rank": 8,
+        "change": 2
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "previous_rank": 8,
+        "rank": 7,
+        "change": 1
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "previous_rank": 6,
+        "rank": 6,
+        "change": 0
+      },
+      {
+        "full_name": "tester-army/e2e",
+        "previous_rank": 1,
+        "rank": 1,
+        "change": 0
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "tester-army/e2e",
+        "previous_stars_today": 345,
+        "stars_today": 1398,
+        "change": 1053
+      },
+      {
+        "full_name": "calesthio/OpenMontage",
+        "previous_stars_today": 245,
+        "stars_today": 742,
+        "change": 497
+      },
+      {
+        "full_name": "caddyserver/caddy",
+        "previous_stars_today": 24,
+        "stars_today": 515,
+        "change": 491
+      },
+      {
+        "full_name": "earthtojake/text-to-cad",
+        "previous_stars_today": 83,
+        "stars_today": 437,
+        "change": 354
+      },
+      {
+        "full_name": "Panniantong/Agent-Reach",
+        "previous_stars_today": 980,
+        "stars_today": 1155,
+        "change": 175
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "previous_stars_today": 490,
+        "stars_today": 485,
+        "change": -5
+      },
+      {
+        "full_name": "thedotmack/claude-mem",
+        "previous_stars_today": 628,
+        "stars_today": 534,
+        "change": -94
+      }
+    ]
+  }
+}
