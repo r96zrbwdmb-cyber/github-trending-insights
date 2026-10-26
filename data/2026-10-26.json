@@ -1,0 +1,1380 @@
+{
+  "date": "2026-10-26",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 11,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "makecindy/cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 5248,
+      "forks": 695,
+      "stars_today": 675,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-22T17:49:34Z",
+      "updated_at": "2026-10-26T06:16:18Z",
+      "open_issues": 1941,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://cindy.app\"><img src=\".github/assets/hero-en.webp\" width=\"100%\" alt=\"CINDY — Consider it done. The open-source AI agent that works out of the box, doing real work on your own computer.\"></a> </p> <p align=\"center\"> <strong>English</strong> · <a href=\"README.zh-CN.md\">简体中文</a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache--2.0-blue.svg\" alt=\"License\" /></a> <a href=\"https://github.com/makecindy/cindy/actions/workflows/ci.yml\"><img src=\"https://github.com/makecindy/cindy/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /></a> <a href=\"https://nodejs.org\"><img src=\"https://img.shields.io/badge/node-22.x-brightgreen.svg\" alt=\"Node.js 22.x\" /></a> <a href=\"https://pnpm.io\"><img src=\"https://img.shields.io/badge/pnpm-10-orange.svg\" alt=\"pnpm\" /></a> </p> <p align=\"center\"> 🌐 <a href=\"https://cindy.app\">cindy.app</a> &nbsp;·&nbsp; ⬇️ <a href=\"https://cindy.app/download/\">Download</a> </p> Cindy is an open-source AI agent that works out of the box. She brings multiple harnesses, models and tools into one agent that finishes real work in your projects and apps. Ready from day one, yours to shape over time. Cindy runs locally on your own machine, using your real files and logged-in apps. The first supported harnesses are **Claude Code** and **Codex** — more are being added, and a native harness is in the works. Models and harnesses mix freely and can switch mid-task while your workspace, memory, skills and tools stay continuous; one task can even be planned, executed in parallel, and reviewed by agents on different harness × model combos. She can drive your browser, computer and phone, and take work from IM and schedules. This repository is the open-source **client** for Cindy — the desktop and mobile apps plus their shared packages, organized as a pnpm monorepo. The client is free to use, and its source code is open under Apache-2.0. Bring models your way: sign in to the official Cindy service (usage deducted transparently), authorize the **Claude Code / Codex Coding Plan** you already pay for and keep using it inside Cindy — no duplicate bill — connect your own API keys, or use local models. See [cindy.app](https://cindy.app) for service details, [pricing](https://cindy.app/#pricing), and [downloads](https://cindy.app/download/). Linux users: see the [Ubuntu, Arch Linux and Omarchy installation guide](docs/linux.md) for installation, updates, keyring setup and migration from a manual install. ## Yours to shape Open source means more than visible — it means changeable: - **Memory** — correct her once and she does it right from then on, shared across harnesses. - **Skills** — teach a way of working once and reuse it everywhere; handing them to your team is in the making. - **Automation** — recurring work schedules itself, runs itself, reports back. - **MCP** — wire your internal tools and business systems into her reach. - **Plugins** — reshape features, UI and interactions, shared through an open marketplace *(in the making)*. - **Source** — audit, fork, extend, and contribute improvements back under Apache-2.0. Ready out of the box, never boxed in — start with [`CONTRIBUTING.en.md`](CONTRIBUTING.en.md) and build Cindy with us. ## What's in this repo | Path | Description | | --- | --- | | `apps/desktop` | Electron desktop client | | `apps/mobile` | Expo / React Native mobile client | | `packages/*` | Shared client capabilities (auth, device-link, agent orchestration, model providers, …) | | `apps/*-bin` | Tool binaries shipped with the desktop app; none are committed — claude-code, codex, and ripgrep are downloaded per platform by `pnpm install`, and the Android platform-tools binaries are fetched (pinned version, sha256-verified) before Windows packaging | **Not in this repo:** the backend service lives in a separate repository and is not part of this monorepo. | Mode | Account requirement | Availability | | --- | --- | --- | | Hosted service | Cindy clou",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 9,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": 34394,
+      "forks": 1792,
+      "stars_today": 1317,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-04-27T20:47:10Z",
+      "updated_at": "2026-10-26T06:14:09Z",
+      "open_issues": 59,
+      "default_branch": "main",
+      "readme_excerpt": "# Hallmark **A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.** [usehallmark.com](https://www.usehallmark.com) &nbsp;·&nbsp; forty-eight themes &nbsp;·&nbsp; custom on request &nbsp;·&nbsp; redesign and audit by name Made by Together AI. <p align=\"center\"> <img src=\"site/OG-hallmark.png\" alt=\"Hallmark, the design skill that ends AI slop\" /> </p> Hallmark holds a hard floor and then gets out of the way. It deals three themes from a catalog of forty-eight materials, builds the page around what the visitor came to do, and lints the result in a real browser against the tells that read as machine-made: the eyebrow above every heading, tracked-capital labels, one coloured word in a headline, a page of empty frames or nothing but photographs, a hero that misses its screen, an email sign-up at the end of every page, a form that says thanks without sending anything. A fresh-context reviewer gets the last word. The gates come in tiers. The **Floor** never ships (contrast, focus, reduced motion, invented facts, a broken phone layout). **Reflex** gates are the defaults a model falls into; a build with a reason may overrule one on the record. **Finish** checks are craft detail that never blocks a ship. ## New in v2 - **Forty-eight themes.** Each is a material (paper, type, colour, surfaces, its own components and texture) with a picture of a finished page, and the build lays out its own page in it. - **Built from the job.** A booking page books, a shop sells, a newsletter subscribes: the action sits where the category puts it, and the page ends on it. - **Custom.** Ask for a custom page and Hallmark designs from your prompt alone, under the same rules and checks. - **Your real product.** Point it at a URL, a dev server or an app and it captures the screenshots itself. - **Real photographs.** 755 openly licensed photos, picked per subject and credited on the page. - **Redesign and audit.** `/hallmark redesign <path>` rebuilds a page and keeps its content and wiring; `/hallmark audit <path>` only reports. ## Themes <table> <tr> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/dusk/\"><img src=\"docs/screenshots/dusk.jpg\" alt=\"Dusk theme: Closewise, bank reconciliation\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/cobalt/\"><img src=\"docs/screenshots/cobalt.jpg\" alt=\"Cobalt theme: Relay, a webhook API\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/studio/\"><img src=\"docs/screenshots/studio.jpg\" alt=\"Studio theme: Field Office, an identity studio\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/atelier/\"><img src=\"docs/screenshots/atelier.jpg\" alt=\"Atelier theme: Maison Orla, a fragrance atelier\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/ribbon/\"><img src=\"docs/screenshots/ribbon.jpg\" alt=\"Ribbon theme: Lull, a sleep sounds app\" /></a></td> </tr> <tr> <td><b>Dusk</b><br/><sub>Closewise, bank reconciliation</sub></td> <td><b>Cobalt</b><br/><sub>Relay, a webhook API</sub></td> <td><b>Studio</b><br/><sub>Field Office, an identity studio</sub></td> <td><b>Atelier</b><br/><sub>Maison Orla, a fragrance atelier</sub></td> <td><b>Ribbon</b><br/><sub>Lull, a sleep sounds app</sub></td> </tr> <tr> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/furrow/\"><img src=\"docs/screenshots/furrow.jpg\" alt=\"Furrow theme: Fieldbook, farm records\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/dose/\"><img src=\"docs/screenshots/dose.jpg\" alt=\"Dose theme: Tandem, a family medication app\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/hum/\"><img src=\"docs/screenshots/hum.jpg\" alt=\"Hum theme: Sprout, a reading game for kids\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/terminal/\"><img src=\"docs/screenshots/terminal.jpg\" alt=\"Terminal theme: burrow, a dotfiles CLI\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.c",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "stars": 87334,
+      "forks": 9655,
+      "stars_today": 1592,
+      "topics": [
+        "ai",
+        "audiobook",
+        "cuda",
+        "dubbing",
+        "elevenlabs-alternative",
+        "huggingface",
+        "local-first",
+        "mlx",
+        "omnivoice-studio",
+        "speech-to-text",
+        "text-to-speech",
+        "transcription",
+        "translate",
+        "tts",
+        "voice-ai",
+        "voice-cloning",
+        "voice-generation",
+        "voicestudio",
+        "workflow"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2026-04-09T21:40:26Z",
+      "updated_at": "2026-10-26T06:16:47Z",
+      "open_issues": 195,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"docs/logo.png\" alt=\"VoiceStudio\" width=\"88\" /> <h1>VoiceStudio</h1> <p> <a href=\"https://trendshift.io/repositories/28176?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-28176\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/28176\" alt=\"VoiceStudio ranking on Trendshift\" width=\"220\" height=\"48\" /></a> </p> <p><strong>Open-source voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.</strong></p> <p> <a href=\"https://voicestudio.sh/?utm_source=github&utm_medium=readme&utm_campaign=project\">Website</a> · <a href=\"https://github.com/debpalash/VoiceStudio/releases/latest\">Download</a> · <a href=\"#get-started\">Get started</a> · <a href=\"#documentation\">Docs</a> · <a href=\"https://discord.gg/bzQavDfVV9\">Discord</a> · <a href=\"docs/readme/README_CN.md\">简体中文</a> · <a href=\"docs/readme/README_JA.md\">日本語</a> </p> <p> <a href=\"https://github.com/debpalash/VoiceStudio/actions/workflows/ci.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/debpalash/VoiceStudio/ci.yml?branch=main\" alt=\"CI\" /></a> <a href=\"https://github.com/debpalash/VoiceStudio/releases/latest\"><img src=\"https://img.shields.io/github/v/release/debpalash/VoiceStudio\" alt=\"Latest release\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue\" alt=\"AGPL-3.0\" /></a> <a href=\"https://supermetry.com\"><img src=\"https://app.supermetry.com/px/zfjiv7psp4ed.svg?c=VoiceStudio&style=stats\" alt=\"views\" /></a> </p> </div> ![A tour of the Electron app: voice cloning, voice design, dubbing, and model management](docs/media/electron/voicestudio.gif) ## Your voice. Your workflow. | Create | Produce | Connect | | :--- | :--- | :--- | | Clone a voice or design your own | Dub videos with timed speech | Local API & MCP for agents | | Dictate with a floating widget | Stories, audiobooks & batch jobs | Reusable recipes & watch folders | Start with **VoiceStudio** (default, powered by k2-fsa/OmniVoice), or choose another engine. [Features & engine catalog](docs/feature-catalog.md). Local workflows run on your hardware. Remote services are optional; usage analytics requires consent. <details> <summary><strong>Explore the workspaces</strong> · Clone, dub, design & models</summary> <table> <tr> <td><img src=\"docs/media/electron/voice-cloning.png\" alt=\"Electron voice cloning workspace with the bundled demo voice\" width=\"100%\" /></td> <td><img src=\"docs/media/electron/dubbing.png\" alt=\"Electron video dubbing workspace\" width=\"100%\" /></td> </tr> <tr><td align=\"center\">Voice cloning</td><td align=\"center\">Video dubbing</td></tr> <tr> <td><img src=\"docs/media/electron/voice-design.png\" alt=\"Describe a voice in the Electron voice design workspace\" width=\"100%\" /></td> <td><img src=\"docs/media/electron/models.png\" alt=\"Install and manage local speech models\" width=\"100%\" /></td> </tr> <tr><td align=\"center\">Voice design</td><td align=\"center\">Local models</td></tr> </table> <img width=\"2628\" height=\"1950\" alt=\"VoiceStudio desktop workspace\" src=\"https://github.com/user-attachments/assets/b474497d-a453-49a3-a2dd-f023ec6b7659\" /> </details> OmniVoice GGUF source builds can optionally use Vulkan on Windows and Linux; see the [native engine guide](docs/engines/omnivoice-gguf.md#optional-vulkan-acceleration) for build requirements, CPU fallback, and device overrides. ## Get started ### One-command install (macOS / Linux) ```sh # Latest Electron release curl -fsSL https://voicestudio.sh/install | sh # A specific published Electron release (replace X.Y.Z) curl -fsSL https://voicestudio.sh/install | sh -s -- --version X.Y.Z # Build current main and install the desktop app curl -fsSL https://voicestudio.sh/install | sh -s -- --main # Uninstall the app, keeping your data curl -fsSL https://voicestudio.sh/install | sh -s -- --uninstall ``` On Windows, run `irm https://voicestudio.sh/install | iex` in P",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design language that makes your AI harness better at design.",
+      "language": "Rust",
+      "stars": 88049,
+      "forks": 5262,
+      "stars_today": 1092,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2025-11-16T01:52:04Z",
+      "updated_at": "2026-10-26T06:16:35Z",
+      "open_issues": 42,
+      "default_branch": "main",
+      "readme_excerpt": "# Impeccable Design guidance for AI coding agents. 1 skill, 24 commands, live browser iteration, and 62 deterministic detector rules for AI-generated frontend design. > **Quick start:** From your project root, run `npx impeccable install`, then run `/impeccable init` inside your AI coding tool. Full docs: [impeccable.style](https://impeccable.style). ## Why Impeccable? Anthropic's [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) was the first widely-used design skill for Claude. Impeccable started from there. Every model trained on the same SaaS templates. Skip the guidance and you get the same handful of tells on every project: Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, the rounded-square icon tile above every heading. Impeccable adds: - **One setup flow.** `/impeccable init` records durable product truth in `PRODUCT.md`, so later commands know the audience, purpose, operating context, constraints, voice, and evidence without confusing those facts with surface-level visual direction. - **24 commands.** A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more. - **62 deterministic detector rules** plus LLM-only critique checks. The CLI and browser extension run the deterministic rules with no LLM and no API key. ## What's Included ### The Skill: impeccable The skill installs as one command: ```bash /impeccable <command> <target> ``` Start every new project with: ```bash /impeccable init ``` `init` inspects the project, asks only for material gaps in durable product truth, and writes `PRODUCT.md`. Visitor mode and visual direction are chosen later for each surface; incumbent or newly built visual systems are recorded separately in `DESIGN.md`. ### 24 Commands All commands are accessed through `/impeccable`: | Command | What it does | |---------|--------------| | `/impeccable craft` | Full shape-then-build flow with visual iteration | | `/impeccable init` | One-time setup: gather durable product context, write PRODUCT.md, configure live mode when applicable, recommend next steps | | `/impeccable document` | Generate root DESIGN.md from existing project code | | `/impeccable extract` | Pull reusable components and tokens into the design system | | `/impeccable shape` | Plan UX/UI before writing code | | `/impeccable critique` | UX design review: hierarchy, clarity, emotional resonance | | `/impeccable audit` | Run technical quality checks (a11y, performance, responsive) | | `/impeccable polish` | Final pass, design system alignment, and shipping readiness | | `/impeccable bolder` | Amplify boring designs | | `/impeccable quieter` | Tone down overly bold designs | | `/impeccable distill` | Strip to essence | | `/impeccable harden` | Error handling, i18n, text overflow, edge cases | | `/impeccable onboard` | First-run flows, empty states, activation paths | | `/impeccable animate` | Add purposeful motion | | `/impeccable colorize` | Introduce strategic color | | `/impeccable typeset` | Fix font choices, hierarchy, sizing | | `/impeccable layout` | Fix layout, spacing, visual rhythm | | `/impeccable delight` | Add moments of joy | | `/impeccable overdrive` | Add technically extraordinary effects | | `/impeccable clarify` | Improve unclear UX copy | | `/impeccable adapt` | Adapt for different devices | | `/impeccable optimize` | Performance improvements | | `/impeccable live` | Visual variant mode: iterate on elements in the browser | | `/impeccable generate` | Generate variants of a named element in the live browser, no manual picking | Use `/impeccable pin <command>` to create standalone shortcuts (e.g., `pin audit` creates `/audit`). #### Usage Examples ``` /impeccable audit blog # Audit blog hub + post pages /impeccable critique landing # UX design review /impeccable polish settings # Final pass before shipping /impeccable harden checkout # Add error handling + ed",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "pollen-robotics/microduck",
+      "url": "https://github.com/pollen-robotics/microduck",
+      "description": "A Tiny biped duck robot 🦆",
+      "language": "Rust",
+      "stars": 11890,
+      "forks": 1502,
+      "stars_today": 647,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-29T07:52:16Z",
+      "updated_at": "2026-10-26T06:16:03Z",
+      "open_issues": 79,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"https://github.com/user-attachments/assets/c2f7c245-8217-46a1-8d1e-e0ba967cd969\" alt=\"microduck\" width=\"820\"> </p> <h1 align=\"center\">Microduck</h1> <p align=\"center\"> <em>A tiny biped robot that moves using reinforcement learning policies.</em> </p> <p align=\"center\"> <a href=\"https://pollen-robotics.com/microduck\"><b>Get yours here</b></a> · <a href=\"docs/robot/cheatsheet.md\">Cheat sheet</a> · <a href=\"https://github.com/pollen-robotics/microduck_rl\">Training the policies</a> · <a href=\"docs/design/architecture.md\">How it works</a> · <a href=\"CONTRIBUTING.md\">Contributing</a> </p> <p align=\"center\"> <a href=\"https://github.com/pollen-robotics/microduck/actions/workflows/ci.yml\"><img src=\"https://github.com/pollen-robotics/microduck/actions/workflows/ci.yml/badge.svg\" alt=\"CI\"></a> </p> --- **This repo is the duck's brain.** About 25 cm and 800 g of robot, run by a handful of daemons on a Rockchip RK3566: a 50 Hz control loop driving fifteen servos from neural policies, the radios and the camera, and the update machinery that gets new software onto a robot without bricking it. Everything you need to run a Microduck is here. **If you want one, [get yours here](https://pollen-robotics.com/microduck).** The policies it runs are trained next door, in **[microduck_rl](https://github.com/pollen-robotics/microduck_rl)** — MuJoCo and PPO, the sim2real recipe, and the export to ONNX that this repo loads. ## It does things <table> <tr> <td width=\"50%\"> <video src=\"https://github.com/user-attachments/assets/356a6011-8e0d-4b28-bda9-da78646583a3\" controls width=\"100%\"></video> </td> <td width=\"50%\"> <video src=\"https://github.com/user-attachments/assets/abfbf250-1b1c-42cb-8430-00267e2b148a\" controls width=\"100%\"></video> </td> </tr> <tr> <td><b>It walks.</b> Pick up a gamepad and drive.</td> <td><b>It rolls.</b> Put wheels on, ask for roller mode, and it loads the other brain.</td> </tr> <tr> <td width=\"50%\"> <video src=\"https://github.com/user-attachments/assets/7e70c1da-e120-428f-ae0b-f4de62f25984\" controls width=\"100%\"></video> </td> <td width=\"50%\"> <video src=\"https://github.com/user-attachments/assets/3eef63a5-6f84-47cf-90de-e717e6d7f8f0\" controls width=\"100%\"></video> </td> </tr> <tr> <td><b>It picks things up.</b> Beak to the floor, one button.</td> <td><b>It gets back up.</b> Knock it over and it stands itself up.</td> </tr> </table> It also sits, kicks a ball, rolls forward on command, and quacks in a voice that is its own. ## Where to find things ### You have a duck | | | |---|---| | [Cheat sheet](docs/robot/cheatsheet.md) | Every `robotctl` command: drive, configure, voice, chorale, theremin, wifi, updates, logs. Start here. | | [Gamepad](docs/robot/cheatsheet.md#gamepad-configd) | The full button mapping, and pairing a pad — [once per pad](docs/robot/pair-a-gamepad.md), plus what to do when it will not bond. | | [`duckctl`](docs/robot/duckctl.md) | The robot from a laptop over Bluetooth, with no network and no ssh. | | [Updates](docs/robot/cheatsheet.md#updates-updaterd) | Install, roll back, pin. Every update is verified, health-gated and reversible. | ### You are building on it | | | |---|---| | [microduck_rl](https://github.com/pollen-robotics/microduck_rl) | Where the policies come from: MuJoCo, PPO, domain randomisation, and the ONNX export this repo loads. | | [How it works](docs/design/architecture.md) | The whole system on one page — the daemons, the bus, how an update reaches a robot — then a page per part. | | [Set up a dev board](docs/robot/install-dev.md) | From a blank board to a robot that takes branch builds. | | [Dev cheat sheet](docs/robot/cheatsheet-dev.md) | Branch builds, release candidates, driving from a laptop, and the restart traps after an update. | | [Push your branch](docs/robot/dev-push.md) | Build on your machine, install over ssh, about a minute. | | [The simulated duck](docs/robot/simulation.md) | No robot on the desk? `scripts/duck-sim` runs the real daemons against",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 6,
+      "full_name": "TauricResearch/TradingAgents",
+      "url": "https://github.com/TauricResearch/TradingAgents",
+      "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+      "language": "Python",
+      "stars": 114910,
+      "forks": 22158,
+      "stars_today": 381,
+      "topics": [
+        "agent",
+        "finance",
+        "llm",
+        "multiagent",
+        "trading"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-12-28T03:31:08Z",
+      "updated_at": "2026-10-26T06:16:11Z",
+      "open_issues": 151,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <img src=\"tradingagents/assets/tauric-logo.svg\" width=\"60%\" alt=\"Tauric Research\"> </p> <div align=\"center\" style=\"line-height: 1;\"> <a href=\"https://arxiv.org/abs/2412.20138\" target=\"_blank\"><img alt=\"arXiv\" src=\"https://img.shields.io/badge/arXiv-2412.20138-B31B1B?logo=arxiv\"/></a> <a href=\"https://discord.com/invite/hk9PGKShPK\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-TradingResearch-7289da?logo=discord&logoColor=white&color=7289da\"/></a> <a href=\"https://x.com/TauricResearch\" target=\"_blank\"><img alt=\"X Follow\" src=\"https://img.shields.io/badge/X-TauricResearch-white?logo=x&logoColor=white\"/></a> <a href=\"https://github.com/TauricResearch/\" target=\"_blank\"><img alt=\"Community\" src=\"https://img.shields.io/badge/GitHub_Community-TauricResearch-14C290?logo=discourse\"/></a> </div> <br> <div align=\"center\"> <a href=\"https://github.com/TauricResearch\" target=\"_blank\"><img alt=\"TradingAgents #1 Repository of the Day\" src=\"https://trendshift.io/api/badge/repositories/16192\" width=\"250\" height=\"55\"/></a> </div> <br> <div align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=de\">Deutsch</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=es\">Español</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=fr\">français</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ja\">日本語</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ko\">한국어</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=pt\">Português</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ru\">Русский</a> | <a href=\"https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=zh\">中文</a> </div> --- # TradingAgents: Multi-Agents LLM Financial Trading Framework ## News <!-- news:start --> - [2026-10] **TradingAgents v0.7.0** released with runs on your own ChatGPT Plus or Pro plan, backtests scored from the first close after each decision, a note at start-up when a newer release is out, and a wheel attached to each GitHub release. - [2026-10] **TradingAgents v0.6.0** released with reports saved as one HTML page, a provider per model tier so the managers and analysts can run on different models, past decisions settled for every ticker while the analysts work, and company news read from Yahoo search while Yahoo's news feed is down. - [2026-09] **TradingAgents v0.5.2** released with parallel analysts for a faster analysis, a CLI that runs without prompts from flags such as `--ticker` and `--date`, the run's settings recorded in every report, and backtests that see only data published by each analysis date. Full release notes are in [CHANGELOG.md](CHANGELOG.md). <details> <summary>Earlier news</summary> - [2026-09] **TradingAgents v0.5.1** released with a package layout organised by what each module holds (import paths moved), optional Jev screening of social posts, GPT-6 Sol and Luna as the default models, and fixes to run isolation and SEC EDGAR statements. - [2026-09] **TradingAgents v0.5.0** released with point-in-time integrity across every dated path, SEC EDGAR fundamentals served as filed, backtesting over a ticker and date grid, portfolio-aware runs, and current model lineups across every provider. - [2026-08] **TradingAgents v0.4.0** released with look-ahead / point-in-time fixes across FRED macro, social sentiment, and the decision-log memory; clearer decision signals; working CLI checkpoint resume; Trader price grounding; and the GPT-5.6 and GLM-5.3 models. - [2026-07] **TradingAgents v0.3.1** released with correctness and stability fixes: Alpha Vantage look-ahead filtering, graph-router crash-safety, graph-shape-aware checkpoint resume, working crypto sentiment sources, a configurable LLM retry budget, Bedrock API-key auth, and Claude Sonnet 5 / Fable 5 su",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "stars": 7909,
+      "forks": 1599,
+      "stars_today": 199,
+      "topics": [
+        "bazi",
+        "chinese-astrology",
+        "divination",
+        "fortune-telling",
+        "nextjs",
+        "open-source",
+        "purple-star-astrology",
+        "typescript",
+        "zi-wei-dou-shu",
+        "ziwei-doushu"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-01T05:09:59Z",
+      "updated_at": "2026-10-26T06:16:46Z",
+      "open_issues": 8,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # 紫微斗数 · 开源排盘引擎 ### 算法是公开的传统智慧，不应该被锁在围墙里 [![CI](https://github.com/Renhuai123/ziwei-doushu/actions/workflows/ci.yml/badge.svg)](https://github.com/Renhuai123/ziwei-doushu/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](./LICENSE) [![Dataset: CC BY 4.0](https://img.shields.io/badge/dataset-CC%20BY%204.0-green.svg)](./DATASET-LICENSE) **中文** · [English](./README.en.md) </div> **一、项目理念**：紫微斗数是中国传统命理学的瑰宝，倪海厦老师在《天纪》中系统梳理了正宗的紫微斗数体系。我们希望通过技术手段让更多人接触和学习这门学问。 开源排盘算法和知识库，是因为我们相信：**算法是公开的传统智慧，不应该被锁在围墙里**。真正的价值在于解读的深度、用户体验的打磨、以及持续运营的积累。 **二、项目信息**：基于<strong>倪海厦《天纪》</strong>教学体系的紫微斗数排盘系统，包含完整排盘算法、四化系统、格局知识库、古籍原文数据，以及一套完整开源的紫微斗数解读数据：**v4.0 解读数据集——67.5 万张命盘 × 13 维 = 877 万段解读，正文约 204 亿字，解压后 56.6 GB**（2026-10-15 发布）。 | 数据集 | 命盘 | 解读段数 | 解压后 | 覆盖年份 | 每张盘解读字数 | |---|---|---|---|---|---| | **v4.0 解读数据集**（2026-10-15） | **674,976** | **8,774,688** | **56.6 GB** | **1950–2026**（只含真实日期） | **约 3.0 万字** | | v3.0 样本数据集 | 518,400 | 6,739,200 | 33.1 GB | 1924–1983 | 约 2.1 万字 | | 变化 | +30% | +30% | **+71%** | +17 年 | +44% | <sub>v3.0 每张盘解读字数按 2,160 张盘抽样估算，其余数字为全量统计；两版每张盘都是 13 维。</sub> 在线体验：[metisziwei.com](https://metisziwei.com/?from=gh-readme)，排盘、AI 解读、命盘历史全部开放。 > **注：关于六亲判断** > > 紫微斗数在六亲（父母、兄弟、子女等）判断上存在一定局限。倪师在《天纪》中指出：“斗数批六亲本来就比较差一点。”（[2上 · 00:25:27](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=1527)）在传统术数中，铁板神数在核对六亲方面有其独特优势（[2上 · 00:03:15](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=195)）；倪师仍以紫微斗数为核心，是因为它能结合地理、环境与人事进行综合判断，形成“上知天文、下知地理、中知人事”的完整体系（[2上 · 00:25:43](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=1543)）。因此，与六亲相关的分析仅供参考；[metisziwei.com](https://metisziwei.com/?from=gh-readme) 上父母、兄弟、子女三个维度也附有同样的说明。 --- ## 目录 | | 章节 | 一句话 | |---|------|--------| | 一 | [本轮更新](#一本轮更新2026-10-15) | 13 维断语按倪师原话与《全书》逐句校正，发布 67.5 万命盘 × 13 维解读数据集 v4.0 | | 二·新 | [13 维解读数据集 v4.0](#二新13-维解读数据集-v402026-10-15) | 2026-10-15 新版断语，67.5 万命盘，按年份下载 | | 二 | [51.8 万命盘样本数据集](#二518-万命盘样本数据集) | 规格、下载、用途、许可 | | 三 | [快速开始](#三快速开始) | 克隆到跑起来 | | 四 | [排盘引擎](#四排盘引擎) | 能做到什么、文件怎么分、古籍数据 | | 五 | [倪师《天纪·紫微斗数》原话](#五倪师天纪紫微斗数原话) | 14 讲 + 2 段补充、1848 条，一图看全，每条可回放 | | 六 | [界面是一份 Demo](#六界面是一份-demo) | 不是线上那套，差距写明 | | 七 | [开源边界](#七开源边界什么不在里面) | 什么开源、什么不开源 | | 八 | [维护节奏与贡献](#八维护节奏与贡献) | 同步节奏、issue / PR 口径 | | 九 | [协议](#九协议) | 代码 MIT / 数据 CC BY 4.0 / 古籍公版 / 倪师原话非商用 | | 十 | [关于与联系](#十关于与联系) | 项目理念、技术栈、联系方式 | --- ## 一、本轮更新（2026-10-15） 本轮跟随网站 2026-10-15 发版（网站内容版本 `ca268829f7a9`）： ![本轮更新总览](./docs/update-20261015.png) **1. 发布 13 维解读数据集 v4.0** —— 674,976 张命盘（公历 1950–2026 年每一个真实日期 × 12 时辰 × 男女）× 13 维 = **8,774,688 段解读**，正文约 204 亿字。解压后 56.6 GB（v3.0 为 33.1 GB，增加 71%），压缩后只有 161 MB，按年份分 77 个文件，可以只下需要的年份，也可以一次下全年份总包。下载见 [Release v4.0-13d](https://github.com/Renhuai123/ziwei-doushu/releases/tag/v4.0-13d)，规格和字段见[第二·新章](#二新13-维解读数据集-v402026-10-15)。发布前 77 个文件逐个解压，与原始数据逐字节比对一致。 **2. 13 维断语按倪师原话与《全书》原文逐句校正**（断语库仍不开源，校正结果体现在 v4.0 数据集里）： - 标着倪师或《全书》却查不到出处的引文，删掉或换成逐字可查的原话；倪师原话注明《天纪》第几集、几分几秒 - 不会发生的四化（如七杀化权、紫微化忌）相关的句子删去；只在某种条件下才成立的断语补上条件 - 「力量强时……落陷时……」这类两头说的句子，改为按命盘只显示成立的那一种 - 健康：哪个脏腑要留意，改按倪师的看法——全盘杀星最集中的那一宫，按它的地支对应脏腑；不再按星的五行推脏器 - 网站知识库「古籍引证」由 244 处增至 405 处，每一处都能在《紫微斗数全书》原文里逐字找到 **3. 排盘引擎同步**（[PR #39](https://github.com/Renhuai123/ziwei-doushu/pull/39)）—— `dst-cn.ts` 新增 `chinaDSTSpan(year)`，查某年中国夏令时起止；`cities.ts` 补全省直辖县级单位与新疆兵团各市的经度（神农架、海南各市县、阿拉尔等），出生地选这些城市时真太阳时校正可用。 **4. 许可** —— [`DATASET-LICENSE`](./DATASET-LICENSE) 适用范围加上 v4.0；写明解读里引用的倪师原话不在数据授权范围内，与第五章倪师原话的 CC BY-NC-SA 4.0 一致。v3.0 样本数据集及其条款不变。 > **2026-10-24 补充**：项目理念移到页首——标题下居中一句「算法是公开的传统智慧，不应该被锁在围墙里」，紧接两段理念原文（前标「项目理念」），原有介绍段前标「项目信息」；第十章「项目理念」改为指向页首。 > **2026-10-20 补充**：星曜亮度默认改为《斗数全书》，与主流排盘软件默认一致，此前默认的「现代修正 v2」仍可在流派设置里选；补齐天姚、天刑、天喜、大耗、解神、截空、副截、旬空的亮度，月德不再标亮度。用 5 张金标准盘逐宫核对，星曜落宫与亮度全部吻合。注意：v4.0 数据集（10-15）是按旧默认「现代修正 v2」生成的，其中亮度字和少量随亮度变化的解读句会与新默认不同。 > **2026-10-06 ~ 10-07 补充**：README 加「注：关于六亲判断」（倪师原话 + 出处链接，中英两份）；网站链接加渠道码 `?from=`；同步倪师原话语料勘误（主星南斗、北斗归属）。 ### 上一轮更新（2026-09-21） > **2026-10-03 补充**：倪师《天纪·紫微斗数》原话 1848 条单独成章（第五章）；合并外部贡献 #29（时辰序号校验）；引擎拒绝不存在的公历日期，数据集补字段口径与已知问题；提交 package-lock.json；站点地址改为可",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": 2043,
+      "forks": 116,
+      "stars_today": 51,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-08T07:40:43Z",
+      "updated_at": "2026-10-26T06:15:49Z",
+      "open_issues": 212,
+      "default_branch": "main",
+      "readme_excerpt": "# ThinkRail [![JetBrains incubator project](https://jb.gg/badges/incubator-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub) [![GitHub stars](https://img.shields.io/github/stars/JetBrains/thinkrail?style=social)](https://star-history.com/#JetBrains/thinkrail&Date) ThinkRail is the agentic IDE that gets better every time you use it — learning your project through living specs today, and building its own capabilities tomorrow. We built a rich interface around the [`pi`](https://www.npmjs.com/package/@earendil-works/pi-coding-agent) coding agent, isolated work into separate workspaces, and gave the agent durable project knowledge through living specs and reusable skills. Next, we're adding full extension support, so ThinkRail can create the tools it needs based on how you actually work. **Website:** [thinkrail.ai](https://thinkrail.ai/) · **Blog:** [thinkrail.ai/blog](https://thinkrail.ai/blog/) ⭐ If you find ThinkRail useful, give it a star — it helps others discover it. <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/readme-assets/workbench-dark.png\"> <img src=\".github/readme-assets/workbench-light.png\" alt=\"ThinkRail workbench: the Projects pane beside the left tool rail listing worktree workspaces and their Settled shelf, a finished pi conversation with its tool steps in the center, the resulting diff beside it, and the Specs tree above the Changes list on the right with their tools on the edge rail\" width=\"900\"> </picture> *A `pi` session and the change it made, scoped to an isolated git-worktree workspace.* ## What you get - **Isolated workspaces.** Open any git repo as a project and cut workspaces from it as `git worktree`s, each with its own branch and working directory. Agents work in parallel without touching your checkout; merge the good branch, delete the rest. You can also attach existing worktrees or explicitly work in the project folder itself. Finished and dormant workspaces settle onto a per-project shelf on their own — when their pull request merges or closes, or after a quiet week — and come back the moment you work in them. The topbar shows where the active branch stands against `origin` and its pull request, with the next step one click away: publish, push, or open a PR described from the plan, the commits, your PR template, or an agent-written draft. Once a GitHub PR is open it shows the CI checks and review decision, and lets you mark it ready, hand failing checks or a diverged branch to the agent, merge it with the repository's last-used method, reopen it, or delete the remote branch. - **A real IDE around the agent.** A splittable workbench of Monaco editor tabs, a Files tree with live git change marks and a Changed view, terminals, and documents — all scoped to the active workspace. Leave anchored review comments on files and diffs and send them to a chat as structured context, or open the worktree in your installed IDE. - **Chats that stream like the engine thinks.** Several concurrent `pi` sessions per workspace, each with its own model and live token and cost readout. Steer a running turn or queue a follow-up, delegate to subagents, and work a shared plan the agent updates and you edit — each completed step can be committed and reviewed on its own. - **Specs as ground truth.** A connected graph of `SPEC.md` files lives beside the code; the agent reads, searches, and maintains it through dedicated `spec_*` tools, so intent survives the session. The read-only Specs tool renders the graph as a tree in the workbench. - **Skills and workflows.** Portable Agent Skills you already keep for other coding agents are read in place, and bundled workflows guide project setup, design brainstorming, and shipping a pull request — pushing the workspace branch and opening or updating its GitHub PR through your own `gh`. - **Agent tools beyond the shell.** Web research, and inline diagrams, option comparisons and file previews rendered right in the chat — when the age",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "coollabsio/coolify",
+      "url": "https://github.com/coollabsio/coolify",
+      "description": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
+      "language": "PHP",
+      "stars": 64645,
+      "forks": 5807,
+      "stars_today": 152,
+      "topics": [
+        "coolify",
+        "databases",
+        "deployment",
+        "docker",
+        "docker-compose",
+        "inertiajs",
+        "laravel",
+        "mariadb",
+        "mysql",
+        "nextjs",
+        "nodejs",
+        "php",
+        "postgres",
+        "redis",
+        "self-hosted",
+        "self-hosting",
+        "server",
+        "static-site",
+        "svelte",
+        "svelte5"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2021-01-25T20:54:01Z",
+      "updated_at": "2026-10-26T06:16:19Z",
+      "open_issues": 363,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"./public/coolify-logo.svg\" alt=\"Coolify logo\" width=\"120\" /> # Coolify **An open-source platform to deploy applications, databases, and services on your own servers.** Open source & free forever, backed by our [philosophy](https://coolify.io/philosophy). ![Latest Release Version](https://img.shields.io/badge/dynamic/json?labelColor=grey&color=6366f1&label=Latest%20released%20version&url=https%3A%2F%2Fcdn.coollabs.io%2Fcoolify%2Fversions.json&query=coolify.v4.version&style=for-the-badge ) [Website](https://coolify.io) · [Documentation](https://coolify.io/docs) · [Cloud](https://app.coolify.io) · [Discord](https://coollabs.io/discord) · [Community](https://github.com/coollabsio/coolify/discussions) </div> ## What is Coolify? Coolify is an open-source and self-hostable alternative to Heroku, Netlify, and Vercel. It helps you manage servers, applications, and databases on your own hardware. You only need an SSH connection. You can use a VPS, a bare-metal server, a Raspberry Pi, or any other server that accepts SSH connections. Coolify gives you the convenience of a cloud platform while you keep control of your infrastructure. Your configurations stay on your servers. If you stop using Coolify, your running resources continue to work and remain manageable. ## What can Coolify do? - **Deploy any application:** Build from GitHub, GitLab, Bitbucket, or Gitea with Nixpacks, Railpack, Dockerfile, Docker Compose, or a prebuilt Docker image. - **Run databases and services:** Deploy managed databases and more than 360 one-click services with persistent storage and generated credentials. - **Automate deployments:** Deploy on every Git push, create pull-request previews, call deployment webhooks, and roll back to retained application images. - **Manage networking:** Configure custom domains, automatic HTTPS certificates, reverse proxies, health checks, and container networks. - **Operate your infrastructure:** Manage multiple servers, inspect deployment and runtime logs, open container terminals, and monitor resource status. - **Protect your workloads:** Configure database and storage backups, scheduled tasks, environment variables, secrets, and notifications. - **Integrate with your workflow:** Manage resources through the dashboard, API, CLI, MCP, and team-based access controls. ## Quick start Install Coolify on a supported server with one command: ```bash curl -fsSL https://cdn.coollabs.io/coolify/install.sh | bash ``` Read the [installation guide](https://coolify.io/docs/installation) for requirements and detailed instructions. You can also review the [installation script](./scripts/install.sh) before you run it. ## Self-hosted or Cloud | Self-hosted | Coolify Cloud | | --- | --- | | Install Coolify on your own server. | Use a Coolify instance that we maintain. | | Control and maintain the complete platform. | Get high availability and less maintenance. | | Free and open source. | Paid service with email notifications and additional support. | The recommended self-hosted setup uses one server for Coolify and one or more servers for deployed resources. If you do not want to maintain the Coolify server, use [Coolify Cloud](https://app.coolify.io). See [coolify.io](https://coolify.io) for current pricing. ## Community and support - Read the [documentation](https://coolify.io/docs). - Join the community on [Discord](https://coollabs.io/discord). - Ask questions in [GitHub Discussions](https://github.com/coollabsio/coolify/discussions). - Read the [contribution guide](./CONTRIBUTING.md) before you submit a change. - Review the [code of conduct](./CODE_OF_CONDUCT.md). - Contact the team through the [support page](https://coolify.io/docs/contact). ## Donations To stay completely free and open-source, with no feature behind the paywall and evolve the project, we need your help. If you like Coolify, please consider donating to help us fund the project's future development. [coolify.io/sponsorships](https://coolify.i",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 47333,
+      "forks": 2938,
+      "stars_today": 2878,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-06-18T14:08:44Z",
+      "updated_at": "2026-10-26T06:16:47Z",
+      "open_issues": 97,
+      "default_branch": "main",
+      "readme_excerpt": "# security-audit A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in [Build your own vulnerability harness](https://blog.cloudflare.com/build-your-own-vulnerability-harness). The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. ## What it does The skill runs a structured audit in six phases: 1. **Reconnaissance** -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in `architecture.md` and `coverage-ledger.json`. 2. **Coverage-led hunting** -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. **Candidate validation** -- give every unique candidate to a fresh verifier that tries to disprove it. 4. **Structured output** -- write `confirmed`, `needs_validation`, and `rejected` records to `findings.json` and validate them against `report-schema.json`. 5. **Independent record verification** -- fresh agents verify final source claims. Material replacements receive another independent verifier. 6. **Target-neutral reporting** -- derive `REPORT.md`, `FINDINGS-DETAIL.md`, and `NEEDS-VALIDATION.md` from the verified records and coverage ledger. The parent runs `validate-coverage-ledger.cjs` after creating the ledger and after each later ledger update. It runs `validate-findings.cjs` in Phase 4 and again after every Phase 5 replacement. The verdicts are distinct: `confirmed` has a complete source trace and bounded observed result, `needs_validation` has an exact unresolved fact and no severity, and `rejected` records a disproved candidate. Multiple runs against the same repo are additive. The skill uses prior ledgers and findings to target gaps, revalidate changed source, and carry forward current-source evidence without treating stale or unresolved work as covered. ## Files | File | Purpose | |------|---------| | `SKILL.md` | Setup, core principles, platform terminology, workflow overview, and audit anti-patterns | | `RECONNAISSANCE.md` | Phase 1 reconnaissance prompts and synthesis instructions | | `HUNTING.md` | Phase 2 orchestration, hunting methodology, and validation rules | | `ATTACK-CLASSES.md` | Core, wildcard, and obvious-things attack prompts | | `MEMORY-SAFETY-AND-BINARY.md` | Memory-safety, binary, and kernel hunting classes for native targets | | `AI-AND-LLM.md` | Prompt-injection, agent/tool, and output-handling hunting classes for LLM-backed targets | | `WEB-PROTOCOL-AND-AUTH.md` | HTTP request-framing, cache, and authentication-protocol hunting classes for HTTP-protocol and auth targets | | `CLIENT-SIDE.md` | DOM-injection, messaging-trust, UI-redress, and prototype-pollution hunting classes for client-side/browser targets | | `SUPPLY-CHAIN-AND-RELEASE.md` | Dependency, CI, release, signing, update, plugin, and extension hunting classes | | `CLOUD-AND-DEPLOYMENT.md` | IAM, infrastructure-as-code, container, serverless, ingress, and runtime-configuration hunting classes | | `PROTOCOLS-RPC-AND-MESSAGING.md` | RPC, serialization, queue, broker, webhook, and streaming-protocol hunting classes | | `RESOURCE-EXHAUSTION-AND-AVAILABILITY.md` | Shared resource, quota, queue, worker, and operator-spend hunting classes | | `DATA-ISOLATION-AND-LIFECYCLE.md` | Tenant isolation, cache, search, export, backup, migration, deletion, and restore hunting classes | | `DESKTOP-MOBILE-AND-LOCAL-IPC.md` | Native app, deep-link, webview, exported-component, helper, daemon, and local-IPC hunting classes | | `VALIDATION-AND-REPORTING.md` | Phases 3–6 candidate validation, structured output, record verification, and reporting | | `report-schema.json` | JSON schema for all three `findings.json` verdicts ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -9,
+      "streak_days": 2
+    },
+    {
+      "rank": 11,
+      "full_name": "AgriciDaniel/claude-seo",
+      "url": "https://github.com/AgriciDaniel/claude-seo",
+      "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+      "language": "Python",
+      "stars": 21270,
+      "forks": 2972,
+      "stars_today": 197,
+      "topics": [
+        "ai",
+        "ai-seo",
+        "claude-code",
+        "claude-code-skill",
+        "marketing-automation",
+        "open-source",
+        "seo"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-07T08:17:38Z",
+      "updated_at": "2026-10-26T06:14:33Z",
+      "open_issues": 52,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- Claude SEO (claude-seo): free, open-source SEO audit plugin for Claude Code by Agrici Daniel. Technical SEO, Core Web Vitals, E-E-A-T, Schema.org, AI search (GEO), local SEO, e-commerce and international SEO. 26 sub-skills and 19 specialist agents. MIT licensed. --> <img src=\"assets/readme/v3/hero.svg\" width=\"1200\" height=\"420\" alt=\"Claude SEO: rank in Google, get cited by AI. Three bots climb from #48 to #1 by fixing crawl, speed, schema, AI access and authority, then Google, ChatGPT, Perplexity, Gemini and Claude cite the site.\" /> <h1 align=\"center\">Claude SEO</h1> <p align=\"center\"> <b>Free, open-source SEO audits inside <a href=\"https://claude.com/product/claude-code\">Claude Code</a>.</b><br /> Rank higher in Google and get cited by AI search. </p> <p align=\"center\"> <a href=\"#install\">Install</a> · <a href=\"#see-it-in-action\">Demo</a> · <a href=\"#real-results\">Results</a> · <a href=\"#meet-the-team\">Team</a> · <a href=\"#commands\">Commands</a> · <a href=\"#pricing\">Pricing</a> · <a href=\"#faq\">FAQ</a> </p> <p align=\"center\"> <a href=\"https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml\"><img src=\"https://github.com/AgriciDaniel/claude-seo/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /></a> <a href=\"https://claude.com/product/claude-code\"><img src=\"https://img.shields.io/badge/Claude%20Code-Plugin-blue\" alt=\"Claude Code plugin\" /></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-yellow.svg\" alt=\"License: MIT\" /></a> <a href=\"https://github.com/AgriciDaniel/claude-seo/releases\"><img src=\"https://img.shields.io/github/v/release/AgriciDaniel/claude-seo\" alt=\"Version\" /></a> <a href=\"tests/\"><img src=\"https://img.shields.io/badge/tests-1077%20passing-brightgreen\" alt=\"Tests\" /></a> <a href=\"https://github.com/AgriciDaniel/claude-seo\"><img src=\"https://img.shields.io/github/stars/AgriciDaniel/claude-seo?style=flat\" alt=\"GitHub stars\" /></a> <a href=\"https://www.skool.com/ai-marketing-hub-pro\"><img src=\"https://img.shields.io/badge/AI%20Marketing%20Hub-Pro%20community-purple\" alt=\"AI Marketing Hub Pro community\" /></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/21053\"><img src=\"https://trendshift.io/api/badge/repositories/21053\" alt=\"AgriciDaniel/claude-seo on Trendshift: GitHub Trending #12 Repository Of The Day\" width=\"250\" height=\"55\" /></a> </p> **Claude SEO is a free SEO plugin for Claude Code.** Give it any website and it runs a full SEO audit in 10 to 15 minutes, then hands you a clear action plan, sorted by what matters most. It checks everything a good SEO consultant would: - **Technical SEO.** Crawlability, indexing, sitemaps, robots.txt, redirects, page speed and Core Web Vitals. - **Content quality.** E-E-A-T (experience, expertise, authority and trust), thin pages and topic coverage. - **Structured data.** Finds, validates and writes Schema.org markup for rich results. - **AI search (GEO).** How likely Google AI Overviews, AI Mode, ChatGPT, Perplexity and Gemini are to cite your pages. - **Local and e-commerce SEO.** Google Business Profile, reviews, map pack, product pages and international sites. Claude SEO is built from 26 sub-skills and 19 specialist agents, and up to 17 agents work on your site at the same time. Every recommendation explains why it matters and how you will know it worked. ## See it in action Type `/seo` in Claude Code to see every command: ![Claude SEO /seo command demo in the Claude Code terminal](screenshots/seo-command-demo.gif) Run a full audit and watch the agents fan out across the site: ![Claude SEO /seo audit demo: parallel agents producing a prioritized action plan](screenshots/seo-audit-demo.gif) [Watch the full demo on YouTube](https://www.youtube.com/watch?v=COMnNlUakQk) ## Real results The project's own site, [claude-seo.md](https://claude-seo.md), audited with Claude SEO from day one: 10.8K Search Console clicks in its first 12 weeks and a 99 mobile PageSpeed score. <img src=\"assets/readme/screen.svg\" width=\"1200\" ",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 7/11 个项目可从资料确认与 AI 直接相关；其余 4 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（4 个）、AI 智能体与数字劳动力（3 个）、语音 AI 与自然交互（1 个）。",
+      "排名第一的 makecindy/cindy 代表“AI 智能体与数字劳动力”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（4 个项目）",
+      "AI 智能体与数字劳动力（3 个项目）",
+      "语音 AI 与自然交互（1 个项目）",
+      "AI 设计质量指导（1 个项目）",
+      "多智能体金融研究框架（1 个项目）",
+      "AI 编程智能体（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "makecindy/cindy",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 675 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 cindy 描述为“Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 cindy 的潜在使用者而言，在项目方所述的“Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makecindy/cindy",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makecindy/cindy",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/makecindy/cindy",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "one_line_summary": "围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "solution": "围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 1317 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 hallmark 描述为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Anti-AI-slop design skill for Claude Code, Cursor, and Codex. 它的办法是：围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 hallmark 的潜在使用者而言，在项目方所述的“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”场景中，可直接查看和试验项目方所述的“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Nutlope/hallmark",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Nutlope/hallmark",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Nutlope/hallmark",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "debpalash/VoiceStudio",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 1592 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 VoiceStudio 描述为“VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbin”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 VoiceStudio 的潜在使用者而言，在项目方所述的“VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbin”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/debpalash/VoiceStudio",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/debpalash/VoiceStudio",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/debpalash/VoiceStudio",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "one_line_summary": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "industry_direction": "AI 设计质量指导",
+        "target_users": [
+          "使用 AI 制作界面的产品团队",
+          "设计系统与品牌负责人"
+        ],
+        "problem_solved": "AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。",
+        "solution": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 1092 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "设计规范的机器可用化",
+        "technology_impact": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "规范不能替代用户研究和设计判断，效果仍需通过真实界面与用户测试验证。",
+        "ai_relevance": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "plain_language_explanation": "项目方把 impeccable 描述为“The design language that makes your AI harness better at design.”。通俗地说，它希望解决的是：AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。 它的办法是：把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "scenario_examples": [
+          "例如团队让 AI 生成活动页面时，同时要求它按既有排版、间距和无障碍规则检查。"
+        ],
+        "practical_benefits": [
+          "对 impeccable 的潜在使用者而言，在项目方所述的“The design language that makes your AI harness better at design.”场景中，减少团队反复向 AI 解释基础设计要求的时间",
+          "提高不同 AI 生成页面之间的视觉一致性"
+        ],
+        "industry_implications": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "who_should_care": "使用 AI 制作界面的产品团队、设计系统与品牌负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The design language that makes your AI harness better at design.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pbakaus/impeccable",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pollen-robotics/microduck",
+        "one_line_summary": "围绕“A Tiny biped duck robot 🦆”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A Tiny biped duck robot 🦆",
+        "solution": "围绕“A Tiny biped duck robot 🦆”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 647 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 microduck 描述为“A Tiny biped duck robot 🦆”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A Tiny biped duck robot 🦆 它的办法是：围绕“A Tiny biped duck robot 🦆”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A Tiny biped duck robot 🦆”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 microduck 的潜在使用者而言，在项目方所述的“A Tiny biped duck robot 🦆”场景中，可直接查看和试验项目方所述的“A Tiny biped duck robot 🦆”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pollen-robotics/microduck",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A Tiny biped duck robot 🦆",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pollen-robotics/microduck",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pollen-robotics/microduck",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "TauricResearch/TradingAgents",
+        "one_line_summary": "让多个承担不同研究角色的语言模型协作形成交易研究意见。",
+        "industry_direction": "多智能体金融研究框架",
+        "target_users": [
+          "研究 AI 金融应用的团队",
+          "量化与投资研究人员"
+        ],
+        "problem_solved": "投资研究包含基本面、市场情绪、风险和交易决策等不同视角，单一模型容易遗漏或过度自信。",
+        "solution": "让多个承担不同研究角色的语言模型协作形成交易研究意见。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 381 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色金融推理",
+        "technology_impact": "金融智能体开始模仿研究团队分工，但价值必须通过严格回测和风险控制验证。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "模型共识也可能集体出错，历史回测不代表未来收益，不能直接作为投资建议。",
+        "ai_relevance": "金融智能体开始模仿研究团队分工，但价值必须通过严格回测和风险控制验证。",
+        "plain_language_explanation": "项目方把 TradingAgents 描述为“TradingAgents: Multi-Agents LLM Financial Trading Framework”。通俗地说，它希望解决的是：投资研究包含基本面、市场情绪、风险和交易决策等不同视角，单一模型容易遗漏或过度自信。 它的办法是：让多个承担不同研究角色的语言模型协作形成交易研究意见。",
+        "scenario_examples": [
+          "例如分别让基本面、新闻情绪和风险角色分析同一标的，再由人检查冲突依据。"
+        ],
+        "practical_benefits": [
+          "对 TradingAgents 的潜在使用者而言，在项目方所述的“TradingAgents: Multi-Agents LLM Financial Trading Framework”场景中，把不同研究视角放进同一分析流程",
+          "让最终判断中的分歧和风险假设更容易被检查"
+        ],
+        "industry_implications": "金融智能体开始模仿研究团队分工，但价值必须通过严格回测和风险控制验证。",
+        "who_should_care": "研究 AI 金融应用的团队、量化与投资研究人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TauricResearch/TradingAgents",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "TradingAgents: Multi-Agents LLM Financial Trading Framework",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/TauricResearch/TradingAgents",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/TauricResearch/TradingAgents",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Renhuai123/ziwei-doushu",
+        "one_line_summary": "围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "solution": "围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 199 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 ziwei-doushu 描述为“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据 它的办法是：围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 ziwei-doushu 的潜在使用者而言，在项目方所述的“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”场景中，可直接查看和试验项目方所述的“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Renhuai123/ziwei-doushu",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Renhuai123/ziwei-doushu",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Renhuai123/ziwei-doushu",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "JetBrains/thinkrail",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 51 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 thinkrail 描述为“Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Nee”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 thinkrail 的潜在使用者而言，在项目方所述的“Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Nee”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JetBrains/thinkrail",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JetBrains/thinkrail",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/JetBrains/thinkrail",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "coollabsio/coolify",
+        "one_line_summary": "围绕“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a",
+        "solution": "围绕“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 152 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 coolify 描述为“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a 它的办法是：围绕“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 coolify 的潜在使用者而言，在项目方所述的“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static”场景中，可直接查看和试验项目方所述的“An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack a”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coollabsio/coolify",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 360+ one-click services on your own servers.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/coollabsio/coolify",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/coollabsio/coolify",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 2878 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 security-audit-skill 描述为“A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 security-audit-skill 的潜在使用者而言，在项目方所述的“A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/security-audit-skill",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/security-audit-skill",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cloudflare/security-audit-skill",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "AgriciDaniel/claude-seo",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 197 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 claude-seo 描述为“Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GE”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 claude-seo 的潜在使用者而言，在项目方所述的“Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GE”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/AgriciDaniel/claude-seo",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/AgriciDaniel/claude-seo",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/AgriciDaniel/claude-seo",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 5,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 14,
+        "project_count": 9
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 12,
+        "project_count": 4
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 19,
+        "project_count": 14
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 14,
+        "project_count": 9
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 12,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 19
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 19
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 14
+      },
+      {
+        "name": "软件产品团队",
+        "count": 12
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 12
+      },
+      {
+        "name": "大型软件团队",
+        "count": 4
+      },
+      {
+        "name": "技术管理者和代码审查团队",
+        "count": 4
+      },
+      {
+        "name": "视觉设计与内容制作团队",
+        "count": 3
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 59
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 22,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 10,
+        "project_count": 3
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 14,
+        "project_count": 5
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 12,
+        "project_count": 8
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 10,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 4,
+        "project_count": 3
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 94,
+        "project_count": 36
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 66,
+        "project_count": 46
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 45,
+        "project_count": 14
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 12,
+        "project_count": 8
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 94
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 94
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 66
+      },
+      {
+        "name": "软件产品团队",
+        "count": 45
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 45
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 14
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 14
+      },
+      {
+        "name": "内容、教育和媒体团队",
+        "count": 12
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 298
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-10-25",
+    "new": [
+      "AgriciDaniel/claude-seo",
+      "JetBrains/thinkrail",
+      "Renhuai123/ziwei-doushu",
+      "TauricResearch/TradingAgents",
+      "coollabsio/coolify",
+      "debpalash/VoiceStudio"
+    ],
+    "retained": [
+      "Nutlope/hallmark",
+      "cloudflare/security-audit-skill",
+      "makecindy/cindy",
+      "pbakaus/impeccable",
+      "pollen-robotics/microduck"
+    ],
+    "exited": [
+      "NVIDIA/OpenShell",
+      "aws/agent-toolkit-for-aws",
+      "google-gemini/gemini-cli",
+      "jbiaojerry/ebook-treasure-chest",
+      "luongnv89/claude-howto"
+    ],
+    "risers": [
+      {
+        "full_name": "makecindy/cindy",
+        "previous_rank": 10,
+        "rank": 1,
+        "change": 9
+      },
+      {
+        "full_name": "pollen-robotics/microduck",
+        "previous_rank": 7,
+        "rank": 5,
+        "change": 2
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_rank": 6,
+        "rank": 4,
+        "change": 2
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "previous_rank": 4,
+        "rank": 2,
+        "change": 2
+      },
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "previous_rank": 1,
+        "rank": 10,
+        "change": -9
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "Nutlope/hallmark",
+        "previous_stars_today": 455,
+        "stars_today": 1317,
+        "change": 862
+      },
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "previous_stars_today": 2264,
+        "stars_today": 2878,
+        "change": 614
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_stars_today": 619,
+        "stars_today": 1092,
+        "change": 473
+      },
+      {
+        "full_name": "pollen-robotics/microduck",
+        "previous_stars_today": 319,
+        "stars_today": 647,
+        "change": 328
+      },
+      {
+        "full_name": "makecindy/cindy",
+        "previous_stars_today": 477,
+        "stars_today": 675,
+        "change": 198
+      }
+    ]
+  }
+}
