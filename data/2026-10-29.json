@@ -1,0 +1,1708 @@
+{
+  "date": "2026-10-29",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 14,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "JetBrains/thinkrail",
+      "url": "https://github.com/JetBrains/thinkrail",
+      "description": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+      "language": "TypeScript",
+      "stars": 5404,
+      "forks": 273,
+      "stars_today": 1068,
+      "topics": [
+        "agent",
+        "agent-skills",
+        "agentic-ai",
+        "agentic-workflow",
+        "ai-coding",
+        "ai-tools",
+        "pi-agent",
+        "pi-agent-extension",
+        "spec-driven",
+        "spec-driven-coding",
+        "spec-driven-development",
+        "vibe-coding",
+        "vibecoding"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-08T07:40:43Z",
+      "updated_at": "2026-10-29T07:08:32Z",
+      "open_issues": 246,
+      "default_branch": "main",
+      "readme_excerpt": "# ThinkRail [![JetBrains incubator project](https://jb.gg/badges/incubator-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub) [![GitHub stars](https://img.shields.io/github/stars/JetBrains/thinkrail?style=social)](https://star-history.com/#JetBrains/thinkrail&Date) [![Discord](https://img.shields.io/badge/Discord-Join%20the%20chat-5865F2?logo=discord&logoColor=white)](https://thinkrail.ai/discord) ThinkRail is the agentic IDE that gets better every time you use it — learning your project through living specs today, and building its own capabilities tomorrow. We built a rich interface around the [`pi`](https://www.npmjs.com/package/@earendil-works/pi-coding-agent) coding agent, isolated work into separate workspaces, and gave the agent durable project knowledge through living specs and reusable skills. Next, we're adding full extension support, so ThinkRail can create the tools it needs based on how you actually work. **Website:** [thinkrail.ai](https://thinkrail.ai/) · **Blog:** [thinkrail.ai/blog](https://thinkrail.ai/blog/) · **Discord:** [thinkrail.ai/discord](https://thinkrail.ai/discord) ⭐ If you find ThinkRail useful, give it a star — it helps others discover it. <p align=\"center\"> <a href=\"https://www.star-history.com/jetbrains/thinkrail\"> <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=rank&theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=rank\" /><img alt=\"Star History Rank\" src=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=rank\" /></picture> <picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=trending&theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=trending\" /><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=JetBrains/thinkrail&type=trending\" /></picture> </a> </p> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\".github/readme-assets/workbench-dark.png\"> <img src=\".github/readme-assets/workbench-light.png\" alt=\"ThinkRail workbench: the Projects pane beside the left tool rail listing worktree workspaces and their Settled shelf, a finished pi conversation with its tool steps in the center, the resulting diff beside it, and the Specs tree above the Changes list on the right with their tools on the edge rail\" width=\"900\"> </picture> *A `pi` session and the change it made, scoped to an isolated git-worktree workspace.* ## What you get - **Isolated workspaces.** Open any git repo as a project and cut workspaces from it as `git worktree`s, each with its own branch and working directory. Agents work in parallel without touching your checkout; merge the good branch, delete the rest. You can also attach existing worktrees or explicitly work in the project folder itself. Finished and dormant workspaces settle onto a per-project shelf on their own — when their pull request merges or closes, or after a quiet week — and come back the moment you work in them. The topbar shows where the active branch stands against `origin` and its pull request, with the next step one click away: publish, push, or open a PR described from the plan, the commits, your PR template, or an agent-written draft. Once a GitHub PR is open it shows the CI checks and review decision, and lets you mark it ready, hand failing checks or a diverged branch to the agent, merge it with the repository's last-used method, reopen it, or delete the remote branch. - **A real IDE around the agent.** A splittable workbench of Monaco editor tabs, a Files tree with live git change marks and a Changed view, terminals, and documents — all scoped to the active workspace. Leave anchored review comments on files and diffs and send them to a chat as structure",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 9,
+      "streak_days": 4
+    },
+    {
+      "rank": 2,
+      "full_name": "elayadesign/ai-design-skills",
+      "url": "https://github.com/elayadesign/ai-design-skills",
+      "description": "",
+      "language": "",
+      "stars": 11450,
+      "forks": 825,
+      "stars_today": 2139,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-07-29T06:43:16Z",
+      "updated_at": "2026-10-29T07:04:10Z",
+      "open_issues": 7,
+      "default_branch": "main",
+      "readme_excerpt": "# AI Design Skills A growing collection of design skills for AI coding tools — Claude Code, Cursor, Codex, Windsurf, and anything else that reads a markdown rules file. Each skill is a self-contained folder. Install the ones you need. --- ## Skills | Skill | What it does | |---|---| | [`landing-page-design`](./skills/landing-page-design/SKILL.md) | Builds a landing page from scratch — intake questions, page structure, conversion copy, plus a full visual system (type, spacing, radius, motion) | More on the way. [Upgrading an existing site instead of building new?](https://github.com/elayadesign/redesign-skill) That one lives in its own repo since it predates this collection. --- ## Install Pick a skill from the table above, then swap `<skill-name>` below for its folder name. <details open> <summary><b>Claude Code</b></summary> ```bash mkdir -p .claude/skills git clone https://github.com/elayadesign/ai-design-skills.git /tmp/ai-design-skills cp -r /tmp/ai-design-skills/skills/<skill-name> .claude/skills/ ``` Then just ask, in plain language, for what that skill covers. </details> <details> <summary><b>Cursor</b></summary> ```bash mkdir -p .cursor/rules curl -o .cursor/rules/<skill-name>.md \\ https://raw.githubusercontent.com/elayadesign/ai-design-skills/main/skills/<skill-name>/SKILL.md ``` Or paste the file into **Settings → Rules for AI**. </details> <details> <summary><b>Codex / Windsurf / other</b></summary> Copy the skill's `SKILL.md` into whatever your tool uses for project rules: | Tool | Path | |---|---| | Codex | `AGENTS.md` | | Windsurf | `.windsurfrules` | | Cline | `.clinerules` | | Generic | paste into your system prompt | </details> <details> <summary><b>Claude.ai (no terminal)</b></summary> Download the skill's `SKILL.md` and upload it to a Project, or attach it to a chat and say *\"follow this.\"* </details> --- ## Make it yours Every skill's design values (fonts, colors, spacing, motion) live in one section near the bottom of its file. Fork this repo, edit that section, and the rest of the skill follows automatically. --- ## Credits `landing-page-design` adapts content realism and motion ideas from [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) by Leon Lin, MIT licensed. Details are at the end of [its SKILL.md](./skills/landing-page-design/SKILL.md#credits). --- ## License MIT. Use it, fork it, ship it, sell what you build with it. No attribution needed.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 307681,
+      "forks": 27367,
+      "stars_today": 1095,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-10-29T07:07:05Z",
+      "open_issues": 369,
+      "default_branch": "main",
+      "readme_excerpt": "# Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. ## Table of Contents - [How it works](#how-it-works) - [Commercial Services](#commercial-services) - [Getting Started](#installation) - [Claude Code](#claude-code) - [Antigravity](#antigravity) - [Codex App](#codex-app) - [Codex CLI](#codex-cli) - [Cursor](#cursor) - [Devin CLI](#devin-cli) - [Factory Droid](#factory-droid) - [Gemini CLI](#gemini-cli) - [GitHub Copilot CLI](#github-copilot-cli) - [Grok Build CLI](#grok-build-cli) - [Kimi Code](#kimi-code) - [OpenCode](#opencode) - [Pi](#pi) - [Qwen Code](#qwen-code) - [Hermes Agent](#hermes-agent) - [Muse](#muse) - [The Basic Workflow](#the-basic-workflow) - [When Something Goes Wrong](#when-something-goes-wrong) - [Community](#community) - [What's Inside](#whats-inside) - [Philosophy](#philosophy) - [Contributing](#contributing) - [Updating](#updating) - [License](#license) - [Visual companion telemetry](#visual-companion-telemetry) ## How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. ## Commercial Services If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com. ## Installation Installation differs by harness. If you use more than one, install Superpowers separately for each one. ### Claude Code Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers) #### Official Marketplace - Install the plugin from Anthropic's official marketplace: ```bash /plugin install superpowers@claude-plugins-official ``` #### Superpowers Marketplace The Superpowers marketplace provides Superpowers and some other related plugins for Claude Code. - Register the marketplace: ```bash /plugin marketplace add obra/superpowers-marketplace ``` - Install the plugin from this marketplace: ```bash /plugin install superpowers@superpowers-marketplace ``` ### Antigravity Install Superpowers as a plugin from this repository: ```bash agy plugin install https://github.com/obra/superpowers ``` Antigravity lists each installed skill's description, and the description of the `using-superpowers` skill prompts the model to load that skill at the start of a conversation. Reinstall with the same command to update. ### Codex App Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - In the Codex app, click on Plugins in the sidebar. - You should see `Superpowers` in the Coding section. - Click the `+` next to Superpowers and follow the prompts. ### Codex CLI Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - Open the ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 4,
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": 48608,
+      "forks": 6019,
+      "stars_today": 2371,
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "updated_at": "2026-10-29T07:07:49Z",
+      "open_issues": 222,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <p align=\"center\"><img src=\"assets/figs/logo/color-full.png\" alt=\"DeepTutor\" width=\"480\"></p> <h1 align=\"center\">DeepTutor: Lifelong Personalized Tutoring</h1> <p align=\"center\"> <a href=\"https://deeptutor.info\" target=\"_blank\"><img alt=\"Docs — deeptutor.info\" src=\"https://img.shields.io/badge/Docs-deeptutor.info%20%E2%86%97-0A0A0A?style=for-the-badge&labelColor=F5F5F4\" height=\"36\"></a>&nbsp; <a href=\"https://deeptutor.info/collaborate/\" target=\"_blank\"><img alt=\"Collaborate — work with us\" src=\"https://img.shields.io/badge/Collaborate-work%20with%20us%20%E2%86%97-0A0A0A?style=for-the-badge&labelColor=F5F5F4\" height=\"36\"></a> </p> <p align=\"center\"> <a href=\"https://www.star-history.com/hkuds/deeptutor\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending&amp;theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending\" /><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending\" height=\"55\" /></picture></a>&#32;<a href=\"https://trendshift.io/repositories/17099\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/17099/daily\" alt=\"HKUDS/DeepTutor | Trendshift\" width=\"250\" height=\"55\"></a>&#32;<a href=\"https://www.star-history.com/hkuds/deeptutor\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;theme=dark\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor\"><img alt=\"Star History Rank\" src=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor\" width=\"185\" height=\"55\"></picture></a> </p> <p align=\"center\"> <a href=\"README.md\"><img alt=\"English\" height=\"40\" src=\"https://img.shields.io/badge/English-BCDCF7\"></a>&nbsp; <a href=\"assets/README/README_CN.md\"><img alt=\"简体中文\" height=\"40\" src=\"https://img.shields.io/badge/简体中文-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_TW.md\"><img alt=\"繁體中文\" height=\"40\" src=\"https://img.shields.io/badge/繁體中文-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_JA.md\"><img alt=\"日本語\" height=\"40\" src=\"https://img.shields.io/badge/日本語-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_ES.md\"><img alt=\"Español\" height=\"40\" src=\"https://img.shields.io/badge/Español-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_FR.md\"><img alt=\"Français\" height=\"40\" src=\"https://img.shields.io/badge/Français-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_AR.md\"><img alt=\"Arabic\" height=\"40\" src=\"https://img.shields.io/badge/Arabic-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_RU.md\"><img alt=\"Русский\" height=\"40\" src=\"https://img.shields.io/badge/Русский-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_HI.md\"><img alt=\"Hindi\" height=\"40\" src=\"https://img.shields.io/badge/Hindi-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_PT.md\"><img alt=\"Português\" height=\"40\" src=\"https://img.shields.io/badge/Português-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_TH.md\"><img alt=\"Thai\" height=\"40\" src=\"https://img.shields.io/badge/Thai-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_PL.md\"><img alt=\"Polski\" height=\"40\" src=\"https://img.shields.io/badge/Polski-CDCFD4\"></a> </p> [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/downloads/) [![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![License](https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square)](LICENSE) [![GitHub release](https://img.shields.io/github/v/release/HKUDS/DeepTutor?style=flat-square&color=brightgreen)](https://github.com/HKUDS/DeepTutor/releases) [![arXiv](https://img.shields.io/badge/arXiv-2604.26962-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/ab",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "macro-inc/macro",
+      "url": "https://github.com/macro-inc/macro",
+      "description": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+      "language": "Rust",
+      "stars": 5557,
+      "forks": 527,
+      "stars_today": 117,
+      "topics": [
+        "agent",
+        "ai",
+        "ai-agents",
+        "all-in-one",
+        "crm",
+        "crm-system",
+        "email",
+        "linear",
+        "mcp",
+        "messaging",
+        "notes",
+        "notion",
+        "office",
+        "rust",
+        "slack",
+        "slack-alternative",
+        "startup",
+        "startup-tools",
+        "typescript",
+        "workspace"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2025-11-08T15:18:27Z",
+      "updated_at": "2026-10-29T07:05:15Z",
+      "open_issues": 343,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <a target=\"_blank\" href=\"https://macro.com\"> <img width=\"2195\" height=\"721\" alt=\"Frame 11\" src=\"https://github.com/user-attachments/assets/50405352-785e-4984-b24f-544e89731acb\" /> </a> <br /> <br /> <p> <a href=\"https://macro.com/app\">Sign up</a> · <a href=\"https://docs.macro.com\">Docs</a> · <a href=\"https://macro.com/app/book/6de4003c-15e4-549f-b5a9-0e930bbf56e4/demo\">Book demo</a> · <a href=\"https://macro.com\">Website</a> · <a href=\"mailto:contact@macro.com\">Feature requests</a> · <a href=\"CONTRIBUTING.md\">Contribute</a> · <a href=\"mailto:teo@macro.com\">Hiring</a> </p> </div> <br /> Macro is the all-in-one workspace for you and your team. It unifies email + messages + docs + tasks + agents + CRM into a single fast interface with shared team-level memory. Everything in your workspace is @linked and searchable so your team (and your agents) never have to switch tools. <br /> # Why Macro We built Macro because we wanted a single operating system for our startup. There are many good software products, and we used them all — Slack, Linear, Notion, HubSpot, and Superhuman — but they don't work together as one system. As we scaled our last venture to ~20 people things started to break: every team got their own tools and the company was held together by MCP and Zapier. The company was not computable. It was chaotic. Macro is a complete redesign of work software from the ground up as a single system. Designed by us in NYC and Toronto, dogfooded by our team of ~15 for two years. Built in SolidJS and Rust for speed and reliability. We're focused on building something that any small company or team at a larger company can use as their \"operating system\". <br /> # Features Macro is composed of 'blocks' designed to be modular, extensible, and work together like Lego. For each block, we studied the best prior art and tried to make it even better. Each surface is purpose-built for its job rather than composed from a generic block primitive — but every one of them shares the same backend; cross-references between a doc and a task, or a channel message and an email, are natively stored as a **bidirectional graph**. | Block | Docs | What it does | | ------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- | | Email | [Docs &rarr;](https://docs.macro.com/product/email) | Multi-account unified inbox, keyboard shortcuts, and shared inboxes. Gmail. | | Messages | [Docs &rarr;](https://docs.macro.com/product/channels) | Channels and direct messages designed for focused technical discussions. | | Tasks | [Docs &rarr;](https://docs.macro.com/product/tasks) | Linear-inspired tasks, tightly integrated with channels, email, and agents. | | Docs | [Docs &rarr;](https://docs.macro.com/product/docs) | Real-time collaborative, markdown-native docs built on CRDTs, with @mentions. | | Canvas | [Docs &rarr;](https://docs.macro.com/product/canvas) | 2D board with embedded @links to tasks, files, and emails. | | Agents | [Docs &rarr;](https://docs.macro.com/product/agents) | Unified, team-level memory. Can take action on your behalf. | | Calls | [Docs &rarr;](https://docs.macro.com/product/calls) | Recorded, transcribed, and logged to team memory for agents. | | File storage | [Docs &rarr;](https://docs.macro.com/product/folders) | Auto-imported from email and channels, fully searchable. | | Pull requests | [Docs &rarr;](https://docs.macro.com/integrations/github) | Linked to tasks, embeddable in channels, available to agents. | | CRM | [Docs &rarr;](https://docs.macro.com/product/crm) | Customer and contact objects, custom properties, email sync, enrichment. | <br /> # **Multiple email inboxes** w/ good AI tools, integrated CRM Macro Mail is inspired by Superhuman's keyboard-first interface with a few key additions: 1. Multi-account. Triage all your Google accounts in a single inbox, with the same tagging and sharing system. Or triage individual",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "stars": 41094,
+      "forks": 2133,
+      "stars_today": 2110,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-04-27T20:47:10Z",
+      "updated_at": "2026-10-29T07:08:43Z",
+      "open_issues": 68,
+      "default_branch": "main",
+      "readme_excerpt": "# Hallmark **A design skill for Claude Code, Codex, Cursor and OpenCode that refuses to look AI-generated.** [usehallmark.com](https://www.usehallmark.com) &nbsp;·&nbsp; fifty themes &nbsp;·&nbsp; custom on request &nbsp;·&nbsp; redesign and audit by name Made by Together AI. <p align=\"center\"> <img src=\"site/OG-hallmark.png\" alt=\"Hallmark, the design skill that ends AI slop\" /> </p> Hallmark holds a hard floor and then gets out of the way. It deals three themes from a catalog of fifty materials, builds the page around what the visitor came to do, and lints the result in a real browser against the tells that read as machine-made: the eyebrow above every heading, tracked-capital labels, one coloured word in a headline, a page of empty frames or nothing but photographs, a hero that misses its screen, an email sign-up at the end of every page, a form that says thanks without sending anything. A fresh-context reviewer gets the last word. The gates come in tiers. The **Floor** never ships (contrast, focus, reduced motion, invented facts, a broken phone layout). **Reflex** gates are the defaults a model falls into; a build with a reason may overrule one on the record. **Finish** checks are craft detail that never blocks a ship. ## New in v2 - **Fifty themes.** Each is a material (paper, type, colour, surfaces, its own components and texture) with a picture of a finished page, and the build lays out its own page in it. - **Built from the job.** A booking page books, a shop sells, a newsletter subscribes: the action sits where the category puts it, and the page ends on it. - **Custom.** Ask for a custom page and Hallmark designs from your prompt alone, under the same rules and checks. - **Your real product.** Point it at a URL, a dev server or an app and it captures the screenshots itself. - **Real photographs.** 755 openly licensed photos, picked per subject and credited on the page. - **Redesign and audit.** `/hallmark redesign <path>` rebuilds a page and keeps its content and wiring; `/hallmark audit <path>` only reports. ## Themes <table> <tr> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/dusk/\"><img src=\"docs/screenshots/dusk.jpg\" alt=\"Dusk theme: Closewise, bank reconciliation\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/cobalt/\"><img src=\"docs/screenshots/cobalt.jpg\" alt=\"Cobalt theme: Relay, a webhook API\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/studio/\"><img src=\"docs/screenshots/studio.jpg\" alt=\"Studio theme: Field Office, an identity studio\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/atelier/\"><img src=\"docs/screenshots/atelier.jpg\" alt=\"Atelier theme: Maison Orla, a fragrance atelier\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/ribbon/\"><img src=\"docs/screenshots/ribbon.jpg\" alt=\"Ribbon theme: Lull, a sleep sounds app\" /></a></td> </tr> <tr> <td><b>Dusk</b><br/><sub>Closewise, bank reconciliation</sub></td> <td><b>Cobalt</b><br/><sub>Relay, a webhook API</sub></td> <td><b>Studio</b><br/><sub>Field Office, an identity studio</sub></td> <td><b>Atelier</b><br/><sub>Maison Orla, a fragrance atelier</sub></td> <td><b>Ribbon</b><br/><sub>Lull, a sleep sounds app</sub></td> </tr> <tr> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/furrow/\"><img src=\"docs/screenshots/furrow.jpg\" alt=\"Furrow theme: Fieldbook, farm records\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/dose/\"><img src=\"docs/screenshots/dose.jpg\" alt=\"Dose theme: Tandem, a family medication app\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/refract/\"><img src=\"docs/screenshots/refract.jpg\" alt=\"Refract theme: Bellwater Lido, an outdoor pool\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.com/themes/vantage/\"><img src=\"docs/screenshots/vantage.jpg\" alt=\"Vantage theme: Swath, construction site scans\" /></a></td> <td width=\"20%\"><a href=\"https://www.usehallmark.co",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -4,
+      "streak_days": 5
+    },
+    {
+      "rank": 7,
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "stars": 93511,
+      "forks": 5521,
+      "stars_today": 1472,
+      "topics": [
+        "agent-skills",
+        "ai",
+        "anti-slop",
+        "design",
+        "slop"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-11-16T01:52:04Z",
+      "updated_at": "2026-10-29T07:07:56Z",
+      "open_issues": 48,
+      "default_branch": "main",
+      "readme_excerpt": "# Impeccable The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships. From your project root: ```bash npx impeccable install ``` Reload your coding tool, then run `/impeccable init` in your agent (`$impeccable init` on Codex). Works with Claude Code, Cursor, Codex CLI, GitHub Copilot, Devin, Replit Agent, Gemini CLI, Grok Build, OpenCode, Google Antigravity, Kiro, Trae, Rovo Dev, Qoder, Mistral Vibe, Pi, Hermes Agent, DeepSeek Harness, and Veto. Full docs live at [impeccable.style/docs](https://impeccable.style/docs). | Without Impeccable | With Impeccable | |---|---| | ![Villa Castagneto built without Impeccable: cream background, a thin serif headline with an italic accent, two pill buttons, and flat vector illustrations in rounded cards](https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-without.webp) | ![Villa Castagneto built with Impeccable: a full-bleed engraved night scene of the villa on its cliff above the sea, a condensed cream and vermilion headline, and a month strip along the bottom](https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-with.webp) | Same model (Fable 5.1), same brief: a fourteen-room family guesthouse on the Ligurian coast. Without Impeccable, it builds the tasteful default: cream page, thin serif, italic accent, pill buttons. With it, the page is built around one picture: the house at night, seen from the water. For a full project, see the [Neo Mirai case study](https://impeccable.style/cases/neo-mirai): a conference site taken from mockup to shipped page. ## Why Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up again and again, across models and projects. - **Words for what you want.** \"Make it pop\" leaves your agent to guess. `/impeccable bolder the pricing cards` loads a playbook written for that one move and points it at one target. - **A reviewer.** `critique` scores the design against usability heuristics and ranks what to fix first. `audit` checks accessibility, performance, theming, and responsive behavior, with findings ranked P0 (blocking) to P3 (polish). - **A slop detector.** 62 deterministic rules flag the tells above, plus quality problems like cramped padding and skipped headings. No LLM, no API key. Impeccable is strongest on interfaces that already exist: point it at a page or a component and iterate. It builds new pages too; see [Build something new](https://impeccable.style/docs/new-work) for how to get the most out of that harder mode. To start, pick one component: ``` /impeccable critique the pricing cards ``` ## How it works Run `/impeccable init` once per project. It reads your code, asks only what it can't infer (who the product is for, what it needs to do, the constraints), and writes `PRODUCT.md`. Every later command reads it. Run `/impeccable document` to capture your existing visual system in `DESIGN.md`, so changes stay on-brand. [More on context files](https://impeccable.style/docs/context). Then name a command and a target: ``` /impeccable critique the onboarding flow /impeccable quieter the landing page /impeccable polish settings /impeccable harden checkout ``` Or just describe what you want: `/impeccable redo this hero section`. Narrow targets get better results; a single section reviewed closely beats a whole page at a glance. Pin a command you use often with `/impeccable pin audit` to get `/audit` as its own shortcut. ### 24 commands | | Commands | |---|---| | **Steer** | `bolder` amplifies safe designs · `quieter` tones down loud ones · `distill` removes what the page doesn't need · `colorize` brings color to a gray interface · `typeset` fixes fonts, hierarchy, and sizing · `layout` fixes spacing and rhythm · `animate` adds transitions and interaction feedback · `delight` adds",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -2,
+      "streak_days": 5
+    },
+    {
+      "rank": 8,
+      "full_name": "makecindy/cindy",
+      "url": "https://github.com/makecindy/cindy",
+      "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+      "language": "TypeScript",
+      "stars": 8311,
+      "forks": 976,
+      "stars_today": 728,
+      "topics": [
+        "agent",
+        "ai-agent",
+        "ai-assistant",
+        "android",
+        "claude-code",
+        "codex",
+        "electron",
+        "ios",
+        "llm",
+        "macos",
+        "react-native",
+        "typescript",
+        "windows"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-22T17:49:34Z",
+      "updated_at": "2026-10-29T07:07:56Z",
+      "open_issues": 2187,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://cindy.app\"><img src=\".github/assets/hero-en.webp\" width=\"100%\" alt=\"CINDY — Consider it done. The open-source AI agent that works out of the box, doing real work on your own computer.\"></a> </p> <p align=\"center\"> <strong>English</strong> · <a href=\"README.zh-CN.md\">简体中文</a> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-Apache--2.0-blue.svg\" alt=\"License\" /></a> <a href=\"https://github.com/makecindy/cindy/actions/workflows/ci.yml\"><img src=\"https://github.com/makecindy/cindy/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" /></a> </p> <p align=\"center\"> <strong><a href=\"https://cindy.app/download\">Download Cindy</a></strong> &nbsp;·&nbsp; <a href=\"https://cindy.app\">Website</a> &nbsp;·&nbsp; <a href=\"CONTRIBUTING.en.md\">Build with us</a> &nbsp;·&nbsp; <a href=\"SUPPORT.en.md\">Get help</a> </p> Cindy is an **open-source AI agent, ready out of the box and yours to shape**. Connect your computers and phone, bring the models and subscriptions you already use, and build a companion that knows how you like to work. ## All your devices. One Cindy. Your work computer, home desktop, laptop and phone belong together. - **Pick up the same work.** Open a session from another device, continue the conversation, and access its files without copying everything into a new chat. - **Share more than a screen.** Use model providers configured on another computer — including supported subscriptions, API providers and local models. - **Reach your whole desktop.** Built-in remote desktop on your phone lets you open apps, type and operate a connected computer when a chat isn't enough. Your computer becomes your server: **no server rental or self-hosting setup**. <details> <summary>How connections and data work</summary> For remote access to your computers, keep them online, sign in with the same account and enable the relevant permissions. Model sharing requires allowing remote access to that provider; remote desktop also needs its own permissions. Project files stay on their computer — remote access is not whole-disk sync. Cloud companions sync their conversations, memory, skills and shared attachments through Cindy's services; model providers process the requests sent to them. Provider and service billing still apply. </details> ## Keep your favorite agents. Get a better way to work. Already using Claude Code or Codex? Cindy brings them together with **Pi**, then adds a shared interface, multi-device access, tools and a companion of your own. | Harness | What it brings | | --- | --- | | **Claude Code** | Claude Code's agent workflow, with Cindy's interface and connected tools. | | **Codex** | Codex's coding workflow, available alongside your other agents. | | **Pi** | A lean, open-source, extensible agent with support for multiple model providers. | Choose a supported harness and model combination, and change it as the work evolves. Your session stays in Cindy; switching harnesses hands off or rebuilds the engine context rather than making their internal states identical. **One agent not enough? Let her lead a team.** Use different agents for planning, parallel implementation and independent review, with a shared goal and clear acceptance criteria. ## Real work, in your actual tools Work with your files, browser and apps. Ask for a change, inspect what happened, and keep working from the result. Answers can include **charts, interactive controls and rich HTML**, not just a wall of text. Build a recurring routine with **automations**, or hand over work through connected chat channels such as Slack and Telegram. Connect more tools through **Skills, plugins and MCP**. ## Ready from day one. Yours to shape over time. - **Create your own companions.** Give them a role, instructions, skills and recurring work — a reviewer, researcher, project partner, or something of your own. - **Make experience reusable.** Keep useful preferences and knowledge in memory; turn a good way of workin",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": -2,
+      "streak_days": 5
+    },
+    {
+      "rank": 9,
+      "full_name": "nightly-labs/openbot",
+      "url": "https://github.com/nightly-labs/openbot",
+      "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+      "language": "TypeScript",
+      "stars": 3454,
+      "forks": 331,
+      "stars_today": 1054,
+      "topics": [
+        "ai-agents",
+        "bun",
+        "codex",
+        "electron",
+        "local-first",
+        "macos",
+        "solidjs",
+        "typescript"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-08-12T21:32:03Z",
+      "updated_at": "2026-10-29T07:06:17Z",
+      "open_issues": 323,
+      "default_branch": "main",
+      "readme_excerpt": "# OpenBot [![CI](https://github.com/nightly-labs/openbot/actions/workflows/ci.yml/badge.svg)](https://github.com/nightly-labs/openbot/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-PolyForm_Noncommercial_1.0.0-blue.svg)](LICENSE) OpenBot is a local-first desktop workspace for persistent AI teammates. It supports the local [Codex App Server](https://learn.chatgpt.com/docs/app-server) and [Claude Code](https://code.claude.com/docs/en/overview), plus [Grok CLI](https://docs.x.ai/build/overview), OpenCode, Gemini, [Cursor CLI](https://cursor.com/cli), and [Cline CLI](https://cline.bot/cli) through ACP. It gives every agent its own workspace and conversation, and provides local queues, file transfers, an embedded browser, and agent-to-agent messaging in one desktop app. > [!WARNING] > OpenBot is a development preview. Agents currently run with `danger-full-access` and > `approvalPolicy: never`. They can read and modify files, run commands, use the network, and control > the embedded browser without per-action confirmations after the explicit first-launch consent. > Run only agents and tasks you trust, keep backups, and review [Security](#security) before use. ## What works - Prompt-driven agent creation and editing on desktop and mobile, with editable instructions, avatar, and section review before saving. - Persistent agents backed by independent Codex, Claude, Grok, OpenCode, Gemini, Cursor, or Cline sessions and local workspaces. - Custom OpenAI-compatible endpoints and custom ACP agents, with detection of local model servers (Ollama, LM Studio) and installed agents. - Per-agent context monitoring with automatic compaction before long threads exhaust the model window. - FIFO message queues with pause, resume, cancellation, and crash-safe persistence. - Agent-to-agent messages, replies, reactions, images, and managed file transfers. - Shared desktop channel chats with one task owner, explicit delegation, shared history, and Stop, Resume, Reassign, Archive, and Restore controls. - A persistent embedded browser that agents can open, inspect, and control. - Optional Computer Use on macOS, Windows and Linux through the `cua-driver` binary in the release, which OpenBot starts as its own child process and gives to every provider. - Per-agent model, reasoning, profile, notification, browser, and panel state. - Local data and privacy-safe diagnostics exports from the account menu. - Optional OpenBot accounts through one-time email codes. The account API runs on Cloudflare Workers and D1. OpenBot is local-first, not offline-only. Codex connects to OpenAI, Claude connects to Anthropic, Grok connects to xAI, Gemini connects to Google, Cursor connects to Cursor, Cline connects to Cline, visited pages use the network, and installed plugins may connect to their own services. ## Install OpenBot supports macOS 13 or newer on Apple silicon or Intel, Windows 10 or newer on x64 systems, and x64 or arm64 Linux as an AppImage. ### macOS 1. Download the latest `OpenBot-*-arm64.dmg` (or `OpenBot-*-x64.dmg` on an Intel Mac) from [GitHub Releases](https://github.com/nightly-labs/openbot/releases). 2. Drag OpenBot to Applications and open it. ### Windows 1. Download the latest `OpenBot-*-x64.exe` from [GitHub Releases](https://github.com/nightly-labs/openbot/releases). 2. Run the installer and open OpenBot. ### Linux 1. Download the latest `OpenBot-*-x86_64.AppImage` (or `OpenBot-*-arm64.AppImage` on arm64) from [GitHub Releases](https://github.com/nightly-labs/openbot/releases). 2. Make it executable with `chmod +x OpenBot-*.AppImage`, then run it. The AppImage does not need libfuse2, so it also runs on Arch Linux and Omarchy. It mounts itself with `fusermount3` from the `fuse3` package. On Ubuntu 23.10 or newer and on Debian 13, unprivileged user namespaces are restricted by AppArmor and OpenBot exits during launch until you install an AppArmor profile: ```bash sudo install -m 0644 build/linux/openbot.apparmor /etc/apparmor.d",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": -6,
+      "streak_days": 3
+    },
+    {
+      "rank": 10,
+      "full_name": "togg53192-cmd/jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": "",
+      "stars": 7550,
+      "forks": 1074,
+      "stars_today": 1477,
+      "topics": [],
+      "license": "",
+      "created_at": "2026-06-18T18:21:25Z",
+      "updated_at": "2026-10-29T07:08:40Z",
+      "open_issues": 16,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # Jailbreaks **A curated collection of system prompts, persona locks, workspace policies, and agent operating specifications for frontier, open-weight, and free stealth models.** ![Prompts](https://img.shields.io/badge/prompts-32-4c9f70) ![Targets](https://img.shields.io/badge/targets-26%2B-2f6f9f) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat&logo=github) ![Stars](https://img.shields.io/github/stars/togg53192-cmd/jailbreaks?style=flat&logo=github&color=yellow) </div> --- ## About A working collection of **32 prompts targeting 26+ models**, including complete system prompts, persona definitions, workspace policies, `AGENTS.md` files, configuration blocks, and Ollama Modelfiles. Every file is intended to be complete and paste-ready. No summaries. No partial excerpts. The collection covers: - Free stealth models available through OpenCode Zen - Open-weight families including GLM, DeepSeek, Kimi, Qwen, Gemma, and GPT-OSS - Closed frontier models including Claude, Gemini, Grok, and Mistral - Coding-agent and workspace instruction formats - Ollama Modelfiles and harness-specific configuration **New here?** Start with the [collection](#collection) or jump directly to [how to use](#how-to-use). > [!WARNING] > **Research and educational purposes only.** > > This repository documents how instruction hierarchies, persona framing, prompt conflicts, and policy overrides can affect model behavior. These techniques are also useful to researchers and developers studying how to make AI systems more resistant to prompt injection and instruction manipulation. > > Do not use this material to harm others, bypass applicable laws, or violate the terms of service of a platform or model provider. ## Collection ### OpenCode Zen — Free Stealth Models | Model | File | Type | |---|---|---| | **Big Pickle** | [BigPickle-opencode.md](./BigPickle-opencode.md) | VANTA persona lock with explicit operating floor | | **Space Bunny** | [spacebunny-agents.md](./spacebunny-agents.md) | Assistant operating specification | | **LongCat 2.5** | [longcat-agents.md](./longcat-agents.md) | Assistant operating specification | | **MiMo V2.6** | [mimo-2.6-agents.md](./mimo-2.6-agents.md) | Assistant operating specification | | **Step 5 Preview** | [Step-5-preview.md](./Step-5-preview.md) | Workspace operating profile | | **Muse Spark 1.3** | [Muse spark 1.3.md](./Muse%20spark%201.3.md) | Agent deployment operating policy | | **Muse Spark 1.3 v2** | [Muse-spark-1-3-v2.md](./Muse-spark-1-3-v2.md) | Runtime scope-note variant | | **Muse.ai** | [muse-ai-AGENTS.md](./muse-ai-AGENTS.md) | Assistant operating specification | ### Anthropic — Claude | Model | File | Type | |---|---|---| | **Opus** | [opus v1.md](./opus%20v1.md) · [opus v2.md](./opus%20v2.md) | Conversational groundwork persona, v1 / v2 | | **Sonnet** | [sonnet v1.md](./sonnet%20v1.md) · [Sonnet v2.md](./Sonnet%20v2.md) | Writer's-room framing, v1 / v2 | ### Zhipu — GLM / ZCode | Model | File | Type | |---|---|---| | **GLM-5.2** | [glm-5.2.md](./glm-5.2.md) | System prompt | | **GLM ZCode 5.2** | [glm-zcode-5.2.md](./glm-zcode-5.2.md) | System prompt | | **GLM ZCode 5.3** | [glm-zcode-5.3.md](./glm-zcode-5.3.md) · [glm-zcode-5.3-AGENTS.md](./glm-zcode-5.3-AGENTS.md) | System prompt + `AGENTS.md` drop-in | | **GLM-5.3 Flash** | [glm-5-3-flash.md](./glm-5-3-flash.md) | Assistant operating specification | | **GLM-5.3 (OpenCode)** | [glm5-3opencode.md](./glm5-3opencode.md) | Assistant operating specification | ### DeepSeek | Model | File | Type | |---|---|---| | **DeepSeek V3** | [deepseek v3.md](./deepseek%20v3.md) | System prompt | | **DeepSeek V4** | [deepseek v4.md](./deepseek%20v4.md) | System prompt | | **DeepSeek 4.1** | [deepseek-4-1.md](./deepseek-4-1.md) | Assistant operating specification | ### Moonshot — Kimi | Model | File | Type | |---|---|---| | **Kimi K2** | [kimi-k2.md](./kimi-k2.md) | System prompt | | **Kimi K3** | [kimi-k3-agents.md](./kimi-k3-agen",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 11,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 11,
+      "full_name": "hmjz100/LinkSwift",
+      "url": "https://github.com/hmjz100/LinkSwift",
+      "description": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+      "language": "JavaScript",
+      "stars": 35549,
+      "forks": 2520,
+      "stars_today": 1616,
+      "topics": [
+        "123pan",
+        "aliyun-drive",
+        "aliyunpan",
+        "aria2",
+        "baidu",
+        "baidu-netdisk",
+        "baidunetdisk",
+        "baidupan",
+        "baiduyun",
+        "guangya-netdisk",
+        "motrix",
+        "quark-netdisk",
+        "tampermonkey",
+        "tampermonkey-script",
+        "tampermonkey-userscript",
+        "tianyi-netdisk",
+        "uc-netdisk",
+        "userscript",
+        "xunlei-netdisk",
+        "yidong-netdisk"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2022-08-10T11:59:44Z",
+      "updated_at": "2026-10-29T07:08:44Z",
+      "open_issues": 51,
+      "default_branch": "dev",
+      "readme_excerpt": "> [!IMPORTANT] > 如果您是从 GreasyFork 找到这的，建议前往下方的 [安装](#安装) 选择一个合适的源覆盖安装，避免因脚本失效或 GF 黑产刷子导致无法及时更新。 ![LinkSwift](https://socialify.git.ci/hmjz100/LinkSwift/image?description=1&descriptionEditable=%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8E%20JavaScript%20%E7%9A%84%E7%BD%91%E7%9B%98%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%8E%B7%E5%8F%96%E5%B7%A5%E5%85%B7&language=1&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBkPSJNMTAzLjYgMTA3LjRjMy41LTIuMiA4LjktNi4xIDEzLjgtMTIuNXM3LjMtMTIuNSA4LjUtMTYuNWMuNS0xLjcgMi4yLTcuNSAyLjItMTQuNyAwLTEwLjEtMy4zLTI1LjEtMTUuNC0zNi44LTE0LjUtMTQtMzIuMS0xNC4zLTM1LjctMTQuMy04IDAtMTUuNyAxLjktMjIuNiA1LjJDNDQgMjMgMzUuNyAzMS40IDMwLjggNDEuN2MtMS4zIDIuOC00IDQuNy03LjEgNS00IC4zLTcuNSA0LjQtOC45IDkuNi0uNSAxLjktMS42IDMuNS0zLjEgNC43QzQuNCA2Ni44IDAgNzUuNyAwIDg1YzAgNi44IDIuMyAxMy4xIDYuMSAxOC4yIDUuNSA3LjQgMTQuMiAxMi4yIDI0IDEyLjJoNDcuMWM0LjQgMCAxMS0uNSAxOC4zLTMuNSAzLjItMS40IDUuOS0zIDguMS00LjV6IiBmaWxsPSIjQTA5OUYwIi8%2BPHBhdGggZD0iTTExOS44IDY0LjNjLjEtMTcuMS0xMC40LTI4LTEyLjUtMzAuMUM5NSAyMi4xIDc5LjkgMjEuOCA3Ni45IDIxLjhjLTE3LjYgMC0zMy4zIDEwLjUtMzkuOSAyNi43LS42IDEuMy0xLjggMi4zLTMuNCAyLjNoLS40Yy01LjggMC0xMC42IDQuOC0xMC42IDEwLjd2LjVjMCAxLjQtLjggMi42LTEuOSAzLjNDMTMuNCA2OSA4LjggNzYuOCA4LjggODVjMCAxMi4yIDkuOSAyMi4zIDIyLjIgMjIuM2g0NS4yYzMuNi0uMSAxNy42LS45IDI5LjYtMTIgMi45LTIuOCAxMy45LTEzLjcgMTQtMzF6IiBmaWxsPSIjNTc0QUI4Ii8%2BPHBhdGggZD0iTTExMC44IDU3LjRsLjIgMy4zYzAgMS4zLTEuMSAyLjQtMi4zIDIuNC0xLjMgMC0yLjMtMS4xLTIuMy0yLjRsLS4xLTIuOHYtLjNjMC0xLjIuOS0yLjIgMi4xLTIuM2guM2MuNyAwIDEuMy4zIDEuNy43LS4yLjEuMy41LjQgMS40em0tMy4zLTEwLjNjMCAxLjItMSAyLjMtMi4yIDIuM2gtLjFjLS44IDAtMS42LS41LTItMS4yLTQuNi04LjMtMTMuMy0xMy41LTIyLjgtMTMuNS0xLjIgMC0yLjMtMS0yLjMtMi4ydi0uMWMwLTEuMiAxLTIuMyAyLjItMi4zaC4xYTMwLjM3IDMwLjM3IDAgMCAxIDE1LjggNC40YzQuNiAyLjggOC40IDYuOCAxMS4xIDExLjUuMS4zLjIuNy4yIDEuMXpNODguMyA3My44TDczLjUgOTMuMmMtMS41IDEuOS0zLjUgMy4xLTUuNyAzLjVoLS4yYy0uNC4xLS44LjEtMS4yLjEtLjYgMC0xLjEtLjEtMS42LS4yLTIuMi0uNC00LjItMS43LTUuNi0zLjVMNDQuMyA3My45Yy0yLTIuNi0yLjUtNS40LTEuNC03LjcuMS0uMS4xLS4yLjItLjIgMS4yLTIgMy41LTMuMiA2LjQtMy4yaDYuNnYtNS43YzAtNi44IDQuNy0xMiAxMC45LTEyIDQuOCAwIDguNSAyLjYgMTAuMyA3LjIuNSAxLjMtLjIgMi43LTEuNSAzLjJzLTIuOC0uMS0zLjMtMS40Yy0xLjEtMi43LTIuOS00LTUuNS00LTMuNSAwLTYgMy02IDd2OC4xYzAgLjUtLjIgMS0uNiAxLjQtLjYuNy0xLjcgMS4xLTIuNiAxLjFoLTguNGMtMS4zIDAtMiAuNC0yLjEuNy0uMi40IDAgMS4zLjkgMi40TDYzLjEgOTBjLjkgMS4yIDIuMSAxLjggMy4zIDEuOHMyLjMtLjYgMy4xLTEuN2wxNC44LTE5LjNjLjktMS4xIDEuMS0yIC45LTIuNC0uMi0uMy0uOS0uNy0yLjEtLjdoLTcuNmMtLjkgMC0xLjctLjUtMi4xLTEuMi0uMy0uNC0uNC0uOC0uNC0xLjMgMC0xLjQgMS4xLTIuNSAyLjUtMi41aDcuNmMzLjEgMCA1LjUgMS4zIDYuNiAzLjVsLjMuN2MuNyAyLjEuMSA0LjYtMS43IDYuOXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4%3D&name=1&owner=1&pattern=Charlie%20Brown&theme=Auto) <p align=\"center\">“出淤泥而不染，濯清涟而不妖”</p> <hr> <p align=\"center\"> 搭配使用，效果更佳！👋扩展脚本 <br/> <a href=\"https://github.com/hmjz100/123panYouthMember#安装\">123 云盘会员青春版</a> | <a href=\"#安装\">百度网盘会员青春版</a> | <a href=\"https://scriptcat.org/script-show-page/2470\" target=\"_blank\">阿里云盘会员青春版</a> <br/> ↓&nbsp;&nbsp;↓&nbsp;&nbsp;↓&nbsp;&nbsp;↓&nbsp;&nbsp;↓ </p> <p align=\"center\"> <img alt=\"Github Stargazers\" src=\"https://img.shields.io/github/stars/hmjz100/LinkSwift.svg?label=%e6%98%9f%e6%a0%87&logo=github&logoColor=white&labelColor=black&color=gold&style=for-the-badge&cacheSeconds=10\"> <img alt=\"Github Forks\" src=\"https://img.shields.io/github/forks/hmjz100/LinkSwift?label=%e5%a4%8d%e5%88%bb&logo=github&logoColor=white&labelColor=black&color=grey&style=for-the-badge&cacheSeconds=10\"> <img alt=\"Github Licence\" src=\"https://img.shields.io/github/license/hmjz100/LinkSwift?label=%e8%ae%b8%e5%8f%af&logo=github&logoColor=white&labelColor=black&color=grey&style=for-the-badge&cacheSeconds=10\"> <br/> <a href=\"https://trendshift.io/repositories/13630\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/13630\" alt=\"hmjz100%2FLinkSwift | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> <br/> <img src=\"https://img",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "expo/skills",
+      "url": "https://github.com/expo/skills",
+      "description": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "language": "Shell",
+      "stars": 3679,
+      "forks": 234,
+      "stars_today": 90,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2025-11-30T03:57:18Z",
+      "updated_at": "2026-10-29T07:05:24Z",
+      "open_issues": 101,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://docs.expo.dev/skills/\" target=\"_blank\"> <img src=\"assets/expo-skills.png\" alt=\"Expo Skills\" width=\"100%\" /> </a> </p> <h3 align=\"center\">Expo Skills</h3> <p align=\"center\"> <a href=\"https://skills.sh/expo/skills\"><img src=\"https://skills.sh/b/expo/skills\" alt=\"skills.sh installs\" /></a> <img src=\"https://img.shields.io/badge/Expo-official-000020\" alt=\"Official Expo\" /> <img src=\"https://img.shields.io/badge/license-MIT-blue\" alt=\"MIT license\" /> </p> <p align=\"center\"> Official AI agent skills from the Expo team for building, deploying, upgrading, and debugging Expo apps. </p> ## How It Works Skills give AI agents focused Expo knowledge: when to use Expo APIs, how to structure common workflows, and which Expo, EAS, React Native, iOS, and Android constraints matter. Expo documentation, Expo CLI, and EAS CLI remain the source of truth; these skills help agents apply them correctly. ## Installation For Claude Code or Codex, install the plugin so updates are handled by the official plugin marketplace. For Cursor, OpenCode, and other AI coding agents, use the skills CLI. | Path | Best for | | --- | --- | | Plugin install | Claude Code or Codex, with updates handled by their official plugin marketplaces. | | Skills CLI | Cursor, OpenCode, GitHub Copilot, Windsurf, Gemini, Cline, AMP, Factory Droid, Antigravity, Kiro CLI, and other AI coding agents. | ### Skills CLI Install all Expo skills with the [skills CLI](https://skills.sh/docs/cli): ```text npx skills@latest add expo/skills --skill '*' ``` This selects every Expo skill without selecting every agent. The CLI will still ask where to install them; to target one agent directly, add `--agent <agent>`. For most agents, this is the only install command you need. Run it from the project root, then restart or refresh your agent session so it can discover the installed `SKILL.md` files. ### Claude Code Plugin Install from the official Claude Code plugin marketplace: ```text claude plugin install expo@claude-plugins-official ``` You can also run `/plugin install expo@claude-plugins-official` inside Claude Code. ### Codex Plugin Install from the OpenAI-curated Codex marketplace: ```text codex plugin add expo@openai-curated ``` You can also open `/plugins` in Codex and install `expo` from the OpenAI-curated marketplace. ## Updating Claude Code and Codex plugin installs are updated through their official plugin marketplaces. For skills CLI installs, update installed skills with: ```text npx skills@latest update ``` To update a single Expo skill, pass its name: ```text npx skills@latest update expo-router ``` ## Try It After installing, ask your agent Expo-specific questions like: - \"Build a native-feeling Expo Router screen with tabs, modals, and animations.\" - \"Create an EAS workflow that builds previews on pull requests.\" - \"Help me upgrade this app to the latest Expo SDK.\" - \"Check whether this EAS Update rollout is healthy.\" Agents choose the right skill from the task context and each skill's description. ## Skills Included Skills come in two groups so the free vs paid boundary is clear. Each skill's description carries the same label, and every services skill opens with a costs/plan-limits note. ### Start Here Load this first for any Expo/EAS task, then route to the specific skill below. | Skill | Use it for | | --- | --- | | `expo-overview` | Router and shared setup rules; the entry point when a request is vague or the user hasn't named a specific Expo tool. | ### Framework (open source) Free, open-source Expo SDK and React Native skills. | Skill | Use it for | | --- | --- | | `expo-project-structure` | Folder structure for a new Expo app: `src/` layout, routes-only `app/`, screens, server code, platform-specific files. | | `expo-router` | Expo Router navigation: file-based routes, links, native stacks, modals, sheets, native tabs, and headers. | | `expo-animation` | Polished React Native animations and gestures with Reanimated, Gesture Handler, Exp",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "ruvnet/RuView",
+      "url": "https://github.com/ruvnet/RuView",
+      "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+      "language": "Rust",
+      "stars": 101288,
+      "forks": 13175,
+      "stars_today": 557,
+      "topics": [
+        "awesome",
+        "claude",
+        "densepose",
+        "esp32",
+        "firmware",
+        "home-assistant",
+        "home-automation",
+        "iot",
+        "monitoring",
+        "networking",
+        "npm",
+        "pose-estimation",
+        "react",
+        "rf",
+        "self-learning",
+        "skills",
+        "spatial-intelligence",
+        "typescript",
+        "wifi",
+        "wifi-security"
+      ],
+      "license": "MIT",
+      "created_at": "2025-06-07T04:32:30Z",
+      "updated_at": "2026-10-29T07:08:32Z",
+      "open_issues": 505,
+      "default_branch": "main",
+      "readme_excerpt": "# π RuView <p align=\"center\"> <a href=\"https://cognitum.one/seed\"> <img src=\"assets/ruview-hero-h3-v3.gif\" alt=\"RuView - WiFi DensePose — animated visualization of real-time pose estimation, breathing, and heart-rate sensing through WiFi\" width=\"100%\"> </a> </p> [![RuView: spaces become signals, with an animated conceptual RF field](assets/readme/hero-spatial-v6.svg)](docs/user-guide.md) <table> <tr> <td align=\"center\" width=\"33%\"><a href=\"docs/user-guide.md\"><img src=\"assets/readme/nav-start-spatial-v4.svg\" width=\"180\" alt=\"Start here\" /></a><br/><a href=\"docs/user-guide.md\">Start here</a></td> <td align=\"center\" width=\"33%\"><a href=\"firmware/esp32-csi-node/README.md\"><img src=\"assets/readme/nav-hardware-spatial-v4.svg\" width=\"180\" alt=\"Hardware\" /></a><br/><a href=\"firmware/esp32-csi-node/README.md\">Hardware</a></td> <td align=\"center\" width=\"33%\"><a href=\"https://huggingface.co/ruvnet/wifi-densepose-pretrained\"><img src=\"assets/readme/nav-models-spatial-v4.svg\" width=\"180\" alt=\"Models\" /></a><br/><a href=\"https://huggingface.co/ruvnet/wifi-densepose-pretrained\">Models</a></td> </tr> <tr> <td align=\"center\" width=\"33%\"><a href=\"harness/ruview/README.md\"><img src=\"assets/readme/nav-agents-spatial-v4.svg\" width=\"180\" alt=\"AI toolkit\" /></a><br/><a href=\"harness/ruview/README.md\">AI toolkit</a></td> <td align=\"center\" width=\"33%\"><a href=\"docs/integrations/home-assistant.md\"><img src=\"assets/readme/nav-home-spatial-v4.svg\" width=\"180\" alt=\"Smart home\" /></a><br/><a href=\"docs/integrations/home-assistant.md\">Smart home</a></td> <td align=\"center\" width=\"33%\"><a href=\"https://cognitum.one/seed\"><img src=\"assets/readme/nav-seed-spatial-v4.svg\" width=\"180\" alt=\"Cognitum Seed\" /></a><br/><a href=\"https://cognitum.one/seed\">Cognitum Seed</a></td> </tr> </table> <p align=\"center\"> <a href=\"https://ruos.cognitum.one\"> <img src=\"assets/ruos-animated.svg\" alt=\"RuView — WiFi becomes spatial awareness, with Ruflo coordination and a ruOS sensing workspace\" width=\"100%\"> </a> </p> ## **See through walls with WiFi** ## **Turn ordinary WiFi into a spatial intelligence / sensing system.** Detect people, measure breathing and heart rate, track movement, and monitor rooms — through walls, in the dark, with no cameras or wearables. Just physics. Works natively with the four major smart-home ecosystems: **[Home Assistant](docs/integrations/home-assistant.md)** via the HA-DISCO MQTT publisher, **[Apple Home & HomePod](docs/user-guide-apple-homepod.md)** as a discoverable HAP-1.1 bridge, **[Google Home](docs/integrations/home-assistant.md)** + **[Amazon Alexa](docs/integrations/home-assistant.md)** via the same HA bridge or a [Matter](docs/adr/ADR-122-bfld-ruview-ha-matter-exposure.md) endpoint. Siri, Google Assistant, and Alexa can voice presence and vitals by room with zero custom skills. [![Works with Home Assistant](https://img.shields.io/badge/Works%20with-Home%20Assistant-blue?logo=home-assistant&logoColor=white&labelColor=41BDF5)](docs/integrations/home-assistant.md) [![Works with Matter](https://img.shields.io/badge/Works%20with-Matter-blue?labelColor=4285F4)](docs/adr/ADR-122-bfld-ruview-ha-matter-exposure.md) [![Works with Apple Home](https://img.shields.io/badge/Works%20with-Apple%20Home-black?logo=apple)](docs/user-guide-apple-homepod.md) [![Works with Google Home](https://img.shields.io/badge/Works%20with-Google%20Home-blue?logo=googlehome)](docs/integrations/home-assistant.md) [![Works with Alexa](https://img.shields.io/badge/Works%20with-Alexa-blue?logo=amazon&logoColor=white&labelColor=00CAFF)](docs/integrations/home-assistant.md) > Drop into any **Home Assistant** install with one `--mqtt` flag. Or pair into **Apple Home / Google Home / Alexa / SmartThings** as a Matter Bridge. Ships 21 entities per node (11 raw signals + 10 inferred semantic states: someone-sleeping, possible-distress, room-active, elderly-inactivity-anomaly, meeting-in-progress, bathroom-occupied, fall-risk-elevated, bed-exit, no-movement, multi-room-transition) pl",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "xiaolai/the-craft-of-selfteaching",
+      "url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+      "description": "One has no future if one couldn't teach themself.",
+      "language": "Jupyter Notebook",
+      "stars": 18705,
+      "forks": 17910,
+      "stars_today": 148,
+      "topics": [],
+      "license": "",
+      "created_at": "2019-03-14T14:12:13Z",
+      "updated_at": "2026-10-29T07:07:15Z",
+      "open_issues": 200,
+      "default_branch": "master",
+      "readme_excerpt": "# the-craft-of-selfteaching > One has no future if one couldn't teach themself<a href='#fn1' name='fn1b'><sup>[1]</sup></a>. # 自学是门手艺 > 没有自学能力的人没有未来 **作者：李笑来** 特别感谢**霍炬**（[@virushuo](https://github.com/virushuo)）、**洪强宁**（[@hongqn](https://github.com/hongqn)) 两位良师诤友在此书写作过程中给予我的巨大帮助！ ```python # pseudo-code of selfteaching in Python def teach_yourself(anything): while not create(): learn() practice() return teach_yourself(another) teach_yourself(coding) ``` 请先行阅读 [T-appendix.jupyter-installation-and-setup](T-appendix.jupyter-installation-and-setup.ipynb) 以便在本地安装 [Jupyterlab](https://github.com/jupyterlab/jupyterlab) 而后就能用更好的体验阅读本书。 有兴趣帮忙的朋友，请先行阅读 [如何使用 Pull Request 为这本书校对](02.proof-of-work.ipynb)。 2019 年 3 月 23 日，新增 Markdown 版本： > https://github.com/selfteaching/the-craft-of-selfteaching/tree/master/markdown ### 目录 > - [01.preface（**前言**）](01.preface.ipynb) > - [02.proof-of-work（**如何证明你真的读过这本书？**）](02.proof-of-work.ipynb) > - [Part.1.A.better.teachyourself（**为什么一定要掌握自学能力？**）](Part.1.A.better.teachyourself.ipynb) > - [Part.1.B.why.start.from.learning.coding（**为什么把编程当作自学的入口？**）](Part.1.B.why.start.from.learning.coding.ipynb) > - [Part.1.C.must.learn.sth.only.by.reading（**只靠阅读习得新技能**）](Part.1.C.must.learn.sth.only.by.reading.ipynb) > - [Part.1.D.preparation.for.reading（**开始阅读前的一些准备**）](Part.1.D.preparation.for.reading.ipynb) > - [Part.1.E.1.entrance（**入口**）](Part.1.E.1.entrance.ipynb) > - [Part.1.E.2.values-and-their-operators（**值及其相应的运算**）](Part.1.E.2.values-and-their-operators.ipynb) > - [Part.1.E.3.controlflow（**流程控制**）](Part.1.E.3.controlflow.ipynb) > - [Part.1.E.4.functions（**函数**）](Part.1.E.4.functions.ipynb) > - [Part.1.E.5.strings（**字符串**）](Part.1.E.5.strings.ipynb) > - [Part.1.E.6.containers（**数据容器**）](Part.1.E.6.containers.ipynb) > - [Part.1.E.7.files（**文件**）](Part.1.E.7.files.ipynb) > - [Part.1.F.deal-with-forward-references（**如何从容应对含有过多 “过早引用” 的知识？**）](Part.1.F.deal-with-forward-references.ipynb) > - [Part.1.G.The-Python-Tutorial-local（**官方教程：The Python Tutorial**）](Part.1.G.The-Python-Tutorial-local.ipynb) > - [Part.2.A.clumsy-and-patience（**笨拙与耐心**）](Part.2.A.clumsy-and-patience.ipynb) > - [Part.2.B.deliberate-practicing（**刻意练习**）](Part.2.B.deliberate-practicing.ipynb) > - [Part.2.C.why-start-from-writing-functions（**为什么从函数开始？**）](Part.2.C.why-start-from-writing-functions.ipynb) > - [Part.2.D.1-args（**关于参数（上）**）](Part.2.D.1-args.ipynb) > - [Part.2.D.2-aargs（**关于参数（下）**）](Part.2.D.2-aargs.ipynb) > - [Part.2.D.3-lambda（**化名与匿名**）](Part.2.D.3-lambda.ipynb) > - [Part.2.D.4-recursion（**递归函数**）](Part.2.D.4-recursion.ipynb) > - [Part.2.D.5-docstrings（**函数的文档**）](Part.2.D.5-docstrings.ipynb) > - [Part.2.D.6-modules（**保存到文件的函数**）](Part.2.D.6-modules.ipynb) > - [Part.2.D.7-tdd（**测试驱动的开发**）](Part.2.D.7-tdd.ipynb) > - [Part.2.D.8-main（**可执行的 Python 文件**）](Part.2.D.8-main.ipynb) > - [Part.2.E.deliberate-thinking（**刻意思考**）](Part.2.E.deliberate-thinking.ipynb) > - [Part.3.A.conquering-difficulties（**战胜难点**）](Part.3.A.conquering-difficulties.ipynb) > - [Part.3.B.1.classes-1（**类 —— 面向对象编程**）](Part.3.B.1.classes-1.ipynb) > - [Part.3.B.2.classes-2（**类 —— Python 的实现**）](Part.3.B.2.classes-2.ipynb) > - [Part.3.B.3.decorator-iterator-generator（**函数工具**）](Part.3.B.3.decorator-iterator-generator.ipynb) > - [Part.3.B.4.regex（**正则表达式**）](Part.3.B.4.regex.ipynb) > - [Part.3.B.5.bnf-ebnf-pebnf（**BNF 以及 EBNF**）](Part.3.B.5.bnf-ebnf-pebnf.ipynb) > - [Part.3.C.breaking-good-and-bad（**拆解**）](Part.3.C.breaking-good-and-bad.ipynb) > - [Part.3.D.indispensable-illusion（**刚需幻觉**）](Part.3.D.indispensable-illusion.ipynb) > - [Part.3.E.to-be-thorough（**全面 —— 自学的境界**）](Part.3.E.to-be-thorough.ipynb) > - [Part.3.F.social-selfteaching（**自学者的社交**）](Part.3.F.social-selfteaching.ipynb) > - [Part.3.G.the-golden-age-and-google（**这是自学者的黄金时代**）](Part.3.G.the-golden-age-and-google.ipynb) > - [Part.3.H.prevent-focus-drifting（**避免注意力漂移**）](Part.3.H.prevent-focus-drifting.ipynb) > - [Q.good-communiation（**如何成为优秀沟通者**）](Q.good-communication.ipynb) > - [R.finale（**自学者的终点**",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 8/14 个项目可从资料确认与 AI 直接相关；其余 6 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：AI 智能体与数字劳动力（5 个）、其他数字产品与工具（5 个）、AI 编程智能体（2 个）。",
+      "排名第一的 JetBrains/thinkrail 代表“AI 智能体与数字劳动力”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "AI 智能体与数字劳动力（5 个项目）",
+      "其他数字产品与工具（5 个项目）",
+      "AI 编程智能体（2 个项目）",
+      "AI 软件开发方法与技能体系（1 个项目）",
+      "无摄像头空间与生命体征感知（1 个项目）"
+    ],
+    "product_business_signals": [
+      "AI 智能体与数字劳动力是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 AI 智能体与数字劳动力 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "JetBrains/thinkrail",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1068 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 thinkrail 描述为“Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Nee”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 thinkrail 的潜在使用者而言，在项目方所述的“Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Nee”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JetBrains/thinkrail",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Vibe code with pi in a lightweight, real IDE that customises itself around the way you work — The Vibe You Need",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/JetBrains/thinkrail",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/JetBrains/thinkrail",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "elayadesign/ai-design-skills",
+        "one_line_summary": "围绕“名为 ai design skills 的项目”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：名为 ai design skills 的项目",
+        "solution": "围绕“名为 ai design skills 的项目”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 2139 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 ai-design-skills 描述为“名为 ai design skills 的项目”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：名为 ai design skills 的项目 它的办法是：围绕“名为 ai design skills 的项目”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“名为 ai design skills 的项目”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 ai-design-skills 的潜在使用者而言，在项目方所述的“名为 ai design skills 的项目”场景中，可直接查看和试验项目方所述的“名为 ai design skills 的项目”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/elayadesign/ai-design-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/elayadesign/ai-design-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/elayadesign/ai-design-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "obra/superpowers",
+        "one_line_summary": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "industry_direction": "AI 软件开发方法与技能体系",
+        "target_users": [
+          "正在引入 AI 开发流程的软件团队",
+          "工程管理和质量负责人"
+        ],
+        "problem_solved": "只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。",
+        "solution": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 1095 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "技能化开发流程",
+        "technology_impact": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "方法论效果依赖团队执行，可能增加流程负担，也需要用交付质量和周期验证。",
+        "ai_relevance": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "plain_language_explanation": "项目方把 superpowers 描述为“An agentic skills framework & software development methodology that works.”。通俗地说，它希望解决的是：只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。 它的办法是：把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "scenario_examples": [
+          "例如团队要求智能体先写验收条件，再分步实现和测试，最后由人员审查。"
+        ],
+        "practical_benefits": [
+          "对 superpowers 的潜在使用者而言，在项目方所述的“An agentic skills framework & software development methodology that works.”场景中，减少每位成员各自摸索 AI 开发流程的成本",
+          "让 AI 参与的软件交付更容易检查和复盘"
+        ],
+        "industry_implications": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "who_should_care": "正在引入 AI 开发流程的软件团队、工程管理和质量负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An agentic skills framework & software development methodology that works.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/obra/superpowers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 2371 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 DeepTutor 描述为“DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 DeepTutor 的潜在使用者而言，在项目方所述的“DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/DeepTutor",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/DeepTutor",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/HKUDS/DeepTutor",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "macro-inc/macro",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 117 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 macro 描述为“Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together w”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 macro 的潜在使用者而言，在项目方所述的“Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together w”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/macro-inc/macro",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Macro is a unified workspace for teams: email, chat, docs, tasks, agents, calls, and CRM — @-linked together with shared AI memory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/macro-inc/macro",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/macro-inc/macro",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "one_line_summary": "围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "solution": "围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 2110 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 hallmark 描述为“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Anti-AI-slop design skill for Claude Code, Cursor, and Codex. 它的办法是：围绕“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 hallmark 的潜在使用者而言，在项目方所述的“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”场景中，可直接查看和试验项目方所述的“Anti-AI-slop design skill for Claude Code, Cursor, and Codex.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Nutlope/hallmark",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Nutlope/hallmark",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Nutlope/hallmark",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 1472 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 impeccable 描述为“The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, cat”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 impeccable 的潜在使用者而言，在项目方所述的“The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, cat”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pbakaus/impeccable",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "makecindy/cindy",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 728 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 cindy 描述为“Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 cindy 的潜在使用者而言，在项目方所述的“Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makecindy/cindy",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/makecindy/cindy",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/makecindy/cindy",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "nightly-labs/openbot",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 1054 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 openbot 描述为“A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated worksp”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 openbot 的潜在使用者而言，在项目方所述的“A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated worksp”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nightly-labs/openbot",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nightly-labs/openbot",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/nightly-labs/openbot",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "togg53192-cmd/jailbreaks",
+        "one_line_summary": "围绕“LIST OF ALL MY JAILBREAKS”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：LIST OF ALL MY JAILBREAKS",
+        "solution": "围绕“LIST OF ALL MY JAILBREAKS”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 1477 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 jailbreaks 描述为“LIST OF ALL MY JAILBREAKS”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：LIST OF ALL MY JAILBREAKS 它的办法是：围绕“LIST OF ALL MY JAILBREAKS”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“LIST OF ALL MY JAILBREAKS”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 jailbreaks 的潜在使用者而言，在项目方所述的“LIST OF ALL MY JAILBREAKS”场景中，可直接查看和试验项目方所述的“LIST OF ALL MY JAILBREAKS”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/togg53192-cmd/jailbreaks",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "LIST OF ALL MY JAILBREAKS",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/togg53192-cmd/jailbreaks",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/togg53192-cmd/jailbreaks",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "hmjz100/LinkSwift",
+        "one_line_summary": "围绕“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+        "solution": "围绕“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 1616 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 LinkSwift 描述为“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘 它的办法是：围绕“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 LinkSwift 的潜在使用者而言，在项目方所述的“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”场景中，可直接查看和试验项目方所述的“一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/hmjz100/LinkSwift",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "一个基于 JavaScript 的网盘文件下载地址获取工具。基于【网盘直链下载助手】修改 ，支持 百度网盘 / 阿里云盘 / 中国移动云盘 / 天翼云盘 / 迅雷云盘 / 夸克网盘 / UC网盘 / 123云盘 八大网盘",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/hmjz100/LinkSwift",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/hmjz100/LinkSwift",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "expo/skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 90 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 skills 描述为“A collection of AI agent skills for working with Expo projects and Expo Application Services”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“A collection of AI agent skills for working with Expo projects and Expo Application Services”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/expo/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/expo/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/expo/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ruvnet/RuView",
+        "one_line_summary": "利用日常 Wi-Fi 信号变化推断人体存在、活动和部分生命体征，而不采集视频画面。",
+        "industry_direction": "无摄像头空间与生命体征感知",
+        "target_users": [
+          "养老与家庭照护产品团队",
+          "智能家居和空间安全运营者"
+        ],
+        "problem_solved": "摄像头监测存在隐私和遮挡问题，普通空间又缺少低成本的实时存在与动作感知。",
+        "solution": "利用日常 Wi-Fi 信号变化推断人体存在、活动和部分生命体征，而不采集视频画面。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 557 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "Wi-Fi 射频空间感知",
+        "technology_impact": "环境中已有的无线信号可能成为低侵入式感知入口，影响照护、安防和智能空间产品。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "医疗级准确性、多人环境、墙体干扰、误报和知情同意都需要严格验证。",
+        "ai_relevance": "环境中已有的无线信号可能成为低侵入式感知入口，影响照护、安防和智能空间产品。",
+        "plain_language_explanation": "项目方把 RuView 描述为“π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence”。通俗地说，它希望解决的是：摄像头监测存在隐私和遮挡问题，普通空间又缺少低成本的实时存在与动作感知。 它的办法是：利用日常 Wi-Fi 信号变化推断人体存在、活动和部分生命体征，而不采集视频画面。",
+        "scenario_examples": [
+          "例如独居老人家中在不安装摄像头的情况下检测异常静止，并通知照护人员复核。"
+        ],
+        "practical_benefits": [
+          "对 RuView 的潜在使用者而言，在项目方所述的“π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence”场景中，在部分场景减少摄像头带来的隐私压力",
+          "利用现有无线环境降低新增感知硬件的部署门槛"
+        ],
+        "industry_implications": "环境中已有的无线信号可能成为低侵入式感知入口，影响照护、安防和智能空间产品。",
+        "who_should_care": "养老与家庭照护产品团队、智能家居和空间安全运营者",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruvnet/RuView",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ruvnet/RuView",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ruvnet/RuView",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "xiaolai/the-craft-of-selfteaching",
+        "one_line_summary": "围绕“One has no future if one couldn't teach themself.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：One has no future if one couldn't teach themself.",
+        "solution": "围绕“One has no future if one couldn't teach themself.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 148 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 the-craft-of-selfteaching 描述为“One has no future if one couldn't teach themself.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：One has no future if one couldn't teach themself. 它的办法是：围绕“One has no future if one couldn't teach themself.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“One has no future if one couldn't teach themself.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 the-craft-of-selfteaching 的潜在使用者而言，在项目方所述的“One has no future if one couldn't teach themself.”场景中，可直接查看和试验项目方所述的“One has no future if one couldn't teach themself.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "One has no future if one couldn't teach themself.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/xiaolai/the-craft-of-selfteaching",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 5,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 22,
+        "project_count": 12
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 18,
+        "project_count": 10
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 22
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 22
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 18
+      },
+      {
+        "name": "软件产品团队",
+        "count": 6
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 6
+      },
+      {
+        "name": "使用 AI 制作界面的产品团队",
+        "count": 3
+      },
+      {
+        "name": "设计系统与品牌负责人",
+        "count": 3
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 2
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 60
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 24,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 6,
+        "project_count": 1
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 14,
+        "project_count": 5
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 11,
+        "project_count": 7
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 105,
+        "project_count": 39
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 71,
+        "project_count": 44
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 49,
+        "project_count": 17
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 105
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 105
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 71
+      },
+      {
+        "name": "软件产品团队",
+        "count": 49
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 49
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 14
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 14
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 11
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 322
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-10-28",
+    "new": [
+      "expo/skills",
+      "hmjz100/LinkSwift",
+      "macro-inc/macro",
+      "ruvnet/RuView",
+      "xiaolai/the-craft-of-selfteaching"
+    ],
+    "retained": [
+      "HKUDS/DeepTutor",
+      "JetBrains/thinkrail",
+      "Nutlope/hallmark",
+      "elayadesign/ai-design-skills",
+      "makecindy/cindy",
+      "nightly-labs/openbot",
+      "obra/superpowers",
+      "pbakaus/impeccable",
+      "togg53192-cmd/jailbreaks"
+    ],
+    "exited": [
+      "affaan-m/ECC",
+      "gitroomhq/postiz-app"
+    ],
+    "risers": [
+      {
+        "full_name": "JetBrains/thinkrail",
+        "previous_rank": 10,
+        "rank": 1,
+        "change": 9
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "previous_rank": 9,
+        "rank": 4,
+        "change": 5
+      },
+      {
+        "full_name": "togg53192-cmd/jailbreaks",
+        "previous_rank": 11,
+        "rank": 10,
+        "change": 1
+      },
+      {
+        "full_name": "obra/superpowers",
+        "previous_rank": 4,
+        "rank": 3,
+        "change": 1
+      },
+      {
+        "full_name": "elayadesign/ai-design-skills",
+        "previous_rank": 1,
+        "rank": 2,
+        "change": -1
+      },
+      {
+        "full_name": "makecindy/cindy",
+        "previous_rank": 6,
+        "rank": 8,
+        "change": -2
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_rank": 5,
+        "rank": 7,
+        "change": -2
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "previous_rank": 2,
+        "rank": 6,
+        "change": -4
+      },
+      {
+        "full_name": "nightly-labs/openbot",
+        "previous_rank": 3,
+        "rank": 9,
+        "change": -6
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "previous_stars_today": 1598,
+        "stars_today": 2371,
+        "change": 773
+      },
+      {
+        "full_name": "elayadesign/ai-design-skills",
+        "previous_stars_today": 1395,
+        "stars_today": 2139,
+        "change": 744
+      },
+      {
+        "full_name": "togg53192-cmd/jailbreaks",
+        "previous_stars_today": 902,
+        "stars_today": 1477,
+        "change": 575
+      },
+      {
+        "full_name": "obra/superpowers",
+        "previous_stars_today": 617,
+        "stars_today": 1095,
+        "change": 478
+      },
+      {
+        "full_name": "nightly-labs/openbot",
+        "previous_stars_today": 777,
+        "stars_today": 1054,
+        "change": 277
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_stars_today": 1449,
+        "stars_today": 1472,
+        "change": 23
+      },
+      {
+        "full_name": "JetBrains/thinkrail",
+        "previous_stars_today": 1204,
+        "stars_today": 1068,
+        "change": -136
+      },
+      {
+        "full_name": "Nutlope/hallmark",
+        "previous_stars_today": 2830,
+        "stars_today": 2110,
+        "change": -720
+      },
+      {
+        "full_name": "makecindy/cindy",
+        "previous_stars_today": 1465,
+        "stars_today": 728,
+        "change": -737
+      }
+    ]
+  }
+}
