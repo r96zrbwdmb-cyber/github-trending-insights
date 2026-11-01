@@ -1,0 +1,1760 @@
+{
+  "date": "2026-11-01",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 14,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+      "language": "TypeScript",
+      "stars": 108208,
+      "forks": 9495,
+      "stars_today": 1723,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-memory",
+        "anthropic",
+        "artificial-intelligence",
+        "chromadb",
+        "claude",
+        "claude-agent-sdk",
+        "claude-agents",
+        "claude-code",
+        "claude-code-plugin",
+        "claude-skills",
+        "embeddings",
+        "long-term-memory",
+        "mem0",
+        "memory-engine",
+        "openmemory",
+        "rag",
+        "sqlite",
+        "supermemory"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-08-31T20:50:03Z",
+      "updated_at": "2026-11-01T07:34:29Z",
+      "open_issues": 158,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\"> <br> <a href=\"https://github.com/thedotmack/claude-mem\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/public/claude-mem-logo-for-dark-mode.webp\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"docs/public/claude-mem-logo-for-light-mode.webp\"> <img src=\"docs/public/claude-mem-logo-for-light-mode.webp\" alt=\"Claude-Mem\" width=\"400\"> </picture> </a> </h1> <p align=\"center\"> <img alt=\"Vercel OSS Program\" src=\"https://vercel.com/oss/program-badge-2026.svg\" height=\"24\" /> &nbsp;&nbsp;&nbsp; <img alt=\"Greptile\" src=\"docs/public/greptile-wordmark-green.svg\" height=\"24\" /> &nbsp;&nbsp;&nbsp; <img alt=\"SerpApi\" src=\"docs/public/serpapi-logo-with-wordmark-gradient.svg\" height=\"24\" /> </p> <p align=\"center\"> <a href=\"docs/i18n/README.zh.md\">🇨🇳 中文</a> • <a href=\"docs/i18n/README.zh-tw.md\">🇹🇼 繁體中文</a> • <a href=\"docs/i18n/README.ja.md\">🇯🇵 日本語</a> • <a href=\"docs/i18n/README.pt.md\">🇵🇹 Português</a> • <a href=\"docs/i18n/README.pt-br.md\">🇧🇷 Português</a> • <a href=\"docs/i18n/README.ko.md\">🇰🇷 한국어</a> • <a href=\"docs/i18n/README.es.md\">🇪🇸 Español</a> • <a href=\"docs/i18n/README.de.md\">🇩🇪 Deutsch</a> • <a href=\"docs/i18n/README.fr.md\">🇫🇷 Français</a> • <a href=\"docs/i18n/README.he.md\">🇮🇱 עברית</a> • <a href=\"docs/i18n/README.ar.md\">🇸🇦 العربية</a> • <a href=\"docs/i18n/README.ru.md\">🇷🇺 Русский</a> • <a href=\"docs/i18n/README.pl.md\">🇵🇱 Polski</a> • <a href=\"docs/i18n/README.cs.md\">🇨🇿 Čeština</a> • <a href=\"docs/i18n/README.nl.md\">🇳🇱 Nederlands</a> • <a href=\"docs/i18n/README.tr.md\">🇹🇷 Türkçe</a> • <a href=\"docs/i18n/README.uk.md\">🇺🇦 Українська</a> • <a href=\"docs/i18n/README.vi.md\">🇻🇳 Tiếng Việt</a> • <a href=\"docs/i18n/README.tl.md\">🇵🇭 Tagalog</a> • <a href=\"docs/i18n/README.id.md\">🇮🇩 Indonesia</a> • <a href=\"docs/i18n/README.th.md\">🇹🇭 ไทย</a> • <a href=\"docs/i18n/README.hi.md\">🇮🇳 हिन्दी</a> • <a href=\"docs/i18n/README.bn.md\">🇧🇩 বাংলা</a> • <a href=\"docs/i18n/README.ur.md\">🇵🇰 اردو</a> • <a href=\"docs/i18n/README.ro.md\">🇷🇴 Română</a> • <a href=\"docs/i18n/README.sv.md\">🇸🇪 Svenska</a> • <a href=\"docs/i18n/README.it.md\">🇮🇹 Italiano</a> • <a href=\"docs/i18n/README.el.md\">🇬🇷 Ελληνικά</a> • <a href=\"docs/i18n/README.hu.md\">🇭🇺 Magyar</a> • <a href=\"docs/i18n/README.fi.md\">🇫🇮 Suomi</a> • <a href=\"docs/i18n/README.da.md\">🇩🇰 Dansk</a> • <a href=\"docs/i18n/README.no.md\">🇳🇴 Norsk</a> </p> <h4 align=\"center\">Persistent memory compression system built for <a href=\"https://claude.com/claude-code\" target=\"_blank\">Claude Code</a>.</h4> <p align=\"center\"> <a href=\"LICENSE\"> <img src=\"https://img.shields.io/badge/License-Apache%202.0-blue.svg\" alt=\"License\"> </a> <a href=\"package.json\"> <img src=\"https://img.shields.io/badge/version-15.8.0-green.svg\" alt=\"Version\"> </a> <a href=\"package.json\"> <img src=\"https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg\" alt=\"Node\"> </a> <a href=\"https://github.com/thedotmack/awesome-claude-code\"> <img src=\"https://awesome.re/mentioned-badge.svg\" alt=\"Mentioned in Awesome Claude Code\"> </a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/15496\" target=\"_blank\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge-dark.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge.svg\"> <img src=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/trendshift-badge.svg\" alt=\"thedotmack/claude-mem | Trendshift\" width=\"250\" height=\"55\"/> </picture> </a> </p> <br> <table align=\"center\"> <tr> <td align=\"center\"> <a href=\"https://github.com/thedotmack/claude-mem\"> <picture> <img src=\"https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif\" alt=\"Claude-Mem Preview\" width=\"500\" > </picture> </a> </td> <td align=\"center\"> <a href=\"https://www.star-history.com/#thedotmack/claude-mem&Date\"> <picture> <source media=\"(prefers-color-s",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": 0,
+      "streak_days": 3
+    },
+    {
+      "rank": 2,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 308663,
+      "forks": 25983,
+      "stars_today": 883,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-11-01T07:31:03Z",
+      "open_issues": 197,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugin install mattpocock-skills@claude-plugins-official ``` Updates itself by default. </details> <details> <summary><strong>Codex</strong></summary> ```bash codex plugin marketplace add mattpocock/skills codex plugin add mattpocock-skills@mattpocock ``` Updates itself at startup. </details> <details> <summary><strong>GitHub Copilot</strong> (CLI and VS Code)</summary> ```bash copilot plugin marketplace add mattpocock/skills copilot plugin install mattpocock-skills@mattpocock ``` Then, once, add to `~/.copilot/settings.json`: ```json { \"extraKnownMarketplaces\": { \"mattpocock\": { \"source\": { \"source\": \"github\", \"repo\": \"mattpocock/skills\" }, \"autoUpdate\": true } } } ``` In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. </details> <details> <summary><strong>Gemini CLI</strong> (manual updates)</summary> ```bash gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity ``` Re-run both commands to update. </details> <details> <summary><strong>Any other agent, or editable files</strong> (manual updates)</summary> ```bash npx skills@latest add mattpocock/skills -a <agent> # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose ``` When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, GitLab, local files, or anything else you describe) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalig",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": 6,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "Donchitos/Claude-Code-Game-Studios",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+      "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+      "language": "Shell",
+      "stars": 31406,
+      "forks": 4301,
+      "stars_today": 742,
+      "topics": [
+        "ai-agents",
+        "ai-assisted-development",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "game-design",
+        "game-development",
+        "gamedev",
+        "godot",
+        "indie-game-dev",
+        "unity",
+        "unreal-engine"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-12T05:21:38Z",
+      "updated_at": "2026-11-01T07:33:52Z",
+      "open_issues": 72,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <h1 align=\"center\">Claude Code Game Studios</h1> <p align=\"center\"> Turn a single Claude Code session into a full game development studio. <br /> 49 agents. 74 skills. One coordinated AI team. </p> </p> <p align=\"center\"> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-MIT-blue.svg\" alt=\"MIT License\"></a> <a href=\".claude/agents\"><img src=\"https://img.shields.io/badge/agents-49-blueviolet\" alt=\"49 Agents\"></a> <a href=\".claude/skills\"><img src=\"https://img.shields.io/badge/skills-74-green\" alt=\"74 Skills\"></a> <a href=\".claude/hooks\"><img src=\"https://img.shields.io/badge/hooks-15-orange\" alt=\"15 Hooks\"></a> <a href=\".claude/rules\"><img src=\"https://img.shields.io/badge/rules-14-red\" alt=\"14 Rules\"></a> <a href=\"https://code.claude.com/docs\"><img src=\"https://img.shields.io/badge/built%20for-Claude%20Code-f5f5f5?logo=anthropic\" alt=\"Built for Claude Code\"></a> <a href=\"https://www.buymeacoffee.com/donchitos3\"><img src=\"https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20this%20project-FFDD00?logo=buymeacoffee&logoColor=black\" alt=\"Buy Me a Coffee\"></a> <a href=\"https://github.com/sponsors/Donchitos\"><img src=\"https://img.shields.io/badge/GitHub%20Sponsors-Support%20this%20project-ea4aaa?logo=githubsponsors&logoColor=white\" alt=\"GitHub Sponsors\"></a> </p> --- ## Why This Exists Building a game solo with AI is powerful — but a single chat session has no structure. No one stops you from hardcoding magic numbers, skipping design docs, or writing spaghetti code. There's no QA pass, no design review, no one asking \"does this actually fit the game's vision?\" **Claude Code Game Studios** solves this by giving your AI session the structure of a real studio. Instead of one general-purpose assistant, you get 49 specialized agents organized into a studio hierarchy — directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths, and quality gates. The result: you still make every decision, but now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first brainstorm to launch. --- ## Table of Contents - [What's Included](#whats-included) - [Studio Hierarchy](#studio-hierarchy) - [Slash Commands](#slash-commands) - [Does it produce games, or documents?](#does-it-produce-games-or-documents) - [Getting Started](#getting-started) - [Configuration](#configuration) - [Upgrading](#upgrading) - [Project Structure](#project-structure) - [How It Works](#how-it-works) - [Design Philosophy](#design-philosophy) - [Customization](#customization) - [Platform Support](#platform-support) - [Community](#community) - [Supporting This Project](#supporting-this-project) - [License](#license) --- ## What's Included | Category | Count | Description | |----------|-------|-------------| | **Agents** | 49 | Specialized subagents across design, programming, art, audio, narrative, QA, and production | | **Skills** | 74 | Slash commands for every workflow phase (`/start`, `/design-system`, `/create-epics`, `/create-stories`, `/dev-story`, `/story-done`, etc.) | | **Hooks** | 15 | Automated validation on commits, pushes, asset changes, design-doc reads, writes and registries, session lifecycle, agent audit trail, and gap detection | | **Rules** | 14 | Path-scoped coding standards enforced when editing gameplay, engine, AI, UI, network code, scene and asset files, and more | | **Templates** | 62 | Document templates for GDDs, UX specs, ADRs, sprint plans, HUD design, accessibility, and more | ## Studio Hierarchy Agents are organized into three tiers, matching how real studios operate: ``` Tier 1 — Directors creative-director technical-director producer Tier 2 — Department Leads game-designer lead-programmer art-director audio-director narrative-director qa-lead release-manager localization-lead Tier 3 — Specialists gameplay-programmer engine-programmer ai-program",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "",
+      "language": "TypeScript",
+      "stars": 36109,
+      "forks": 8826,
+      "stars_today": 1148,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-08T23:46:22Z",
+      "updated_at": "2026-11-01T07:34:49Z",
+      "open_issues": 3907,
+      "default_branch": "main",
+      "readme_excerpt": "# T3 Code T3 Code is an \"agent harness control surface\". It enables control of the agents on your machine with a best-in-class mobile app ([iOS](https://apps.apple.com/us/app/t3-code-remote-claude-more/id6787819824), [Android](https://play.google.com/store/apps/details?id=com.t3tools.t3code)), [web app](https://app.t3.codes) and [Electron-based desktop app](https://t3.codes). Works with your subscriptions on Claude Code, Codex, Cursor, Grok Build, OpenCode, Google Antigravity, and fx. If they're set up on your computer, T3 Code can control them. ## \"Wait, what are you selling me?\" Nothing. We built T3 Code because we wanted the best possible development experience with agents. We were inspired by existing solutions like the Codex desktop app, Conductor, Claude Desktop and Cursor Glass, but none met our bar. We wanted something performant, remote-ready, and truly open. If we ever go the wrong direction, we want you to have everything you need to fork and build the editor that you want. ## Installation > [!WARNING] > T3 Code currently supports Codex, Claude, Cursor, Grok Build, OpenCode, Antigravity, and fx. Install and authenticate at least one provider before use: > > - Codex: install [Codex CLI](https://developers.openai.com/codex/cli) and run `codex login` > - Claude: install [Claude Code](https://claude.com/product/claude-code) and run `claude auth login` > - Cursor: install [Cursor CLI](https://cursor.com/cli) and run `agent login` > - Grok Build: install [Grok Build CLI](https://x.ai/cli) and run `grok login` > - OpenCode: install [OpenCode](https://opencode.ai) and run `opencode auth login` > - Antigravity: enable it in Settings, then use **Install Antigravity** and **Sign in with Google**. No CLI is required. > - fx: install [fx](https://fx.sh) and run `fx login` on the machine running the T3 Code server ([setup guide](./docs/user/providers-fx.md)) ### Command line ```bash curl -fsSL https://t3.codes/install.sh | sh ``` On Windows, in PowerShell: ```powershell irm https://t3.codes/install.ps1 | iex ``` Then run `t3` to start the server and open the local web app. `t3 service install` keeps it running in the background, `t3 update` moves to a newer release, and `t3 --help` has the full reference. To try it once without installing, run `npx t3@latest` instead. ### Desktop app Install the latest version of the desktop app from [GitHub Releases](https://github.com/pingdotgg/t3code/releases), or from your favorite package registry: #### Windows (`winget`) ```bash winget install T3Tools.T3Code ``` #### Windows (`scoop`) ```bash scoop install extras/t3code ``` #### macOS (Homebrew) ```bash brew install --cask t3-code ``` #### Debian, Ubuntu (`.deb`) Download the `.deb` from [GitHub Releases](https://github.com/pingdotgg/t3code/releases), then: ```bash sudo apt install ./T3-Code-*.deb ``` #### Arch Linux (AUR) Stable: ```bash yay -S t3code-bin ``` Nightly: ```bash yay -S t3code-nightly-bin ``` The AUR packaging is maintained in this repository under [`packaging/aur`](./packaging/aur). #### Nix (nixpkgs) ```bash nix profile add github:NixOS/nixpkgs/nixos-unstable#t3code ``` The package is maintained in [nixpkgs](https://github.com/NixOS/nixpkgs/tree/nixos-unstable/pkgs/by-name/t3/t3code) and includes the desktop app (`t3code-desktop`) and the `t3` command. See [Nix installation](./docs/user/install.md#nix-nixpkgs) for NixOS configuration and updates. ## Some notes We are very very early in this project. Expect bugs. We are (mostly) not accepting contributions yet. Small fixes may be considered. Big features will not be. ## Documentation Full docs live in [docs/](./docs). There's no docs site yet. - [FAQ](./docs/user/faq.md) - [Install and first run](./docs/user/install.md) - [Permission modes](./docs/user/permission-modes.md) - [Keyboard shortcuts](./docs/user/keybindings.md) - [Project settings](./docs/user/project-settings.md) - [Appearance preferences](./docs/user/appearance.md) - [Remote access from a phone or another machin",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 5,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "Renhuai123/ziwei-doushu",
+      "url": "https://github.com/Renhuai123/ziwei-doushu",
+      "description": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+      "language": "TypeScript",
+      "stars": 12555,
+      "forks": 2463,
+      "stars_today": 1092,
+      "topics": [
+        "bazi",
+        "chinese-astrology",
+        "divination",
+        "fortune-telling",
+        "nextjs",
+        "open-source",
+        "purple-star-astrology",
+        "typescript",
+        "zi-wei-dou-shu",
+        "ziwei-doushu"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-01T05:09:59Z",
+      "updated_at": "2026-11-01T07:34:03Z",
+      "open_issues": 18,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # 紫微斗数 · 开源排盘引擎 ### 算法是公开的传统智慧，不应该被锁在围墙里 [![CI](https://github.com/Renhuai123/ziwei-doushu/actions/workflows/ci.yml/badge.svg)](https://github.com/Renhuai123/ziwei-doushu/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](./LICENSE) [![Dataset: CC BY 4.0](https://img.shields.io/badge/dataset-CC%20BY%204.0-green.svg)](./DATASET-LICENSE) **中文** · [English](./README.en.md) </div> **一、项目理念**：紫微斗数是中国传统命理学的瑰宝，倪海厦老师在《天纪》中系统梳理了正宗的紫微斗数体系。我们希望通过技术手段让更多人接触和学习这门学问。 开源排盘算法和知识库，是因为我们相信：**算法是公开的传统智慧，不应该被锁在围墙里**。真正的价值在于解读的深度、用户体验的打磨、以及持续运营的积累。 **二、项目信息**：基于<strong>倪海厦《天纪》</strong>教学体系的紫微斗数排盘系统，包含完整排盘算法、四化系统、格局知识库、古籍原文数据，以及一套完整开源的紫微斗数解读数据：**v4.0 解读数据集——67.5 万张命盘 × 13 维 = 877 万段解读，正文约 204 亿字，解压后 56.6 GB**（2026-10-15 发布）。 | 数据集 | 命盘 | 解读段数 | 解压后 | 覆盖年份 | 每张盘解读字数 | |---|---|---|---|---|---| | **v4.0 解读数据集**（2026-10-15） | **674,976** | **8,774,688** | **56.6 GB** | **1950–2026**（只含真实日期） | **约 3.0 万字** | | v3.0 样本数据集 | 518,400 | 6,739,200 | 33.1 GB | 1924–1983 | 约 2.1 万字 | | 变化 | +30% | +30% | **+71%** | +17 年 | +44% | <sub>v3.0 每张盘解读字数按 2,160 张盘抽样估算，其余数字为全量统计；两版每张盘都是 13 维。</sub> 在线体验：[ouranic.cn](https://ouranic.cn/?from=gh-readme)，排盘、AI 解读、命盘历史全部开放。 > **注：关于六亲判断** > > 紫微斗数在六亲（父母、兄弟、子女等）判断上存在一定局限。倪师在《天纪》中指出：“斗数批六亲本来就比较差一点。”（[2上 · 00:25:27](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=1527)）在传统术数中，铁板神数在核对六亲方面有其独特优势（[2上 · 00:03:15](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=195)）；倪师仍以紫微斗数为核心，是因为它能结合地理、环境与人事进行综合判断，形成“上知天文、下知地理、中知人事”的完整体系（[2上 · 00:25:43](https://www.bilibili.com/video/BV1KJsLekEfA?p=3&t=1543)）。因此，与六亲相关的分析仅供参考；[ouranic.cn](https://ouranic.cn/?from=gh-readme) 上父母、兄弟、子女三个维度也附有同样的说明。 --- ## 目录 | | 章节 | 一句话 | |---|------|--------| | 一 | [本轮更新](#一本轮更新2026-10-15) | 13 维断语按倪师原话与《全书》逐句校正，发布 67.5 万命盘 × 13 维解读数据集 v4.0 | | 二·新 | [13 维解读数据集 v4.0](#二新13-维解读数据集-v402026-10-15) | 2026-10-15 新版断语，67.5 万命盘，按年份下载 | | 二 | [51.8 万命盘样本数据集](#二518-万命盘样本数据集) | 规格、下载、用途、许可 | | 三 | [快速开始](#三快速开始) | 克隆到跑起来 | | 四 | [排盘引擎](#四排盘引擎) | 能做到什么、文件怎么分、古籍数据 | | 五 | [倪师《天纪·紫微斗数》原话](#五倪师天纪紫微斗数原话) | 14 讲 + 2 段补充、1848 条，一图看全，每条可回放 | | 六 | [界面是一份 Demo](#六界面是一份-demo) | 不是线上那套，差距写明 | | 七 | [开源边界](#七开源边界什么不在里面) | 什么开源、什么不开源 | | 八 | [维护节奏与贡献](#八维护节奏与贡献) | 同步节奏、issue / PR 口径 | | 九 | [协议](#九协议) | 代码 MIT / 数据 CC BY 4.0 / 古籍公版 / 倪师原话非商用 | | 十 | [关于与联系](#十关于与联系) | 项目理念、技术栈、联系方式 | --- ## 一、本轮更新（2026-10-15） 本轮跟随网站 2026-10-15 发版（网站内容版本 `ca268829f7a9`）： ![本轮更新总览](./docs/update-20261015.png) **1. 发布 13 维解读数据集 v4.0** —— 674,976 张命盘（公历 1950–2026 年每一个真实日期 × 12 时辰 × 男女）× 13 维 = **8,774,688 段解读**，正文约 204 亿字。解压后 56.6 GB（v3.0 为 33.1 GB，增加 71%），压缩后只有 161 MB，按年份分 77 个文件，可以只下需要的年份，也可以一次下全年份总包。下载见 [Release v4.0-13d](https://github.com/Renhuai123/ziwei-doushu/releases/tag/v4.0-13d)，规格和字段见[第二·新章](#二新13-维解读数据集-v402026-10-15)。发布前 77 个文件逐个解压，与原始数据逐字节比对一致。 **2. 13 维断语按倪师原话与《全书》原文逐句校正**（断语库仍不开源，校正结果体现在 v4.0 数据集里）： - 标着倪师或《全书》却查不到出处的引文，删掉或换成逐字可查的原话；倪师原话注明《天纪》第几集、几分几秒 - 不会发生的四化（如七杀化权、紫微化忌）相关的句子删去；只在某种条件下才成立的断语补上条件 - 「力量强时……落陷时……」这类两头说的句子，改为按命盘只显示成立的那一种 - 健康：哪个脏腑要留意，改按倪师的看法——全盘杀星最集中的那一宫，按它的地支对应脏腑；不再按星的五行推脏器 - 网站知识库「古籍引证」由 244 处增至 405 处，每一处都能在《紫微斗数全书》原文里逐字找到 **3. 排盘引擎同步**（[PR #39](https://github.com/Renhuai123/ziwei-doushu/pull/39)）—— `dst-cn.ts` 新增 `chinaDSTSpan(year)`，查某年中国夏令时起止；`cities.ts` 补全省直辖县级单位与新疆兵团各市的经度（神农架、海南各市县、阿拉尔等），出生地选这些城市时真太阳时校正可用。 **4. 许可** —— [`DATASET-LICENSE`](./DATASET-LICENSE) 适用范围加上 v4.0；写明解读里引用的倪师原话不在数据授权范围内，与第五章倪师原话的 CC BY-NC-SA 4.0 一致。v3.0 样本数据集及其条款不变。 > **2026-10-31 补充**：线上平台更名 **OURANIC**，网址由 metisziwei.com 迁到 **[ouranic.cn](https://ouranic.cn/?from=gh-readme)**（运营主体北京王多鱼科技有限责任公司，京ICP备2026069066号-1）；旧网址会自动跳转，本仓库的代码、数据集与许可都不变。 > **2026-10-27 补充**：排盘引擎同步——`true-solar-time.ts` 支持海外出生地：传 `utcOffsetMinutes`（出生地时区的固定标准偏移），按当地时区中央经线做经度修正，国内不传时结果逐位不变；新增 `clock-adjust.ts`，把夏令时、或当年时区与现在不同时的**钟表读数换成标准时间**（跨日不改，交给用户），建议做成用户亲手点、可撤销的按钮，不要自动改。顺带更正：中国夏令时引擎**只判定、从不自动扣除**，此前「引擎能力」表写成「自动扣除」，有误。 > **2026-10-24 补充**：项目理念移到页首——标题下居中一句「算法是公开的传统智慧，不应该被锁在围墙里」，紧接两段理念原文（前标「项目理念」），原有介绍段前标「项目信息」；第十章「项目理念」改为指向页首。 > **2026-10-20 补充**：星曜亮度默认改为《斗",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": 0,
+      "streak_days": 2
+    },
+    {
+      "rank": 6,
+      "full_name": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "stars": 9921,
+      "forks": 1376,
+      "stars_today": 1303,
+      "topics": [
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "docker",
+        "electron",
+        "expo",
+        "grok",
+        "grok-bot",
+        "grok-bot-alternative",
+        "self-hosted",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-08-11T18:58:55Z",
+      "updated_at": "2026-11-01T07:35:04Z",
+      "open_issues": 605,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> # OpenMausBot **The open-source Grok Bot alternative: your own team of AI bots, in a chat app.** [**openmausbot.com**](https://www.openmausbot.com) &nbsp;·&nbsp; [Download](https://www.openmausbot.com/download) &nbsp;·&nbsp; [Open source Grok Bot alternative, compared](https://www.openmausbot.com/blog/grok-bot-vs-openmausbot) <sub>OpenMausBot is an open-source Grok Bot alternative: an independent project inspired by **Grok Bot**, and the open-source alternative to **Meta Muse**, **OpenAI dots** and **Cue by Manus** — bring-your-own-agent, local-first, on the models you already have. Also known as **MausBot**; formerly **OpenGrokBot**. Not affiliated with xAI, Meta, OpenAI or Manus.</sub> Every bot in the sidebar is a real agent — Claude or Codex running locally under the hood — with its own personality, its own model, its own cloud computer, and its own connected apps. Talk to them like contacts. Watch them work. Approve what matters. ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black) ![Electron](https://img.shields.io/badge/Electron-macOS%20%C2%B7%20Windows%20%C2%B7%20Ubuntu-2B2E3A?logo=electron&logoColor=9FEAF9) ![Agents](https://img.shields.io/badge/agents-Claude%20·%20Codex-d97757) [![Release](https://img.shields.io/github/v/release/milind-soni/OpenMausBot?label=release&color=1084fe&cacheSeconds=300)](https://github.com/milind-soni/OpenMausBot/releases/latest) ![PRs](https://img.shields.io/badge/PRs-welcome-38d591) <br> <a href=\"https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot.dmg\"> <img src=\"https://img.shields.io/github/v/release/milind-soni/OpenMausBot?style=for-the-badge&label=%E2%AC%87%EF%B8%8F%20%20Download%20for%20Mac%20%28Apple%20silicon%29&labelColor=070707&color=1084fe&cacheSeconds=300\" alt=\"Download the latest OpenMausBot for Mac with Apple silicon (.dmg)\" height=\"40\"> </a> &nbsp; <a href=\"https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-intel.dmg\"> <img src=\"https://img.shields.io/github/v/release/milind-soni/OpenMausBot?style=for-the-badge&label=%E2%AC%87%EF%B8%8F%20%20Download%20for%20Mac%20%28Intel%29&labelColor=070707&color=2a9d8f&cacheSeconds=300\" alt=\"Download the latest OpenMausBot for Intel Macs (.dmg)\" height=\"40\"> </a> &nbsp; <a href=\"https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-setup.exe\"> <img src=\"https://img.shields.io/github/v/release/milind-soni/OpenMausBot?style=for-the-badge&label=%E2%AC%87%EF%B8%8F%20%20Download%20for%20Windows&labelColor=070707&color=4cc2ff&cacheSeconds=300\" alt=\"Download the latest OpenMausBot for Windows (.exe)\" height=\"40\"> </a> &nbsp; <a href=\"https://github.com/milind-soni/OpenMausBot/releases/latest/download/OpenMausBot-amd64.deb\"> <img src=\"https://img.shields.io/github/v/release/milind-soni/OpenMausBot?style=for-the-badge&label=%E2%AC%87%EF%B8%8F%20%20Download%20for%20Ubuntu&labelColor=070707&color=e95420&cacheSeconds=300\" alt=\"Download the latest OpenMausBot for Ubuntu (.deb)\" height=\"40\"> </a> <sub>[latest release](https://github.com/milind-soni/OpenMausBot/releases/latest) &nbsp;·&nbsp; macOS: Apple silicon & Intel · signed & notarized .dmg &nbsp;·&nbsp; Windows: x64 installer &nbsp;·&nbsp; Ubuntu 24.04 x64: .deb or AppImage beta &nbsp;·&nbsp; [all releases](https://github.com/milind-soni/OpenMausBot/releases)</sub> <br> <a href=\"https://github.com/sponsors/milind-soni\"> <img src=\"https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F%20%20Support%20OpenMausBot-GitHub%20Sponsors-38d591?style=for-the-badge&labelColor=070707\" alt=\"Support OpenMausBot via GitHub Sponsors\" height=\"40\"> </a> <br> <br> <sub>Powered by <a href=\"https://boat.dev\">boat.dev</a></sub> <br> <a href=\"https://boat.dev\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/sponsors/boat-logo-white.svg\"> <img src=\"docs/assets/sponsors/b",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -4,
+      "streak_days": 3
+    },
+    {
+      "rank": 7,
+      "full_name": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "stars": 98588,
+      "forks": 5817,
+      "stars_today": 1338,
+      "topics": [
+        "agent-skills",
+        "ai",
+        "anti-slop",
+        "design",
+        "slop"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-11-16T01:52:04Z",
+      "updated_at": "2026-11-01T07:35:04Z",
+      "open_issues": 63,
+      "default_branch": "main",
+      "readme_excerpt": "# Impeccable The design vocabulary for your coding agent. Steer with `polish` and `bolder`, review with `critique` and `audit`, and catch AI slop before it ships. From your project root: ```bash npx impeccable install ``` Reload your coding tool, then run `/impeccable init` in your agent (`$impeccable init` on Codex). Works with Claude Code, Cursor, Codex CLI, GitHub Copilot, Devin, Replit Agent, Gemini CLI, Grok Build, OpenCode, Google Antigravity, Kiro, Trae, Rovo Dev, Qoder, Mistral Vibe, Pi, Hermes Agent, DeepSeek Harness, and Veto. Full docs live at [impeccable.style/docs](https://impeccable.style/docs). | Without Impeccable | With Impeccable | |---|---| | ![Villa Castagneto built without Impeccable: cream background, a thin serif headline with an italic accent, two pill buttons, and flat vector illustrations in rounded cards](https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-without.webp) | ![Villa Castagneto built with Impeccable: a full-bleed engraved night scene of the villa on its cliff above the sea, a condensed cream and vermilion headline, and a month strip along the bottom](https://github.com/pbakaus/impeccable/raw/main/docs/images/readme-with.webp) | Same model (Fable 5.1), same brief: a fourteen-room family guesthouse on the Ligurian coast. Without Impeccable, it builds the tasteful default: cream page, thin serif, italic accent, pill buttons. With it, the page is built around one picture: the house at night, seen from the water. For a full project, see the [Neo Mirai case study](https://impeccable.style/cases/neo-mirai): a conference site taken from mockup to shipped page. ## Why Inter for everything. Purple-to-blue gradients. Cards nested in cards, gray text on colored backgrounds, a rounded-square icon tile above every heading. Ask an agent for a page with no other guidance and these show up again and again, across models and projects. - **Words for what you want.** \"Make it pop\" leaves your agent to guess. `/impeccable bolder the pricing cards` loads a playbook written for that one move and points it at one target. - **A reviewer.** `critique` scores the design against usability heuristics and ranks what to fix first. `audit` checks accessibility, performance, theming, and responsive behavior, with findings ranked P0 (blocking) to P3 (polish). - **A slop detector.** 62 deterministic rules flag the tells above, plus quality problems like cramped padding and skipped headings. No LLM, no API key. Impeccable is strongest on interfaces that already exist: point it at a page or a component and iterate. It builds new pages too; see [Build something new](https://impeccable.style/docs/new-work) for how to get the most out of that harder mode. To start, pick one component: ``` /impeccable critique the pricing cards ``` ## How it works Run `/impeccable init` once per project. It reads your code, asks only what it can't infer (who the product is for, what it needs to do, the constraints), and writes `PRODUCT.md`. Every later command reads it. Run `/impeccable document` to capture your existing visual system in `DESIGN.md`, so changes stay on-brand. [More on context files](https://impeccable.style/docs/context). Then name a command and a target: ``` /impeccable critique the onboarding flow /impeccable quieter the landing page /impeccable polish settings /impeccable harden checkout ``` Or just describe what you want: `/impeccable redo this hero section`. Narrow targets get better results; a single section reviewed closely beats a whole page at a glance. Pin a command you use often with `/impeccable pin audit` to get `/audit` as its own shortcut. ### 24 commands | | Commands | |---|---| | **Steer** | `bolder` amplifies safe designs · `quieter` tones down loud ones · `distill` removes what the page doesn't need · `colorize` brings color to a gray interface · `typeset` fixes fonts, hierarchy, and sizing · `layout` fixes spacing and rhythm · `animate` adds transitions and interaction feedback · `delight` adds",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": -4,
+      "streak_days": 8
+    },
+    {
+      "rank": 8,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 310228,
+      "forks": 27606,
+      "stars_today": 665,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-11-01T07:35:03Z",
+      "open_issues": 376,
+      "default_branch": "main",
+      "readme_excerpt": "# Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. ## Table of Contents - [How it works](#how-it-works) - [Commercial Services](#commercial-services) - [Getting Started](#installation) - [Claude Code](#claude-code) - [Antigravity](#antigravity) - [Codex App](#codex-app) - [Codex CLI](#codex-cli) - [Cursor](#cursor) - [Devin CLI](#devin-cli) - [Factory Droid](#factory-droid) - [Gemini CLI](#gemini-cli) - [GitHub Copilot CLI](#github-copilot-cli) - [Grok Build CLI](#grok-build-cli) - [Kimi Code](#kimi-code) - [OpenCode](#opencode) - [Pi](#pi) - [Qwen Code](#qwen-code) - [Hermes Agent](#hermes-agent) - [Muse](#muse) - [The Basic Workflow](#the-basic-workflow) - [When Something Goes Wrong](#when-something-goes-wrong) - [Community](#community) - [What's Inside](#whats-inside) - [Philosophy](#philosophy) - [Contributing](#contributing) - [Updating](#updating) - [License](#license) - [Visual companion telemetry](#visual-companion-telemetry) ## How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. ## Commercial Services If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com. ## Installation Installation differs by harness. If you use more than one, install Superpowers separately for each one. ### Claude Code Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers) #### Official Marketplace - Install the plugin from Anthropic's official marketplace: ```bash /plugin install superpowers@claude-plugins-official ``` #### Superpowers Marketplace The Superpowers marketplace provides Superpowers and some other related plugins for Claude Code. - Register the marketplace: ```bash /plugin marketplace add obra/superpowers-marketplace ``` - Install the plugin from this marketplace: ```bash /plugin install superpowers@superpowers-marketplace ``` ### Antigravity Install Superpowers as a plugin from this repository: ```bash agy plugin install https://github.com/obra/superpowers ``` Antigravity lists each installed skill's description, and the description of the `using-superpowers` skill prompts the model to load that skill at the start of a conversation. Reinstall with the same command to update. ### Codex App Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - In the Codex app, click on Plugins in the sidebar. - You should see `Superpowers` in the Coding section. - Click the `+` next to Superpowers and follow the prompts. ### Codex CLI Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - Open the ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 6,
+      "streak_days": 5
+    },
+    {
+      "rank": 9,
+      "full_name": "lightpanda-io/browser",
+      "url": "https://github.com/lightpanda-io/browser",
+      "description": "Lightpanda: the headless browser designed for AI and automation",
+      "language": "Zig",
+      "stars": 39434,
+      "forks": 1923,
+      "stars_today": 929,
+      "topics": [
+        "browser",
+        "browser-automation",
+        "cdp",
+        "headless",
+        "lightpanda",
+        "playwright",
+        "puppeteer",
+        "zig"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2023-02-07T15:19:34Z",
+      "updated_at": "2026-11-01T07:35:02Z",
+      "open_issues": 100,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <a href=\"https://lightpanda.io\"><img src=\"https://cdn.lightpanda.io/assets/images/logo/lpd-logo.png\" alt=\"Logo\" height=170></a> </p> <h1 align=\"center\">Lightpanda Browser</h1> <p align=\"center\"> <strong>The headless browser built from scratch for AI agents and automation.</strong><br> Not a Chromium fork. Not a WebKit patch. A new browser, written in Zig.</strong><br> 16x lighter and 9x faster than Chromium. </p> </div> <div align=\"center\"> [![License](https://img.shields.io/github/license/lightpanda-io/browser)](https://github.com/lightpanda-io/browser/blob/main/LICENSE) [![Twitter Follow](https://img.shields.io/twitter/follow/lightpanda_io)](https://twitter.com/lightpanda_io) [![GitHub stars](https://img.shields.io/github/stars/lightpanda-io/browser)](https://github.com/lightpanda-io/browser) [![Discord](https://img.shields.io/discord/1391984864894521354?style=flat-square&label=discord)](https://discord.gg/K63XeymfB5) </div> <div align=\"center\"> [<img width=\"350px\" src=\"https://cdn.lightpanda.io/assets/images/github/execution-time-v2.svg\"> ](https://github.com/lightpanda-io/demo) &emsp; [<img width=\"350px\" src=\"https://cdn.lightpanda.io/assets/images/github/memory-frame-v2.svg\"> ](https://github.com/lightpanda-io/demo) </div> ## Benchmarks Requesting 933 real web pages over the network on a AWS EC2 m5.large instance. See [benchmark details](https://github.com/lightpanda-io/demo/blob/main/BENCHMARKS.md#crawler-benchmark). | Metric | Lightpanda | Headless Chrome | Difference | | :---- | :---- | :---- | :---- | | Memory (peak, 100 pages) | 123MB | 2GB | ~16x less | | Execution time (100 pages) | 5s | 46s | ~9x faster | ## Quick start ### Install **Package Managers** Latest nightly from Homebrew: ```console brew install lightpanda-io/browser/lightpanda ``` Latest nightly from Arch Linux User Repository: ```console yay -S lightpanda-nightly-bin ``` **Download from the nightly builds** You can download the last binary from the [nightly builds](https://github.com/lightpanda-io/browser/releases/tag/nightly) for Linux and MacOS for both x86_64 and aarch64. *For Linux* ```console curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-x86_64-linux && \\ chmod a+x ./lightpanda ``` Verify the binary before running anything: ```console ./lightpanda version ``` [Linux aarch64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly) If you use [**Nix**](https://nixos.org/download/), you can run Lightpanda directly from the flake without downloading a binary: ```console nix run github:lightpanda-io/browser -- --help ``` Or pin it as an input in your own flake: ```nix { inputs.lightpanda.url = \"github:lightpanda-io/browser\"; } ``` > **Note:** The Linux release binaries are linked against glibc. On musl-based Linux distributions (Alpine, etc.) the binary fails with `cannot execute: required file not found` because the glibc dynamic linker is missing. Use a glibc-based base image: the current release binaries need glibc **2.35** (`x86_64`) or **2.38** (`arm64`), so `debian:bookworm-slim` (2.36) is fine on `x86_64` but too old for `arm64` — use `FROM ubuntu:24.04`, `FROM debian:trixie-slim`, or `FROM debian:forky-slim` there — or [build from sources](#build-from-sources). > > **Android / Termux:** there is no native Android build. The Linux aarch64 binary needs the glibc loader (`/lib/ld-linux-aarch64.so.1`), which Android's Bionic libc does not provide, so it fails with the same `cannot execute: required file not found` error. *For MacOS* ```console curl -L -o lightpanda https://github.com/lightpanda-io/browser/releases/download/nightly/lightpanda-aarch64-macos && \\ chmod a+x ./lightpanda ``` [MacOS x86_64 is also available](https://github.com/lightpanda-io/browser/releases/tag/nightly) *For Windows + WSL2* Lightpanda has no native Windows binary. Install it inside WSL following the Linux steps above. WSL not installed? Run `wsl --install` from an administra",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 15,
+      "rank_change": 6,
+      "streak_days": 2
+    },
+    {
+      "rank": 10,
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+      "language": "Python",
+      "stars": 53125,
+      "forks": 6504,
+      "stars_today": 1034,
+      "topics": [
+        "ai-agents",
+        "ai-tutor",
+        "clawbot",
+        "cli-tool",
+        "deepresearch",
+        "interactive-learning",
+        "learning",
+        "multi-agent-systems",
+        "rag"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-12-28T15:35:54Z",
+      "updated_at": "2026-11-01T07:34:39Z",
+      "open_issues": 257,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <p align=\"center\"><img src=\"assets/figs/logo/color-full.png\" alt=\"DeepTutor\" width=\"480\"></p> <h1 align=\"center\">DeepTutor: Lifelong Personalized Tutoring</h1> <p align=\"center\"> <a href=\"https://deeptutor.info\" target=\"_blank\"><img alt=\"Docs — deeptutor.info\" src=\"https://img.shields.io/badge/Docs-deeptutor.info%20%E2%86%97-0A0A0A?style=for-the-badge&labelColor=F5F5F4\" height=\"36\"></a>&nbsp; <a href=\"https://deeptutor.info/collaborate/\" target=\"_blank\"><img alt=\"Collaborate — work with us\" src=\"https://img.shields.io/badge/Collaborate-work%20with%20us%20%E2%86%97-0A0A0A?style=for-the-badge&labelColor=F5F5F4\" height=\"36\"></a> </p> <p align=\"center\"> <a href=\"https://www.star-history.com/hkuds/deeptutor\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending&amp;theme=dark\" /><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending\" /><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;type=trending\" height=\"55\" /></picture></a>&#32;<a href=\"https://trendshift.io/repositories/17099\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/17099/daily\" alt=\"HKUDS/DeepTutor | Trendshift\" width=\"250\" height=\"55\"></a>&#32;<a href=\"https://www.star-history.com/hkuds/deeptutor\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor&amp;theme=dark\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor\"><img alt=\"Star History Rank\" src=\"https://api.star-history.com/badge?repo=HKUDS/DeepTutor\" width=\"185\" height=\"55\"></picture></a> </p> <p align=\"center\"> <a href=\"README.md\"><img alt=\"English\" height=\"40\" src=\"https://img.shields.io/badge/English-BCDCF7\"></a>&nbsp; <a href=\"assets/README/README_CN.md\"><img alt=\"简体中文\" height=\"40\" src=\"https://img.shields.io/badge/简体中文-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_TW.md\"><img alt=\"繁體中文\" height=\"40\" src=\"https://img.shields.io/badge/繁體中文-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_JA.md\"><img alt=\"日本語\" height=\"40\" src=\"https://img.shields.io/badge/日本語-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_ES.md\"><img alt=\"Español\" height=\"40\" src=\"https://img.shields.io/badge/Español-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_FR.md\"><img alt=\"Français\" height=\"40\" src=\"https://img.shields.io/badge/Français-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_AR.md\"><img alt=\"Arabic\" height=\"40\" src=\"https://img.shields.io/badge/Arabic-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_RU.md\"><img alt=\"Русский\" height=\"40\" src=\"https://img.shields.io/badge/Русский-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_HI.md\"><img alt=\"Hindi\" height=\"40\" src=\"https://img.shields.io/badge/Hindi-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_PT.md\"><img alt=\"Português\" height=\"40\" src=\"https://img.shields.io/badge/Português-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_TH.md\"><img alt=\"Thai\" height=\"40\" src=\"https://img.shields.io/badge/Thai-CDCFD4\"></a>&nbsp; <a href=\"assets/README/README_PL.md\"><img alt=\"Polski\" height=\"40\" src=\"https://img.shields.io/badge/Polski-CDCFD4\"></a> </p> [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/downloads/) [![Next.js 16](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/) [![License](https://img.shields.io/badge/License-Apache_2.0-blue?style=flat-square)](LICENSE) [![GitHub release](https://img.shields.io/github/v/release/HKUDS/DeepTutor?style=flat-square&color=brightgreen)](https://github.com/HKUDS/DeepTutor/releases) [![arXiv](https://img.shields.io/badge/arXiv-2604.26962-b31b1b?style=flat-square&logo=arxiv&logoColor=white)](https://arxiv.org/ab",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 0,
+      "streak_days": 5
+    },
+    {
+      "rank": 11,
+      "full_name": "Orkas-AI/Orkas",
+      "url": "https://github.com/Orkas-AI/Orkas",
+      "description": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+      "language": "JavaScript",
+      "stars": 6941,
+      "forks": 423,
+      "stars_today": 1044,
+      "topics": [
+        "agent-collaboration",
+        "agent-harness",
+        "agent-orchestration",
+        "agent-team",
+        "agent-workflow",
+        "ai-assistant",
+        "ai-automation",
+        "ai-employee",
+        "ai-productivity",
+        "ai-team",
+        "ai-workflow",
+        "autonomous-agents",
+        "claude-code-gui",
+        "claude-cowork",
+        "desktop-agent",
+        "local-first",
+        "multi-agent",
+        "multi-agent-system",
+        "self-evolving-agents",
+        "task-automation"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-29T12:19:08Z",
+      "updated_at": "2026-11-01T07:35:17Z",
+      "open_issues": 7,
+      "default_branch": "main",
+      "readme_excerpt": "# Orkas **An open-source team of AI agents on your desktop — it turns your goals into finished work and keeps it moving.** Orkas is an open-source (MIT), local-first multi-agent desktop app — an AI assistant that works as a team. Tell the **Commander** what you need: it finishes many tasks on its own, and for bigger work it plans the steps and brings in specialist agents along with the coding and personal agents you already use — **Claude Code, Codex, OpenCode, OpenClaw and Hermes-Agent** — to work on it together. Orkas is built to keep a project moving, not just answer one prompt. A **project** holds the goal, rules, memory and files, so every new conversation picks up where the last one left off. **To-dos** split the work between people and agents, **Auto-advance** lets the team take on the next to-do by itself, and **scheduled automations** repeat routine work hourly, daily, weekly or monthly. All your data stays on your computer, and finished work comes back for your review — so you can trust Orkas with the ongoing work of your business. **[⬇ Download Orkas for macOS & Windows](https://orkas.ai/download/?source=gh-orkas&entry_point=github_readme&download=1)** — free, with 500 credits for the built-in Orkas model, so you don't need an API key to start. Prefer your own keys? Claude · OpenAI · Gemini · DeepSeek · Kimi · GLM · Qwen · MiniMax · Doubao, or a local OpenAI-compatible endpoint. [![Download for macOS & Windows](https://img.shields.io/badge/Download-macOS%20%26%20Windows-5b57d6?style=for-the-badge)](https://orkas.ai/download/?source=gh-orkas&entry_point=github_readme&download=1) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE) [![GitHub stars](https://img.shields.io/github/stars/Orkas-AI/Orkas?style=flat&logo=github&label=Stars&color=yellow)](https://github.com/Orkas-AI/Orkas/stargazers) [![Release](https://img.shields.io/github/v/release/Orkas-AI/Orkas?color=blue)](https://github.com/Orkas-AI/Orkas/releases) [![X: @leochenpm](https://img.shields.io/badge/X-%40leochenpm-black?logo=x)](https://x.com/leochenpm) [![Website: orkas.ai](https://img.shields.io/badge/Website-orkas.ai-5b57d6)](https://orkas.ai/?source=gh-orkas) [English](./README.md) · [简体中文](./README.zh-CN.md) --- https://github.com/user-attachments/assets/4f8b16c8-a192-45a4-b19f-80e8d02c3dab ![Orkas desktop — task conversation and deliverables](./resources/app-ui/task-en.png) --- ## What the team delivers - **Videos, voice-overs and images** — VideoStudio, VoiceStudio, ImageStudio - **Research reports, SEO audits and market analysis** — DeepResearcher, SeoGeoAgent, StockAnalyser - **Posts, articles, newsletters and slide decks** — ContentWriter, PptMaker - **Websites, UI and code** — UIDesigner, ProductDeveloper - **Word, Excel, PowerPoint and PDF files** — OfficeWorker - **E-commerce work** — product research, listings, review analysis, sales analysis and catalog changes, from five e-commerce agents - **Complex work that takes several agents** — the Commander splits it up, hands each part to the right agent and combines the results; for example, market research that becomes a report, a slide deck and a launch video 16 specialists ship with the app, each with its own skills, memory and tools. Browse 30+ agents in the [agent marketplace](https://orkas.ai/views/marketplace/gs/agents/?source=gh-orkas), or describe the role you need and the Commander builds a custom agent for you. <details> <summary><b>All 16 built-in agents</b></summary> | Area | Agent | What it delivers | | --- | --- | --- | | Research & analysis | **DeepResearcher** | Evidence-grounded research with verified sources, flagged contradictions and an auditable report | | | **SeoGeoAgent** | Give it a URL — technical audit, content quality, Core Web Vitals, AI-answer (GEO) citability, ranked fix list | | | **StockAnalyser** | Equity research, factor screens, backtests and portfolio risk checks, with traceable dashboards | | Content & media | **ContentWriter** | Pub",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "THU-MAIC/OpenMAIC",
+      "url": "https://github.com/THU-MAIC/OpenMAIC",
+      "description": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+      "language": "TypeScript",
+      "stars": 42297,
+      "forks": 6521,
+      "stars_today": 116,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-03-11T10:13:16Z",
+      "updated_at": "2026-11-01T07:34:04Z",
+      "open_issues": 219,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- <p align=\"center\"> <img src=\"assets/logo-horizontal.png\" alt=\"OpenMAIC\" width=\"420\"/> </p> --> <p align=\"center\"> <img src=\"assets/banner.png\" alt=\"OpenMAIC Banner\" width=\"680\"/> </p> <p align=\"center\"> Get an immersive, multi-agent learning experience in just one click </p> <p align=\"center\"> <a href=\"https://lcn6dqn3m0yr.feishu.cn/wiki/CkQSwHFdzibQFvkGzwPcmUOfnXg\"><img src=\"https://img.shields.io/badge/%F0%9F%93%98%20User%20Guide-v1.0.0%20%C2%B7%20English-4F8EF7?style=for-the-badge\" alt=\"v1.0.0 User Guide (English)\"/></a> &nbsp;&nbsp; <a href=\"https://my.feishu.cn/wiki/UIfKw9Knti0LcKkTxDNcqlUrnzh\"><img src=\"https://img.shields.io/badge/%F0%9F%93%99%20%E4%BD%93%E9%AA%8C%E6%8C%87%E5%8D%97-v1.0.0%20%C2%B7%20%E4%B8%AD%E6%96%87-FF6B35?style=for-the-badge\" alt=\"v1.0.0 体验指南（中文）\"/></a> </p> <p align=\"center\"> <a href=\"https://jcst.ict.ac.cn/en/article/doi/10.1007/s11390-025-6000-0\"><img src=\"https://img.shields.io/badge/Paper-JCST'26-blue?style=flat-square\" alt=\"Paper\"/></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-green.svg?style=flat-square\" alt=\"License: MIT\"/></a> <a href=\"https://open.maic.chat/\"><img src=\"https://img.shields.io/badge/Demo-Live-brightgreen?style=flat-square\" alt=\"Live Demo\"/></a> <a href=\"#-agent-workbench-integration\"><img src=\"https://img.shields.io/badge/OpenClaw-Integration-F4511E?style=flat-square\" alt=\"OpenClaw Integration\"/></a> <a href=\"#lemonade-local-ai\"><img src=\"https://img.shields.io/badge/Lemonade-Local_AI-FFD43B?style=flat-square\" alt=\"Lemonade Local AI\"/></a> <a href=\"https://github.com/THU-MAIC/OpenMAIC/stargazers\"><img src=\"https://img.shields.io/github/stars/THU-MAIC/OpenMAIC?style=flat-square\" alt=\"Stars\"/></a> <br/> <a href=\"https://discord.gg/p8Pf2r3SaG\"><img src=\"https://img.shields.io/badge/Discord-Join_Community-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"/></a> &nbsp; <a href=\"community/feishu.md\"><img src=\"https://img.shields.io/badge/Feishu-Community-00D6B9?style=for-the-badge&logo=bytedance&logoColor=white\" alt=\"Feishu Community\"/></a> <br/> <img src=\"https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js\" alt=\"Next.js\"/> <img src=\"https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=white\" alt=\"React\"/> <img src=\"https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white\" alt=\"TypeScript\"/> <img src=\"https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white\" alt=\"Tailwind CSS\"/> </p> <p align=\"center\"> <a href=\"./README.md\">English</a> | <a href=\"./README-zh.md\">Simplified Chinese</a> <br/> <a href=\"https://open.maic.chat/\">Live Demo</a> · <a href=\"#-quick-start\">Quick Start</a> · <a href=\"#lemonade-local-ai\">Lemonade</a> · <a href=\"#funasr-local-asr\">FunASR</a> · <a href=\"#-features\">Features</a> · <a href=\"#-use-cases\">Use Cases</a> · <a href=\"#-agent-workbench-integration\">OpenClaw</a> </p> ## 🗞️ News - **2026-10-29** — [v1.3.0](https://github.com/THU-MAIC/OpenMAIC/releases/tag/v1.3.0): **knowledge base and Pro workbench upgrade.** Every upload is kept in its owner's knowledge base until deleted, organized in folders and parsed once for every conversation; the composer offers it through `@`, and the agent can read, search and organize it. In the Pro workbench, a request shows a preview of the agent's work before the first page exists, and classroom tabs switch between Learn and Edit. The upgrade has release conditions (stop all old instances first; no rollback below 1.3.0), so read the [changelog](CHANGELOG.md) before upgrading. - **2026-10-18** — [v1.2.1](https://github.com/THU-MAIC/OpenMAIC/releases/tag/v1.2.1): **web research.** Kimi, DeepSeek and Firecrawl join as web-search providers, and a new `webFetch` slot lets the agent read pages through a hosted reader (DeepSeek, Kimi or Firecrawl) instead of the built-in one; each is opt-in. Classroom chat can offer suggested replies, and r",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "bregman-arie/devops-exercises",
+      "url": "https://github.com/bregman-arie/devops-exercises",
+      "description": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+      "language": "Python",
+      "stars": 86147,
+      "forks": 20560,
+      "stars_today": 342,
+      "topics": [
+        "ansible",
+        "aws",
+        "azure",
+        "coding",
+        "containers",
+        "devops",
+        "docker",
+        "git",
+        "interview",
+        "interview-questions",
+        "kubernetes",
+        "linux",
+        "openstack",
+        "production-engineer",
+        "prometheus",
+        "python",
+        "sql",
+        "sre",
+        "terraform"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2019-10-03T17:31:21Z",
+      "updated_at": "2026-11-01T07:31:58Z",
+      "open_issues": 57,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"><img src=\"images/devops_exercises.png\"/></p> :information_source: &nbsp;This repo contains questions and exercises on various technical topics, sometimes related to DevOps and SRE :bar_chart: &nbsp;There are currently **2624** exercises and questions :warning: &nbsp;You can use these for preparing for an interview but most of the questions and exercises don't represent an actual interview. Please read [FAQ page](faq.md) for more details :stop_sign: &nbsp;If you are interested in pursuing a career as DevOps engineer, learning some of the concepts mentioned here would be useful, but you should know it's not about learning all the topics and technologies mentioned in this repository :pencil: &nbsp;You can add more exercises by submitting pull requests :) Read about contribution guidelines [here](CONTRIBUTING.md) **** <!-- ALL-TOPICS-LIST:START --> <!-- prettier-ignore-start --> <!-- markdownlint-disable --> <center> <table> <tr> <td align=\"center\"><a href=\"topics/devops/README.md\"><img src=\"images/devops.png\" width=\"75px;\" height=\"75px;\" alt=\"DevOps\" /><br /><b>DevOps</b></a></td> <td align=\"center\"><a href=\"topics/git/README.md\"><img src=\"images/git.png\" width=\"75px;\" height=\"75px;\" alt=\"Git\"/><br /><b>Git</b></a></td> <td align=\"center\"><a href=\"#network\"><img src=\"images/network.png\" width=\"75px;\" height=\"75px;\" alt=\"Network\"/><br /><b>Network</b></a></td> <td align=\"center\"><a href=\"#hardware\"><img src=\"images/hardware.png\" width=\"75px;\" height=\"75px;\" alt=\"Hardware\"/><br /><b>Hardware</b></a></td> <td align=\"center\"><a href=\"topics/kubernetes/README.md\"><img src=\"images/kubernetes.png\" width=\"75px;\" height=\"75px;\" alt=\"kubernetes\"/><br /><b>Kubernetes</b></a></td> </tr> <tr> <td align=\"center\"><a href=\"topics/software_development/README.md\"><img src=\"images/programming.png\" width=\"75px;\" height=\"75px;\" alt=\"programming\"/><br /><b>Software Development</b></a></td> <td align=\"center\"><a href=\"https://github.com/bregman-arie/python-exercises\"><img src=\"images/python.png\" width=\"75px;\" height=\"75px;\" alt=\"Python\"/><br /><b>Python</b></a></td> <td align=\"center\"><a href=\"https://github.com/bregman-arie/go-exercises\"><img src=\"images/Go.png\" width=\"75px;\" height=\"75px;\" alt=\"go\"/><br /><b>Go</b></a></td> <td align=\"center\"><a href=\"topics/perl/README.md\"><img src=\"images/perl.png\" width=\"75px;\" height=\"75px;\" alt=\"perl\"/><br /><b>Perl</b></a></td> <td align=\"center\"><a href=\"#regex\"><img src=\"images/regex.png\" width=\"75px;\" height=\"75px;\" alt=\"RegEx\"/><br /><b>Regex</b></a></td> </tr> <tr> <td align=\"center\"><a href=\"topics/cloud/README.md\"><img src=\"images/cloud.png\" width=\"75px;\" height=\"75px;\" alt=\"Cloud\"/><br /><b>Cloud</b></a></td> <td align=\"center\"><a href=\"topics/aws/README.md\"><img src=\"images/aws.png\" width=\"100px;\" height=\"75px;\" alt=\"aws\"/><br /><b>AWS</b></a></td> <td align=\"center\"><a href=\"topics/azure/README.md\"><img src=\"images/azure.png\" width=\"75px;\" height=\"75px;\" alt=\"azure\"/><br /><b>Azure</b></a></td> <td align=\"center\"><a href=\"topics/gcp/README.md\"><img src=\"images/googlecloud.png\" width=\"70px;\" height=\"70px;\" alt=\"Google Cloud Platform\"/><br /><b>Google Cloud Platform</b></a></td> <td align=\"center\"><a href=\"#openstack/README.md\"><img src=\"images/openstack.png\" width=\"75px;\" height=\"75px;\" alt=\"openstack\"/><br /><b>OpenStack</b></a></td> </tr> <tr> <td align=\"center\"><a href=\"#operating-system\"><img src=\"images/os.png\" width=\"75px;\" height=\"75px;\" alt=\"Operating System\"/><br /><b>Operating System</b></a></td> <td align=\"center\"><a href=\"topics/linux/README.md\"><img src=\"images/logos/linux.png\" width=\"75px;\" height=\"75px;\" alt=\"Linux\"/><br /><b>Linux</b></a></td> <td align=\"center\"><a href=\"#virtualization\"><img src=\"images/virtualization.png\" width=\"75px;\" height=\"75px;\" alt=\"Virtualization\"/><br /><b>Virtualization</b></a></td> <td align=\"center\"><a href=\"topics/dns/README.md\"><img src=\"images/dns.png\" width=\"75px;\" height=\"75px;\" alt=\"DNS\"/><br /><b>DNS</b></a></td> <td align=\"center\">",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "vorssaint/vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "description": "Free and open-source macOS menu bar toolkit.",
+      "language": "Swift",
+      "stars": 32073,
+      "forks": 1546,
+      "stars_today": 501,
+      "topics": [
+        "alt-tab",
+        "app-uninstaller",
+        "appkit",
+        "finder",
+        "free",
+        "keep-awake",
+        "mac-os",
+        "menu-bar",
+        "menubar",
+        "open-source",
+        "swift",
+        "swift-ui",
+        "system-monitor",
+        "uninstaller",
+        "volume-mixer",
+        "window-switcher"
+      ],
+      "license": "GPL-3.0",
+      "created_at": "2026-06-12T15:25:43Z",
+      "updated_at": "2026-11-01T07:34:46Z",
+      "open_issues": 1347,
+      "default_branch": "main",
+      "readme_excerpt": "<p align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/assets/readme/logo-dark.svg\"> <img src=\"docs/assets/readme/logo.svg\" width=\"220\" alt=\"Vorssaint logo\"> </picture> </p> <h1 align=\"center\">Vorssaint</h1> <p align=\"center\"> One menu bar icon doing the job of a dozen paid Mac apps.<br> Install only what you use. </p> <p align=\"center\"> <a href=\"https://vorssaint.com\">Website</a> · <a href=\"#install\">Install</a> · <a href=\"#everything-it-does\">Features</a> · <a href=\"#private-by-default\">Privacy</a> · <a href=\"CHANGELOG.md\">Changelog</a> · <a href=\"mailto:hello@vorssaint.com\">Contact</a> · <a href=\"https://discord.gg/M6BwWH4BJp\">Discord</a> </p> <p align=\"center\"> <a href=\"https://github.com/vorssaint/vorssaint-utils/releases\"><img src=\"https://img.shields.io/github/v/release/vorssaint/vorssaint-utils?label=release&color=4c8dff\" alt=\"Latest release\"></a> <a href=\"https://github.com/vorssaint/vorssaint-utils/releases\"><img src=\"https://img.shields.io/github/downloads/vorssaint/vorssaint-utils/total?color=4c8dff\" alt=\"Downloads\"></a> <a href=\"https://github.com/vorssaint/vorssaint-utils/actions/workflows/ci.yml\"><img src=\"https://github.com/vorssaint/vorssaint-utils/actions/workflows/ci.yml/badge.svg?branch=main&event=push\" alt=\"CI status\"></a> <a href=\"#what-you-need\"><img src=\"https://img.shields.io/badge/macOS-14%2B%20Apple%20Silicon-black\" alt=\"macOS 14 and newer, Apple Silicon\"></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/license-GPL--3.0--or--later-blue\" alt=\"License GPL 3.0 or later\"></a> </p> <p align=\"center\"> <a href=\"https://buymeacoffee.com/vorssaint\"> <img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" width=\"217\" height=\"60\" alt=\"Buy Me a Coffee\"> </a> </p> <p align=\"center\"> For anything private, email <a href=\"mailto:hello@vorssaint.com\"><strong>hello@vorssaint.com</strong></a>. </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/53716?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-53716\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/53716\" alt=\"vorssaint/vorssaint-utils | Trendshift\" width=\"250\" height=\"55\"></a> <a href=\"https://trendshift.io/repositories/53716?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-53716\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/53716/weekly?language=Swift\" alt=\"vorssaint/vorssaint-utils | Trendshift weekly ranking\" width=\"250\" height=\"55\"></a> <a href=\"https://trendshift.io/repositories/53716?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-53716\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/53716/monthly?language=Swift\" alt=\"vorssaint/vorssaint-utils | Trendshift monthly ranking\" width=\"250\" height=\"55\"></a> </p> <h2 align=\"center\">Sponsors</h2> <p align=\"center\"> Help keep Vorssaint free and open source. Share your product with Mac users. </p> <table align=\"center\"> <tr> <td align=\"center\" width=\"520\"> <br> <strong>Your product here</strong><br> <sub>Your logo · Your name · Your link</sub><br><br> <a href=\"SPONSORS.md\"><strong>Become our first sponsor →</strong></a><br><br> </td> </tr> </table> <p align=\"center\"> <img src=\"docs/assets/readme/panel-mixer.png\" width=\"196\" alt=\"Volume mixer with per app sliders, one app boosted past 100 percent\"> <img src=\"docs/assets/readme/panel-system.png\" width=\"196\" alt=\"System tab with temperatures, usage graphs and memory pressure\"> <img src=\"docs/assets/readme/panel-controls.png\" width=\"196\" alt=\"Window controls with the app switcher and Dock features\"> <img src=\"docs/assets/readme/panel-utilities.png\" width=\"196\" alt=\"Utilities with cleaner, Homebrew, media tools and clipboard\"> </p> Per app volume, a real system monitor, a better app switcher, window snapping, Dock previews, clip",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 9/14 个项目可从资料确认与 AI 直接相关；其余 5 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：AI 智能体与数字劳动力（5 个）、其他数字产品与工具（4 个）、企业智能体共享记忆（1 个）。",
+      "排名第一的 thedotmack/claude-mem 代表“企业智能体共享记忆”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "AI 智能体与数字劳动力（5 个项目）",
+      "其他数字产品与工具（4 个项目）",
+      "企业智能体共享记忆（1 个项目）",
+      "AI 编程智能体（1 个项目）",
+      "AI 软件开发方法与技能体系（1 个项目）",
+      "开源 AI 协作工作台（1 个项目）"
+    ],
+    "product_business_signals": [
+      "AI 智能体与数字劳动力是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 AI 智能体与数字劳动力 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "thedotmack/claude-mem",
+        "one_line_summary": "把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "industry_direction": "企业智能体共享记忆",
+        "target_users": [
+          "同时部署多个 AI 智能体的企业",
+          "知识管理和自动化平台团队"
+        ],
+        "problem_solved": "不同智能体和会话各自保存信息，经验、文档和代码知识难以复用并统一治理。",
+        "solution": "把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1723 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "受治理的智能体记忆中枢",
+        "technology_impact": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "过期资料、权限串用、隐私和错误记忆可能让多个智能体同时产生错误。",
+        "ai_relevance": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "plain_language_explanation": "项目方把 claude-mem 描述为“Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, comp”。通俗地说，它希望解决的是：不同智能体和会话各自保存信息，经验、文档和代码知识难以复用并统一治理。 它的办法是：把对话、文档、技能和代码关系整理成可由多个智能体共享的记忆资产。",
+        "scenario_examples": [
+          "例如客服和售后智能体共享经过审批的产品知识，但按岗位限制客户数据访问。"
+        ],
+        "practical_benefits": [
+          "对 claude-mem 的潜在使用者而言，在项目方所述的“Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, comp”场景中，减少不同智能体重复整理同一组织资料",
+          "让共享记忆的来源、权限和更新时间更容易统一管理"
+        ],
+        "industry_implications": "智能体竞争正在从单次上下文转向组织级记忆能否复用、更新和受控。",
+        "who_should_care": "同时部署多个 AI 智能体的企业、知识管理和自动化平台团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/thedotmack/claude-mem",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/thedotmack/claude-mem",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/thedotmack/claude-mem",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 883 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 skills 描述为“Skills for Real Engineers. Straight from my .agents directory.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Skills for Real Engineers. Straight from my .agents directory.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Donchitos/Claude-Code-Game-Studios",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 742 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 Claude-Code-Game-Studios 描述为“Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination s”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 Claude-Code-Game-Studios 的潜在使用者而言，在项目方所述的“Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination s”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "one_line_summary": "围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：名为 t3code 的项目",
+        "solution": "围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 1148 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 t3code 描述为“名为 t3code 的项目”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：名为 t3code 的项目 它的办法是：围绕“名为 t3code 的项目”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“名为 t3code 的项目”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 t3code 的潜在使用者而言，在项目方所述的“名为 t3code 的项目”场景中，可直接查看和试验项目方所述的“名为 t3code 的项目”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "项目没有提供简介",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pingdotgg/t3code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pingdotgg/t3code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Renhuai123/ziwei-doushu",
+        "one_line_summary": "围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+        "solution": "围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 1092 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 ziwei-doushu 描述为“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据 它的办法是：围绕“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 ziwei-doushu 的潜在使用者而言，在项目方所述的“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”场景中，可直接查看和试验项目方所述的“紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Renhuai123/ziwei-doushu",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "紫微斗数开源排盘引擎 — 基于倪海厦《天纪》体系，含完整排盘算法、四化系统、格局知识库、古籍原文数据",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Renhuai123/ziwei-doushu",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Renhuai123/ziwei-doushu",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "milind-soni/OpenMausBot",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 1303 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 OpenMausBot 描述为“Open-source Grok Bot alternative with a virtual machine that bots can use”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 OpenMausBot 的潜在使用者而言，在项目方所述的“Open-source Grok Bot alternative with a virtual machine that bots can use”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/milind-soni/OpenMausBot",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/milind-soni/OpenMausBot",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/milind-soni/OpenMausBot",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 1338 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 impeccable 描述为“The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, cat”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 impeccable 的潜在使用者而言，在项目方所述的“The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, cat”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pbakaus/impeccable",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pbakaus/impeccable",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "obra/superpowers",
+        "one_line_summary": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "industry_direction": "AI 软件开发方法与技能体系",
+        "target_users": [
+          "正在引入 AI 开发流程的软件团队",
+          "工程管理和质量负责人"
+        ],
+        "problem_solved": "只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。",
+        "solution": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 665 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "技能化开发流程",
+        "technology_impact": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "方法论效果依赖团队执行，可能增加流程负担，也需要用交付质量和周期验证。",
+        "ai_relevance": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "plain_language_explanation": "项目方把 superpowers 描述为“An agentic skills framework & software development methodology that works.”。通俗地说，它希望解决的是：只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。 它的办法是：把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "scenario_examples": [
+          "例如团队要求智能体先写验收条件，再分步实现和测试，最后由人员审查。"
+        ],
+        "practical_benefits": [
+          "对 superpowers 的潜在使用者而言，在项目方所述的“An agentic skills framework & software development methodology that works.”场景中，减少每位成员各自摸索 AI 开发流程的成本",
+          "让 AI 参与的软件交付更容易检查和复盘"
+        ],
+        "industry_implications": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "who_should_care": "正在引入 AI 开发流程的软件团队、工程管理和质量负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An agentic skills framework & software development methodology that works.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/obra/superpowers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "lightpanda-io/browser",
+        "one_line_summary": "围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Lightpanda: the headless browser designed for AI and automation",
+        "solution": "围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 929 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 browser 描述为“Lightpanda: the headless browser designed for AI and automation”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Lightpanda: the headless browser designed for AI and automation 它的办法是：围绕“Lightpanda: the headless browser designed for AI and automation”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Lightpanda: the headless browser designed for AI and automation”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 browser 的潜在使用者而言，在项目方所述的“Lightpanda: the headless browser designed for AI and automation”场景中，可直接查看和试验项目方所述的“Lightpanda: the headless browser designed for AI and automation”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lightpanda-io/browser",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Lightpanda: the headless browser designed for AI and automation",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lightpanda-io/browser",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/lightpanda-io/browser",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 1034 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 DeepTutor 描述为“DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 DeepTutor 的潜在使用者而言，在项目方所述的“DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/DeepTutor",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/DeepTutor",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/HKUDS/DeepTutor",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Orkas-AI/Orkas",
+        "one_line_summary": "提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "industry_direction": "开源 AI 协作工作台",
+        "target_users": [
+          "希望在桌面工作中使用智能体的知识团队",
+          "重视可控部署的企业"
+        ],
+        "problem_solved": "通用聊天助手难以直接参与文件、资料和连续办公任务，封闭产品又限制定制与控制。",
+        "solution": "提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 1044 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可控部署的办公智能体",
+        "technology_impact": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "文件权限、误操作、部署维护和与商业产品的实际能力差距需要验证。",
+        "ai_relevance": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "plain_language_explanation": "项目方把 Orkas 描述为“Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos a”。通俗地说，它希望解决的是：通用聊天助手难以直接参与文件、资料和连续办公任务，封闭产品又限制定制与控制。 它的办法是：提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "scenario_examples": [
+          "例如研究团队在受控工作区内让智能体整理资料和形成草稿，最终由负责人批准。"
+        ],
+        "practical_benefits": [
+          "对 Orkas 的潜在使用者而言，在项目方所述的“Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos a”场景中，让团队有机会在自己的环境中试验办公智能体",
+          "为控制文件访问和定制工作流程提供更多选择"
+        ],
+        "industry_implications": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "who_should_care": "希望在桌面工作中使用智能体的知识团队、重视可控部署的企业",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Orkas-AI/Orkas",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Orkas is an open-source (MIT), local-first AI team for your desktop: a Commander turns your goal into to-dos and coordinates 16 built-in specialist agents plus Claude Code, Codex, OpenCode, OpenClaw and Hermes, with projects, scheduled automations and connectors. Free app for macOS & Windows; built-in models or your own keys.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Orkas-AI/Orkas",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Orkas-AI/Orkas",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "THU-MAIC/OpenMAIC",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 116 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 OpenMAIC 描述为“Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 OpenMAIC 的潜在使用者而言，在项目方所述的“Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/THU-MAIC/OpenMAIC",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Open Multi-Agent Interactive Classroom — Get an immersive, multi-agent learning experience in just one click",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/THU-MAIC/OpenMAIC",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/THU-MAIC/OpenMAIC",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "bregman-arie/devops-exercises",
+        "one_line_summary": "用接近配置说明的方式批量自动化服务器、应用和网络维护任务。",
+        "industry_direction": "企业 IT 自动化",
+        "target_users": [
+          "企业基础设施和运维团队",
+          "管理大量服务器与网络设备的组织"
+        ],
+        "problem_solved": "大量系统部署、配置和维护依赖重复人工操作，容易出现环境不一致和错误。",
+        "solution": "用接近配置说明的方式批量自动化服务器、应用和网络维护任务。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 342 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "无代理 IT 自动化",
+        "technology_impact": "它不是 AI 智能体；但可作为 AI 运维建议进入真实系统前的标准执行层。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自动化错误会快速扩大影响，变更审批、测试、权限和回滚机制必须完善。",
+        "ai_relevance": "它不是 AI 智能体；但可作为 AI 运维建议进入真实系统前的标准执行层。",
+        "plain_language_explanation": "项目方把 devops-exercises 描述为“Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoS”。通俗地说，它希望解决的是：大量系统部署、配置和维护依赖重复人工操作，容易出现环境不一致和错误。 它的办法是：用接近配置说明的方式批量自动化服务器、应用和网络维护任务。",
+        "scenario_examples": [
+          "例如运维团队先在少量服务器验证安全更新，再按同一流程分批推广。"
+        ],
+        "practical_benefits": [
+          "对 devops-exercises 的潜在使用者而言，在项目方所述的“Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoS”场景中，减少在大量设备上重复执行相同配置的时间",
+          "降低不同环境因人工操作产生配置差异的概率"
+        ],
+        "industry_implications": "它不是 AI 智能体；但可作为 AI 运维建议进入真实系统前的标准执行层。",
+        "who_should_care": "企业基础设施和运维团队、管理大量服务器与网络设备的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bregman-arie/devops-exercises",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Linux, Jenkins, AWS, SRE, Prometheus, Docker, Python, Ansible, Git, Kubernetes, Terraform, OpenStack, SQL, NoSQL, Azure, GCP, DNS, Elastic, Network, Virtualization. DevOps Interview Questions",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/bregman-arie/devops-exercises",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/bregman-arie/devops-exercises",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "vorssaint/vorssaint-utils",
+        "one_line_summary": "围绕“Free and open-source macOS menu bar toolkit.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Free and open-source macOS menu bar toolkit.",
+        "solution": "围绕“Free and open-source macOS menu bar toolkit.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 501 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 vorssaint-utils 描述为“Free and open-source macOS menu bar toolkit.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Free and open-source macOS menu bar toolkit. 它的办法是：围绕“Free and open-source macOS menu bar toolkit.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Free and open-source macOS menu bar toolkit.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 vorssaint-utils 的潜在使用者而言，在项目方所述的“Free and open-source macOS menu bar toolkit.”场景中，可直接查看和试验项目方所述的“Free and open-source macOS menu bar toolkit.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vorssaint/vorssaint-utils",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Free and open-source macOS menu bar toolkit.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vorssaint/vorssaint-utils",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/vorssaint/vorssaint-utils",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "企业 IT 自动化",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 10,
+        "project_count": 5
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 32,
+        "project_count": 12
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 25,
+        "project_count": 12
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 10,
+        "project_count": 5
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 3,
+        "project_count": 2
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 32
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 32
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 25
+      },
+      {
+        "name": "软件产品团队",
+        "count": 10
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 10
+      },
+      {
+        "name": "正在引入 AI 开发流程的软件团队",
+        "count": 5
+      },
+      {
+        "name": "工程管理和质量负责人",
+        "count": 5
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 3
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 90
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 24,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "多智能体金融研究框架",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "企业 IT 自动化",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 14,
+        "project_count": 5
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 11,
+        "project_count": 2
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 9,
+        "project_count": 6
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 102,
+        "project_count": 37
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 69,
+        "project_count": 36
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 51,
+        "project_count": 18
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 102
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 102
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 69
+      },
+      {
+        "name": "软件产品团队",
+        "count": 51
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 51
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 14
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 14
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 11
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 316
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-10-31",
+    "new": [
+      "Donchitos/Claude-Code-Game-Studios",
+      "Orkas-AI/Orkas",
+      "THU-MAIC/OpenMAIC",
+      "bregman-arie/devops-exercises",
+      "vorssaint/vorssaint-utils"
+    ],
+    "retained": [
+      "HKUDS/DeepTutor",
+      "Renhuai123/ziwei-doushu",
+      "lightpanda-io/browser",
+      "mattpocock/skills",
+      "milind-soni/OpenMausBot",
+      "obra/superpowers",
+      "pbakaus/impeccable",
+      "pingdotgg/t3code",
+      "thedotmack/claude-mem"
+    ],
+    "exited": [
+      "CopilotKit/OpenBot",
+      "JetBrains/thinkrail",
+      "anthropics/skills",
+      "expo/skills",
+      "macro-inc/macro",
+      "togg53192-cmd/jailbreaks"
+    ],
+    "risers": [
+      {
+        "full_name": "obra/superpowers",
+        "previous_rank": 14,
+        "rank": 8,
+        "change": 6
+      },
+      {
+        "full_name": "lightpanda-io/browser",
+        "previous_rank": 15,
+        "rank": 9,
+        "change": 6
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "previous_rank": 8,
+        "rank": 2,
+        "change": 6
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "previous_rank": 9,
+        "rank": 4,
+        "change": 5
+      },
+      {
+        "full_name": "Renhuai123/ziwei-doushu",
+        "previous_rank": 5,
+        "rank": 5,
+        "change": 0
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "previous_rank": 10,
+        "rank": 10,
+        "change": 0
+      },
+      {
+        "full_name": "thedotmack/claude-mem",
+        "previous_rank": 1,
+        "rank": 1,
+        "change": 0
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_rank": 3,
+        "rank": 7,
+        "change": -4
+      },
+      {
+        "full_name": "milind-soni/OpenMausBot",
+        "previous_rank": 2,
+        "rank": 6,
+        "change": -4
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "thedotmack/claude-mem",
+        "previous_stars_today": 1140,
+        "stars_today": 1723,
+        "change": 583
+      },
+      {
+        "full_name": "milind-soni/OpenMausBot",
+        "previous_stars_today": 895,
+        "stars_today": 1303,
+        "change": 408
+      },
+      {
+        "full_name": "lightpanda-io/browser",
+        "previous_stars_today": 626,
+        "stars_today": 929,
+        "change": 303
+      },
+      {
+        "full_name": "pingdotgg/t3code",
+        "previous_stars_today": 930,
+        "stars_today": 1148,
+        "change": 218
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "previous_stars_today": 876,
+        "stars_today": 883,
+        "change": 7
+      },
+      {
+        "full_name": "Renhuai123/ziwei-doushu",
+        "previous_stars_today": 1126,
+        "stars_today": 1092,
+        "change": -34
+      },
+      {
+        "full_name": "obra/superpowers",
+        "previous_stars_today": 1259,
+        "stars_today": 665,
+        "change": -594
+      },
+      {
+        "full_name": "pbakaus/impeccable",
+        "previous_stars_today": 2300,
+        "stars_today": 1338,
+        "change": -962
+      },
+      {
+        "full_name": "HKUDS/DeepTutor",
+        "previous_stars_today": 2282,
+        "stars_today": 1034,
+        "change": -1248
+      }
+    ]
+  }
+}
