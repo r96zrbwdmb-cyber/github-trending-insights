@@ -1,0 +1,1979 @@
+{
+  "date": "2026-11-07",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 18,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "zed-industries/zed",
+      "url": "https://github.com/zed-industries/zed",
+      "description": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "language": "Rust",
+      "stars": 93853,
+      "forks": 11514,
+      "stars_today": 306,
+      "topics": [
+        "gpui",
+        "rust-lang",
+        "text-editor",
+        "zed"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2021-02-20T03:01:06Z",
+      "updated_at": "2026-11-07T07:12:48Z",
+      "open_issues": 3036,
+      "default_branch": "main",
+      "readme_excerpt": "# Zed [![Zed](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/zed-industries/zed/main/assets/badge/v0.json)](https://zed.dev) [![CI](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml/badge.svg)](https://github.com/zed-industries/zed/actions/workflows/run_tests.yml) Welcome to Zed, a high-performance, multiplayer code editor from the creators of [Atom](https://github.com/atom/atom) and [Tree-sitter](https://github.com/tree-sitter/tree-sitter). --- ### Installation On macOS, Linux, and Windows you can [download Zed directly](https://zed.dev/download) or install Zed via your local package manager ([macOS](https://zed.dev/docs/installation#macos)/[Linux](https://zed.dev/docs/linux#installing-via-a-package-manager)/[Windows](https://zed.dev/docs/windows#package-managers)). Other platforms are not yet available: - Web ([tracking discussion](https://github.com/zed-industries/zed/discussions/26195)) ### Developing Zed - [Building Zed for macOS](./docs/src/development/macos.md) - [Building Zed for Linux](./docs/src/development/linux.md) - [Building Zed for Windows](./docs/src/development/windows.md) ### Contributing See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways you can contribute to Zed. Also... we're hiring! Check out our [jobs](https://zed.dev/jobs) page for open roles. ### Licensing Zed source code is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked. License information for third party dependencies must be correctly provided for CI to pass. We use [`cargo-about`](https://github.com/EmbarkStudios/cargo-about) to automatically comply with open source licenses. If CI is failing, check the following: - Is it showing a `no license specified` error for a crate you've created? If so, add `publish = false` under `[package]` in your crate's Cargo.toml. - Is the error `failed to satisfy license requirements` for a dependency? If so, first determine what license the project has and whether this system is sufficient to comply with this license's requirements. If you're unsure, ask a lawyer. Once you've verified that this system is acceptable add the license's SPDX identifier to the `accepted` array in `script/licenses/zed-licenses.toml`. - Is `cargo-about` unable to find the license for a dependency? If so, add a clarification field at the end of `script/licenses/zed-licenses.toml`, as specified in the [cargo-about book](https://embarkstudios.github.io/cargo-about/cli/generate/config.html#crate-configuration). ## Sponsorship Zed is developed by **Zed Industries, Inc.**, a for-profit company. If you’d like to financially support the project, you can do so via GitHub Sponsors. Sponsorships go directly to Zed Industries and are used as general company revenue. There are no perks or entitlements associated with sponsorship.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 2,
+      "full_name": "NVIDIA/auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "stars": 9358,
+      "forks": 740,
+      "stars_today": 2015,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-04-27T21:45:56Z",
+      "updated_at": "2026-11-07T07:12:50Z",
+      "open_issues": 67,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved. SPDX-License-Identifier: Apache-2.0 --> # Auto Ontology Agents can retrieve documents and query databases, but reliability gates agentic analytics: a revenue metric answered faster is worth nothing if the number is wrong. Agents need a context layer that tells them where data lives, what it means, whether to use it, how to use it, where it came from, and what is similar. NVIDIA Auto Ontology is an open library that builds that layer from enterprise metadata, reconciles definitions across systems, and exposes it to any agent harness through MCP, CLI, and API. It complements the semantic models customers already own. It enables developers to: - Discover: generate enterprise ontologies from metadata; connect existing ontologies and semantic models; build AI-ready knowledge graphs. - Ground: give agents trusted business meaning for metrics, entities, and relationships; reconcile inconsistent definitions across systems. - Validate: check generated queries against certified definitions and lineage; return provenance with every answer. - Expose: serve context to any agent harness through MCP, CLI, and API. Learn: fold certified corrections and usage back into the ontology, so shared context improves with every question. ## Benchmarks To run a text-to-SQL benchmark such as BIRD, refer to the [ontology SQL evaluation repository](https://github.com/NVIDIA/ontology-sql-eval/). > **Licensing & contributions.** Auto Ontology is distributed under the > [Apache License 2.0](./LICENSE). Third-party open-source components > bundled, linked, or otherwise used by this project are listed in > [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md). **This project > is currently not accepting external contributions.** <p> <img src=\"./docs/assets/arch.png\" alt=\"Auto Ontology Architecture\" width=\"800\"> </p> ## Key Features - **Natural-language querying** of structured data — questions are translated to SQL and executed against connected databases, powered by NVIDIA NIM. - **Semantic catalog / ontology layer** over relational sources, stored in Postgres alongside the catalog it describes. - **Authentication & RBAC** —using [Better Auth](https://github.com/better-auth/better-auth). - **Web UI** for chat, analysis, data catalog, analytics, and settings. - **Flexible deployment** — Helm chart for Kubernetes or Docker Compose for a local stack. ## Software Components | Component | Technology | Role | Default port | | ------------------- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------ | | Frontend | Next.js 16 (React 19, TypeScript, Tailwind CSS 4), Better Auth, Prisma | Web UI, authentication, API gateway | 3000 | | Backend | FastAPI (Python 3.12+), LangChain | Chat / NL-to-SQL, catalog, datasource APIs | 3001 | | Ingestion worker | FastAPI (Python 3.12+) | Ingests tabular data and writes embeddings | 3002 | | Postgres + pgvector | Relational Database | App metadata, the catalog and ontology, vector store | 5432 | | HashiCorp Vault | Optional | Secure storage of connection credentials | — | ### NVIDIA NIM Auto Ontology uses NVIDIA NIM endpoints for inference — either the hosted [NVIDIA API catalog](https://build.nvidia.com) (`integrate.api.nvidia.com`) or self-hosted NIMs. The defaults in `.env.example` are: - **LLM:** `nvidia/nemotron-3.5-lightning-30b-a3b` - **Embeddings:** `nvidia/nemotron-3-embed-1b` - **Reranking:** `nvidia/llama-nemotron-rerank-vl-1b-v2` The endpoints and models are configured via the `DEFAULT_MODELS_ENDPOINT`, `DEFAULT_MODELS_MODEL`, `EMBED_ENDPOINT`, and `EMBED_MODEL` environment variables and require a `DEFAULT_MODELS_API_KEY`. #### Model triplets Each model role is configured by a **triplet** of environment variables — `<PREFIX>_ENDPOINT` (URL), `<PREFIX>_API_KEY`, and `<PREFIX>_MODEL`: | Prefix | Role | | ---------------- | ---------------------",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -1,
+      "streak_days": 3
+    },
+    {
+      "rank": 3,
+      "full_name": "rails/rails",
+      "url": "https://github.com/rails/rails",
+      "description": "Ruby on Rails",
+      "language": "Ruby",
+      "stars": 59060,
+      "forks": 23833,
+      "stars_today": 142,
+      "topics": [
+        "activejob",
+        "activerecord",
+        "framework",
+        "html",
+        "mvc",
+        "rails",
+        "ruby"
+      ],
+      "license": "MIT",
+      "created_at": "2008-04-11T02:19:47Z",
+      "updated_at": "2026-11-07T07:10:11Z",
+      "open_issues": 1762,
+      "default_branch": "main",
+      "readme_excerpt": "# Welcome to Rails ## What's Rails? Rails is a web application framework that includes everything needed to create database-backed web applications according to the [Model-View-Controller (MVC)](https://en.wikipedia.org/wiki/Model-view-controller) pattern. Understanding the MVC pattern is key to understanding Rails. MVC divides your application into three layers: Model, View, and Controller, each with a specific responsibility. ## Model layer The _**Model layer**_ represents the domain model (such as Account, Product, Person, Post, etc.) and encapsulates the business logic specific to your application. In Rails, database-backed model classes are derived from `ActiveRecord::Base`. [Active Record](activerecord/README.rdoc) allows you to present the data from database rows as objects and embellish these data objects with business logic methods. Although most Rails models are backed by a database, models can also be ordinary Ruby classes, or Ruby classes that implement a set of interfaces as provided by the [Active Model](activemodel/README.rdoc) module. ## View layer The _**View layer**_ is composed of \"templates\" that are responsible for providing appropriate representations of your application's resources. Templates can come in a variety of formats, but most view templates are HTML with embedded Ruby code (ERB files). Views are typically rendered to generate a controller response or to generate the body of an email. In Rails, View generation is handled by [Action View](actionview/README.md). ## Controller layer The _**Controller layer**_ is responsible for handling incoming HTTP requests and providing a suitable response. Usually, this means returning HTML, but Rails controllers can also generate XML, JSON, PDFs, mobile-specific views, and more. Controllers load and manipulate models, and render view templates in order to generate the appropriate HTTP response. In Rails, incoming requests are routed by Action Dispatch to an appropriate controller, and controller classes are derived from `ActionController::Base`. Action Dispatch and Action Controller are bundled together in [Action Pack](actionpack/README.md). ## Frameworks and libraries [Active Record](activerecord/README.rdoc), [Active Model](activemodel/README.rdoc), [Action Pack](actionpack/README.md), and [Action View](actionview/README.md) can each be used independently outside Rails. In addition to that, Rails also comes with: - [Action Mailer](actionmailer/README.md), a library to generate and send emails - [Action Mailbox](actionmailbox/README.md), a library to receive emails within a Rails application - [Active Job](activejob/README.md), a framework for declaring jobs and making them run on a variety of queuing backends - [Action Cable](actioncable/README.md), a framework to integrate WebSockets with a Rails application - [Active Storage](activestorage/README.md), a library to attach cloud and local files to Rails applications - [Action Text](actiontext/README.md), a library to handle rich text content - [Active Support](activesupport/README.md), a collection of utility classes and standard library extensions that are useful for Rails, and may also be used independently outside Rails ## Getting Started 1. Install Rails at the command prompt if you haven't yet: ```bash $ gem install rails ``` 2. At the command prompt, create a new Rails application: ```bash $ rails new myapp ``` where \"myapp\" is the application name. 3. Change directory to `myapp` and start the web server: ```bash $ cd myapp $ bin/rails server ``` Run with `--help` or `-h` for options. 4. Go to `http://localhost:3000` and you'll see the Rails bootscreen with your Rails and Ruby versions. 5. Follow the guidelines to start developing your application. You may find the following resources handy: * [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html) * [Ruby on Rails Guides](https://guides.rubyonrails.org) * [The API Documentation](https://api.rubyonrails.org) ## Contributing We",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "mpv-player/mpv",
+      "url": "https://github.com/mpv-player/mpv",
+      "description": "🎥 Command line media player",
+      "language": "C",
+      "stars": 37936,
+      "forks": 3635,
+      "stars_today": 37,
+      "topics": [
+        "audio",
+        "c",
+        "ffmpeg",
+        "mplayer",
+        "mpv",
+        "multimedia",
+        "video"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2012-10-13T08:08:44Z",
+      "updated_at": "2026-11-07T06:49:30Z",
+      "open_issues": 1161,
+      "default_branch": "master",
+      "readme_excerpt": "![mpv logo](https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/mpv-logo-128.png) # mpv * [External links](#external-links) * [Overview](#overview) * [System requirements](#system-requirements) * [Downloads](#downloads) * [Changelog](#changelog) * [Compilation](#compilation) * [Release cycle](#release-cycle) * [Bug reports](#bug-reports) * [Contributing](#contributing) * [License](#license) * [Contact](#contact) ## External links * [Wiki](https://github.com/mpv-player/mpv/wiki) * [User Scripts](https://github.com/mpv-player/mpv/wiki/User-Scripts) * [FAQ][FAQ] * [Manual](https://mpv.io/manual/master/) ## Overview **mpv** is a free (as in freedom) media player for the command line. It supports a wide variety of media file formats, audio and video codecs, and subtitle types. There is a [FAQ][FAQ]. Releases can be found on the [release list][releases]. ## System requirements - A not too ancient Linux (usually, only the latest releases of distributions are actively supported), Windows 10 1607 or later, or macOS 10.15 or later. - A somewhat capable CPU. Hardware decoding might help if the CPU is too slow to decode video in realtime, but must be explicitly enabled with the `--hwdec` option. - A not too crappy GPU. mpv's focus is not on power-efficient playback on embedded or integrated GPUs (for example, hardware decoding is not even enabled by default). Low power GPUs may cause issues like tearing, stutter, etc. On such GPUs, it's recommended to use `--profile=fast` for smooth playback. The main video output uses shaders for video rendering and scaling, rather than GPU fixed function hardware. On Windows, you might want to make sure the graphics drivers are current. In some cases, ancient fallback video output methods can help (such as `--vo=xv` on Linux), but this use is not recommended or supported. mpv does not go out of its way to break on older hardware or old, unsupported operating systems, but development is not done with them in mind. Keeping compatibility with such setups is not guaranteed. If things work, consider it a happy accident. ## Downloads For semi-official builds and third-party packages please see [mpv.io/installation](https://mpv.io/installation/). ## Changelog There is no complete changelog; however, changes to the player core interface are listed in the [interface changelog][interface-changes]. Changes to the C API are documented in the [client API changelog][api-changes]. The [release list][releases] has a summary of most of the important changes on every release. Changes to the default key bindings are indicated in [restore-old-bindings.conf][restore-old-bindings]. Changes to the default OSC bindings are indicated in [restore-osc-bindings.conf][restore-osc-bindings]. ## Compilation Compiling with full features requires development files for several external libraries. Mpv requires [meson](https://mesonbuild.com/index.html) to build. Meson can be obtained from your distro or PyPI. After creating your build directory (e.g. `meson setup build`), you can view a list of all the build options via `meson configure build`. You could also just simply look at the `meson_options.txt` file. Logs are stored in `meson-logs` within your build directory. Example: meson setup build meson compile -C build meson install -C build For libplacebo, meson can use a git check out as a subproject for a convenient way to compile mpv if a sufficient libplacebo version is not easily available in the build environment. It will be statically linked with mpv. Example: mkdir -p subprojects git clone https://code.videolan.org/videolan/libplacebo.git --depth=1 --recursive subprojects/libplacebo Essential dependencies (incomplete list): - gcc or clang - X development headers (xlib, xrandr, xext, xscrnsaver, xpresent, libvdpau, libGL, GLX, EGL, xv, ...) - Audio output development headers (libasound/ALSA, pulseaudio) - FFmpeg libraries (libavutil libavcodec libavformat libswscale libavfilter and either libswresample or libav",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "rust-lang/rust",
+      "url": "https://github.com/rust-lang/rust",
+      "description": "Empowering everyone to build reliable and efficient software.",
+      "language": "Rust",
+      "stars": 121532,
+      "forks": 17369,
+      "stars_today": 192,
+      "topics": [
+        "compiler",
+        "language",
+        "rust"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2010-06-16T20:39:03Z",
+      "updated_at": "2026-11-07T07:08:13Z",
+      "open_issues": 12593,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/rust-social-wide-dark.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/rust-social-wide-light.svg\"> <img alt=\"The Rust Programming Language: A language empowering everyone to build reliable and efficient software\" src=\"https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/rust-social-wide-light.svg\" width=\"50%\"> </picture> [Website][Rust] | [Getting started] | [Learn] | [Documentation] | [Contributing] </div> This is the main source code repository for [Rust]. It contains the compiler, standard library, and documentation. [Rust]: https://www.rust-lang.org/ [Getting Started]: https://www.rust-lang.org/learn/get-started [Learn]: https://www.rust-lang.org/learn [Documentation]: https://www.rust-lang.org/learn#learn-use [Contributing]: CONTRIBUTING.md ## Why Rust? - **Performance:** Fast and memory-efficient, suitable for critical services, embedded devices, and easily integrated with other languages. - **Reliability:** Our rich type system and ownership model ensure memory and thread safety, reducing bugs at compile-time. - **Productivity:** Comprehensive documentation, a compiler committed to providing great diagnostics, and advanced tooling including package manager and build tool ([Cargo]), auto-formatter ([rustfmt]), linter ([Clippy]) and editor support ([rust-analyzer]). [Cargo]: https://github.com/rust-lang/cargo [rustfmt]: https://github.com/rust-lang/rustfmt [Clippy]: https://github.com/rust-lang/rust-clippy [rust-analyzer]: https://github.com/rust-lang/rust-analyzer ## Quick Start Read [\"Installation\"] from [The Book]. [\"Installation\"]: https://doc.rust-lang.org/book/ch01-01-installation.html [The Book]: https://doc.rust-lang.org/book/index.html ## Installing from Source If you really want to install from source (though this is not recommended), see [INSTALL.md](INSTALL.md). ## Getting Help See https://www.rust-lang.org/community for a list of chat platforms and forums. ## Contributing See [CONTRIBUTING.md](CONTRIBUTING.md). For a detailed explanation of the compiler's architecture and how to begin contributing, see the [rustc-dev-guide](https://rustc-dev-guide.rust-lang.org/). ## License Rust is primarily distributed under the terms of both the MIT license and the Apache License (Version 2.0), with portions covered by various BSD-like licenses. See [LICENSE-APACHE](LICENSE-APACHE), [LICENSE-MIT](LICENSE-MIT), and [COPYRIGHT](COPYRIGHT) for details. ## Trademark [The Rust Foundation][rust-foundation] owns and protects the Rust and Cargo trademarks and logos (the \"Rust Trademarks\"). If you want to use these names or brands, please read the [Rust language trademark policy][trademark-policy]. Third-party logos may be subject to third-party copyrights and trademarks. See [Licenses][policies-licenses] for details. [rust-foundation]: https://rustfoundation.org/ [trademark-policy]: https://rustfoundation.org/policy/rust-trademark-policy/ [policies-licenses]: https://www.rust-lang.org/policies/licenses",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 6,
+      "full_name": "react/react",
+      "url": "https://github.com/react/react",
+      "description": "The library for web and native user interfaces.",
+      "language": "JavaScript",
+      "stars": 252309,
+      "forks": 51834,
+      "stars_today": 248,
+      "topics": [
+        "declarative",
+        "frontend",
+        "javascript",
+        "library",
+        "react",
+        "ui"
+      ],
+      "license": "MIT",
+      "created_at": "2013-05-24T16:15:54Z",
+      "updated_at": "2026-11-07T07:07:51Z",
+      "open_issues": 1513,
+      "default_branch": "main",
+      "readme_excerpt": "# [React](https://react.dev/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/react/react/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![(Runtime) Build and Test](https://github.com/react/react/actions/workflows/runtime_build_and_test.yml/badge.svg)](https://github.com/react/react/actions/workflows/runtime_build_and_test.yml) [![(Compiler) TypeScript](https://github.com/react/react/actions/workflows/compiler_typescript.yml/badge.svg?branch=main)](https://github.com/react/react/actions/workflows/compiler_typescript.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://legacy.reactjs.org/docs/how-to-contribute.html#your-first-pull-request) React is a JavaScript library for building user interfaces. * **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug. * **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM. * **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using [Node](https://nodejs.org/en) and power mobile apps using [React Native](https://reactnative.dev/). [Learn how to use React in your project](https://react.dev/learn). ## Installation React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**: * Use [Quick Start](https://react.dev/learn) to get a taste of React. * [Add React to an Existing Project](https://react.dev/learn/add-react-to-an-existing-project) to use as little or as much React as you need. * [Create a New React App](https://react.dev/learn/start-a-new-react-project) if you're looking for a powerful JavaScript toolchain. ## Documentation You can find the React documentation [on the website](https://react.dev/). Check out the [Getting Started](https://react.dev/learn) page for a quick overview. The documentation is divided into several sections: * [Quick Start](https://react.dev/learn) * [Tutorial](https://react.dev/learn/tutorial-tic-tac-toe) * [Thinking in React](https://react.dev/learn/thinking-in-react) * [Installation](https://react.dev/learn/installation) * [Describing the UI](https://react.dev/learn/describing-the-ui) * [Adding Interactivity](https://react.dev/learn/adding-interactivity) * [Managing State](https://react.dev/learn/managing-state) * [Advanced Guides](https://react.dev/learn/escape-hatches) * [API Reference](https://react.dev/reference/react) * [Where to Get Support](https://react.dev/community) * [Contributing Guide](https://legacy.reactjs.org/docs/how-to-contribute.html) You can improve it by sending pull requests to [this repository](https://github.com/reactjs/react.dev). ## Examples We have several examples [on the website](https://react.dev/). Here is the first one to get you started: ```jsx import { createRoot } from 'react-dom/client'; function HelloMessage({ name }) { return <div>Hello {name}</div>; } const root = createRoot(document.getElementById('container')); root.render(<HelloMessage name=\"Taylor\" />); ``` This example will render \"Hello Taylor\" into a container on the page. You'll notice that we used an HTML-like syntax; [we call it JSX](https://react.dev/learn#writing-markup-with-jsx). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. ## Contributing The main purpose of thi",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "angular/angular",
+      "url": "https://github.com/angular/angular",
+      "description": "Deliver web apps with confidence 🚀",
+      "language": "TypeScript",
+      "stars": 101425,
+      "forks": 28914,
+      "stars_today": 135,
+      "topics": [
+        "angular",
+        "javascript",
+        "pwa",
+        "typescript",
+        "web",
+        "web-framework",
+        "web-performance"
+      ],
+      "license": "MIT",
+      "created_at": "2014-09-18T16:12:01Z",
+      "updated_at": "2026-11-07T07:05:02Z",
+      "open_issues": 1034,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\">Angular - The modern web developer's platform</h1> <p align=\"center\"> <img src=\"adev/src/assets/images/press-kit/angular_icon_gradient.gif\" alt=\"angular-logo\" width=\"120px\" height=\"120px\"/> <br> <em>Angular is a development platform for building mobile and desktop web applications <br> using TypeScript/JavaScript and other languages.</em> <br> </p> <p align=\"center\"> <a href=\"https://angular.dev/\"><strong>angular.dev</strong></a> <br> </p> <p align=\"center\"> <a href=\"CONTRIBUTING.md\">Contributing Guidelines</a> · <a href=\"https://github.com/angular/angular/issues\">Submit an Issue</a> · <a href=\"https://blog.angular.dev/\">Blog</a> <br> <br> </p> <p align=\"center\"> <a href=\"https://www.npmjs.com/@angular/core\"> <img src=\"https://img.shields.io/npm/v/@angular/core.svg?logo=npm&logoColor=fff&label=NPM+package&color=limegreen\" alt=\"Angular on npm\" /> </a> </p> <hr> ## Documentation Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website. - [Getting Started][quickstart] - [Architecture][architecture] - [Components and Templates][componentstemplates] - [Forms][forms] - [API][api] ### Advanced - [Angular Elements][angularelements] - [Server Side Rendering][ssr] - [Schematics][schematics] - [Lazy Loading][lazyloading] - [Animations][animations] ### Local Development To contribute to the Angular Docs, check out the [Angular.dev README](adev/README.md) ## Development Setup ### Prerequisites - Install [Node.js] which includes [Node Package Manager][npm] ### Setting Up a Project Install the Angular CLI globally: ``` npm install -g @angular/cli ``` Create a workspace: ``` ng new [PROJECT NAME] ``` Run the application: ``` cd [PROJECT NAME] ng serve ``` Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions. ## Quickstart [Get started in 5 minutes][quickstart]. ## Ecosystem <p> <img src=\"/contributing-docs/images/angular-ecosystem-logos.png\" alt=\"angular ecosystem logos\" width=\"500px\" height=\"auto\"> </p> - [Angular Command Line (CLI)][cli] - [Angular Material][angularmaterial] ## Changelog [Learn about the latest improvements][changelog]. ## Upgrading Check out our [upgrade guide](https://angular.dev/update-guide/) to find out the best way to upgrade your project. ## Contributing ### Contributing Guidelines Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules, and more. ### Want to Help? Want to report a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for [contributing][contributing] and then check out one of our issues labeled as <kbd>[help wanted](https://github.com/angular/angular/labels/help%20wanted)</kbd> or <kbd>[good first issue](https://github.com/angular/angular/labels/good%20first%20issue)</kbd>. ### Code of Conduct Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct]. ## Community Join the conversation and help the community. - [X (formerly Twitter)][X (formerly Twitter)] - [Bluesky][bluesky] - [Discord][discord] - [YouTube][youtube] - [StackOverflow][stackoverflow] - Find a Local [Meetup][meetup] [![Love Angular badge](https://img.shields.io/badge/angular-love-blue?logo=angular&angular=love)](https://www.github.com/angular/angular) **Love Angular? Give our repo a star :star: :arrow_up:.** [contributing]: CONTRIBUTING.md [quickstart]: https://angular.dev/tutorials/learn-angular [changelog]: CHANGELOG.md [ng]: https://angular.dev [documentation]: https://angular.dev/overview [angularmaterial]: https://material.angular.dev/ [cli]: https://angular.dev/tools/cli [architecture]: https://angular.dev/essentials [componentstemplates]: https://angular.dev/tutorials/learn-angular/1-components-in-angular [forms]: https://angular.dev/tutorials/learn-angular/15-forms [api]: https://angular.dev/api [angularelements]: https://angular.dev/guide/elements [ssr]: https://angular.dev/guide/ssr [sch",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "symfony/symfony",
+      "url": "https://github.com/symfony/symfony",
+      "description": "The Symfony PHP framework",
+      "language": "PHP",
+      "stars": 31479,
+      "forks": 9950,
+      "stars_today": 128,
+      "topics": [
+        "bundle",
+        "framework",
+        "hacktoberfest",
+        "php",
+        "php-framework",
+        "symfony",
+        "symfony-bundle"
+      ],
+      "license": "MIT",
+      "created_at": "2010-01-04T14:21:21Z",
+      "updated_at": "2026-11-07T07:03:10Z",
+      "open_issues": 268,
+      "default_branch": "8.2",
+      "readme_excerpt": "<p align=\"center\"><a href=\"https://symfony.com\" target=\"_blank\"> <img src=\"https://symfony.com/logos/symfony_dynamic_01.svg\" alt=\"Symfony Logo\"> </a></p> [Symfony][1] is a **PHP framework** for web and console applications and a set of reusable **PHP components**. Symfony is used by thousands of web applications and most of the [popular PHP projects][2]. Installation ------------ * [Install Symfony][4] with Composer (see [requirements details][3]). * Symfony follows the [semantic versioning][5] strictly, publishes \"Long Term Support\" (LTS) versions and has a [release process][6] that is predictable and business-friendly. Sponsor ------- Symfony 8.2 is looking for [backers][27]. Help Symfony by [sponsoring][31] its development! Documentation ------------- * Read the [Getting Started guide][7] if you are new to Symfony. * Try the [Symfony Demo application][23] to learn Symfony in practice. * Discover Symfony ecosystem in detail with [Symfony The Fast Track][26]. * Master Symfony with the [Guides and Tutorials][8], the [Components docs][9] and the [Best Practices][10] reference. Community --------- * [Join the Symfony Community][11] and meet other members at the [Symfony events][12]. * [Get Symfony support][13] on GitHub Discussions, Slack, etc. * Follow us on [GitHub][14], [Twitter][15] and [Facebook][16]. * Read our [Code of Conduct][24] and meet the [CARE Team][25]. Contributing ------------ Symfony is an Open Source, community-driven project with thousands of [contributors][19]. Join them [contributing code][17] or [contributing documentation][18]. Security Issues --------------- If you discover a security vulnerability within Symfony, please follow our [disclosure procedure][20]. About Us -------- Symfony development is led by the [Symfony Core Team][22] and supported by [Symfony contributors][19]. [1]: https://symfony.com [2]: https://symfony.com/projects [3]: https://symfony.com/doc/current/reference/requirements.html [4]: https://symfony.com/doc/current/setup.html [5]: https://semver.org [6]: https://symfony.com/doc/current/contributing/community/releases.html [7]: https://symfony.com/doc/current/page_creation.html [8]: https://symfony.com/doc/current/index.html [9]: https://symfony.com/doc/current/components/index.html [10]: https://symfony.com/doc/current/best_practices/index.html [11]: https://symfony.com/community [12]: https://symfony.com/events/ [13]: https://symfony.com/support [14]: https://github.com/symfony [15]: https://twitter.com/symfony [16]: https://www.facebook.com/SymfonyFramework/ [17]: https://symfony.com/doc/current/contributing/code/index.html [18]: https://symfony.com/doc/current/contributing/documentation/index.html [19]: https://symfony.com/contributors [20]: https://symfony.com/security [22]: https://symfony.com/doc/current/contributing/code/core_team.html [23]: https://github.com/symfony/symfony-demo [24]: https://symfony.com/coc [25]: https://symfony.com/doc/current/contributing/code_of_conduct/care_team.html [26]: https://symfony.com/book [27]: https://symfony.com/backers [28]: https:// [29]: https:// [30]: https:// [31]: https:// [32]: https://symfony.com/sponsor",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "prometheus/prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "description": "The Prometheus monitoring system and time series database.",
+      "language": "Go",
+      "stars": 67243,
+      "forks": 10991,
+      "stars_today": 148,
+      "topics": [
+        "alerting",
+        "graphing",
+        "hacktoberfest",
+        "metrics",
+        "monitoring",
+        "prometheus",
+        "time-series"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2012-11-24T11:14:12Z",
+      "updated_at": "2026-11-07T07:07:29Z",
+      "open_issues": 1086,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\" style=\"border-bottom: none\"> <a href=\"https://prometheus.io\" target=\"_blank\"><img alt=\"Prometheus\" src=\"/documentation/images/prometheus-logo.svg\"></a><br>Prometheus </h1> <p align=\"center\">Visit <a href=\"https://prometheus.io\" target=\"_blank\">prometheus.io</a> for the full documentation, examples and guides.</p> <div align=\"center\"> [![CI](https://github.com/prometheus/prometheus/actions/workflows/ci.yml/badge.svg)](https://github.com/prometheus/prometheus/actions/workflows/ci.yml) [![Docker Repository on Quay](https://quay.io/repository/prometheus/prometheus/status)][quay] [![Docker Pulls](https://img.shields.io/docker/pulls/prom/prometheus.svg?maxAge=604800)][hub] [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/486/badge)](https://bestpractices.coreinfrastructure.org/projects/486) [![govulncheck](https://github.com/prometheus/prometheus/actions/workflows/govulncheck.yml/badge.svg?event=schedule)](https://github.com/prometheus/prometheus/actions/workflows/govulncheck.yml) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/prometheus/prometheus/badge)](https://securityscorecards.dev/viewer/?uri=github.com/prometheus/prometheus) [![CLOMonitor](https://img.shields.io/endpoint?url=https://clomonitor.io/api/projects/cncf/prometheus/badge)](https://clomonitor.io/projects/cncf/prometheus) [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/prometheus.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:prometheus) </div> Prometheus, a [Cloud Native Computing Foundation](https://cncf.io/) project, is a systems and service monitoring system. It collects metrics from configured targets at given intervals, evaluates rule expressions, displays the results, and can trigger alerts when specified conditions are observed. The features that distinguish Prometheus from other metrics and monitoring systems are: * A **multi-dimensional** data model (time series defined by metric name and set of key/value dimensions) * PromQL, a **powerful and flexible query language** to leverage this dimensionality * No dependency on distributed storage; **single server nodes are autonomous** * An HTTP **pull model** for time series collection * **Pushing time series** is supported via an intermediary gateway for batch jobs * Targets are discovered via **service discovery** or **static configuration** * Multiple modes of **graphing and dashboarding support** * Support for hierarchical and horizontal **federation** ## Architecture overview ![Architecture overview](documentation/images/architecture.svg) ## Install There are various ways to install Prometheus. ### Precompiled binaries Precompiled binaries for released versions are available in the [*download* section](https://prometheus.io/download/) on [prometheus.io](https://prometheus.io). Using the latest production release binary is the recommended way to install Prometheus. See the [Installing](https://prometheus.io/docs/introduction/install/) chapter in the documentation for all the details. ### Docker images Docker images are available on [Quay.io](https://quay.io/repository/prometheus/prometheus) or [Docker Hub](https://hub.docker.com/r/prom/prometheus/). You can launch a Prometheus container for trying it out with ```bash docker run --name prometheus -d -p 127.0.0.1:9090:9090 prom/prometheus ``` Prometheus will now be reachable at <http://localhost:9090/>. ### Building from source To build Prometheus from source code, you need: * Go: Version specified in [go.mod](./go.mod) or greater. * NodeJS: Version specified in [.nvmrc](./web/ui/.nvmrc) or greater. * npm: Version 10 or greater (check with `npm --version` and [here](https://www.npmjs.com/)). Start by cloning the repository: ```bash git clone https://github.com/prometheus/prometheus.git cd prometheus ``` You can use the `go` tool to build and install the `prometheus` and `promtool` binaries into your `GOPATH`: ```bash go insta",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 10,
+      "full_name": "google/skills",
+      "url": "https://github.com/google/skills",
+      "description": "Agent Skills for Google products and technologies",
+      "language": "Python",
+      "stars": 22962,
+      "forks": 1929,
+      "stars_today": 534,
+      "topics": [
+        "google",
+        "googlecloud",
+        "skills"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-03-31T19:02:20Z",
+      "updated_at": "2026-11-07T07:11:27Z",
+      "open_issues": 26,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills [![Install via skills.sh](https://img.shields.io/badge/skills.sh-install-green)](https://skills.sh/google/skills) This repository contains [Agent Skills](https://agentskills.io/home) for Google products and technologies, including [Google Cloud](https://cloud.google.com). ## Installation ```bash npx skills add google/skills ``` When prompted, select specific skills or all skills, the target agents to configure, and the installation scope (project or global). If `npx` is not available in your environment, install [Node.js](https://nodejs.org/en/download), which includes `npm` and `npx`. ## Updating Skills To update previously installed skills to the latest versions, run the following command. ```bash npx skills update ``` This command gives you an option to also remove obsolete skills. ## Available Skills <!-- BEGIN SKILLS --> - **Getting started with Google Cloud** - [**Authenticating and Authorizing to Google Cloud (IAM)**](./skills/cloud/google-cloud-recipe-auth) - [**Google Cloud Recipe: Foundation Builder**](./skills/cloud/google-cloud-recipe-foundation-builder) - [**Onboarding to Google Cloud**](./skills/cloud/google-cloud-recipe-onboarding) - **Multi-product solution skills** - [**Google Cloud solution-architecture workflow**](./skills/cloud/google-cloud-solution-architecture) - [**Agent Gateway multi-agent security**](./skills/cloud/google-cloud-solution-multi-agent-security) - [**Agentic analytics across cloud providers and data types**](./skills/cloud/google-cloud-solution-agentic-analytics-spark-knowledge-catalog) - [**Borderless open data lakehouse agentic AI system**](./skills/cloud/google-cloud-solution-agentic-ai-borderless-data-lakehouse) - [**Build and deploy AI agents on Google Cloud**](./skills/cloud/google-cloud-solution-build-deploy-agents) - [**Data science workflow with AI agents solution**](./skills/cloud/google-cloud-solution-agentic-ai-data-science-workflow) - [**Dynamic Hybrid Search using AlloyDB**](./skills/cloud/google-cloud-solution-hybrid-search-alloydb) - [**Google Skill Finder**](./skills/developers/finding-google-skills) - [**Live bidirectional multimodal streaming agentic AI solution**](./skills/cloud/google-cloud-solution-agentic-ai-bidirectional-streaming) - [**Migrate AI Workloads to GKE Inference**](./skills/cloud/google-cloud-solution-guided-gke-ai-migration) - [**RAG for enterprise search using GKE and AlloyDB**](./skills/cloud/google-cloud-solution-rag-enterprise-search-gke-sqldb) - [**Secure n-tier serverless web application with strict private application tiers**](./skills/cloud/google-cloud-solution-n-tier-serverless-web-app) - **AI/ML** - [**Agent Access Audit**](./skills/cloud/agent-platform-access-audit) - [**Agent Platform Alert Configuration**](./skills/cloud/agent-platform-alert-configuration) - [**Agent Platform Endpoint Management**](./skills/cloud/agent-platform-endpoint-management) - [**Agent Platform Eval Flywheel Skill**](./skills/cloud/agent-platform-eval-flywheel) - [**Agent Platform GenAI Inference Skill**](./skills/cloud/agent-platform-inference) - [**Agent Platform Model Garden Deploy Skill**](./skills/cloud/agent-platform-deploy) - [**Agent Platform Model Registry Management**](./skills/cloud/agent-platform-model-registry) - [**Agent Platform Model Tuning**](./skills/cloud/agent-platform-tuning) - [**Agent Platform Prompt Management**](./skills/cloud/agent-platform-prompt-management) - [**Agent Platform RAG Engine Management**](./skills/cloud/agent-platform-rag-engine-management) - [**Agent Platform Troubleshooting**](./skills/cloud/agent-platform-troubleshooting) - [**Agent Platform Tuning Management**](./skills/cloud/agent-platform-tuning-management) - [**API Gateway Remote MCP Server (Public Preview)**](./skills/cloud/api-gateway-mcp-server) - [**Apigee as an Agent Gateway Service Extension**](./skills/cloud/apigee-agent-gateway-governance) - [**BigQuery AI & ML**](./skills/cloud/bigquery-ai-ml) - [**Gemini API in Agent Platform**](./skills/cloud/",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 11,
+      "full_name": "microsoft/vscode",
+      "url": "https://github.com/microsoft/vscode",
+      "description": "Visual Studio Code",
+      "language": "TypeScript",
+      "stars": 195084,
+      "forks": 44434,
+      "stars_today": 301,
+      "topics": [
+        "editor",
+        "electron",
+        "microsoft",
+        "typescript",
+        "visual-studio-code"
+      ],
+      "license": "MIT",
+      "created_at": "2015-09-03T20:23:38Z",
+      "updated_at": "2026-11-07T07:07:02Z",
+      "open_issues": 21855,
+      "default_branch": "main",
+      "readme_excerpt": "# Visual Studio Code - Open Source (\"Code - OSS\") [![Feature Requests](https://img.shields.io/github/issues/microsoft/vscode/feature-request.svg)](https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc) [![Bugs](https://img.shields.io/github/issues/microsoft/vscode/bug.svg)](https://github.com/microsoft/vscode/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug) ## The Repository This repository (\"`Code - OSS`\") is where we (Microsoft) develop the [Visual Studio Code](https://code.visualstudio.com) product together with the community. Not only do we work on code and issues here, but we also publish our [roadmap](https://github.com/microsoft/vscode/wiki/Roadmap), [monthly iteration plans](https://github.com/microsoft/vscode/wiki/Iteration-Plans), and our [endgame plans](https://github.com/microsoft/vscode/wiki/Running-the-Endgame). This source code is available to everyone under the standard [MIT license](https://github.com/microsoft/vscode/blob/main/LICENSE.txt). ## Visual Studio Code <p align=\"center\"> <img alt=\"VS Code in action\" src=\"https://github.com/user-attachments/assets/56af271c-949d-454c-a3ea-16188c063414\"> </p> [Visual Studio Code](https://code.visualstudio.com) is a distribution of the `Code - OSS` repository with Microsoft-specific customizations released under a traditional [Microsoft product license](https://code.visualstudio.com/License/). [Visual Studio Code](https://code.visualstudio.com) combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools. Visual Studio Code is updated monthly with new features and bug fixes. You can download it for Windows, macOS, and Linux on the [Visual Studio Code website](https://code.visualstudio.com/Download). To get the latest releases every day, install the [Insiders build](https://code.visualstudio.com/insiders). ## Contributing There are many ways in which you can participate in this project, for example: * [Submit bugs and feature requests](https://github.com/microsoft/vscode/issues), and help us verify them as they are checked in * Review [source code changes](https://github.com/microsoft/vscode/pulls) * Review the [documentation](https://github.com/microsoft/vscode-docs) and make pull requests for anything from typos to new content. If you are interested in fixing issues and contributing directly to the codebase, please see the document [How to Contribute](https://github.com/microsoft/vscode/wiki/How-to-Contribute), which covers the following: * [How to build and run from source](https://github.com/microsoft/vscode/wiki/How-to-Contribute) * [The development workflow, including debugging and running tests](https://github.com/microsoft/vscode/wiki/How-to-Contribute#debugging) * [Coding guidelines](https://github.com/microsoft/vscode/wiki/Coding-Guidelines) * [Submitting pull requests](https://github.com/microsoft/vscode/wiki/How-to-Contribute#pull-requests) * [Finding an issue to work on](https://github.com/microsoft/vscode/wiki/How-to-Contribute#where-to-contribute) * [Contributing to translations](https://aka.ms/vscodeloc) ## Feedback * Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode) * [Request a new feature](CONTRIBUTING.md) * Upvote [popular feature requests](https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc) * [File an issue](https://github.com/microsoft/vscode/issues) * Connect with the extension author community on [GitHub Discussions](https://github.com/microsoft/vscode-discussions/discussions) or [Slack](https://aka.ms/vscode-dev-community) * Follow [@code](https://x.com/code) and let us know what you think! See our [wiki](https://github.com/microsoft/vscode/wiki/Feedback-",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "lz4/lz4",
+      "url": "https://github.com/lz4/lz4",
+      "description": "Extremely Fast Compression algorithm",
+      "language": "C",
+      "stars": 12651,
+      "forks": 1644,
+      "stars_today": 315,
+      "topics": [
+        "c",
+        "compression",
+        "lz4"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2014-03-25T15:52:21Z",
+      "updated_at": "2026-11-07T07:06:34Z",
+      "open_issues": 7,
+      "default_branch": "dev",
+      "readme_excerpt": "LZ4 - Extremely fast compression ================================ LZ4 is a lossless compression algorithm, providing compression speed > 500 MB/s per core, scalable with multi-core CPUs. It features an extremely fast decoder, with speed in multiple GB/s per core, typically reaching RAM speed limits on multi-core systems. Compression speed can be tuned dynamically, by selecting an \"acceleration\" factor which trades compression ratio for faster speed. On the other end, a high compression derivative, LZ4_HC, is also provided, trading CPU time for improved compression ratio. All versions feature the same decompression speed. LZ4 is also compatible with [dictionary compression](https://github.com/facebook/zstd#the-case-for-small-data-compression), both at [API](lib/lz4frame.h) and [CLI](programs/lz4.1.md#operation-modifiers) (`-D`) levels. It can ingest any input file as dictionary, though only the final 64 KB are used. This capability can be combined with the [Zstandard Dictionary Builder](https://github.com/facebook/zstd/blob/dev/programs/zstd.1.md#dictionary-builder), in order to drastically improve compression performance on small files. The LZ4 library is provided as open-source software using the BSD 2-Clause license. The `lz4` command line utility is provided under the GPL-2.0-or-later license. Benchmarks ------------------------- The benchmark uses [lzbench] v2.4.1, from @inikep compiled with GCC v13.3.0 on Linux 64-bits (Ubuntu 24.04). The reference system uses a Core i7-9700K CPU. Benchmark evaluates the compression of reference [Silesia Corpus] in single-thread mode. [lzbench]: https://github.com/inikep/lzbench [Silesia Corpus]: https://sun.aei.polsl.pl/~sdeor/index.php?page=silesia | Compressor | Factor | Compression | Decompression | | ---------- | ----- | ----------- | ------------- | | memcpy | 1.000 | 13700 MB/s | 13700 MB/s | |**LZ4 default (v1.11.0)**|**2.112**| **770 MB/s**| **4950 MB/s** | | LZO 2.10 -1 | 2.108 | 660 MB/s | 800 MB/s | | QuickLZ 1.5.1b7 -1 | 2.238 | 580 MB/s | 780 MB/s | | Snappy 1.3.1 | 2.090 | 520 MB/s | 1350 MB/s | | [Zstandard] 1.5.7 -1 | 2.896 | 510 MB/s | 1570 MB/s | | LZF v3.6 | 2.073 | 375 MB/s | 920 MB/s | | zlib-ng 2.3.3 -1 | 2.252 | 250 MB/s | 555 MB/s | | [zlib] deflate 1.3.2 -1 | 2.743 | 110 MB/s | 410 MB/s | |**LZ4 HC -9 (v1.11.0)** |**2.717**| 40 MB/s | **4800 MB/s** | | [zlib] deflate 1.3.2 -6 | 3.106 | 36 MB/s | 430 MB/s | [zlib]: https://www.zlib.net/ [Zstandard]: https://facebook.github.io/zstd/ Installation ------------------------- ``` make make install # this command may require root permissions ``` LZ4's `Makefile` supports standard [Makefile conventions], including [staged installs], [redirection], or [command redefinition]. It is compatible with parallel builds (`-j#`). [Makefile conventions]: https://www.gnu.org/prep/standards/html_node/Makefile-Conventions.html [staged installs]: https://www.gnu.org/prep/standards/html_node/DESTDIR.html [redirection]: https://www.gnu.org/prep/standards/html_node/Directory-Variables.html [command redefinition]: https://www.gnu.org/prep/standards/html_node/Utilities-in-Makefiles.html Alternative build systems (CMake, Meson, Visual Studio) are provided in [build/](build/). ### Building LZ4 - Using vcpkg You can download and install LZ4 using the [vcpkg](https://github.com/Microsoft/vcpkg) dependency manager: git clone https://github.com/Microsoft/vcpkg.git cd vcpkg ./bootstrap-vcpkg.sh ./vcpkg integrate install ./vcpkg install lz4 The LZ4 port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository. Documentation ------------------------- The raw LZ4 block compression format is detailed within [lz4_Block_format]. Arbitrarily long files or data streams are compressed using multiple blocks, for streaming requirements. These blocks are organized into a frame, defined in [lz4_Frame_format",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": -4,
+      "streak_days": 2
+    },
+    {
+      "rank": 13,
+      "full_name": "nushell/nushell",
+      "url": "https://github.com/nushell/nushell",
+      "description": "A new type of shell",
+      "language": "Rust",
+      "stars": 41024,
+      "forks": 2344,
+      "stars_today": 131,
+      "topics": [
+        "nushell",
+        "rust",
+        "shell"
+      ],
+      "license": "MIT",
+      "created_at": "2019-05-10T16:59:42Z",
+      "updated_at": "2026-11-07T07:11:05Z",
+      "open_issues": 1457,
+      "default_branch": "main",
+      "readme_excerpt": "# Nushell <!-- omit in toc --> [![Crates.io](https://img.shields.io/crates/v/nu.svg)](https://crates.io/crates/nu) [![Build Status](https://img.shields.io/github/actions/workflow/status/nushell/nushell/ci.yml?branch=main)](https://github.com/nushell/nushell/actions) [![Nightly Build](https://github.com/nushell/nushell/actions/workflows/nightly-build.yml/badge.svg)](https://github.com/nushell/nushell/actions/workflows/nightly-build.yml) [![Discord](https://img.shields.io/discord/601130461678272522.svg?logo=discord)](https://discord.gg/NtAbbGn) [![The Changelog #363](https://img.shields.io/badge/The%20Changelog-%23363-61c192.svg)](https://changelog.com/podcast/363) [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/nushell/nushell)](https://github.com/nushell/nushell/graphs/commit-activity) [![GitHub contributors](https://img.shields.io/github/contributors/nushell/nushell)](https://github.com/nushell/nushell/graphs/contributors) A new type of shell. ![Example of nushell](assets/nushell-autocomplete6.gif \"Example of nushell\") ## Table of Contents <!-- omit in toc --> - [Status](#status) - [Learning About Nu](#learning-about-nu) - [Installation](#installation) - [Configuration](#configuration) - [Philosophy](#philosophy) - [Pipelines](#pipelines) - [Opening files](#opening-files) - [Plugins](#plugins) - [Goals](#goals) - [Officially Supported By](#officially-supported-by) - [Contributing](#contributing) - [License](#license) ## Status This project has reached a minimum-viable-product level of quality. Many people use it as their daily driver, but it may be unstable for some commands. Nu's design is subject to change as it matures. ## Learning About Nu The [Nushell book](https://www.nushell.sh/book/) is the primary source of Nushell documentation. You can find [a full list of Nu commands in the book](https://www.nushell.sh/commands/), and we have many examples of using Nu in our [cookbook](https://www.nushell.sh/cookbook/). We're also active on [Discord](https://discord.gg/NtAbbGn); come and chat with us! ## Installation To quickly install Nu: ```bash # Linux and macOS brew install nushell # Windows winget install nushell ``` To use `Nu` in GitHub Action, check [setup-nu](https://github.com/marketplace/actions/setup-nu) for more detail. Detailed installation instructions can be found in the [installation chapter of the book](https://www.nushell.sh/book/installation.html). Nu is available via many package managers: [![Packaging status](https://repology.org/badge/vertical-allrepos/nushell.svg?columns=3)](https://repology.org/project/nushell/versions) For details about which platforms the Nushell team actively supports, see [our platform support policy](devdocs/PLATFORM_SUPPORT.md). ## Configuration The default configurations can be found at [sample_config](crates/nu-config/default_files) which are the configuration files one gets when they start up Nushell for the first time. It sets all of the default configuration to run Nushell. From here one can then customize this file for their specific needs. To see where *config.nu* is located on your system simply type this command. ```rust $nu.config-path ``` Please see our [book](https://www.nushell.sh/book/configuration.html) for all of the Nushell documentation. ## Philosophy Nu draws inspiration from projects like PowerShell, functional programming languages, and modern CLI tools. Rather than thinking of files and data as raw streams of text, Nu looks at each input as something with structure. For example, when you list the contents of a directory what you get back is a table of rows, where each row represents an item in that directory. These values can be piped through a series of steps, in a series of commands called a 'pipeline'. ### Pipelines In Unix, it's common to pipe between commands to split up a sophisticated command over multiple steps. Nu takes this a step further and builds heavily on the idea of _pipelines_. As in the Unix philosophy, Nu allows comm",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 14,
+      "full_name": "etcd-io/etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "description": "Distributed reliable key-value store for the most critical data of a distributed system",
+      "language": "Go",
+      "stars": 52643,
+      "forks": 10590,
+      "stars_today": 128,
+      "topics": [
+        "cncf",
+        "consensus",
+        "database",
+        "distributed-database",
+        "distributed-systems",
+        "etcd",
+        "go",
+        "key-value",
+        "kubernetes",
+        "raft"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2013-07-06T21:57:21Z",
+      "updated_at": "2026-11-07T06:40:48Z",
+      "open_issues": 425,
+      "default_branch": "main",
+      "readme_excerpt": "# etcd [![Go Report Card](https://goreportcard.com/badge/github.com/etcd-io/etcd?style=flat-square)](https://goreportcard.com/report/github.com/etcd-io/etcd) [![Coverage](https://codecov.io/gh/etcd-io/etcd/branch/main/graph/badge.svg)](https://app.codecov.io/gh/etcd-io/etcd/tree/main) [![Tests](https://github.com/etcd-io/etcd/actions/workflows/tests.yaml/badge.svg)](https://github.com/etcd-io/etcd/actions/workflows/tests.yaml) [![codeql-analysis](https://github.com/etcd-io/etcd/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/etcd-io/etcd/actions/workflows/codeql-analysis.yml) [![Docs](https://img.shields.io/badge/docs-latest-green.svg)](https://etcd.io/docs) [![Godoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://godocs.io/go.etcd.io/etcd/v3) [![Releases](https://img.shields.io/github/release/etcd-io/etcd/all.svg?style=flat-square)](https://github.com/etcd-io/etcd/releases) [![LICENSE](https://img.shields.io/github/license/etcd-io/etcd.svg?style=flat-square)](https://github.com/etcd-io/etcd/blob/main/LICENSE) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/etcd-io/etcd/badge)](https://scorecard.dev/viewer/?uri=github.com/etcd-io/etcd) **Note**: The `main` branch may be in an *unstable or even broken state* during development. For stable versions, see [releases][github-release]. <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/cncf/artwork/9870640f123303a355611065195c43ac3f27aa19/projects/etcd/horizontal/white/etcd-horizontal-white.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"logos/etcd-horizontal-color.svg\"> <img alt=\"etcd logo\" src=\"logos/etcd-horizontal-color.svg\" width=269 /> </picture> etcd is a distributed reliable key-value store for the most critical data of a distributed system, with a focus on being: * *Simple*: well-defined, user-facing API (gRPC) * *Secure*: automatic TLS with optional client cert authentication * *Fast*: benchmarked 10,000 writes/sec * *Reliable*: properly distributed using Raft etcd is written in Go and uses the [Raft][] consensus algorithm to manage a highly-available replicated log. etcd is used [in production by many companies](./ADOPTERS.md), and the development team stands behind it in critical deployment scenarios, where etcd is frequently teamed with applications such as [Kubernetes][k8s], [locksmith][], [vulcand][], [Doorman][], and many others. Reliability is further ensured by rigorous [**robustness testing**](https://github.com/etcd-io/etcd/tree/main/tests/robustness). See [etcdctl][etcdctl] for a simple command line client. ![etcd reliability is important](logos/etcd-xkcd-2347.png) <sub>Original image credited to xkcd.com/2347, alterations by Josh Berkus.</sub> [raft]: https://raft.github.io/ [k8s]: http://kubernetes.io/ [doorman]: https://github.com/youtube/doorman [locksmith]: https://github.com/coreos/locksmith [vulcand]: https://github.com/vulcand/vulcand [etcdctl]: https://github.com/etcd-io/etcd/tree/main/etcdctl ## Documentation The most common API documentation you'll need can be found here: * [go.etcd.io/etcd/api/v3](https://godocs.io/go.etcd.io/etcd/api/v3) * [go.etcd.io/etcd/client/pkg/v3](https://godocs.io/go.etcd.io/etcd/client/pkg/v3) * [go.etcd.io/etcd/client/v3](https://godocs.io/go.etcd.io/etcd/client/v3) * [go.etcd.io/etcd/etcdctl/v3](https://godocs.io/go.etcd.io/etcd/etcdctl/v3) * [go.etcd.io/etcd/pkg/v3](https://godocs.io/go.etcd.io/etcd/pkg/v3) * [go.etcd.io/etcd/raft/v3](https://godocs.io/go.etcd.io/etcd/raft/v3) * [go.etcd.io/etcd/server/v3](https://godocs.io/go.etcd.io/etcd/server/v3) ## Maintainers [Maintainers](OWNERS) strive to shape an inclusive open source project culture where users are heard and contributors feel respected and empowered. Maintainers aim to build productive relationships across different companies and disciplines. Read more about [Maintainers role and responsibilities](Documentation/contributo",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 15,
+      "full_name": "openssl/openssl",
+      "url": "https://github.com/openssl/openssl",
+      "description": "General purpose TLS and crypto library",
+      "language": "C",
+      "stars": 31336,
+      "forks": 11583,
+      "stars_today": 26,
+      "topics": [
+        "cryptography",
+        "decryption",
+        "encryption",
+        "openssl",
+        "ssl",
+        "tls"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2013-01-15T22:34:48Z",
+      "updated_at": "2026-11-07T07:12:55Z",
+      "open_issues": 1645,
+      "default_branch": "master",
+      "readme_excerpt": "Welcome to the OpenSSL Project ============================== [![openssl logo]][www.openssl.org] [![github actions ci badge]][github actions ci] [![Nightly OS Zoo ci badge](https://github.com/openssl/openssl/actions/workflows/os-zoo.yml/badge.svg?event=schedule)](https://github.com/openssl/openssl/actions/workflows/os-zoo.yml) [![Provider Compatibility](https://github.com/openssl/openssl/actions/workflows/provider-compatibility.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/provider-compatibility.yml) [![Quic Interop](https://github.com/openssl/openssl/actions/workflows/run_quic_interop.yml/badge.svg)](https://github.com/openssl/openssl/actions/workflows/run_quic_interop.yml) [![Daily checks](https://github.com/openssl/openssl/actions/workflows/run-checker-daily.yml/badge.svg?event=schedule)](https://github.com/openssl/openssl/actions/workflows/run-checker-daily.yml) [![LFX Health Score](https://insights.linuxfoundation.org/api/badge/health-score?project=openssl)](https://insights.linuxfoundation.org/project/openssl) OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit for the Transport Layer Security (TLS, formerly SSL), Datagram TLS (DTLS), and QUIC protocols. The protocol implementations are based on a full-strength general purpose cryptographic library, which can also be used stand-alone. Also included is a cryptographic module validated to conform with FIPS standards. OpenSSL is descended from the SSLeay library developed by Eric A. Young and Tim J. Hudson. The official Home Page of the OpenSSL Project is [www.openssl.org]. Table of Contents ================= - [Overview](#overview) - [Download](#download) - [Build and Install](#build-and-install) - [Documentation](#documentation) - [License](#license) - [Support](#support) - [Contributing](#contributing) - [Legalities](#legalities) Overview ======== The OpenSSL toolkit includes: - **libssl** an implementation of all TLS protocol versions up to TLSv1.3 ([RFC 8446]), DTLS protocol versions up to DTLSv1.3 ([RFC 9147]) and the QUIC version 1 protocol ([RFC 9000]). - **libcrypto** a full-strength general purpose cryptographic library. It constitutes the basis of the TLS implementation, but can also be used independently. - **openssl** the OpenSSL command line tool, a Swiss Army knife for cryptographic tasks, testing and analyzing. It can be used for - creation of key parameters - creation of X.509 certificates, CSRs and CRLs - calculation of message digests - encryption and decryption - SSL/TLS/DTLS and client and server tests - QUIC client tests - handling of S/MIME signed or encrypted mail - and more... Download ======== For Production Use ------------------ Source code tarballs of the official releases can be downloaded from [openssl-library.org/source/](https://openssl-library.org/source/). The OpenSSL project does not distribute the toolkit in binary form. However, for a large variety of operating systems precompiled versions of the OpenSSL toolkit are available. In particular, on Linux and other Unix operating systems, it is normally recommended to link against the precompiled shared libraries provided by the distributor or vendor. We also maintain a list of third parties that produce OpenSSL binaries for various Operating Systems (including Windows) on the [Binaries] page on our wiki. For Testing and Development --------------------------- Although testing and development could in theory also be done using the source tarballs, having a local copy of the git repository with the entire project history gives you much more insight into the code base. The main OpenSSL Git repository is private. There is a public GitHub mirror of it at [github.com/openssl/openssl], which is updated automatically from the former on every commit. A local copy of the Git repository can be obtained by cloning it from the GitHub mirror using git clone https://github.com/openssl/openssl.git If you intend to contribute to OpenSSL, either to fix bugs or cont",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 16,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 316957,
+      "forks": 26526,
+      "stars_today": 2070,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-11-07T07:12:42Z",
+      "open_issues": 217,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugin install mattpocock-skills@claude-plugins-official ``` Updates itself by default. </details> <details> <summary><strong>Codex</strong></summary> ```bash codex plugin marketplace add mattpocock/skills codex plugin add mattpocock-skills@mattpocock ``` Updates itself at startup. </details> <details> <summary><strong>GitHub Copilot</strong> (CLI and VS Code)</summary> ```bash copilot plugin marketplace add mattpocock/skills copilot plugin install mattpocock-skills@mattpocock ``` Then, once, add to `~/.copilot/settings.json`: ```json { \"extraKnownMarketplaces\": { \"mattpocock\": { \"source\": { \"source\": \"github\", \"repo\": \"mattpocock/skills\" }, \"autoUpdate\": true } } } ``` In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. </details> <details> <summary><strong>Gemini CLI</strong> (manual updates)</summary> ```bash gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity ``` Re-run both commands to update. </details> <details> <summary><strong>Any other agent, or editable files</strong> (manual updates)</summary> ```bash npx skills@latest add mattpocock/skills -a <agent> # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose ``` When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, GitLab, local files, or anything else you describe) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalig",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": -14,
+      "streak_days": 5
+    },
+    {
+      "rank": 17,
+      "full_name": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "stars": 64465,
+      "forks": 4183,
+      "stars_today": 2548,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-06-18T14:08:44Z",
+      "updated_at": "2026-11-07T07:12:24Z",
+      "open_issues": 115,
+      "default_branch": "main",
+      "readme_excerpt": "# security-audit A coding-agent skill that turns your agent into a security auditor. It orchestrates isolated agents through reconnaissance, coverage-led hunting, candidate validation, structured output, independent record verification, and target-neutral reporting. This is the skill that seeded Cloudflare's vulnerability discovery harness, described in [Build your own vulnerability harness](https://blog.cloudflare.com/build-your-own-vulnerability-harness). The harness grew into a multi-stage, fleet-wide system; this skill is the single-repo starting point it evolved from. ## What it does The skill runs a structured audit in six phases: 1. **Reconnaissance** -- map architecture, trust boundaries, input surfaces, prior evidence, and deterministic coverage in `architecture.md` and `coverage-ledger.json`. 2. **Coverage-led hunting** -- assign isolated hunters from ledger units, record their checks, and use coverage critics to find gaps. 3. **Candidate validation** -- give every unique candidate to a fresh verifier that tries to disprove it. 4. **Structured output** -- write `confirmed`, `needs_validation`, and `rejected` records to `findings.json` and validate them against `report-schema.json`. 5. **Independent record verification** -- fresh agents verify final source claims. Material replacements receive another independent verifier. 6. **Target-neutral reporting** -- derive `REPORT.md`, `FINDINGS-DETAIL.md`, and `NEEDS-VALIDATION.md` from the verified records and coverage ledger. The parent runs `validate-coverage-ledger.cjs` after creating the ledger and after each later ledger update. It runs `validate-findings.cjs` in Phase 4 and again after every Phase 5 replacement. The verdicts are distinct: `confirmed` has a complete source trace and bounded observed result, `needs_validation` has an exact unresolved fact and no severity, and `rejected` records a disproved candidate. Multiple runs against the same repo are additive. The skill uses prior ledgers and findings to target gaps, revalidate changed source, and carry forward current-source evidence without treating stale or unresolved work as covered. ## Files | File | Purpose | |------|---------| | `SKILL.md` | Setup, core principles, platform terminology, workflow overview, and audit anti-patterns | | `RECONNAISSANCE.md` | Phase 1 reconnaissance prompts and synthesis instructions | | `HUNTING.md` | Phase 2 orchestration, hunting methodology, and validation rules | | `ATTACK-CLASSES.md` | Core, wildcard, and obvious-things attack prompts | | `MEMORY-SAFETY-AND-BINARY.md` | Memory-safety, binary, and kernel hunting classes for native targets | | `AI-AND-LLM.md` | Prompt-injection, agent/tool, and output-handling hunting classes for LLM-backed targets | | `WEB-PROTOCOL-AND-AUTH.md` | HTTP request-framing, cache, and authentication-protocol hunting classes for HTTP-protocol and auth targets | | `CLIENT-SIDE.md` | DOM-injection, messaging-trust, UI-redress, and prototype-pollution hunting classes for client-side/browser targets | | `SUPPLY-CHAIN-AND-RELEASE.md` | Dependency, CI, release, signing, update, plugin, and extension hunting classes | | `CLOUD-AND-DEPLOYMENT.md` | IAM, infrastructure-as-code, container, serverless, ingress, and runtime-configuration hunting classes | | `PROTOCOLS-RPC-AND-MESSAGING.md` | RPC, serialization, queue, broker, webhook, and streaming-protocol hunting classes | | `RESOURCE-EXHAUSTION-AND-AVAILABILITY.md` | Shared resource, quota, queue, worker, and operator-spend hunting classes | | `DATA-ISOLATION-AND-LIFECYCLE.md` | Tenant isolation, cache, search, export, backup, migration, deletion, and restore hunting classes | | `DESKTOP-MOBILE-AND-LOCAL-IPC.md` | Native app, deep-link, webview, exported-component, helper, daemon, and local-IPC hunting classes | | `VALIDATION-AND-REPORTING.md` | Phases 3–6 candidate validation, structured output, record verification, and reporting | | `report-schema.json` | JSON schema for all three `findings.json` verdicts ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 18,
+      "full_name": "astral-sh/ruff",
+      "url": "https://github.com/astral-sh/ruff",
+      "description": "An extremely fast Python linter and code formatter, written in Rust.",
+      "language": "Rust",
+      "stars": 50759,
+      "forks": 2616,
+      "stars_today": 169,
+      "topics": [
+        "linter",
+        "pep8",
+        "python",
+        "python3",
+        "ruff",
+        "rust",
+        "rustpython",
+        "static-analysis",
+        "static-code-analysis",
+        "style-guide",
+        "styleguide"
+      ],
+      "license": "MIT",
+      "created_at": "2022-08-09T17:17:44Z",
+      "updated_at": "2026-11-07T07:10:13Z",
+      "open_issues": 2264,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- Begin section: Overview --> # Ruff [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) [![image](https://img.shields.io/pypi/v/ruff.svg)](https://pypi.python.org/pypi/ruff) [![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/astral-sh/ruff/blob/main/LICENSE) [![image](https://img.shields.io/pypi/pyversions/ruff.svg)](https://pypi.python.org/pypi/ruff) [![Actions status](https://github.com/astral-sh/ruff/workflows/CI/badge.svg)](https://github.com/astral-sh/ruff/actions) [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?logo=discord&logoColor=white)](https://discord.com/invite/astral-sh) [**Docs**](https://docs.astral.sh/ruff/) | [**Playground**](https://play.ruff.rs/) An extremely fast Python linter and code formatter, written in Rust. <p align=\"center\"> <picture align=\"center\"> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://user-images.githubusercontent.com/1309177/232603514-c95e9b0f-6b31-43de-9a80-9e844173fd6a.svg\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://user-images.githubusercontent.com/1309177/232603516-4fb4892d-585c-4b20-b810-3db9161831e4.svg\"> <img alt=\"Shows a bar chart with benchmark results.\" src=\"https://user-images.githubusercontent.com/1309177/232603516-4fb4892d-585c-4b20-b810-3db9161831e4.svg\"> </picture> </p> <p align=\"center\"> <i>Linting the CPython codebase from scratch.</i> </p> - ⚡️ 10-100x faster than existing linters (like Flake8) and formatters (like Black) - 🐍 Installable via `pip` - 🛠️ `pyproject.toml` support - 🤝 Python 3.15 compatibility - ⚖️ Drop-in parity with [Flake8](https://docs.astral.sh/ruff/faq/#how-does-ruffs-linter-compare-to-flake8), [isort](https://docs.astral.sh/ruff/faq/#how-does-ruffs-import-sorting-compare-to-isort), and [Black](https://docs.astral.sh/ruff/faq/#how-does-ruffs-formatter-compare-to-black) - 📦 Built-in caching, to avoid re-analyzing unchanged files - 🔧 Fix support, for automatic error correction (e.g., automatically remove unused imports) - 📏 Over [900 built-in rules](https://docs.astral.sh/ruff/rules/), with native re-implementations of popular Flake8 plugins, like flake8-bugbear - ⌨️ First-party [editor integrations](https://docs.astral.sh/ruff/editors) for [VS Code](https://github.com/astral-sh/ruff-vscode) and [more](https://docs.astral.sh/ruff/editors/setup) - 🌎 Monorepo-friendly, with [hierarchical and cascading configuration](https://docs.astral.sh/ruff/configuration/#config-file-discovery) Ruff aims to be orders of magnitude faster than alternative tools while integrating more functionality behind a single, common interface. Ruff can be used to replace [Flake8](https://pypi.org/project/flake8/) (plus dozens of plugins), [Black](https://github.com/psf/black), [isort](https://pypi.org/project/isort/), [pydocstyle](https://pypi.org/project/pydocstyle/), [pyupgrade](https://pypi.org/project/pyupgrade/), [autoflake](https://pypi.org/project/autoflake/), and more, all while executing tens or hundreds of times faster than any individual tool. Ruff is actively developed and used in major open-source projects like: - [Apache Airflow](https://github.com/apache/airflow) - [Apache Superset](https://github.com/apache/superset) - [FastAPI](https://github.com/tiangolo/fastapi) - [Hugging Face](https://github.com/huggingface/transformers) - [Pandas](https://github.com/pandas-dev/pandas) - [SciPy](https://github.com/scipy/scipy) Ruff is backed by [Astral](https://astral.sh), the creators of [uv](https://github.com/astral-sh/uv) and [ty](https://github.com/astral-sh/ty). Read the [launch post](https://astral.sh/blog/announcing-astral-the-company-behind-ruff), or the original [project announcement](https://notes.crmarsh.com/python-tooling-could-be-much-much-faster). ## Testimonials [**Sebastián Ramírez**](https://twitter.com/tiangolo/status/1591912354882764802), creator of [FastAPI](https://github.com/tiangol",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 5/18 个项目可从资料确认与 AI 直接相关；其余 13 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（13 个）、AI 智能体与数字劳动力（2 个）、AI 编程智能体（2 个）。",
+      "排名第一的 zed-industries/zed 代表“其他数字产品与工具”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（13 个项目）",
+      "AI 智能体与数字劳动力（2 个项目）",
+      "AI 编程智能体（2 个项目）",
+      "语音 AI 与自然交互（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "zed-industries/zed",
+        "one_line_summary": "围绕“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+        "solution": "围绕“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 306 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 zed 描述为“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom an”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. 它的办法是：围绕“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 zed 的潜在使用者而言，在项目方所述的“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom an”场景中，可直接查看和试验项目方所述的“Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zed-industries/zed",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Code at the speed of thought – Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zed-industries/zed",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/zed-industries/zed",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "NVIDIA/auto-ontology",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 2015 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 auto-ontology 描述为“Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 auto-ontology 的潜在使用者而言，在项目方所述的“Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/NVIDIA/auto-ontology",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/NVIDIA/auto-ontology",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/NVIDIA/auto-ontology",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "rails/rails",
+        "one_line_summary": "围绕“Ruby on Rails”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Ruby on Rails",
+        "solution": "围绕“Ruby on Rails”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 142 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 rails 描述为“Ruby on Rails”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Ruby on Rails 它的办法是：围绕“Ruby on Rails”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Ruby on Rails”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 rails 的潜在使用者而言，在项目方所述的“Ruby on Rails”场景中，可直接查看和试验项目方所述的“Ruby on Rails”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/rails/rails",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Ruby on Rails",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/rails/rails",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/rails/rails",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mpv-player/mpv",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 37 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 mpv 描述为“🎥 Command line media player”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 mpv 的潜在使用者而言，在项目方所述的“🎥 Command line media player”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mpv-player/mpv",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🎥 Command line media player",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mpv-player/mpv",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mpv-player/mpv",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "rust-lang/rust",
+        "one_line_summary": "围绕“Empowering everyone to build reliable and efficient software.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Empowering everyone to build reliable and efficient software.",
+        "solution": "围绕“Empowering everyone to build reliable and efficient software.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 192 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 rust 描述为“Empowering everyone to build reliable and efficient software.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Empowering everyone to build reliable and efficient software. 它的办法是：围绕“Empowering everyone to build reliable and efficient software.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Empowering everyone to build reliable and efficient software.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 rust 的潜在使用者而言，在项目方所述的“Empowering everyone to build reliable and efficient software.”场景中，可直接查看和试验项目方所述的“Empowering everyone to build reliable and efficient software.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/rust-lang/rust",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Empowering everyone to build reliable and efficient software.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/rust-lang/rust",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/rust-lang/rust",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "react/react",
+        "one_line_summary": "围绕“The library for web and native user interfaces.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The library for web and native user interfaces.",
+        "solution": "围绕“The library for web and native user interfaces.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 248 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 react 描述为“The library for web and native user interfaces.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The library for web and native user interfaces. 它的办法是：围绕“The library for web and native user interfaces.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The library for web and native user interfaces.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 react 的潜在使用者而言，在项目方所述的“The library for web and native user interfaces.”场景中，可直接查看和试验项目方所述的“The library for web and native user interfaces.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/react/react",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The library for web and native user interfaces.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/react/react",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/react/react",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "angular/angular",
+        "one_line_summary": "围绕“Deliver web apps with confidence 🚀”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Deliver web apps with confidence 🚀",
+        "solution": "围绕“Deliver web apps with confidence 🚀”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 135 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 angular 描述为“Deliver web apps with confidence 🚀”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Deliver web apps with confidence 🚀 它的办法是：围绕“Deliver web apps with confidence 🚀”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Deliver web apps with confidence 🚀”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 angular 的潜在使用者而言，在项目方所述的“Deliver web apps with confidence 🚀”场景中，可直接查看和试验项目方所述的“Deliver web apps with confidence 🚀”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/angular/angular",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Deliver web apps with confidence 🚀",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/angular/angular",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/angular/angular",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "symfony/symfony",
+        "one_line_summary": "围绕“The Symfony PHP framework”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The Symfony PHP framework",
+        "solution": "围绕“The Symfony PHP framework”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 128 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 symfony 描述为“The Symfony PHP framework”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The Symfony PHP framework 它的办法是：围绕“The Symfony PHP framework”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The Symfony PHP framework”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 symfony 的潜在使用者而言，在项目方所述的“The Symfony PHP framework”场景中，可直接查看和试验项目方所述的“The Symfony PHP framework”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/symfony/symfony",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The Symfony PHP framework",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/symfony/symfony",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/symfony/symfony",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "prometheus/prometheus",
+        "one_line_summary": "围绕“The Prometheus monitoring system and time series database.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The Prometheus monitoring system and time series database.",
+        "solution": "围绕“The Prometheus monitoring system and time series database.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 148 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 prometheus 描述为“The Prometheus monitoring system and time series database.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The Prometheus monitoring system and time series database. 它的办法是：围绕“The Prometheus monitoring system and time series database.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The Prometheus monitoring system and time series database.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 prometheus 的潜在使用者而言，在项目方所述的“The Prometheus monitoring system and time series database.”场景中，可直接查看和试验项目方所述的“The Prometheus monitoring system and time series database.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/prometheus/prometheus",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The Prometheus monitoring system and time series database.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/prometheus/prometheus",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/prometheus/prometheus",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google/skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 534 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 skills 描述为“Agent Skills for Google products and technologies”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Agent Skills for Google products and technologies”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Agent Skills for Google products and technologies",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "microsoft/vscode",
+        "one_line_summary": "围绕“Visual Studio Code”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Visual Studio Code",
+        "solution": "围绕“Visual Studio Code”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 301 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 vscode 描述为“Visual Studio Code”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Visual Studio Code 它的办法是：围绕“Visual Studio Code”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Visual Studio Code”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 vscode 的潜在使用者而言，在项目方所述的“Visual Studio Code”场景中，可直接查看和试验项目方所述的“Visual Studio Code”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/vscode",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Visual Studio Code",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/microsoft/vscode",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/microsoft/vscode",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "lz4/lz4",
+        "one_line_summary": "围绕“Extremely Fast Compression algorithm”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Extremely Fast Compression algorithm",
+        "solution": "围绕“Extremely Fast Compression algorithm”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 315 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 lz4 描述为“Extremely Fast Compression algorithm”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Extremely Fast Compression algorithm 它的办法是：围绕“Extremely Fast Compression algorithm”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Extremely Fast Compression algorithm”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 lz4 的潜在使用者而言，在项目方所述的“Extremely Fast Compression algorithm”场景中，可直接查看和试验项目方所述的“Extremely Fast Compression algorithm”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lz4/lz4",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Extremely Fast Compression algorithm",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/lz4/lz4",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/lz4/lz4",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "nushell/nushell",
+        "one_line_summary": "围绕“A new type of shell”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A new type of shell",
+        "solution": "围绕“A new type of shell”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 131 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 nushell 描述为“A new type of shell”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A new type of shell 它的办法是：围绕“A new type of shell”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A new type of shell”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 nushell 的潜在使用者而言，在项目方所述的“A new type of shell”场景中，可直接查看和试验项目方所述的“A new type of shell”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nushell/nushell",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A new type of shell",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nushell/nushell",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/nushell/nushell",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "etcd-io/etcd",
+        "one_line_summary": "围绕“Distributed reliable key-value store for the most critical data of a distributed system”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Distributed reliable key-value store for the most critical data of a distributed system",
+        "solution": "围绕“Distributed reliable key-value store for the most critical data of a distributed system”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 128 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 etcd 描述为“Distributed reliable key-value store for the most critical data of a distributed system”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Distributed reliable key-value store for the most critical data of a distributed system 它的办法是：围绕“Distributed reliable key-value store for the most critical data of a distributed system”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Distributed reliable key-value store for the most critical data of a distributed system”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 etcd 的潜在使用者而言，在项目方所述的“Distributed reliable key-value store for the most critical data of a distributed system”场景中，可直接查看和试验项目方所述的“Distributed reliable key-value store for the most critical data of a distributed system”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/etcd-io/etcd",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Distributed reliable key-value store for the most critical data of a distributed system",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/etcd-io/etcd",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/etcd-io/etcd",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "openssl/openssl",
+        "one_line_summary": "围绕“General purpose TLS and crypto library”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：General purpose TLS and crypto library",
+        "solution": "围绕“General purpose TLS and crypto library”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 26 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 openssl 描述为“General purpose TLS and crypto library”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：General purpose TLS and crypto library 它的办法是：围绕“General purpose TLS and crypto library”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“General purpose TLS and crypto library”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 openssl 的潜在使用者而言，在项目方所述的“General purpose TLS and crypto library”场景中，可直接查看和试验项目方所述的“General purpose TLS and crypto library”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openssl/openssl",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "General purpose TLS and crypto library",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openssl/openssl",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/openssl/openssl",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 16 名，当日新增 2070 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 skills 描述为“Skills for Real Engineers. Straight from my .agents directory.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Skills for Real Engineers. Straight from my .agents directory.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 16 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 52,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cloudflare/security-audit-skill",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 17 名，当日新增 2548 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 security-audit-skill 描述为“A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 security-audit-skill 的潜在使用者而言，在项目方所述的“A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 17 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/security-audit-skill",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cloudflare/security-audit-skill",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 49,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cloudflare/security-audit-skill",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "astral-sh/ruff",
+        "one_line_summary": "围绕“An extremely fast Python linter and code formatter, written in Rust.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：An extremely fast Python linter and code formatter, written in Rust.",
+        "solution": "围绕“An extremely fast Python linter and code formatter, written in Rust.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 18 名，当日新增 169 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 ruff 描述为“An extremely fast Python linter and code formatter, written in Rust.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：An extremely fast Python linter and code formatter, written in Rust. 它的办法是：围绕“An extremely fast Python linter and code formatter, written in Rust.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“An extremely fast Python linter and code formatter, written in Rust.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 ruff 的潜在使用者而言，在项目方所述的“An extremely fast Python linter and code formatter, written in Rust.”场景中，可直接查看和试验项目方所述的“An extremely fast Python linter and code formatter, written in Rust.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 18 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/astral-sh/ruff",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An extremely fast Python linter and code formatter, written in Rust.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/astral-sh/ruff",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 46,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/astral-sh/ruff",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 2,
+        "project_count": 2
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 41,
+        "project_count": 28
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 32,
+        "project_count": 14
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 6,
+        "project_count": 5
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 4,
+        "project_count": 2
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 41
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 32
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 32
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 6
+      },
+      {
+        "name": "需要免手操作的普通用户",
+        "count": 6
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 6
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 6
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 5
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 108
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 24,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "企业 IT 自动化",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 94,
+        "project_count": 52
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 10,
+        "project_count": 2
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 8,
+        "project_count": 5
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 39,
+        "project_count": 14
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 5,
+        "project_count": 3
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 101,
+        "project_count": 38
+      },
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 94,
+        "project_count": 52
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 39,
+        "project_count": 14
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 14,
+        "project_count": 7
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 101
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 101
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 94
+      },
+      {
+        "name": "软件产品团队",
+        "count": 39
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 39
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 14
+      },
+      {
+        "name": "需要免手操作的普通用户",
+        "count": 14
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 10
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 320
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-11-06",
+    "new": [
+      "angular/angular",
+      "astral-sh/ruff",
+      "cloudflare/security-audit-skill",
+      "etcd-io/etcd",
+      "microsoft/vscode",
+      "mpv-player/mpv",
+      "nushell/nushell",
+      "openssl/openssl",
+      "prometheus/prometheus",
+      "rails/rails",
+      "react/react",
+      "rust-lang/rust",
+      "symfony/symfony",
+      "zed-industries/zed"
+    ],
+    "retained": [
+      "NVIDIA/auto-ontology",
+      "google/skills",
+      "lz4/lz4",
+      "mattpocock/skills"
+    ],
+    "exited": [
+      "ConardLi/garden-skills",
+      "D4Vinci/Scrapling",
+      "JiaFeiMiao-K-Cat/DiscImageStudio",
+      "Usagi-org/ai-goofish-monitor",
+      "floci-io/floci",
+      "garrytan/gstack",
+      "max-sixty/worktrunk",
+      "microsoft/VibeVoice",
+      "scenario-labs/skills",
+      "vercel-labs/agent-browser",
+      "vercel-labs/agent-desktop"
+    ],
+    "risers": [
+      {
+        "full_name": "NVIDIA/auto-ontology",
+        "previous_rank": 1,
+        "rank": 2,
+        "change": -1
+      },
+      {
+        "full_name": "google/skills",
+        "previous_rank": 9,
+        "rank": 10,
+        "change": -1
+      },
+      {
+        "full_name": "lz4/lz4",
+        "previous_rank": 8,
+        "rank": 12,
+        "change": -4
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "previous_rank": 2,
+        "rank": 16,
+        "change": -14
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "google/skills",
+        "previous_stars_today": 211,
+        "stars_today": 534,
+        "change": 323
+      },
+      {
+        "full_name": "lz4/lz4",
+        "previous_stars_today": 23,
+        "stars_today": 315,
+        "change": 292
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "previous_stars_today": 2071,
+        "stars_today": 2070,
+        "change": -1
+      },
+      {
+        "full_name": "NVIDIA/auto-ontology",
+        "previous_stars_today": 2679,
+        "stars_today": 2015,
+        "change": -664
+      }
+    ]
+  }
+}
