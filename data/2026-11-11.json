@@ -1,0 +1,1493 @@
+{
+  "date": "2026-11-11",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 12,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": 23698,
+      "forks": 1862,
+      "stars_today": 3108,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-01-09T16:20:32Z",
+      "updated_at": "2026-11-11T07:45:13Z",
+      "open_issues": 671,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- SYNC CONTRACT: Architecture changes require documentation updates. --> <div align=\"center\"> <img src=\"https://lookaside.facebook.com/assets/astryx/Astryx-Banner.png\" alt=\"Astryx\" width=\"100%\" /> # Astryx An open source design system that's fully customizable and built for how we build now: <br/> by people and the agents working alongside them. **Currently in Beta** · Built on [React 19+](https://react.dev) and [StyleX](https://stylexjs.com) [![npm version](https://img.shields.io/npm/v/@astryxdesign/core?label=npm&color=cb3837&logo=npm)](https://www.npmjs.com/package/@astryxdesign/core) [![license MIT](https://img.shields.io/npm/l/@astryxdesign/core?color=blue)](LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/meta/astryx/wiki/Contributing) [![Docs](https://img.shields.io/badge/Docs-astryx.atmeta.com-6741d9?logo=readthedocs&logoColor=white)](https://astryx.atmeta.com) [![Storybook](https://img.shields.io/badge/Storybook-live-ff4785?logo=storybook&logoColor=white)](https://astryx.atmeta.com/storybook/) [![Sandbox](https://img.shields.io/badge/Sandbox-playground-A9792B)](https://astryx.atmeta.com/sandbox/) **[Docs](https://astryx.atmeta.com)** · **[Storybook](https://astryx.atmeta.com/storybook/)** · **[Sandbox](https://astryx.atmeta.com/sandbox/)** · **[Contributing](https://github.com/meta/astryx/wiki/Contributing)** · **[Discord](https://discord.com/invite/XnsUcFykEP)** </div> ## Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles with StyleX, but that's invisible to consumers. Override with `className` using Tailwind, CSS modules, or plain CSS — whatever your project already uses. - **Customize without wrapping.** A theme is a set of CSS custom property overrides, so a designer can make Astryx unmistakably theirs without forking or wrapping component source. - **Built for people and agents.** The API, docs, and CLI are designed together so a person and an AI assistant build the same way, from the same reference. ## Getting Started Astryx requires **React 19** or later (`react` and `react-dom` are peer dependencies of `@astryxdesign/core`). Install Astryx, a theme, and its peer dependencies: ```bash # npm npm install @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex npm install -D @astryxdesign/cli # pnpm pnpm add @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex pnpm add -D @astryxdesign/cli # yarn yarn add @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex yarn add -D @astryxdesign/cli ``` You can also install the CLI once for your computer, so `astryx` works in any folder and every coding agent knows Astryx; in a project, it still runs that project's own version: ```bash npm i -g @astryxdesign/cli ``` Project install, global install, or both? `astryx docs global/project-global-or-both` compares them (both is recommended), and `astryx docs global` explains how global mode works. The simplest setup is a few CSS imports plus a theme provider — no build plugin, no PostCSS or Babel config. See the **[@astryxdesign/core README](packages/core/README.md#quick-start)** for",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "language": "Python",
+      "stars": 192646,
+      "forks": 22674,
+      "stars_today": 1679,
+      "topics": [
+        "agent-skills"
+      ],
+      "license": "",
+      "created_at": "2025-09-22T15:53:31Z",
+      "updated_at": "2026-11-11T07:45:43Z",
+      "open_issues": 1516,
+      "default_branch": "main",
+      "readme_excerpt": "> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see [agentskills.io](http://agentskills.io). [![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills) # Skills Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks. For more information, check out: - [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills) - [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) - [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills) - [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) # About This Repository This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.). Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to understand different patterns and approaches. Many skills in this repo are open source (Apache 2.0). We've also included the document creation & editing skills that power [Claude's document capabilities](https://www.anthropic.com/news/create-files) under the hood in the [`skills/docx`](./skills/docx), [`skills/pdf`](./skills/pdf), [`skills/pptx`](./skills/pptx), and [`skills/xlsx`](./skills/xlsx) subfolders. These are also open source (Apache 2.0), and we wanted to share them with developers as a reference for more complex skills that are actively used in a production AI application. ## Disclaimer **These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks. # Skill Sets - [./skills](./skills): Skill examples for Creative & Design, Development & Technical, Enterprise & Communication, and Document Skills - [./spec](./spec): The Agent Skills specification - [./template](./template): Skill template # Try in Claude Code, Claude.ai, and the API ## Claude Code You can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code: ``` /plugin marketplace add anthropics/skills ``` Then, to install a specific set of skills: 1. Select `Browse and install plugins` 2. Select `anthropic-agent-skills` 3. Select `document-skills` or `example-skills` 4. Select `Install now` Alternatively, directly install either Plugin via: ``` /plugin install document-skills@anthropic-agent-skills /plugin install example-skills@anthropic-agent-skills ``` After installing the plugin, you can use the skill by just mentioning it. For instance, if you install the `document-skills` plugin from the marketplace, you can ask Claude Code to do something like: \"Use the PDF skill to extract the form fields from `path/to/some-file.pdf`\" ## Claude.ai These example skills are all already available to paid plans in Claude.ai. To use any skill from this repository or upload custom skills, follow the instructions in [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skil",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 115403,
+      "forks": 12110,
+      "stars_today": 465,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-15T20:20:26Z",
+      "updated_at": "2026-11-11T07:45:19Z",
+      "open_issues": 133,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. <a href=\"https://trendshift.io/repositories/25200\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/25200\" alt=\"addyosmani%2Fagent-skills | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> ![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg) ``` DEFINE PLAN BUILD VERIFY REVIEW SHIP ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │ QA │ ───▶ │ Go │ │Refine│ │ PRD │ │ Impl │ │Debug │ │ Gate │ │ Live │ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ /spec /plan /build /test /review /ship ``` --- ## Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | |-------------------|---------|---------------| | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`/build auto`** generates the plan and implements every task in a single approved pass — you approve the plan once, then it runs autonomously. It removes the human stepping *between* tasks, not the verification: every task is still test-driven and committed individually, and it pauses on failures or risky steps. Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on. --- ## Quick Start **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more): ```bash npx skills add addyosmani/agent-skills # install all 25 skills npx skills add addyosmani/agent-skills --list # browse before installing ``` Or grab individual skills: ```bash npx skills add addyosmani/agent-skills --skill code-review-and-quality # five-axis review before merge npx skills add addyosmani/agent-skills --skill interview-me # requirements interrogation, one question at a time npx skills add addyosmani/agent-skills --skill test-driven-development # red-green-refactor, enforced ``` > **Installing one skill?** A per-skill `npx` install copies only > `skills/<name>/`, not the repo-level `references/` directory. The skill still > works, but paths to supplementary shared checklists are unavailable. Use a > whole-repo integration, clone the repository, or copy the needed checklist into > a `references/` directory inside the installed skill. This portability gap is > tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361). Prefer a native integration? Pick your tool below. <details> <summary><b>Claude Code (recommended)</b></summary> **Marketplace install:** ``` /plugin marketplace add addyosmani/agent-skills /plugin install agent-skills@addy-agent-skills ``` > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "anthropics/claude-quickstarts",
+      "url": "https://github.com/anthropics/claude-quickstarts",
+      "description": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+      "language": "Python",
+      "stars": 20651,
+      "forks": 3478,
+      "stars_today": 531,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2024-08-29T19:52:32Z",
+      "updated_at": "2026-11-11T07:44:28Z",
+      "open_issues": 242,
+      "default_branch": "main",
+      "readme_excerpt": "# Claude Quickstarts Claude Quickstarts is a collection of projects designed to help developers quickly get started with building applications using the Claude API. Each quickstart provides a foundation that you can easily build upon and customize for your specific needs. ## Getting Started To use these quickstarts, you'll need an Claude API key. If you don't have one yet, you can sign up for free at [console.anthropic.com](https://console.anthropic.com). ## Available Quickstarts ### Customer Support Agent A customer support agent powered by Claude. This project demonstrates how to leverage Claude's natural language understanding and generation capabilities to create an AI-assisted customer support system with access to a knowledge base. [Go to Customer Support Agent Quickstart](./customer-support-agent) ### Financial Data Analyst A financial data analyst powered by Claude. This project demonstrates how to leverage Claude's capabilities with interactive data visualization to analyze financial data via chat. [Go to Financial Data Analyst Quickstart](./financial-data-analyst) ### Computer Use Demo An environment and tools that Claude can use to control a desktop computer. This project demonstrates how to leverage the computer use capabilities of Claude, including support for the latest `computer_toolset_20260801` toolset shape, where each computer action is a member tool the model calls by name. [Go to Computer Use Demo Quickstart](./computer-use-demo) ### Computer Use Best Practices A pedagogical, native-macOS reference implementation of a computer-use agent. Unlike the containerized Computer Use Demo, this project runs directly against the macOS desktop (run it in a VM!) and demonstrates common patterns for building more reliable and cost-effective computer-use agents: explicit tool definitions, correct image sizing and pruning, prompt caching, server-side compaction, batched tool calls, a sandboxed shell, and trajectory recording. It pairs with Anthropic's [computer-use best-practices guide](https://claude.com/blog/best-practices-for-computer-and-browser-use-with-claude). [Go to Computer Use Best Practices Quickstart](./computer-use-best-practices) ### Browser Use Demo A complete reference implementation for browser automation powered by Claude. This project demonstrates how to give Claude the ability to navigate websites, inspect and interact with DOM elements, extract content, and fill forms using a custom Playwright-backed browser tool. [Go to Browser Use Demo Quickstart](./browser-use-demo) ### Browser Toolset Quickstart The minimal CDP example of Claude's browser toolset (`browser_toolset_20260801`), in Python and TypeScript. It has a small driver for one Chromium tab over the Chrome DevTools Protocol, a script that runs the driver with the tool runner, and a script that exercises it without a model. It shows the interface and is not production code. [Go to Browser Toolset Quickstart](./browser-toolset) ### Computer Toolset Quickstart The minimal VNC example of Claude's computer toolset (`computer_toolset_20260801`), in Python and TypeScript. It has a small driver for one desktop over VNC (the RFB protocol, no VNC library), a script that runs the driver with the tool runner, and a script that exercises it without a model. It shows the interface and is not production code. [Go to Computer Toolset Quickstart](./computer-toolset) ### Autonomous Coding Agent An autonomous coding agent powered by the Claude Agent SDK. This project demonstrates a two-agent pattern (initializer + coding agent) that can build complete applications over multiple sessions, with progress persisted via git and a feature list that the agent works through incrementally. [Go to Autonomous Coding Agent Quickstart](./autonomous-coding) ### Managed Agents: Chat SDK A browser chat app powered by Claude Managed Agents and Vercel's Chat SDK. This project demonstrates how to pair a persistent Managed Agents session per conversation with a chat surface: a rese",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": 1,
+      "streak_days": 2
+    },
+    {
+      "rank": 5,
+      "full_name": "google-deepmind/mujoco",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+      "language": "C++",
+      "stars": 17507,
+      "forks": 2159,
+      "stars_today": 456,
+      "topics": [
+        "mujoco",
+        "physics",
+        "robotics"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2021-08-27T12:25:48Z",
+      "updated_at": "2026-11-11T07:42:45Z",
+      "open_issues": 355,
+      "default_branch": "main",
+      "readme_excerpt": "<h1> <a href=\"https://mujoco.org\"><img alt=\"MuJoCo\" src=\"banner.png\" width=\"100%\"/></a> </h1> <p> <a href=\"https://mujoco.org\" alt=\"Website\"> <img src=\"https://img.shields.io/badge/website-mujoco.org-0053d6\"> </a> <a href=\"https://github.com/google-deepmind/mujoco/actions/workflows/build.yml?query=branch%3Amain\" alt=\"GitHub Actions\"> <img src=\"https://img.shields.io/github/actions/workflow/status/google-deepmind/mujoco/build.yml?branch=main\"> </a> <a href=\"https://mujoco.readthedocs.io/\" alt=\"Documentation\"> <img src=\"https://readthedocs.org/projects/mujoco/badge/?version=latest\"> </a> <a href=\"https://github.com/google-deepmind/mujoco/blob/main/LICENSE\" alt=\"License\"> <img src=\"https://img.shields.io/github/license/google-deepmind/mujoco\"> </a> </p> **MuJoCo** stands for **Mu**lti-**Jo**int dynamics with **Co**ntact. It is a general purpose physics engine that aims to facilitate research and development in robotics, biomechanics, graphics and animation, machine learning, and other areas which demand fast and accurate simulation of articulated structures interacting with their environment. This repository is maintained by [Google DeepMind](https://www.deepmind.com/). MuJoCo has a C API and is intended for researchers and developers. The runtime simulation module is tuned to maximize performance and operates on low-level data structures that are preallocated by the built-in XML compiler. The library includes interactive visualization in native desktop windows and web browsers. MuJoCo further exposes a large number of utility functions for computing physics-related quantities. We also provide [Python bindings] and a plug-in for the [Unity] game engine. ## Documentation MuJoCo's documentation can be found at [mujoco.readthedocs.io]. Upcoming features due for the next release can be found in the [changelog] in the \"latest\" branch. ## Getting Started 1. **Try MuJoCo in your browser.** Visit [mujoco.org](https://mujoco.org) to explore MuJoCo on desktop or mobile with nothing to install, or open [live.mujoco.org](https://live.mujoco.org) to inspect and drag and drop your own models in the WebAssembly version of the [MuJoCo Studio] app (slower than native C, since it runs in WebAssembly). 2. **Run a viewer on your machine.** Follow the [Getting Started] guide in the documentation to download a prebuilt release and run the [MuJoCo Studio] app or the classic `simulate` viewer (shown in [this video](https://www.youtube.com/watch?v=P83tKA1iz2Y)) on your machine. 3. **Explore our online IPython notebooks.** If you are a Python user, you might want to start with our tutorial notebooks running on Google Colab: - The **introductory** tutorial teaches MuJoCo basics: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/tutorial.ipynb) - The **Model Editing** tutorial shows how to create and edit models procedurally: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/mjspec.ipynb) - The **rollout** tutorial shows how to use the multithreaded `rollout` module: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/rollout.ipynb) - The **LQR** tutorial synthesizes a linear-quadratic controller, balancing a humanoid on one leg: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/LQR.ipynb) - The **least-squares** tutorial explains how to use the Python-based nonlinear least-squares solver: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/mujoco/blob/main/python/least_squares.ipynb) - The **MJX** tutorial provides usage examples of [MuJoCo XLA](https://",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 6,
+      "full_name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": 12284,
+      "forks": 909,
+      "stars_today": 159,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "created_at": "2025-07-23T04:13:55Z",
+      "updated_at": "2026-11-11T07:44:56Z",
+      "open_issues": 885,
+      "default_branch": "main",
+      "readme_excerpt": "[![Ask DeepWiki](https://img.shields.io/badge/Ask-DeepWiki-blue)](https://deepwiki.com/we-promise/sure) [![View performance data on Skylight](https://badges.skylight.io/typical/s6PEZSKwcklL.svg)](https://oss.skylight.io/app/applications/s6PEZSKwcklL) [![Dosu](https://raw.githubusercontent.com/dosu-ai/assets/main/dosu-badge.svg)](https://app.dosu.dev/a72bdcfd-15f5-4edc-bd85-ea0daa6c3adc/ask) [![Pipelock Security Scan](https://github.com/we-promise/sure/actions/workflows/pipelock.yml/badge.svg)](https://github.com/we-promise/sure/actions/workflows/pipelock.yml) <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/we-promise/sure/main/docs/screenshots/dashboard-dark.webp\"> <img alt=\"The Sure dashboard in two columns (cashflow, net worth, spending and outflows) beside the AI assistant answering a question about savings\" src=\"https://raw.githubusercontent.com/we-promise/sure/main/docs/screenshots/dashboard-light.webp\"> </picture> <p align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://readme-i18n.com/de/we-promise/sure\">Deutsch</a> | <a href=\"https://readme-i18n.com/es/we-promise/sure\">Español</a> | <a href=\"https://readme-i18n.com/fr/we-promise/sure\">Français</a> | <a href=\"https://readme-i18n.com/ja/we-promise/sure\">日本語</a> | <a href=\"https://readme-i18n.com/ko/we-promise/sure\">한국어</a> | <a href=\"https://readme-i18n.com/pt/we-promise/sure\">Português</a> | <a href=\"https://readme-i18n.com/ru/we-promise/sure\">Русский</a> | <a href=\"https://readme-i18n.com/zh/we-promise/sure\">中文</a> </p> # Sure: The personal finance app for everyone <b>Get involved: [Discord](https://discord.gg/36ZGBsxYEK) • [Website](https://sure.am) • [Issues](https://github.com/we-promise/sure/issues)</b> > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. <br /> > Learn more in their [final release](https://github.com/maybe-finance/maybe/releases/tag/v0.6.0) doc. ## Backstory The [Maybe Finance](https://github.com/maybe-finance/maybe) (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! ## Hosting Sure Sure is a fully working personal finance app that can be [self hosted with Docker](docs/hosting/docker.md). Sure can be accessed from a browser, the macOS desktop app, the mobile app, API clients, and LLM agents. See [Sure Clients](docs/clients.md) for an overview. ## Forking and Attribution This repo is a community fork of the archived Maybe Finance repo. You’re free to fork it under the AGPLv3 license — but we’d love it if you stuck around and contributed here instead. To stay compliant and avoid trademark issues: - Be sure to include the original [AGPLv3 license](https://github.com/maybe-finance/maybe/blob/main/LICENSE) and clearly state in your README that your fork is based on Maybe Finance but is **not affiliated with or endorsed by** Maybe Finance Inc. - \"Maybe\" is a trademark of Maybe Finance Inc. and therefore, use of it is NOT allowed in forked repositories (or the logo) ## Performance Issues With data-heavy apps, inevitably, there are performance issues. We've set up a public dashboard showing the problematic requests seen on the de",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "homeassistant-ai/ha-mcp",
+      "url": "https://github.com/homeassistant-ai/ha-mcp",
+      "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "language": "Python",
+      "stars": 6842,
+      "forks": 439,
+      "stars_today": 790,
+      "topics": [
+        "ai",
+        "claude",
+        "hacs",
+        "home-assistant",
+        "home-automation",
+        "llm",
+        "mcp",
+        "model-context-protocol"
+      ],
+      "license": "MIT",
+      "created_at": "2025-09-14T13:23:45Z",
+      "updated_at": "2026-11-11T07:45:12Z",
+      "open_issues": 21,
+      "default_branch": "master",
+      "readme_excerpt": "> **Breaking change (v7.3.0):** `ha_config_set_yaml` has been moved to [beta](docs/beta.md). <div align=\"center\"> <img src=\"https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/img/ha-mcp-logo.png\" alt=\"Home Assistant MCP Server Logo\" width=\"300\"/> # HA-MCP — Manage Home Assistant with AI <!-- mcp-name: io.github.homeassistant-ai/ha-mcp --> <p align=\"center\"> <img src=\"https://img.shields.io/badge/tools-87-blue\" alt=\"87 Tools\"> <a href=\"https://github.com/homeassistant-ai/ha-mcp/releases\"><img src=\"https://img.shields.io/github/v/release/homeassistant-ai/ha-mcp\" alt=\"Release\"></a> <a href=\"https://github.com/homeassistant-ai/ha-mcp/actions/workflows/e2e-tests.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/homeassistant-ai/ha-mcp/e2e-tests.yml?branch=master&label=E2E%20Tests\" alt=\"E2E Tests\"></a> <a href=\"LICENSE.md\"><img src=\"https://img.shields.io/github/license/homeassistant-ai/ha-mcp.svg\" alt=\"License\"></a> <br> <a href=\"https://github.com/homeassistant-ai/ha-mcp/commits/master\"><img src=\"https://img.shields.io/github/commit-activity/m/homeassistant-ai/ha-mcp.svg\" alt=\"Activity\"></a> <a href=\"https://github.com/jlowin/fastmcp\"><img src=\"https://img.shields.io/badge/Built%20with-FastMCP-purple\" alt=\"Built with FastMCP\"></a> <img src=\"https://img.shields.io/python/required-version-toml?tomlFilePath=https%3A%2F%2Fraw.githubusercontent.com%2Fhomeassistant-ai%2Fha-mcp%2Fmaster%2Fpyproject.toml\" alt=\"Python Version\"> <a href=\"https://github.com/sponsors/julienld\"><img src=\"https://img.shields.io/badge/GitHub_Sponsors-☕-blueviolet\" alt=\"GitHub Sponsors\"></a> <a href=\"https://homeassistant-ai.github.io/ha-mcp/\"><img src=\"https://img.shields.io/badge/Website-docs-teal\" alt=\"Website\"></a> </p> <p align=\"center\"> <em>Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.</em> </p> </div> --- ![Demo with Claude Desktop](https://raw.githubusercontent.com/homeassistant-ai/ha-mcp/master/docs/img/demo.webp) --- ## 🚀 Get Started The recommended way to run ha-mcp is the **HA-MCP integration**. It installs into Home Assistant through HACS (the built-in Marketplace on Home Assistant 2026.11+), runs the full server **in-process**, and works on **every** Home Assistant installation type — Home Assistant OS, Supervised, Container, and Core — with full feature parity. It is the easiest setup in every case: setup asks for an administrator access token and how clients may connect. **Add it to Home Assistant via HACS or, on Home Assistant 2026.11+, the Marketplace (the preferred install):** [![Add HA-MCP to HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=homeassistant-ai&repository=ha-mcp&category=integration) **Quick start:** > The setup below is for version 9.0.0 (October 28, 2026) and later; earlier versions show a shorter setup form without the administrator account step. 1. Install the **HA-MCP integration** (requires **Home Assistant 2026.8.0 or newer**; see [compatibility details](docs/in-process-server.md#requirements)). On **Home Assistant 2026.8–2026.10**, open HACS, search for **HA-MCP**, then **Download**. On **Home Assistant 2026.11 or newer**, open **Settings → Marketplace**, accept its first-run warning, and search for **HA-MCP**, then **Install**. HA-MCP is in the default catalog, so installing it and receiving its updates do not require connecting GitHub or adding a custom repository. The badge above also opens its catalog page. Already installed from the earlier `homeassistant-ai/ha-mcp-integration` repository? It keeps receiving the same releases. On the Marketplace, keep GitHub connected for its background checks on that custom repository. Older installed releases may still appear as **HA-MCP Custom Component**; searching for **HA-MCP** matches both names. 2. **Restart Home Assistant.** 3. Decide which administrator account the server acts as. Either create a long-lived access token on y",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 3,
+      "streak_days": 2
+    },
+    {
+      "rank": 8,
+      "full_name": "vercel-labs/agent-browser",
+      "url": "https://github.com/vercel-labs/agent-browser",
+      "description": "Browser automation CLI for AI agents",
+      "language": "Rust",
+      "stars": 49460,
+      "forks": 3465,
+      "stars_today": 780,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-01-11T05:38:15Z",
+      "updated_at": "2026-11-11T07:40:59Z",
+      "open_issues": 571,
+      "default_branch": "main",
+      "readme_excerpt": "# agent-browser Browser automation for AI agents: open pages, read them as an accessibility tree, and act on elements from the shell. <p> <a href=\"https://vercel.com/labs#labs-products\"><img alt=\"Vercel Labs Product\" src=\"https://img.shields.io/badge/LABS-PRODUCT-0a0a0a.svg?style=for-the-badge&amp;logo=Vercel&amp;labelColor=000000\" height=\"28\"></a> <a href=\"https://www.npmjs.com/package/agent-browser\"><img alt=\"npm version: agent-browser\" src=\"https://img.shields.io/npm/v/agent-browser.svg?style=for-the-badge&amp;labelColor=000000\" height=\"28\"></a> <a href=\"https://github.com/vercel-labs/agent-browser/blob/main/LICENSE\"><img alt=\"License: Apache-2.0\" src=\"https://img.shields.io/github/license/vercel-labs/agent-browser.svg?style=for-the-badge&amp;labelColor=000000\" height=\"28\"></a> <a href=\"https://www.npmjs.com/package/agent-browser\"><img alt=\"npm downloads per month: agent-browser\" src=\"https://img.shields.io/npm/dm/agent-browser.svg?style=for-the-badge&amp;labelColor=000000&amp;label=npm%20downloads\" height=\"28\"></a> <a href=\"https://skills.sh/vercel-labs/agent-browser\"><img alt=\"skills.sh\" src=\"https://skills.sh/b/vercel-labs/agent-browser?style=for-the-badge\" height=\"28\"></a> </p> agent-browser is a native Rust CLI that gives an AI agent a browser it can drive one command at a time. `snapshot` returns the page as compact text with a ref such as `@e1` for each element. The agent acts on a ref, reads the page again to check the result, and repeats. The browser stays open between commands, so each step is one short shell call. ## Install ```bash npm install -g agent-browser agent-browser install # download Chrome for Testing (first time only) ``` - **Homebrew:** `brew install agent-browser`, then `agent-browser install`. - **Linux:** `agent-browser install --with-deps` also installs the browser's system libraries. - **No install:** `npx agent-browser open example.com`. Project installs, building from source, `upgrade`, and `doctor` are covered in [Installation](https://agent-browser.dev/installation). ## Quick start ```bash agent-browser open example.com agent-browser snapshot -i # interactive elements, each with a ref agent-browser click @e1 # act on a ref from that snapshot agent-browser get url # check the result agent-browser close ``` The snapshot for `example.com`: ``` - link \"Learn more\" [ref=e1] ``` - Refs describe the page at the time of the snapshot. After navigation or a DOM change, take a new snapshot before using refs again. - CSS selectors, text, XPath, and semantic locators also work, for example `agent-browser find role button click --name \"Submit\"`. See [Selectors](https://agent-browser.dev/selectors). - A click fails, instead of reporting success, when the target is hidden, disabled, outside the viewport, or covered by another element such as a consent banner. Dismiss the covering element, take a new snapshot, and retry. The full walkthrough is in the [quick start](https://agent-browser.dev/quick-start). ## How it works The CLI sends each command to a background daemon that starts on the first command and controls the browser over the Chrome DevTools Protocol. Each `--session` gets its own daemon and browser. By default, the daemon closes a headless browser and exits after one hour without commands, saving state first when [session persistence](https://agent-browser.dev/sessions) is configured. Chrome for Testing is the default browser. You can also attach to a running Chrome with `--cdp` or `--auto-connect` ([CDP mode](https://agent-browser.dev/cdp-mode)), select the [Lightpanda](https://agent-browser.dev/engines/lightpanda) or [Obscura](https://agent-browser.dev/engines/obscura) engine with `--engine`, drive Mobile Safari in the [iOS Simulator](https://agent-browser.dev/ios), or use a cloud browser provider such as [Browserbase](https://agent-browser.dev/providers/browserbase), [Browserless](https://agent-browser.dev/providers/browserless), [Browser Use](https://agent-browser.dev/providers/browser-use), [K",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": -1,
+      "streak_days": 2
+    },
+    {
+      "rank": 9,
+      "full_name": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "stars": 109471,
+      "forks": 12701,
+      "stars_today": 2393,
+      "topics": [
+        "cli",
+        "cti",
+        "cybersecurity",
+        "forensics",
+        "hacktoberfest",
+        "information-gathering",
+        "infosec",
+        "linux",
+        "osint",
+        "pentesting",
+        "python",
+        "python3",
+        "reconnaissance",
+        "redteam",
+        "sherlock",
+        "tools"
+      ],
+      "license": "MIT",
+      "created_at": "2018-12-24T14:30:48Z",
+      "updated_at": "2026-11-11T07:45:42Z",
+      "open_issues": 409,
+      "default_branch": "master",
+      "readme_excerpt": "<p align=\"center\"> <br> <a href=\"https://sherlockproject.xyz/\" target=\"_blank\"><img src=\"images/sherlock-logo.png\" alt=\"sherlock\"/></a> <br> <span>Hunt down social media accounts by username across <a href=\"https://sherlockproject.xyz/sites\">400+ social networks</a></span> <br> </p> <p align=\"center\"> <a href=\"https://sherlockproject.xyz/installation\">Installation</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; <a href=\"https://sherlockproject.xyz/usage\">Usage</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp; <a href=\"https://sherlockproject.xyz/contribute\">Contributing</a> </p> <p align=\"center\"> <img width=\"70%\" height=\"70%\" src=\"images/demo.png\" alt=\"demo\"/> </p> ## Installation <div align=\"center\"> <a href=\"https://sponsors.sherlockproject.xyz/go/readme-1\"><img src=\"https://sponsors.sherlockproject.xyz/banner/readme-1\" width=\"100%\"></a> </div> <div align=\"center\"> <a href=\"https://sponsors.sherlockproject.xyz/go/readme-2\"><img src=\"https://sponsors.sherlockproject.xyz/banner/readme-2\" width=\"49.8%\"></a>&#8202;&#8202;<a href=\"https://sponsors.sherlockproject.xyz/go/readme-3\"><img src=\"https://sponsors.sherlockproject.xyz/banner/readme-3\" width=\"49.8%\"></a> </div> <br> > [!WARNING] > Packages for ParrotOS and Ubuntu 24.04, maintained by a third party, appear to be __broken__. > Users of these systems should defer to [`uv`](https://docs.astral.sh/uv/)/`pipx`/`pip` or Docker. | Method | Notes | | - | - | | `pipx install sherlock-project` | `pip` or [`uv`](https://docs.astral.sh/uv/) may be used in place of `pipx` | | `docker run -it --rm sherlock/sherlock` | | `dnf install sherlock-project` | | Community-maintained packages are available for Debian (>= 13), Ubuntu (>= 22.10), Homebrew, Kali, and BlackArch. These packages are not directly supported or maintained by the Sherlock Project. See all alternative installation methods [here](https://sherlockproject.xyz/installation). ## General usage To search for only one user: ```bash sherlock user123 ``` To search for more than one user: ```bash sherlock user1 user2 user3 ``` Accounts found will be stored in an individual text file with the corresponding username (e.g ```user123.txt```). ```console $ sherlock --help usage: sherlock [-h] [--version] [--verbose] [--folderoutput FOLDEROUTPUT] [--output OUTPUT] [--csv] [--xlsx] [--site SITE_NAME] [--proxy PROXY_URL] [--dump-response] [--json JSON_FILE] [--timeout TIMEOUT] [--print-all] [--print-found] [--no-color] [--browse] [--local] [--nsfw] [--txt] [--ignore-exclusions] USERNAMES [USERNAMES ...] Sherlock: Find Usernames Across Social Networks (Version 0.16.0) positional arguments: USERNAMES One or more usernames to check with social networks. Check similar usernames using {?} (replace to '_', '-', '.'). options: -h, --help show this help message and exit --version Display version information and dependencies. --verbose, -v, -d, --debug Display extra debugging information and metrics. --folderoutput FOLDEROUTPUT, -fo FOLDEROUTPUT If using multiple usernames, the output of the results will be saved to this folder. --output OUTPUT, -o OUTPUT If using single username, the output of the result will be saved to this file. --csv Create Comma-Separated Values (CSV) File. --xlsx Create the standard file for the modern Microsoft Excel spreadsheet (xlsx). --site SITE_NAME Limit analysis to just the listed sites. Add multiple options to specify more than one site. --proxy PROXY_URL, -p PROXY_URL Make requests over a proxy. e.g. socks5://127.0.0.1:1080 --dump-response Dump the HTTP response to stdout for targeted debugging. --json JSON_FILE, -j JSON_FILE Load data from a JSON file or an online, valid, JSON file. Upstream PR numbers also accepted. --timeout TIMEOUT Time (in seconds) to wait for response to requests (Default: 60) --print-all Output sites where the username was not found. --print-found Output sites where the username was found (also if exported as file). --no-color Don't color terminal output --browse, -b Browse to all results on default browser.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": -6,
+      "streak_days": 2
+    },
+    {
+      "rank": 10,
+      "full_name": "tokio-rs/topcoat",
+      "url": "https://github.com/tokio-rs/topcoat",
+      "description": "A batteries-included framework for building web apps",
+      "language": "Rust",
+      "stars": 6987,
+      "forks": 309,
+      "stars_today": 192,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-04-03T14:27:27Z",
+      "updated_at": "2026-11-11T07:45:07Z",
+      "open_issues": 60,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- For agents: read [llms.txt](https://raw.githubusercontent.com/tokio-rs/topcoat/refs/heads/main/llms.txt) for Topcoat's APIs and application conventions. --> <div align=\"center\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/tokio-rs/topcoat/main/media/logo-dark.svg\"> <img src=\"https://raw.githubusercontent.com/tokio-rs/topcoat/main/media/logo-light.svg\" alt=\"Topcoat\" width=\"220\"> </picture> </div> <div align=\"center\"> <h3>The full full-stack framework for Rust</h3> </div> <div align=\"center\"> [![Crates.io][crates-badge]][crates-url] [![Docs.rs][docs-badge]][docs-url] [![MIT licensed][mit-badge]][mit-url] [![Build Status][actions-badge]][actions-url] [![Discord chat][discord-badge]][discord-url] </div> [crates-badge]: https://img.shields.io/crates/v/topcoat.svg?style=flat-square [crates-url]: https://crates.io/crates/topcoat [docs-badge]: https://img.shields.io/docsrs/topcoat?style=flat-square [docs-url]: https://docs.rs/topcoat/latest/topcoat [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square [mit-url]: https://github.com/tokio-rs/topcoat/blob/main/LICENSE [actions-badge]: https://img.shields.io/github/actions/workflow/status/tokio-rs/topcoat/ci.yml?branch=main&style=flat-square [actions-url]: https://github.com/tokio-rs/topcoat/actions?query=workflow%3ACI+branch%3Amain [discord-badge]: https://img.shields.io/discord/500028886025895936.svg?logo=discord&style=flat-square [discord-url]: https://discord.gg/tokio Topcoat is a modular, batteries-included Rust framework for building full-stack apps. It prioritizes simplicity and productivity. See [Learn Topcoat](#learn-topcoat) to get started, or the [Roadmap](#roadmap) for what's coming next. **Early-stage and experimental. Expect breaking changes.** ```rust,ignore use topcoat::{ Result, context::Cx, router::{module_router, page}, view::{View, component, view}, }; #[tokio::main] async fn main() { topcoat::start(module_router!().build()).await.unwrap(); } #[page] async fn home(cx: &Cx) -> Result<impl View> { Ok(view! { <!DOCTYPE html> <html> <body> hello(name: \"World\") </body> </html> }) } #[component] async fn hello(cx: &Cx, name: &str) -> Result<impl View> { Ok(view! { <h1>\"Hello, \" (name) \"!\"</h1> }) } ``` ## What makes Topcoat different ### Client reactivity without the boilerplate Topcoat renders all markup on the server: components can be async and query the database directly, eliminating all the traditional boilerplate needed for a separate API layer. Interactivity does not have to cost a round-trip, though. A `$(...)` expression is ordinary type-checked Rust that Topcoat evaluates on the server for the initial render and also translates to JavaScript, so it re-runs instantly in the browser. No wasm bundle, no client build step: ```rust,ignore #[component] async fn faq(cx: &Cx) -> Result<impl View> { let open = signal(cx, || false); Ok(view! { // Runs entirely in the browser; no server round-trip. <button @click=$(|_e| open.set(!open.get()))>\"What is Topcoat?\"</button> <p :hidden=$(!open.get())>\"A full-stack Rust framework.\"</p> }) } ``` When an update does need the server, like fresh search results, mark the component as a `#[shard]`. Topcoat re-renders it on the server whenever one of its `$(...)` arguments changes and swaps the new HTML in place: ```rust,ignore #[component] async fn search(cx: &Cx) -> Result<impl View> { let query = signal(cx, String::new); Ok(view! { <input @input=$(|e: Event| query.set(e.target.value))> // Updates as the user types. search_results(query: $(query.get())) }) } #[shard] async fn search_results(cx: &Cx, query: String) -> Result<impl View> { Ok(view! { <ul> // Your own server-side code, like a database query: for product in search_products(cx, &query).await? { <li>(product.name)</li> } </ul> }) } ``` ### Powerful, unsurprising HTML templates The `view!` macro stays true to HTML and Rust. Use familiar Rust control flow as part of your templates: ```rust,ignor",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 11,
+      "full_name": "ranxianglei/billion-context",
+      "url": "https://github.com/ranxianglei/billion-context",
+      "description": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+      "language": "TypeScript",
+      "stars": 6565,
+      "forks": 541,
+      "stars_today": 375,
+      "topics": [
+        "dsh-plugin"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-08-06T08:27:34Z",
+      "updated_at": "2026-11-11T07:44:21Z",
+      "open_issues": 990,
+      "default_branch": "master",
+      "readme_excerpt": "# billion-context <p align=\"center\"><a href=\"./README.md\">English</a> | <a href=\"./README.zh-CN.md\">中文</a> | <a href=\"./README.ja.md\">日本語</a></p> <p align=\"center\"><strong>Context-compression plugin</strong> — <em>billion-context is all you need.</em></p> <p align=\"center\"><sub>small context windows (100K is enough) · <em>5× fewer tokens</em> · month-long single sessions (billions of tokens) · high compression quality</sub></p> <p align=\"center\"> <a href=\"https://www.npmjs.com/package/billion-context\"><img src=\"https://img.shields.io/npm/v/billion-context.svg?style=flat-square\" alt=\"npm\"></a> <a href=\"https://github.com/ranxianglei/billion-context/blob/master/LICENSE\"><img src=\"https://img.shields.io/npm/l/billion-context.svg?style=flat-square\" alt=\"license\"></a> <a href=\"https://github.com/ranxianglei/billion-context\"><img src=\"https://img.shields.io/badge/GitHub-ranxianglei%2Fbillion--context-181717?style=flat-square&logo=github\" alt=\"GitHub\"></a> </p> <p align=\"center\"> <code>npm install -g billion-context --prefix=~/.local</code> </p> <p align=\"center\"> <a href=\"https://claude.com/product/claude-code\" title=\"Claude Code\"><img src=\"https://cdn.simpleicons.org/claude/D97757\" height=\"26\" alt=\"Claude Code\"></a>&nbsp; <a href=\"https://github.com/openai/codex\" title=\"Codex\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.iconify.design/simple-icons/openai.svg?color=white\"><img src=\"https://api.iconify.design/simple-icons/openai.svg\" height=\"26\" alt=\"Codex\"></picture></a>&nbsp; <a href=\"https://opencode.ai\" title=\"OpenCode\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn.simpleicons.org/opencode/FFFFFF\"><img src=\"https://cdn.simpleicons.org/opencode/000000\" height=\"26\" alt=\"OpenCode\"></picture></a>&nbsp; <a href=\"https://pi.dev\" title=\"pi\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn.simpleicons.org/pi/FFFFFF\"><img src=\"https://cdn.simpleicons.org/pi/000000\" height=\"26\" alt=\"pi\"></picture></a>&nbsp; <a href=\"https://github.com/google-gemini/gemini-cli\" title=\"Gemini CLI\"><img src=\"https://cdn.simpleicons.org/googlegemini/8E75B2\" height=\"26\" alt=\"Gemini CLI\"></a>&nbsp; <a href=\"https://www.kimi.com\" title=\"Kimi\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn.simpleicons.org/kimi/FFFFFF\"><img src=\"https://cdn.simpleicons.org/kimi/000000\" height=\"26\" alt=\"Kimi\"></picture></a>&nbsp; <a href=\"https://github.com/QwenLM/qwen-code\" title=\"Qwen Code\"><img src=\"https://cdn.simpleicons.org/qwen/6950EF\" height=\"26\" alt=\"Qwen Code\"></a>&nbsp; <a href=\"https://github.com/github/copilot-cli\" title=\"GitHub Copilot CLI\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn.simpleicons.org/githubcopilot/FFFFFF\"><img src=\"https://cdn.simpleicons.org/githubcopilot/000000\" height=\"26\" alt=\"GitHub Copilot CLI\"></picture></a>&nbsp; <a href=\"https://www.trae.ai\" title=\"TRAE\"><img src=\"https://cdn.simpleicons.org/trae/32F08C\" height=\"26\" alt=\"TRAE\"></a>&nbsp; <a href=\"https://www.codebuddy.cn\" title=\"CodeBuddy\"><img src=\"https://cdn.simpleicons.org/codebuddy/6C4DFF\" height=\"26\" alt=\"CodeBuddy\"></a>&nbsp; <a href=\"https://qoder.com\" title=\"Qoder\"><img src=\"https://icons.duckduckgo.com/ip3/qoder.com.ico\" height=\"26\" alt=\"Qoder\"></a>&nbsp; <a href=\"https://iflow.cn\" title=\"iFlow CLI\"><img src=\"https://img.alicdn.com/imgextra/i4/O1CN01yBfg3x1iNi4YggwIt_!!6000000004401-2-tps-72-72.png\" height=\"26\" alt=\"iFlow CLI\"></a>&nbsp; <a href=\"https://www.minimax.io\" title=\"MiniMax Code (mcode)\"><img src=\"https://cdn.simpleicons.org/minimax/E73562\" height=\"26\" alt=\"MiniMax Code\"></a>&nbsp; <a href=\"https://www.deepseek.com\" title=\"deepseek-harness (dsh)\"><img src=\"https://cdn.simpleicons.org/deepseek/5786FE\" height=\"26\" alt=\"deepseek-harness\"></a>&nbsp; <a href=\"https://ampcode.com\" title=\"Amp\"><img src=\"https://icons.duckduckgo.com/ip3/ampcode.com.ico\" height=\"26\" alt=\"Amp\"></a>&nbsp; <a href=\"https://charm.land/crush\" title=\"Crush\"><img src=\"",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "stars": 321270,
+      "forks": 26935,
+      "stars_today": 1225,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-02-03T11:15:53Z",
+      "updated_at": "2026-11-11T07:44:04Z",
+      "open_issues": 233,
+      "default_branch": "main",
+      "readme_excerpt": "<p> <a href=\"https://www.aihero.dev/s/skills-newsletter\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skills-repo-dark_2x.png\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\"> <img alt=\"Skills\" src=\"https://res.cloudinary.com/total-typescript/image/upload/v1777382277/skill-repo-light_2x.png\" width=\"369\"> </picture> </a> </p> # Skills For Real Engineers [![skills.sh](https://skills.sh/b/mattpocock/skills)](https://skills.sh/mattpocock/skills) My agent skills that I use every day to do real engineering - not vibe coding. Developing real applications is hard. Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve. These skills are designed to be small, easy to adapt, and composable. They work with any model. They're based on decades of engineering experience. Hack around with them. Make them your own. Enjoy. If you want to keep up with changes to these skills, and any new ones I create, you can join ~60,000 other devs on my newsletter: [Sign Up To The Newsletter](https://www.aihero.dev/s/skills-newsletter) ## Installation (30-second setup) A plugin updates itself. [skills.sh](https://skills.sh/mattpocock/skills) copies editable files into your project, and you update them by hand. Pick one per agent, because installing both gives you every skill twice. ### 1. Get the skills <details> <summary><strong>Claude Code</strong></summary> ```bash claude plugin install mattpocock-skills@claude-plugins-official ``` Updates itself by default. </details> <details> <summary><strong>Codex</strong></summary> ```bash codex plugin marketplace add mattpocock/skills codex plugin add mattpocock-skills@mattpocock ``` Updates itself at startup. </details> <details> <summary><strong>GitHub Copilot</strong> (CLI and VS Code)</summary> ```bash copilot plugin marketplace add mattpocock/skills copilot plugin install mattpocock-skills@mattpocock ``` Then, once, add to `~/.copilot/settings.json`: ```json { \"extraKnownMarketplaces\": { \"mattpocock\": { \"source\": { \"source\": \"github\", \"repo\": \"mattpocock/skills\" }, \"autoUpdate\": true } } } ``` In VS Code, run **Chat: Install Plugin From Source** and enter `https://github.com/mattpocock/skills`. It updates daily. </details> <details> <summary><strong>Gemini CLI</strong> (manual updates)</summary> ```bash gemini skills install https://github.com/mattpocock/skills.git --path skills/engineering gemini skills install https://github.com/mattpocock/skills.git --path skills/productivity ``` Re-run both commands to update. </details> <details> <summary><strong>Any other agent, or editable files</strong> (manual updates)</summary> ```bash npx skills@latest add mattpocock/skills -a <agent> # cursor, opencode, devin, windsurf, amp, pi; omit -a to choose ``` When the installer asks which skills to take, include `setup-matt-pocock-skills`. To update, run `npx skills@latest update`, and re-run `add` to pick up new skills. </details> ### 2. Run `/setup-matt-pocock-skills` In your agent, run it once per repo. It will: - Ask you which issue tracker you want to use (GitHub, GitLab, local files, or anything else you describe) - Ask you what labels you apply to tickets when you triage them (`/triage` uses labels) - Ask you where you want to save any docs we create ### 3. Bam - you're ready to go. ## Why These Skills Exist I built these skills as a way to fix common failure modes I see with Claude Code, Codex, and other coding agents. ### #1: The Agent Didn't Do What I Want > \"No-one knows exactly what they want\" > > David Thomas & Andrew Hunt, [The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833F1T3V) **The Problem**. The most common failure mode in software development is misalig",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 7/12 个项目可从资料确认与 AI 直接相关；其余 5 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（5 个）、AI 编程智能体（2 个）、AI 智能体与数字劳动力（2 个）。",
+      "排名第一的 meta/astryx 代表“AI 设计质量指导”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（5 个项目）",
+      "AI 编程智能体（2 个项目）",
+      "AI 智能体与数字劳动力（2 个项目）",
+      "AI 设计质量指导（1 个项目）",
+      "AI 金融数据与研究（1 个项目）",
+      "AI 安全、权限与治理（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "meta/astryx",
+        "one_line_summary": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "industry_direction": "AI 设计质量指导",
+        "target_users": [
+          "使用 AI 制作界面的产品团队",
+          "设计系统与品牌负责人"
+        ],
+        "problem_solved": "AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。",
+        "solution": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 3108 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "设计规范的机器可用化",
+        "technology_impact": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "规范不能替代用户研究和设计判断，效果仍需通过真实界面与用户测试验证。",
+        "ai_relevance": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "plain_language_explanation": "项目方把 astryx 描述为“An open source design system that's fully customizable and agent ready”。通俗地说，它希望解决的是：AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。 它的办法是：把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "scenario_examples": [
+          "例如团队让 AI 生成活动页面时，同时要求它按既有排版、间距和无障碍规则检查。"
+        ],
+        "practical_benefits": [
+          "对 astryx 的潜在使用者而言，在项目方所述的“An open source design system that's fully customizable and agent ready”场景中，减少团队反复向 AI 解释基础设计要求的时间",
+          "提高不同 AI 生成页面之间的视觉一致性"
+        ],
+        "industry_implications": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "who_should_care": "使用 AI 制作界面的产品团队、设计系统与品牌负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/meta/astryx",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An open source design system that's fully customizable and agent ready",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/meta/astryx",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/meta/astryx",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "anthropics/skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 1679 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 skills 描述为“Public repository for Agent Skills”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Public repository for Agent Skills”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Public repository for Agent Skills",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/anthropics/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 465 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 agent-skills 描述为“Production-grade engineering skills for AI coding agents.”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 agent-skills 的潜在使用者而言，在项目方所述的“Production-grade engineering skills for AI coding agents.”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Production-grade engineering skills for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "one_line_summary": "围绕“A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+        "solution": "围绕“A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 531 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 claude-quickstarts 描述为“A collection of projects designed to help developers quickly get started with building deployable applications”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API 它的办法是：围绕“A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 claude-quickstarts 的潜在使用者而言，在项目方所述的“A collection of projects designed to help developers quickly get started with building deployable applications”场景中，可直接查看和试验项目方所述的“A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/claude-quickstarts",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A collection of projects designed to help developers quickly get started with building deployable applications using the Claude API",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/anthropics/claude-quickstarts",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/anthropics/claude-quickstarts",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "one_line_summary": "围绕“Multi-Joint dynamics with Contact. A general purpose physics simulator.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+        "solution": "围绕“Multi-Joint dynamics with Contact. A general purpose physics simulator.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 456 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 mujoco 描述为“Multi-Joint dynamics with Contact. A general purpose physics simulator.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Multi-Joint dynamics with Contact. A general purpose physics simulator. 它的办法是：围绕“Multi-Joint dynamics with Contact. A general purpose physics simulator.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Multi-Joint dynamics with Contact. A general purpose physics simulator.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 mujoco 的潜在使用者而言，在项目方所述的“Multi-Joint dynamics with Contact. A general purpose physics simulator.”场景中，可直接查看和试验项目方所述的“Multi-Joint dynamics with Contact. A general purpose physics simulator.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-deepmind/mujoco",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-deepmind/mujoco",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google-deepmind/mujoco",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "we-promise/sure",
+        "one_line_summary": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "industry_direction": "AI 金融数据与研究",
+        "target_users": [
+          "金融研究与投资团队",
+          "金融 AI 产品团队"
+        ],
+        "problem_solved": "市场数据和研究资料分散，获取、清洗与验证成本较高。",
+        "solution": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 159 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "金融数据工具化",
+        "technology_impact": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "数据许可、延迟、历史偏差和回测过拟合都可能造成错误判断。",
+        "ai_relevance": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "plain_language_explanation": "项目方把 sure 描述为“The personal finance app for everyone (by everyone)”。通俗地说，它希望解决的是：市场数据和研究资料分散，获取、清洗与验证成本较高。 它的办法是：提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "scenario_examples": [
+          "例如研究人员快速比较某类资产的历史表现，再人工检查数据口径。"
+        ],
+        "practical_benefits": [
+          "对 sure 的潜在使用者而言，在项目方所述的“The personal finance app for everyone (by everyone)”场景中，减少收集和整理金融资料的时间",
+          "提高研究过程的可重复性和可追溯性"
+        ],
+        "industry_implications": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "who_should_care": "金融研究与投资团队、金融 AI 产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/we-promise/sure",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The personal finance app for everyone (by everyone)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/we-promise/sure",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/we-promise/sure",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "one_line_summary": "围绕“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+        "solution": "围绕“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 790 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 ha-mcp 描述为“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 它的办法是：围绕“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 ha-mcp 的潜在使用者而言，在项目方所述的“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”场景中，可直接查看和试验项目方所述的“Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/homeassistant-ai/ha-mcp",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/homeassistant-ai/ha-mcp",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/homeassistant-ai/ha-mcp",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 780 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 agent-browser 描述为“Browser automation CLI for AI agents”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 agent-browser 的潜在使用者而言，在项目方所述的“Browser automation CLI for AI agents”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vercel-labs/agent-browser",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Browser automation CLI for AI agents",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/vercel-labs/agent-browser",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/vercel-labs/agent-browser",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "sherlock-project/sherlock",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 2393 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 sherlock 描述为“Hunt down social media accounts by username across social networks”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 sherlock 的潜在使用者而言，在项目方所述的“Hunt down social media accounts by username across social networks”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/sherlock-project/sherlock",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Hunt down social media accounts by username across social networks",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/sherlock-project/sherlock",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/sherlock-project/sherlock",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "tokio-rs/topcoat",
+        "one_line_summary": "围绕“A batteries-included framework for building web apps”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A batteries-included framework for building web apps",
+        "solution": "围绕“A batteries-included framework for building web apps”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 192 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 topcoat 描述为“A batteries-included framework for building web apps”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A batteries-included framework for building web apps 它的办法是：围绕“A batteries-included framework for building web apps”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A batteries-included framework for building web apps”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 topcoat 的潜在使用者而言，在项目方所述的“A batteries-included framework for building web apps”场景中，可直接查看和试验项目方所述的“A batteries-included framework for building web apps”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tokio-rs/topcoat",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A batteries-included framework for building web apps",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/tokio-rs/topcoat",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/tokio-rs/topcoat",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ranxianglei/billion-context",
+        "one_line_summary": "围绕“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token",
+        "solution": "围绕“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 375 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 billion-context 描述为“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token 它的办法是：围绕“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 billion-context 的潜在使用者而言，在项目方所述的“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100”场景中，可直接查看和试验项目方所述的“A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ranxianglei/billion-context",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ranxianglei/billion-context",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ranxianglei/billion-context",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mattpocock/skills",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 1225 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 skills 描述为“Skills for Real Engineers. Straight from my .agents directory.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 skills 的潜在使用者而言，在项目方所述的“Skills for Real Engineers. Straight from my .agents directory.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Skills for Real Engineers. Straight from my .agents directory.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mattpocock/skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mattpocock/skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 6,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融研究助手",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 9,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 23,
+        "project_count": 10
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 4,
+        "project_count": 3
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 3,
+        "project_count": 3
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "多模态内容理解",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 33,
+        "project_count": 24
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 23,
+        "project_count": 10
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 9,
+        "project_count": 4
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 3,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 33
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 23
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 23
+      },
+      {
+        "name": "软件产品团队",
+        "count": 9
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 9
+      },
+      {
+        "name": "维护数字产品的技术团队",
+        "count": 4
+      },
+      {
+        "name": "负责系统稳定性的运维人员",
+        "count": 4
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 3
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 87
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 25,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "企业 IT 自动化",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "无摄像头空间与生命体征感知",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融研究助手",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 103,
+        "project_count": 55
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 10,
+        "project_count": 2
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 42,
+        "project_count": 13
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 5,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 103,
+        "project_count": 55
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 102,
+        "project_count": 37
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 42,
+        "project_count": 13
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 13,
+        "project_count": 6
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 103
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 102
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 102
+      },
+      {
+        "name": "软件产品团队",
+        "count": 42
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 42
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 13
+      },
+      {
+        "name": "需要免手操作的普通用户",
+        "count": 13
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 10
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 334
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-11-10",
+    "new": [
+      "addyosmani/agent-skills",
+      "mattpocock/skills",
+      "ranxianglei/billion-context",
+      "tokio-rs/topcoat",
+      "we-promise/sure"
+    ],
+    "retained": [
+      "anthropics/claude-quickstarts",
+      "anthropics/skills",
+      "google-deepmind/mujoco",
+      "homeassistant-ai/ha-mcp",
+      "meta/astryx",
+      "sherlock-project/sherlock",
+      "vercel-labs/agent-browser"
+    ],
+    "exited": [
+      "ZhuLinsen/daily_stock_analysis",
+      "garrytan/gbrain",
+      "milind-soni/OpenMausBot",
+      "ruvnet/RuView"
+    ],
+    "risers": [
+      {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "previous_rank": 10,
+        "rank": 7,
+        "change": 3
+      },
+      {
+        "full_name": "meta/astryx",
+        "previous_rank": 2,
+        "rank": 1,
+        "change": 1
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "previous_rank": 5,
+        "rank": 4,
+        "change": 1
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "previous_rank": 7,
+        "rank": 8,
+        "change": -1
+      },
+      {
+        "full_name": "anthropics/skills",
+        "previous_rank": 1,
+        "rank": 2,
+        "change": -1
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "previous_rank": 4,
+        "rank": 5,
+        "change": -1
+      },
+      {
+        "full_name": "sherlock-project/sherlock",
+        "previous_rank": 3,
+        "rank": 9,
+        "change": -6
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "previous_stars_today": 31,
+        "stars_today": 790,
+        "change": 759
+      },
+      {
+        "full_name": "anthropics/skills",
+        "previous_stars_today": 1038,
+        "stars_today": 1679,
+        "change": 641
+      },
+      {
+        "full_name": "anthropics/claude-quickstarts",
+        "previous_stars_today": 551,
+        "stars_today": 531,
+        "change": -20
+      },
+      {
+        "full_name": "google-deepmind/mujoco",
+        "previous_stars_today": 574,
+        "stars_today": 456,
+        "change": -118
+      },
+      {
+        "full_name": "vercel-labs/agent-browser",
+        "previous_stars_today": 916,
+        "stars_today": 780,
+        "change": -136
+      },
+      {
+        "full_name": "meta/astryx",
+        "previous_stars_today": 3278,
+        "stars_today": 3108,
+        "change": -170
+      },
+      {
+        "full_name": "sherlock-project/sherlock",
+        "previous_stars_today": 4267,
+        "stars_today": 2393,
+        "change": -1874
+      }
+    ]
+  }
+}
