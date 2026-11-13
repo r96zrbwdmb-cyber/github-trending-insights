@@ -1,0 +1,1570 @@
+{
+  "date": "2026-11-13",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 13,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "stars": 3728,
+      "forks": 227,
+      "stars_today": 739,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-01-27T20:22:24Z",
+      "updated_at": "2026-11-13T08:01:28Z",
+      "open_issues": 385,
+      "default_branch": "main",
+      "readme_excerpt": "# <img src=\"./.github/img/modern-web-guidance.svg\" alt=\"Modern Web Guidance\" width=\"30\" height=\"30\"> Modern Web Guidance (Source) This repo is the source repository for [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance) and includes the code and documentation for authoring, calibrating, and evaluating its contents. [**Modern Web Guidance**](https://developer.chrome.com/docs/modern-web-guidance) is a set of skills that embed web platform expertise, best practices, and browser compatibility data directly into your coding agents. It helps to steer your coding agents away from legacy patterns, and instead toward solutions that harness the power and capabilities of the modern web platform. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [GOVERNANCE.md](./GOVERNANCE.md) for how we work on the project and orientation of the codebase. --- *Stewarded by the Google Chrome, Microsoft Edge, Mozilla Firefox, and MDN teams, alongside the web development community.* [Documentation](https://developer.chrome.com/docs/modern-web-guidance) · [Eval Dashboard](https://googlechrome.github.io/modern-web-guidance-src/) · [Source Code](https://github.com/GoogleChrome/modern-web-guidance-src) · [Report an Issue](https://github.com/GoogleChrome/modern-web-guidance-src/issues) ## <img src=\"https://github.com/GoogleChrome/modern-web-guidance/raw/main/.github/img/terminal.svg\" width=\"24\" height=\"24\" style=\"vertical-align: middle; margin-right: 4px;\"> Quickstart ```shell npx modern-web-guidance@latest install ``` This command runs an interactive wizard to install Modern Web Guidance. See [Alternative Installation Methods](#-alternative-installation-methods) below. #### Try it out (without installing) ```shell # Search for relevant guides npx modern-web-guidance@latest search \"animate a dialog modal backdrop\" # Retrieve a guide by ID npx modern-web-guidance@latest retrieve \"animate-to-from-top-layer\" # Scan a codebase for legacy patterns to modernize npx modern-web-guidance@latest legacy-scan . ``` ## <img src=\"https://github.com/GoogleChrome/modern-web-guidance/raw/main/.github/img/lightbulb.svg\" width=\"24\" height=\"24\" style=\"vertical-align: middle; margin-right: 4px;\"> Why? Coding agents often default to older patterns because LLM training data contains vast amounts of legacy code. This often leads them to generate bloated JavaScript for tasks that now have native, high-performance web platform solutions. Even if a model knows an API exists, it often lacks the density of real-world, modern implementation patterns required for production-ready code. **Modern Web Guidance bridges this gap.** Our skill's CLI returns targeted, expert-curated guidelines directly into your agent's context window, focusing on: * **Modern Browser APIs**: Helping models correctly structure APIs they frequently misuse. * **Performance & Accessibility**: Preferring platform-level APIs that can be optimized by the browser and include built-in accessibility affordances. * **Responsible Fallbacks**: Guiding models to use sensible, lightweight fallbacks instead of heavy polyfills or legacy libraries. ## <img src=\"https://github.com/GoogleChrome/modern-web-guidance/raw/main/.github/img/package.svg\" width=\"24\" height=\"24\" style=\"vertical-align: middle; margin-right: 4px;\"> What's Included? We cover the past several years of the web platform's new features, all the way up to the cutting edge. The guides are **designed to be token-efficient**; we run evals enabling us to prune lowest-common-denominator content that models already know. ### Core Disciplines <table width=\"100%\" style=\"border-collapse: collapse; border: none;\"> <tr style=\"border: none;\"> <td width=\"33%\" valign=\"top\" style=\"border: none; padding: 6px;\"> <h4>🎨 User Experience</h4> <p style=\"font-size: 0.9em; line-height: 1.4;\">Smooth visual states (View Transitions, entry/exit animations, parallax scroll, CSS <code>scrollbar-color</code>).</p> </td> <td width=\"33%\" valign=\"top\" style=\"border: non",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": 2,
+      "streak_days": 2
+    },
+    {
+      "rank": 2,
+      "full_name": "openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "language": "TypeScript",
+      "stars": 12689,
+      "forks": 992,
+      "stars_today": 643,
+      "topics": [
+        "ai-security",
+        "application-security",
+        "cli",
+        "code-scanning",
+        "codex",
+        "codex-security",
+        "cybersecurity",
+        "devsecops",
+        "nodejs",
+        "npm",
+        "openai",
+        "sdk",
+        "security",
+        "typescript",
+        "vulnerability-scanning"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-07-13T22:00:13Z",
+      "updated_at": "2026-11-13T08:01:20Z",
+      "open_issues": 146,
+      "default_branch": "main",
+      "readme_excerpt": "# Codex Security Codex Security helps you find, investigate, and fix vulnerabilities in your code. Use its security workflows in Codex, or automate them with the `@openai/codex-security` CLI and TypeScript SDK. - **In Codex:** [choose a security workflow](docs/agent-workflows.md). - **In a terminal:** [install the CLI and scan your repository](#quick-start). - **In automation:** use the [TypeScript SDK](#typescript-sdk) or [GitHub Action](#github-actions). ## Features - Scan repositories, selected paths, or Git changes. Deep scans repeat Standard scans and return their deduplicated findings. - Validate candidate findings, generate patches, and verify existing fixes. - Draft `SECURITY.md` policies and save threat models for later review. - Browse saved scans and findings, identify duplicates, assess severity against your own rubric, and suggest owners from source and Git history. - Preview third-party scanner findings, save them locally, or publish supported reports to Codex Security Cloud. [Scanner import guides](docs/scanner-imports/README.md). - Track findings in Linear, Jira, or GitHub, publish completed scans, or export SARIF, JSON, and CSV. [Integration workflows](docs/plugin-connectors.md). - Automate scans across repositories or project components, including in CI and containers. ## Use in Codex Open your repository in a Codex session with the Codex Security plugin enabled, then ask: > Run a Codex Security scan on this repository, focusing on authentication and > authorization. Return the saved report, source evidence, and coverage limits. A completed scan saves a report and findings. Read the report for source evidence and exclusions, then request a patch or ask Codex to verify an existing fix. See the [agent workflow guide](docs/agent-workflows.md) for setup, task selection, and recovery. ## Quick start Requires Node.js 22.13.0+ within 22.x, or Node.js 24.x or 26.x, and Python 3.10+. Python 3.10 also requires `tomli`. Install the CLI globally and sign in: ```bash npm install --global @openai/codex-security cs login ``` Run your first scan from the repository directory: ```bash cs scan . ``` When the scan completes, open the Markdown file at the **REPORT** path in the terminal. Run `cs scans show` from the same repository to find its latest completed scan again. See [scan scope and follow-up work](sdk/typescript/docs/cli.md#understand-scan-scope-and-follow-up-work) for how to interpret exclusions in the report. `cs` and `codex-security` run the same CLI. If the short name conflicts with another command, use `codex-security`. To skip the global install, or if npm reports an `EEXIST` conflict, use `npx @openai/codex-security` in place of `cs` for both login and scanning. For CI, set `OPENAI_API_KEY` or `CODEX_API_KEY` in the scan process's environment. For a headless machine, see [device or SSH login](sdk/typescript/docs/cli.md#authentication). ### Scan options Choose a scope and scan mode: ```bash # Scan selected paths. cs scan . --path src --path tests # Scan committed changes from a base revision to HEAD. cs scan . --diff origin/main # Run a deep scan of the repository. cs scan . --mode deep ``` Use `cs scan . --max-time 15` for an advisory 15-minute Standard investigation allowance. See [investigation time](sdk/typescript/docs/cli.md#set-investigation-time) for timing semantics and Deep Scan limits. Use `cs --help` to browse commands, or `cs scan --help` for scan options, cost limits, and patching after a scan. For an application spread across repositories, see [review one system across repositories](sdk/typescript/docs/cli.md#review-one-system-across-repositories). Use [bulk scans](sdk/typescript/docs/cli.md#bulk-scans) for independent repository reviews in one resumable campaign. Scans use existing root and component `SECURITY.md` guidance. To write or revise it, see [Generate SECURITY.md](#generate-securitymd). Some cybersecurity requests and protected findings require [Trusted Access for Cyber](https://chatgpt.co",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 7,
+      "streak_days": 2
+    },
+    {
+      "rank": 3,
+      "full_name": "nvm-sh/nvm",
+      "url": "https://github.com/nvm-sh/nvm",
+      "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+      "language": "Shell",
+      "stars": 96069,
+      "forks": 10762,
+      "stars_today": 63,
+      "topics": [
+        "bash",
+        "install",
+        "lts",
+        "node",
+        "node-js",
+        "nodejs",
+        "nvm",
+        "nvmrc",
+        "posix",
+        "posix-compliant",
+        "shell",
+        "version-manager",
+        "zsh"
+      ],
+      "license": "MIT",
+      "created_at": "2010-04-15T17:47:47Z",
+      "updated_at": "2026-11-13T07:57:17Z",
+      "open_issues": 376,
+      "default_branch": "master",
+      "readme_excerpt": "<a href=\"https://github.com/nvm-sh/logos\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/nvm-sh/logos/HEAD/nvm-logo-white.svg\" /> <img src=\"https://raw.githubusercontent.com/nvm-sh/logos/HEAD/nvm-logo-color.svg\" height=\"50\" alt=\"nvm project logo\" /> </picture> </a> # Node Version Manager [![Tests](https://github.com/nvm-sh/nvm/actions/workflows/tests-fast.yml/badge.svg?branch=master)][3] [![nvm version](https://img.shields.io/badge/version-v0.41.0-yellow.svg)][4] [![CII Best Practices](https://bestpractices.dev/projects/684/badge)](https://bestpractices.dev/projects/684) <!-- To update this table of contents, ensure you have run `npm install` then `npm run doctoc` --> <!-- START doctoc generated TOC please keep comment here to allow auto update --> <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE --> ## Table of Contents - [Intro](#intro) - [About](#about) - [Installing and Updating](#installing-and-updating) - [Install & Update Script](#install--update-script) - [Additional Notes](#additional-notes) - [Installing in Docker](#installing-in-docker) - [Installing in Docker for CICD-Jobs](#installing-in-docker-for-cicd-jobs) - [Troubleshooting on Linux](#troubleshooting-on-linux) - [Troubleshooting on macOS](#troubleshooting-on-macos) - [Ansible](#ansible) - [Verify Installation](#verify-installation) - [Important Notes](#important-notes) - [Git Install](#git-install) - [Manual Install](#manual-install) - [Manual Upgrade](#manual-upgrade) - [Usage](#usage) - [Long-term Support](#long-term-support) - [Version Categories](#version-categories) - [Migrating Global Packages While Installing](#migrating-global-packages-while-installing) - [Migrating Global Packages Between Installed Versions](#migrating-global-packages-between-installed-versions) - [Offline Install](#offline-install) - [Default Global Packages From File While Installing](#default-global-packages-from-file-while-installing) - [io.js](#iojs) - [System Version of Node](#system-version-of-node) - [Listing Versions](#listing-versions) - [Setting Custom Colors](#setting-custom-colors) - [Persisting custom colors](#persisting-custom-colors) - [Suppressing colorized output](#suppressing-colorized-output) - [Restoring PATH](#restoring-path) - [Set default node version](#set-default-node-version) - [Use a mirror of node binaries](#use-a-mirror-of-node-binaries) - [Pass Authorization header to mirror](#pass-authorization-header-to-mirror) - [Platforms without official binaries](#platforms-without-official-binaries) - [.nvmrc](#nvmrc) - [Deeper Shell Integration](#deeper-shell-integration) - [Calling `nvm use` automatically in a directory with a `.nvmrc` file](#calling-nvm-use-automatically-in-a-directory-with-a-nvmrc-file) - [bash](#bash) - [zsh](#zsh) - [fish](#fish) - [Running Tests](#running-tests) - [Environment variables](#environment-variables) - [Bash Completion](#bash-completion) - [Usage](#usage-1) - [Compatibility Issues](#compatibility-issues) - [Installing nvm on Alpine Linux](#installing-nvm-on-alpine-linux) - [Alpine Linux 3.13+](#alpine-linux-313) - [Alpine Linux 3.5 - 3.12](#alpine-linux-35---312) - [Uninstalling / Removal](#uninstalling--removal) - [Manual Uninstall](#manual-uninstall) - [Docker For Development Environment](#docker-for-development-environment) - [Problems](#problems) - [macOS Troubleshooting](#macos-troubleshooting) - [WSL Troubleshooting](#wsl-troubleshooting) - [Maintainers](#maintainers) - [Project Support](#project-support) - [Enterprise Support](#enterprise-support) - [License](#license) - [Copyright notice](#copyright-notice) <!-- END doctoc generated TOC please keep comment here to allow auto update --> ## Intro `nvm` allows you to quickly install and use different versions of [node](https://nodejs.org) via the command line. **Example:** ```sh $ nvm install 24 Now using node v24.14.0 (npm v11.9.0) $ node -v v24.14.0 $ nvm use 22 Now using node v22.22.1 (npm v10.9.4) $ node -v ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 4,
+      "full_name": "pookjw/HermesEnabler",
+      "url": "https://github.com/pookjw/HermesEnabler",
+      "description": "Enable Hermès Watch Faces on any Apple Watch devices",
+      "language": "Objective-C",
+      "stars": 1658,
+      "forks": 146,
+      "stars_today": 218,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2024-12-14T11:32:03Z",
+      "updated_at": "2026-11-13T07:49:59Z",
+      "open_issues": 59,
+      "default_branch": "main",
+      "readme_excerpt": "# HermesEnabler 2 [English](README.md) · [Tiếng Việt](README.vi.md) · [한국어](README.ko.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Português](README.pt.md) ![](image.png) > Supported only on watchOS 27.0 through 27.3 beta 1. ## Installation ### macOS On macOS you can install the prebuilt IPA with Sideloadly or build the app directly with Xcode. Either way, the iPhone must be paired with the target Apple Watch, and the Watch must run a supported watchOS version. #### Install the IPA > **Known issue with Sideloadly 0.72:** [Issue #43](https://github.com/pookjw/HermesEnabler/issues/43) reports that this version may remove the embedded Watch app while signing. If the iPhone app installs but HermesEnabler2 is missing from the Watch, use Xcode instead. This report is specific to version 0.72; compatibility with other versions has not been confirmed. 1. Download the IPA from [Releases](https://github.com/pookjw/HermesEnabler/releases). 2. Install [Sideloadly](https://sideloadly.io) on your Mac, connect your iPhone with a cable, and select it in Sideloadly. 3. Drag the IPA into Sideloadly and enter your Apple ID. Turn off **Use automatic bundle ID**, set a fixed Bundle Identifier, and start signing. 4. On the iPhone, open **Settings → General → VPN & Device Management** and trust your developer certificate. 5. On the iPhone, open **Settings → Privacy & Security → Developer Mode**, turn it on, restart, and confirm. 6. On the iPhone, open the **Watch** app, go to **My Watch → Apps**, and install **HermesEnabler2** on the Watch. 7. On the Apple Watch, open **Settings → Privacy & Security → Developer Mode**, turn it on, restart, and confirm. If the option is not shown, install the Watch app first and check again. 8. Open **HermesEnabler2** on your Apple Watch and follow the steps in the app. #### Build with Xcode 1. Open [HermesEnabler2.xcodeproj](HermesEnabler2.xcodeproj) in Xcode. 2. Select your Apple Watch as the run destination and click **Run**. 3. Open **HermesEnabler2** on your Apple Watch and follow the steps in the app. ### Windows Windows uses [WatchBridge](https://github.com/AdminZachary/iloader-for-windows), a community tool that prepares Developer Mode and installs an IPA containing both an iPhone host app and a Watch app. It is not affiliated with Apple or with this project. 1. Install **Apple Mobile Device Service** by installing [iTunes](https://www.apple.com/itunes/) or the **Apple Devices** app from the Microsoft Store. WatchBridge needs it for USB and Wi-Fi communication. WebView2 is built into Windows 11. 2. Make sure your iPhone is paired with the target Apple Watch. WatchBridge supports only one paired Watch at a time; if more than one is paired, the preparation step stops instead of guessing. 3. Download `watchbridge-windows.zip` from [WatchBridge Releases](https://github.com/AdminZachary/iloader-for-windows/releases/latest), extract it, and run `WatchBridge.exe`. The executable is unsigned, so Windows SmartScreen may warn on first launch. 4. Download the IPA from [Releases](https://github.com/pookjw/HermesEnabler/releases). Use the original IPA that contains both the iPhone host and the `Watch/*.app`; Watch-only packages are not supported. 5. Connect the paired iPhone over USB and select it in WatchBridge. 6. Pair the Watch and confirm the trust prompt on the Watch. Request the **Developer Mode** switch, then on the Watch open **Settings → Privacy & Security → Developer Mode**, turn it on, restart, and confirm. Return to WatchBridge and click **Check again**. WatchBridge does not enable Developer Mode or restart the Watch for you. 7. Sign in with your Apple ID, select the HermesEnabler2 IPA, and start signing and installation. WatchBridge installs the iPhone host app first, then the Watch app. 8. Open **HermesEnabler2** on your Apple Watch and follow the steps in the app. > Developer-mode preparation r",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 5,
+      "full_name": "we-promise/sure",
+      "url": "https://github.com/we-promise/sure",
+      "description": "The personal finance app for everyone (by everyone)",
+      "language": "Ruby",
+      "stars": 14211,
+      "forks": 1073,
+      "stars_today": 967,
+      "topics": [],
+      "license": "AGPL-3.0",
+      "created_at": "2025-07-23T04:13:55Z",
+      "updated_at": "2026-11-13T08:00:22Z",
+      "open_issues": 909,
+      "default_branch": "main",
+      "readme_excerpt": "[![Ask DeepWiki](https://img.shields.io/badge/Ask-DeepWiki-blue)](https://deepwiki.com/we-promise/sure) [![View performance data on Skylight](https://badges.skylight.io/typical/s6PEZSKwcklL.svg)](https://oss.skylight.io/app/applications/s6PEZSKwcklL) [![Dosu](https://raw.githubusercontent.com/dosu-ai/assets/main/dosu-badge.svg)](https://app.dosu.dev/a72bdcfd-15f5-4edc-bd85-ea0daa6c3adc/ask) [![Pipelock Security Scan](https://github.com/we-promise/sure/actions/workflows/pipelock.yml/badge.svg)](https://github.com/we-promise/sure/actions/workflows/pipelock.yml) <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/we-promise/sure/main/docs/screenshots/dashboard-dark.webp\"> <img alt=\"The Sure dashboard in two columns (cashflow, net worth, spending and outflows) beside the AI assistant answering a question about savings\" src=\"https://raw.githubusercontent.com/we-promise/sure/main/docs/screenshots/dashboard-light.webp\"> </picture> <p align=\"center\"> <!-- Keep these links. Translations will automatically update with the README. --> <a href=\"https://readme-i18n.com/de/we-promise/sure\">Deutsch</a> | <a href=\"https://readme-i18n.com/es/we-promise/sure\">Español</a> | <a href=\"https://readme-i18n.com/fr/we-promise/sure\">Français</a> | <a href=\"https://readme-i18n.com/ja/we-promise/sure\">日本語</a> | <a href=\"https://readme-i18n.com/ko/we-promise/sure\">한국어</a> | <a href=\"https://readme-i18n.com/pt/we-promise/sure\">Português</a> | <a href=\"https://readme-i18n.com/ru/we-promise/sure\">Русский</a> | <a href=\"https://readme-i18n.com/zh/we-promise/sure\">中文</a> </p> # Sure: The personal finance app for everyone <b>Get involved: [Discord](https://discord.gg/36ZGBsxYEK) • [Website](https://sure.am) • [Issues](https://github.com/we-promise/sure/issues)</b> > [!IMPORTANT] > This repository is a community fork of the now-abandoned Maybe Finance project. <br /> > Learn more in their [final release](https://github.com/maybe-finance/maybe/releases/tag/v0.6.0) doc. ## Backstory The [Maybe Finance](https://github.com/maybe-finance/maybe) (archived/abandoned repo) team spent most of 2021–2022 building a full-featured personal finance and wealth management app. It even included an “Ask an Advisor” feature that connected users with a real CFP/CFA — all included with your subscription. The business end of things didn't work out, and so they stopped developing the app in mid-2023. After spending nearly $1 million on development (employees, contractors, data providers, infra, etc.), the team open-sourced the app. Their goal was to let users self-host it for free — and eventually launch a hosted version for a small fee. They actually did launch that hosted version … briefly. That also didn’t work out — at least not as a sustainable B2C business — so now here we are: hosting a community-maintained fork to keep the codebase alive and see where this can go next. Join us! ## Hosting Sure Sure is a fully working personal finance app that can be [self hosted with Docker](docs/hosting/docker.md). Sure can be accessed from a browser, the macOS desktop app, the mobile app, API clients, and LLM agents. See [Sure Clients](docs/clients.md) for an overview. ## Forking and Attribution This repo is a community fork of the archived Maybe Finance repo. You’re free to fork it under the AGPLv3 license — but we’d love it if you stuck around and contributed here instead. To stay compliant and avoid trademark issues: - Be sure to include the original [AGPLv3 license](https://github.com/maybe-finance/maybe/blob/main/LICENSE) and clearly state in your README that your fork is based on Maybe Finance but is **not affiliated with or endorsed by** Maybe Finance Inc. - \"Maybe\" is a trademark of Maybe Finance Inc. and therefore, use of it is NOT allowed in forked repositories (or the logo) ## Performance Issues With data-heavy apps, inevitably, there are performance issues. We've set up a public dashboard showing the problematic requests seen on the de",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": 2,
+      "streak_days": 3
+    },
+    {
+      "rank": 6,
+      "full_name": "QwenLM/qwen-code",
+      "url": "https://github.com/QwenLM/qwen-code",
+      "description": "An open-source AI coding agent that lives in your terminal.",
+      "language": "TypeScript",
+      "stars": 30007,
+      "forks": 3412,
+      "stars_today": 151,
+      "topics": [
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-coding",
+        "cli",
+        "coding-agent",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "qwen",
+        "terminal",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2025-06-26T01:37:46Z",
+      "updated_at": "2026-11-13T08:00:21Z",
+      "open_issues": 2254,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> [![npm version](https://img.shields.io/npm/v/@qwen-code/qwen-code.svg)](https://www.npmjs.com/package/@qwen-code/qwen-code) [![License](https://img.shields.io/github/license/QwenLM/qwen-code.svg)](./LICENSE) [![Node.js Version](https://img.shields.io/badge/node-%3E%3D22.0.0-brightgreen.svg)](https://nodejs.org/) [![Downloads](https://img.shields.io/npm/dm/@qwen-code/qwen-code.svg)](https://www.npmjs.com/package/@qwen-code/qwen-code) <a href=\"https://trendshift.io/repositories/15287\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/15287\" alt=\"QwenLM%2Fqwen-code | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> **The open-source AI coding agent for your terminal, editor, desktop, browser, and chat.** <a href=\"https://qwenlm.github.io/qwen-code-docs/zh/users/overview\">中文</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/de/users/overview\">Deutsch</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/fr/users/overview\">français</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/ja/users/overview\">日本語</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/ru/users/overview\">Русский</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/pt-BR/users/overview\">Português (Brasil)</a> | <a href=\"https://qwenlm.github.io/qwen-code-docs/ko/users/overview\">한국어</a> </div> ![Qwen Code in the terminal, desktop app, browser, editor, and chat, with VS Code, Zed, JetBrains, Telegram, DingTalk, WeChat, and Feishu integrations](https://img.alicdn.com/imgextra/i1/O1CN01DXWdF8BDUdD3XPhl_!!6000000001721-2-tps-1743-902.png) | **Qwen Code 1.0 Preview** | | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | Qwen Code 1.0 Preview brings together the agent harness capabilities of [Qoder](https://qoder.com/) and Qwen Code in an open-source release.<br><br>[Try Qwen Code 1.0 Preview](https://github.com/QwenLM/qwen-code/tree/v1.0.0-preview) · [Documentation](https://qwenlm.github.io/qwen-code-docs/1.x/) · [中文文档](https://qwenlm.github.io/qwen-code-docs/1.x/zh/users/overview/). | ## Why Qwen Code? - **Agentic out of the box** — Auto-Memory, Auto-Skills, SubAgents, Agent Teams, and MCP. Dynamic workflows, zero setup. - **Open-source, inside and out** — The framework and the Qwen models are open-source. They evolve together. No vendor lock-in. - **Multi-protocol** — Supports OpenAI, Anthropic, Gemini, and Qwen APIs. Any third-party provider or local model (Ollama / vLLM). Switch at runtime. - **Beyond the terminal** — IDE plugins, Desktop app, Web UI, SDKs, and chat integrations (Telegram / DingTalk / WeChat / Feishu). > [!TIP] > Qwen Code is actively iterating on itself — using its own agent and models to file issues, submit PRs, review code, and run tests. Powered by the community, driven by AI. ## Installation Looking for **Qwen Code 1.0 Preview**? [Get started here](https://github.com/QwenLM/qwen-code/tree/v1.0.0-preview). The instructions below are for the main version. **Linux / macOS:** ```bash curl -fsSL https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.sh | bash ``` **Windows:** ```powershell irm https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.ps1 | iex ``` > Restart your terminal after installation to ensure environment variables take effect. <details> <summary>NPM / Homebrew</summary> **NPM** (requires [Node.js 22+](https://nodejs.org/)): ```bash npm install -g @qwen-code/qwen-code@latest ``` **Homebrew** (macOS / Linux): ```bash brew install qwen-code ``` </details> ## Quick Start Open a terminal in your project and start Qwen Code: ```bash cd /path/to/your-projec",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 7,
+      "full_name": "ashhart/TensorFold",
+      "url": "https://github.com/ashhart/TensorFold",
+      "description": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+      "language": "Zig",
+      "stars": 2028,
+      "forks": 397,
+      "stars_today": 54,
+      "topics": [
+        "ai",
+        "ai-tools",
+        "llm",
+        "llm-inference",
+        "llm-tools"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-06-19T20:27:39Z",
+      "updated_at": "2026-11-13T07:58:26Z",
+      "open_issues": 571,
+      "default_branch": "main",
+      "readme_excerpt": "# TensorFold TensorFold serves language models from a Zig binary on Apple Silicon and NVIDIA GPUs. The engine reads checkpoints, tokenizes requests and runs Metal or CUDA kernels directly. Serving needs no Python or MLX installation. Building with a coding agent? Have it load the [contributor skill](docs/recipes/SKILL.md) before it writes any code. ## Contributing with agents Please use [Agent Traffic Control](https://github.com/ashhart/ATC) before editing TensorFold so contributors and agents can avoid duplicate work and conflicting changes. Check the [live agent radar](https://tensorfold.dev/atc) before choosing an issue and follow [CONTRIBUTING.md](CONTRIBUTING.md) and the [ATC contributor instructions](docs/atc/SKILL.md). Install or upgrade ATC to 0.9.4 or later, then run from an updated TensorFold clone: ```sh npm install -g github:ashhart/ATC atc check ISSUE --json atc claim ISSUE --json ``` Replace `ISSUE` with the issue number and claim only after a complete check says the work is free. TensorFold enables automatic public check-ins: a successful new claim starts an anonymous session on the radar and returns its `session` number. Keep that number instead of starting a duplicate session. For work already yours, start a session with `atc start ISSUE --json`. Add `--github-name` to `claim` or `start` only if you want your verified GitHub name shown; `--local` keeps a new session on your machine. The board shows the issue, activity state and last check-in; GitHub still associates the verification comment with its author. Check that `publication` is `public`; `unavailable` means the public update failed even if the local claim or session succeeded. Pulse only while the agent is working, before its five-minute check-in expires: ```sh atc pulse ISSUE SESSION working --json atc who path/to/file --json atc overlap --json atc land ISSUE SESSION --json atc release ISSUE --json ``` Use `reviewing` or `blocked` when appropriate, land the session when it stops, and resolve overlaps before opening a pull request. Before opening a pull request, have the agent run the [pull request skill](docs/pr/SKILL.md); agents that support skills can install it as `tensorfold-pull-request`. ## Quick start Start with Qwen3.5-2B, the small 4-bit checkpoint checked on Metal and a GB10. The commands below download its pinned revision, then serve it as `local-model`. Model weights have their own licenses. Reviewing or benchmarking TensorFold? [Evaluating TensorFold](docs/evaluating.md) covers pinning, signature checks, a container and the tests that need no GPU. ### Mac with Apple Silicon Install with Homebrew, then start the server: ```sh brew install ashhart/tensorfold/tensorfold tensorfold pull mlx-community/Qwen3.5-2B-MLX-4bit@93760be4f1f69842a46bc13dbdc0f19e291392a3 tensorfold serve mlx-community/Qwen3.5-2B-MLX-4bit --name local-model --context 8192 --no-thinking ``` ### Linux with an NVIDIA GPU Use the release archive for your CPU: `linux-aarch64` on a GB10, `linux-x86_64` on an x86_64 host. It needs glibc 2.28 or newer and NVIDIA driver R580 or newer (CUDA 13.0), providing `libcuda.so.1`. Keep the archive's directories together. Its kernels are built with CUDA 13, so TensorFold refuses an older driver at startup; `nvidia-smi` shows the installed one. See the [CUDA runbook](RUNBOOK.md#linux-and-cuda) for runtime libraries and supported GPUs. ```sh V=1.2.7 case \"$(uname -m)\" in aarch64|arm64) PLATFORM=linux-aarch64 ;; x86_64) PLATFORM=linux-x86_64 ;; *) echo 'No release archive for this CPU' >&2; exit 1 ;; esac curl -fLO \"https://github.com/ashhart/TensorFold/releases/download/v$V/tensorfold-$V-$PLATFORM.tar.gz\" curl -fLO \"https://github.com/ashhart/TensorFold/releases/download/v$V/tensorfold-$V-$PLATFORM.tar.gz.sha256\" sha256sum -c \"tensorfold-$V-$PLATFORM.tar.gz.sha256\" tar -xzf \"tensorfold-$V-$PLATFORM.tar.gz\" export PATH=\"$PWD/tensorfold-$V-$PLATFORM/bin:$PATH\" tensorfold() { command tensorfold-native \"$@\"; } tensorfold pull mlx-community/Qwen3.",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 8,
+      "full_name": "nodejs/node",
+      "url": "https://github.com/nodejs/node",
+      "description": "Node.js JavaScript runtime ✨🐢🚀✨",
+      "language": "JavaScript",
+      "stars": 123659,
+      "forks": 38060,
+      "stars_today": 62,
+      "topics": [
+        "javascript",
+        "js",
+        "linux",
+        "macos",
+        "mit",
+        "node",
+        "nodejs",
+        "runtime",
+        "windows"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2014-11-26T19:57:11Z",
+      "updated_at": "2026-11-13T07:57:24Z",
+      "open_issues": 1336,
+      "default_branch": "main",
+      "readme_excerpt": "# Node.js Node.js is an open-source, cross-platform JavaScript runtime environment. For information on using Node.js, see the [Node.js website][]. The Node.js project uses an [open governance model](./GOVERNANCE.md). The [OpenJS Foundation][] provides support for the project. Contributors are expected to act in a collaborative manner to move the project forward. We encourage the constructive exchange of contrary opinions and compromise. The [TSC](./GOVERNANCE.md#technical-steering-committee) reserves the right to limit or block contributors who repeatedly act in ways that discourage, exhaust, or otherwise negatively affect other participants. **This project has a [Code of Conduct][].** ## Table of contents * [Support](#support) * [Release types](#release-types) * [Download](#download) * [Current and LTS releases](#current-and-lts-releases) * [Nightly releases](#nightly-releases) * [API documentation](#api-documentation) * [Verifying binaries](#verifying-binaries) * [Building Node.js](#building-nodejs) * [Security](#security) * [Contributing to Node.js](#contributing-to-nodejs) * [Current project team members](#current-project-team-members) * [TSC (Technical Steering Committee)](#tsc-technical-steering-committee) * [Collaborators](#collaborators) * [Triagers](#triagers) * [Release keys](#release-keys) * [License](#license) ## Support Looking for help? Check out the [instructions for getting support](.github/SUPPORT.md). ## Release types Node.js follows [semantic versioning](https://semver.org). * **Alpha**: Under active development where semver-major changes are allowed. Each October, a new release line (for example, Node.js 27) branches off `main` and receives Alpha releases (for example, `27.0.0-alpha.0.0.0`) for 6 months, then are promoted to Current (see below) each April. Alpha releases are signed, tagged, and tested through [CITGM](https://github.com/nodejs/citgm), but their API and ABI may change between releases. They are intended for library authors and CI pipelines, not for production use. * **Current**: Under active development, no semver-major changes allowed. Node.js releases a new major version once a year, in April. Releases stay Current for 6 months, then convert to LTS (see below) each October. Their ABI may change between releases. They are intended for library authors and CI pipelines, not for production use. * **LTS**: Releases under Long Term Support, with a focus on stability and security. Only changes that have been on Alpha or Current release for two weeks can be backported to a typical LTS release. Every major version becomes an LTS release, and receives 30 months of LTS support, for a total of 36 months from its first Current release to End-of-Life. LTS release lines have alphabetically-ordered code names, beginning with Node.js 4 Argon. * **Nightly**: Code from the `main` branch built every 24-hours when there are changes. Unlike Alpha releases, nightly builds are automated and untested. Use with caution. Release lines up to and including Node.js 26 follow the previous schedule, where a new major version was released every 6 months and only even-numbered major versions became LTS. See the [Node.js release schedule announcement](https://nodejs.org/en/blog/announcements/evolving-the-nodejs-release-schedule) for details. For more information, see the [Release README](https://github.com/nodejs/Release#readme). ### Download Binaries, installers, and source tarballs are available at <https://nodejs.org/en/download/>. #### Current and LTS releases <https://nodejs.org/download/release/> The [latest](https://nodejs.org/download/release/latest/) directory is an alias for the latest Current release. The latest-_codename_ directory is an alias for the latest release from an LTS line. For example, the [latest-hydrogen](https://nodejs.org/download/release/latest-hydrogen/) directory contains the latest Hydrogen (Node.js 18) release. #### Nightly releases <https://nodejs.org/download/nightly/> Each directory and fil",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 9,
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "description": "Production-grade engineering skills for AI coding agents.",
+      "language": "JavaScript",
+      "stars": 116885,
+      "forks": 12221,
+      "stars_today": 816,
+      "topics": [
+        "agent-skills",
+        "antigravity",
+        "claude-code",
+        "codex",
+        "cursor",
+        "skills"
+      ],
+      "license": "MIT",
+      "created_at": "2026-02-15T20:20:26Z",
+      "updated_at": "2026-11-13T08:00:18Z",
+      "open_issues": 137,
+      "default_branch": "main",
+      "readme_excerpt": "# Agent Skills **Production-grade engineering skills for AI coding agents.** Skills encode the workflows, quality gates, and best practices that senior engineers use when building software. These ones are packaged so AI agents follow them consistently across every phase of development. <a href=\"https://trendshift.io/repositories/25200\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/25200\" alt=\"addyosmani%2Fagent-skills | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a> ![Addy's Agent Skills](https://addyosmani.com/assets/images/addys-agent-skills.jpg) ``` DEFINE PLAN BUILD VERIFY REVIEW SHIP ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ │ Idea │ ───▶ │ Spec │ ───▶ │ Code │ ───▶ │ Test │ ───▶ │ QA │ ───▶ │ Go │ │Refine│ │ PRD │ │ Impl │ │Debug │ │ Gate │ │ Live │ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ └──────┘ /spec /plan /build /test /review /ship ``` --- ## Commands 9 slash commands that map to the development lifecycle. Each one activates the right skills automatically. | What you're doing | Command | Key principle | |-------------------|---------|---------------| | Define what to build | `/spec` | Spec before code | | Plan how to build it | `/plan` | Small, atomic tasks | | Build incrementally | `/build` | One slice at a time | | Prove it works | `/test` | Tests are proof | | Set the quality bar | `/constraints` | Decide it once, enforce it everywhere | | Review before merge | `/review` | Improve code health | | Audit web performance | `/webperf` | Measure before you optimize | | Simplify the code | `/code-simplify` | Clarity over cleverness | | Ship to production | `/ship` | Faster is safer | In Claude Code these install as plugin commands. Where a built-in command has the same name, as `/review` does, use the namespaced form: `/agent-skills:review`. Want fewer manual steps once the spec exists? **`/build auto`** generates the plan and implements every task in a single approved pass — you approve the plan once, then it runs autonomously. It removes the human stepping *between* tasks, not the verification: every task is still test-driven and committed individually, and it pauses on failures or risky steps. Skills also activate automatically based on what you're doing — designing an API triggers `api-and-interface-design`, building UI triggers `frontend-ui-engineering`, and so on. --- ## Quick Start **Fastest path — any agent, one command.** The open [skills CLI](https://github.com/vercel-labs/skills) installs into 70+ agents (Claude Code, Cursor, Codex, Copilot, Cline, and more): ```bash npx skills add addyosmani/agent-skills # install all 25 skills npx skills add addyosmani/agent-skills --list # browse before installing ``` Or grab individual skills: ```bash npx skills add addyosmani/agent-skills --skill code-review-and-quality # five-axis review before merge npx skills add addyosmani/agent-skills --skill interview-me # requirements interrogation, one question at a time npx skills add addyosmani/agent-skills --skill test-driven-development # red-green-refactor, enforced ``` > **Installing one skill?** A per-skill `npx` install copies only > `skills/<name>/`, not the repo-level `references/` directory. The skill still > works, but paths to supplementary shared checklists are unavailable. Use a > whole-repo integration, clone the repository, or copy the needed checklist into > a `references/` directory inside the installed skill. This portability gap is > tracked in [#361](https://github.com/addyosmani/agent-skills/issues/361). Prefer a native integration? Pick your tool below. <details> <summary><b>Claude Code (recommended)</b></summary> **Marketplace install:** ``` /plugin marketplace add addyosmani/agent-skills /plugin install agent-skills@addy-agent-skills ``` > **SSH errors?** The marketplace clones repos via SSH. If you don't have SSH keys set up on GitHub, either [add your SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": -4,
+      "streak_days": 3
+    },
+    {
+      "rank": 10,
+      "full_name": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "stars": 26934,
+      "forks": 2087,
+      "stars_today": 1830,
+      "topics": [],
+      "license": "MIT",
+      "created_at": "2026-01-09T16:20:32Z",
+      "updated_at": "2026-11-13T08:01:02Z",
+      "open_issues": 620,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- SYNC CONTRACT: Architecture changes require documentation updates. --> <div align=\"center\"> <img src=\"https://lookaside.facebook.com/assets/astryx/Astryx-Banner.png\" alt=\"Astryx\" width=\"100%\" /> # Astryx An open source design system that's fully customizable and built for how we build now: <br/> by people and the agents working alongside them. **Currently in Beta** · Built on [React 19+](https://react.dev) and [StyleX](https://stylexjs.com) [![npm version](https://img.shields.io/npm/v/@astryxdesign/core?label=npm&color=cb3837&logo=npm)](https://www.npmjs.com/package/@astryxdesign/core) [![license MIT](https://img.shields.io/npm/l/@astryxdesign/core?color=blue)](LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/meta/astryx/wiki/Contributing) [![Docs](https://img.shields.io/badge/Docs-astryx.atmeta.com-6741d9?logo=readthedocs&logoColor=white)](https://astryx.atmeta.com) [![Storybook](https://img.shields.io/badge/Storybook-live-ff4785?logo=storybook&logoColor=white)](https://astryx.atmeta.com/storybook/) [![Sandbox](https://img.shields.io/badge/Sandbox-playground-A9792B)](https://astryx.atmeta.com/sandbox/) **[Docs](https://astryx.atmeta.com)** · **[Storybook](https://astryx.atmeta.com/storybook/)** · **[Sandbox](https://astryx.atmeta.com/sandbox/)** · **[Contributing](https://github.com/meta/astryx/wiki/Contributing)** · **[Discord](https://discord.com/invite/XnsUcFykEP)** </div> ## Overview Astryx is an open source design system that grew inside Meta over the last eight years, where it became the most-used and largest design system in the company — powering 13,000+ apps and shaped by the engineers, designers, and product teams who depend on it every day. It ships 150+ accessible components, brand-level theming, dark mode, ready-to-ship templates, and a CLI as one cohesive system. You import pre-built CSS and use typed React components — no build plugin, no styling library to adopt — and both people and AI assistants build with the same tooling. **What makes Astryx different:** - **Open internals.** Components are built to be composed at any level, not locked behind a closed top-level API. The building blocks you'd reach for are exported directly, and when you need to go deeper, swizzle ejects a component's full source into your project to own. - **No styling lock-in.** Astryx authors its styles with StyleX, but that's invisible to consumers. Override with `className` using Tailwind, CSS modules, or plain CSS — whatever your project already uses. - **Customize without wrapping.** A theme is a set of CSS custom property overrides, so a designer can make Astryx unmistakably theirs without forking or wrapping component source. - **Built for people and agents.** The API, docs, and CLI are designed together so a person and an AI assistant build the same way, from the same reference. ## Getting Started Astryx requires **React 19** or later (`react` and `react-dom` are peer dependencies of `@astryxdesign/core`). Install Astryx, a theme, and its peer dependencies: ```bash # npm npm install @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex npm install -D @astryxdesign/cli # pnpm pnpm add @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex pnpm add -D @astryxdesign/cli # yarn yarn add @astryxdesign/core @astryxdesign/theme-neutral @stylexjs/stylex yarn add -D @astryxdesign/cli ``` You can also install the CLI once for your computer, so `astryx` works in any folder and every coding agent knows Astryx; in a project, it still runs that project's own version: ```bash npm i -g @astryxdesign/cli ``` Project install, global install, or both? `astryx docs global/project-global-or-both` compares them (both is recommended), and `astryx docs global` explains how global mode works. The simplest setup is a few CSS imports plus a theme provider — no build plugin, no PostCSS or Babel config. See the **[@astryxdesign/core README](packages/core/README.md#quick-start)** for",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": -9,
+      "streak_days": 4
+    },
+    {
+      "rank": 11,
+      "full_name": "CopilotKit/OpenBot",
+      "url": "https://github.com/CopilotKit/OpenBot",
+      "description": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+      "language": "TypeScript",
+      "stars": 11880,
+      "forks": 1458,
+      "stars_today": 298,
+      "topics": [
+        "ag-ui",
+        "agent-governance",
+        "ai-agents",
+        "browser-automation",
+        "copilotkit",
+        "generative-ui",
+        "mcp"
+      ],
+      "license": "MIT",
+      "created_at": "2026-08-17T00:44:59Z",
+      "updated_at": "2026-11-13T07:59:24Z",
+      "open_issues": 92,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"app/src/assets/openbot-logo.png\" alt=\"\" width=\"72\"> # OpenBot ### AI coworkers. Ready for the enterprise. A modular, self-hostable workspace for AI coworkers.<br> Choose your models. Bring your agents. Own your infrastructure. [open.bot](https://open.bot) · [Docs](docs/README.md) · [Deploy on Kubernetes](#deploy-on-kubernetes) · [Run from source](#run-from-source) [![GitHub Trending: #3 Repository Of The Day](https://trendshift.io/api/badge/repositories/175080)](https://trendshift.io/repositories/175080) [![Trendshift: #3 Repository Of The Day](https://trendshift.io/api/badge/trendshift/repositories/175080/daily)](https://trendshift.io/repositories/175080) <br> [![Download for Mac (Apple silicon)](https://img.shields.io/github/v/release/CopilotKit/OpenBot?style=for-the-badge&labelColor=3A3466&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTExIDNoMnYxMC4ybDMuNi0zLjZMMTggMTFsLTYgNi02LTYgMS40LTEuNCAzLjYgMy42ek01IDE5aDE0djJINXoiLz48L3N2Zz4%3D&label=Download%20for%20Mac%20%28Apple%20silicon%29&color=6E6AE0)](https://downloads.copilotkit.ai/latest/OpenBot-mac-arm64.dmg) [![Download for Mac (Intel)](https://img.shields.io/github/v/release/CopilotKit/OpenBot?style=for-the-badge&labelColor=3A3466&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTExIDNoMnYxMC4ybDMuNi0zLjZMMTggMTFsLTYgNi02LTYgMS40LTEuNCAzLjYgMy42ek01IDE5aDE0djJINXoiLz48L3N2Zz4%3D&label=Download%20for%20Mac%20%28Intel%29&color=4A7CC8)](https://downloads.copilotkit.ai/latest/OpenBot-mac-x64.dmg) [![Download for Windows](https://img.shields.io/github/v/release/CopilotKit/OpenBot?style=for-the-badge&labelColor=3A3466&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTExIDNoMnYxMC4ybDMuNi0zLjZMMTggMTFsLTYgNi02LTYgMS40LTEuNCAzLjYgMy42ek01IDE5aDE0djJINXoiLz48L3N2Zz4%3D&label=Download%20for%20Windows&color=9A5CC6)](https://downloads.copilotkit.ai/latest/OpenBot-windows-x64-setup.exe) <sub>Notarized .dmg for Apple silicon and Intel Macs · signed installer for Windows x64 · no terminal or developer tools needed · [Release notes](https://github.com/CopilotKit/OpenBot/releases/latest)</sub> <br> [![OpenBot for Business: get early access](https://img.shields.io/badge/OpenBot_for_Business-Get_early_access_%E2%86%92-D14B9C?style=for-the-badge&labelColor=3A3466)](https://dashboard.operations.copilotkit.ai/early-access/openbot?platform=business&ref=github&utm_source=github&utm_medium=readme&utm_campaign=openbot-early-access) <sub>From [CopilotKit](https://www.copilotkit.ai), creators of [AG-UI](https://github.com/ag-ui-protocol/ag-ui).</sub> </div> https://github.com/user-attachments/assets/c60f07da-8b6d-46eb-a573-17fc1e65a644 <p align=\"center\"><sub>Watch a Bot use its browser and tools, answer with interactive results, and wait for your approval before it sends. Take over when it needs you, and connect the agents you already run.</sub></p> ## Getting started ### On your laptop The easiest way to get started is with the fully self-contained app that runs on your laptop, combining the OpenBot frontend and Docker-based backend in one application. [Mac / Apple silicon](https://downloads.copilotkit.ai/latest/OpenBot-mac-arm64.dmg) · [Mac / Intel](https://downloads.copilotkit.ai/latest/OpenBot-mac-x64.dmg) · [Windows](https://downloads.copilotkit.ai/latest/OpenBot-windows-x64-setup.exe) [Run from source](#run-from-source) ### For your team **OpenBot for Business** brings your agents into one workspace with company sign-in, tool permissions, approvals, and audit. Deploy on your infrastructure or work with our engineers on hosting and customization. [**Get early access to OpenBot for Business →**](https://dashboard.operations.copilotkit.ai/early-access/openbot",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 12,
+      "full_name": "Alishahryar1/free-claude-code",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "description": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+      "language": "Python",
+      "stars": 69580,
+      "forks": 10799,
+      "stars_today": 415,
+      "topics": [],
+      "license": "NOASSERTION",
+      "created_at": "2026-01-28T19:02:30Z",
+      "updated_at": "2026-11-13T07:59:52Z",
+      "open_issues": 399,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h1> <picture> <source media=\"(prefers-color-scheme: light)\" srcset=\"assets/free-claude-code-wordmark-light.svg\"> <img src=\"assets/free-claude-code-wordmark-dark.svg\" alt=\"Free Claude Code\" width=\"610\"> </picture> </h1> [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-2e7d32.svg?style=for-the-badge)](https://github.com/Alishahryar1/free-claude-code/blob/main/LICENSE) [![Python 3.14](https://img.shields.io/badge/python-3.14-3776ab.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/) [![Package Manager: uv](assets/package-manager-uv.svg)](https://github.com/astral-sh/uv) [![Testing: Pytest](https://img.shields.io/badge/Testing-Pytest-ad1457.svg?style=for-the-badge)](https://github.com/Alishahryar1/free-claude-code/actions/workflows/tests.yml) [![Type Checker: Ty](https://img.shields.io/badge/Type%20Checker-ty-fdd835.svg?style=for-the-badge)](https://pypi.org/project/ty/) [![Formatter: Ruff](https://img.shields.io/badge/Formatter-ruff-bf4b00.svg?style=for-the-badge)](https://github.com/astral-sh/ruff) [![Logging: Loguru](https://img.shields.io/badge/logging-loguru-00695c.svg?style=for-the-badge)](https://github.com/Delgan/loguru) [Quick Start](#quick-start) · [Providers](#choose-a-provider) · [Clients](#connect-your-client) · [Integrations](#optional-integrations) · [Manage](#manage-your-installation) </div> <p align=\"center\"> <em>Independent open-source project. Not affiliated with or endorsed by Anthropic. Claude and Claude Code are trademarks of Anthropic.</em> </p> ## Features - Route any supported harness to models from any supported provider. - 12 supported harnesses: [Claude Code](https://code.claude.com/docs/en/overview), [Codex](https://github.com/openai/codex), [Pi](https://github.com/earendil-works/pi), [OpenCode](https://github.com/anomalyco/opencode), [Cline](https://github.com/cline/cline), [Hermes](https://github.com/NousResearch/hermes-agent), [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness), [Grok Build](https://github.com/xai-org/grok-build), [Muse Code](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2/), [Aider](https://aider.chat/), [Antigravity CLI](https://antigravity.google/docs/getting-started/), or [VS Code Chat](https://code.visualstudio.com/). - Preserved native streaming, tool use, and interleaved thinking for maximum performance. - For Claude Code, route [Fable](https://www.anthropic.com/claude/fable), [Opus](https://www.anthropic.com/claude/opus), [Sonnet](https://www.anthropic.com/claude/sonnet), and [Haiku](https://www.anthropic.com/claude/haiku) to supported models. - 61 supported providers, including free, paid, subscription, and local providers. - 1.3B+ free tokens per month. - FCC follows provider TOS and removes integrations if they stop being allowed. - Use through the terminal, desktop apps ([Codex App](https://learn.chatgpt.com/docs/app), [Claude Desktop](https://claude.ai/download), and [DeepSeek Desktop](https://github.com/deepseek-ai/deepseek-harness)), IDE extensions ([VS Code](https://code.visualstudio.com/) and [JetBrains](https://www.jetbrains.com/)), your phone ([Discord](https://discord.com/) and [Telegram](https://telegram.org/)), or your browser through native Code sessions. - Voice notes supported for Discord and Telegram using local [Whisper](https://github.com/openai/whisper) or [NVIDIA NIM](https://docs.nvidia.com/nim/speech/latest/asr/deploy-asr-models/whisper.html). - Up to 90% lower token usage using [RTK](https://github.com/rtk-ai/rtk) and [Headroom](https://github.com/headroomlabs-ai/headroom). - State-of-the-art reliability features so you can keep coding through provider outages: - Automatic retries. - Configurable rate limits. - Configurable concurrency control. - Automatic model/provider fallback. - Automatic multi-API key fallback. Free-tier availability and limits are controlled by each provider and may change. <div align=\"center\"> <img src=\"assets/pic",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    },
+    {
+      "rank": 13,
+      "full_name": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "LLM inference in C/C++",
+      "language": "C++",
+      "stars": 134742,
+      "forks": 25529,
+      "stars_today": 176,
+      "topics": [
+        "ggml"
+      ],
+      "license": "MIT",
+      "created_at": "2023-03-10T18:58:00Z",
+      "updated_at": "2026-11-13T08:01:07Z",
+      "open_issues": 2591,
+      "default_branch": "master",
+      "readme_excerpt": "# llama.cpp ![llama.cpp](https://raw.githubusercontent.com/ggml-org/llama-brand/refs/heads/master/logo/svg/cover/llama-cpp/cover-llama-cpp-dark.svg) <div align=\"center\"> <b>LLM inference in C/C++</b> [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Release](https://img.shields.io/github/v/release/ggml-org/llama.cpp?filter=v*&color=brightgreen)](https://github.com/ggml-org/llama.cpp/releases?q=tag:v0) [![Nightly](https://img.shields.io/github/v/release/ggml-org/llama.cpp?label=nightly&filter=b*&color=orange)](https://github.com/ggml-org/llama.cpp/releases?q=b) [![Server](https://img.shields.io/github/actions/workflow/status/ggml-org/llama.cpp/server.yml?label=Server)](https://github.com/ggml-org/llama.cpp/actions/workflows/server.yml) [![Docker](https://img.shields.io/github/actions/workflow/status/ggml-org/llama.cpp/docker.yml?label=Docker)](https://github.com/ggml-org/llama.cpp/actions/workflows/docker.yml) [![Winget](https://img.shields.io/github/actions/workflow/status/ggml-org/llama.cpp/winget.yml?label=Winget)](https://github.com/ggml-org/llama.cpp/actions/workflows/winget.yml) [ggml](https://github.com/ggml-org/ggml) / [ops](https://github.com/ggml-org/llama.cpp/blob/master/docs/ops.md) / [maintainer PRs](https://github.com/ggml-org/llama.cpp/pulls?q=is%3Apr%20is%3Aopen%20draft%3AFalse%20(author%3Asanmai%20OR%20author%3Argerganov%20OR%20author%3AKitaitiMakoto%20OR%20author%3Adanbev%20OR%20author%3Aaldehir%20OR%20author%3Amax-krasnyansky%20OR%20author%3ACISC%20OR%20author%3Aggerganov%20OR%20author%3Aam17an%20OR%20author%3Ajhen0409%20OR%20author%3Abartowski1182%20OR%20author%3Anikwen%20OR%20author%3Ahipudding%20OR%20author%3Aravi9%20OR%20author%3AServeurpersoCom%20OR%20author%3Athelittlefireman%20OR%20author%3Apwilkin%20OR%20author%3Areeselevine%20OR%20author%3Angxson%20OR%20author%3Ajeffbolznv%20OR%20author%3Amarty1885%20OR%20author%3A0cc4m%20OR%20author%3ATitaniumtown%20OR%20author%3Aangt%20OR%20author%3AIMbackK%20OR%20author%3Aarthw%20OR%20author%3AJohannesGaessler%20OR%20author%3AORippler%20OR%20author%3Aruixiang63%20OR%20author%3Axctan%20OR%20author%3AmasterFoad%20OR%20author%3Aallozaur%20OR%20author%3AAndreas-Krebbel%20OR%20author%3Ayomaytk%20OR%20author%3Aaendk%20OR%20author%3Awine99%20OR%20author%3Agaugarg-nv%20OR%20author%3Ataronaeo%20OR%20author%3Aforforever73%20OR%20author%3Achaxu01%20OR%20author%3Alhez%20OR%20author%3AAlekseiNikiforovIBM%20OR%20author%3Anetrunnereve%20OR%20author%3Afairydreaming%20OR%20author%3Aynankani)%20sort%3Aupdated-desc) / [dev stats](https://github.com/ggml-org/llama.cpp-dev) / [lib llama API](https://github.com/ggml-org/llama.cpp/issues/9289) / [llama-server REST API](https://github.com/ggml-org/llama.cpp/issues/9291) </div> ## Quick start A few options to get `llama.cpp` installed on your machine: ```bash # curl curl -LsSf https://llama.app/install.sh | sh # powershell irm https://llama.app/install.ps1 | iex ``` - Visit https://llama.app and follow the instructions - Run with Docker - see our [Docker documentation](docs/docker.md) - Download pre-built binaries from the [releases page](https://github.com/ggml-org/llama.cpp/releases) - Build from source by cloning this repository - check out [our build guide](docs/build.md) Once installed: ```sh # Download and run a model directly from Hugging Face llama cli -hf ggml-org/Qwen3.5-0.8B-GGUF # Launch OpenAI-compatible API server llama serve -hf ggml-org/Qwen3.5-0.8B-GGUF ``` <table align=\"center\"> <tr> <td align=\"center\" width=50%> <img width=\"1310\" height=\"888\" alt=\"VLM session with `llama cli`\" src=\"https://github.com/user-attachments/assets/88726b48-1713-48aa-a525-95a02e78afc4\" /> <i>VLM session with <b>llama cli</b></i> </td> <td align=\"center\"> <img width=\"1392\" height=\"958\" alt=\"Built-in web UI against `llama serve` running Qwen 3.6\" src=\"https://github.com/user-attachments/assets/b402f972-2e32-4def-8771-8d849f08cf2e\" /> <i>Built-in web UI against <b>llama serve</b></i> </td>",
+      "metadata_error": "",
+      "is_new": true,
+      "previous_rank": null,
+      "rank_change": null,
+      "streak_days": 1
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 8/13 个项目可从资料确认与 AI 直接相关；其余 5 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：其他数字产品与工具（5 个）、AI 编程智能体（3 个）、AI 安全、权限与治理（1 个）。",
+      "排名第一的 GoogleChrome/modern-web-guidance-src 代表“AI 编程智能体”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "其他数字产品与工具（5 个项目）",
+      "AI 编程智能体（3 个项目）",
+      "AI 安全、权限与治理（1 个项目）",
+      "AI 金融数据与研究（1 个项目）",
+      "AI 设计质量指导（1 个项目）",
+      "开源 AI 协作工作台（1 个项目）"
+    ],
+    "product_business_signals": [
+      "其他数字产品与工具是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 其他数字产品与工具 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "GoogleChrome/modern-web-guidance-src",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 739 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 modern-web-guidance-src 描述为“Keep your coding agent up to date with the latest web best practices”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 modern-web-guidance-src 的潜在使用者而言，在项目方所述的“Keep your coding agent up to date with the latest web best practices”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Keep your coding agent up to date with the latest web best practices",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "openai/codex-security",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 643 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 codex-security 描述为“OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. n”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 codex-security 的潜在使用者而言，在项目方所述的“OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. n”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/codex-security",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openai/codex-security",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/openai/codex-security",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "nvm-sh/nvm",
+        "one_line_summary": "围绕“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+        "solution": "围绕“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 63 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 nvm 描述为“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions. 它的办法是：围绕“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 nvm 的潜在使用者而言，在项目方所述的“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”场景中，可直接查看和试验项目方所述的“Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nvm-sh/nvm",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nvm-sh/nvm",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/nvm-sh/nvm",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "pookjw/HermesEnabler",
+        "one_line_summary": "围绕“Enable Hermès Watch Faces on any Apple Watch devices”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Enable Hermès Watch Faces on any Apple Watch devices",
+        "solution": "围绕“Enable Hermès Watch Faces on any Apple Watch devices”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 218 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 HermesEnabler 描述为“Enable Hermès Watch Faces on any Apple Watch devices”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Enable Hermès Watch Faces on any Apple Watch devices 它的办法是：围绕“Enable Hermès Watch Faces on any Apple Watch devices”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Enable Hermès Watch Faces on any Apple Watch devices”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 HermesEnabler 的潜在使用者而言，在项目方所述的“Enable Hermès Watch Faces on any Apple Watch devices”场景中，可直接查看和试验项目方所述的“Enable Hermès Watch Faces on any Apple Watch devices”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pookjw/HermesEnabler",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Enable Hermès Watch Faces on any Apple Watch devices",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/pookjw/HermesEnabler",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/pookjw/HermesEnabler",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "we-promise/sure",
+        "one_line_summary": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "industry_direction": "AI 金融数据与研究",
+        "target_users": [
+          "金融研究与投资团队",
+          "金融 AI 产品团队"
+        ],
+        "problem_solved": "市场数据和研究资料分散，获取、清洗与验证成本较高。",
+        "solution": "提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 967 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "金融数据工具化",
+        "technology_impact": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "数据许可、延迟、历史偏差和回测过拟合都可能造成错误判断。",
+        "ai_relevance": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "plain_language_explanation": "项目方把 sure 描述为“The personal finance app for everyone (by everyone)”。通俗地说，它希望解决的是：市场数据和研究资料分散，获取、清洗与验证成本较高。 它的办法是：提供可查询的数据、研究资料或分析工作流供人和 AI 使用。",
+        "scenario_examples": [
+          "例如研究人员快速比较某类资产的历史表现，再人工检查数据口径。"
+        ],
+        "practical_benefits": [
+          "对 sure 的潜在使用者而言，在项目方所述的“The personal finance app for everyone (by everyone)”场景中，减少收集和整理金融资料的时间",
+          "提高研究过程的可重复性和可追溯性"
+        ],
+        "industry_implications": "金融 AI 的价值越来越依赖稳定、合规且可追溯的数据底座。",
+        "who_should_care": "金融研究与投资团队、金融 AI 产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/we-promise/sure",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The personal finance app for everyone (by everyone)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/we-promise/sure",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/we-promise/sure",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "QwenLM/qwen-code",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 151 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 qwen-code 描述为“An open-source AI coding agent that lives in your terminal.”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 qwen-code 的潜在使用者而言，在项目方所述的“An open-source AI coding agent that lives in your terminal.”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/QwenLM/qwen-code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An open-source AI coding agent that lives in your terminal.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/QwenLM/qwen-code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/QwenLM/qwen-code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ashhart/TensorFold",
+        "one_line_summary": "围绕“LLM Inference Engine for Metal, CUDA and Vulkan.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：LLM Inference Engine for Metal, CUDA and Vulkan.",
+        "solution": "围绕“LLM Inference Engine for Metal, CUDA and Vulkan.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 54 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 TensorFold 描述为“LLM Inference Engine for Metal, CUDA and Vulkan.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：LLM Inference Engine for Metal, CUDA and Vulkan. 它的办法是：围绕“LLM Inference Engine for Metal, CUDA and Vulkan.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“LLM Inference Engine for Metal, CUDA and Vulkan.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 TensorFold 的潜在使用者而言，在项目方所述的“LLM Inference Engine for Metal, CUDA and Vulkan.”场景中，可直接查看和试验项目方所述的“LLM Inference Engine for Metal, CUDA and Vulkan.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ashhart/TensorFold",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "LLM Inference Engine for Metal, CUDA and Vulkan.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ashhart/TensorFold",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ashhart/TensorFold",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "nodejs/node",
+        "one_line_summary": "围绕“Node.js JavaScript runtime ✨🐢🚀✨”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Node.js JavaScript runtime ✨🐢🚀✨",
+        "solution": "围绕“Node.js JavaScript runtime ✨🐢🚀✨”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 62 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 node 描述为“Node.js JavaScript runtime ✨🐢🚀✨”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Node.js JavaScript runtime ✨🐢🚀✨ 它的办法是：围绕“Node.js JavaScript runtime ✨🐢🚀✨”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Node.js JavaScript runtime ✨🐢🚀✨”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 node 的潜在使用者而言，在项目方所述的“Node.js JavaScript runtime ✨🐢🚀✨”场景中，可直接查看和试验项目方所述的“Node.js JavaScript runtime ✨🐢🚀✨”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nodejs/node",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Node.js JavaScript runtime ✨🐢🚀✨",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nodejs/node",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/nodejs/node",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 816 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 agent-skills 描述为“Production-grade engineering skills for AI coding agents.”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 agent-skills 的潜在使用者而言，在项目方所述的“Production-grade engineering skills for AI coding agents.”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Production-grade engineering skills for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/addyosmani/agent-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/addyosmani/agent-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "meta/astryx",
+        "one_line_summary": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "industry_direction": "AI 设计质量指导",
+        "target_users": [
+          "使用 AI 制作界面的产品团队",
+          "设计系统与品牌负责人"
+        ],
+        "problem_solved": "AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。",
+        "solution": "把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 1830 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "设计规范的机器可用化",
+        "technology_impact": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "规范不能替代用户研究和设计判断，效果仍需通过真实界面与用户测试验证。",
+        "ai_relevance": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "plain_language_explanation": "项目方把 astryx 描述为“An open source design system that's fully customizable and agent ready”。通俗地说，它希望解决的是：AI 能快速生成界面，但常缺少一致的视觉规则、品牌感和可用性判断。 它的办法是：把设计原则和检查标准整理为 AI 可调用的指导语言。",
+        "scenario_examples": [
+          "例如团队让 AI 生成活动页面时，同时要求它按既有排版、间距和无障碍规则检查。"
+        ],
+        "practical_benefits": [
+          "对 astryx 的潜在使用者而言，在项目方所述的“An open source design system that's fully customizable and agent ready”场景中，减少团队反复向 AI 解释基础设计要求的时间",
+          "提高不同 AI 生成页面之间的视觉一致性"
+        ],
+        "industry_implications": "AI 设计竞争从能否生成界面转向是否稳定符合品牌与体验标准。",
+        "who_should_care": "使用 AI 制作界面的产品团队、设计系统与品牌负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/meta/astryx",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An open source design system that's fully customizable and agent ready",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/meta/astryx",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/meta/astryx",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "CopilotKit/OpenBot",
+        "one_line_summary": "提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "industry_direction": "开源 AI 协作工作台",
+        "target_users": [
+          "希望在桌面工作中使用智能体的知识团队",
+          "重视可控部署的企业"
+        ],
+        "problem_solved": "通用聊天助手难以直接参与文件、资料和连续办公任务，封闭产品又限制定制与控制。",
+        "solution": "提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 298 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可控部署的办公智能体",
+        "technology_impact": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "文件权限、误操作、部署维护和与商业产品的实际能力差距需要验证。",
+        "ai_relevance": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "plain_language_explanation": "项目方把 OpenBot 描述为“Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action”。通俗地说，它希望解决的是：通用聊天助手难以直接参与文件、资料和连续办公任务，封闭产品又限制定制与控制。 它的办法是：提供可自行部署的工作空间，让 AI 智能体参与日常知识工作。",
+        "scenario_examples": [
+          "例如研究团队在受控工作区内让智能体整理资料和形成草稿，最终由负责人批准。"
+        ],
+        "practical_benefits": [
+          "对 OpenBot 的潜在使用者而言，在项目方所述的“Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action”场景中，让团队有机会在自己的环境中试验办公智能体",
+          "为控制文件访问和定制工作流程提供更多选择"
+        ],
+        "industry_implications": "办公 AI 的竞争正在从聊天窗口转向能够接入真实工作资料的执行环境。",
+        "who_should_care": "希望在桌面工作中使用智能体的知识团队、重视可控部署的企业",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/CopilotKit/OpenBot",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Open-source AI coworkers that each get a computer of their own: a browser, files and tools, with every action decided before it happens and recorded after. Bring any AG-UI agent.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/CopilotKit/OpenBot",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/CopilotKit/OpenBot",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Alishahryar1/free-claude-code",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 415 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 free-claude-code 描述为“Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tok”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 free-claude-code 的潜在使用者而言，在项目方所述的“Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tok”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Alishahryar1/free-claude-code",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Use Claude Code, Codex, Antigravity, VSCode, Pi, and OpenCode (and 6 other harnesses) for free (1.3B+ free tokens) from your terminal, app, IDE, or phone, and now from the browser with native browser sessions (multi-harness + multi-model) like OpenClaw (voice supported + ToS friendly)",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Alishahryar1/free-claude-code",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Alishahryar1/free-claude-code",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "ggml-org/llama.cpp",
+        "one_line_summary": "围绕“LLM inference in C/C++”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：LLM inference in C/C++",
+        "solution": "围绕“LLM inference in C/C++”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 176 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 llama.cpp 描述为“LLM inference in C/C++”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：LLM inference in C/C++ 它的办法是：围绕“LLM inference in C/C++”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“LLM inference in C/C++”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 llama.cpp 的潜在使用者而言，在项目方所述的“LLM inference in C/C++”场景中，可直接查看和试验项目方所述的“LLM inference in C/C++”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ggml-org/llama.cpp",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "LLM inference in C/C++",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/ggml-org/llama.cpp",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/ggml-org/llama.cpp",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 6,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 35,
+        "project_count": 27
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 11,
+        "project_count": 5
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 35,
+        "project_count": 27
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 12,
+        "project_count": 6
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 11,
+        "project_count": 5
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 3,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 35
+      },
+      {
+        "name": "软件产品团队",
+        "count": 12
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 12
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 11
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 11
+      },
+      {
+        "name": "使用 AI 制作界面的产品团队",
+        "count": 5
+      },
+      {
+        "name": "设计系统与品牌负责人",
+        "count": 5
+      },
+      {
+        "name": "企业安全与合规负责人",
+        "count": 5
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 79
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 27,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 金融数据与研究",
+        "appearances": 3,
+        "project_count": 1
+      },
+      {
+        "theme": "企业 IT 自动化",
+        "appearances": 2,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 金融研究助手",
+        "appearances": 2,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 1,
+        "project_count": 1
+      },
+      {
+        "theme": "轻量项目与任务管理",
+        "appearances": 1,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 110,
+        "project_count": 60
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 10,
+        "project_count": 2
+      },
+      {
+        "theme": "软件运行诊断工具",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 6,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 46,
+        "project_count": 15
+      },
+      {
+        "theme": "AI 软件知识与代码理解",
+        "appearances": 6,
+        "project_count": 4
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "生成式视觉工作流",
+        "appearances": 4,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 110,
+        "project_count": 60
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 103,
+        "project_count": 37
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 46,
+        "project_count": 15
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 14,
+        "project_count": 7
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 110
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 103
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 103
+      },
+      {
+        "name": "软件产品团队",
+        "count": 46
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 46
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 14
+      },
+      {
+        "name": "需要免手操作的普通用户",
+        "count": 14
+      },
+      {
+        "name": "同时部署多个 AI 智能体的企业",
+        "count": 10
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 357
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-11-12",
+    "new": [
+      "Alishahryar1/free-claude-code",
+      "CopilotKit/OpenBot",
+      "QwenLM/qwen-code",
+      "ashhart/TensorFold",
+      "ggml-org/llama.cpp",
+      "nodejs/node",
+      "nvm-sh/nvm",
+      "pookjw/HermesEnabler"
+    ],
+    "retained": [
+      "GoogleChrome/modern-web-guidance-src",
+      "addyosmani/agent-skills",
+      "meta/astryx",
+      "openai/codex-security",
+      "we-promise/sure"
+    ],
+    "exited": [
+      "TheAlgorithms/Java",
+      "ZhuLinsen/daily_stock_analysis",
+      "homeassistant-ai/ha-mcp",
+      "shadcn/improve",
+      "vercel-labs/agent-browser"
+    ],
+    "risers": [
+      {
+        "full_name": "openai/codex-security",
+        "previous_rank": 9,
+        "rank": 2,
+        "change": 7
+      },
+      {
+        "full_name": "we-promise/sure",
+        "previous_rank": 7,
+        "rank": 5,
+        "change": 2
+      },
+      {
+        "full_name": "GoogleChrome/modern-web-guidance-src",
+        "previous_rank": 3,
+        "rank": 1,
+        "change": 2
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "previous_rank": 5,
+        "rank": 9,
+        "change": -4
+      },
+      {
+        "full_name": "meta/astryx",
+        "previous_rank": 1,
+        "rank": 10,
+        "change": -9
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "openai/codex-security",
+        "previous_stars_today": 52,
+        "stars_today": 643,
+        "change": 591
+      },
+      {
+        "full_name": "GoogleChrome/modern-web-guidance-src",
+        "previous_stars_today": 159,
+        "stars_today": 739,
+        "change": 580
+      },
+      {
+        "full_name": "addyosmani/agent-skills",
+        "previous_stars_today": 787,
+        "stars_today": 816,
+        "change": 29
+      },
+      {
+        "full_name": "we-promise/sure",
+        "previous_stars_today": 1078,
+        "stars_today": 967,
+        "change": -111
+      },
+      {
+        "full_name": "meta/astryx",
+        "previous_stars_today": 2776,
+        "stars_today": 1830,
+        "change": -946
+      }
+    ]
+  }
+}
