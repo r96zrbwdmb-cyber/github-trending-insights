@@ -1,0 +1,2062 @@
+{
+  "date": "2026-11-28",
+  "source": "https://github.com/trending?since=daily",
+  "repository_count": 16,
+  "repositories": [
+    {
+      "rank": 1,
+      "full_name": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "stars": 26518,
+      "forks": 2714,
+      "stars_today": 1608,
+      "topics": [
+        "ai-security",
+        "anthropic",
+        "application-security",
+        "bug-bounty",
+        "bugbounty",
+        "bugcrowd",
+        "claude",
+        "claude-code",
+        "claude-skills",
+        "ethical-hacking",
+        "hackerone",
+        "offensive-security",
+        "pentesting",
+        "red-team",
+        "security-tools",
+        "web-security"
+      ],
+      "license": "MIT",
+      "created_at": "2026-05-05T11:22:32Z",
+      "updated_at": "2026-11-28T08:52:28Z",
+      "open_issues": 28,
+      "default_branch": "main",
+      "readme_excerpt": "![claude-bughunter banner](assets/banner-v2.svg) # claude-bughunter > A self-contained Claude skill bundle for bug hunting and external red-team work · **85 skills** · 16 slash commands · **681 disclosed-report patterns** (433 now individually cited & auditable) across 24 core vulnerability classes · enterprise identity + infrastructure attack matrices · engagement-folder scaffolding · Burp MCP integration · battle-tested across authorized red-team and bug-hunting engagements, plus public training platforms (DVWA, OWASP Juice Shop, Hacker101, testphp.vulnweb.com). Built by **[Sachin Sharma](https://www.linkedin.com/in/sachinsharma8080/)** — Bug Hunting & GenAI Security Research. <p align=\"center\"> <sub>SPONSORED BY</sub> <br/> <br/> <a href=\"https://www.apismart.ai/\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/sponsors/apismart-dark.png\"> <img alt=\"ApiSmart\" src=\"assets/sponsors/apismart-light.png\" height=\"28\" align=\"middle\"> </picture> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"https://threatwatch360.com\"> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"assets/sponsors/tw360-badge-dark.svg\"> <img alt=\"ThreatWatch360\" src=\"assets/sponsors/tw360-badge-light.svg\" height=\"26\" align=\"middle\"> </picture> </a> </p> --- ## What is this? `claude-bughunter` is a drop-in skill bundle for the [Claude Code skills system](https://docs.claude.com/en/docs/claude-code/skills). Install once and Claude Code stops being a chatbot and starts behaving like a senior bug-hunting researcher or red-team operator: it knows the techniques, the chain templates, the VRT mappings, the platform CVE chains, and the hygiene — and it stays in scope. Four layers stack: - **Think** — `bb-methodology` + `redteam-mindset`: the 5-phase non-linear workflow, critical-thinking framework, and red-team operator discipline. - **Hunt webapps** — 58 `hunt-*` skills curated from 681 disclosed HackerOne reports: per-class detection patterns, payloads, bypass tables, and chain templates. - **Hit the perimeter** — enterprise platform chains (M365/Entra, Okta, vCenter, SSL-VPN appliances, SharePoint, cloud IAM): current 2024–2026 CVE chains + post-credential escalation. - **Ship it** — `triage-validation` + reporting + `evidence-hygiene`: the 7-Question Gate, VRT-aware severity, OOS rebuttals, PII redaction, and red-team deliverables. All triggered automatically by topic — describe what you're testing in plain English and the relevant skill loads. No invocation by name. --- ## Quickstart **Option A — install as a Claude Code plugin (recommended).** From inside Claude Code: ```text /plugin marketplace add elementalsouls/Claude-BugHunter /plugin install claude-bughunter@elementalsouls ``` All 85 skills + 16 commands load namespaced under `claude-bughunter:` and update when you bump the plugin version — no files copied into `~/.claude/`. **A HackerOne account is optional.** The install asks for a HackerOne API username and token. They only let the HackerOne MCP read your private programs and your own reports; leave both blank if you don't need that. Every skill, command and the MCP's public tools (duplicate search, program scope) work without them. **Option B — copy install (no plugin system / pin to a clone):** ```bash git clone https://github.com/elementalsouls/Claude-BugHunter.git cd Claude-BugHunter ``` ```bash # macOS / Linux bash scripts/install.sh # Windows (PowerShell) pwsh ./scripts/install.ps1 ``` Both copy the skills + commands into `~/.claude/` (macOS/Linux) or `%USERPROFILE%\\.claude\\` (Windows) and wire the `hunt` engagement scaffolder. **What each install path gives you:** | Path | 85 skills + 16 slash commands | `cbh` CLI | `hunt` scaffolder | |---|---|---|---| | **A — plugin** | ✅ namespaced under `claude-bughunter:` | ➕ separate `pipx install` | ❌ clone-only | | **B — copy install** | ✅ copied into `~/.claude/` | ✅ from the clone | ✅ from the clone | The plugin is the fastest path to the skills + slash commands. Th",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 1,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 2,
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "stars": 328580,
+      "forks": 29205,
+      "stars_today": 922,
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "license": "MIT",
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-11-28T08:55:25Z",
+      "open_issues": 376,
+      "default_branch": "main",
+      "readme_excerpt": "# Superpowers Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them. ## Table of Contents - [How it works](#how-it-works) - [Commercial Services](#commercial-services) - [Getting Started](#installation) - [Claude Code](#claude-code) - [Antigravity](#antigravity) - [Codex App](#codex-app) - [Codex CLI](#codex-cli) - [Cursor](#cursor) - [Devin CLI](#devin-cli) - [Factory Droid](#factory-droid) - [Gemini CLI](#gemini-cli) - [GitHub Copilot CLI](#github-copilot-cli) - [Grok Build CLI](#grok-build-cli) - [Kimi Code](#kimi-code) - [OpenCode](#opencode) - [Pi](#pi) - [Qwen Code](#qwen-code) - [Hermes Agent](#hermes-agent) - [Muse](#muse) - [The Basic Workflow](#the-basic-workflow) - [When Something Goes Wrong](#when-something-goes-wrong) - [Community](#community) - [What's Inside](#whats-inside) - [Philosophy](#philosophy) - [Contributing](#contributing) - [Updating](#updating) - [License](#license) - [Visual companion telemetry](#visual-companion-telemetry) ## How it works It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. Once it's teased a spec out of the conversation, it shows it to you in chunks short enough to actually read and digest. After you've signed off on the design, your agent puts together an implementation plan that's clear enough for an enthusiastic junior engineer with poor taste, no judgement, no project context, and an aversion to testing to follow. It emphasizes true red/green TDD, YAGNI (You Aren't Gonna Need It), and DRY. Next up, once you say \"go\", it launches a *subagent-driven-development* process, having agents work through each engineering task, inspecting and reviewing their work, and continuing forward. It's not uncommon for your agent to work autonomously for a couple hours at a time without deviating from the plan you put together. There's a bunch more to it, but that's the core of the system. And because the skills trigger automatically, you don't need to do anything special. Your coding agent just has Superpowers. ## Commercial Services If you're using Superpowers in enterprise and could benefit from commercial support, additional tooling, or managed spending, please don't hesitate to drop us a line at sales@primeradiant.com. ## Installation Installation differs by harness. If you use more than one, install Superpowers separately for each one. ### Claude Code Superpowers is available via the [official Claude plugin marketplace](https://claude.com/plugins/superpowers) #### Official Marketplace - Install the plugin from Anthropic's official marketplace: ```bash /plugin install superpowers@claude-plugins-official ``` #### Superpowers Marketplace The Superpowers marketplace provides Superpowers and some other related plugins for Claude Code. - Register the marketplace: ```bash /plugin marketplace add obra/superpowers-marketplace ``` - Install the plugin from this marketplace: ```bash /plugin install superpowers@superpowers-marketplace ``` ### Antigravity Install Superpowers as a plugin from this repository: ```bash agy plugin install https://github.com/obra/superpowers ``` Antigravity lists each installed skill's description, and the description of the `using-superpowers` skill prompts the model to load that skill at the start of a conversation. Reinstall with the same command to update. ### Codex App Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - In the Codex app, click on Plugins in the sidebar. - You should see `Superpowers` in the Coding section. - Click the `+` next to Superpowers and follow the prompts. ### Codex CLI Superpowers is available via the [official Codex plugin marketplace](https://github.com/openai/plugins). - Open the ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 2,
+      "rank_change": 0,
+      "streak_days": 11
+    },
+    {
+      "rank": 3,
+      "full_name": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "stars": 67161,
+      "forks": 6181,
+      "stars_today": 666,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-03-08T13:52:57Z",
+      "updated_at": "2026-11-28T08:53:39Z",
+      "open_issues": 342,
+      "default_branch": "main",
+      "readme_excerpt": "<h1 align=\"center\"><img src=\"assets/icon.png\" alt=\"\" width=\"64\" style=\"vertical-align: middle;\">&nbsp; CLI-Anything: Making ALL Software Agent-Native</h1> <div align=\"center\"> <a href=\"https://www.star-history.com/hkuds/cli-anything\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=trending&amp;theme=dark\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=trending\"><img alt=\"GitHub Trending Repository of the Day\" src=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=trending\" height=\"55\"></picture></a>&#32;<a href=\"https://trendshift.io/repositories/22991\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/22991\" alt=\"HKUDS/CLI-Anything | Trendshift\" height=\"55\"></a>&#32;<a href=\"https://www.star-history.com/hkuds/cli-anything\"><picture><source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=rank&amp;theme=dark\"><source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=rank\"><img alt=\"Star History Rank\" src=\"https://api.star-history.com/badge?repo=HKUDS/CLI-Anything&amp;type=rank\" height=\"55\"></picture></a> </div> <p align=\"center\"> <strong>Today's Software Serves Humans👨‍💻. Tomorrow's Users will be Agents🤖.<br> CLI-Anything: Bridging the Gap Between AI Agents and the World's Software</strong><br> </p> **🌐 [CLI-Hub](https://hkuds.github.io/CLI-Anything/)**: `pip install cli-anything-hub` then `cli-hub install <name>` — browse, install, and manage all community-built CLIs. Want to add your own? [Open a PR](https://github.com/HKUDS/CLI-Anything/blob/main/CONTRIBUTING.md) — the hub updates instantly. **🎬 [See Demos](#-real-world-demos)**: Watch AI agents use generated CLIs plus preview, live preview, and trajectory loops to produce real artifacts — CAD builds, 3D scenes, diagrams, gameplay, subtitles, and more. **🙋 [Become a Contributor, or Request a CLI]**: [Join us](https://github.com/HKUDS/CLI-Anything/issues/new?template=contributor-signup.yml)! Sign up to build a new CLI harness — once reviewed and merged, you'll gain access as one of our community contributors! Wish CLI-Anything supported a specific software or service? Submit a [wishlist request](https://github.com/HKUDS/CLI-Anything/issues/new?template=cli-wishlist.yml)! <p align=\"center\"> <a href=\"#-quick-start\"><img src=\"https://img.shields.io/badge/Quick_Start-5_min-blue?style=for-the-badge\" alt=\"Quick Start\"></a> <a href=\"https://hkuds.github.io/CLI-Anything/\"><img src=\"https://img.shields.io/badge/CLI_Hub-Browse_%26_Install-ff69b4?style=for-the-badge\" alt=\"CLI Hub\"></a> <a href=\"#-demonstrations\"><img src=\"https://img.shields.io/badge/Demos-18_Apps-green?style=for-the-badge\" alt=\"Demos\"></a> <a href=\"#-test-results\"><img src=\"https://img.shields.io/badge/Tests-2%2C461_Passing-brightgreen?style=for-the-badge\" alt=\"Tests\"></a> <a href=\"https://arxiv.org/abs/2606.03854\"><img src=\"https://img.shields.io/badge/Tech_Report-arXiv%3A2606.03854-b31b1b?style=for-the-badge\" alt=\"Tech Report\"></a> <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache_2.0-yellow?style=for-the-badge\" alt=\"License\"></a> </p> <p align=\"center\"> <img src=\"https://img.shields.io/badge/python-≥3.10-blue?logo=python&logoColor=white\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/click-≥8.0-green\" alt=\"Click\"> <img src=\"https://img.shields.io/badge/pytest-100%25_pass-brightgreen\" alt=\"Pytest\"> <img src=\"https://img.shields.io/badge/coverage-unit_%2B_e2e-orange\" alt=\"Coverage\"> <img src=\"https://img.shields.io/badge/output-JSON_%2B_Human-blueviolet\" alt=\"Output\"> <a href=\"https://github.com/HKUDS/.github/blob/main/profile/README.md\"><img src=\"https://img.shields.io/badge/Feishu-Group-E9DBFC?style=flat&logo=feishu&logoColor=white\" alt=\"Feishu\"></a> <a href=\"https://gi",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 3,
+      "rank_change": 0,
+      "streak_days": 10
+    },
+    {
+      "rank": 4,
+      "full_name": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "language": "Python",
+      "stars": 72354,
+      "forks": 9465,
+      "stars_today": 660,
+      "topics": [
+        "artificial-intelligence",
+        "large-language-model"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2024-07-27T04:34:12Z",
+      "updated_at": "2026-11-28T08:52:19Z",
+      "open_issues": 70,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> ![logo](./images/logo.png) </div> <div align=\"center\"> ![visitors](https://visitor-badge.laobi.icu/badge?page_id=jingyaogong/minimind) [![GitHub Repo stars](https://img.shields.io/github/stars/jingyaogong/minimind?style=social)](https://github.com/jingyaogong/minimind/stargazers) [![GitHub Code License](https://img.shields.io/github/license/jingyaogong/minimind)](LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/jingyaogong/minimind)](https://github.com/jingyaogong/minimind/commits/master) [![GitHub pull request](https://img.shields.io/badge/PRs-welcome-blue)](https://github.com/jingyaogong/minimind/pulls) [![Collection](https://img.shields.io/badge/🤗-MiniMind%20%20Collection-blue)](https://huggingface.co/collections/jingyaogong/minimind-66caf8d999f5c7fa64f399e5) </div> <div align=\"center\"> ![GitHub Trend](https://trendshift.io/api/badge/repositories/12586) </div> <div align=\"center\"> <h3>\"大道至简\"</h3> </div> <div align=\"center\"> 中文 | [English](./README_en.md) </div> * 此开源项目旨在完全从 0 开始，仅用 3 块钱成本与 2 小时训练时间，即可训练出规模约为 64M 的超小语言模型 MiniMind。 * MiniMind 系列极其轻量，主线最小版本体积约为 GPT-3 的 $\\frac{1}{2700}$，力求让普通个人 GPU 也能快速完成训练与复现。 * 项目同时开源了大模型的极简结构与完整训练链路，覆盖 MoE、数据清洗、预训练（Pretrain）、监督微调（SFT）、LoRA、RLHF（DPO）、RLAIF（PPO / GRPO / CISPO）、Tool Use、Agentic RL、自适应思考与模型蒸馏等全过程代码。 * MiniMind 同时拓展了视觉模态模型 [MiniMind-V](https://github.com/jingyaogong/minimind-v)、多模态 Omni 模型 [MiniMind-O](https://github.com/jingyaogong/minimind-o)、扩散语言模型（MiniMind-dLM）、线性模型（MiniMind-Linear），详见 [Discussion](https://github.com/jingyaogong/minimind/discussions)。 * 项目所有核心算法代码均从 0 使用 PyTorch 原生实现，不依赖第三方库提供的高层抽象接口。 * 这不仅是一个大语言模型全阶段开源复现项目，也是一套面向 LLM 入门与实践的教程。 * 希望此项目能为更多人提供一个可复现、可理解、可扩展的起点，一起感受创造的乐趣，并推动更广泛 AI 社区的进步。 > 注：本项目基于 Apache 2.0 协议开源，完全免费。“2 小时” 指 SFT 阶段在单张 NVIDIA 3090 上跑完 `1 epoch` 的实测耗时，“3 块钱” 指对应时段的 GPU 租用成本。 --- <div align=\"center\"> ![minimind-3](./images/minimind-3.gif) [🔗 在线体验](https://www.modelscope.cn/studios/gongjy/MiniMind) | [🔗 视频介绍](https://www.bilibili.com/video/BV12dHPeqE72) <div align=\"center\"> <table> <tr> <td align=\"center\"> <a href=\"https://huggingface.co/collections/jingyaogong/minimind\" style=\"text-decoration: none;\"> <img src=\"./images/with_huggingface.png\" alt=\"Hugging Face Logo\" style=\"vertical-align: middle; width: auto; max-width: 100%;\" /> </a> </td> <td align=\"center\"> <a href=\"https://www.modelscope.cn/profile/gongjy\" style=\"text-decoration: none;\"> <img src=\"./images/with_modelscope.png\" alt=\"ModelScope Logo\" style=\"vertical-align: middle; width: auto; max-width: 100%;\" /> </a> </td> </tr> </table> </div> </div> --- ## ❤️ 赞助 <div align=\"center\"> <table> <tr> <td align=\"center\" width=\"76\"> <a href=\"https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link\"> <img src=\"https://infistar.cc/logo.png\" width=\"48\" alt=\"无限星河AI\" /> </a> </td> <td> <b>MiniMind × <a href=\"https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link\">Infistar.cc</a></b>：Claude、GPT、Gemini、DeepSeek等200+模型一个Key搞定，低至官方0.1折（省99%），100%官方纯血可验真，千条线路自动切换。通过<a href=\"https://www.infistar.cc/register?aff=VCHAAHCH&ref_source=link\"><b>专属链接</b></a>注册即送¥5。 </td> </tr> </table> </div> <details> <summary>关于赞助与合作</summary> <br> MiniMind 以 Apache 2.0 协议完全开源、永久免费。赞助完全自愿，不换取任何特权，也不影响项目使用。感谢每一位支持者，让这个业余时间维护的项目得以持续。 赞助方式包括按月占位，或直接赞助 GPU 服务器（算力可能用于项目相关或不相关的研究性探索）。 如有意向，欢迎通过 [邮件](mailto:gongjy.cs@foxmail.com) 联系。 </details> --- # 📌 项目介绍 大语言模型（Large Language Model, LLM）的出现，引发了全球范围内对 AI 的空前关注。无论是 ChatGPT、DeepSeek 还是 Qwen，都以惊艳的效果让人真切感受到这场技术浪潮的冲击力。然而，动辄数百亿参数的模型规模，使得它们对个人设备而言不仅难以训练，甚至连部署都显得遥不可及。打开大模型的“黑盒子”，真正去理解其内部运作机制，本应是一件令人心潮澎湃的事。遗憾的是，绝大多数探索最终都止步于使用 LoRA 等技术对现有大模型做少量微调，学习一些新指令或特定任务。这更像是在教牛顿如何使用 21 世纪的智能手机——虽然有趣，却偏离了理解物理本质的初衷。 与此同时，第三方的大模型框架与工具库，如 `transformers` / `trl` / `peft` 等，往往只暴露出高度抽象的接口。只需短短十几行代码，就可以完成“加载模型 + 加载数据集 + 推理 + 强化学习”的全流程训练。这种高效封装固然便利，却也在一定程度上把开发者与底层实现隔离开来，削弱了深入理解 LLM 核心代码的机会。我认为 “用乐高自己拼出一架飞机，远比坐在头等舱里飞行更让人兴奋”，然而更现实的问题是，互联网上充斥着大量付费课程和营销内容，用漏洞百出、一知半解的讲解包装所谓的 AI 教程。正因如此，本项目的初衷就是尽可能降低 LLM 的学习门槛，让每个人都能从理解每一行代码开始，从 0 开始亲手训练一个极小的语言模型。是的，从**零开始训练**，而不是",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 4,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 5,
+      "full_name": "cursor/plugins",
+      "url": "https://github.com/cursor/plugins",
+      "description": "Cursor plugin specification and official plugins",
+      "language": "TypeScript",
+      "stars": 20074,
+      "forks": 2250,
+      "stars_today": 243,
+      "topics": [],
+      "license": "",
+      "created_at": "2026-01-23T01:57:42Z",
+      "updated_at": "2026-11-28T08:47:24Z",
+      "open_issues": 712,
+      "default_branch": "main",
+      "readme_excerpt": "# Cursor plugins Official Cursor plugins for popular developer tools, frameworks, and SaaS products. Each plugin is a standalone directory at the repository root with its own `.cursor-plugin/plugin.json` manifest. ## Plugins | `name` | Plugin | Author | Category | `description` (from marketplace) | |:-------|:-------|:-------|:---------|:-------------------------------------| | `teaching` | [Teaching](teaching/) | Cursor | Utilities | Skill mapping, practice plans, and learning retrospectives. | | `continual-learning` | [Continual Learning](continual-learning/) | Eric Zakariasson | Developer Tools | Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only. | | `cursor-team-kit` | [Cursor Team Kit](cursor-team-kit/) | Eric Zakariasson | Developer Tools | Internal team workflows for CI, code review, shipping, local automation, and verification. | | `thermos` | [Thermos](thermos/) | Cursor | Developer Tools | Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows. | | `create-plugin` | [Create Plugin](create-plugin/) | Cursor | Developer Tools | Scaffold and validate new agent plugins. | | `ralph-loop` | [Ralph Loop](ralph-loop/) | Cursor | Developer Tools | Iterative self-referential AI loops using the Ralph Wiggum technique. | | `agent-compatibility` | [Agent Compatibility](agent-compatibility/) | Cursor | Developer Tools | CLI-backed repo compatibility scans plus agents that audit startup, validation, and docs against reality. | | `cli-for-agent` | [CLI for Agents](cli-for-agent/) | Eric Zakariasson | Developer Tools | Patterns for designing CLIs that coding agents can run reliably: flags, help with examples, pipelines, errors, idempotency, dry-run. | | `pr-review-canvas` | [PR Review Canvas](pr-review-canvas/) | Cursor | Developer Tools | Render PR diffs as review canvases grouped by importance. | | `docs-canvas` | [Docs Canvas](docs-canvas/) | Cursor | Developer Tools | Render documentation as a navigable canvas. | | `cursor-sdk` | [Cursor SDK](cursor-sdk/) | Cursor | Developer Tools | Build apps, scripts, and automations with the TypeScript SDK. | | `origin-apps` | [Origin Apps](origin-apps/) | Cursor | Developer Tools | Skills for building on the Cursor Origin API. Fetch the live spec first, then follow the Origin rules for credentials, scopes, webhooks, paging, and errors. Includes a skill that plans the port of an existing GitHub App. | | `orchestrate` | [Orchestrate](orchestrate/) | Cursor | Developer Tools | Fan large tasks out across parallel cloud agents with planners, workers, verifiers, and structured handoffs. | | `pstack` | [pstack](pstack/) | Lauren Tan | Developer Tools | if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence. | | `dyl-stack` | [dyl-stack](dyl-stack/) | Dylan Gattey | Developer Tools | Dylan's agent style on top of pstack: root causes over symptom patches, The Algorithm before design, terse verified delivery, a PR review that fits in a paste, and Figma-to-UI with a visual judge. | | `advisor` | [Advisor](advisor/) | Cursor | Developer Tools | Consult a stronger model before major decisions, when stuck, and before declaring done. | | `grok-voice` | [Grok Voice](grok-voice/) | Eric Zakariasson | Developer Tools | Add Grok voice to an app: realtime speech-to-speech, speech-to-text dictation, text-to-speech read-aloud, and a log-driven fix loop for voice sessions. | | `gmail` | [Gmail](third_party/gmail/) | Cursor | Productivity | Search, read, draft, and manage email. | | `google-drive` | [Google Drive](third_party/google-drive/) | Cursor | Productivity | Search, read, create, and share files. | | `google-calendar` | [Google Calendar](third_party/google-calendar/) | Cursor | Productivity | Search events and schedule meetings. | | `google-docs` | [Goo",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 5,
+      "rank_change": 0,
+      "streak_days": 11
+    },
+    {
+      "rank": 6,
+      "full_name": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript",
+      "stars": 211891,
+      "forks": 11158,
+      "stars_today": 822,
+      "topics": [
+        "ai",
+        "ai-agents",
+        "ai-crawler",
+        "ai-scraping",
+        "ai-search",
+        "crawler",
+        "data-extraction",
+        "html-to-markdown",
+        "llm",
+        "markdown",
+        "scraper",
+        "scraping",
+        "web-crawler",
+        "web-data",
+        "web-data-extraction",
+        "web-scraper",
+        "web-scraping",
+        "web-search",
+        "webscraping"
+      ],
+      "license": "AGPL-3.0",
+      "created_at": "2024-04-15T21:02:29Z",
+      "updated_at": "2026-11-28T08:53:50Z",
+      "open_issues": 839,
+      "default_branch": "main",
+      "readme_excerpt": "<h3 align=\"center\"> <a name=\"readme-top\"></a> <img src=\"https://raw.githubusercontent.com/firecrawl/firecrawl/main/img/firecrawl_logo.png\" height=\"200\" > </h3> <div align=\"center\"> <a href=\"https://github.com/firecrawl/firecrawl/blob/main/LICENSE\"> <img src=\"https://img.shields.io/github/license/firecrawl/firecrawl\" alt=\"License\"> </a> <a href=\"https://pepy.tech/project/firecrawl-py\"> <img src=\"https://static.pepy.tech/badge/firecrawl-py\" alt=\"Downloads\"> </a> <a href=\"https://GitHub.com/firecrawl/firecrawl/graphs/contributors\"> <img src=\"https://img.shields.io/github/contributors/firecrawl/firecrawl.svg\" alt=\"GitHub Contributors\"> </a> <a href=\"https://firecrawl.dev\"> <img src=\"https://img.shields.io/badge/Visit-firecrawl.dev-orange\" alt=\"Visit firecrawl.dev\"> </a> </div> <div> <p align=\"center\"> <a href=\"https://twitter.com/firecrawl\"> <img src=\"https://img.shields.io/badge/Follow%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white\" alt=\"Follow on X\" /> </a> <a href=\"https://www.linkedin.com/company/104100957\"> <img src=\"https://img.shields.io/badge/Follow%20on%20LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white\" alt=\"Follow on LinkedIn\" /> </a> <a href=\"https://discord.gg/firecrawl\"> <img src=\"https://img.shields.io/badge/Join%20our%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Join our Discord\" /> </a> </p> </div> --- # **🔥 Firecrawl** **Knowledge infrastructure to make your agents smarter. 🔥** You can use Firecrawl three ways. This repo holds the code for Firecrawl Local and the self-hosted server, along with SDKs that work with all three. - **[Firecrawl Local](#firecrawl-local).** Run Firecrawl on your own machine as one binary that turns websites into clean markdown, plugs into your AI agent as an MCP server and serves the Firecrawl API on localhost. - **[Firecrawl Cloud](#firecrawl-cloud).** Use the hosted service at [firecrawl.dev](https://firecrawl.dev/?ref=github) for everything Local does at scale with nothing to run, plus search and the 550+ data providers in [Firecrawl Alexandria](https://alexandria.firecrawl.dev) for far more knowledge than scraping alone. - **[Self-hosting](#self-hosting).** Deploy the full Firecrawl server from `apps/api` with its own queues, workers and databases on your own infrastructure. _Pst. Hey, you, join our stargazers :)_ <a href=\"https://github.com/firecrawl/firecrawl\"> <img src=\"https://img.shields.io/github/stars/firecrawl/firecrawl.svg?style=social&label=Star&maxAge=2592000\" alt=\"GitHub stars\"> </a> --- ## Firecrawl Local [Firecrawl Local](apps/local) scrapes, crawls and maps from your own machine without a database, queue or container, and it reaches Firecrawl Cloud when your AI agents need search or Alexandria. It installs from crates.io. You need Rust and a C compiler, which on macOS means `xcode-select --install` and on Debian or Ubuntu means `build-essential`. ```bash cargo install firecrawl-local ``` If you don't have Rust, [Firecrawl Cloud](#firecrawl-cloud) runs the same scrape with nothing to build and no signup. ```bash npx -y firecrawl-cli@latest scrape https://firecrawl.dev ``` Scrape a page and print its markdown. ```bash firecrawl-local scrape https://firecrawl.dev --markdown ``` Crawl a site and save one markdown file per page. ```bash firecrawl-local crawl https://docs.firecrawl.dev --limit 50 --out ./pages ``` List every URL on a site. ```bash firecrawl-local map https://firecrawl.dev ``` Pages that need JavaScript render in the Chrome or Chromium already on your machine, and PDFs and Office documents are parsed locally too. Without a browser, static pages still work and a page that needed one comes back with a warning. ### Add it to your AI agent `init` finds Claude Code, Claude Desktop, Cursor, Windsurf, Gemini CLI and Codex on your machine and adds Firecrawl Local to each one as an MCP server. It backs up every config file first, and the MCP server itself needs Node.js 22 or newer. ```bash firecrawl-local init ``",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 6,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 7,
+      "full_name": "nginx/nginx",
+      "url": "https://github.com/nginx/nginx",
+      "description": "The official NGINX Open Source repository.",
+      "language": "C",
+      "stars": 33707,
+      "forks": 8488,
+      "stars_today": 146,
+      "topics": [
+        "content-cache",
+        "http",
+        "http2",
+        "http3",
+        "https",
+        "load-balancer",
+        "mail-proxy-server",
+        "nginx",
+        "quic",
+        "reverse-proxy",
+        "security",
+        "tcp-proxy-server",
+        "tls",
+        "udp-proxy-server",
+        "web-server"
+      ],
+      "license": "BSD-2-Clause",
+      "created_at": "2015-06-23T10:26:27Z",
+      "updated_at": "2026-11-28T08:53:28Z",
+      "open_issues": 497,
+      "default_branch": "master",
+      "readme_excerpt": "<picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/9335b488-ffcc-4157-8364-2370a0b70ad0\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"https://github.com/user-attachments/assets/3a7eeb08-1133-47f5-859c-fad4f5a6a013\"> <img alt=\"NGINX Banner\"> </picture> [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Community Forum](https://img.shields.io/badge/community-forum-009639?logo=discourse&link=https%3A%2F%2Fcommunity.nginx.org)](https://community.nginx.org) [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](/LICENSE) [![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](/CODE_OF_CONDUCT.md) NGINX (pronounced \"engine x\" or \"en-jin-eks\") is the world's most popular Web Server, high performance Load Balancer, Reverse Proxy, API Gateway and Content Cache. NGINX is free and open source software, distributed under the terms of a simplified [2-clause BSD-like license](LICENSE). Enterprise distributions, commercial support and training are available from [F5, Inc](https://www.f5.com/products/nginx). > [!IMPORTANT] > The goal of this README is to provide a basic, structured introduction to NGINX for novice users. Please refer to the [full NGINX documentation](https://nginx.org/en/docs/) for detailed information on [installing](https://nginx.org/en/docs/install.html), [building](https://nginx.org/en/docs/configure.html), [configuring](https://nginx.org/en/docs/dirindex.html), [debugging](https://nginx.org/en/docs/debugging_log.html), and more. These documentation pages also contain a more detailed [Beginners Guide](https://nginx.org/en/docs/beginners_guide.html), How-Tos, [Development guide](https://nginx.org/en/docs/dev/development_guide.html), and a complete module and [directive reference](https://nginx.org/en/docs/dirindex.html). # Table of contents - [How it works](#how-it-works) - [Modules](#modules) - [Configurations](#configurations) - [Runtime](#runtime) - [Downloading and installing](#downloading-and-installing) - [Stable and Mainline binaries](#stable-and-mainline-binaries) - [Linux binary installation process](#linux-binary-installation-process) - [FreeBSD installation process](#freebsd-installation-process) - [Windows executables](#windows-executables) - [Dynamic modules](#dynamic-modules) - [Getting started with NGINX](#getting-started-with-nginx) - [Installing SSL certificates and enabling TLS encryption](#installing-ssl-certificates-and-enabling-tls-encryption) - [Load Balancing](#load-balancing) - [Rate limiting](#rate-limiting) - [Content caching](#content-caching) - [Building from source](#building-from-source) - [Installing dependencies](#installing-dependencies) - [Cloning the NGINX GitHub repository](#cloning-the-nginx-github-repository) - [Configuring the build](#configuring-the-build) - [Compiling](#compiling) - [Location of binary and installation](#location-of-binary-and-installation) - [Running and testing the installed binary](#running-and-testing-the-installed-binary) - [Asking questions and reporting issues](#asking-questions-and-reporting-issues) - [Contributing code](#contributing-code) - [Additional help and resources](#additional-help-and-resources) - [Changelog](#changelog) - [License](#license) # How it works NGINX is installed software with binary packages available for all major operating systems and Linux distributions. See [Tested OS and Platforms](https://nginx.org/en/#tested_os_and_platforms) for a full list of compatible systems. > [!IMPORTANT] > While nearly all popular Linux-based operating systems are distributed with a community version of nginx, we highly advise installation and usage of official [packages](https://nginx.org/en/linux_packages.html) or sources from this repository. Doing so ensures that you're using the most",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 7,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 8,
+      "full_name": "openvinotoolkit/openvino",
+      "url": "https://github.com/openvinotoolkit/openvino",
+      "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+      "language": "C++",
+      "stars": 12985,
+      "forks": 3818,
+      "stars_today": 151,
+      "topics": [
+        "ai",
+        "computer-vision",
+        "deep-learning",
+        "deploy-ai",
+        "diffusion-models",
+        "generative-ai",
+        "good-first-issue",
+        "inference",
+        "llm-inference",
+        "natural-language-processing",
+        "nlp",
+        "openvino",
+        "optimize-ai",
+        "performance-boost",
+        "recommendation-system",
+        "speech-recognition",
+        "stable-diffusion",
+        "transformers",
+        "yolo"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2018-10-15T10:54:40Z",
+      "updated_at": "2026-11-28T08:53:24Z",
+      "open_issues": 1206,
+      "default_branch": "master",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"https://storage.openvinotoolkit.org/assets/branding/openvino-logo-transparent-white-outline.svg\" width=\"400px\" alt=\"OpenVINO\"> <h3 align=\"center\"> Open-source software toolkit for optimizing and deploying deep learning models. </h3> <p align=\"center\"> <a href=\"https://docs.openvino.ai/2026/index.html\"><b>Documentation</b></a> • <a href=\"https://blog.openvino.ai\"><b>Blog</b></a> • <a href=\"https://docs.openvino.ai/2026/about-openvino/key-features.html\"><b>Key Features</b></a> • <a href=\"https://docs.openvino.ai/2026/get-started/learn-openvino.html\"><b>Tutorials</b></a> • <a href=\"https://docs.openvino.ai/2026/about-openvino/openvino-ecosystem/openvino-integrations.html\"><b>Integrations</b></a> • <a href=\"https://www.intel.com/content/www/us/en/developer/tools/openvino-toolkit/model-hub.html\"><b>Benchmarks</b></a> • <a href=\"https://github.com/openvinotoolkit/openvino.genai\"><b>Generative AI</b></a> </p> [![PyPI Status](https://badge.fury.io/py/openvino.svg)](https://badge.fury.io/py/openvino) [![NPM](https://img.shields.io/npm/v/openvino-node)](https://www.npmjs.com/package/openvino-node) [![Anaconda Status](https://anaconda.org/conda-forge/openvino/badges/version.svg)](https://anaconda.org/conda-forge/openvino) [![brew Status](https://img.shields.io/homebrew/v/openvino)](https://formulae.brew.sh/formula/openvino) [![PyPI Downloads](https://static.pepy.tech/badge/openvino)](https://pepy.tech/project/openvino) [![Anaconda Downloads](https://anaconda.org/conda-forge/libopenvino/badges/downloads.svg)](https://anaconda.org/conda-forge/openvino/files) [![brew Downloads](https://img.shields.io/homebrew/installs/dy/openvino)](https://formulae.brew.sh/formula/openvino) </div> - **Inference Optimization**: Boost deep learning performance in computer vision, automatic speech recognition, generative AI, natural language processing with large and small language models, and many other common tasks. - **Flexible Model Support**: Use models trained with popular frameworks such as PyTorch, TensorFlow, ONNX, Keras, PaddlePaddle, and JAX/Flax. Directly integrate models built with transformers and diffusers from the Hugging Face Hub using Optimum Intel. Convert and deploy models without original frameworks. - **Broad Platform Compatibility**: Reduce resource demands and efficiently deploy on a range of platforms from edge to cloud. OpenVINO™ supports inference on CPU (x86, ARM), GPU (Intel integrated & discrete GPU) and AI accelerators (Intel NPU). - **Community and Ecosystem**: Join an active community contributing to the enhancement of deep learning performance across various domains. Check out the [OpenVINO Cheat Sheet](https://docs.openvino.ai/2026/_static/download/OpenVINO_Quick_Start_Guide.pdf) and [Key Features](https://docs.openvino.ai/2026/about-openvino/key-features.html) for a quick reference. ## Installation [Get your preferred distribution of OpenVINO](https://docs.openvino.ai/2026/get-started/install-openvino.html) or use this command for quick installation: ```sh pip install -U openvino ``` ### Verify Installation After installation, you can verify OpenVINO is installed correctly by running: ```python import openvino as ov print(ov.__version__) ``` Check [system requirements](https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html) and [supported devices](https://docs.openvino.ai/2026/documentation/compatibility-and-support/supported-devices.html) for detailed information. ## Tutorials and Examples [OpenVINO Quickstart example](https://docs.openvino.ai/2026/get-started.html) will walk you through the basics of deploying your first model. Learn how to optimize and deploy popular models with the [OpenVINO Notebooks](https://github.com/openvinotoolkit/openvino_notebooks) 📚: - [Create an LLM-powered Chatbot using OpenVINO](https://github.com/openvinotoolkit/openvino_notebooks/blob/latest/notebooks/llm-chatbot/llm-chatbot-generate-api.ipynb) - [YOLOv11 Optimization](htt",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 8,
+      "rank_change": 0,
+      "streak_days": 10
+    },
+    {
+      "rank": 9,
+      "full_name": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "stars": 74610,
+      "forks": 5042,
+      "stars_today": 725,
+      "topics": [
+        "agent-skills",
+        "claude-code",
+        "codex",
+        "data-visualization",
+        "diagrams",
+        "drawio",
+        "mermaid",
+        "svg"
+      ],
+      "license": "MIT",
+      "created_at": "2026-04-16T18:01:16Z",
+      "updated_at": "2026-11-28T08:52:27Z",
+      "open_issues": 36,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <h1> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/hero/hero-dark.webp\"> <img alt=\"Diagram Design. Editorial diagrams your designer won't hate.\" src=\"docs/hero/hero-light.webp\"> </picture> </h1> **An agent skill that draws diagrams as one self-contained HTML + SVG file, in your brand.<br>52 diagram types. No shadows. No Mermaid slop.** [![GitHub stars](https://img.shields.io/github/stars/cathrynlavery/diagram-design?style=flat-square&color=bf4520)](https://github.com/cathrynlavery/diagram-design/stargazers) [![skills.sh installs](https://skills.sh/b/cathrynlavery/diagram-design?style=flat-square)](https://skills.sh/cathrynlavery/diagram-design/diagram-design) [![CI](https://img.shields.io/github/actions/workflow/status/cathrynlavery/diagram-design/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/cathrynlavery/diagram-design/actions/workflows/ci.yml) [![Plugin version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fcathrynlavery%2Fdiagram-design%2Fmain%2F.claude-plugin%2Fplugin.json&query=%24.version&label=version&style=flat-square&color=555555)](CHANGELOG.md) [![MIT license](https://img.shields.io/badge/license-MIT-555555?style=flat-square)](LICENSE) <a href=\"https://trendshift.io/repositories/26141\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/26141\" alt=\"cathrynlavery/diagram-design on Trendshift\" width=\"250\" height=\"55\"/></a> **[Website](https://diagramdesign.dev) · [Gallery](https://cathrynlavery.github.io/diagram-design/) · [Changelog](CHANGELOG.md)** [Install](#install) · [What it makes](#what-it-makes) · [Quickstart](#quickstart) · [Match your brand](#onboarding-make-it-look-like-your-brand) · [Import](#import-from-drawio-mermaid-excalidraw-or-plantuml) · [Export](#export-to-png--svg) · [Contributing](#contributing) <code>npx skills add cathrynlavery/diagram-design</code> <br><br> <picture> <source media=\"(prefers-color-scheme: dark)\" srcset=\"docs/hero/demo.gif\"> <source media=\"(prefers-color-scheme: light)\" srcset=\"docs/hero/demo-light.gif\"> <img src=\"docs/hero/demo.gif\" alt=\"A prompt typed into an agent session becomes a finished architecture diagram, then a plain first-pass diagram is redrawn with the skill, then the gallery of diagram types\" width=\"900\"> </picture> </div> <br> Ask your agent in plain words: - *\"Make me an architecture diagram of my app: frontend, backend, database, Redis cache.\"* - *\"I need a quadrant showing Q2 projects by impact vs effort.\"* - *\"Give me a sequence of a bearer call with token refresh on 401.\"* - *\"Onboard diagram-design to https://yoursite.com\"* (pulls your palette and fonts so every diagram after this one matches your site) The agent picks the type, states its plan, and writes one `.html` file you can open by double-clicking. --- ## Install Works with any host that reads Agent Skills, including Cursor, Claude Code, Codex, Qoder, GitHub Copilot, Gemini CLI, Cline, Windsurf and Amp: ```bash npx skills add cathrynlavery/diagram-design ``` In Claude Code, the plugin marketplace gets you updates and the slash commands: ```text /plugin marketplace add cathrynlavery/diagram-design /plugin install diagram-design@diagram-design ``` Official builds come only from this repository. LittleMight, Cathryn Lavery's company, publishes the plugin directory listings; a listing under any other name is an unofficial copy. [PRIVACY.md](PRIVACY.md) lists what the skill sends over the network. <details> <summary><b>Claude Code</b>: turn on auto-update</summary> After installing, run `/plugin`, open **Marketplaces**, select **diagram-design**, and choose **Enable auto-update**. Claude Code disables auto-update by default for third-party marketplaces; after this toggle, it refreshes the marketplace and installed plugin in the background after startup. Run `/reload-plugins` when prompted, or let the next session load the update. </details> <details> <summa",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 9,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 10,
+      "full_name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "stars": 76516,
+      "forks": 6813,
+      "stars_today": 675,
+      "topics": [
+        "agent-skills",
+        "artificial-intelligence",
+        "automation",
+        "bot",
+        "command-line",
+        "data-science",
+        "dsh",
+        "dsh-plugin",
+        "golang",
+        "instagram",
+        "llms",
+        "nlp",
+        "osint",
+        "polymarket",
+        "python3",
+        "reddit",
+        "terminal",
+        "tiktok",
+        "twitter",
+        "youtube"
+      ],
+      "license": "MIT",
+      "created_at": "2026-01-23T20:37:37Z",
+      "updated_at": "2026-11-28T08:55:01Z",
+      "open_issues": 12,
+      "default_branch": "main",
+      "readme_excerpt": "# /last30days English | [Français](README.fr.md) | [Deutsch](README.de.md) | [Español](README.es.md) | [Português (Brasil)](README.pt-BR.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [العربية](README.ar.md) | [فارسی](README.fa.md) | [Türkçe](README.tr.md) | [Tiếng Việt](README.vi.md) | [Русский](README.ru.md) <p align=\"center\"> <img src=\"media/pr-assets/last30days-ad.gif\" width=\"720\" alt=\"last30days - an AI agent-led search engine that searches people, not editors\" /> </p> <p align=\"center\"> <a href=\"https://github.com/mvanhorn/last30days-skill\"> <img src=\"https://img.shields.io/badge/%231-Repository%20Of%20The%20Day-6f42c1?style=for-the-badge&logo=github&label=GITHUB%20TRENDING\" alt=\"GitHub Trending #1 Repository Of The Day\" /> </a> <br/> <a href=\"https://trendshift.io/repositories/21997\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/21997\" alt=\"mvanhorn/last30days-skill | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/> </a> <br/> <a href=\"https://github.com/mvanhorn/last30days-skill/actions/workflows/validate.yml\"> <img src=\"https://github.com/mvanhorn/last30days-skill/actions/workflows/validate.yml/badge.svg\" alt=\"Validate status\" /> </a> </p> **An AI agent-led search engine scored by upvotes, likes, and real money - not editors.** This README tracks the current v4 pipeline. The runtime skill spec lives in [skills/last30days/SKILL.md](skills/last30days/SKILL.md), which is the source of truth for the latest command and setup behavior. **Claude Code (recommended — auto-updates via marketplace):** ``` /plugin marketplace add mvanhorn/last30days-skill /plugin install last30days ``` **Codex, Cursor, Copilot, Gemini CLI, or any of 50+ [Agent Skills](https://agentskills.io) hosts:** ``` npx skills add mvanhorn/last30days-skill -g ``` (`-g` installs globally for your user, available across all projects. Drop it to scope per-project.) More install options (claude.ai web, OpenClaw, manual) in the [Install](#install) section below. Zero config. Reddit, HN, Polymarket, and GitHub work immediately, and so do patent filings and careers pages when your topic is a company. Run it once and the setup wizard unlocks X, YouTube, TikTok, arXiv, Techmeme, and more in 30 seconds. --- Reddit upvotes. X likes. YouTube transcripts. TikTok engagement. Polymarket odds backed by real money and insider information. That's millions of people voting with their attention and their wallets every day. /last30days searches all of it in parallel, scores it by what real people actually engage with, and an AI agent judge synthesizes it into one brief. Google aggregates editors. /last30days searches people. You can't get this search anywhere else because no single AI has access to all of it. Google search doesn't touch Reddit comments or X posts. ChatGPT has a deal with Reddit but can't search X or TikTok. Gemini has YouTube but not Reddit. Claude has none of them natively. Each platform is a walled garden with its own API, its own tokens, its own auth. But you can bring your own keys and browser sessions, and suddenly an AI agent can search all of them at once, score them against each other, and tell you what actually matters. That's the unlock. Not one better search engine. A dozen disconnected platforms, bridged by an agent. ``` /last30days Peter Steinberger ``` You have a meeting tomorrow. You Google them. You get their LinkedIn from 2023. /last30days gives you what they're actually doing this month: joined OpenAI to work on Codex, fighting Anthropic's ban on third-party agents, shipping 23 PRs at 85% merge rate, building \"LobsterOS\" for cross-device agent control, and r/ClaudeCode hit 569 upvotes debating whether he's a hero or \"insufferable.\" Scattered across X posts, Reddit threads, YouTube transcripts, and GitHub commits. None of it was on Google. ## Why this exists I built it to keep up in AI. Everything changes every day and the Reddit and X nerds are always on top of it first. I needed better ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 10,
+      "rank_change": 0,
+      "streak_days": 12
+    },
+    {
+      "rank": 11,
+      "full_name": "google-labs-code/stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+      "language": "TypeScript",
+      "stars": 13684,
+      "forks": 1638,
+      "stars_today": 311,
+      "topics": [],
+      "license": "Apache-2.0",
+      "created_at": "2026-01-16T17:17:17Z",
+      "updated_at": "2026-11-28T08:55:12Z",
+      "open_issues": 25,
+      "default_branch": "main",
+      "readme_excerpt": "# Stitch Design Skills A collection of agent skills and plugins for [Google Stitch](https://stitch.withgoogle.com), following the [Agent Skills](https://agentskills.io) open standard. Compatible with coding agents such as Codex, Antigravity, Gemini CLI, Claude Code, Cursor, and OpenCode (manual install). ## Quick Start ### 1. Install Plugins (Recommended) The fastest way to set up the full Stitch plugin suite globally. #### Codex Add the Stitch Skills marketplace, then install the plugins you need. <details open> <summary><strong>Via CLI</strong> (recommended)</summary> ```bash codex plugin marketplace add google-labs-code/stitch-skills --ref main \\ --sparse .agents/plugins \\ --sparse plugins/stitch-design \\ --sparse plugins/stitch-build \\ --sparse plugins/stitch-utilities ``` > [!TIP] > The `--sparse` flags are optional — they limit the checkout to only the > listed paths for a faster clone. Omit them to pull the entire repository. </details> <details> <summary><strong>Via the Codex UI</strong></summary> Navigate to **Settings → Plugin Marketplaces → Add** and fill in: | Field | Value | |---|---| | **Source** | `https://github.com/google-labs-code/stitch-skills` | | **Git ref** | `main` | | **Sparse paths** | *(optional)* `.agents/plugins`, `plugins/stitch-design`, `plugins/stitch-build`, `plugins/stitch-utilities` | </details> Once the marketplace is registered, install any combination of: - **`stitch-design`** — design-focused skills - **`stitch-build`** — build and component skills - **`stitch-utilities`** — utility and helper skills #### Claude Code & Cursor ```bash # Claude Code — installs into the current project npx plugins add google-labs-code/stitch-skills --scope project --target claude-code ``` ```bash # Cursor — installs into the current workspace npx plugins add google-labs-code/stitch-skills --scope workspace --target cursor ``` #### OpenCode OpenCode does **not** use `npx plugins` / `npx skills` or the Codex/Claude marketplace layout. Install skills and the Stitch MCP server manually: **1. Skills** — copy the skill folders you need into a discoverable path: ```bash # Project-local (recommended) mkdir -p .opencode/skills cp -R plugins/stitch-design/skills/generate-design .opencode/skills/generate-design # repeat for other skills under plugins/*/skills/ ``` OpenCode also discovers `.claude/skills/` and `.agents/skills/` (see [OpenCode skills docs](https://opencode.ai/docs/skills/)). > **Naming:** OpenCode requires skill `name` frontmatter to be lowercase kebab-case and match the directory name. Skills that use `stitch::…` names (or other non-kebab forms) need the `name` field and folder renamed before OpenCode will load them. Extra frontmatter such as `allowed-tools` is ignored. **2. Stitch MCP** — add a remote MCP entry in project `opencode.json` or `~/.config/opencode/opencode.json` after completing the [Stitch MCP setup](https://stitch.withgoogle.com/docs/mcp/setup/): ```json { \"$schema\": \"https://opencode.ai/config.json\", \"mcp\": { \"stitch\": { \"type\": \"remote\", \"url\": \"YOUR_STITCH_MCP_URL\", \"enabled\": true } } } ``` Replace `YOUR_STITCH_MCP_URL` with the endpoint from the Stitch MCP setup flow (credentials/env vars from that guide still apply). Tool names inside skill instructions may differ from OpenCode builtins (`webfetch` / `bash` instead of `web_fetch` / `run_command`). Prefer the OpenCode tool names when adapting a skill for OpenCode. ### 2. Install Skills Selectively Choose only the specific skills you need. > [!IMPORTANT] > Stitch Design Skills often have inter-dependencies. If you choose to install skills selectively, ensure you include all required dependencies. ```bash npx skills add google-labs-code/stitch-skills ``` You can run the following commands to see the help documentation for plugins and skills: ```bash npx plugins --help npx skills --help ``` ## Prerequisites These skills require the **Stitch MCP** server to be configured and running in your agent's environment. Make sure you have followe",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 11,
+      "rank_change": 0,
+      "streak_days": 13
+    },
+    {
+      "rank": 12,
+      "full_name": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "stars": 8114,
+      "forks": 611,
+      "stars_today": 530,
+      "topics": [
+        "accessibility",
+        "ai-agents",
+        "android",
+        "app-review-guidelines",
+        "app-store",
+        "app-store-connect",
+        "app-store-rejection",
+        "app-store-review",
+        "claude-code",
+        "coppa",
+        "data-safety",
+        "eu-ai-act",
+        "gdpr",
+        "google-play",
+        "google-play-policy",
+        "ios",
+        "mobile-compliance",
+        "play-console",
+        "pre-submission-checklist",
+        "privacy-manifest"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2026-06-06T11:29:45Z",
+      "updated_at": "2026-11-28T08:54:15Z",
+      "open_issues": 38,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <img src=\"assets/apple.png\" alt=\"Apple\" height=\"64\" />&nbsp;&nbsp;&nbsp;<img src=\"assets/android.png\" alt=\"Android\" height=\"64\" /> # App Store Compliance Playbook Catch App Store and Google Play rejection causes before the reviewer does. A reference and a pre-submission guard for iOS and Android apps that is plain about what a scan can prove and what still needs a person. It does not guarantee approval. Read it as a website at [mjmirza.github.io/app-store-compliance](https://mjmirza.github.io/app-store-compliance/). [![Apple App Store](https://img.shields.io/badge/Apple_App_Store-000000?logo=apple&logoColor=white)](https://developer.apple.com/app-store/review/guidelines/) [![Google Play](https://img.shields.io/badge/Google_Play-414141?logo=googleplay&logoColor=white)](https://play.google/developer-content-policy/) [![Claude Code](https://img.shields.io/badge/Claude_Code-ready-000000?logo=anthropic&logoColor=white)](#how-you-actually-use-this) [![OpenRoots ORA 2.3](https://openroots.org/badge/ora.svg)](https://openroots.org/licenses/ora/2.3) [![CI](https://img.shields.io/github/actions/workflow/status/mjmirza/app-store-compliance/ci.yml?branch=main&label=CI)](https://github.com/mjmirza/app-store-compliance/actions) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-2ea44f)](.github/CONTRIBUTING.md) [![Stars](https://img.shields.io/github/stars/mjmirza/app-store-compliance?style=social)](https://github.com/mjmirza/app-store-compliance/stargazers) [![Forks](https://img.shields.io/github/forks/mjmirza/app-store-compliance?style=social)](https://github.com/mjmirza/app-store-compliance/fork) [![Follow mjmirza](https://img.shields.io/github/followers/mjmirza?label=Follow&style=social)](https://github.com/mjmirza) **If this saves you even one rejection, leave a star, fork it, and follow along. That is the whole ask.** [Star this repo](https://github.com/mjmirza/app-store-compliance) &nbsp;|&nbsp; [Fork it](https://github.com/mjmirza/app-store-compliance/fork) &nbsp;|&nbsp; [Follow on GitHub](https://github.com/mjmirza) &nbsp;|&nbsp; [Follow on X](https://twitter.com/MirzaJhanzaib) &nbsp;|&nbsp; [next8n.com](https://next8n.com) </div> ## Start here Pick one row. The time shown is for that first step. | You are | Do this first | Time | |---|---|---| | About to submit, and you can open a terminal | Run the two commands below | 2 minutes | | Already rejected | Open [the appeal playbook](docs/MISTAKE-PATTERNS.md#the-appeal-playbook) | 10 minutes | | Not a developer | Open [the checklist](docs/PRE-SUBMISSION-CHECKLIST.md) and do its first two checks | 5 minutes | | Using an AI coding tool (Claude Code, Codex, Gemini CLI, GitHub Copilot, Cursor, Grok, Qwen, Kimi and more), and want this on every submit | Go to [the install](#install-it-into-your-ai-coding-tool) | 1 minute | The two commands. Needs git and bash. The first downloads this playbook. The second scans your app. Nothing is installed and nothing in your app is changed. ``` git clone https://github.com/mjmirza/app-store-compliance ~/repositories/app-store-compliance bash ~/repositories/app-store-compliance/agent-os/hooks/app-store-compliance-guard.sh \"/path/to/your/app\" ``` Replace only `/path/to/your/app`, with the folder that holds your Xcode project or your Android app. Keep the quotes, they keep a folder name with a space in it whole. To get the path without typing it, drag the folder from Finder or your file manager into the terminal window. A small project scans in about a second, a large one can take up to a minute, and the guard prints the time it took. Findings print first, critical ones on top, each with the file and line that triggered it when there is one. The last lines tell you where you stand. | Verdict line starts with | It means | Do next | |---|---|---| | `BLOCKED.` | A critical rejection risk was found | Fix each `[CRITICAL]` line using the `fix.` line under it, then run the same command again | | `CLEAR.` | No critical risk in your code.",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 12,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 13,
+      "full_name": "Tracer-Cloud/opensre",
+      "url": "https://github.com/Tracer-Cloud/opensre",
+      "description": "The open-source agent for CI/CD reliability.",
+      "language": "Python",
+      "stars": 16220,
+      "forks": 2170,
+      "stars_today": 328,
+      "topics": [
+        "alerting",
+        "ci-cd",
+        "cli",
+        "datadog",
+        "devops",
+        "gitlab-ci",
+        "grafana",
+        "incident-management",
+        "llm",
+        "observability",
+        "ollama",
+        "remediation",
+        "root-cause-analysis",
+        "site-reliability-engineering",
+        "slack"
+      ],
+      "license": "Apache-2.0",
+      "created_at": "2026-01-13T00:04:47Z",
+      "updated_at": "2026-11-28T08:53:58Z",
+      "open_issues": 35,
+      "default_branch": "main",
+      "readme_excerpt": "<div align=\"center\"> <p align=\"center\"> <img src=\"docs/logo/opensre-logo-white.svg\" alt=\"OpenSRE\" width=\"360\" /> </p> <h1>OpenSRE: The open-source agent for CI/CD reliability</h1> <p>Your CI tells you it broke, but not why or how to fix it. OpenSRE is a CLI agent that reads the failed run, traces the cause and pushes a fix for you to review. Self-hosted, with your own models.</p> <p align=\"center\"> <a href=\"https://github.com/Tracer-Cloud/opensre/actions/workflows/ci.yml?branch=main\"><img src=\"https://img.shields.io/github/actions/workflow/status/Tracer-Cloud/opensre/ci.yml?branch=main&style=for-the-badge\" alt=\"CI status\"></a> <a href=\"https://github.com/Tracer-Cloud/opensre/releases\"><img src=\"https://img.shields.io/badge/status-public%20alpha-orange?style=for-the-badge\" alt=\"Project status: public alpha\"></a> <a href=\"https://github.com/Tracer-Cloud/opensre/blob/main/LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge\" alt=\"Apache 2.0 License\"></a> <a href=\"https://discord.gg/7NTpevXf7w\"><img src=\"https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white\" alt=\"Discord\"></a> <a href=\"https://greptile.com\"><img src=\"https://img.shields.io/badge/Sponsored%20by-Greptile-27E99F?style=for-the-badge&labelColor=3D3B4F&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMzY3IiBoZWlnaHQ9IjQyMCIgdmlld0JveD0iMCAwIDM2NyA0MjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BCjxwYXRoIGQ9Ik0yNDAuMjY5IDQ5LjgxNTRMMTY2LjgwNCAxMTUuOTYzTDExNS45NjYgMTU5LjQ0TDE4MS4zMzUgMjIwLjU4NUwyNDkuNzg0IDE2Mi4wNDhMMTk2Ljc4IDExMi40N0wyNTMuMDY4IDYxLjc4ODFMMzYyLjYwNSAxNjQuMjQ2TDE3OC43MzkgMzIxLjQ4OUwzLjE0NTAyIDE1Ny4yNDJMMTg3LjAxMSAwTDI0MC4yNjkgNDkuODE1NFoiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3Qgd2lkdGg9IjIzNi40NTMiIGhlaWdodD0iODMuNDU2NiIgdHJhbnNmb3JtPSJtYXRyaXgoMC43NTQ3MSAtMC42NTYwNTkgMCAxIDE4OC4wMTcgMzM2LjU0NCkiIGZpbGw9IiNGRkZGRkYiLz4KPHJlY3Qgd2lkdGg9IjIzNi40NTMiIGhlaWdodD0iODMuNDU2NiIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MzEzNTQgMC42ODE5OTggMCAxIDAgMTc0Ljk2MikiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc%2BCg%3D%3D\" alt=\"Sponsored by Greptile\"></a> </p> <p align=\"center\"> <a href=\"https://trendshift.io/repositories/25889\" target=\"_blank\"> <img src=\"https://trendshift.io/api/badge/repositories/25889\" alt=\"Tracer-Cloud%2Fopensre | Trendshift\" style=\"height: 30px; width: auto;\" height=\"30\" /> </a> </p> <p align=\"center\"> <strong> <a href=\"https://www.opensre.com/docs/getting-started/quickstart\">Quickstart</a> · <a href=\"https://www.opensre.com/docs\">Docs</a> · <a href=\"https://opensre.com/docs/guides/faq\">FAQ</a> · <a href=\"https://trust.tracer.cloud/\">Security</a> </strong> </p> </div> --- > 🚧 Public Alpha: Core workflows are usable for early exploration, though not yet fully stable. The project is in active development, and APIs and integrations may evolve. --- ## Before you begin Make sure you have: - A terminal open in a code project - A Git repository (recommended for the full workflow demonstration) ## Step 1: Install and start opensre macOS or Linux: ```bash curl -fsSL https://install.opensre.com | bash -s -- -gh ``` Windows (PowerShell): ```powershell & ([scriptblock]::Create((irm https://install.opensre.com/install.ps1))) -gh ``` Then start OpenSRE: ```bash opensre ``` ![OpenSRE CLI welcome screen with the sign-in prompt](docs/images/opensre-welcome.png) Windows details: [Windows](docs/install/windows-local.mdx). The installer fetches the latest build from `main` without requiring sudo. If `opensre` is not found, follow the PATH instructions printed by the installer or open a new terminal. For supported platforms and troubleshooting, see [Install locally](https://www.opensre.com/docs/install/install-local). --- ## Table of Contents - [Before you begin](#before-you-begin) - [Install and start opensre](#step-1-install-and-start-opensre) - [Why OpenSRE?](#why-opensre) - [Quick Start](#quick-start) - [Deployment](#deployment) - [How OpenSRE Works](#how-opensre-works) - [Integrati",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 13,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 14,
+      "full_name": "toeverything/AFFiNE",
+      "url": "https://github.com/toeverything/AFFiNE",
+      "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. ",
+      "language": "TypeScript",
+      "stars": 79606,
+      "forks": 5856,
+      "stars_today": 474,
+      "topics": [
+        "app",
+        "crdt",
+        "editor",
+        "electron",
+        "knowledge-base",
+        "markdown",
+        "miro",
+        "notes",
+        "notion",
+        "notion-alternative",
+        "rust",
+        "rust-lang",
+        "rust-language",
+        "table",
+        "tableview",
+        "whiteboard",
+        "wiki",
+        "workspace"
+      ],
+      "license": "NOASSERTION",
+      "created_at": "2022-07-31T18:45:21Z",
+      "updated_at": "2026-11-28T08:52:58Z",
+      "open_issues": 664,
+      "default_branch": "canary",
+      "readme_excerpt": "<div align=\"center\"> <h1 style=\"border-bottom: none\"> <b><a href=\"https://affine.pro\">AFFiNE.Pro</a></b><br /> Write, Draw and Plan All at Once <br> </h1> <a href=\"https://affine.pro/download\"> <img alt=\"affine logo\" src=\"https://cdn.affine.pro/Github_hero_image2.png\" style=\"width: 100%\"> </a> <br/> <p align=\"center\"> A privacy-focused, local-first, open-source, and ready-to-use alternative for Notion & Miro. <br /> One hyper-fused platform for wildly creative minds. </p> <br/> <br/> <a href=\"https://www.producthunt.com/posts/affine-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-affine&#0045;3\" target=\"_blank\"><img src=\"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440671&theme=light\" alt=\"AFFiNE - One&#0032;app&#0032;for&#0032;all&#0032;&#0045;&#0032;Where&#0032;Notion&#0032;meets&#0032;Miro | Product Hunt\" style=\"width: 250px; height: 54px;\" width=\"250\" height=\"54\" /></a> <br/> <br/> <div align=\"center\"> <a href=\"https://affine.pro\">Home Page</a> | <a href=\"https://affine.pro/redirect/discord\">Discord</a> | <a href=\"https://app.affine.pro\">Live Demo</a> | <a href=\"https://affine.pro/blog/\">Blog</a> | <a href=\"https://docs.affine.pro/\">Documentation</a> </div> <br/> [![Releases](https://img.shields.io/github/downloads/toeverything/AFFiNE/total)](https://github.com/toeverything/AFFiNE/releases/latest) [![All Contributors][all-contributors-badge]](#contributors) [![TypeScript-version-icon]](https://www.typescriptlang.org/) </div> <br /> <div align=\"center\"> <em>Docs, canvas and tables are hyper-merged with AFFiNE - just like the word affine (əˈfʌɪn | a-fine).</em> </div> <br /> <div align=\"center\"> <img src=\"https://github.com/toeverything/AFFiNE/assets/79301703/49a426bb-8d2b-4216-891a-fa5993642253\" style=\"width: 100%\"/> </div> ## Getting started & staying tuned with us. Star us, and you will receive all release notifications from GitHub without any delay! <img src=\"https://user-images.githubusercontent.com/79301703/230891830-0110681e-8c7e-483b-b6d9-9e42b291b9ef.gif\" style=\"width: 100%\"/> ## What is AFFiNE [AFFiNE](https://affine.pro) is an open-source, all-in-one workspace and an operating system for all the building blocks that assemble your knowledge base and much more -- wiki, knowledge management, presentation and digital assets. It's a better alternative to Notion and Miro. ## Features **A true canvas for blocks in any form. Docs and whiteboard are now fully merged.** - Many editor apps claim to be a canvas for productivity, but AFFiNE is one of the very few which allows you to put any building block on an edgeless canvas -- rich text, sticky notes, any embedded web pages, multi-view databases, linked pages, shapes and even slides. We have it all. **Multimodal AI partner ready to kick in any work** - Write up a professional work report? Turn an outline into expressive and presentable slides? Summarize an article into a well-structured mindmap? Sort your job plan and backlog tasks? Or... draw and code prototype apps and web pages directly, all with one prompt? [AFFiNE AI](https://affine.pro/ai) pushes your creativity to the edge of your imagination, just like [Canvas AI](https://affine.pro/blog/best-canvas-ai) to generate mind maps for brainstorming. **Local-first & Real-time collaborative** - We love the idea of local-first -- you always own your data on your disk, independent of the cloud. Furthermore, AFFiNE supports real-time sync and collaborations on web and cross-platform clients. **Self-host & Shape your own AFFiNE** - You have the freedom to manage, self-host, fork and build your own AFFiNE. Plugin community and third-party blocks are coming soon. More tractions on [Blocksuite](https://blocksuite.io). Check there to learn how to [self-host AFFiNE](https://docs.affine.pro/self-host-affine). ## Acknowledgement “We shape our tools and thereafter our tools shape us.” A lot of pioneers have inspired us along the way, e.g.: - Quip & Notion with their great concept of “everything i",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 14,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 15,
+      "full_name": "XiaoYouChR/Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "description": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "stars": 20116,
+      "forks": 1283,
+      "stars_today": 836,
+      "topics": [
+        "async",
+        "asyncio",
+        "bittorent",
+        "bt",
+        "cross-platform",
+        "download-manager",
+        "downloader",
+        "fluent-design",
+        "ftp",
+        "http3",
+        "magnet",
+        "pyqt",
+        "pyside6",
+        "python",
+        "qt",
+        "quic",
+        "react",
+        "software",
+        "streaming"
+      ],
+      "license": "GPL-3.0",
+      "created_at": "2023-08-16T04:23:44Z",
+      "updated_at": "2026-11-28T08:53:54Z",
+      "open_issues": 121,
+      "default_branch": "main",
+      "readme_excerpt": "<h4 align=\"right\"> <a href=\"README_zh.md\">简体中文</a> | English </h4> <table> <thead> <tr> <th colspan=\"2\" align=\"left\">Sponsor</th> </tr> </thead> <tbody> <tr> <td align=\"center\" valign=\"middle\" width=\"346\"> <a href=\"https://www.swiftproxy.net/?ref=GhostDownloader\"><img width=\"320\" alt=\"Swiftproxy AD\" src=\".github/assets/ad/Swiftproxy.webp\" /></a> </td> <td valign=\"middle\"> <a href=\"https://www.swiftproxy.net/?ref=GhostDownloader\">Swiftproxy</a> – Premium Global Residential Proxy Network<br /> Swiftproxy provides 90M+ real residential IPs across 220+ locations worldwide, helping users access global content and manage location-specific network connections. With rotating and static residential proxies, flexible geo-targeting, and HTTP(S)/SOCKS5 support, Swiftproxy is ideal for cross-region downloads, network testing, and browser automation. Free testing available, with 10% off using code <code>PROXY90</code>. </td> </tr> <tr> <td align=\"center\" valign=\"middle\" width=\"346\"> <a href=\"https://ipstar.io/?referrer=ghost\"><img width=\"320\" alt=\"IPStar AD\" src=\".github/assets/ad/IPStar.webp\" /></a> </td> <td valign=\"middle\"> <a href=\"https://ipstar.io/?referrer=ghost\">IPStar</a> is a professional provider of global residential IP proxy solutions. We own legally sourced, clean residential IP resources across more than 190 countries and regions worldwide, with a total pool of over 90 million IPs that is continuously updated. Our proxy IPs are 100% genuine residential IPs, delivering stable and reliable service with a request success rate above 99.9%, and supporting ultra-high concurrency. We are compatible with standard SOCKS5 and HTTP(S) protocols. With affordable pricing and traffic that never expires after purchase, IPStar is the ideal choice for big data scraping, large-scale cross-region downloading, e-commerce operations, and other automation tasks. Recharge now to enjoy an extra bonus of up to 8%. </td> </tr> </tbody> </table> <!-- PROJECT LOGO --> <div align=\"center\"> ![Banner](.github/assets/banner.webp) <a href=\"https://trendshift.io/repositories/13847?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-13847\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/trendshift/repositories/13847/daily?language=Python\" alt=\"XiaoYouChR%2FGhost-Downloader-3 | Trendshift\" width=\"250\" height=\"55\"/></a> <a href=\"https://trendshift.io/repositories/13847?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-13847\" target=\"_blank\" rel=\"noopener noreferrer\"><img src=\"https://trendshift.io/api/badge/repositories/13847\" alt=\"XiaoYouChR%2FGhost-Downloader-3 | Trendshift\" width=\"250\" height=\"55\"/></a> ## The only downloader you need [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![Release][release-shield]][release-url] [![Downloads][downloads-shield]][release-url] [![AtomGit Downloads][atomgit-downloads-shield]][atomgit-downloads-url] [![QQGroup](https://img.shields.io/badge/QQ_Group-756042420-blue.svg?color=blue&style=for-the-badge)](https://qm.qq.com/q/gPk6FR1Hby) [![Discord](https://img.shields.io/discord/1527965717973176391?style=for-the-badge&logo=discord&logoColor=white&label=Discord&color=%235865F2)](https://discord.gg/fKfhkPumEM) ##### [Documentation](https://gd.xychr.com/en/docs/) · [Watch Video](https://www.youtube.com/watch?v=QQRa8nDmNbc) · [Report Bug](https://github.com/XiaoYouChR/Ghost-Downloader-3/issues/new?template=bug_report.yml) · [Request Feature](https://github.com/XiaoYouChR/Ghost-Downloader-3/issues/new?template=feature_request.yml) </div> <!-- FEATURES --> ## Features * **Fast where it matters.** Every downloader is fast on a good connection. The real test is a bad one. Smart chunking without file merging. Auto-detects bandwidth. Real-browser TLS fingerprints, invisible to anti-bot checks. * **One app instead of five.** Everything in one place, nothing watered down. ",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 15,
+      "rank_change": 0,
+      "streak_days": 9
+    },
+    {
+      "rank": 16,
+      "full_name": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "description": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+      "language": "Python",
+      "stars": 17775,
+      "forks": 2507,
+      "stars_today": 718,
+      "topics": [
+        "ai-agent",
+        "ai-video-editor",
+        "claude-code",
+        "content-repurposing",
+        "desktop-app",
+        "douyin",
+        "instagram-reels",
+        "local-first",
+        "mcp",
+        "mcp-server",
+        "open-source",
+        "opusclip-alternative",
+        "podcast",
+        "subtitles",
+        "tiktok",
+        "video-clipping",
+        "video-editing-software",
+        "whisper",
+        "xiaohongshu",
+        "youtube-shorts"
+      ],
+      "license": "MIT",
+      "created_at": "2025-07-08T04:51:15Z",
+      "updated_at": "2026-11-28T08:50:56Z",
+      "open_issues": 34,
+      "default_branch": "main",
+      "readme_excerpt": "<!-- mcp-name: io.github.zhouxiaoka/autoclip-mcp --> <div align=\"center\"> <img src=\"src-tauri/icons/128x128.png\" alt=\"AutoClip\" width=\"76\" height=\"76\"> # AutoClip ### Turn any video, link, or live stream into ready-to-post clips. **The open-source OpusClip alternative** — local-first AI clipping for **podcasts, interviews, and gaming streams** with smart reframing, captions, covers, titles, and built-in **MCP for AI agents**. Zero subscriptions, no paywall. <br> <p> <a href=\"https://github.com/zhouxiaoka/autoclip/releases/latest\"><img src=\"https://img.shields.io/github/v/release/zhouxiaoka/autoclip?style=flat-square&color=4F46E5\" alt=\"GitHub release\" height=\"20\"></a>&nbsp; <a href=\"https://github.com/zhouxiaoka/autoclip/stargazers\"><img src=\"https://img.shields.io/github/stars/zhouxiaoka/autoclip?style=flat-square&color=FFD700&logo=github&logoColor=white&label=Stars\" alt=\"GitHub stars\" height=\"20\"></a>&nbsp; <a href=\"https://github.com/zhouxiaoka/autoclip/releases\"><img src=\"https://img.shields.io/github/downloads/zhouxiaoka/autoclip/total?style=flat-square&color=10B981\" alt=\"Downloads\" height=\"20\"></a>&nbsp; <img src=\"https://img.shields.io/badge/Languages-13-0EA5E9?style=flat-square\" alt=\"13 Languages\" height=\"20\">&nbsp; <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-MIT-blue?style=flat-square\" alt=\"License: MIT\" height=\"20\"></a> </p> <br> <!-- hero-cta:start --> <p> <a href=\"https://zhouxiaoka.github.io/autoclip_intro/\"><img src=\"docs/images/download-button.svg\" alt=\"Download AutoClip\" width=\"248\" height=\"55\"></a>&nbsp;&nbsp; <a href=\"https://trendshift.io/repositories/25801\"><img src=\"https://trendshift.io/api/badge/repositories/25801\" alt=\"AutoClip — GitHub Trending\" width=\"250\" height=\"55\"></a> </p> <!-- hero-cta:end --> <br> <p> <a href=\"https://zhouxiaoka.github.io/autoclip_intro/\"><strong>Website</strong></a> &nbsp;&middot;&nbsp; <a href=\"https://github.com/zhouxiaoka/autoclip/releases/latest\"><strong>Download</strong></a> &nbsp;&middot;&nbsp; <a href=\"https://zhouxiaoka.github.io/autoclip_intro/features/game-streams/\"><strong>Live Replays (v1.6)</strong></a> &nbsp;&middot;&nbsp; <a href=\"https://zhouxiaoka.github.io/autoclip_intro/cases/?lang=en\"><strong>Showcase</strong></a> &nbsp;&middot;&nbsp; <a href=\"#quick-start\"><strong>Quick Start</strong></a> &nbsp;&middot;&nbsp; <a href=\"#documentation\"><strong>Docs</strong></a> &nbsp;&middot;&nbsp; <a href=\"https://github.com/zhouxiaoka/autoclip/issues/new/choose\"><strong>Issues</strong></a> </p> <p> <strong>English</strong> · <a href=\"docs/i18n/README-ZH.md\">简体中文</a> · <a href=\"docs/i18n/README-ZH-TW.md\">繁體中文</a> · <a href=\"docs/i18n/README-JA.md\">日本語</a> · <a href=\"docs/i18n/README-KO.md\">한국어</a> · <a href=\"docs/i18n/README-ES.md\">Español</a> · <a href=\"docs/i18n/README-PT.md\">Português</a> · <a href=\"docs/i18n/README-RU.md\">Русский</a> · <a href=\"docs/i18n/README-FR.md\">Français</a> · <a href=\"docs/i18n/README-ID.md\">Bahasa Indonesia</a> · <a href=\"docs/i18n/README-TR.md\">Türkçe</a> · <a href=\"docs/i18n/README-VI.md\">Tiếng Việt</a> · <a href=\"docs/i18n/README-DE.md\">Deutsch</a> </p> <br> <p> ⭐ <em>Free, MIT-licensed, zero subscriptions — everything cuts and renders on your machine. Star the repo if you find it useful!</em> </p> <!-- top-sponsors:start --> <table width=\"100%\"> <tr> <td align=\"center\" width=\"50%\"> <a href=\"https://go.apimart.ai/tw-autoclip\"><img src=\"docs/sponsors/apimart.png\" alt=\"APIMart\" width=\"64\"></a><br> <a href=\"https://go.apimart.ai/tw-autoclip\"><strong>APIMart</strong></a><br> <sub>Low-cost AI image &amp; video API · GPT-Image-2 from $0.006/img</sub> </td> <td align=\"center\" width=\"50%\"> <a href=\"mailto:christine_zhouye@163.com?subject=AutoClip%20Sponsor%20%2F%20Provider%20Partnership\"><strong>Sponsor / Partner with AutoClip</strong></a><br> <sub>Put your AI API or creator tool in front of AutoClip users worldwide (cloud dynamic provider listing supported, zero client release needed).<br><a href=\"mailto:christine_zhouye@163.com\"",
+      "metadata_error": "",
+      "is_new": false,
+      "previous_rank": 16,
+      "rank_change": 0,
+      "streak_days": 9
+    }
+  ],
+  "industry_analysis": {
+    "analysis_version": 6,
+    "available": true,
+    "error": "模型不可用，已用项目资料、确定性数据与人工维护的行业框架生成；未进行外部网页研究。原始错误：行业分类重试后仍失败：JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+    "key_judgments": [
+      "当日 12/16 个项目可从资料确认与 AI 直接相关；其余 4 个不应被包装成 AI 趋势。",
+      "开发者关注主要集中在：AI 智能体与数字劳动力（3 个）、其他数字产品与工具（3 个）、AI 安全、权限与治理（2 个）。",
+      "排名第一的 elementalsouls/Claude-BugHunter 代表“AI 安全、权限与治理”受到显著关注，但热度仍不等于商业采用。",
+      "多个项目的价值不在模型参数更大，而在让 AI 能理解业务资料、持续执行或进入具体工作场景。",
+      "今天最需要验证的不是演示效果，而是真实用户是否持续使用、错误是否可控以及是否形成清晰付费价值。"
+    ],
+    "hot_characteristics": [
+      "AI 智能体与数字劳动力（3 个项目）",
+      "其他数字产品与工具（3 个项目）",
+      "AI 安全、权限与治理（2 个项目）",
+      "AI 编程智能体（2 个项目）",
+      "AI 软件开发方法与技能体系（1 个项目）",
+      "面向 AI 的网页数据入口（1 个项目）"
+    ],
+    "product_business_signals": [
+      "AI 智能体与数字劳动力是今天最集中的供给方向，适合继续观察是否出现真实客户案例。",
+      "开源热度可用于发现需求和竞争者，但不能代替收入、留存、部署量或研究评测。",
+      "能进入现有工作流、减少明确成本并提供可控结果的项目，更可能形成产品机会。"
+    ],
+    "watch_next": [
+      "观察 AI 智能体与数字劳动力 是否连续多日出现，而不是单日项目爆发。",
+      "优先寻找项目方公布的真实使用案例、稳定版本和可重复评测。",
+      "核实高热项目的许可证、数据来源、隐私和企业使用边界。"
+    ],
+    "repositories": [
+      {
+        "full_name": "elementalsouls/Claude-BugHunter",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 1 名，当日新增 1608 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 Claude-BugHunter 描述为“A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disc”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 Claude-BugHunter 的潜在使用者而言，在项目方所述的“A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disc”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 1 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/elementalsouls/Claude-BugHunter",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A Claude Code skill bundle for bug hunting and external red-team work - 85 skills, 16 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/elementalsouls/Claude-BugHunter",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 97,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/elementalsouls/Claude-BugHunter",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "obra/superpowers",
+        "one_line_summary": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "industry_direction": "AI 软件开发方法与技能体系",
+        "target_users": [
+          "正在引入 AI 开发流程的软件团队",
+          "工程管理和质量负责人"
+        ],
+        "problem_solved": "只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。",
+        "solution": "把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "why_now": "该项目位列当日 Trending 第 2 名，当日新增 922 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "技能化开发流程",
+        "technology_impact": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "方法论效果依赖团队执行，可能增加流程负担，也需要用交付质量和周期验证。",
+        "ai_relevance": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "plain_language_explanation": "项目方把 superpowers 描述为“An agentic skills framework & software development methodology that works.”。通俗地说，它希望解决的是：只给 AI 一个模糊任务容易产生不可审查的代码，团队也缺少一致的协作步骤。 它的办法是：把需求澄清、分工、测试和复核组织成可复用的智能体开发方法。",
+        "scenario_examples": [
+          "例如团队要求智能体先写验收条件，再分步实现和测试，最后由人员审查。"
+        ],
+        "practical_benefits": [
+          "对 superpowers 的潜在使用者而言，在项目方所述的“An agentic skills framework & software development methodology that works.”场景中，减少每位成员各自摸索 AI 开发流程的成本",
+          "让 AI 参与的软件交付更容易检查和复盘"
+        ],
+        "industry_implications": "团队采用 AI 编程的重点正从个人技巧转向可重复、可治理的组织方法。",
+        "who_should_care": "正在引入 AI 开发流程的软件团队、工程管理和质量负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 2 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "An agentic skills framework & software development methodology that works.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/obra/superpowers",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 94,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/obra/superpowers",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "HKUDS/CLI-Anything",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 3 名，当日新增 666 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 CLI-Anything 描述为“\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 CLI-Anything 的潜在使用者而言，在项目方所述的“\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 3 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/CLI-Anything",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/HKUDS/CLI-Anything",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 91,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/HKUDS/CLI-Anything",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "jingyaogong/minimind",
+        "one_line_summary": "围绕“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+        "solution": "围绕“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 4 名，当日新增 660 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 minimind 描述为“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours. 它的办法是：围绕“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 minimind 的潜在使用者而言，在项目方所述的“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”场景中，可直接查看和试验项目方所述的“🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 4 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jingyaogong/minimind",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/jingyaogong/minimind",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 88,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/jingyaogong/minimind",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cursor/plugins",
+        "one_line_summary": "围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：Cursor plugin specification and official plugins",
+        "solution": "围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 5 名，当日新增 243 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 plugins 描述为“Cursor plugin specification and official plugins”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：Cursor plugin specification and official plugins 它的办法是：围绕“Cursor plugin specification and official plugins”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“Cursor plugin specification and official plugins”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 plugins 的潜在使用者而言，在项目方所述的“Cursor plugin specification and official plugins”场景中，可直接查看和试验项目方所述的“Cursor plugin specification and official plugins”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 5 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cursor/plugins",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Cursor plugin specification and official plugins",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cursor/plugins",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 85,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cursor/plugins",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "firecrawl/firecrawl",
+        "one_line_summary": "把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "industry_direction": "面向 AI 的网页数据入口",
+        "target_users": [
+          "需要外部信息的 AI 产品团队",
+          "研究、销售与市场情报团队"
+        ],
+        "problem_solved": "网页结构复杂且经常变化，AI 产品难以稳定取得干净、可引用的外部资料。",
+        "solution": "把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "why_now": "该项目位列当日 Trending 第 6 名，当日新增 822 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "网页到结构化上下文的转换",
+        "technology_impact": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "必须遵守网站条款、版权和隐私要求，动态网页与反爬措施也会影响完整性。",
+        "ai_relevance": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "plain_language_explanation": "项目方把 firecrawl 描述为“Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through on”。通俗地说，它希望解决的是：网页结构复杂且经常变化，AI 产品难以稳定取得干净、可引用的外部资料。 它的办法是：把网页搜索、抓取和内容整理封装成可供 AI 系统调用的数据服务。",
+        "scenario_examples": [
+          "例如市场研究助手定期读取公司官网更新，并保留原页面供分析人员复核。"
+        ],
+        "practical_benefits": [
+          "对 firecrawl 的潜在使用者而言，在项目方所述的“Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through on”场景中，减少为不同网站分别维护采集流程的成本",
+          "让 AI 回答更容易附带最新网页依据"
+        ],
+        "industry_implications": "AI 产品的差异越来越取决于能否及时连接真实世界信息，而非只依赖模型记忆。",
+        "who_should_care": "需要外部信息的 AI 产品团队、研究、销售与市场情报团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 6 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/firecrawl",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/firecrawl/firecrawl",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 82,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "nginx/nginx",
+        "one_line_summary": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "industry_direction": "AI 安全、权限与治理",
+        "target_users": [
+          "企业安全与合规负责人",
+          "准备部署智能体的组织"
+        ],
+        "problem_solved": "智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。",
+        "solution": "通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "why_now": "该项目位列当日 Trending 第 7 名，当日新增 146 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "智能体零信任治理",
+        "technology_impact": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "治理工具不能消除模型判断错误，组织仍需明确审批与责任人。",
+        "ai_relevance": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "plain_language_explanation": "项目方把 nginx 描述为“The official NGINX Open Source repository.”。通俗地说，它希望解决的是：智能体连接真实数据和系统后，可能越权、泄露信息或执行危险操作。 它的办法是：通过身份、权限、隔离和审计机制限制智能体可以做什么。",
+        "scenario_examples": [
+          "例如智能体可以起草退款操作，但超过额度必须由员工批准。"
+        ],
+        "practical_benefits": [
+          "对 nginx 的潜在使用者而言，在项目方所述的“The official NGINX Open Source repository.”场景中，降低智能体误操作的影响范围",
+          "让企业更容易审计谁在何时执行了什么"
+        ],
+        "industry_implications": "企业购买 AI 的前提正从能力演示转向可控和可追责。",
+        "who_should_care": "企业安全与合规负责人、准备部署智能体的组织",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 7 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nginx/nginx",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The official NGINX Open Source repository.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/nginx/nginx",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 79,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/nginx/nginx",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "openvinotoolkit/openvino",
+        "one_line_summary": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "industry_direction": "语音 AI 与自然交互",
+        "target_users": [
+          "客服与销售团队",
+          "需要免手操作的普通用户"
+        ],
+        "problem_solved": "键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。",
+        "solution": "通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "why_now": "该项目位列当日 Trending 第 8 名，当日新增 151 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "实时语音交互",
+        "technology_impact": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "口音、噪声、隐私和错误执行会直接影响体验与信任。",
+        "ai_relevance": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "plain_language_explanation": "项目方把 openvino 描述为“OpenVINO™ is an open source toolkit for optimizing and deploying AI inference”。通俗地说，它希望解决的是：键盘和复杂界面限制了 AI 在移动、驾驶和实时服务中的使用。 它的办法是：通过语音理解、生成或语音指令把 AI 带入实时工作场景。",
+        "scenario_examples": [
+          "例如销售人员在路上口述客户记录，系统整理后等待确认。"
+        ],
+        "practical_benefits": [
+          "对 openvino 的潜在使用者而言，在项目方所述的“OpenVINO™ is an open source toolkit for optimizing and deploying AI inference”场景中，减少打字和手动录入",
+          "让 AI 能进入移动和实时服务场景"
+        ],
+        "industry_implications": "语音可能成为比聊天框更自然的 AI 使用入口。",
+        "who_should_care": "客服与销售团队、需要免手操作的普通用户",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 8 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openvinotoolkit/openvino",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/openvinotoolkit/openvino",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 76,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/openvinotoolkit/openvino",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 9 名，当日新增 725 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 diagram-design 描述为“Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diag”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 diagram-design 的潜在使用者而言，在项目方所述的“Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diag”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 9 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cathrynlavery/diagram-design",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/cathrynlavery/diagram-design",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 73,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/cathrynlavery/diagram-design",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "one_line_summary": "让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "industry_direction": "跨平台 AI 研究助手",
+        "target_users": [
+          "市场与竞争研究人员",
+          "需要追踪近期舆论的产品团队"
+        ],
+        "problem_solved": "近期观点分散在多个社交和内容平台，人工搜索容易遗漏来源或只看到单一圈层。",
+        "solution": "让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "why_now": "该项目位列当日 Trending 第 10 名，当日新增 675 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "跨平台近期信息综合",
+        "technology_impact": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "平台样本偏差、虚假内容、访问限制和摘要失真都可能制造错误共识。",
+        "ai_relevance": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "plain_language_explanation": "项目方把 last30days-skill 描述为“AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthes”。通俗地说，它希望解决的是：近期观点分散在多个社交和内容平台，人工搜索容易遗漏来源或只看到单一圈层。 它的办法是：让 AI 跨多个公开平台搜集近期讨论并形成带依据的主题摘要。",
+        "scenario_examples": [
+          "例如产品团队整理过去 30 天用户对某类 AI 硬件的高频抱怨，并逐条回看来源。"
+        ],
+        "practical_benefits": [
+          "对 last30days-skill 的潜在使用者而言，在项目方所述的“AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthes”场景中，减少在多个平台重复搜索同一主题的时间",
+          "让近期市场判断更容易回到原始讨论核对"
+        ],
+        "industry_implications": "研究助手开始强调时间范围和多来源，而不只依赖模型已有知识。",
+        "who_should_care": "市场与竞争研究人员、需要追踪近期舆论的产品团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 10 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvanhorn/last30days-skill",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mvanhorn/last30days-skill",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 70,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mvanhorn/last30days-skill",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "google-labs-code/stitch-skills",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 11 名，当日新增 311 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 stitch-skills 描述为“A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills ope”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 stitch-skills 的潜在使用者而言，在项目方所述的“A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills ope”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 11 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-labs-code/stitch-skills",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/google-labs-code/stitch-skills",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 67,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/google-labs-code/stitch-skills",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "mjmirza/app-store-compliance",
+        "one_line_summary": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "industry_direction": "AI 编程智能体",
+        "target_users": [
+          "软件产品团队",
+          "管理 AI 开发效率的技术负责人"
+        ],
+        "problem_solved": "AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。",
+        "solution": "为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "why_now": "该项目位列当日 Trending 第 12 名，当日新增 530 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "可持续执行与技能化智能体",
+        "technology_impact": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "自我改进和长时间自动执行可能放大错误，仍需要权限限制和人工验收。",
+        "ai_relevance": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "plain_language_explanation": "项目方把 app-store-compliance 描述为“Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented”。通俗地说，它希望解决的是：AI 能生成代码，但长任务中容易丢失目标、重复犯错或交付不可用结果。 它的办法是：为编程智能体提供可持续执行、专业技能或自我改进的工作机制。",
+        "scenario_examples": [
+          "例如把一项跨多文件的产品改动交给智能体持续完成，并在关键步骤由人确认。"
+        ],
+        "practical_benefits": [
+          "对 app-store-compliance 的潜在使用者而言，在项目方所述的“Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented”场景中，减少工程师在重复修改与资料查找上的时间",
+          "让复杂开发任务更容易形成可审查的交付过程"
+        ],
+        "industry_implications": "AI 编程竞争正从单次生成速度转向长任务完成质量。",
+        "who_should_care": "软件产品团队、管理 AI 开发效率的技术负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 12 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mjmirza/app-store-compliance",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 125 documented rejection patterns and fixes, privacy manifest and Data safety checks, 117 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/mjmirza/app-store-compliance",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 64,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/mjmirza/app-store-compliance",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "Tracer-Cloud/opensre",
+        "one_line_summary": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "industry_direction": "AI 智能体与数字劳动力",
+        "target_users": [
+          "希望自动化知识工作的企业团队",
+          "AI 产品与运营负责人"
+        ],
+        "problem_solved": "通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。",
+        "solution": "把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "why_now": "该项目位列当日 Trending 第 13 名，当日新增 328 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "多角色智能体协作",
+        "technology_impact": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "角色描述不等于真实专业能力，多智能体还会增加成本、延迟和责任边界问题。",
+        "ai_relevance": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "plain_language_explanation": "项目方把 opensre 描述为“The open-source agent for CI/CD reliability.”。通俗地说，它希望解决的是：通用聊天助手只能给建议，难以分工并持续完成跨步骤工作。 它的办法是：把不同角色、工具、记忆和流程组合为能协作执行任务的智能体。",
+        "scenario_examples": [
+          "例如市场团队让研究、写作和审核智能体协作完成一次内容策划。"
+        ],
+        "practical_benefits": [
+          "对 opensre 的潜在使用者而言，在项目方所述的“The open-source agent for CI/CD reliability.”场景中，把多步骤工作拆成清晰分工",
+          "减少人员在不同工具之间传递资料和跟进状态的负担"
+        ],
+        "industry_implications": "AI 产品正在从对话入口转向可管理的工作执行系统。",
+        "who_should_care": "希望自动化知识工作的企业团队、AI 产品与运营负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 13 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Tracer-Cloud/opensre",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The open-source agent for CI/CD reliability.",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/Tracer-Cloud/opensre",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 61,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/Tracer-Cloud/opensre",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "toeverything/AFFiNE",
+        "one_line_summary": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "industry_direction": "企业知识检索与 RAG",
+        "target_users": [
+          "知识密集型企业",
+          "客服、研究和内部运营团队"
+        ],
+        "problem_solved": "资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。",
+        "solution": "先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "why_now": "该项目位列当日 Trending 第 14 名，当日新增 474 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "检索增强生成",
+        "technology_impact": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "检索遗漏和过期资料仍会导致错误答案，来源与更新时间必须可见。",
+        "ai_relevance": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "plain_language_explanation": "项目方把 AFFiNE 描述为“There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings p”。通俗地说，它希望解决的是：资料分散时，员工和 AI 助手难以找到可靠、可追溯的答案。 它的办法是：先检索相关资料，再让 AI 基于找到的内容回答或执行。",
+        "scenario_examples": [
+          "例如客服人员提问后，系统从最新产品文档中找到依据再组织回复。"
+        ],
+        "practical_benefits": [
+          "对 AFFiNE 的潜在使用者而言，在项目方所述的“There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings p”场景中，减少跨文档搜索时间",
+          "让回答更容易追溯到企业自己的资料"
+        ],
+        "industry_implications": "企业采用 AI 的重点正在转向连接自己的可信资料。",
+        "who_should_care": "知识密集型企业、客服、研究和内部运营团队",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 14 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/toeverything/AFFiNE",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. ",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/toeverything/AFFiNE",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 58,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/toeverything/AFFiNE",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "XiaoYouChR/Ghost-Downloader-3",
+        "one_line_summary": "围绕“The only downloader you need. 下载器的集大成者。”提供开源工具或资料。",
+        "industry_direction": "其他数字产品与工具",
+        "target_users": [
+          "评估数字工具的产品负责人"
+        ],
+        "problem_solved": "现有资料不足以确认具体客户问题；项目方仅说明：The only downloader you need. 下载器的集大成者。",
+        "solution": "围绕“The only downloader you need. 下载器的集大成者。”提供开源工具或资料。",
+        "why_now": "该项目位列当日 Trending 第 15 名，当日新增 836 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "未发现可确认的特殊 AI 技术",
+        "technology_impact": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "资料有限，需核实真实用户、维护稳定性和具体效果。",
+        "ai_relevance": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "plain_language_explanation": "项目方把 Ghost-Downloader-3 描述为“The only downloader you need. 下载器的集大成者。”。通俗地说，它希望解决的是：现有资料不足以确认具体客户问题；项目方仅说明：The only downloader you need. 下载器的集大成者。 它的办法是：围绕“The only downloader you need. 下载器的集大成者。”提供开源工具或资料。",
+        "scenario_examples": [
+          "例如产品团队先核对“The only downloader you need. 下载器的集大成者。”是否对应自己的实际需求，再小范围试用。"
+        ],
+        "practical_benefits": [
+          "对 Ghost-Downloader-3 的潜在使用者而言，在项目方所述的“The only downloader you need. 下载器的集大成者。”场景中，可直接查看和试验项目方所述的“The only downloader you need. 下载器的集大成者。”；尚无证据证明具体业务收益"
+        ],
+        "industry_implications": "不应仅因进入 GitHub 热榜就解读为 AI 行业趋势。",
+        "who_should_care": "评估数字工具的产品负责人",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 15 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "The only downloader you need. 下载器的集大成者。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "低",
+        "priority_score": 55,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      },
+      {
+        "full_name": "zhouxiaoka/autoclip",
+        "one_line_summary": "按平台采集公开帖子、视频和评论，供后续研究与分析使用。",
+        "industry_direction": "社交平台公开信息采集",
+        "target_users": [
+          "消费者研究与品牌洞察团队",
+          "学术与舆情研究人员"
+        ],
+        "problem_solved": "多个内容平台的数据分散，人工收集帖子、评论和互动信息耗时且难以形成一致样本。",
+        "solution": "按平台采集公开帖子、视频和评论，供后续研究与分析使用。",
+        "why_now": "该项目位列当日 Trending 第 16 名，当日新增 718 Star；这只代表开发者关注信号。",
+        "noteworthy_technology": "跨平台内容采集",
+        "technology_impact": "它能成为消费者洞察或 AI 分析的数据入口，但本身并不是新的 AI 技术。",
+        "product_form": "开源项目或工具",
+        "commercialization_signal": "没有足够一手资料证明收入、客户采用或融资。",
+        "maturity": "需结合正式版本、用户案例和长期维护情况判断",
+        "risks": "平台条款、个人信息、数据授权、样本偏差和接口变化都可能限制使用。",
+        "ai_relevance": "它能成为消费者洞察或 AI 分析的数据入口，但本身并不是新的 AI 技术。",
+        "plain_language_explanation": "项目方把 autoclip 描述为“AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接”。通俗地说，它希望解决的是：多个内容平台的数据分散，人工收集帖子、评论和互动信息耗时且难以形成一致样本。 它的办法是：按平台采集公开帖子、视频和评论，供后续研究与分析使用。",
+        "scenario_examples": [
+          "例如品牌团队抽取某类产品的公开评论，再分析用户反复提到的购买顾虑。"
+        ],
+        "practical_benefits": [
+          "对 autoclip 的潜在使用者而言，在项目方所述的“AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接”场景中，减少跨平台逐条复制公开内容的时间",
+          "让评论研究更容易形成可重复的数据样本"
+        ],
+        "industry_implications": "它能成为消费者洞察或 AI 分析的数据入口，但本身并不是新的 AI 技术。",
+        "who_should_care": "消费者研究与品牌洞察团队、学术与舆情研究人员",
+        "validation_signals": [
+          "是否出现可核实的真实用户案例",
+          "是否连续多日或多周保持关注",
+          "是否发布清晰路线和稳定版本"
+        ],
+        "claim_checks": [
+          {
+            "claim": "项目位列当日 Trending 第 16 名",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhouxiaoka/autoclip",
+            "verification_status": "结构化数据核对"
+          },
+          {
+            "claim": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
+            "claim_type": "已验证事实",
+            "source_kind": "github_metadata",
+            "source_excerpt": "",
+            "source_url": "https://github.com/zhouxiaoka/autoclip",
+            "verification_status": "GitHub 项目资料核对"
+          }
+        ],
+        "confidence": "中",
+        "priority_score": 52,
+        "evidence": [
+          {
+            "title": "GitHub 项目资料",
+            "url": "https://github.com/zhouxiaoka/autoclip",
+            "source_type": "project"
+          }
+        ],
+        "deep_researched": false
+      }
+    ]
+  },
+  "trend_7d": {
+    "window_days": 7,
+    "observed_days": 7,
+    "status": "complete",
+    "emerging": [],
+    "accelerating": [],
+    "cooling": [],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 21,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 21,
+        "project_count": 3
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 14,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 14,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "社交平台公开信息采集",
+        "appearances": 7,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 21
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 21
+      },
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 21
+      },
+      {
+        "name": "企业安全与合规负责人",
+        "count": 14
+      },
+      {
+        "name": "准备部署智能体的组织",
+        "count": 14
+      },
+      {
+        "name": "软件产品团队",
+        "count": 14
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 14
+      },
+      {
+        "name": "正在引入 AI 开发流程的软件团队",
+        "count": 7
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 112
+      }
+    ]
+  },
+  "trend_30d": {
+    "window_days": 30,
+    "observed_days": 29,
+    "status": "complete",
+    "emerging": [
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 12,
+        "project_count": 1
+      },
+      {
+        "theme": "社交平台公开信息采集",
+        "appearances": 9,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 5,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 智能体工作系统",
+        "appearances": 2,
+        "project_count": 1
+      }
+    ],
+    "accelerating": [
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 53,
+        "project_count": 14
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 28,
+        "project_count": 5
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 14,
+        "project_count": 1
+      },
+      {
+        "theme": "面向 AI 的网页数据入口",
+        "appearances": 13,
+        "project_count": 2
+      },
+      {
+        "theme": "跨平台 AI 研究助手",
+        "appearances": 12,
+        "project_count": 1
+      },
+      {
+        "theme": "企业知识检索与 RAG",
+        "appearances": 10,
+        "project_count": 2
+      },
+      {
+        "theme": "社交平台公开信息采集",
+        "appearances": 9,
+        "project_count": 1
+      },
+      {
+        "theme": "AI 辅助代码质量检查",
+        "appearances": 5,
+        "project_count": 1
+      }
+    ],
+    "cooling": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 116,
+        "project_count": 57
+      },
+      {
+        "theme": "企业智能体共享记忆",
+        "appearances": 7,
+        "project_count": 1
+      },
+      {
+        "theme": "开源 AI 协作工作台",
+        "appearances": 5,
+        "project_count": 2
+      },
+      {
+        "theme": "AI 设计质量指导",
+        "appearances": 5,
+        "project_count": 1
+      }
+    ],
+    "persistent": [
+      {
+        "theme": "其他数字产品与工具",
+        "appearances": 116,
+        "project_count": 57
+      },
+      {
+        "theme": "AI 智能体与数字劳动力",
+        "appearances": 99,
+        "project_count": 27
+      },
+      {
+        "theme": "AI 编程智能体",
+        "appearances": 53,
+        "project_count": 14
+      },
+      {
+        "theme": "AI 安全、权限与治理",
+        "appearances": 28,
+        "project_count": 5
+      },
+      {
+        "theme": "语音 AI 与自然交互",
+        "appearances": 17,
+        "project_count": 7
+      },
+      {
+        "theme": "AI 软件开发方法与技能体系",
+        "appearances": 14,
+        "project_count": 1
+      }
+    ],
+    "top_users": [
+      {
+        "name": "评估数字工具的产品负责人",
+        "count": 116
+      },
+      {
+        "name": "希望自动化知识工作的企业团队",
+        "count": 99
+      },
+      {
+        "name": "AI 产品与运营负责人",
+        "count": 99
+      },
+      {
+        "name": "软件产品团队",
+        "count": 53
+      },
+      {
+        "name": "管理 AI 开发效率的技术负责人",
+        "count": 53
+      },
+      {
+        "name": "企业安全与合规负责人",
+        "count": 28
+      },
+      {
+        "name": "准备部署智能体的组织",
+        "count": 28
+      },
+      {
+        "name": "客服与销售团队",
+        "count": 17
+      }
+    ],
+    "top_product_forms": [
+      {
+        "name": "开源项目或工具",
+        "count": 427
+      }
+    ]
+  },
+  "day_over_day": {
+    "available": true,
+    "previous_date": "2026-11-27",
+    "new": [],
+    "retained": [
+      "HKUDS/CLI-Anything",
+      "Tracer-Cloud/opensre",
+      "XiaoYouChR/Ghost-Downloader-3",
+      "cathrynlavery/diagram-design",
+      "cursor/plugins",
+      "elementalsouls/Claude-BugHunter",
+      "firecrawl/firecrawl",
+      "google-labs-code/stitch-skills",
+      "jingyaogong/minimind",
+      "mjmirza/app-store-compliance",
+      "mvanhorn/last30days-skill",
+      "nginx/nginx",
+      "obra/superpowers",
+      "openvinotoolkit/openvino",
+      "toeverything/AFFiNE",
+      "zhouxiaoka/autoclip"
+    ],
+    "exited": [],
+    "risers": [
+      {
+        "full_name": "jingyaogong/minimind",
+        "previous_rank": 4,
+        "rank": 4,
+        "change": 0
+      },
+      {
+        "full_name": "elementalsouls/Claude-BugHunter",
+        "previous_rank": 1,
+        "rank": 1,
+        "change": 0
+      },
+      {
+        "full_name": "cursor/plugins",
+        "previous_rank": 5,
+        "rank": 5,
+        "change": 0
+      },
+      {
+        "full_name": "toeverything/AFFiNE",
+        "previous_rank": 14,
+        "rank": 14,
+        "change": 0
+      },
+      {
+        "full_name": "mjmirza/app-store-compliance",
+        "previous_rank": 12,
+        "rank": 12,
+        "change": 0
+      },
+      {
+        "full_name": "obra/superpowers",
+        "previous_rank": 2,
+        "rank": 2,
+        "change": 0
+      },
+      {
+        "full_name": "XiaoYouChR/Ghost-Downloader-3",
+        "previous_rank": 15,
+        "rank": 15,
+        "change": 0
+      },
+      {
+        "full_name": "nginx/nginx",
+        "previous_rank": 7,
+        "rank": 7,
+        "change": 0
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "previous_rank": 9,
+        "rank": 9,
+        "change": 0
+      },
+      {
+        "full_name": "Tracer-Cloud/opensre",
+        "previous_rank": 13,
+        "rank": 13,
+        "change": 0
+      },
+      {
+        "full_name": "firecrawl/firecrawl",
+        "previous_rank": 6,
+        "rank": 6,
+        "change": 0
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "previous_rank": 10,
+        "rank": 10,
+        "change": 0
+      },
+      {
+        "full_name": "google-labs-code/stitch-skills",
+        "previous_rank": 11,
+        "rank": 11,
+        "change": 0
+      },
+      {
+        "full_name": "HKUDS/CLI-Anything",
+        "previous_rank": 3,
+        "rank": 3,
+        "change": 0
+      },
+      {
+        "full_name": "zhouxiaoka/autoclip",
+        "previous_rank": 16,
+        "rank": 16,
+        "change": 0
+      },
+      {
+        "full_name": "openvinotoolkit/openvino",
+        "previous_rank": 8,
+        "rank": 8,
+        "change": 0
+      }
+    ],
+    "attention_changes": [
+      {
+        "full_name": "obra/superpowers",
+        "previous_stars_today": 854,
+        "stars_today": 922,
+        "change": 68
+      },
+      {
+        "full_name": "elementalsouls/Claude-BugHunter",
+        "previous_stars_today": 1597,
+        "stars_today": 1608,
+        "change": 11
+      },
+      {
+        "full_name": "google-labs-code/stitch-skills",
+        "previous_stars_today": 309,
+        "stars_today": 311,
+        "change": 2
+      },
+      {
+        "full_name": "Tracer-Cloud/opensre",
+        "previous_stars_today": 327,
+        "stars_today": 328,
+        "change": 1
+      },
+      {
+        "full_name": "nginx/nginx",
+        "previous_stars_today": 150,
+        "stars_today": 146,
+        "change": -4
+      },
+      {
+        "full_name": "openvinotoolkit/openvino",
+        "previous_stars_today": 176,
+        "stars_today": 151,
+        "change": -25
+      },
+      {
+        "full_name": "cursor/plugins",
+        "previous_stars_today": 270,
+        "stars_today": 243,
+        "change": -27
+      },
+      {
+        "full_name": "mjmirza/app-store-compliance",
+        "previous_stars_today": 562,
+        "stars_today": 530,
+        "change": -32
+      },
+      {
+        "full_name": "jingyaogong/minimind",
+        "previous_stars_today": 702,
+        "stars_today": 660,
+        "change": -42
+      },
+      {
+        "full_name": "toeverything/AFFiNE",
+        "previous_stars_today": 525,
+        "stars_today": 474,
+        "change": -51
+      },
+      {
+        "full_name": "XiaoYouChR/Ghost-Downloader-3",
+        "previous_stars_today": 889,
+        "stars_today": 836,
+        "change": -53
+      },
+      {
+        "full_name": "zhouxiaoka/autoclip",
+        "previous_stars_today": 774,
+        "stars_today": 718,
+        "change": -56
+      },
+      {
+        "full_name": "HKUDS/CLI-Anything",
+        "previous_stars_today": 746,
+        "stars_today": 666,
+        "change": -80
+      },
+      {
+        "full_name": "mvanhorn/last30days-skill",
+        "previous_stars_today": 759,
+        "stars_today": 675,
+        "change": -84
+      },
+      {
+        "full_name": "firecrawl/firecrawl",
+        "previous_stars_today": 1046,
+        "stars_today": 822,
+        "change": -224
+      },
+      {
+        "full_name": "cathrynlavery/diagram-design",
+        "previous_stars_today": 955,
+        "stars_today": 725,
+        "change": -230
+      }
+    ]
+  }
+}
